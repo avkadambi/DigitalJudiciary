@@ -1,0 +1,54 @@
+{
+  "organizations": [
+    {
+      "org_id": "semifab",
+      "name": "SemiFab",
+      "principals": [
+        {
+          "principal_id": "lawmaker:trade-compliance-and-security-council",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "trade compliance and security council"
+        },
+        {
+          "principal_id": "lawmaker:fab-systems-architecture-board",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "fab systems architecture board"
+        },
+        {
+          "principal_id": "lawmaker:export-licensing-office",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "export licensing office"
+        },
+        {
+          "principal_id": "judge:J1-first-instance",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "J1 first instance"
+        },
+        {
+          "principal_id": "judge:J2-review",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "J2 review"
+        },
+        {
+          "principal_id": "judge:J3-en-banc",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "J3 en banc"
+        },
+        {
+          "principal_id": "riskowner:chief-operating-officer",
+          "branch": "riskowner",
+          "kind": "human",
+          "role": "chief operating officer"
+        }
+      ]
+    }
+  ],
+  "disjointness": "A1. Each principal appears once and holds exactly one branch. No principal appears under two, and the roster is what CC-01 checks rather than an assurance in prose.",
+  "founding_scope": "semifab"
+}

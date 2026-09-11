@@ -1,0 +1,232 @@
+<title>SemiFab Case Docket</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#eef0f5; --surface:#ffffff; --surface-2:#e4e7ee; --rule:#ccd2de;
+  --ink:#12151d; --ink-2:#3d4557; --ink-3:#6b7488;
+  --accent:#2a3f8f; --accent-soft:#dfe4f4;
+  --deny:#a33427; --deny-soft:#f7e5e2;
+  --cond:#8a6516; --cond-soft:#f6ecd8;
+  --permit:#1f5f5a; --permit-soft:#dcecea;
+  --absolute:#7d1f16;
+  --shadow:0 1px 1px rgba(18,21,29,.05), 0 10px 26px -18px rgba(18,21,29,.35);
+  --display:"Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --mono:"JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0c0e13; --surface:#13161d; --surface-2:#1b1f29; --rule:#282e3b;
+    --ink:#e5e8f0; --ink-2:#a8b0c2; --ink-3:#767f93;
+    --accent:#8ba0ee; --accent-soft:#1a2140;
+    --deny:#ea9083; --deny-soft:#331d1a;
+    --cond:#d5ab60; --cond-soft:#2d2413;
+    --permit:#6bbdb4; --permit-soft:#13292a;
+    --absolute:#f2a196;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 32px -20px rgba(0,0,0,.85);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0c0e13; --surface:#13161d; --surface-2:#1b1f29; --rule:#282e3b;
+  --ink:#e5e8f0; --ink-2:#a8b0c2; --ink-3:#767f93;
+  --accent:#8ba0ee; --accent-soft:#1a2140;
+  --deny:#ea9083; --deny-soft:#331d1a;
+  --cond:#d5ab60; --cond-soft:#2d2413;
+  --permit:#6bbdb4; --permit-soft:#13292a;
+  --absolute:#f2a196;
+  --shadow:0 1px 2px rgba(0,0,0,.45), 0 12px 32px -20px rgba(0,0,0,.85);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--display); font-size:15px; line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent)}
+button{font:inherit; color:inherit}
+::selection{background:var(--accent-soft)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+/* ---------- masthead ---------- */
+.masthead{background:var(--surface); border-bottom:1px solid var(--rule); padding:20px 26px 14px}
+.masthead-inner{max-width:1420px; margin:0 auto; display:flex; flex-wrap:wrap; gap:22px; align-items:flex-end; justify-content:space-between}
+.wordmark{display:flex; flex-direction:column; gap:3px}
+.wordmark h1{
+  font-family:var(--display); font-weight:700; font-size:clamp(24px,3.2vw,35px);
+  margin:0; letter-spacing:-.02em; text-wrap:balance;
+}
+.wordmark h1 .lede{color:var(--accent)}
+.wordmark .sub{font-family:var(--serif); font-size:15px; color:var(--ink-2); max-width:62ch}
+.imprint{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+}
+.imprint .ok{color:var(--accent); font-weight:500}
+
+/* ---------- figures strip ---------- */
+.figures{
+  max-width:1420px; margin:0 auto; padding:0 26px;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(126px,1fr)); gap:0;
+  border-bottom:1px solid var(--rule); background:var(--paper);
+}
+.fig{padding:12px 16px 14px; border-left:1px solid var(--rule)}
+.fig:first-child{border-left:0; padding-left:0}
+.fig dt{font-family:var(--mono); font-size:10px; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3)}
+.fig dd{margin:3px 0 0; font-family:var(--display); font-size:23px; font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+.fig dd small{font-family:var(--mono); font-size:10.5px; font-weight:400; color:var(--ink-3); margin-left:5px; letter-spacing:0}
+
+/* ---------- layout ---------- */
+.shell{max-width:1420px; margin:0 auto; padding:20px 26px 64px; display:grid; grid-template-columns:258px minmax(0,1fr); gap:40px; align-items:start}
+.shell > section{max-width:960px}
+@media (max-width:1000px){ .shell{grid-template-columns:1fr; gap:20px} .rail{position:static !important} }
+
+/* ---------- filter rail ---------- */
+.rail{position:sticky; top:14px; display:flex; flex-direction:column; gap:18px; max-height:calc(100vh - 28px); overflow:auto; padding-right:6px}
+.rail::-webkit-scrollbar{width:8px} .rail::-webkit-scrollbar-thumb{background:var(--rule); border-radius:8px}
+.group{display:flex; flex-direction:column; gap:7px}
+.group > h2{
+  font-family:var(--mono); font-size:10px; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--ink-3); margin:0; padding-bottom:5px; border-bottom:1px solid var(--rule);
+}
+.search{
+  width:100%; padding:9px 11px; border:1px solid var(--rule); border-radius:2px;
+  background:var(--surface); color:var(--ink); font-family:var(--mono); font-size:12px;
+}
+.search::placeholder{color:var(--ink-3)}
+.chips{display:flex; flex-wrap:wrap; gap:5px}
+.chip{
+  border:1px solid var(--rule); background:var(--surface); border-radius:2px;
+  padding:4px 8px; font-family:var(--mono); font-size:10.5px; cursor:pointer;
+  display:inline-flex; gap:6px; align-items:baseline; color:var(--ink-2);
+}
+.chip:hover{border-color:var(--accent); color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:#ffffff}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#0c0e13}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0c0e13} }
+.chip .n{font-size:9.5px; opacity:.72; font-variant-numeric:tabular-nums}
+.catlist{display:flex; flex-direction:column; gap:1px}
+.cat{
+  display:grid; grid-template-columns:1fr auto; gap:8px; align-items:baseline;
+  padding:5px 7px; border:0; background:none; text-align:left; cursor:pointer; border-radius:2px;
+  font-family:var(--mono); font-size:11px; color:var(--ink-2); border-left:3px solid transparent;
+}
+.cat:hover{background:var(--surface-2); color:var(--ink)}
+.cat[aria-pressed="true"]{background:var(--accent-soft); color:var(--ink); border-left-color:var(--accent); font-weight:500}
+.cat .n{font-variant-numeric:tabular-nums; color:var(--ink-3); font-size:10px}
+.reset{
+  align-self:flex-start; background:none; border:1px solid var(--rule); border-radius:2px;
+  padding:5px 10px; font-family:var(--mono); font-size:10.5px; cursor:pointer; color:var(--ink-2);
+}
+.reset:hover{border-color:var(--deny); color:var(--deny)}
+
+/* ---------- results ---------- */
+.resultbar{
+  display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between;
+  padding-bottom:10px; margin-bottom:14px; border-bottom:1px solid var(--rule);
+}
+.count{font-family:var(--display); font-size:20px; font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+.count span{color:var(--ink-3); font-weight:400; font-size:14px}
+.sortnote{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); letter-spacing:.03em}
+
+.cases{display:flex; flex-direction:column; gap:12px}
+.case{
+  background:var(--surface); border:1px solid var(--rule); border-radius:2px;
+  padding:15px 18px 16px; box-shadow:var(--shadow);
+}
+.case.absolute{border-left:3px solid var(--absolute)}
+.case-head{display:flex; flex-wrap:wrap; gap:10px 14px; align-items:baseline; justify-content:space-between}
+.cid{font-family:var(--mono); font-size:12.5px; font-weight:500; letter-spacing:.01em}
+.cid .cat-tag{color:var(--ink-3); font-weight:400}
+.pills{display:flex; flex-wrap:wrap; gap:6px}
+.pill{
+  font-family:var(--mono); font-size:10px; letter-spacing:.04em; text-transform:uppercase;
+  padding:3px 7px; border-radius:2px; white-space:nowrap;
+}
+.pill.permit{background:var(--permit-soft); color:var(--permit)}
+.pill.deny{background:var(--deny-soft); color:var(--deny)}
+.pill.permit_conditional{background:var(--cond-soft); color:var(--cond)}
+.pill.route{background:var(--surface-2); color:var(--ink-2)}
+.pill.abs{background:var(--deny-soft); color:var(--absolute); font-weight:500}
+
+.citation{
+  font-family:var(--mono); font-size:11px; color:var(--ink-3); margin-top:7px;
+  display:flex; flex-wrap:wrap; gap:4px 12px; line-height:1.6;
+}
+.citation b{font-weight:500; color:var(--ink-2)}
+.headnote{
+  font-family:var(--serif); font-size:15.5px; line-height:1.6; margin-top:10px; color:var(--ink);
+  max-width:74ch;
+}
+.headnote p{margin:0 0 9px}
+.headnote p:last-child{margin-bottom:0}
+.headnote em{color:var(--ink-2)}
+.headnote strong{font-weight:600}
+.headnote code{
+  font-family:var(--mono); font-size:11.5px; background:var(--surface-2);
+  padding:1px 4px; border-radius:2px; color:var(--ink-2); word-break:break-word;
+}
+.checks{
+  margin-top:11px; padding-top:9px; border-top:1px dotted var(--rule);
+  display:flex; flex-wrap:wrap; gap:5px; align-items:center;
+}
+.tag{font-family:var(--mono); font-size:9.5px; letter-spacing:.05em; color:var(--ink-3); border:1px solid var(--rule); padding:2px 5px; border-radius:2px}
+.tag.ax{color:var(--accent); border-color:var(--accent-soft); background:var(--accent-soft)}
+
+.more{
+  margin:22px auto 0; display:block; padding:10px 22px; background:var(--surface);
+  border:1px solid var(--rule); border-radius:2px; cursor:pointer;
+  font-family:var(--mono); font-size:11.5px; letter-spacing:.04em; color:var(--ink-2);
+}
+.more:hover{border-color:var(--accent); color:var(--accent)}
+.empty{padding:48px 8px; text-align:center; color:var(--ink-3); font-family:var(--serif); font-style:italic; font-size:17px}
+.loading{padding:80px 26px; text-align:center; font-family:var(--mono); font-size:11.5px; color:var(--ink-3); letter-spacing:.08em; text-transform:uppercase}
+
+.colophon{max-width:1420px; margin:0 auto; padding:26px; border-top:1px solid var(--rule); font-size:13.5px; color:var(--ink-2)}
+.colophon .inner{max-width:70ch}
+.colophon h3{font-family:var(--display); font-size:15px; margin:0 0 6px; letter-spacing:-.01em}
+.colophon p{margin:0 0 10px; font-family:var(--serif); font-size:14.5px; line-height:1.6}
+
+@media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important} }
+</style>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="wordmark">
+      <h1><span class="lede">SemiFab</span> Case Docket</h1>
+      <div class="sub">Five thousand adjudicated compliance cases from a semiconductor supply-chain control tower, under a constitution of one hundred and three provisions</div>
+    </div>
+    <div class="imprint">
+      <span>Corpus 1.0.0</span>
+      <span>Rulebook semifab-rb-000001</span>
+      <span class="ok">Conformance 26/26</span>
+      <span class="ok">Mutants 12/12 killed</span>
+      <span>CC BY 4.0</span>
+    </div>
+  </div>
+</header>
+
+<dl class="figures" id="figures"></dl>
+
+<main class="shell">
+  <aside class="rail" id="rail"></aside>
+  <section>
+    <div class="resultbar">
+      <div class="count" id="count">Loading…</div>
+      <div class="sortnote">Chronological — the store grows down the page</div>
+    </div>
+    <div class="cases" id="cases"><div class="loading">Decompressing corpus…</div></div>
+    <button class="more" id="more" hidden>Show 50 more</button>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="inner">
+    <h3>How to read a case</h3>
+    <p>Each entry is a headnote generated from the executed trace, not from an authored expectation. <b>Why this case exists</b> states the mechanism it was constructed to exercise; <b>what happens</b> states what the reference engine did with it; the tags at the foot name the axioms of the architectural contract (A1–A9) and the conformance checks (VC-01–VC-26) it exercises.</p>
+    <p>A case bordered in copper engages an <b>absolute provision</b> — a statutory or safety floor no precedent of any authority can soften: a deemed export, a suppressed interlock, a recipe parameter in a log, a retroactively edited WIP record. Those cases are denied at once, before any retrieval runs, and no escalation path exists.</p>
+    <p>No SEMI standard text and no protocol fixtures appear here. Stream and function codes, HSMS timer names and GEM control states are identifiers, and identifiers are facts. The corpus, its constitution, the reference engine, the conformance suite and the mutation matrix are open source: Apache-2.0 for code, CC BY 4.0 for data.</p>
+  </div>
+</footer>

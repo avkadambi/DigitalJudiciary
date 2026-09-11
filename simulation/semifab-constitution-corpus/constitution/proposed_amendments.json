@@ -1,0 +1,63 @@
+{
+  "note": "Findings against existing provisions, filed as draft amendments rather than applied. Under Axiom A3 the only route from a case \u2014 or from a corpus author \u2014 to a rule change is a draft amendment the legislative process may adopt or reject.",
+  "amendments": [
+    {
+      "id": "PA-01",
+      "targets": [
+        "SF-EX-004"
+      ],
+      "raised_by": "corpus scenario extension survey 2026-09-06",
+      "finding": "The provision cites '15 CFR 744; Consolidated Screening List'. The CSL is a convenience aggregation published by ITA, not a legal instrument; the screening duties it bundles arise under 15 CFR 744 Supplement 4 (Entity List), 15 CFR 764.3 and the Denied Persons List, 15 CFR 744.21 (MEU List), the AECA Debarred List under 22 CFR 127.7, and OFAC's lists under 31 CFR Chapter V. The OFAC piece is a sanctions obligation with its own strict-liability regime and is now carried by SF-SO-001.",
+      "proposed": "Retain the provision and its absolute status. Restate the citation to name the underlying lists and their instruments, and cross-reference SF-SO-001 so that a screening case involving a blocked person is charged under both.",
+      "why_not_applied": "Restating a citation changes what a later adjudicator reasons from; that is a legislative act under A3.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-02",
+      "targets": [
+        "SF-SG-001"
+      ],
+      "raised_by": "corpus scenario extension survey 2026-09-06",
+      "finding": "SF-SG-001 is absolute and is cited to 'equipment safety floor; SEMI S2 practice'. Definition 1 requires an absolute to rest on an instrument that removes the decision from everyone below the legislature; a practice label reads as a severity claim. The instrument exists: 29 U.S.C. 654(a)(1) and 29 CFR 1910.147 / 1910.212, which SF-EH-002 now cites for the state semantics of the same interlocks.",
+      "proposed": "Retain absolute status. Restate the citation as '29 U.S.C. 654(a)(1); 29 CFR 1910.147, 1910.212; SEMI S2 (identifier only)' and note the intended overlap with SF-EH-002 (signal path versus state semantics).",
+      "why_not_applied": "The provision is cited by executed corpora and figures; its text is frozen at this revision.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-03",
+      "targets": [
+        "SF-EX-001",
+        "SF-EX-002"
+      ],
+      "raised_by": "corpus scenario extension survey 2026-09-06; research/03 \u00a71.10",
+      "finding": "Both provisions say 'controlled technical data' and 'foreign person' but cite only the EAR (15 CFR 734.13). ITAR technical data (22 CFR 120.33, 120.50) has no de minimis rule, no group-A treatment and a narrower encryption carve-out (22 CFR 120.54(a)(5) versus 15 CFR 734.18(a)(5)). As drafted, a precedent engine may generalise an EAR licence-exception outcome onto an ITAR case. The research file recommended a separate ITAR path for exactly this reason.",
+      "proposed": "Scope SF-EX-001 and SF-EX-002 expressly to EAR-controlled technical data and add a cross-reference to SF-IT-001 and SF-IT-003 for defence articles, so that the distinguishing gate has a textual hook.",
+      "why_not_applied": "Narrowing a provision's scope is a rule change; filed for the legislature.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-04",
+      "targets": [
+        "SF-WI-001",
+        "SF-WI-002"
+      ],
+      "raised_by": "corpus scenario extension survey 2026-09-06",
+      "finding": "Both provisions are absolute and cite 'operational integrity floor' (SF-WI-001 adds '15 CFR 762.5(b)(4) analogue'). An analogue is not an instrument. For records within 15 CFR 762 (export records) the floor is real and already carried by SF-EX-003; for customer quality records the source is the customer contract and IATF 16949 retention clauses; for other WIP records no statutory floor was found.",
+      "proposed": "Either restate the citation to the records actually covered by a statutory or contractual floor, or demote the provisions to ordinary and let SF-EX-003 and SF-QS-002 carry the absolute and contractual cases respectively.",
+      "why_not_applied": "Changing absolute status alters A6 short-circuit behaviour in the F-absolute category, which is reported in existing figures.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-05",
+      "targets": [
+        "SF-RP-001",
+        "SF-RP-002"
+      ],
+      "raised_by": "corpus scenario extension survey 2026-09-06",
+      "finding": "Both provisions are absolute and cite 'IP protection floor; trade-secret exposure'. The instrument that makes this a who-may-decide floor rather than a severity claim is the reasonable-measures element of the trade-secret definition, 18 U.S.C. 1839(3)(A) (Defend Trade Secrets Act) and the corresponding state UTSA enactments: a single unprotected disclosure path can forfeit trade-secret status for the recipe as a whole, which is not a risk a COO may accept for one change.",
+      "proposed": "Retain absolute status and restate the citation as '18 U.S.C. 1839(3)(A), 1836; state UTSA enactments', with the forfeiture rationale in source_status.",
+      "why_not_applied": "Citation restatement is legislative under A3; the provision text is frozen at this revision.",
+      "disposition": "pending"
+    }
+  ]
+}

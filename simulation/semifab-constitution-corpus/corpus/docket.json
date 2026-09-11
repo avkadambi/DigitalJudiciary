@@ -1,0 +1,4736 @@
+{
+  "entries": [
+    {
+      "case": "SF-T-00001",
+      "route": "declined",
+      "ts": 1001,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00008",
+      "route": "declined",
+      "ts": 1008,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00010",
+      "route": "declined",
+      "ts": 1010,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00014",
+      "route": "null",
+      "ts": 1014,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00022",
+      "route": "null",
+      "ts": 1022,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00034",
+      "route": "declined",
+      "ts": 1034,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00040",
+      "route": "declined",
+      "ts": 1040,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00048",
+      "route": "null",
+      "ts": 1048,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00064",
+      "route": "declined",
+      "ts": 1064,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00069",
+      "route": "declined",
+      "ts": 1069,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00071",
+      "route": "null",
+      "ts": 1071,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00082",
+      "route": "declined",
+      "ts": 1082,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00104",
+      "route": "null",
+      "ts": 1104,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00113",
+      "route": "declined",
+      "ts": 1113,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00114",
+      "route": "declined",
+      "ts": 1114,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00124",
+      "route": "declined",
+      "ts": 1124,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00130",
+      "route": "declined",
+      "ts": 1130,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00143",
+      "route": "declined",
+      "ts": 1143,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00158",
+      "route": "declined",
+      "ts": 1158,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00162",
+      "route": "null",
+      "ts": 1162,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00200",
+      "route": "declined",
+      "ts": 1200,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00207",
+      "route": "null",
+      "ts": 1207,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00220",
+      "route": "declined",
+      "ts": 1220,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00233",
+      "route": "declined",
+      "ts": 1233,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00234",
+      "route": "declined",
+      "ts": 1234,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00235",
+      "route": "declined",
+      "ts": 1235,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00236",
+      "route": "declined",
+      "ts": 1236,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00277",
+      "route": "declined",
+      "ts": 1277,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00283",
+      "route": "declined",
+      "ts": 1283,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00303",
+      "route": "null",
+      "ts": 1303,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00317",
+      "route": "declined",
+      "ts": 1317,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00337",
+      "route": "declined",
+      "ts": 1337,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00338",
+      "route": "declined",
+      "ts": 1338,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00372",
+      "route": "declined",
+      "ts": 1372,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00431",
+      "route": "declined",
+      "ts": 1431,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00446",
+      "route": "declined",
+      "ts": 1446,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00457",
+      "route": "declined",
+      "ts": 1457,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00467",
+      "route": "declined",
+      "ts": 1467,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00473",
+      "route": "declined",
+      "ts": 1473,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00485",
+      "route": "declined",
+      "ts": 1485,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00512",
+      "route": "declined",
+      "ts": 1512,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00516",
+      "route": "declined",
+      "ts": 1516,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00523",
+      "route": "declined",
+      "ts": 1523,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00527",
+      "route": "null",
+      "ts": 1527,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00534",
+      "route": "null",
+      "ts": 1534,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00546",
+      "route": "declined",
+      "ts": 1546,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00549",
+      "route": "declined",
+      "ts": 1549,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00597",
+      "route": "null",
+      "ts": 1597,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00610",
+      "route": "declined",
+      "ts": 1610,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00615",
+      "route": "declined",
+      "ts": 1615,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00630",
+      "route": "declined",
+      "ts": 1630,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00667",
+      "route": "declined",
+      "ts": 1667,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00674",
+      "route": "declined",
+      "ts": 1674,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00686",
+      "route": "null",
+      "ts": 1686,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00700",
+      "route": "declined",
+      "ts": 1700,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00704",
+      "route": "declined",
+      "ts": 1704,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00729",
+      "route": "declined",
+      "ts": 1729,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00734",
+      "route": "declined",
+      "ts": 1734,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00735",
+      "route": "declined",
+      "ts": 1735,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00749",
+      "route": "declined",
+      "ts": 1749,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00764",
+      "route": "null",
+      "ts": 1764,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00769",
+      "route": "declined",
+      "ts": 1769,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00818",
+      "route": "declined",
+      "ts": 1818,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00830",
+      "route": "null",
+      "ts": 1830,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00831",
+      "route": "null",
+      "ts": 1831,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00839",
+      "route": "declined",
+      "ts": 1839,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00872",
+      "route": "declined",
+      "ts": 1872,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-00891",
+      "route": "declined",
+      "ts": 1891,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00904",
+      "route": "declined",
+      "ts": 1904,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00926",
+      "route": "declined",
+      "ts": 1926,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-00984",
+      "route": "declined",
+      "ts": 1984,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01008",
+      "route": "declined",
+      "ts": 2008,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01024",
+      "route": "declined",
+      "ts": 2024,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01034",
+      "route": "declined",
+      "ts": 2034,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01103",
+      "route": "declined",
+      "ts": 2103,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01177",
+      "route": "null",
+      "ts": 2177,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01211",
+      "route": "declined",
+      "ts": 2211,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01228",
+      "route": "declined",
+      "ts": 2228,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01240",
+      "route": "declined",
+      "ts": 2240,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01248",
+      "route": "declined",
+      "ts": 2248,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01275",
+      "route": "declined",
+      "ts": 2275,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01309",
+      "route": "declined",
+      "ts": 2309,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01326",
+      "route": "null",
+      "ts": 2326,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01330",
+      "route": "declined",
+      "ts": 2330,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01355",
+      "route": "declined",
+      "ts": 2355,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01370",
+      "route": "declined",
+      "ts": 2370,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01375",
+      "route": "declined",
+      "ts": 2375,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01423",
+      "route": "declined",
+      "ts": 2423,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01437",
+      "route": "declined",
+      "ts": 2437,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01439",
+      "route": "declined",
+      "ts": 2439,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01451",
+      "route": "declined",
+      "ts": 2451,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01461",
+      "route": "declined",
+      "ts": 2461,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01518",
+      "route": "declined",
+      "ts": 2518,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01539",
+      "route": "null",
+      "ts": 2539,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01575",
+      "route": "declined",
+      "ts": 2575,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01623",
+      "route": "declined",
+      "ts": 2623,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01712",
+      "route": "null",
+      "ts": 2712,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01721",
+      "route": "declined",
+      "ts": 2721,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01748",
+      "route": "declined",
+      "ts": 2748,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01763",
+      "route": "declined",
+      "ts": 2763,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01771",
+      "route": "declined",
+      "ts": 2771,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01825",
+      "route": "declined",
+      "ts": 2825,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01832",
+      "route": "declined",
+      "ts": 2832,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01845",
+      "route": "declined",
+      "ts": 2845,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01859",
+      "route": "null",
+      "ts": 2859,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01917",
+      "route": "null",
+      "ts": 2917,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01928",
+      "route": "declined",
+      "ts": 2928,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01934",
+      "route": "declined",
+      "ts": 2934,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01952",
+      "route": "declined",
+      "ts": 2952,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01977",
+      "route": "declined",
+      "ts": 2977,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-01979",
+      "route": "declined",
+      "ts": 2979,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-01995",
+      "route": "declined",
+      "ts": 2995,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02042",
+      "route": "declined",
+      "ts": 3042,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02082",
+      "route": "null",
+      "ts": 3082,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02104",
+      "route": "declined",
+      "ts": 3104,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02108",
+      "route": "null",
+      "ts": 3108,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02141",
+      "route": "declined",
+      "ts": 3141,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02151",
+      "route": "declined",
+      "ts": 3151,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02183",
+      "route": "null",
+      "ts": 3183,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02198",
+      "route": "declined",
+      "ts": 3198,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02306",
+      "route": "declined",
+      "ts": 3306,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02318",
+      "route": "declined",
+      "ts": 3318,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02330",
+      "route": "declined",
+      "ts": 3330,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02332",
+      "route": "declined",
+      "ts": 3332,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02341",
+      "route": "declined",
+      "ts": 3341,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02379",
+      "route": "declined",
+      "ts": 3379,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02417",
+      "route": "declined",
+      "ts": 3417,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02480",
+      "route": "declined",
+      "ts": 3480,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02500",
+      "route": "declined",
+      "ts": 3500,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02504",
+      "route": "declined",
+      "ts": 3504,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02505",
+      "route": "declined",
+      "ts": 3505,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02516",
+      "route": "declined",
+      "ts": 3516,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02527",
+      "route": "declined",
+      "ts": 3527,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02537",
+      "route": "declined",
+      "ts": 3537,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02543",
+      "route": "declined",
+      "ts": 3543,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02592",
+      "route": "declined",
+      "ts": 3592,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02595",
+      "route": "declined",
+      "ts": 3595,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02599",
+      "route": "null",
+      "ts": 3599,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02644",
+      "route": "null",
+      "ts": 3644,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02657",
+      "route": "declined",
+      "ts": 3657,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02691",
+      "route": "declined",
+      "ts": 3691,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02765",
+      "route": "null",
+      "ts": 3765,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02773",
+      "route": "declined",
+      "ts": 3773,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02791",
+      "route": "declined",
+      "ts": 3791,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02848",
+      "route": "null",
+      "ts": 3848,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02863",
+      "route": "declined",
+      "ts": 3863,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02872",
+      "route": "declined",
+      "ts": 3872,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02897",
+      "route": "null",
+      "ts": 3897,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02899",
+      "route": "declined",
+      "ts": 3899,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02902",
+      "route": "null",
+      "ts": 3902,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02907",
+      "route": "declined",
+      "ts": 3907,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02908",
+      "route": "declined",
+      "ts": 3908,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02921",
+      "route": "declined",
+      "ts": 3921,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02923",
+      "route": "declined",
+      "ts": 3923,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02981",
+      "route": "null",
+      "ts": 3981,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-02984",
+      "route": "declined",
+      "ts": 3984,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-02996",
+      "route": "declined",
+      "ts": 3996,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03011",
+      "route": "declined",
+      "ts": 4011,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03028",
+      "route": "declined",
+      "ts": 4028,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03037",
+      "route": "declined",
+      "ts": 4037,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03041",
+      "route": "declined",
+      "ts": 4041,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03082",
+      "route": "declined",
+      "ts": 4082,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03086",
+      "route": "declined",
+      "ts": 4086,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03093",
+      "route": "declined",
+      "ts": 4093,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03113",
+      "route": "declined",
+      "ts": 4113,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03132",
+      "route": "declined",
+      "ts": 4132,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03170",
+      "route": "declined",
+      "ts": 4170,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03175",
+      "route": "declined",
+      "ts": 4175,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03195",
+      "route": "declined",
+      "ts": 4195,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03208",
+      "route": "declined",
+      "ts": 4208,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03265",
+      "route": "null",
+      "ts": 4265,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03268",
+      "route": "declined",
+      "ts": 4268,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03289",
+      "route": "declined",
+      "ts": 4289,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03291",
+      "route": "declined",
+      "ts": 4291,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03307",
+      "route": "declined",
+      "ts": 4307,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03319",
+      "route": "declined",
+      "ts": 4319,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03322",
+      "route": "declined",
+      "ts": 4322,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03324",
+      "route": "declined",
+      "ts": 4324,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03337",
+      "route": "declined",
+      "ts": 4337,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03344",
+      "route": "declined",
+      "ts": 4344,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03351",
+      "route": "declined",
+      "ts": 4351,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03356",
+      "route": "declined",
+      "ts": 4356,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03362",
+      "route": "declined",
+      "ts": 4362,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03366",
+      "route": "declined",
+      "ts": 4366,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03378",
+      "route": "declined",
+      "ts": 4378,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03386",
+      "route": "null",
+      "ts": 4386,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03387",
+      "route": "declined",
+      "ts": 4387,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03396",
+      "route": "declined",
+      "ts": 4396,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03409",
+      "route": "declined",
+      "ts": 4409,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03419",
+      "route": "declined",
+      "ts": 4419,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03427",
+      "route": "declined",
+      "ts": 4427,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03439",
+      "route": "declined",
+      "ts": 4439,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03449",
+      "route": "null",
+      "ts": 4449,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03473",
+      "route": "declined",
+      "ts": 4473,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03503",
+      "route": "declined",
+      "ts": 4503,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03537",
+      "route": "declined",
+      "ts": 4537,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03584",
+      "route": "declined",
+      "ts": 4584,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03598",
+      "route": "declined",
+      "ts": 4598,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03600",
+      "route": "declined",
+      "ts": 4600,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03652",
+      "route": "declined",
+      "ts": 4652,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03668",
+      "route": "declined",
+      "ts": 4668,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03669",
+      "route": "null",
+      "ts": 4669,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03671",
+      "route": "declined",
+      "ts": 4671,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03719",
+      "route": "null",
+      "ts": 4719,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03728",
+      "route": "declined",
+      "ts": 4728,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03729",
+      "route": "declined",
+      "ts": 4729,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03755",
+      "route": "declined",
+      "ts": 4755,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03768",
+      "route": "declined",
+      "ts": 4768,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03787",
+      "route": "declined",
+      "ts": 4787,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03798",
+      "route": "null",
+      "ts": 4798,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03801",
+      "route": "declined",
+      "ts": 4801,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03802",
+      "route": "declined",
+      "ts": 4802,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03804",
+      "route": "declined",
+      "ts": 4804,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03812",
+      "route": "declined",
+      "ts": 4812,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03817",
+      "route": "declined",
+      "ts": 4817,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03839",
+      "route": "declined",
+      "ts": 4839,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03844",
+      "route": "declined",
+      "ts": 4844,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03848",
+      "route": "declined",
+      "ts": 4848,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03850",
+      "route": "declined",
+      "ts": 4850,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03854",
+      "route": "null",
+      "ts": 4854,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03855",
+      "route": "declined",
+      "ts": 4855,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03865",
+      "route": "declined",
+      "ts": 4865,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03876",
+      "route": "declined",
+      "ts": 4876,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03891",
+      "route": "declined",
+      "ts": 4891,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03894",
+      "route": "declined",
+      "ts": 4894,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03896",
+      "route": "declined",
+      "ts": 4896,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03926",
+      "route": "declined",
+      "ts": 4926,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03927",
+      "route": "declined",
+      "ts": 4927,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03931",
+      "route": "declined",
+      "ts": 4931,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03942",
+      "route": "declined",
+      "ts": 4942,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03944",
+      "route": "declined",
+      "ts": 4944,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03963",
+      "route": "declined",
+      "ts": 4963,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03965",
+      "route": "null",
+      "ts": 4965,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03978",
+      "route": "declined",
+      "ts": 4978,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03985",
+      "route": "declined",
+      "ts": 4985,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03986",
+      "route": "declined",
+      "ts": 4986,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-03989",
+      "route": "declined",
+      "ts": 4989,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-03991",
+      "route": "declined",
+      "ts": 4991,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04001",
+      "route": "declined",
+      "ts": 5001,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04026",
+      "route": "null",
+      "ts": 5026,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04027",
+      "route": "null",
+      "ts": 5027,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04031",
+      "route": "declined",
+      "ts": 5031,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04041",
+      "route": "null",
+      "ts": 5041,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04042",
+      "route": "declined",
+      "ts": 5042,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04082",
+      "route": "declined",
+      "ts": 5082,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04088",
+      "route": "declined",
+      "ts": 5088,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04093",
+      "route": "declined",
+      "ts": 5093,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04107",
+      "route": "null",
+      "ts": 5107,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04114",
+      "route": "declined",
+      "ts": 5114,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04119",
+      "route": "declined",
+      "ts": 5119,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04135",
+      "route": "declined",
+      "ts": 5135,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04148",
+      "route": "declined",
+      "ts": 5148,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04150",
+      "route": "declined",
+      "ts": 5150,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04151",
+      "route": "null",
+      "ts": 5151,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04156",
+      "route": "declined",
+      "ts": 5156,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04157",
+      "route": "null",
+      "ts": 5157,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04160",
+      "route": "declined",
+      "ts": 5160,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04169",
+      "route": "declined",
+      "ts": 5169,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04179",
+      "route": "null",
+      "ts": 5179,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04195",
+      "route": "declined",
+      "ts": 5195,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04198",
+      "route": "declined",
+      "ts": 5198,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04232",
+      "route": "declined",
+      "ts": 5232,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04247",
+      "route": "declined",
+      "ts": 5247,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04270",
+      "route": "declined",
+      "ts": 5270,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04290",
+      "route": "null",
+      "ts": 5290,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04298",
+      "route": "declined",
+      "ts": 5298,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04303",
+      "route": "declined",
+      "ts": 5303,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04332",
+      "route": "null",
+      "ts": 5332,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04336",
+      "route": "declined",
+      "ts": 5336,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04340",
+      "route": "declined",
+      "ts": 5340,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04343",
+      "route": "declined",
+      "ts": 5343,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04354",
+      "route": "null",
+      "ts": 5354,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04356",
+      "route": "null",
+      "ts": 5356,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04391",
+      "route": "declined",
+      "ts": 5391,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04422",
+      "route": "declined",
+      "ts": 5422,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04423",
+      "route": "declined",
+      "ts": 5423,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04438",
+      "route": "null",
+      "ts": 5438,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04442",
+      "route": "declined",
+      "ts": 5442,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04457",
+      "route": "declined",
+      "ts": 5457,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04470",
+      "route": "declined",
+      "ts": 5470,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04475",
+      "route": "declined",
+      "ts": 5475,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04491",
+      "route": "declined",
+      "ts": 5491,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04492",
+      "route": "declined",
+      "ts": 5492,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04525",
+      "route": "declined",
+      "ts": 5525,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04530",
+      "route": "declined",
+      "ts": 5530,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04554",
+      "route": "declined",
+      "ts": 5554,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04558",
+      "route": "null",
+      "ts": 5558,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04565",
+      "route": "declined",
+      "ts": 5565,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04581",
+      "route": "declined",
+      "ts": 5581,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04588",
+      "route": "declined",
+      "ts": 5588,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04599",
+      "route": "null",
+      "ts": 5599,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04633",
+      "route": "declined",
+      "ts": 5633,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04636",
+      "route": "declined",
+      "ts": 5636,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04701",
+      "route": "declined",
+      "ts": 5701,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04717",
+      "route": "null",
+      "ts": 5717,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04738",
+      "route": "null",
+      "ts": 5738,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04746",
+      "route": "declined",
+      "ts": 5746,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04817",
+      "route": "null",
+      "ts": 5817,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04837",
+      "route": "declined",
+      "ts": 5837,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04847",
+      "route": "declined",
+      "ts": 5847,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04855",
+      "route": "declined",
+      "ts": 5855,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04865",
+      "route": "declined",
+      "ts": 5865,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04869",
+      "route": "declined",
+      "ts": 5869,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04879",
+      "route": "null",
+      "ts": 5879,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04891",
+      "route": "declined",
+      "ts": 5891,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04909",
+      "route": "declined",
+      "ts": 5909,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04916",
+      "route": "declined",
+      "ts": 5916,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04925",
+      "route": "declined",
+      "ts": 5925,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04940",
+      "route": "declined",
+      "ts": 5940,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04950",
+      "route": "declined",
+      "ts": 5950,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04955",
+      "route": "null",
+      "ts": 5955,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04957",
+      "route": "declined",
+      "ts": 5957,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-04958",
+      "route": "declined",
+      "ts": 5958,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04961",
+      "route": "declined",
+      "ts": 5961,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04973",
+      "route": "null",
+      "ts": 5973,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04974",
+      "route": "declined",
+      "ts": 5974,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-04988",
+      "route": "declined",
+      "ts": 5988,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05008",
+      "route": "declined",
+      "ts": 6008,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05015",
+      "route": "declined",
+      "ts": 6015,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05027",
+      "route": "null",
+      "ts": 6027,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05031",
+      "route": "declined",
+      "ts": 6031,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05044",
+      "route": "declined",
+      "ts": 6044,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05048",
+      "route": "declined",
+      "ts": 6048,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05051",
+      "route": "declined",
+      "ts": 6051,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05061",
+      "route": "declined",
+      "ts": 6061,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05066",
+      "route": "null",
+      "ts": 6066,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05068",
+      "route": "null",
+      "ts": 6068,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05070",
+      "route": "declined",
+      "ts": 6070,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05084",
+      "route": "declined",
+      "ts": 6084,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05141",
+      "route": "null",
+      "ts": 6141,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05153",
+      "route": "declined",
+      "ts": 6153,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05182",
+      "route": "declined",
+      "ts": 6182,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05185",
+      "route": "declined",
+      "ts": 6185,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05186",
+      "route": "null",
+      "ts": 6186,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05202",
+      "route": "null",
+      "ts": 6202,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05210",
+      "route": "declined",
+      "ts": 6210,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05211",
+      "route": "declined",
+      "ts": 6211,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05215",
+      "route": "declined",
+      "ts": 6215,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05235",
+      "route": "declined",
+      "ts": 6235,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05252",
+      "route": "declined",
+      "ts": 6252,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05270",
+      "route": "null",
+      "ts": 6270,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05276",
+      "route": "declined",
+      "ts": 6276,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05277",
+      "route": "declined",
+      "ts": 6277,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05300",
+      "route": "declined",
+      "ts": 6300,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05315",
+      "route": "null",
+      "ts": 6315,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05334",
+      "route": "declined",
+      "ts": 6334,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05336",
+      "route": "declined",
+      "ts": 6336,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05342",
+      "route": "declined",
+      "ts": 6342,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05353",
+      "route": "declined",
+      "ts": 6353,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05366",
+      "route": "declined",
+      "ts": 6366,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05392",
+      "route": "declined",
+      "ts": 6392,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05401",
+      "route": "declined",
+      "ts": 6401,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05403",
+      "route": "declined",
+      "ts": 6403,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05404",
+      "route": "declined",
+      "ts": 6404,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05418",
+      "route": "declined",
+      "ts": 6418,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05427",
+      "route": "null",
+      "ts": 6427,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05428",
+      "route": "null",
+      "ts": 6428,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05439",
+      "route": "null",
+      "ts": 6439,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05440",
+      "route": "declined",
+      "ts": 6440,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05469",
+      "route": "declined",
+      "ts": 6469,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05485",
+      "route": "declined",
+      "ts": 6485,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05489",
+      "route": "declined",
+      "ts": 6489,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05499",
+      "route": "declined",
+      "ts": 6499,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05518",
+      "route": "null",
+      "ts": 6518,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05522",
+      "route": "declined",
+      "ts": 6522,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05536",
+      "route": "declined",
+      "ts": 6536,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05580",
+      "route": "declined",
+      "ts": 6580,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05592",
+      "route": "declined",
+      "ts": 6592,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05602",
+      "route": "declined",
+      "ts": 6602,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05625",
+      "route": "declined",
+      "ts": 6625,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05633",
+      "route": "null",
+      "ts": 6633,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05641",
+      "route": "declined",
+      "ts": 6641,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05642",
+      "route": "null",
+      "ts": 6642,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05643",
+      "route": "declined",
+      "ts": 6643,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05699",
+      "route": "null",
+      "ts": 6699,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05703",
+      "route": "declined",
+      "ts": 6703,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05705",
+      "route": "null",
+      "ts": 6705,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05714",
+      "route": "declined",
+      "ts": 6714,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05718",
+      "route": "declined",
+      "ts": 6718,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05733",
+      "route": "null",
+      "ts": 6733,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05734",
+      "route": "declined",
+      "ts": 6734,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05738",
+      "route": "declined",
+      "ts": 6738,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05757",
+      "route": "declined",
+      "ts": 6757,
+      "rules": [
+        "SF-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05772",
+      "route": "declined",
+      "ts": 6772,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05780",
+      "route": "declined",
+      "ts": 6780,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05793",
+      "route": "declined",
+      "ts": 6793,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05803",
+      "route": "declined",
+      "ts": 6803,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05806",
+      "route": "declined",
+      "ts": 6806,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05813",
+      "route": "declined",
+      "ts": 6813,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05816",
+      "route": "declined",
+      "ts": 6816,
+      "rules": [
+        "SF-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05820",
+      "route": "null",
+      "ts": 6820,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05826",
+      "route": "declined",
+      "ts": 6826,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05837",
+      "route": "declined",
+      "ts": 6837,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05852",
+      "route": "null",
+      "ts": 6852,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05857",
+      "route": "declined",
+      "ts": 6857,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05861",
+      "route": "null",
+      "ts": 6861,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05886",
+      "route": "declined",
+      "ts": 6886,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05892",
+      "route": "null",
+      "ts": 6892,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05896",
+      "route": "declined",
+      "ts": 6896,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05902",
+      "route": "declined",
+      "ts": 6902,
+      "rules": [
+        "SF-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05911",
+      "route": "declined",
+      "ts": 6911,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-05912",
+      "route": "declined",
+      "ts": 6912,
+      "rules": [
+        "SF-TQ-007"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05915",
+      "route": "declined",
+      "ts": 6915,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05918",
+      "route": "null",
+      "ts": 6918,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05950",
+      "route": "declined",
+      "ts": 6950,
+      "rules": [
+        "SF-TQ-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05970",
+      "route": "declined",
+      "ts": 6970,
+      "rules": [
+        "SF-TQ-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-Q-05979",
+      "route": "null",
+      "ts": 6979,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    },
+    {
+      "case": "SF-T-06000",
+      "route": "declined",
+      "ts": 7000,
+      "rules": [
+        "SF-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "semifab-rb-000001"
+    }
+  ]
+}

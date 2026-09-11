@@ -1,0 +1,19 @@
+SemiFab Constitution Corpus
+Copyright 2026 Arun Kadambi and Venkat Kuppuswamy
+
+This product includes software developed for the Digital Judiciary programme.
+
+Code is licensed under the Apache License, Version 2.0 (see LICENSE).
+Data is licensed under CC BY 4.0 (see LICENSE-DATA).
+
+Third-party identifiers referenced in this corpus:
+  CWE™ and CAPEC™ are trademarks of The MITRE Corporation, used under MITRE's
+  royalty-free terms with attribution.
+  SEMI standard designations (E4, E5, E30, E37, E87, E90, E116, E134, E157) and
+  SECS stream/function codes (S1F1, S6F11, S7F23 and others) are cited as
+  identifiers. No SEMI standard text is reproduced or redistributed: SEMI's
+  licence permits internal use on a single computer and forbids network sharing.
+  US CFR, US Code and NIST publications are US Government works and are in the
+  public domain under 17 U.S.C. 105.
+No third-party data is redistributed. See docs/SOURCES.md for the full survey of
+sources consulted, their verified licences, and whether each was reusable.

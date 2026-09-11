@@ -1,0 +1,243 @@
+<script>
+(function () {
+  "use strict";
+
+  var PAGE = 50;
+  var state = { cats: new Set(), routes: new Set(), decs: new Set(), abs: false, ax: new Set(), q: "", shown: PAGE };
+  var DATA = null;
+  var PROV = {};
+
+  var ROUTE_LABEL = {
+    absolute_shortcircuit: "absolute short-circuit",
+    bound_by_precedent: "bound by precedent",
+    fresh_interpretation: "fresh interpretation",
+    fresh_interpretation_after_tie: "fresh after tie",
+    consolidated_citation: "consolidated citation",
+    docketed_declined: "docketed · declined",
+    docketed_null: "docketed · no provision"
+  };
+  var DEC_LABEL = { permit: "permit", deny: "deny", permit_conditional: "permit w/ conditions" };
+
+  function esc(s) {
+    return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+  }
+
+  // The catalog text is generated Markdown: bold, italics, inline code, paragraphs.
+  function md(text) {
+    var out = esc(text)
+      .replace(/`([^`]+)`/g, "<code>$1</code>")
+      .replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>")
+      .replace(/\*([^*]+)\*/g, "<em>$1</em>");
+    return out.split(/\n\n+/).map(function (p) { return "<p>" + p.replace(/\n/g, " ") + "</p>"; }).join("");
+  }
+
+  function saveFilters() {
+    try {
+      localStorage.setItem("semifab.filters", JSON.stringify({
+        cats: [].concat(Array.from(state.cats)), routes: Array.from(state.routes),
+        decs: Array.from(state.decs), abs: state.abs, ax: Array.from(state.ax), q: state.q
+      }));
+    } catch (e) { /* private window, blocked storage: filters simply are not remembered */ }
+  }
+  function loadFilters() {
+    try {
+      var raw = localStorage.getItem("semifab.filters");
+      if (!raw) return;
+      var f = JSON.parse(raw);
+      state.cats = new Set(f.cats || []); state.routes = new Set(f.routes || []);
+      state.decs = new Set(f.decs || []); state.ax = new Set(f.ax || []);
+      state.abs = !!f.abs; state.q = f.q || "";
+    } catch (e) { /* ignore malformed or unavailable storage */ }
+  }
+
+  function matches(c) {
+    if (state.cats.size && !state.cats.has(c.cat)) return false;
+    if (state.routes.size && !state.routes.has(c.r)) return false;
+    if (state.decs.size && !state.decs.has(c.d)) return false;
+    if (state.abs && !c.abs) return false;
+    if (state.ax.size) {
+      var hit = false;
+      for (var i = 0; i < c.ax.length; i++) if (state.ax.has(c.ax[i])) { hit = true; break; }
+      if (!hit) return false;
+    }
+    if (state.q) {
+      var q = state.q.toLowerCase();
+      if (c.id.toLowerCase().indexOf(q) === -1 &&
+          c.p.join(" ").toLowerCase().indexOf(q) === -1 &&
+          c.en.toLowerCase().indexOf(q) === -1) return false;
+    }
+    return true;
+  }
+
+  function renderFigures() {
+    var m = DATA.manifest;
+    var figs = [
+      ["Cases", m.cases.toLocaleString(), ""],
+      ["Provisions", DATA.provisions.length, DATA.provisions.filter(function (p) { return p.absolute; }).length + " absolute"],
+      ["Opening store", m.opening_store, ""],
+      ["Final store", m.final_store, "+" + m.records_written_in_run + " in run"],
+      ["Bound by precedent", m.routes.bound_by_precedent.toLocaleString(), ""],
+      ["Absolute denials", m.routes.absolute_shortcircuit, ""],
+      ["Docket entries", m.docket_entries, "two routes"],
+      ["Like-case pairs", m.like_case_pairs, "0 inconsistent"]
+    ];
+    document.getElementById("figures").innerHTML = figs.map(function (f) {
+      return '<div class="fig"><dt>' + esc(f[0]) + "</dt><dd>" + esc(f[1]) +
+        (f[2] ? "<small>" + esc(f[2]) + "</small>" : "") + "</dd></div>";
+    }).join("");
+  }
+
+  function renderRail() {
+    var counts = {};
+    DATA.cases.forEach(function (c) { counts[c.cat] = (counts[c.cat] || 0) + 1; });
+
+    var routes = Object.keys(DATA.manifest.routes).sort(function (a, b) {
+      return DATA.manifest.routes[b] - DATA.manifest.routes[a];
+    });
+    var axioms = Object.keys(DATA.axioms);
+
+    var html = "";
+    html += '<div class="group"><h2>Search</h2><input class="search" id="q" type="search" ' +
+      'placeholder="case id, provision, text…" value="' + esc(state.q) + '"></div>';
+
+    html += '<div class="group"><h2>Disposition</h2><div class="chips">' +
+      ["permit", "permit_conditional", "deny"].map(function (d) {
+        return '<button class="chip" data-kind="dec" data-v="' + d + '" aria-pressed="' +
+          (state.decs.has(d)) + '">' + esc(DEC_LABEL[d]) + "</button>";
+      }).join("") +
+      '<button class="chip" data-kind="abs" aria-pressed="' + state.abs + '">absolute only</button>' +
+      "</div></div>";
+
+    html += '<div class="group"><h2>Route</h2><div class="chips">' +
+      routes.map(function (r) {
+        return '<button class="chip" data-kind="route" data-v="' + r + '" aria-pressed="' +
+          (state.routes.has(r)) + '">' + esc(ROUTE_LABEL[r] || r) +
+          '<span class="n">' + DATA.manifest.routes[r] + "</span></button>";
+      }).join("") + "</div></div>";
+
+    html += '<div class="group"><h2>Category</h2><div class="catlist">' +
+      DATA.categories.map(function (c) {
+        return '<button class="cat" data-kind="cat" data-v="' + c.name + '" title="' + esc(c.desc) +
+          '" aria-pressed="' + state.cats.has(c.name) + '"><span>' + esc(c.name) +
+          '</span><span class="n">' + (counts[c.name] || 0) + "</span></button>";
+      }).join("") + "</div></div>";
+
+    html += '<div class="group"><h2>Axiom exercised</h2><div class="chips">' +
+      axioms.map(function (a) {
+        return '<button class="chip" data-kind="ax" data-v="' + a + '" title="' + esc(DATA.axioms[a]) +
+          '" aria-pressed="' + state.ax.has(a) + '">' + a + "</button>";
+      }).join("") + "</div></div>";
+
+    html += '<button class="reset" id="reset">Clear all filters</button>';
+    document.getElementById("rail").innerHTML = html;
+
+    document.getElementById("q").addEventListener("input", function (e) {
+      state.q = e.target.value; state.shown = PAGE; saveFilters(); renderCases();
+    });
+    document.getElementById("reset").addEventListener("click", function () {
+      state = { cats: new Set(), routes: new Set(), decs: new Set(), abs: false, ax: new Set(), q: "", shown: PAGE };
+      saveFilters(); renderRail(); renderCases();
+    });
+    Array.prototype.forEach.call(document.querySelectorAll("[data-kind]"), function (btn) {
+      btn.addEventListener("click", function () {
+        var k = btn.dataset.kind, v = btn.dataset.v;
+        if (k === "abs") state.abs = !state.abs;
+        else {
+          var set = k === "cat" ? state.cats : k === "route" ? state.routes : k === "dec" ? state.decs : state.ax;
+          if (set.has(v)) set.delete(v); else set.add(v);
+        }
+        state.shown = PAGE; saveFilters(); renderRail(); renderCases();
+      });
+    });
+  }
+
+  function caseHTML(c) {
+    var provs = c.p.map(function (id) {
+      var p = PROV[id];
+      return "<b>" + esc(id) + "</b> " + esc(p ? p.title : "");
+    }).join(" · ");
+    if (!c.p.length) provs = "<b>no provision engaged</b>";
+
+    var pills = '<span class="pill ' + c.d + '">' + esc(DEC_LABEL[c.d]) + "</span>" +
+      '<span class="pill route">' + esc(ROUTE_LABEL[c.r] || c.r) + "</span>" +
+      (c.abs ? '<span class="pill abs">absolute</span>' : "") +
+      (c.adm ? '<span class="pill route">admitted · ' + esc(c.ag === "clause_ii" ? "clause (ii)" : "clause (i)") + "</span>" : "");
+
+    var cite = [];
+    if (c.ctl && c.ctl !== "none_tie") cite.push("<b>controlling</b> " + esc(c.ctl));
+    if (c.ctl === "none_tie") cite.push("<b>controlling</b> none(tie)");
+    if (c.k && c.k.length) cite.push("<b>keys</b> " + esc(c.k.join(" › ")));
+    if (c.nc) cite.push("<b>consulted</b> " + c.nc + " · <b>distinguished</b> " + c.nd);
+    if (c.esc) cite.push("<b>escalated</b> " + esc(c.esc));
+    cite.push("<b>author</b> " + esc(c.au));
+    cite.push("<b>destination</b> " + esc(c.j));
+
+    var tags = c.ax.map(function (a) {
+      return '<span class="tag' + (a.charAt(0) === "A" ? " ax" : "") + '">' + esc(a) + "</span>";
+    }).join("") + c.rq.map(function (r) { return '<span class="tag">' + esc(r) + "</span>"; }).join("");
+
+    return '<article class="case' + (c.abs ? " absolute" : "") + '" id="' + esc(c.id) + '">' +
+      '<div class="case-head"><div class="cid">' + esc(c.id) +
+      ' <span class="cat-tag">' + esc(c.cat) + '</span></div><div class="pills">' + pills + "</div></div>" +
+      '<div class="citation">' + provs + "</div>" +
+      '<div class="citation">' + cite.join(" ") + "</div>" +
+      '<div class="headnote">' + md(c.en.replace(/^\*\*[^*]+\*\*\s*—\s*/, "")) + "</div>" +
+      '<div class="checks">' + tags + "</div></article>";
+  }
+
+  function renderCases() {
+    var hits = DATA.cases.filter(matches);
+    var slice = hits.slice(0, state.shown);
+    document.getElementById("count").innerHTML = hits.length.toLocaleString() +
+      ' <span>of ' + DATA.cases.length.toLocaleString() + " cases</span>";
+    document.getElementById("cases").innerHTML = slice.length
+      ? slice.map(caseHTML).join("")
+      : '<div class="empty">No case matches those filters. Clear one and the reporter fills again.</div>';
+    var more = document.getElementById("more");
+    more.hidden = hits.length <= state.shown;
+    more.textContent = "Show " + Math.min(PAGE, hits.length - state.shown) + " more of " +
+      (hits.length - state.shown).toLocaleString() + " remaining";
+  }
+
+  document.getElementById("more").addEventListener("click", function () {
+    state.shown += PAGE; renderCases();
+    window.scrollBy({ top: 240, behavior: "smooth" });
+  });
+
+  function boot(data) {
+    DATA = data;
+    data.provisions.forEach(function (p) { PROV[p.id] = p; });
+    loadFilters();
+    renderFigures();
+    renderRail();
+    renderCases();
+    if (location.hash.length > 1) {
+      var el = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+      if (el) el.scrollIntoView();
+    }
+  }
+
+  function b64ToBytes(b64) {
+    var bin = atob(b64), len = bin.length, bytes = new Uint8Array(len);
+    for (var i = 0; i < len; i++) bytes[i] = bin.charCodeAt(i);
+    return bytes;
+  }
+
+  var bytes = b64ToBytes(window.__SEMIFAB__);
+  window.__SEMIFAB__ = null;
+
+  if (typeof DecompressionStream === "function") {
+    new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip")))
+      .json().then(boot).catch(fail);
+  } else {
+    fail();
+  }
+
+  function fail() {
+    document.getElementById("cases").innerHTML =
+      '<div class="empty">This browser cannot decompress the corpus payload. ' +
+      'The full case catalog ships in the repository as docs/CASE_CATALOG.md.</div>';
+    document.getElementById("count").textContent = "Unavailable";
+  }
+})();
+</script>

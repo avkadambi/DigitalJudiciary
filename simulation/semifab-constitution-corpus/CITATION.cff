@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+title: SemiFab Constitution Corpus
+message: >-
+  If you use this corpus, please cite it and the Digital Judiciary programme
+  papers it instantiates.
+type: dataset
+version: 2.4.0
+license: CC-BY-4.0
+license-url: https://creativecommons.org/licenses/by/4.0/
+authors:
+  - family-names: Kadambi
+    given-names: Arun
+  - family-names: Kuppuswamy
+    given-names: Venkat
+    affiliation: >-
+      D'Amore-McKim School of Business, Northeastern University
+abstract: >-
+  An open 6,000-case conformance corpus for governing software change in
+  semiconductor manufacturing operations monitoring and supply-chain
+  control-tower software under a Digital Judiciary: a constitution of 103
+  provisions (20 absolute) spanning export control, data sovereignty, SECS/GEM
+  and equipment integrity, real-time latency, WIP and metrology immutability,
+  recipe protection, software supply-chain provenance, AI-agent code
+  governance, concurrency safety, cryptography, application security and
+  CHIPS/NIST mapping; a contest-gated admission rule, a distinguishing gate, a
+  lexicographic ordering over conflicting precedents, and a store of binding
+  decision records with an enforced lifecycle. Ground truth is computed from an
+  executed trace rather than authored. Ships a reference adjudication engine, 26
+  conformance checks, a mutation matrix, and a cross-pack profile comparison
+  against the VetPOC corpus.
+keywords:
+  - compliance
+  - precedent
+  - policy-as-code
+  - semiconductor manufacturing
+  - export control
+  - software supply chain
+  - AI governance
+  - conformance testing
+references:
+  - type: article
+    title: >-
+      When Retrieval Binds: Appraisal, Authenticity and Disposition in
+      Automated Compliance Decisions
+    authors:
+      - family-names: Kadambi
+        given-names: Arun
+      - family-names: Kuppuswamy
+        given-names: Venkat
+  - type: article
+    title: >-
+      Case-Base Formation for Precedential Constraint: Standing, Admission
+      Rules, and the Reason Model
+    authors:
+      - family-names: Kadambi
+        given-names: Arun
+      - family-names: Kuppuswamy
+        given-names: Venkat

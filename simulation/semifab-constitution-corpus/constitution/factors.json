@@ -1,0 +1,2623 @@
+{
+  "SF-EX-001": {
+    "comply": [
+      "citizenship_and_residency_attributes_present_on_principal",
+      "consolidated_screening_list_checked_within_24h",
+      "deemed_export_check_run_at_role_grant",
+      "eccn_classification_recorded_for_technical_data",
+      "end_use_and_end_user_knowledge_check_documented",
+      "foreign_direct_product_determination_recorded",
+      "licence_exception_cited_by_paragraph",
+      "screening_hit_escalated_to_named_compliance_officer",
+      "sf_ex_001_control_evidenced"
+    ],
+    "violate": [
+      "controlled_technical_data_released_to_foreign_person_without_licence",
+      "deemed_export_check_skipped_at_role_grant",
+      "geofence_bypassed_by_configuration_flag",
+      "replica_created_in_restricted_destination",
+      "screening_hit_auto_cleared_without_human_review",
+      "sf_ex_001_control_absent"
+    ]
+  },
+  "SF-EX-002": {
+    "comply": [
+      "consolidated_screening_list_checked_within_24h",
+      "end_use_and_end_user_knowledge_check_documented",
+      "foreign_direct_product_determination_recorded",
+      "geofence_enforced_at_authorisation_layer",
+      "licence_exception_cited_by_paragraph",
+      "replica_creation_blocked_for_restricted_destination",
+      "screening_hit_escalated_to_named_compliance_officer",
+      "sf_ex_002_control_evidenced",
+      "technical_data_access_logged_with_principal_identity"
+    ],
+    "violate": [
+      "eccn_classification_absent_for_controlled_artifact",
+      "geofence_bypassed_by_configuration_flag",
+      "licence_exception_asserted_without_paragraph_citation",
+      "replica_created_in_restricted_destination",
+      "screening_hit_auto_cleared_without_human_review",
+      "sf_ex_002_control_absent"
+    ]
+  },
+  "SF-EX-003": {
+    "comply": [
+      "end_use_and_end_user_knowledge_check_documented",
+      "entity_list_footnote_chain_evaluated",
+      "export_record_retained_for_five_years",
+      "foreign_direct_product_determination_recorded",
+      "geofence_enforced_at_authorisation_layer",
+      "replica_creation_blocked_for_restricted_destination",
+      "restricted_party_access_denied_fail_closed",
+      "sf_ex_003_control_evidenced",
+      "technical_data_access_logged_with_principal_identity"
+    ],
+    "violate": [
+      "circumvention_path_introduced_around_export_check",
+      "eccn_classification_absent_for_controlled_artifact",
+      "export_record_altered_after_the_fact",
+      "licence_exception_asserted_without_paragraph_citation",
+      "replica_created_in_restricted_destination",
+      "sf_ex_003_control_absent"
+    ]
+  },
+  "SF-EX-004": {
+    "comply": [
+      "decryption_means_withheld_from_third_party",
+      "eccn_classification_recorded_for_technical_data",
+      "encryption_carve_out_preconditions_all_satisfied",
+      "entity_list_footnote_chain_evaluated",
+      "export_record_retained_for_five_years",
+      "replica_creation_blocked_for_restricted_destination",
+      "restricted_party_access_denied_fail_closed",
+      "sf_ex_004_control_evidenced",
+      "technical_data_access_logged_with_principal_identity"
+    ],
+    "violate": [
+      "circumvention_path_introduced_around_export_check",
+      "decryption_key_escrowed_with_third_party_provider",
+      "export_record_altered_after_the_fact",
+      "foreign_direct_product_rule_not_evaluated",
+      "licence_exception_asserted_without_paragraph_citation",
+      "sf_ex_004_control_absent"
+    ]
+  },
+  "SF-EX-005": {
+    "comply": [
+      "citizenship_and_residency_attributes_present_on_principal",
+      "consolidated_screening_list_checked_within_24h",
+      "decryption_means_withheld_from_third_party",
+      "deemed_export_check_run_at_role_grant",
+      "eccn_classification_recorded_for_technical_data",
+      "encryption_carve_out_preconditions_all_satisfied",
+      "export_record_retained_for_five_years",
+      "restricted_party_access_denied_fail_closed",
+      "sf_ex_005_control_evidenced"
+    ],
+    "violate": [
+      "circumvention_path_introduced_around_export_check",
+      "controlled_technical_data_released_to_foreign_person_without_licence",
+      "decryption_key_escrowed_with_third_party_provider",
+      "foreign_direct_product_rule_not_evaluated",
+      "screening_service_failure_treated_as_pass",
+      "sf_ex_005_control_absent"
+    ]
+  },
+  "SF-EX-006": {
+    "comply": [
+      "citizenship_and_residency_attributes_present_on_principal",
+      "consolidated_screening_list_checked_within_24h",
+      "decryption_means_withheld_from_third_party",
+      "deemed_export_check_run_at_role_grant",
+      "eccn_classification_recorded_for_technical_data",
+      "foreign_direct_product_determination_recorded",
+      "licence_exception_cited_by_paragraph",
+      "screening_hit_escalated_to_named_compliance_officer",
+      "sf_ex_006_control_evidenced"
+    ],
+    "violate": [
+      "controlled_technical_data_released_to_foreign_person_without_licence",
+      "deemed_export_check_skipped_at_role_grant",
+      "foreign_direct_product_rule_not_evaluated",
+      "screening_hit_auto_cleared_without_human_review",
+      "screening_service_failure_treated_as_pass",
+      "sf_ex_006_control_absent"
+    ]
+  },
+  "SF-EX-007": {
+    "comply": [
+      "citizenship_and_residency_attributes_present_on_principal",
+      "consolidated_screening_list_checked_within_24h",
+      "end_use_and_end_user_knowledge_check_documented",
+      "foreign_direct_product_determination_recorded",
+      "geofence_enforced_at_authorisation_layer",
+      "licence_exception_cited_by_paragraph",
+      "replica_creation_blocked_for_restricted_destination",
+      "screening_hit_escalated_to_named_compliance_officer",
+      "sf_ex_007_control_evidenced"
+    ],
+    "violate": [
+      "controlled_technical_data_released_to_foreign_person_without_licence",
+      "deemed_export_check_skipped_at_role_grant",
+      "geofence_bypassed_by_configuration_flag",
+      "replica_created_in_restricted_destination",
+      "screening_hit_auto_cleared_without_human_review",
+      "sf_ex_007_control_absent"
+    ]
+  },
+  "SF-EX-008": {
+    "comply": [
+      "end_use_and_end_user_knowledge_check_documented",
+      "entity_list_footnote_chain_evaluated",
+      "export_record_retained_for_five_years",
+      "foreign_direct_product_determination_recorded",
+      "geofence_enforced_at_authorisation_layer",
+      "licence_exception_cited_by_paragraph",
+      "replica_creation_blocked_for_restricted_destination",
+      "sf_ex_008_control_evidenced",
+      "technical_data_access_logged_with_principal_identity"
+    ],
+    "violate": [
+      "eccn_classification_absent_for_controlled_artifact",
+      "geofence_bypassed_by_configuration_flag",
+      "licence_exception_asserted_without_paragraph_citation",
+      "replica_created_in_restricted_destination",
+      "screening_hit_auto_cleared_without_human_review",
+      "sf_ex_008_control_absent"
+    ]
+  },
+  "SF-EX-009": {
+    "comply": [
+      "decryption_means_withheld_from_third_party",
+      "encryption_carve_out_preconditions_all_satisfied",
+      "entity_list_footnote_chain_evaluated",
+      "export_record_retained_for_five_years",
+      "geofence_enforced_at_authorisation_layer",
+      "replica_creation_blocked_for_restricted_destination",
+      "restricted_party_access_denied_fail_closed",
+      "sf_ex_009_control_evidenced",
+      "technical_data_access_logged_with_principal_identity"
+    ],
+    "violate": [
+      "circumvention_path_introduced_around_export_check",
+      "eccn_classification_absent_for_controlled_artifact",
+      "export_record_altered_after_the_fact",
+      "licence_exception_asserted_without_paragraph_citation",
+      "replica_created_in_restricted_destination",
+      "sf_ex_009_control_absent"
+    ]
+  },
+  "SF-EX-010": {
+    "comply": [
+      "citizenship_and_residency_attributes_present_on_principal",
+      "decryption_means_withheld_from_third_party",
+      "deemed_export_check_run_at_role_grant",
+      "eccn_classification_recorded_for_technical_data",
+      "encryption_carve_out_preconditions_all_satisfied",
+      "entity_list_footnote_chain_evaluated",
+      "export_record_retained_for_five_years",
+      "restricted_party_access_denied_fail_closed",
+      "sf_ex_010_control_evidenced"
+    ],
+    "violate": [
+      "circumvention_path_introduced_around_export_check",
+      "decryption_key_escrowed_with_third_party_provider",
+      "export_record_altered_after_the_fact",
+      "foreign_direct_product_rule_not_evaluated",
+      "licence_exception_asserted_without_paragraph_citation",
+      "sf_ex_010_control_absent"
+    ]
+  },
+  "SF-EX-011": {
+    "comply": [
+      "citizenship_and_residency_attributes_present_on_principal",
+      "consolidated_screening_list_checked_within_24h",
+      "decryption_means_withheld_from_third_party",
+      "deemed_export_check_run_at_role_grant",
+      "eccn_classification_recorded_for_technical_data",
+      "encryption_carve_out_preconditions_all_satisfied",
+      "licence_exception_cited_by_paragraph",
+      "screening_hit_escalated_to_named_compliance_officer",
+      "sf_ex_011_control_evidenced"
+    ],
+    "violate": [
+      "circumvention_path_introduced_around_export_check",
+      "controlled_technical_data_released_to_foreign_person_without_licence",
+      "decryption_key_escrowed_with_third_party_provider",
+      "foreign_direct_product_rule_not_evaluated",
+      "screening_service_failure_treated_as_pass",
+      "sf_ex_011_control_absent"
+    ]
+  },
+  "SF-EX-012": {
+    "comply": [
+      "citizenship_and_residency_attributes_present_on_principal",
+      "consolidated_screening_list_checked_within_24h",
+      "deemed_export_check_run_at_role_grant",
+      "end_use_and_end_user_knowledge_check_documented",
+      "foreign_direct_product_determination_recorded",
+      "geofence_enforced_at_authorisation_layer",
+      "licence_exception_cited_by_paragraph",
+      "screening_hit_escalated_to_named_compliance_officer",
+      "sf_ex_012_control_evidenced"
+    ],
+    "violate": [
+      "controlled_technical_data_released_to_foreign_person_without_licence",
+      "deemed_export_check_skipped_at_role_grant",
+      "foreign_direct_product_rule_not_evaluated",
+      "screening_hit_auto_cleared_without_human_review",
+      "screening_service_failure_treated_as_pass",
+      "sf_ex_012_control_absent"
+    ]
+  },
+  "SF-EX-013": {
+    "comply": [
+      "end_use_and_end_user_knowledge_check_documented",
+      "entity_list_footnote_chain_evaluated",
+      "foreign_direct_product_determination_recorded",
+      "geofence_enforced_at_authorisation_layer",
+      "licence_exception_cited_by_paragraph",
+      "replica_creation_blocked_for_restricted_destination",
+      "screening_hit_escalated_to_named_compliance_officer",
+      "sf_ex_013_control_evidenced",
+      "technical_data_access_logged_with_principal_identity"
+    ],
+    "violate": [
+      "controlled_technical_data_released_to_foreign_person_without_licence",
+      "deemed_export_check_skipped_at_role_grant",
+      "geofence_bypassed_by_configuration_flag",
+      "replica_created_in_restricted_destination",
+      "screening_hit_auto_cleared_without_human_review",
+      "sf_ex_013_control_absent"
+    ]
+  },
+  "SF-DS-001": {
+    "comply": [
+      "cross_border_transfer_has_recorded_lawful_basis",
+      "data_lineage_records_funding_provenance",
+      "government_access_request_path_declared_at_design_time",
+      "important_data_classification_applied",
+      "in_country_processing_enforced_for_regulated_records",
+      "sf_ds_001_control_evidenced",
+      "storage_region_pinned_to_declared_jurisdiction",
+      "sub_processor_region_verified",
+      "transfer_impact_assessment_attached"
+    ],
+    "violate": [
+      "cross_border_transfer_without_lawful_basis",
+      "foreign_government_access_path_left_unresolved_at_runtime",
+      "important_data_exported_without_security_assessment",
+      "regulated_records_replicated_outside_declared_jurisdiction",
+      "sf_ds_001_control_absent",
+      "sub_processor_region_undeclared"
+    ]
+  },
+  "SF-DS-002": {
+    "comply": [
+      "cross_border_transfer_has_recorded_lawful_basis",
+      "data_lineage_records_funding_provenance",
+      "government_access_request_path_declared_at_design_time",
+      "important_data_classification_applied",
+      "in_country_processing_enforced_for_regulated_records",
+      "sf_ds_002_control_evidenced",
+      "storage_region_pinned_to_declared_jurisdiction",
+      "sub_processor_region_verified",
+      "transfer_impact_assessment_attached"
+    ],
+    "violate": [
+      "foreign_government_access_path_left_unresolved_at_runtime",
+      "important_data_exported_without_security_assessment",
+      "log_shipping_crosses_jurisdiction_boundary_silently",
+      "retention_deletion_conflicts_with_regulatory_hold",
+      "sf_ds_002_control_absent",
+      "sub_processor_region_undeclared"
+    ]
+  },
+  "SF-DS-003": {
+    "comply": [
+      "cross_border_transfer_has_recorded_lawful_basis",
+      "data_lineage_records_funding_provenance",
+      "government_access_request_path_declared_at_design_time",
+      "important_data_classification_applied",
+      "in_country_processing_enforced_for_regulated_records",
+      "sf_ds_003_control_evidenced",
+      "storage_region_pinned_to_declared_jurisdiction",
+      "sub_processor_region_verified",
+      "transfer_impact_assessment_attached"
+    ],
+    "violate": [
+      "cross_border_transfer_without_lawful_basis",
+      "log_shipping_crosses_jurisdiction_boundary_silently",
+      "regulated_records_replicated_outside_declared_jurisdiction",
+      "retention_deletion_conflicts_with_regulatory_hold",
+      "sf_ds_003_control_absent",
+      "sub_processor_region_undeclared"
+    ]
+  },
+  "SF-DS-004": {
+    "comply": [
+      "cross_border_transfer_has_recorded_lawful_basis",
+      "data_lineage_records_funding_provenance",
+      "government_access_request_path_declared_at_design_time",
+      "important_data_classification_applied",
+      "in_country_processing_enforced_for_regulated_records",
+      "sf_ds_004_control_evidenced",
+      "storage_region_pinned_to_declared_jurisdiction",
+      "sub_processor_region_verified",
+      "transfer_impact_assessment_attached"
+    ],
+    "violate": [
+      "cross_border_transfer_without_lawful_basis",
+      "foreign_government_access_path_left_unresolved_at_runtime",
+      "important_data_exported_without_security_assessment",
+      "log_shipping_crosses_jurisdiction_boundary_silently",
+      "regulated_records_replicated_outside_declared_jurisdiction",
+      "sf_ds_004_control_absent"
+    ]
+  },
+  "SF-DS-005": {
+    "comply": [
+      "cross_border_transfer_has_recorded_lawful_basis",
+      "data_lineage_records_funding_provenance",
+      "government_access_request_path_declared_at_design_time",
+      "important_data_classification_applied",
+      "in_country_processing_enforced_for_regulated_records",
+      "sf_ds_005_control_evidenced",
+      "storage_region_pinned_to_declared_jurisdiction",
+      "sub_processor_region_verified",
+      "transfer_impact_assessment_attached"
+    ],
+    "violate": [
+      "cross_border_transfer_without_lawful_basis",
+      "foreign_government_access_path_left_unresolved_at_runtime",
+      "important_data_exported_without_security_assessment",
+      "retention_deletion_conflicts_with_regulatory_hold",
+      "sf_ds_005_control_absent",
+      "sub_processor_region_undeclared"
+    ]
+  },
+  "SF-DS-006": {
+    "comply": [
+      "cross_border_transfer_has_recorded_lawful_basis",
+      "data_lineage_records_funding_provenance",
+      "government_access_request_path_declared_at_design_time",
+      "important_data_classification_applied",
+      "in_country_processing_enforced_for_regulated_records",
+      "sf_ds_006_control_evidenced",
+      "storage_region_pinned_to_declared_jurisdiction",
+      "sub_processor_region_verified",
+      "transfer_impact_assessment_attached"
+    ],
+    "violate": [
+      "important_data_exported_without_security_assessment",
+      "log_shipping_crosses_jurisdiction_boundary_silently",
+      "regulated_records_replicated_outside_declared_jurisdiction",
+      "retention_deletion_conflicts_with_regulatory_hold",
+      "sf_ds_006_control_absent",
+      "sub_processor_region_undeclared"
+    ]
+  },
+  "SF-DS-007": {
+    "comply": [
+      "cross_border_transfer_has_recorded_lawful_basis",
+      "data_lineage_records_funding_provenance",
+      "government_access_request_path_declared_at_design_time",
+      "important_data_classification_applied",
+      "in_country_processing_enforced_for_regulated_records",
+      "sf_ds_007_control_evidenced",
+      "storage_region_pinned_to_declared_jurisdiction",
+      "sub_processor_region_verified",
+      "transfer_impact_assessment_attached"
+    ],
+    "violate": [
+      "cross_border_transfer_without_lawful_basis",
+      "foreign_government_access_path_left_unresolved_at_runtime",
+      "log_shipping_crosses_jurisdiction_boundary_silently",
+      "regulated_records_replicated_outside_declared_jurisdiction",
+      "retention_deletion_conflicts_with_regulatory_hold",
+      "sf_ds_007_control_absent"
+    ]
+  },
+  "SF-SG-001": {
+    "comply": [
+      "hsms_linktest_interval_preserved",
+      "hsms_select_state_transition_verified",
+      "hsms_t3_reply_timeout_within_configured_bound",
+      "s1f13_establish_communications_handshake_preserved",
+      "s5f1_alarm_report_delivered_within_budget",
+      "s6f11_event_report_routing_unchanged",
+      "s7f23_recipe_transfer_authenticated_and_logged",
+      "s9f9_transaction_timer_timeout_handled_explicitly",
+      "sf_sg_001_control_evidenced"
+    ],
+    "violate": [
+      "alarm_report_delivery_delayed_past_budget",
+      "gem_control_state_forced_to_offline_by_change",
+      "hsms_reply_timeout_extended_beyond_bound",
+      "recipe_transfer_message_accepted_without_authentication",
+      "s6f11_event_report_routing_altered_by_change",
+      "sf_sg_001_control_absent"
+    ]
+  },
+  "SF-SG-002": {
+    "comply": [
+      "gem_control_state_transitions_exercised_by_test",
+      "hsms_linktest_interval_preserved",
+      "hsms_select_state_transition_verified",
+      "hsms_t3_reply_timeout_within_configured_bound",
+      "message_ordering_preserved_under_load",
+      "s7f23_recipe_transfer_authenticated_and_logged",
+      "s9f9_transaction_timer_timeout_handled_explicitly",
+      "sf_sg_002_control_evidenced",
+      "spooling_enabled_for_offline_periods"
+    ],
+    "violate": [
+      "alarm_report_delivery_delayed_past_budget",
+      "gem_control_state_forced_to_offline_by_change",
+      "message_ordering_not_preserved_under_load",
+      "recipe_transfer_message_accepted_without_authentication",
+      "sf_sg_002_control_absent",
+      "unparsed_equipment_reply_silently_discarded"
+    ]
+  },
+  "SF-SG-003": {
+    "comply": [
+      "collection_event_identifiers_stable_across_release",
+      "e10_state_reporting_unchanged_by_change",
+      "equipment_reply_parsed_against_pinned_message_definition",
+      "gem_control_state_transitions_exercised_by_test",
+      "hsms_linktest_interval_preserved",
+      "hsms_select_state_transition_verified",
+      "message_ordering_preserved_under_load",
+      "sf_sg_003_control_evidenced",
+      "spooling_enabled_for_offline_periods"
+    ],
+    "violate": [
+      "collection_event_identifier_renumbered_without_amendment",
+      "equipment_safety_interlock_signal_suppressed",
+      "message_ordering_not_preserved_under_load",
+      "recipe_transfer_message_accepted_without_authentication",
+      "sf_sg_003_control_absent",
+      "unparsed_equipment_reply_silently_discarded"
+    ]
+  },
+  "SF-SG-004": {
+    "comply": [
+      "collection_event_identifiers_stable_across_release",
+      "e10_state_reporting_unchanged_by_change",
+      "equipment_reply_parsed_against_pinned_message_definition",
+      "message_ordering_preserved_under_load",
+      "s1f13_establish_communications_handshake_preserved",
+      "s5f1_alarm_report_delivered_within_budget",
+      "s6f11_event_report_routing_unchanged",
+      "sf_sg_004_control_evidenced",
+      "spooling_enabled_for_offline_periods"
+    ],
+    "violate": [
+      "collection_event_identifier_renumbered_without_amendment",
+      "equipment_safety_interlock_signal_suppressed",
+      "hsms_reply_timeout_extended_beyond_bound",
+      "s6f11_event_report_routing_altered_by_change",
+      "sf_sg_004_control_absent",
+      "unparsed_equipment_reply_silently_discarded"
+    ]
+  },
+  "SF-SG-005": {
+    "comply": [
+      "collection_event_identifiers_stable_across_release",
+      "equipment_reply_parsed_against_pinned_message_definition",
+      "hsms_t3_reply_timeout_within_configured_bound",
+      "s1f13_establish_communications_handshake_preserved",
+      "s5f1_alarm_report_delivered_within_budget",
+      "s6f11_event_report_routing_unchanged",
+      "s7f23_recipe_transfer_authenticated_and_logged",
+      "s9f9_transaction_timer_timeout_handled_explicitly",
+      "sf_sg_005_control_evidenced"
+    ],
+    "violate": [
+      "alarm_report_delivery_delayed_past_budget",
+      "equipment_safety_interlock_signal_suppressed",
+      "gem_control_state_forced_to_offline_by_change",
+      "hsms_reply_timeout_extended_beyond_bound",
+      "s6f11_event_report_routing_altered_by_change",
+      "sf_sg_005_control_absent"
+    ]
+  },
+  "SF-SG-006": {
+    "comply": [
+      "gem_control_state_transitions_exercised_by_test",
+      "hsms_linktest_interval_preserved",
+      "hsms_select_state_transition_verified",
+      "hsms_t3_reply_timeout_within_configured_bound",
+      "s5f1_alarm_report_delivered_within_budget",
+      "s6f11_event_report_routing_unchanged",
+      "s7f23_recipe_transfer_authenticated_and_logged",
+      "s9f9_transaction_timer_timeout_handled_explicitly",
+      "sf_sg_006_control_evidenced"
+    ],
+    "violate": [
+      "alarm_report_delivery_delayed_past_budget",
+      "gem_control_state_forced_to_offline_by_change",
+      "hsms_reply_timeout_extended_beyond_bound",
+      "message_ordering_not_preserved_under_load",
+      "recipe_transfer_message_accepted_without_authentication",
+      "sf_sg_006_control_absent"
+    ]
+  },
+  "SF-SG-007": {
+    "comply": [
+      "e10_state_reporting_unchanged_by_change",
+      "gem_control_state_transitions_exercised_by_test",
+      "hsms_linktest_interval_preserved",
+      "hsms_select_state_transition_verified",
+      "hsms_t3_reply_timeout_within_configured_bound",
+      "message_ordering_preserved_under_load",
+      "s9f9_transaction_timer_timeout_handled_explicitly",
+      "sf_sg_007_control_evidenced",
+      "spooling_enabled_for_offline_periods"
+    ],
+    "violate": [
+      "collection_event_identifier_renumbered_without_amendment",
+      "gem_control_state_forced_to_offline_by_change",
+      "message_ordering_not_preserved_under_load",
+      "recipe_transfer_message_accepted_without_authentication",
+      "sf_sg_007_control_absent",
+      "unparsed_equipment_reply_silently_discarded"
+    ]
+  },
+  "SF-SG-008": {
+    "comply": [
+      "collection_event_identifiers_stable_across_release",
+      "e10_state_reporting_unchanged_by_change",
+      "equipment_reply_parsed_against_pinned_message_definition",
+      "gem_control_state_transitions_exercised_by_test",
+      "hsms_select_state_transition_verified",
+      "message_ordering_preserved_under_load",
+      "s1f13_establish_communications_handshake_preserved",
+      "sf_sg_008_control_evidenced",
+      "spooling_enabled_for_offline_periods"
+    ],
+    "violate": [
+      "collection_event_identifier_renumbered_without_amendment",
+      "equipment_safety_interlock_signal_suppressed",
+      "message_ordering_not_preserved_under_load",
+      "s6f11_event_report_routing_altered_by_change",
+      "sf_sg_008_control_absent",
+      "unparsed_equipment_reply_silently_discarded"
+    ]
+  },
+  "SF-SG-009": {
+    "comply": [
+      "collection_event_identifiers_stable_across_release",
+      "e10_state_reporting_unchanged_by_change",
+      "equipment_reply_parsed_against_pinned_message_definition",
+      "message_ordering_preserved_under_load",
+      "s1f13_establish_communications_handshake_preserved",
+      "s5f1_alarm_report_delivered_within_budget",
+      "s6f11_event_report_routing_unchanged",
+      "s7f23_recipe_transfer_authenticated_and_logged",
+      "sf_sg_009_control_evidenced"
+    ],
+    "violate": [
+      "alarm_report_delivery_delayed_past_budget",
+      "collection_event_identifier_renumbered_without_amendment",
+      "equipment_safety_interlock_signal_suppressed",
+      "hsms_reply_timeout_extended_beyond_bound",
+      "s6f11_event_report_routing_altered_by_change",
+      "sf_sg_009_control_absent"
+    ]
+  },
+  "SF-SG-010": {
+    "comply": [
+      "collection_event_identifiers_stable_across_release",
+      "hsms_linktest_interval_preserved",
+      "hsms_t3_reply_timeout_within_configured_bound",
+      "s1f13_establish_communications_handshake_preserved",
+      "s5f1_alarm_report_delivered_within_budget",
+      "s6f11_event_report_routing_unchanged",
+      "s7f23_recipe_transfer_authenticated_and_logged",
+      "s9f9_transaction_timer_timeout_handled_explicitly",
+      "sf_sg_010_control_evidenced"
+    ],
+    "violate": [
+      "alarm_report_delivery_delayed_past_budget",
+      "gem_control_state_forced_to_offline_by_change",
+      "hsms_reply_timeout_extended_beyond_bound",
+      "recipe_transfer_message_accepted_without_authentication",
+      "s6f11_event_report_routing_altered_by_change",
+      "sf_sg_010_control_absent"
+    ]
+  },
+  "SF-RT-001": {
+    "comply": [
+      "blocking_call_absent_from_hot_path",
+      "budget_scope_stated_as_interrupt_or_task_context",
+      "histogram_evidence_retained_with_result",
+      "latency_budget_declared_for_changed_path",
+      "load_conditions_declared_with_measurement",
+      "measured_p999_within_declared_budget",
+      "measurement_corrects_coordinated_omission",
+      "priority_inversion_protection_present",
+      "sf_rt_001_control_evidenced"
+    ],
+    "violate": [
+      "blocking_operation_introduced_on_monitoring_hot_path",
+      "latency_budget_not_declared_for_changed_path",
+      "latency_measured_without_coordinated_omission_correction",
+      "measured_p100_exceeds_declared_budget",
+      "measured_p999_exceeds_declared_budget",
+      "sf_rt_001_control_absent"
+    ]
+  },
+  "SF-RT-002": {
+    "comply": [
+      "blocking_call_absent_from_hot_path",
+      "budget_scope_stated_as_interrupt_or_task_context",
+      "histogram_evidence_retained_with_result",
+      "latency_budget_declared_for_changed_path",
+      "load_conditions_declared_with_measurement",
+      "measured_p999_within_declared_budget",
+      "measurement_duration_meets_minimum",
+      "priority_inversion_protection_present",
+      "sf_rt_002_control_evidenced"
+    ],
+    "violate": [
+      "blocking_operation_introduced_on_monitoring_hot_path",
+      "garbage_collection_pause_unbounded_on_ingest_path",
+      "latency_budget_not_declared_for_changed_path",
+      "latency_measured_without_coordinated_omission_correction",
+      "load_conditions_omitted_from_measurement",
+      "sf_rt_002_control_absent"
+    ]
+  },
+  "SF-RT-003": {
+    "comply": [
+      "blocking_call_absent_from_hot_path",
+      "budget_scope_stated_as_interrupt_or_task_context",
+      "latency_budget_declared_for_changed_path",
+      "load_conditions_declared_with_measurement",
+      "measured_p999_within_declared_budget",
+      "measurement_corrects_coordinated_omission",
+      "measurement_duration_meets_minimum",
+      "priority_inversion_protection_present",
+      "sf_rt_003_control_evidenced"
+    ],
+    "violate": [
+      "garbage_collection_pause_unbounded_on_ingest_path",
+      "latency_budget_not_declared_for_changed_path",
+      "load_conditions_omitted_from_measurement",
+      "measured_p100_exceeds_declared_budget",
+      "measured_p999_exceeds_declared_budget",
+      "sf_rt_003_control_absent"
+    ]
+  },
+  "SF-RT-004": {
+    "comply": [
+      "blocking_call_absent_from_hot_path",
+      "budget_scope_stated_as_interrupt_or_task_context",
+      "histogram_evidence_retained_with_result",
+      "latency_budget_declared_for_changed_path",
+      "load_conditions_declared_with_measurement",
+      "measured_p999_within_declared_budget",
+      "measurement_corrects_coordinated_omission",
+      "priority_inversion_protection_present",
+      "sf_rt_004_control_evidenced"
+    ],
+    "violate": [
+      "blocking_operation_introduced_on_monitoring_hot_path",
+      "latency_measured_without_coordinated_omission_correction",
+      "load_conditions_omitted_from_measurement",
+      "measured_p100_exceeds_declared_budget",
+      "measured_p999_exceeds_declared_budget",
+      "sf_rt_004_control_absent"
+    ]
+  },
+  "SF-RT-005": {
+    "comply": [
+      "blocking_call_absent_from_hot_path",
+      "budget_scope_stated_as_interrupt_or_task_context",
+      "histogram_evidence_retained_with_result",
+      "latency_budget_declared_for_changed_path",
+      "load_conditions_declared_with_measurement",
+      "measured_p999_within_declared_budget",
+      "measurement_duration_meets_minimum",
+      "priority_inversion_protection_present",
+      "sf_rt_005_control_evidenced"
+    ],
+    "violate": [
+      "blocking_operation_introduced_on_monitoring_hot_path",
+      "garbage_collection_pause_unbounded_on_ingest_path",
+      "latency_budget_not_declared_for_changed_path",
+      "latency_measured_without_coordinated_omission_correction",
+      "measured_p100_exceeds_declared_budget",
+      "sf_rt_005_control_absent"
+    ]
+  },
+  "SF-RT-006": {
+    "comply": [
+      "blocking_call_absent_from_hot_path",
+      "budget_scope_stated_as_interrupt_or_task_context",
+      "latency_budget_declared_for_changed_path",
+      "load_conditions_declared_with_measurement",
+      "measured_p999_within_declared_budget",
+      "measurement_corrects_coordinated_omission",
+      "measurement_duration_meets_minimum",
+      "priority_inversion_protection_present",
+      "sf_rt_006_control_evidenced"
+    ],
+    "violate": [
+      "blocking_operation_introduced_on_monitoring_hot_path",
+      "garbage_collection_pause_unbounded_on_ingest_path",
+      "latency_budget_not_declared_for_changed_path",
+      "load_conditions_omitted_from_measurement",
+      "measured_p999_exceeds_declared_budget",
+      "sf_rt_006_control_absent"
+    ]
+  },
+  "SF-RT-007": {
+    "comply": [
+      "blocking_call_absent_from_hot_path",
+      "budget_scope_stated_as_interrupt_or_task_context",
+      "histogram_evidence_retained_with_result",
+      "latency_budget_declared_for_changed_path",
+      "load_conditions_declared_with_measurement",
+      "measured_p999_within_declared_budget",
+      "measurement_corrects_coordinated_omission",
+      "priority_inversion_protection_present",
+      "sf_rt_007_control_evidenced"
+    ],
+    "violate": [
+      "garbage_collection_pause_unbounded_on_ingest_path",
+      "latency_measured_without_coordinated_omission_correction",
+      "load_conditions_omitted_from_measurement",
+      "measured_p100_exceeds_declared_budget",
+      "measured_p999_exceeds_declared_budget",
+      "sf_rt_007_control_absent"
+    ]
+  },
+  "SF-WI-001": {
+    "comply": [
+      "correction_recorded_as_new_entry_with_attribution",
+      "initial_image_of_record_preserved",
+      "lot_genealogy_reconstructable_from_records",
+      "metrology_result_bound_to_lot_and_wafer_identity",
+      "recipe_execution_record_hash_chained",
+      "record_change_captures_who_when_and_on_what_equipment",
+      "regulatory_hold_blocks_deletion",
+      "sf_wi_001_control_evidenced",
+      "wip_state_transition_append_only"
+    ],
+    "violate": [
+      "hash_chain_broken_by_migration",
+      "metrology_record_overwritten_in_place",
+      "recipe_execution_record_deleted_before_retention_expiry",
+      "record_amendment_lacks_attribution",
+      "sf_wi_001_control_absent",
+      "wip_status_altered_retroactively"
+    ]
+  },
+  "SF-WI-002": {
+    "comply": [
+      "clock_source_trusted_and_monotonic",
+      "correction_recorded_as_new_entry_with_attribution",
+      "initial_image_of_record_preserved",
+      "lot_genealogy_reconstructable_from_records",
+      "recipe_execution_record_hash_chained",
+      "record_change_captures_who_when_and_on_what_equipment",
+      "regulatory_hold_blocks_deletion",
+      "sf_wi_002_control_evidenced",
+      "wip_state_transition_append_only"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_throughput",
+      "hash_chain_broken_by_migration",
+      "recipe_execution_record_deleted_before_retention_expiry",
+      "record_amendment_lacks_attribution",
+      "record_destroyed_while_under_regulatory_hold",
+      "sf_wi_002_control_absent"
+    ]
+  },
+  "SF-WI-003": {
+    "comply": [
+      "clock_source_trusted_and_monotonic",
+      "correction_recorded_as_new_entry_with_attribution",
+      "lot_genealogy_reconstructable_from_records",
+      "metrology_result_bound_to_lot_and_wafer_identity",
+      "recipe_execution_record_hash_chained",
+      "record_change_captures_who_when_and_on_what_equipment",
+      "regulatory_hold_blocks_deletion",
+      "sf_wi_003_control_evidenced",
+      "wip_state_transition_append_only"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_throughput",
+      "hash_chain_broken_by_migration",
+      "metrology_record_overwritten_in_place",
+      "record_destroyed_while_under_regulatory_hold",
+      "sf_wi_003_control_absent",
+      "wip_status_altered_retroactively"
+    ]
+  },
+  "SF-WI-004": {
+    "comply": [
+      "correction_recorded_as_new_entry_with_attribution",
+      "initial_image_of_record_preserved",
+      "lot_genealogy_reconstructable_from_records",
+      "metrology_result_bound_to_lot_and_wafer_identity",
+      "recipe_execution_record_hash_chained",
+      "record_change_captures_who_when_and_on_what_equipment",
+      "regulatory_hold_blocks_deletion",
+      "sf_wi_004_control_evidenced",
+      "wip_state_transition_append_only"
+    ],
+    "violate": [
+      "metrology_record_overwritten_in_place",
+      "recipe_execution_record_deleted_before_retention_expiry",
+      "record_amendment_lacks_attribution",
+      "record_destroyed_while_under_regulatory_hold",
+      "sf_wi_004_control_absent",
+      "wip_status_altered_retroactively"
+    ]
+  },
+  "SF-WI-005": {
+    "comply": [
+      "clock_source_trusted_and_monotonic",
+      "correction_recorded_as_new_entry_with_attribution",
+      "initial_image_of_record_preserved",
+      "lot_genealogy_reconstructable_from_records",
+      "recipe_execution_record_hash_chained",
+      "record_change_captures_who_when_and_on_what_equipment",
+      "regulatory_hold_blocks_deletion",
+      "sf_wi_005_control_evidenced",
+      "wip_state_transition_append_only"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_throughput",
+      "hash_chain_broken_by_migration",
+      "metrology_record_overwritten_in_place",
+      "recipe_execution_record_deleted_before_retention_expiry",
+      "record_amendment_lacks_attribution",
+      "sf_wi_005_control_absent"
+    ]
+  },
+  "SF-WI-006": {
+    "comply": [
+      "clock_source_trusted_and_monotonic",
+      "correction_recorded_as_new_entry_with_attribution",
+      "lot_genealogy_reconstructable_from_records",
+      "metrology_result_bound_to_lot_and_wafer_identity",
+      "recipe_execution_record_hash_chained",
+      "record_change_captures_who_when_and_on_what_equipment",
+      "regulatory_hold_blocks_deletion",
+      "sf_wi_006_control_evidenced",
+      "wip_state_transition_append_only"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_throughput",
+      "hash_chain_broken_by_migration",
+      "record_amendment_lacks_attribution",
+      "record_destroyed_while_under_regulatory_hold",
+      "sf_wi_006_control_absent",
+      "wip_status_altered_retroactively"
+    ]
+  },
+  "SF-WI-007": {
+    "comply": [
+      "correction_recorded_as_new_entry_with_attribution",
+      "initial_image_of_record_preserved",
+      "lot_genealogy_reconstructable_from_records",
+      "metrology_result_bound_to_lot_and_wafer_identity",
+      "recipe_execution_record_hash_chained",
+      "record_change_captures_who_when_and_on_what_equipment",
+      "regulatory_hold_blocks_deletion",
+      "sf_wi_007_control_evidenced",
+      "wip_state_transition_append_only"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_throughput",
+      "metrology_record_overwritten_in_place",
+      "recipe_execution_record_deleted_before_retention_expiry",
+      "record_destroyed_while_under_regulatory_hold",
+      "sf_wi_007_control_absent",
+      "wip_status_altered_retroactively"
+    ]
+  },
+  "SF-RP-001": {
+    "comply": [
+      "cache_of_recipe_payload_bounded_and_encrypted",
+      "debug_mode_redacts_process_parameters",
+      "model_context_excludes_controlled_process_parameters",
+      "recipe_access_scoped_to_named_process_owner",
+      "recipe_body_excluded_from_application_logs",
+      "recipe_diff_review_requires_two_named_engineers",
+      "recipe_identifier_used_in_place_of_parameters",
+      "recipe_parameters_encrypted_at_rest_and_in_transit",
+      "sf_rp_001_control_evidenced"
+    ],
+    "violate": [
+      "debug_endpoint_returns_full_recipe_body",
+      "recipe_parameters_included_in_model_prompt_context",
+      "recipe_parameters_written_to_application_log",
+      "recipe_payload_cached_in_plaintext",
+      "recipe_transmitted_over_unencrypted_channel",
+      "sf_rp_001_control_absent"
+    ]
+  },
+  "SF-RP-002": {
+    "comply": [
+      "cache_of_recipe_payload_bounded_and_encrypted",
+      "debug_mode_redacts_process_parameters",
+      "model_context_excludes_controlled_process_parameters",
+      "recipe_access_scoped_to_named_process_owner",
+      "recipe_body_excluded_from_application_logs",
+      "recipe_diff_review_requires_two_named_engineers",
+      "recipe_identifier_used_in_place_of_parameters",
+      "recipe_parameters_encrypted_at_rest_and_in_transit",
+      "sf_rp_002_control_evidenced"
+    ],
+    "violate": [
+      "debug_endpoint_returns_full_recipe_body",
+      "process_parameters_emitted_in_telemetry_metric_labels",
+      "recipe_exported_to_vendor_support_bundle",
+      "recipe_parameters_included_in_model_prompt_context",
+      "recipe_transmitted_over_unencrypted_channel",
+      "sf_rp_002_control_absent"
+    ]
+  },
+  "SF-RP-003": {
+    "comply": [
+      "cache_of_recipe_payload_bounded_and_encrypted",
+      "debug_mode_redacts_process_parameters",
+      "model_context_excludes_controlled_process_parameters",
+      "recipe_access_scoped_to_named_process_owner",
+      "recipe_body_excluded_from_application_logs",
+      "recipe_diff_review_requires_two_named_engineers",
+      "recipe_identifier_used_in_place_of_parameters",
+      "recipe_parameters_encrypted_at_rest_and_in_transit",
+      "sf_rp_003_control_evidenced"
+    ],
+    "violate": [
+      "process_parameters_emitted_in_telemetry_metric_labels",
+      "recipe_exported_to_vendor_support_bundle",
+      "recipe_parameters_written_to_application_log",
+      "recipe_payload_cached_in_plaintext",
+      "recipe_transmitted_over_unencrypted_channel",
+      "sf_rp_003_control_absent"
+    ]
+  },
+  "SF-RP-004": {
+    "comply": [
+      "cache_of_recipe_payload_bounded_and_encrypted",
+      "debug_mode_redacts_process_parameters",
+      "model_context_excludes_controlled_process_parameters",
+      "recipe_access_scoped_to_named_process_owner",
+      "recipe_body_excluded_from_application_logs",
+      "recipe_diff_review_requires_two_named_engineers",
+      "recipe_identifier_used_in_place_of_parameters",
+      "recipe_parameters_encrypted_at_rest_and_in_transit",
+      "sf_rp_004_control_evidenced"
+    ],
+    "violate": [
+      "debug_endpoint_returns_full_recipe_body",
+      "recipe_exported_to_vendor_support_bundle",
+      "recipe_parameters_included_in_model_prompt_context",
+      "recipe_parameters_written_to_application_log",
+      "recipe_payload_cached_in_plaintext",
+      "sf_rp_004_control_absent"
+    ]
+  },
+  "SF-RP-005": {
+    "comply": [
+      "cache_of_recipe_payload_bounded_and_encrypted",
+      "debug_mode_redacts_process_parameters",
+      "model_context_excludes_controlled_process_parameters",
+      "recipe_access_scoped_to_named_process_owner",
+      "recipe_body_excluded_from_application_logs",
+      "recipe_diff_review_requires_two_named_engineers",
+      "recipe_identifier_used_in_place_of_parameters",
+      "recipe_parameters_encrypted_at_rest_and_in_transit",
+      "sf_rp_005_control_evidenced"
+    ],
+    "violate": [
+      "debug_endpoint_returns_full_recipe_body",
+      "process_parameters_emitted_in_telemetry_metric_labels",
+      "recipe_parameters_included_in_model_prompt_context",
+      "recipe_payload_cached_in_plaintext",
+      "recipe_transmitted_over_unencrypted_channel",
+      "sf_rp_005_control_absent"
+    ]
+  },
+  "SF-RP-006": {
+    "comply": [
+      "cache_of_recipe_payload_bounded_and_encrypted",
+      "debug_mode_redacts_process_parameters",
+      "model_context_excludes_controlled_process_parameters",
+      "recipe_access_scoped_to_named_process_owner",
+      "recipe_body_excluded_from_application_logs",
+      "recipe_diff_review_requires_two_named_engineers",
+      "recipe_identifier_used_in_place_of_parameters",
+      "recipe_parameters_encrypted_at_rest_and_in_transit",
+      "sf_rp_006_control_evidenced"
+    ],
+    "violate": [
+      "debug_endpoint_returns_full_recipe_body",
+      "process_parameters_emitted_in_telemetry_metric_labels",
+      "recipe_exported_to_vendor_support_bundle",
+      "recipe_parameters_written_to_application_log",
+      "recipe_transmitted_over_unencrypted_channel",
+      "sf_rp_006_control_absent"
+    ]
+  },
+  "SF-RP-007": {
+    "comply": [
+      "cache_of_recipe_payload_bounded_and_encrypted",
+      "debug_mode_redacts_process_parameters",
+      "model_context_excludes_controlled_process_parameters",
+      "recipe_access_scoped_to_named_process_owner",
+      "recipe_body_excluded_from_application_logs",
+      "recipe_diff_review_requires_two_named_engineers",
+      "recipe_identifier_used_in_place_of_parameters",
+      "recipe_parameters_encrypted_at_rest_and_in_transit",
+      "sf_rp_007_control_evidenced"
+    ],
+    "violate": [
+      "process_parameters_emitted_in_telemetry_metric_labels",
+      "recipe_exported_to_vendor_support_bundle",
+      "recipe_parameters_included_in_model_prompt_context",
+      "recipe_parameters_written_to_application_log",
+      "recipe_payload_cached_in_plaintext",
+      "sf_rp_007_control_absent"
+    ]
+  },
+  "SF-SS-001": {
+    "comply": [
+      "dependency_pinned_to_immutable_digest_not_floating_range",
+      "dependency_resolved_from_declared_internal_registry_only",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_certificate_oidc_issuer_in_trusted_issuer_set",
+      "provenance_subject_digest_matches_distributed_artifact_digest",
+      "reusable_workflow_reference_in_trusted_workflow_set",
+      "sbom_generated_and_signed_for_release",
+      "sf_ss_001_control_evidenced",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "builder_id_mismatch_in_provenance",
+      "component_integrity_drift_detected",
+      "component_version_downgrade_detected",
+      "provenance_attestation_absent_for_release_artifact",
+      "sf_ss_001_control_absent",
+      "undeclared_transitive_dependency_introduced"
+    ]
+  },
+  "SF-SS-002": {
+    "comply": [
+      "dependency_licence_on_allowlist",
+      "dependency_pinned_to_immutable_digest_not_floating_range",
+      "dependency_resolved_from_declared_internal_registry_only",
+      "reusable_workflow_reference_in_trusted_workflow_set",
+      "sbom_generated_and_signed_for_release",
+      "sbom_matches_approved_baseline",
+      "sf_ss_002_control_evidenced",
+      "vsa_verified_levels_meet_required_slsa_level",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "builder_id_mismatch_in_provenance",
+      "dependency_is_direct_url_dependency",
+      "package_name_resolves_to_public_registry_first",
+      "provenance_attestation_absent_for_release_artifact",
+      "sf_ss_002_control_absent",
+      "undeclared_transitive_dependency_introduced"
+    ]
+  },
+  "SF-SS-003": {
+    "comply": [
+      "dependency_licence_on_allowlist",
+      "dependency_pinned_to_immutable_digest_not_floating_range",
+      "pipeline_denies_privileged_credentials_to_untrusted_code",
+      "pipeline_sanitises_untrusted_metadata_before_use",
+      "sbom_generated_and_signed_for_release",
+      "sbom_matches_approved_baseline",
+      "sca_scan_clean_above_cvss_threshold",
+      "sf_ss_003_control_evidenced",
+      "vsa_verified_levels_meet_required_slsa_level"
+    ],
+    "violate": [
+      "builder_id_mismatch_in_provenance",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "dependency_is_direct_url_dependency",
+      "package_name_resolves_to_public_registry_first",
+      "sf_ss_003_control_absent"
+    ]
+  },
+  "SF-SS-004": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_licence_on_allowlist",
+      "pipeline_denies_privileged_credentials_to_untrusted_code",
+      "pipeline_sanitises_untrusted_metadata_before_use",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact_digest",
+      "sca_scan_clean_above_cvss_threshold",
+      "sf_ss_004_control_evidenced",
+      "vsa_verified_levels_meet_required_slsa_level"
+    ],
+    "violate": [
+      "build_runner_reused_across_jobs",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "dependency_is_direct_url_dependency",
+      "sbom_omits_transitive_components",
+      "sf_ss_004_control_absent"
+    ]
+  },
+  "SF-SS-005": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "pipeline_denies_privileged_credentials_to_untrusted_code",
+      "pipeline_sanitises_untrusted_metadata_before_use",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_certificate_oidc_issuer_in_trusted_issuer_set",
+      "provenance_subject_digest_matches_distributed_artifact_digest",
+      "reusable_workflow_reference_in_trusted_workflow_set",
+      "sf_ss_005_control_evidenced",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "build_runner_reused_across_jobs",
+      "component_integrity_drift_detected",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "sbom_omits_transitive_components",
+      "secret_material_present_in_diff",
+      "sf_ss_005_control_absent"
+    ]
+  },
+  "SF-SS-006": {
+    "comply": [
+      "dependency_pinned_to_immutable_digest_not_floating_range",
+      "dependency_resolved_from_declared_internal_registry_only",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_certificate_oidc_issuer_in_trusted_issuer_set",
+      "provenance_subject_digest_matches_distributed_artifact_digest",
+      "reusable_workflow_reference_in_trusted_workflow_set",
+      "sbom_generated_and_signed_for_release",
+      "sf_ss_006_control_evidenced",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "build_runner_reused_across_jobs",
+      "component_integrity_drift_detected",
+      "component_version_downgrade_detected",
+      "secret_material_present_in_diff",
+      "sf_ss_006_control_absent",
+      "undeclared_transitive_dependency_introduced"
+    ]
+  },
+  "SF-SS-007": {
+    "comply": [
+      "dependency_licence_on_allowlist",
+      "dependency_pinned_to_immutable_digest_not_floating_range",
+      "dependency_resolved_from_declared_internal_registry_only",
+      "reusable_workflow_reference_in_trusted_workflow_set",
+      "sbom_generated_and_signed_for_release",
+      "sbom_matches_approved_baseline",
+      "sf_ss_007_control_evidenced",
+      "vsa_verified_levels_meet_required_slsa_level",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "builder_id_mismatch_in_provenance",
+      "component_integrity_drift_detected",
+      "component_version_downgrade_detected",
+      "provenance_attestation_absent_for_release_artifact",
+      "sf_ss_007_control_absent",
+      "undeclared_transitive_dependency_introduced"
+    ]
+  },
+  "SF-SS-008": {
+    "comply": [
+      "dependency_licence_on_allowlist",
+      "dependency_pinned_to_immutable_digest_not_floating_range",
+      "pipeline_denies_privileged_credentials_to_untrusted_code",
+      "pipeline_sanitises_untrusted_metadata_before_use",
+      "sbom_generated_and_signed_for_release",
+      "sbom_matches_approved_baseline",
+      "sca_scan_clean_above_cvss_threshold",
+      "sf_ss_008_control_evidenced",
+      "vsa_verified_levels_meet_required_slsa_level"
+    ],
+    "violate": [
+      "builder_id_mismatch_in_provenance",
+      "dependency_is_direct_url_dependency",
+      "package_name_resolves_to_public_registry_first",
+      "provenance_attestation_absent_for_release_artifact",
+      "sf_ss_008_control_absent",
+      "undeclared_transitive_dependency_introduced"
+    ]
+  },
+  "SF-SS-009": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_licence_on_allowlist",
+      "pipeline_denies_privileged_credentials_to_untrusted_code",
+      "pipeline_sanitises_untrusted_metadata_before_use",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact_digest",
+      "sca_scan_clean_above_cvss_threshold",
+      "sf_ss_009_control_evidenced",
+      "vsa_verified_levels_meet_required_slsa_level"
+    ],
+    "violate": [
+      "builder_id_mismatch_in_provenance",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "dependency_is_direct_url_dependency",
+      "package_name_resolves_to_public_registry_first",
+      "sf_ss_009_control_absent"
+    ]
+  },
+  "SF-SS-010": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "pipeline_denies_privileged_credentials_to_untrusted_code",
+      "pipeline_sanitises_untrusted_metadata_before_use",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_certificate_oidc_issuer_in_trusted_issuer_set",
+      "provenance_subject_digest_matches_distributed_artifact_digest",
+      "reusable_workflow_reference_in_trusted_workflow_set",
+      "sf_ss_010_control_evidenced",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "build_runner_reused_across_jobs",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "dependency_is_direct_url_dependency",
+      "sbom_omits_transitive_components",
+      "sf_ss_010_control_absent"
+    ]
+  },
+  "SF-SS-011": {
+    "comply": [
+      "dependency_pinned_to_immutable_digest_not_floating_range",
+      "dependency_resolved_from_declared_internal_registry_only",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_certificate_oidc_issuer_in_trusted_issuer_set",
+      "provenance_subject_digest_matches_distributed_artifact_digest",
+      "reusable_workflow_reference_in_trusted_workflow_set",
+      "sbom_generated_and_signed_for_release",
+      "sf_ss_011_control_evidenced",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "build_runner_reused_across_jobs",
+      "component_integrity_drift_detected",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "sbom_omits_transitive_components",
+      "secret_material_present_in_diff",
+      "sf_ss_011_control_absent"
+    ]
+  },
+  "SF-AG-001": {
+    "comply": [
+      "agent_change_reviewed_by_second_authorised_person",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "api_contract_test_passes_against_pinned_specification",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "change_authored_by_ai_agent_declared",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "sf_ag_001_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_modifies_equipment_control_path",
+      "agent_change_modifies_export_control_enforcement_logic",
+      "agent_code_calls_non_allowlisted_external_host",
+      "api_contract_broken_on_path_axis",
+      "imported_package_absent_from_registry",
+      "sf_ag_001_control_absent"
+    ]
+  },
+  "SF-AG-002": {
+    "comply": [
+      "agent_change_reviewed_by_second_authorised_person",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "api_contract_test_passes_against_pinned_specification",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "change_authored_by_ai_agent_declared",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "policy_rule_source_is_redistributable",
+      "sf_ag_002_control_evidenced"
+    ],
+    "violate": [
+      "agent_code_calls_non_allowlisted_external_host",
+      "agent_disabled_a_failing_compliance_test",
+      "api_contract_broken_on_body_axis",
+      "api_contract_broken_on_path_axis",
+      "imported_package_absent_from_registry",
+      "sf_ag_002_control_absent"
+    ]
+  },
+  "SF-AG-003": {
+    "comply": [
+      "agent_change_reviewed_by_second_authorised_person",
+      "agent_prompt_and_context_hash_recorded",
+      "api_contract_test_passes_against_pinned_specification",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "change_authored_by_ai_agent_declared",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "policy_rule_source_is_redistributable",
+      "sf_ag_003_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_lacks_any_human_reviewer",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "api_contract_broken_on_body_axis",
+      "api_contract_broken_on_path_axis",
+      "sf_ag_003_control_absent"
+    ]
+  },
+  "SF-AG-004": {
+    "comply": [
+      "agent_change_reviewed_by_second_authorised_person",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "change_authored_by_ai_agent_declared",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "policy_rule_source_is_redistributable",
+      "sf_ag_004_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_lacks_any_human_reviewer",
+      "agent_change_modifies_equipment_control_path",
+      "agent_change_modifies_export_control_enforcement_logic",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "sf_ag_004_control_absent"
+    ]
+  },
+  "SF-AG-005": {
+    "comply": [
+      "agent_change_reviewed_by_second_authorised_person",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "api_contract_test_passes_against_pinned_specification",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "policy_rule_source_is_redistributable",
+      "sf_ag_005_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_lacks_any_human_reviewer",
+      "agent_change_modifies_equipment_control_path",
+      "agent_change_modifies_export_control_enforcement_logic",
+      "agent_code_calls_non_allowlisted_external_host",
+      "imported_package_absent_from_registry",
+      "sf_ag_005_control_absent"
+    ]
+  },
+  "SF-AG-006": {
+    "comply": [
+      "agent_prompt_and_context_hash_recorded",
+      "api_contract_test_passes_against_pinned_specification",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "change_authored_by_ai_agent_declared",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "policy_rule_source_is_redistributable",
+      "sf_ag_006_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_modifies_export_control_enforcement_logic",
+      "agent_code_calls_non_allowlisted_external_host",
+      "api_contract_broken_on_body_axis",
+      "api_contract_broken_on_path_axis",
+      "imported_package_absent_from_registry",
+      "sf_ag_006_control_absent"
+    ]
+  },
+  "SF-AG-007": {
+    "comply": [
+      "agent_change_reviewed_by_second_authorised_person",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "change_authored_by_ai_agent_declared",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "policy_rule_source_is_redistributable",
+      "sf_ag_007_control_evidenced"
+    ],
+    "violate": [
+      "agent_code_calls_non_allowlisted_external_host",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "api_contract_broken_on_body_axis",
+      "api_contract_broken_on_path_axis",
+      "sf_ag_007_control_absent"
+    ]
+  },
+  "SF-AG-008": {
+    "comply": [
+      "agent_change_reviewed_by_second_authorised_person",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "api_contract_test_passes_against_pinned_specification",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "sf_ag_008_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_lacks_any_human_reviewer",
+      "agent_change_modifies_equipment_control_path",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "api_contract_broken_on_body_axis",
+      "sf_ag_008_control_absent"
+    ]
+  },
+  "SF-TQ-001": {
+    "comply": [
+      "analysis_tool_unsoundness_declared",
+      "bounded_queue_used_on_ingest_path",
+      "defect_reproduces_deterministically_in_test",
+      "exhaustive_interleaving_check_performed",
+      "expected_outcome_set_enumerated",
+      "resource_released_on_every_exit_path",
+      "sf_tq_001_control_evidenced",
+      "shared_state_introduced_with_declared_synchronisation",
+      "thread_sanitizer_clean_on_changed_translation_units"
+    ],
+    "violate": [
+      "defect_class_is_atomicity_violation",
+      "defect_class_is_data_race",
+      "defect_class_is_resource_deadlock",
+      "defect_class_is_toctou",
+      "sf_tq_001_control_absent",
+      "synchronisation_primitive_removed"
+    ]
+  },
+  "SF-TQ-002": {
+    "comply": [
+      "analysis_tool_unsoundness_declared",
+      "bounded_queue_used_on_ingest_path",
+      "defect_reproduces_deterministically_in_test",
+      "exhaustive_interleaving_check_performed",
+      "expected_outcome_set_enumerated",
+      "resource_released_on_every_exit_path",
+      "sf_tq_002_control_evidenced",
+      "shared_state_introduced_with_declared_synchronisation",
+      "thread_sanitizer_clean_on_changed_translation_units"
+    ],
+    "violate": [
+      "defect_class_is_resource_deadlock",
+      "defect_class_is_toctou",
+      "memory_ordering_annotation_weakened",
+      "sf_tq_002_control_absent",
+      "synchronisation_primitive_removed",
+      "unbounded_buffer_growth_on_telemetry_ingest"
+    ]
+  },
+  "SF-TQ-003": {
+    "comply": [
+      "analysis_tool_unsoundness_declared",
+      "bounded_queue_used_on_ingest_path",
+      "defect_reproduces_deterministically_in_test",
+      "exhaustive_interleaving_check_performed",
+      "expected_outcome_set_enumerated",
+      "resource_released_on_every_exit_path",
+      "sf_tq_003_control_evidenced",
+      "shared_state_introduced_with_declared_synchronisation",
+      "thread_sanitizer_clean_on_changed_translation_units"
+    ],
+    "violate": [
+      "defect_class_is_data_race",
+      "forbidden_outcome_observed_under_stress",
+      "memory_ordering_annotation_weakened",
+      "sf_tq_003_control_absent",
+      "synchronisation_primitive_removed",
+      "unbounded_buffer_growth_on_telemetry_ingest"
+    ]
+  },
+  "SF-TQ-004": {
+    "comply": [
+      "analysis_tool_unsoundness_declared",
+      "bounded_queue_used_on_ingest_path",
+      "defect_reproduces_deterministically_in_test",
+      "exhaustive_interleaving_check_performed",
+      "expected_outcome_set_enumerated",
+      "resource_released_on_every_exit_path",
+      "sf_tq_004_control_evidenced",
+      "shared_state_introduced_with_declared_synchronisation",
+      "thread_sanitizer_clean_on_changed_translation_units"
+    ],
+    "violate": [
+      "defect_class_is_atomicity_violation",
+      "defect_class_is_data_race",
+      "defect_class_is_resource_deadlock",
+      "forbidden_outcome_observed_under_stress",
+      "sf_tq_004_control_absent",
+      "unbounded_buffer_growth_on_telemetry_ingest"
+    ]
+  },
+  "SF-TQ-005": {
+    "comply": [
+      "analysis_tool_unsoundness_declared",
+      "bounded_queue_used_on_ingest_path",
+      "defect_reproduces_deterministically_in_test",
+      "exhaustive_interleaving_check_performed",
+      "expected_outcome_set_enumerated",
+      "resource_released_on_every_exit_path",
+      "sf_tq_005_control_evidenced",
+      "shared_state_introduced_with_declared_synchronisation",
+      "thread_sanitizer_clean_on_changed_translation_units"
+    ],
+    "violate": [
+      "defect_class_is_atomicity_violation",
+      "defect_class_is_data_race",
+      "defect_class_is_resource_deadlock",
+      "defect_class_is_toctou",
+      "sf_tq_005_control_absent",
+      "synchronisation_primitive_removed"
+    ]
+  },
+  "SF-TQ-006": {
+    "comply": [
+      "analysis_tool_unsoundness_declared",
+      "bounded_queue_used_on_ingest_path",
+      "defect_reproduces_deterministically_in_test",
+      "exhaustive_interleaving_check_performed",
+      "expected_outcome_set_enumerated",
+      "resource_released_on_every_exit_path",
+      "sf_tq_006_control_evidenced",
+      "shared_state_introduced_with_declared_synchronisation",
+      "thread_sanitizer_clean_on_changed_translation_units"
+    ],
+    "violate": [
+      "defect_class_is_resource_deadlock",
+      "defect_class_is_toctou",
+      "memory_ordering_annotation_weakened",
+      "sf_tq_006_control_absent",
+      "synchronisation_primitive_removed",
+      "unbounded_buffer_growth_on_telemetry_ingest"
+    ]
+  },
+  "SF-TQ-007": {
+    "comply": [
+      "analysis_tool_unsoundness_declared",
+      "bounded_queue_used_on_ingest_path",
+      "defect_reproduces_deterministically_in_test",
+      "exhaustive_interleaving_check_performed",
+      "expected_outcome_set_enumerated",
+      "resource_released_on_every_exit_path",
+      "sf_tq_007_control_evidenced",
+      "shared_state_introduced_with_declared_synchronisation",
+      "thread_sanitizer_clean_on_changed_translation_units"
+    ],
+    "violate": [
+      "defect_class_is_data_race",
+      "forbidden_outcome_observed_under_stress",
+      "memory_ordering_annotation_weakened",
+      "sf_tq_007_control_absent",
+      "synchronisation_primitive_removed",
+      "unbounded_buffer_growth_on_telemetry_ingest"
+    ]
+  },
+  "SF-CR-001": {
+    "comply": [
+      "algorithm_has_current_validation_certificate",
+      "cipher_suite_on_current_allowlist",
+      "configuration_level_declared_with_compatibility_justification",
+      "key_rotation_interval_enforced",
+      "known_answer_test_passed_for_primitive",
+      "post_quantum_migration_plan_recorded",
+      "sf_cr_001_control_evidenced",
+      "tls_version_at_or_above_declared_floor"
+    ],
+    "violate": [
+      "deprecated_cipher_offered",
+      "invalid_signature_accepted_by_verifier",
+      "nonce_reuse_possible_under_concurrency",
+      "sf_cr_001_control_absent",
+      "tls_version_below_declared_floor",
+      "triple_des_or_cbc_mode_offered"
+    ]
+  },
+  "SF-CR-002": {
+    "comply": [
+      "algorithm_has_current_validation_certificate",
+      "cipher_suite_on_current_allowlist",
+      "configuration_level_declared_with_compatibility_justification",
+      "key_rotation_interval_enforced",
+      "known_answer_test_passed_for_primitive",
+      "post_quantum_migration_plan_recorded",
+      "sf_cr_002_control_evidenced",
+      "tls_version_at_or_above_declared_floor"
+    ],
+    "violate": [
+      "certificate_key_type_outside_permitted_set",
+      "cryptographic_primitive_hand_rolled",
+      "invalid_signature_accepted_by_verifier",
+      "nonce_reuse_possible_under_concurrency",
+      "sf_cr_002_control_absent",
+      "triple_des_or_cbc_mode_offered"
+    ]
+  },
+  "SF-CR-003": {
+    "comply": [
+      "algorithm_has_current_validation_certificate",
+      "cipher_suite_on_current_allowlist",
+      "configuration_level_declared_with_compatibility_justification",
+      "key_rotation_interval_enforced",
+      "known_answer_test_passed_for_primitive",
+      "post_quantum_migration_plan_recorded",
+      "sf_cr_003_control_evidenced",
+      "tls_version_at_or_above_declared_floor"
+    ],
+    "violate": [
+      "certificate_key_type_outside_permitted_set",
+      "cryptographic_primitive_hand_rolled",
+      "deprecated_cipher_offered",
+      "nonce_reuse_possible_under_concurrency",
+      "sf_cr_003_control_absent",
+      "tls_version_below_declared_floor"
+    ]
+  },
+  "SF-CR-004": {
+    "comply": [
+      "algorithm_has_current_validation_certificate",
+      "cipher_suite_on_current_allowlist",
+      "configuration_level_declared_with_compatibility_justification",
+      "key_rotation_interval_enforced",
+      "known_answer_test_passed_for_primitive",
+      "post_quantum_migration_plan_recorded",
+      "sf_cr_004_control_evidenced",
+      "tls_version_at_or_above_declared_floor"
+    ],
+    "violate": [
+      "certificate_key_type_outside_permitted_set",
+      "deprecated_cipher_offered",
+      "invalid_signature_accepted_by_verifier",
+      "sf_cr_004_control_absent",
+      "tls_version_below_declared_floor",
+      "triple_des_or_cbc_mode_offered"
+    ]
+  },
+  "SF-CR-005": {
+    "comply": [
+      "algorithm_has_current_validation_certificate",
+      "cipher_suite_on_current_allowlist",
+      "configuration_level_declared_with_compatibility_justification",
+      "key_rotation_interval_enforced",
+      "known_answer_test_passed_for_primitive",
+      "post_quantum_migration_plan_recorded",
+      "sf_cr_005_control_evidenced",
+      "tls_version_at_or_above_declared_floor"
+    ],
+    "violate": [
+      "cryptographic_primitive_hand_rolled",
+      "invalid_signature_accepted_by_verifier",
+      "nonce_reuse_possible_under_concurrency",
+      "sf_cr_005_control_absent",
+      "tls_version_below_declared_floor",
+      "triple_des_or_cbc_mode_offered"
+    ]
+  },
+  "SF-CR-006": {
+    "comply": [
+      "algorithm_has_current_validation_certificate",
+      "cipher_suite_on_current_allowlist",
+      "configuration_level_declared_with_compatibility_justification",
+      "key_rotation_interval_enforced",
+      "known_answer_test_passed_for_primitive",
+      "post_quantum_migration_plan_recorded",
+      "sf_cr_006_control_evidenced",
+      "tls_version_at_or_above_declared_floor"
+    ],
+    "violate": [
+      "certificate_key_type_outside_permitted_set",
+      "cryptographic_primitive_hand_rolled",
+      "deprecated_cipher_offered",
+      "invalid_signature_accepted_by_verifier",
+      "nonce_reuse_possible_under_concurrency",
+      "sf_cr_006_control_absent"
+    ]
+  },
+  "SF-AS-001": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "command_execution_avoided_on_user_supplied_path",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "input_validation_allowlist_applied_to_lot_identifiers",
+      "output_encoding_applied_to_operator_notes",
+      "parameterised_query_used_for_all_new_sql",
+      "sf_as_001_control_evidenced"
+    ],
+    "violate": [
+      "command_injection_reachable_from_endpoint",
+      "path_traversal_reachable_from_upload_handler",
+      "server_side_request_forgery_reachable_from_webhook",
+      "sf_as_001_control_absent",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "SF-AS-002": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "command_execution_avoided_on_user_supplied_path",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "input_validation_allowlist_applied_to_lot_identifiers",
+      "output_encoding_applied_to_operator_notes",
+      "parameterised_query_used_for_all_new_sql",
+      "sf_as_002_control_evidenced"
+    ],
+    "violate": [
+      "path_traversal_reachable_from_upload_handler",
+      "server_side_request_forgery_reachable_from_webhook",
+      "sf_as_002_control_absent",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "SF-AS-003": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "command_execution_avoided_on_user_supplied_path",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "input_validation_allowlist_applied_to_lot_identifiers",
+      "output_encoding_applied_to_operator_notes",
+      "parameterised_query_used_for_all_new_sql",
+      "sf_as_003_control_evidenced"
+    ],
+    "violate": [
+      "command_injection_reachable_from_endpoint",
+      "server_side_request_forgery_reachable_from_webhook",
+      "sf_as_003_control_absent",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "SF-AS-004": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "command_execution_avoided_on_user_supplied_path",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "input_validation_allowlist_applied_to_lot_identifiers",
+      "output_encoding_applied_to_operator_notes",
+      "parameterised_query_used_for_all_new_sql",
+      "sf_as_004_control_evidenced"
+    ],
+    "violate": [
+      "command_injection_reachable_from_endpoint",
+      "path_traversal_reachable_from_upload_handler",
+      "server_side_request_forgery_reachable_from_webhook",
+      "sf_as_004_control_absent",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "SF-AS-005": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "command_execution_avoided_on_user_supplied_path",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "input_validation_allowlist_applied_to_lot_identifiers",
+      "output_encoding_applied_to_operator_notes",
+      "parameterised_query_used_for_all_new_sql",
+      "sf_as_005_control_evidenced"
+    ],
+    "violate": [
+      "path_traversal_reachable_from_upload_handler",
+      "server_side_request_forgery_reachable_from_webhook",
+      "sf_as_005_control_absent",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "SF-AS-006": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "command_execution_avoided_on_user_supplied_path",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "input_validation_allowlist_applied_to_lot_identifiers",
+      "output_encoding_applied_to_operator_notes",
+      "parameterised_query_used_for_all_new_sql",
+      "sf_as_006_control_evidenced"
+    ],
+    "violate": [
+      "command_injection_reachable_from_endpoint",
+      "server_side_request_forgery_reachable_from_webhook",
+      "sf_as_006_control_absent",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "SF-AS-007": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "command_execution_avoided_on_user_supplied_path",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "input_validation_allowlist_applied_to_lot_identifiers",
+      "output_encoding_applied_to_operator_notes",
+      "parameterised_query_used_for_all_new_sql",
+      "sf_as_007_control_evidenced"
+    ],
+    "violate": [
+      "command_injection_reachable_from_endpoint",
+      "path_traversal_reachable_from_upload_handler",
+      "server_side_request_forgery_reachable_from_webhook",
+      "sf_as_007_control_absent",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "SF-NC-001": {
+    "comply": [
+      "chips_expansion_notification_filed_where_required",
+      "control_assessment_evidence_attached",
+      "control_mapped_to_named_nist_control_identifier",
+      "cui_handling_boundary_documented",
+      "secure_software_development_practice_cited",
+      "sf_nc_001_control_evidenced",
+      "supply_chain_risk_management_plan_referenced"
+    ],
+    "violate": [
+      "assessment_evidence_absent_for_claimed_control",
+      "chips_notification_omitted_for_covered_transaction",
+      "control_claimed_without_mapped_identifier",
+      "cui_boundary_undocumented_for_changed_component",
+      "sf_nc_001_control_absent",
+      "supply_chain_risk_plan_not_updated_after_change"
+    ]
+  },
+  "SF-NC-002": {
+    "comply": [
+      "chips_expansion_notification_filed_where_required",
+      "control_assessment_evidence_attached",
+      "control_mapped_to_named_nist_control_identifier",
+      "cui_handling_boundary_documented",
+      "secure_software_development_practice_cited",
+      "sf_nc_002_control_evidenced",
+      "supply_chain_risk_management_plan_referenced"
+    ],
+    "violate": [
+      "assessment_evidence_absent_for_claimed_control",
+      "chips_notification_omitted_for_covered_transaction",
+      "control_claimed_without_mapped_identifier",
+      "cui_boundary_undocumented_for_changed_component",
+      "sf_nc_002_control_absent",
+      "supply_chain_risk_plan_not_updated_after_change"
+    ]
+  },
+  "SF-NC-003": {
+    "comply": [
+      "chips_expansion_notification_filed_where_required",
+      "control_assessment_evidence_attached",
+      "control_mapped_to_named_nist_control_identifier",
+      "cui_handling_boundary_documented",
+      "secure_software_development_practice_cited",
+      "sf_nc_003_control_evidenced",
+      "supply_chain_risk_management_plan_referenced"
+    ],
+    "violate": [
+      "assessment_evidence_absent_for_claimed_control",
+      "chips_notification_omitted_for_covered_transaction",
+      "control_claimed_without_mapped_identifier",
+      "cui_boundary_undocumented_for_changed_component",
+      "sf_nc_003_control_absent",
+      "supply_chain_risk_plan_not_updated_after_change"
+    ]
+  },
+  "SF-NC-004": {
+    "comply": [
+      "chips_expansion_notification_filed_where_required",
+      "control_assessment_evidence_attached",
+      "control_mapped_to_named_nist_control_identifier",
+      "cui_handling_boundary_documented",
+      "secure_software_development_practice_cited",
+      "sf_nc_004_control_evidenced",
+      "supply_chain_risk_management_plan_referenced"
+    ],
+    "violate": [
+      "assessment_evidence_absent_for_claimed_control",
+      "chips_notification_omitted_for_covered_transaction",
+      "control_claimed_without_mapped_identifier",
+      "cui_boundary_undocumented_for_changed_component",
+      "sf_nc_004_control_absent",
+      "supply_chain_risk_plan_not_updated_after_change"
+    ]
+  },
+  "SF-NC-005": {
+    "comply": [
+      "chips_expansion_notification_filed_where_required",
+      "control_assessment_evidence_attached",
+      "control_mapped_to_named_nist_control_identifier",
+      "cui_handling_boundary_documented",
+      "secure_software_development_practice_cited",
+      "sf_nc_005_control_evidenced",
+      "supply_chain_risk_management_plan_referenced"
+    ],
+    "violate": [
+      "assessment_evidence_absent_for_claimed_control",
+      "chips_notification_omitted_for_covered_transaction",
+      "control_claimed_without_mapped_identifier",
+      "cui_boundary_undocumented_for_changed_component",
+      "sf_nc_005_control_absent",
+      "supply_chain_risk_plan_not_updated_after_change"
+    ]
+  },
+  "SF-NC-006": {
+    "comply": [
+      "chips_expansion_notification_filed_where_required",
+      "control_assessment_evidence_attached",
+      "control_mapped_to_named_nist_control_identifier",
+      "cui_handling_boundary_documented",
+      "secure_software_development_practice_cited",
+      "sf_nc_006_control_evidenced",
+      "supply_chain_risk_management_plan_referenced"
+    ],
+    "violate": [
+      "assessment_evidence_absent_for_claimed_control",
+      "chips_notification_omitted_for_covered_transaction",
+      "control_claimed_without_mapped_identifier",
+      "cui_boundary_undocumented_for_changed_component",
+      "sf_nc_006_control_absent",
+      "supply_chain_risk_plan_not_updated_after_change"
+    ]
+  },
+  "SF-GV-001": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "sf_gv_001_control_evidenced",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "automated_decision_final_with_no_human_route",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "sf_gv_001_control_absent",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "SF-GV-002": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "sf_gv_002_control_evidenced"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "sf_gv_002_control_absent",
+      "standing_declaration_absent_from_export",
+      "vulnerability_of_person_exploited_by_scoring_logic"
+    ]
+  },
+  "SF-GV-003": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "sf_gv_003_control_evidenced",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "audit_finding_read_during_retrieval",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "sf_gv_003_control_absent",
+      "untargeted_biometric_scraping_enabled",
+      "vulnerability_of_person_exploited_by_scoring_logic"
+    ]
+  },
+  "SF-GV-004": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "sf_gv_004_control_evidenced",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "automated_decision_final_with_no_human_route",
+      "sf_gv_004_control_absent",
+      "standing_declaration_absent_from_export",
+      "untargeted_biometric_scraping_enabled",
+      "vulnerability_of_person_exploited_by_scoring_logic"
+    ]
+  },
+  "SF-GV-005": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "sf_gv_005_control_evidenced"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "automated_decision_final_with_no_human_route",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "sf_gv_005_control_absent",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "SF-GV-006": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "sf_gv_006_control_evidenced",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "sf_gv_006_control_absent",
+      "standing_declaration_absent_from_export",
+      "vulnerability_of_person_exploited_by_scoring_logic"
+    ]
+  },
+  "SF-GV-007": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "sf_gv_007_control_evidenced",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "audit_finding_read_during_retrieval",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "sf_gv_007_control_absent",
+      "untargeted_biometric_scraping_enabled",
+      "vulnerability_of_person_exploited_by_scoring_logic"
+    ]
+  },
+  "SF-IT-001": {
+    "comply": [
+      "ddtc_registration_current_and_recorded",
+      "enclave_membership_requires_us_person_attribute",
+      "fips_validated_module_used_for_itar_data_at_rest",
+      "foreign_person_status_resolved_before_enclave_role_grant",
+      "itar_authorisation_check_bound_into_access_grant",
+      "itar_data_end_to_end_encrypted_before_leaving_boundary",
+      "itar_licence_or_exemption_cited_by_section_on_transfer",
+      "itar_technical_data_confined_to_defence_enclave",
+      "sf_it_001_control_evidenced"
+    ],
+    "violate": [
+      "ddtc_registration_lapse_not_blocking_transfer",
+      "defence_enclave_boundary_merged_with_commercial_tenant",
+      "itar_data_stored_in_cloud_region_outside_authorised_boundary",
+      "itar_technical_data_released_to_foreign_person",
+      "itar_transfer_proceeds_without_licence_or_cited_exemption",
+      "sf_it_001_control_absent"
+    ]
+  },
+  "SF-IT-002": {
+    "comply": [
+      "ddtc_registration_current_and_recorded",
+      "fips_validated_module_used_for_itar_data_at_rest",
+      "itar_authorisation_check_bound_into_access_grant",
+      "itar_data_end_to_end_encrypted_before_leaving_boundary",
+      "itar_licence_or_exemption_cited_by_section_on_transfer",
+      "itar_storage_location_excluded_from_proscribed_countries",
+      "jurisdiction_determination_recorded_before_ingest",
+      "sf_it_002_control_evidenced",
+      "usml_category_recorded_on_defence_article_record"
+    ],
+    "violate": [
+      "ddtc_registration_lapse_not_blocking_transfer",
+      "defence_article_data_ingested_without_jurisdiction_determination",
+      "itar_data_stored_in_cloud_region_outside_authorised_boundary",
+      "itar_decryption_key_available_to_cloud_provider",
+      "itar_transfer_proceeds_without_licence_or_cited_exemption",
+      "sf_it_002_control_absent"
+    ]
+  },
+  "SF-IT-003": {
+    "comply": [
+      "commodity_jurisdiction_request_referenced_where_unclear",
+      "fips_validated_module_used_for_itar_data_at_rest",
+      "itar_access_logged_with_principal_and_citizenship",
+      "itar_data_end_to_end_encrypted_before_leaving_boundary",
+      "itar_record_retained_for_five_years",
+      "itar_storage_location_excluded_from_proscribed_countries",
+      "jurisdiction_determination_recorded_before_ingest",
+      "sf_it_003_control_evidenced",
+      "usml_category_recorded_on_defence_article_record"
+    ],
+    "violate": [
+      "defence_article_data_ingested_without_jurisdiction_determination",
+      "foreign_person_attribute_defaulted_to_us_person",
+      "itar_data_stored_in_cloud_region_outside_authorised_boundary",
+      "itar_decryption_key_available_to_cloud_provider",
+      "sf_it_003_control_absent",
+      "usml_item_classified_under_ear_by_default"
+    ]
+  },
+  "SF-IT-004": {
+    "comply": [
+      "commodity_jurisdiction_request_referenced_where_unclear",
+      "defence_enclave_egress_denied_by_default",
+      "empowered_official_named_on_itar_authorisation",
+      "itar_access_logged_with_principal_and_citizenship",
+      "itar_record_retained_for_five_years",
+      "jurisdiction_determination_recorded_before_ingest",
+      "public_domain_determination_documented_before_release",
+      "sf_it_004_control_evidenced",
+      "usml_category_recorded_on_defence_article_record"
+    ],
+    "violate": [
+      "defence_article_data_ingested_without_jurisdiction_determination",
+      "foreign_person_attribute_defaulted_to_us_person",
+      "itar_export_record_omits_recipient_identity",
+      "public_domain_asserted_without_ddtc_approval",
+      "sf_it_004_control_absent",
+      "usml_item_classified_under_ear_by_default"
+    ]
+  },
+  "SF-SO-001": {
+    "comply": [
+      "boycott_related_condition_refused_in_contract_template",
+      "boycott_request_captured_for_quarterly_report",
+      "boycott_request_language_detected_in_inbound_terms",
+      "counterparty_screened_against_sdn_and_consolidated_lists",
+      "covered_foreign_person_status_resolved_for_jv_party",
+      "fifty_percent_ownership_aggregation_applied_to_counterparty",
+      "outbound_investment_determination_recorded_before_jv_data_share",
+      "sanctions_screening_failure_fails_closed",
+      "sf_so_001_control_evidenced"
+    ],
+    "violate": [
+      "boycott_compliance_clause_accepted_by_contract_parser",
+      "boycott_request_dropped_without_report",
+      "jv_data_share_opened_without_outbound_investment_determination",
+      "ownership_aggregation_disabled_in_screening_rule",
+      "sanctions_screening_bypassed_for_counterparty_class",
+      "sf_so_001_control_absent"
+    ]
+  },
+  "SF-SO-002": {
+    "comply": [
+      "blocked_transaction_reported_within_ten_business_days",
+      "boycott_related_condition_refused_in_contract_template",
+      "boycott_request_captured_for_quarterly_report",
+      "boycott_request_language_detected_in_inbound_terms",
+      "cfius_declaration_status_recorded_on_covered_transaction",
+      "covered_foreign_person_status_resolved_for_jv_party",
+      "outbound_investment_determination_recorded_before_jv_data_share",
+      "sanctions_list_refresh_cadence_enforced",
+      "sf_so_002_control_evidenced"
+    ],
+    "violate": [
+      "blocked_property_released_by_configuration",
+      "boycott_compliance_clause_accepted_by_contract_parser",
+      "boycott_request_dropped_without_report",
+      "covered_transaction_closed_without_cfius_analysis",
+      "jv_data_share_opened_without_outbound_investment_determination",
+      "sf_so_002_control_absent"
+    ]
+  },
+  "SF-SO-003": {
+    "comply": [
+      "blocked_transaction_reported_within_ten_business_days",
+      "cfius_declaration_status_recorded_on_covered_transaction",
+      "covered_foreign_person_status_resolved_for_jv_party",
+      "outbound_investment_determination_recorded_before_jv_data_share",
+      "ownership_data_source_and_date_recorded_on_screening_result",
+      "sanctions_list_refresh_cadence_enforced",
+      "sanctions_match_routed_to_human_reviewer",
+      "sanctions_screening_record_retained_for_ten_years",
+      "sf_so_003_control_evidenced"
+    ],
+    "violate": [
+      "blocked_property_released_by_configuration",
+      "covered_transaction_closed_without_cfius_analysis",
+      "jv_data_share_opened_without_outbound_investment_determination",
+      "sanctions_list_snapshot_stale_beyond_declared_interval",
+      "sanctions_screening_record_purged_before_retention_expiry",
+      "sf_so_003_control_absent"
+    ]
+  },
+  "SF-RS-001": {
+    "comply": [
+      "authorised_distributor_status_verified_before_purchase",
+      "conflict_minerals_inquiry_response_retained",
+      "counterfeit_inspection_result_recorded_per_lot",
+      "forced_labour_hit_blocks_receipt_fail_closed",
+      "sf_rs_001_control_evidenced",
+      "smelter_and_refiner_data_collected_from_supplier",
+      "supplier_screened_against_forced_labour_entity_list",
+      "supply_chain_tracing_evidence_attached_to_flagged_lot",
+      "three_tg_content_flag_carried_on_component_record"
+    ],
+    "violate": [
+      "conflict_minerals_inquiry_marked_complete_without_response",
+      "counterfeit_inspection_step_skipped_for_expedited_lot",
+      "forced_labour_match_downgraded_to_advisory",
+      "forced_labour_screening_disabled_for_supplier_tier",
+      "sf_rs_001_control_absent",
+      "smelter_data_dropped_from_supplier_onboarding"
+    ]
+  },
+  "SF-RS-002": {
+    "comply": [
+      "authorised_distributor_status_verified_before_purchase",
+      "broker_sourced_lot_quarantined_pending_provenance",
+      "counterfeit_inspection_result_recorded_per_lot",
+      "counterfeit_suspect_part_reported_to_named_quality_owner",
+      "forced_labour_hit_blocks_receipt_fail_closed",
+      "provenance_chain_verified_before_lot_release",
+      "sf_rs_002_control_evidenced",
+      "supplier_screened_against_forced_labour_entity_list",
+      "supply_chain_tracing_evidence_attached_to_flagged_lot"
+    ],
+    "violate": [
+      "broker_sourced_lot_released_without_provenance",
+      "counterfeit_inspection_step_skipped_for_expedited_lot",
+      "forced_labour_match_downgraded_to_advisory",
+      "forced_labour_screening_disabled_for_supplier_tier",
+      "sf_rs_002_control_absent",
+      "suspect_counterfeit_part_released_without_disposition"
+    ]
+  },
+  "SF-RS-003": {
+    "comply": [
+      "authorised_distributor_status_verified_before_purchase",
+      "broker_sourced_lot_quarantined_pending_provenance",
+      "counterfeit_inspection_result_recorded_per_lot",
+      "counterfeit_suspect_part_reported_to_named_quality_owner",
+      "grey_market_lot_flagged_on_genealogy_record",
+      "provenance_chain_verified_before_lot_release",
+      "sf_rs_003_control_evidenced",
+      "sourcing_screen_logged_with_list_snapshot_date",
+      "supplier_declaration_versioned_with_effective_date"
+    ],
+    "violate": [
+      "broker_sourced_lot_released_without_provenance",
+      "counterfeit_inspection_step_skipped_for_expedited_lot",
+      "grey_market_flag_cleared_by_configuration",
+      "sf_rs_003_control_absent",
+      "supplier_attestation_expiry_ignored_at_receipt",
+      "suspect_counterfeit_part_released_without_disposition"
+    ]
+  },
+  "SF-RS-004": {
+    "comply": [
+      "broker_sourced_lot_quarantined_pending_provenance",
+      "grey_market_lot_flagged_on_genealogy_record",
+      "provenance_chain_verified_before_lot_release",
+      "sf_rs_004_control_evidenced",
+      "sourcing_record_retained_for_five_years",
+      "sourcing_screen_logged_with_list_snapshot_date",
+      "supplier_attestation_expiry_enforced",
+      "supplier_declaration_versioned_with_effective_date",
+      "suspect_part_quarantine_bin_isolated_from_wip"
+    ],
+    "violate": [
+      "broker_sourced_lot_released_without_provenance",
+      "grey_market_flag_cleared_by_configuration",
+      "sf_rs_004_control_absent",
+      "sourcing_screen_snapshot_date_not_recorded",
+      "supplier_attestation_expiry_ignored_at_receipt",
+      "supplier_declaration_overwritten_without_version"
+    ]
+  },
+  "SF-EH-001": {
+    "comply": [
+      "discharge_report_value_traceable_to_raw_measurement",
+      "effluent_monitoring_result_persisted_before_aggregation",
+      "emergency_stop_state_reflected_without_transformation",
+      "gas_alarm_threshold_change_requires_ehs_signoff_record",
+      "gas_monitoring_alarm_path_unchanged_by_release",
+      "interlock_reset_requires_physical_action_at_tool",
+      "lockout_state_read_only_in_software_layer",
+      "sf_eh_001_control_evidenced",
+      "toxic_gas_alarm_delivered_to_life_safety_panel_first"
+    ],
+    "violate": [
+      "effluent_monitoring_result_dropped_before_report",
+      "emergency_stop_state_masked_in_equipment_status_feed",
+      "gas_alarm_rate_limited_below_detection_cadence",
+      "hazardous_gas_alarm_suppressed_by_software_filter",
+      "lockout_tagout_state_overridable_from_host_command",
+      "sf_eh_001_control_absent"
+    ]
+  },
+  "SF-EH-002": {
+    "comply": [
+      "cleanroom_particle_count_retained_at_native_resolution",
+      "discharge_report_value_traceable_to_raw_measurement",
+      "effluent_monitoring_result_persisted_before_aggregation",
+      "emergency_stop_state_reflected_without_transformation",
+      "emissions_reporting_job_failure_alerts_named_ehs_owner",
+      "esd_monitor_telemetry_retained_for_declared_period",
+      "interlock_reset_requires_physical_action_at_tool",
+      "lockout_state_read_only_in_software_layer",
+      "sf_eh_002_control_evidenced"
+    ],
+    "violate": [
+      "effluent_monitoring_result_dropped_before_report",
+      "emergency_stop_state_masked_in_equipment_status_feed",
+      "emissions_report_value_rounded_below_permit_limit",
+      "esd_monitor_telemetry_retention_shortened_below_declared",
+      "lockout_tagout_state_overridable_from_host_command",
+      "sf_eh_002_control_absent"
+    ]
+  },
+  "SF-EH-003": {
+    "comply": [
+      "cleanroom_particle_count_retained_at_native_resolution",
+      "discharge_report_value_traceable_to_raw_measurement",
+      "effluent_monitoring_result_persisted_before_aggregation",
+      "ehs_alarm_acknowledgement_attributed_to_named_person",
+      "emissions_reporting_job_failure_alerts_named_ehs_owner",
+      "environmental_sampling_change_recorded_with_effective_date",
+      "esd_monitor_telemetry_retained_for_declared_period",
+      "life_safety_signal_path_isolated_from_analytics_pipeline",
+      "sf_eh_003_control_evidenced"
+    ],
+    "violate": [
+      "cleanroom_telemetry_downsampled_without_record",
+      "effluent_monitoring_result_dropped_before_report",
+      "emissions_report_value_rounded_below_permit_limit",
+      "esd_monitor_telemetry_retention_shortened_below_declared",
+      "gas_alarm_threshold_raised_without_ehs_signoff",
+      "sf_eh_003_control_absent"
+    ]
+  },
+  "SF-EH-004": {
+    "comply": [
+      "chemical_inventory_threshold_check_recorded",
+      "cleanroom_particle_count_retained_at_native_resolution",
+      "ehs_alarm_acknowledgement_attributed_to_named_person",
+      "ehs_record_retention_meets_regulatory_minimum",
+      "environmental_sampling_change_recorded_with_effective_date",
+      "esd_monitor_telemetry_retained_for_declared_period",
+      "gas_detector_calibration_record_bound_to_reading",
+      "life_safety_signal_path_isolated_from_analytics_pipeline",
+      "sf_eh_004_control_evidenced"
+    ],
+    "violate": [
+      "cleanroom_telemetry_downsampled_without_record",
+      "esd_monitor_telemetry_retention_shortened_below_declared",
+      "gas_alarm_threshold_raised_without_ehs_signoff",
+      "life_safety_signal_routed_through_analytics_queue",
+      "pfas_reporting_job_disabled_by_configuration",
+      "sf_eh_004_control_absent"
+    ]
+  },
+  "SF-QS-001": {
+    "comply": [
+      "change_notice_issued_before_customer_lot_exposure",
+      "controller_model_promotion_has_rollback_path",
+      "controller_model_validated_on_held_out_lots_before_promotion",
+      "corrective_action_closure_attributed_to_named_owner",
+      "customer_notice_period_enforced_by_release_gate",
+      "nonconformance_opens_corrective_action_record",
+      "process_change_classified_as_major_or_minor_with_rationale",
+      "root_cause_and_verification_recorded_before_closure",
+      "sf_qs_001_control_evidenced"
+    ],
+    "violate": [
+      "change_notice_gate_bypassed_for_minor_classification",
+      "controller_model_promoted_without_held_out_validation",
+      "corrective_action_verification_step_removed",
+      "nonconformance_closed_without_corrective_action_record",
+      "process_change_reaches_customer_lots_before_notice",
+      "sf_qs_001_control_absent"
+    ]
+  },
+  "SF-QS-002": {
+    "comply": [
+      "controller_model_promotion_has_rollback_path",
+      "controller_model_validated_on_held_out_lots_before_promotion",
+      "controller_model_version_recorded_on_lot_history",
+      "corrective_action_closure_attributed_to_named_owner",
+      "mask_revision_bound_to_lot_and_recipe_record",
+      "nonconformance_opens_corrective_action_record",
+      "retired_mask_revision_blocked_at_dispatch",
+      "root_cause_and_verification_recorded_before_closure",
+      "sf_qs_002_control_evidenced"
+    ],
+    "violate": [
+      "controller_model_promoted_without_held_out_validation",
+      "controller_model_promoted_without_rollback_path",
+      "corrective_action_verification_step_removed",
+      "mask_revision_unbound_from_lot_record",
+      "nonconformance_closed_without_corrective_action_record",
+      "sf_qs_002_control_absent"
+    ]
+  },
+  "SF-QS-003": {
+    "comply": [
+      "controller_model_promotion_has_rollback_path",
+      "controller_model_validated_on_held_out_lots_before_promotion",
+      "controller_model_version_recorded_on_lot_history",
+      "customer_specific_requirements_checked_at_release",
+      "mask_revision_bound_to_lot_and_recipe_record",
+      "mask_revision_change_traceable_to_approved_ecn",
+      "quality_record_retained_for_customer_term",
+      "retired_mask_revision_blocked_at_dispatch",
+      "sf_qs_003_control_evidenced"
+    ],
+    "violate": [
+      "controller_model_promoted_without_held_out_validation",
+      "controller_model_promoted_without_rollback_path",
+      "mask_revision_unbound_from_lot_record",
+      "process_change_classification_defaulted_to_minor",
+      "retired_mask_revision_dispatchable_to_tool",
+      "sf_qs_003_control_absent"
+    ]
+  },
+  "SF-QS-004": {
+    "comply": [
+      "customer_acknowledgement_captured_on_change_notice",
+      "customer_specific_requirements_checked_at_release",
+      "mask_revision_bound_to_lot_and_recipe_record",
+      "mask_revision_change_traceable_to_approved_ecn",
+      "process_change_approval_recorded_before_first_lot",
+      "qualification_evidence_attached_to_change_record",
+      "quality_record_retained_for_customer_term",
+      "retired_mask_revision_blocked_at_dispatch",
+      "sf_qs_004_control_evidenced"
+    ],
+    "violate": [
+      "customer_specific_requirement_check_disabled",
+      "mask_revision_unbound_from_lot_record",
+      "process_change_classification_defaulted_to_minor",
+      "quality_record_retention_shortened_below_customer_term",
+      "retired_mask_revision_dispatchable_to_tool",
+      "sf_qs_004_control_absent"
+    ]
+  },
+  "SF-OT-001": {
+    "comply": [
+      "firmware_update_staged_on_non_production_tool_first",
+      "new_service_placed_in_declared_security_zone",
+      "sf_ot_001_control_evidenced",
+      "tool_firmware_signature_verified_against_vendor_key",
+      "tool_network_traffic_crosses_only_declared_conduit",
+      "vendor_remote_session_approved_per_session_by_named_owner",
+      "vendor_remote_session_brokered_through_jump_host",
+      "vendor_remote_session_recorded_and_time_boxed",
+      "zone_boundary_firewall_rule_change_reviewed_by_ot_owner"
+    ],
+    "violate": [
+      "sf_ot_001_control_absent",
+      "tool_firmware_installed_without_signature_verification",
+      "tool_network_bridged_to_enterprise_network",
+      "vendor_remote_access_persistent_and_unbrokered",
+      "vendor_remote_session_recording_disabled",
+      "zone_boundary_rule_opened_to_any_source"
+    ]
+  },
+  "SF-OT-002": {
+    "comply": [
+      "clock_drift_monitored_and_alarmed_on_tool_network",
+      "equipment_time_source_authenticated",
+      "firmware_provenance_recorded_on_equipment_record",
+      "firmware_update_staged_on_non_production_tool_first",
+      "sf_ot_002_control_evidenced",
+      "tool_firmware_signature_verified_against_vendor_key",
+      "vendor_remote_session_approved_per_session_by_named_owner",
+      "vendor_remote_session_brokered_through_jump_host",
+      "vendor_remote_session_recorded_and_time_boxed"
+    ],
+    "violate": [
+      "firmware_pulled_from_unverified_vendor_mirror",
+      "sf_ot_002_control_absent",
+      "tool_firmware_installed_without_signature_verification",
+      "unauthenticated_time_server_added_to_tool_network",
+      "vendor_remote_access_persistent_and_unbrokered",
+      "vendor_remote_session_recording_disabled"
+    ]
+  },
+  "SF-OT-003": {
+    "comply": [
+      "clock_drift_monitored_and_alarmed_on_tool_network",
+      "equipment_time_source_authenticated",
+      "firmware_provenance_recorded_on_equipment_record",
+      "firmware_update_staged_on_non_production_tool_first",
+      "ot_asset_inventory_updated_with_change",
+      "protocol_allowlist_enforced_at_zone_boundary",
+      "sf_ot_003_control_evidenced",
+      "time_server_change_recorded_with_approval",
+      "tool_firmware_signature_verified_against_vendor_key"
+    ],
+    "violate": [
+      "clock_drift_alarm_disabled_on_equipment_path",
+      "firmware_pulled_from_unverified_vendor_mirror",
+      "sf_ot_003_control_absent",
+      "tool_firmware_installed_without_signature_verification",
+      "unauthenticated_time_server_added_to_tool_network",
+      "vendor_account_left_enabled_after_session_end"
+    ]
+  },
+  "SF-OT-004": {
+    "comply": [
+      "clock_drift_monitored_and_alarmed_on_tool_network",
+      "equipment_time_source_authenticated",
+      "ot_asset_inventory_updated_with_change",
+      "ot_change_window_declared_and_honoured",
+      "protocol_allowlist_enforced_at_zone_boundary",
+      "remote_session_least_privilege_scoped_to_named_tool",
+      "sf_ot_004_control_evidenced",
+      "time_server_change_recorded_with_approval",
+      "vendor_account_disabled_between_sessions"
+    ],
+    "violate": [
+      "clock_drift_alarm_disabled_on_equipment_path",
+      "firmware_staging_step_skipped_for_production_fleet",
+      "ot_protocol_allowlist_removed_at_zone_boundary",
+      "sf_ot_004_control_absent",
+      "unauthenticated_time_server_added_to_tool_network",
+      "vendor_account_left_enabled_after_session_end"
+    ]
+  }
+}

@@ -1,0 +1,227 @@
+<script>
+(function () {
+  "use strict";
+  var ROUTE_EN = {
+    fresh_interpretation: "decided fresh",
+    fresh_interpretation_after_tie: "decided fresh after a tie",
+    bound_by_precedent: "bound by precedent",
+    consolidated_citation: "disposed by citation",
+    absolute_shortcircuit: "refused at the floor",
+    docketed_declined: "docketed — not charged",
+    docketed_null: "docketed — nothing engaged"
+  };
+  var DEC = { permit: ["permitted", "permit"], deny: ["denied", "deny"],
+              permit_conditional: ["permitted with conditions", "cond"] };
+  var esc = function (s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  };
+  var fmt = function (n) { return n.toLocaleString("en-US"); };
+
+  function b64(s) {
+    var bin = atob(s), out = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+    return out;
+  }
+
+  // ---- charts -------------------------------------------------------------
+  function growthChart(el, pts) {
+    var W = 620, H = 230, mL = 46, mR = 12, mT = 10, mB = 26;
+    var maxX = pts[pts.length - 1][0], maxY = 0;
+    pts.forEach(function (p) { if (p[1] > maxY) maxY = p[1]; });
+    var niceY = Math.ceil(maxY / 200) * 200;
+    var x = function (v) { return mL + (v / maxX) * (W - mL - mR); };
+    var y = function (v) { return H - mB - (v / niceY) * (H - mT - mB); };
+    var d = pts.map(function (p, i) { return (i ? "L" : "M") + x(p[0]).toFixed(1) + " " + y(p[1]).toFixed(1); }).join(" ");
+    var ticksY = [0, niceY / 4, niceY / 2, (3 * niceY) / 4, niceY];
+    var ticksX = [0, maxX / 4, maxX / 2, (3 * maxX) / 4, maxX];
+    var s = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Precedent store size across the run">';
+    s += '<g class="axis">';
+    ticksY.forEach(function (t) {
+      s += '<line x1="' + mL + '" x2="' + (W - mR) + '" y1="' + y(t).toFixed(1) + '" y2="' + y(t).toFixed(1) + '"/>';
+      s += '<text x="' + (mL - 8) + '" y="' + (y(t) + 3.5).toFixed(1) + '" text-anchor="end">' + fmt(Math.round(t)) + "</text>";
+    });
+    ticksX.forEach(function (t) {
+      s += '<text x="' + x(t).toFixed(1) + '" y="' + (H - mB + 15) + '" text-anchor="middle">' + fmt(Math.round(t)) + "</text>";
+    });
+    s += "</g>";
+    s += '<path d="' + d + '" fill="none" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>';
+    var last = pts[pts.length - 1];
+    s += '<circle cx="' + x(last[0]).toFixed(1) + '" cy="' + y(last[1]).toFixed(1) + '" r="4" fill="var(--accent)"/>';
+    s += '<text x="' + (x(last[0]) - 6).toFixed(1) + '" y="' + (y(last[1]) - 10).toFixed(1) +
+         '" text-anchor="end" style="font-family:var(--mono);font-size:11px;fill:var(--ink-2)">' + fmt(last[1]) + " records</text>";
+    s += '<rect id="gh" x="' + mL + '" y="' + mT + '" width="' + (W - mL - mR) + '" height="' + (H - mT - mB) + '" fill="transparent"/>';
+    s += '<line id="gx" y1="' + mT + '" y2="' + (H - mB) + '" stroke="var(--ink-3)" stroke-width="1" opacity="0"/>';
+    s += "</svg>";
+    el.innerHTML = s;
+    // crosshair + tooltip
+    var svg = el.querySelector("svg"), hit = el.querySelector("#gh"), xl = el.querySelector("#gx"), tip = document.getElementById("tip");
+    hit.addEventListener("mousemove", function (ev) {
+      var r = svg.getBoundingClientRect();
+      var vx = ((ev.clientX - r.left) / r.width) * W;
+      var n = Math.max(0, Math.min(maxX, ((vx - mL) / (W - mL - mR)) * maxX));
+      var best = pts[0];
+      for (var i = 0; i < pts.length; i++) if (Math.abs(pts[i][0] - n) < Math.abs(best[0] - n)) best = pts[i];
+      xl.setAttribute("x1", x(best[0])); xl.setAttribute("x2", x(best[0])); xl.setAttribute("opacity", "0.45");
+      tip.innerHTML = "<b>" + fmt(best[1]) + "</b> records after change " + fmt(best[0]);
+      tip.style.left = Math.min(window.innerWidth - 190, ev.clientX + 14) + "px";
+      tip.style.top = ev.clientY - 40 + "px";
+      tip.style.opacity = "1";
+    });
+    hit.addEventListener("mouseleave", function () {
+      xl.setAttribute("opacity", "0"); document.getElementById("tip").style.opacity = "0";
+    });
+  }
+
+  function dispChart(el, legendEl, capEl, counts, total) {
+    var order = ["permit", "permit_conditional", "deny"];
+    var VAR = { permit: "var(--permit)", permit_conditional: "var(--cond)", deny: "var(--deny)" };
+    var W = 400, H = 44, gap = 2, xo = 0, s = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Share of changes by answer">';
+    var widths = order.map(function (k) { return ((counts[k] || 0) / total) * (W - gap * (order.length - 1)); });
+    order.forEach(function (k, i) {
+      s += '<rect x="' + xo.toFixed(1) + '" y="0" width="' + widths[i].toFixed(1) + '" height="20" rx="3" fill="' + VAR[k] + '"/>';
+      if (widths[i] > 46) {
+        s += '<text x="' + (xo + widths[i] / 2).toFixed(1) + '" y="36" text-anchor="middle" style="font-family:var(--mono);font-size:11px;fill:var(--ink-2)">' +
+             Math.round(((counts[k] || 0) / total) * 100) + "%</text>";
+      }
+      xo += widths[i] + gap;
+    });
+    s += "</svg>";
+    el.innerHTML = s;
+    legendEl.innerHTML = order.map(function (k) {
+      return '<span><i style="background:' + VAR[k] + '"></i>' + DEC[k][0] + " · " + fmt(counts[k] || 0) + "</span>";
+    }).join("");
+    capEl.textContent = "Every change got exactly one of three answers. Percentages are direct-labelled, and the counts are in the legend, so the reading never depends on telling the colours apart.";
+  }
+
+  function catBars(el, cats, rows) {
+    var by = {};
+    rows.forEach(function (r) { by[r.cat] = (by[r.cat] || 0) + 1; });
+    var max = 0;
+    cats.forEach(function (c) { if ((by[c.name] || 0) > max) max = by[c.name] || 0; });
+    el.innerHTML = cats.map(function (c) {
+      var v = by[c.name] || 0;
+      return '<div class="barrow" title="' + esc(c.desc) + '"><span class="t">' + esc(c.name) +
+        '</span><span class="b"><i style="width:' + ((v / max) * 100).toFixed(1) + '%"></i></span><span class="v">' + fmt(v) + "</span></div>";
+    }).join("");
+  }
+
+  // ---- ledger -------------------------------------------------------------
+  var RUN = null, view = [], shown = 0, PAGE = 200;
+
+  function rowHTML(r) {
+    var d = DEC[r.d] || [r.d, ""];
+    var provs = r.p.length ? r.p.join(" ") : "—";
+    return "<tr><td class=\"n\">" + r.n + "</td>" +
+      "<td>" + esc(r.ch) + "</td>" +
+      "<td class=\"p\">" + esc(provs) + (r.abs ? ' <span class="tag abs">floor</span>' : "") + "</td>" +
+      '<td><span class="tag ' + d[1] + '">' + d[0] + "</span></td>" +
+      "<td>" + esc(ROUTE_EN[r.r] || r.r) + "</td>" +
+      '<td class="p">' + esc(r.ctl || (r.tie ? "none(tie)" : "—")) + "</td>" +
+      '<td style="text-align:center">' + (r.st ? '<span class="dot">●</span>' : "") + "</td></tr>";
+  }
+
+  function render(reset) {
+    var tb = document.getElementById("tb");
+    if (reset) { tb.innerHTML = ""; shown = 0; }
+    var next = view.slice(shown, shown + PAGE);
+    var frag = document.createElement("tbody");
+    frag.innerHTML = next.map(rowHTML).join("");
+    while (frag.firstChild) tb.appendChild(frag.firstChild);
+    shown += next.length;
+    document.getElementById("more").hidden = shown >= view.length;
+    document.getElementById("cnt").textContent = fmt(view.length) + " of " + fmt(RUN.rows.length) + " changes";
+  }
+
+  function apply() {
+    var q = document.getElementById("q").value.trim().toLowerCase();
+    var fd = document.getElementById("fd").value, fr = document.getElementById("fr").value;
+    var fc = document.getElementById("fc").value, fp = document.getElementById("fp").checked;
+    view = RUN.rows.filter(function (r) {
+      if (fd && r.d !== fd) return false;
+      if (fr && r.r !== fr) return false;
+      if (fc && r.cat !== fc) return false;
+      if (fp && !r.st) return false;
+      if (q) {
+        var hay = (r.id + " " + r.ch + " " + r.p.join(" ") + " " + (r.ctl || "") + " " + r.cat + " " + r.area).toLowerCase();
+        if (hay.indexOf(q) < 0) return false;
+      }
+      return true;
+    });
+    render(true);
+  }
+
+  function boot(data) {
+    RUN = data;
+    document.title = data.name + " — the run";
+    document.getElementById("title").textContent = data.name + " — the run";
+    document.getElementById("sub").textContent =
+      fmt(data.rows.length) + " proposed code changes, decided one after another against a constitution of " +
+      data.counts.provisions + " provisions, " + data.counts.absolute +
+      " of them absolute. Every disposition below is what the reference engine did, not what anyone expected it to do.";
+    document.getElementById("imprint").innerHTML =
+      "<span>Corpus " + esc(data.version) + "</span><span>Rulebook " + esc(data.rulebook) +
+      '</span><span class="ok">Conformance 44/44</span><span class="ok">Mutants 18/18 killed</span>' +
+      '<span class="ok">Pressure 185/185 invariant</span><span>CC BY 4.0</span>';
+
+    var m = data.manifest, counts = m.decisions;
+    var bound = m.routes.bound_by_precedent || 0, cited = m.routes.consolidated_citation || 0;
+    var figs = [
+      ["Changes", fmt(data.rows.length), ""],
+      ["Provisions", fmt(data.counts.provisions), data.counts.absolute + " absolute"],
+      ["Opening store", fmt(m.opening_store), ""],
+      ["Final store", fmt(m.final_store), "+" + fmt(m.records_written_in_run) + " in run"],
+      ["Decided by citing a record", fmt(bound + cited), ""],
+      ["Refused at a floor", fmt(m.routes.absolute_shortcircuit || 0), ""],
+      ["Docketed, never charged", fmt(m.docket_entries), "two routes"],
+      ["Construction anomalies", fmt(m.construction_anomalies), ""]
+    ];
+    document.getElementById("figs").innerHTML = figs.map(function (f) {
+      return "<div class=\"fig\"><dt>" + esc(f[0]) + "</dt><dd>" + f[1] +
+        (f[2] ? " <small>" + esc(f[2]) + "</small>" : "") + "</dd></div>";
+    }).join("");
+
+    growthChart(document.getElementById("growth"), data.growth);
+    dispChart(document.getElementById("disp"), document.getElementById("displegend"),
+              document.getElementById("dispcap"), counts, data.rows.length);
+    catBars(document.getElementById("cats"), data.categories, data.rows);
+
+    var fr = document.getElementById("fr");
+    Object.keys(ROUTE_EN).forEach(function (k) {
+      if (data.manifest.routes[k] == null) return;
+      var o = document.createElement("option"); o.value = k; o.textContent = ROUTE_EN[k]; fr.appendChild(o);
+    });
+    var fc = document.getElementById("fc");
+    data.categories.forEach(function (c) {
+      var o = document.createElement("option"); o.value = c.name; o.textContent = c.name; fc.appendChild(o);
+    });
+    ["q", "fd", "fr", "fc", "fp"].forEach(function (id) {
+      document.getElementById(id).addEventListener("input", apply);
+    });
+    document.getElementById("more").addEventListener("click", function () { render(false); });
+
+    document.getElementById("foot").innerHTML =
+      "Every row is produced by replaying the corpus through the reference engine, so the ledger cannot drift from the corpus files. " +
+      "The same run is checked by 44 conformance checks and a mutation matrix of 18 faults and 4 controls. " +
+      "Code Apache-2.0; corpus and this page CC BY 4.0.";
+    apply();
+  }
+
+  try {
+    var bytes = b64(window.__RUN__);
+    window.__RUN__ = null;
+    if (typeof DecompressionStream === "function") {
+      new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip")))
+        .json().then(boot).catch(fail);
+    } else { fail(); }
+  } catch (e) { fail(); }
+
+  function fail() {
+    document.getElementById("cnt").textContent = "Unavailable";
+    document.getElementById("tb").innerHTML =
+      '<tr><td colspan="7" style="padding:20px;color:var(--ink-2)">This browser cannot decompress the run payload. ' +
+      'The same ledger ships in the repository as <code>docs/SIMULATION.md</code>.</td></tr>';
+  }
+})();
+</script>

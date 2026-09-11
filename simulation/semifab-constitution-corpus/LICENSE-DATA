@@ -1,0 +1,42 @@
+# Data licence — Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The data in this repository — the constitution (`constitution/`), the case corpus
+and precedent store (`corpus/`), the generated catalog and coverage documents
+(`docs/`), and the research surveys (`research/`) — are licensed under the
+Creative Commons Attribution 4.0 International Public License.
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, provide a link to the
+licence, and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+## How to attribute
+
+    SemiFab Constitution Corpus, pack 2.4.0 (corpus data 2.1.0), CC BY 4.0.
+    Kadambi, A. and Kuppuswamy, V., the Digital Judiciary programme.
+
+## What is NOT covered by this licence
+
+Provision *prose* in this corpus is original drafting. Where a provision cites an
+external instrument, the citation is a reference and the instrument's own terms
+govern that instrument:
+
+- US Code of Federal Regulations text (21 CFR, 9 CFR, 45 CFR) is a US Government
+  work and is in the public domain.
+- EU legal texts (EU AI Act, GDPR) are reusable under Commission Decision
+  2011/833/EU, with the source acknowledged.
+- CWE and CAPEC identifiers are used under MITRE's royalty-free terms, with
+  attribution: CWE™ is a trademark of The MITRE Corporation.
+- SEMI standards (E4, E5, E30, E37, E87, E90, E116, E134, E157) are NOT
+  redistributed here in any form. SEMI's licence permits use on a single
+  computer and forbids sharing over a network. Standard designations and SECS
+  stream/function codes are cited as identifiers, which are facts.
+- The SLSA specification is dual-licensed (Community Specification License 1.0
+  and Apache-2.0) and the SPDX specification is dual-licensed
+  (Community-Spec-1.0 and CC-BY-3.0). Obligations from both are paraphrased,
+  never pasted.
+- PCI DSS, ISO/IEC 42001, CIS Benchmarks, the ASC X12 standards and the PRC,
+  Taiwan and Korea statutes cited are NOT redistributed. Where an obligation
+  from one of them is expressed, it is paraphrased in original words.
+  See docs/SOURCES.md.

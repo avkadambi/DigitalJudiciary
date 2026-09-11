@@ -1,0 +1,6 @@
+{
+  "_schema": "constitution/dimensions.json — magnitude factors and their tolerances (release 5.11.0)",
+  "_note": "A factor listed here is read from a case's `values`, not from `facts`. weaker_when is declared, never inferred: 'lower' means a smaller value is the weaker case (coverage, retention days), 'higher' means a larger value is (latency regression, dose per kg). Coherence rules at load: D1 direction declared; D2 tolerance a number >= 0; D3 a factor of an ABSOLUTE provision carries tolerance 0; D4 every dimension is a factor of some provision. This corpus declares no dimensions yet: every factor is boolean and the kernel reduces to containment (VC-51). Adding one is a constitutional amendment (Legislate), not a configuration value.",
+  "_example": {"changed_line_coverage_pct": {"weaker_when": "lower", "tolerance": 5.0, "unit": "%"}},
+  "dimensions": {}
+}
