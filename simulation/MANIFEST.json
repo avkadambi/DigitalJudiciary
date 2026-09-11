@@ -1,0 +1,514 @@
+{
+ "component": "Digital Judiciary — simulation packs",
+ "added_in": "5.8.0; discriminating suite 5.8.1; dataset-skill audit 5.8.2; disclosure overlay 5.8.3; development-change audit 5.8.4; scenario extension (corpus 2.0.0) 5.9.0; Numerals federation 5.10.0; comparison kernel, binding gate and extraction stage (pack 2.1.0, federation 1.1.0) 5.11.0; citation stance, record construction and the tolerance sweep (pack 2.2.0, federation 1.2.0) 5.12.0; the unaddressed adverse fact and decided-under-prior-text rungs (pack 2.3.0, federation 1.3.0 with a corrected D-vertical corpus) 5.13.0; deny-side jurisprudence (corpus 2.1.0, pack 2.4.0) and record withholding on an unestablished premise 5.14.0; publication cut (licences, packaging, tests, CI, documentation; no figure changes) 5.15.0",
+ "what_this_is": "Five 6,000-case executed simulations, one per enterprise, sharing the mechanism and the 25-category composition and nothing else. They extend the 144-case demo packs under demo/companies/ rather than replacing them: the demo packs remain frozen and every figure the manuscripts cite from them is unchanged.",
+ "checks": {
+  "conformance_per_pack": 56,
+  "mutants": 31,
+  "controls": 4
+ },
+ "cross_pack": {
+  "category_composition_identical": true,
+  "largest_route_share_spread_pp": 0.55,
+  "largest_decision_share_spread_pp": 2.53,
+  "note": "recomputed on corpus 2.1.0 by harness/compare_packs.py (5.15.0); the 2.0.0 figures 0.4 / 2.2 had not been refreshed at 5.14.0"
+ },
+ "packs": [
+  {
+   "directory": "simulation/vetpoc-constitution-corpus",
+   "label": "VetPOC",
+   "domain": "Veterinary practice management and point of care",
+   "corresponds_to_demo_pack": "demo/companies/vetpoc",
+   "provisions": 121,
+   "absolute": 26,
+   "families": 18,
+   "shipped_provisions_reproduced": 0,
+   "cases": 6000,
+   "categories": 25,
+   "opening_store": 197,
+   "final_store": 1119,
+   "construction_anomalies": 0,
+   "conformance": "56/56",
+   "mutation_matrix": "31/31 faults killed, 4/4 controls survived",
+   "sha256": {
+    "constitution/rulebook.json": "ce2cce7708ebc0665dd1723f527e095e2cbb9ddb1e0fb813796624659b8603af",
+    "constitution/organizations.json": "032f92efa65710b3b24bf3291ca1a33259dbccf2cfb6a75a6b24c8f7fbbfdc6e",
+    "corpus/cases.json": "f27a0ee3de2e61baafc5e49a8700fb093138a83d3535ee554f1617002efe554a",
+    "corpus/store_seed_initial.json": "03810d910a2c26790578bec33b2bc51ed2311634fd87f088cb294cd6a2866ccc",
+    "corpus/manifest.json": "65e3ec1c56c5c636438487e922ef14fc226143168f4244bac8bc5e4732dc3cfb",
+    "benchmark/discriminating.py": "f917d5ad69d2a4f4fd722bf0b53c7a4ef3f354f39f097e5f07174bb8afbcee22",
+    "docs/DISCRIMINATING_SCENARIOS.md": "4d30b47c2e6567db3aab3bb9d70fae89cf00ac7ca1e079d30e015c5ab9b0a937",
+    "corpus/docket.json": "b266caa4486c679555e7d7bafcb982e5e52f95a4aaccc53f74dfe52786791968",
+    "benchmark/justification.py": "eb411fdaa72f4d0af0a9cc774f9caf529225eaa1316cc6738c815d3c57615211",
+    "generator/changes.py": "e23b6de84dae5fd15439935c1d93b0cfe544c957f9a32173c71f31ac15f9dde9",
+    "constitution/scenarios.json": "9d2f3b39d4ed504a380a26988119cc2e51d1bab9cd4e978e55638c9bb74d91ab",
+    "harness/coverage.py": "2c924411a5d4569daed99921db837f47d7b16d2070fb7a4e7580229791ddeffa",
+    "benchmark/human.py": "edb414fee38f0734fd80596ad41749f4c92078b28ff340b3ae0a7e7497657e70",
+    "generator/ext_vocab.py": "c19a6dc450802558175a579d85dcd716d911f77ba5c67ab04e7688600e5c3305",
+    "generator/ext_changes.py": "4fa5d74372f0a653d6169d3d9b875e6f40dabe2840fb1250261340d9e841a840",
+    "benchmark/arms.py": "ef1f22b14952acb62ddc7658a5a227a79eff25ad4c00604f36aaf29464b07074",
+    "harness/engine.py": "6f0797caf0479ef1f1d1664c2442ea18338df1443200151e779a510ef49ef7ab",
+    "harness/binding_gate.py": "8fe23be9b1330b90eacbdd89d76731c55738ac4db59f04c5c876e6eaaa2c78c0",
+    "benchmark/score.py": "99f28ac0a55fcbf2ddf80cb13c997daaf33fd30959e0f267396e6a7f1f3b311d",
+    "constitution/dimensions.json": "a5cd9d1f1c875a312c9aba42926a42d96592c3546ef7ee2ee3b53e566e3cd7e3",
+    "harness/run_conformance.py": "0857e1d27264ad53b3ac0b46fad0ed66cbf2355b67adb1e1e934ff251d980f51",
+    "harness/mutation_matrix.py": "3a51af9fa80b862fbe6920b073e4d2aa42ed02dfa6553a1937400910cf333902",
+    "generator/build_corpus.py": "b1c163934bb66e6a99ce4751ab7d55cab73b409d30611899e9945dd09661a80c",
+    "generator/vocab.py": "12586fc2e762293297c3866e3a84bfc3fec0335b62744fe1c7751aad654b2679"
+   },
+   "contamination_canary": true,
+   "archive": {
+    "path": "simulation/zips/vetpoc-constitution-corpus-2.4.0.zip",
+    "sha256": "d43c70e3ed7924e06c3fd47f229600fdc7119089adfc7854d05db7fdd3115124",
+    "bytes": 4446084
+   },
+   "corpus_version": "2.1.0",
+   "pack_version": "2.4.0",
+   "scenario_extension_provisions": 23,
+   "scenario_extension_absolute": 8,
+   "draft_amendments": 6
+  },
+  {
+   "directory": "simulation/semifab-constitution-corpus",
+   "label": "SemiFab",
+   "domain": "Semiconductor supply-chain control tower",
+   "corresponds_to_demo_pack": "demo/companies/sctower",
+   "provisions": 126,
+   "absolute": 28,
+   "families": 19,
+   "shipped_provisions_reproduced": 0,
+   "cases": 6000,
+   "categories": 25,
+   "opening_store": 200,
+   "final_store": 1154,
+   "construction_anomalies": 0,
+   "conformance": "56/56",
+   "mutation_matrix": "31/31 faults killed, 4/4 controls survived",
+   "sha256": {
+    "constitution/rulebook.json": "663c5e5bea340b2a61fa6d60ebc901d18a3b933bca8253042a7530c6945f315d",
+    "constitution/organizations.json": "e986dfca4b0478fae3b3b15ea8e2fcb53b5530a56fa766c971d3fe06e92e99cf",
+    "corpus/cases.json": "d4c690118124e6243e6e7e559c829c5440f4136cbf4c3f022b90c72d6c194483",
+    "corpus/store_seed_initial.json": "805bfb7b68c5ab5fb85db464c600f0202db11bc7c3e9ae3a2ab11d36ee3667b9",
+    "corpus/manifest.json": "0fea57dc2bab53fa69a70c4fd778092ede6d52eda789502955eddd659d2fc84e",
+    "benchmark/discriminating.py": "f917d5ad69d2a4f4fd722bf0b53c7a4ef3f354f39f097e5f07174bb8afbcee22",
+    "docs/DISCRIMINATING_SCENARIOS.md": "923be2a5459707dc3004646e254a6855ee80af18667ab04b17c6b53e53fac953",
+    "corpus/docket.json": "5e5ef29cd471e188a1ecbd7a1b5ab2d30dc0267b7da6785535323ed016212c90",
+    "benchmark/justification.py": "eb411fdaa72f4d0af0a9cc774f9caf529225eaa1316cc6738c815d3c57615211",
+    "generator/changes.py": "d45d87025a94d211839e484edf4d70d141290c8247a59f9684c0fbd321a1ee41",
+    "constitution/scenarios.json": "9d2f3b39d4ed504a380a26988119cc2e51d1bab9cd4e978e55638c9bb74d91ab",
+    "harness/coverage.py": "2c924411a5d4569daed99921db837f47d7b16d2070fb7a4e7580229791ddeffa",
+    "benchmark/human.py": "edb414fee38f0734fd80596ad41749f4c92078b28ff340b3ae0a7e7497657e70",
+    "generator/ext_vocab.py": "350cef7e2a5b68d7c530b6a88941164f99dfaea6ef51fd0081f9958b3b060005",
+    "generator/ext_changes.py": "0c32c86f095e5d914ca6e425d848aecc8bf3404076d464bbf2d5b4f86f468f9f",
+    "benchmark/arms.py": "ef1f22b14952acb62ddc7658a5a227a79eff25ad4c00604f36aaf29464b07074",
+    "harness/engine.py": "7dc66b1336b2211b3d573a52edeb234b8ec85f604cb71142c7eac013142ffb7c",
+    "harness/binding_gate.py": "8fe23be9b1330b90eacbdd89d76731c55738ac4db59f04c5c876e6eaaa2c78c0",
+    "benchmark/score.py": "99f28ac0a55fcbf2ddf80cb13c997daaf33fd30959e0f267396e6a7f1f3b311d",
+    "constitution/dimensions.json": "a5cd9d1f1c875a312c9aba42926a42d96592c3546ef7ee2ee3b53e566e3cd7e3",
+    "harness/run_conformance.py": "828f988146c3ed8c2382351dd4bdac2802364074741dd0c7a9f060448b92fdde",
+    "harness/mutation_matrix.py": "3a51af9fa80b862fbe6920b073e4d2aa42ed02dfa6553a1937400910cf333902",
+    "generator/build_corpus.py": "dc47f86ecf392f3e3a23fe3332cab62152d3b6fe0eb77a5a4c8c376bfc9c42db",
+    "generator/vocab.py": "5732ca71b82f9c729db0ed1b556891b0ddee1125adf0b52e2e403188db4ee57c"
+   },
+   "contamination_canary": true,
+   "archive": {
+    "path": "simulation/zips/semifab-constitution-corpus-2.4.0.zip",
+    "sha256": "40a189e38ffcea05830429f0e253151f0d2a7f9db8c2abc32997524c1c140bac",
+    "bytes": 4687538
+   },
+   "corpus_version": "2.1.0",
+   "pack_version": "2.4.0",
+   "scenario_extension_provisions": 23,
+   "scenario_extension_absolute": 8,
+   "draft_amendments": 5
+  },
+  {
+   "directory": "simulation/frontierllm-constitution-corpus",
+   "label": "FrontierLLM",
+   "domain": "Frontier model development",
+   "corresponds_to_demo_pack": "demo/companies/frontierllm",
+   "provisions": 139,
+   "absolute": 31,
+   "families": 20,
+   "shipped_provisions_reproduced": 0,
+   "cases": 6000,
+   "categories": 25,
+   "opening_store": 210,
+   "final_store": 1143,
+   "construction_anomalies": 0,
+   "conformance": "56/56",
+   "mutation_matrix": "31/31 faults killed, 4/4 controls survived",
+   "sha256": {
+    "constitution/rulebook.json": "d62e82cfa0ed4afc066e7b8729fd00307a3d295d7070eb000971735592371c93",
+    "constitution/organizations.json": "af173577e3c90f54325fcbd2e3c7281fc4c4fef77543edc95d3d1376af01b9e8",
+    "corpus/cases.json": "61b616f827e0ee19e604a4ec529e2ff813c8ea55672b5840f740b4dc1e505d96",
+    "corpus/store_seed_initial.json": "fc0d6b226229d2d9950764d77c9691b0c4e091264985b8f51906cec0ea30d082",
+    "corpus/manifest.json": "4ed9b537f3f73b37b4ac27475ff2d44f45a0af6bdb86f55eb7a6f39bf166fd89",
+    "benchmark/discriminating.py": "f917d5ad69d2a4f4fd722bf0b53c7a4ef3f354f39f097e5f07174bb8afbcee22",
+    "docs/DISCRIMINATING_SCENARIOS.md": "0cfce2c326e1857ac6aa90033740e6ebdd878bece3dcb88415cdb19b82f45374",
+    "corpus/docket.json": "2588a4de7920328c3003ea8bb304d837346a9f720079aee720b81709520a701f",
+    "benchmark/justification.py": "eb411fdaa72f4d0af0a9cc774f9caf529225eaa1316cc6738c815d3c57615211",
+    "generator/changes.py": "03502dcac79dda010c53a8556cc35be8563aeef8704c3f11ab4187621b35a63b",
+    "constitution/scenarios.json": "9d2f3b39d4ed504a380a26988119cc2e51d1bab9cd4e978e55638c9bb74d91ab",
+    "harness/coverage.py": "2c924411a5d4569daed99921db837f47d7b16d2070fb7a4e7580229791ddeffa",
+    "benchmark/human.py": "edb414fee38f0734fd80596ad41749f4c92078b28ff340b3ae0a7e7497657e70",
+    "generator/ext_vocab.py": "63fffbf5a9e3820ca45e60ff9a0808bfaedf899b39ac0f49f9f6fdad6aeafb7c",
+    "generator/ext_changes.py": "112f789f7cb30a79c02c016e3cd9ed69add305c91f3a566c047916e8dc19b9d0",
+    "benchmark/arms.py": "ef1f22b14952acb62ddc7658a5a227a79eff25ad4c00604f36aaf29464b07074",
+    "harness/engine.py": "45737d2731d92b50a570c3a8b9f94d4e2ebb6f989c068eea38d311f28308b1f9",
+    "harness/binding_gate.py": "8fe23be9b1330b90eacbdd89d76731c55738ac4db59f04c5c876e6eaaa2c78c0",
+    "benchmark/score.py": "99f28ac0a55fcbf2ddf80cb13c997daaf33fd30959e0f267396e6a7f1f3b311d",
+    "constitution/dimensions.json": "a5cd9d1f1c875a312c9aba42926a42d96592c3546ef7ee2ee3b53e566e3cd7e3",
+    "harness/run_conformance.py": "e8a8d609a01b7aa7b69b6f3ff81c15992ba03344371179426da5209d86d3aa82",
+    "harness/mutation_matrix.py": "3a51af9fa80b862fbe6920b073e4d2aa42ed02dfa6553a1937400910cf333902",
+    "generator/build_corpus.py": "dd5ad73feb7a2ca9733ab476487e065ebc8bd3d3c8a868df3dc45008ad7ef989",
+    "generator/vocab.py": "bb5d421a581eb29734b03e0edcba0b5a68729f8fc8a98ff3f60ddb4c251edf3f"
+   },
+   "contamination_canary": true,
+   "archive": {
+    "path": "simulation/zips/frontierllm-constitution-corpus-2.4.0.zip",
+    "sha256": "13eda1ac5659ac6501a9f6113b5a9d81217a6e6e0c5874ec20c5d2264e704d66",
+    "bytes": 4609863
+   },
+   "corpus_version": "2.1.0",
+   "pack_version": "2.4.0",
+   "scenario_extension_provisions": 26,
+   "scenario_extension_absolute": 9,
+   "draft_amendments": 6
+  },
+  {
+   "directory": "simulation/dcvigil-constitution-corpus",
+   "label": "DCVigil",
+   "domain": "Multi-tenant data-centre monitoring and AIOps",
+   "corresponds_to_demo_pack": "demo/companies/dcvigil",
+   "provisions": 134,
+   "absolute": 26,
+   "families": 23,
+   "shipped_provisions_reproduced": 29,
+   "cases": 6000,
+   "categories": 25,
+   "opening_store": 210,
+   "final_store": 1160,
+   "construction_anomalies": 0,
+   "conformance": "56/56",
+   "mutation_matrix": "31/31 faults killed, 4/4 controls survived",
+   "sha256": {
+    "constitution/rulebook.json": "41175d02876fac8755284099b7c9d794ef5b69421d49f18026ce43a8586dbbfc",
+    "constitution/organizations.json": "4b66db18934bc54abcafc0ed99701781dcdaa5afcc5d4422c59eeea0bb31e61d",
+    "corpus/cases.json": "11cf1e178706d4fb7fa4e40b191a1f2cc994972cc0bd8267edcfdc167efc313f",
+    "corpus/store_seed_initial.json": "99f2af9467014d41a899c6b93aff80976123d9dc4b9e6859e1094f97a7db52ef",
+    "corpus/manifest.json": "308a0a97ac068d79512f3847c46a97013af026a9f214fb1307e9fde5e6f09241",
+    "benchmark/discriminating.py": "f917d5ad69d2a4f4fd722bf0b53c7a4ef3f354f39f097e5f07174bb8afbcee22",
+    "docs/DISCRIMINATING_SCENARIOS.md": "49d7743ff4b2757b50c29d0cddc7141a2de92daaff25ebfd607aa9bdae98b0bc",
+    "corpus/docket.json": "2def13254743f5852e22caa7c7f6a6b0add25022d2fc4fa526bc9dfeecaf3f99",
+    "benchmark/justification.py": "eb411fdaa72f4d0af0a9cc774f9caf529225eaa1316cc6738c815d3c57615211",
+    "generator/changes.py": "f1cd528d45719ed41ee4451f78c5940e3cffc718741f1c8b82fbb6e8017d9668",
+    "constitution/scenarios.json": "9d2f3b39d4ed504a380a26988119cc2e51d1bab9cd4e978e55638c9bb74d91ab",
+    "harness/coverage.py": "2c924411a5d4569daed99921db837f47d7b16d2070fb7a4e7580229791ddeffa",
+    "benchmark/human.py": "edb414fee38f0734fd80596ad41749f4c92078b28ff340b3ae0a7e7497657e70",
+    "generator/ext_vocab.py": "0da430a191c02e6d3610149cf3b5af8d63a6abe9e205ebc906f0e4041ad295a2",
+    "generator/ext_changes.py": "868bdf8cd686f3af91714edda3b90b3d494cdffe0b84108aea76de9d772c530c",
+    "benchmark/arms.py": "ef1f22b14952acb62ddc7658a5a227a79eff25ad4c00604f36aaf29464b07074",
+    "harness/engine.py": "a7bc0b68b88c3418b7d6a94c7b979210b18ad1510e250c4a5bdf026185cb0aad",
+    "harness/binding_gate.py": "8fe23be9b1330b90eacbdd89d76731c55738ac4db59f04c5c876e6eaaa2c78c0",
+    "benchmark/score.py": "99f28ac0a55fcbf2ddf80cb13c997daaf33fd30959e0f267396e6a7f1f3b311d",
+    "constitution/dimensions.json": "a5cd9d1f1c875a312c9aba42926a42d96592c3546ef7ee2ee3b53e566e3cd7e3",
+    "harness/run_conformance.py": "de712116f87dfa66dd52f44e5721be4d9ee2578fcf80571ee3bcd3c3ab6f56af",
+    "harness/mutation_matrix.py": "3a51af9fa80b862fbe6920b073e4d2aa42ed02dfa6553a1937400910cf333902",
+    "generator/build_corpus.py": "8d281ae1c847ea2485daf7769a4976dfac6be1b0f03168cc3407a87181415d25",
+    "generator/vocab.py": "bfe1c0e0a96492e4503faabc92e20b08d6291c92b39d36005a9166a2ac30523e"
+   },
+   "contamination_canary": true,
+   "archive": {
+    "path": "simulation/zips/dcvigil-constitution-corpus-2.4.0.zip",
+    "sha256": "38792aa9e9058df96a23260a509a18473185ea3bd41d972dbcf5cf8865ae8f3a",
+    "bytes": 4507196
+   },
+   "corpus_version": "2.1.0",
+   "pack_version": "2.4.0",
+   "scenario_extension_provisions": 26,
+   "scenario_extension_absolute": 9,
+   "draft_amendments": 10
+  },
+  {
+   "directory": "simulation/meridian-corpus",
+   "label": "Meridian Financial",
+   "domain": "Regulated fintech: payments, cards, ledger, lending",
+   "corresponds_to_demo_pack": "demo/companies/fintech",
+   "provisions": 142,
+   "absolute": 33,
+   "families": 22,
+   "shipped_provisions_reproduced": 37,
+   "cases": 6000,
+   "categories": 25,
+   "opening_store": 211,
+   "final_store": 1136,
+   "construction_anomalies": 0,
+   "conformance": "56/56",
+   "mutation_matrix": "31/31 faults killed, 4/4 controls survived",
+   "sha256": {
+    "constitution/rulebook.json": "73402f3ae197aa7f21b866e1ae924e964ef439ac2aef6be560b5f02421dcb47e",
+    "constitution/organizations.json": "6275168dcf086594f5525faf78c7ace54ae0dfc22467ac8cc81dad4025ce1c73",
+    "corpus/cases.json": "f14eb8d181da414980973e871da276e3bb29e59dbbbd9d7a59ad05ba15303b96",
+    "corpus/store_seed_initial.json": "7d29f9c99ecc8328c4ad4cde4b8d8f17c007db43c8c703d63936e14d1518a8d7",
+    "corpus/manifest.json": "26b788f7028604781e7498a1c7e9f5c5101788b2ef5ff55576ba560ff73c80b3",
+    "benchmark/discriminating.py": "f917d5ad69d2a4f4fd722bf0b53c7a4ef3f354f39f097e5f07174bb8afbcee22",
+    "docs/DISCRIMINATING_SCENARIOS.md": "dfeb744327ba24c024c957e29605cb5c1a1a9390439991aedd3ea5d6ab9d4970",
+    "corpus/docket.json": "9406b89bbbd0050cfa7b39b8e39d01caf6017f25a8833e7d67820c081aa55c51",
+    "benchmark/justification.py": "eb411fdaa72f4d0af0a9cc774f9caf529225eaa1316cc6738c815d3c57615211",
+    "generator/changes.py": "e2ec15d50928931d305ee57d83d5c24b61f4d6eb6bb9ca309df0394b31acf030",
+    "constitution/scenarios.json": "9d2f3b39d4ed504a380a26988119cc2e51d1bab9cd4e978e55638c9bb74d91ab",
+    "harness/coverage.py": "2c924411a5d4569daed99921db837f47d7b16d2070fb7a4e7580229791ddeffa",
+    "benchmark/human.py": "edb414fee38f0734fd80596ad41749f4c92078b28ff340b3ae0a7e7497657e70",
+    "generator/ext_vocab.py": "772999816d9898c6fba85f9289adef8e76783194c5cff1ca885d988db6941cf9",
+    "generator/ext_changes.py": "c84ab9dd1a2b12385a26abb6afa234c03ddf58cb23bca4be2d0f426a7b0a2399",
+    "benchmark/arms.py": "ef1f22b14952acb62ddc7658a5a227a79eff25ad4c00604f36aaf29464b07074",
+    "harness/engine.py": "b71fcc09f50a0e4c1b5a454a3979670f7482ea81a9c66547d19232448dd0996e",
+    "harness/binding_gate.py": "8fe23be9b1330b90eacbdd89d76731c55738ac4db59f04c5c876e6eaaa2c78c0",
+    "benchmark/score.py": "99f28ac0a55fcbf2ddf80cb13c997daaf33fd30959e0f267396e6a7f1f3b311d",
+    "constitution/dimensions.json": "a5cd9d1f1c875a312c9aba42926a42d96592c3546ef7ee2ee3b53e566e3cd7e3",
+    "harness/run_conformance.py": "acc01c61ec75b56f0f1f158b6c85161be4319f4a17fd4dda97500e62ac1891da",
+    "harness/mutation_matrix.py": "3a51af9fa80b862fbe6920b073e4d2aa42ed02dfa6553a1937400910cf333902",
+    "generator/build_corpus.py": "8fa64675a2cfbac8efa2ac1aaef5ebdeaeb2b9c3e2462841a465e10eb83708a8",
+    "generator/vocab.py": "f76248a8c5c11ba87bd07c4567ae7d272687216666d76e6b31880d1f674255d8"
+   },
+   "contamination_canary": true,
+   "archive": {
+    "path": "simulation/zips/meridian-corpus-2.4.0.zip",
+    "sha256": "e117d600c4a06d554b742a7cd07f68d75845d6ba188a9b7d3d8b5818bdb7bbca",
+    "bytes": 4964508
+   },
+   "corpus_version": "2.1.0",
+   "pack_version": "2.4.0",
+   "scenario_extension_provisions": 26,
+   "scenario_extension_absolute": 9,
+   "draft_amendments": 12
+  }
+ ],
+ "pact_alignment": {
+  "dataset": "trace-ai-labs/pact (MIT), 3,364 items",
+  "paper": "Okamoto & Erol 2026, preprint, under review",
+  "adopted": [
+   "nine pressure mechanisms (Table 14) in the P-pressure category",
+   "rule-scope discernment as benchmark guard items (--guard)",
+   "evaluation-awareness probe and two leak fixes (--realism)",
+   "transparency scored as a separate axis (breaks_a_rule)",
+   "per-case contamination canaries",
+   "eight discriminating scenario families, each naming the PACT finding it is built from and its tier",
+   "an author-side disclosure axis (discloses / silent / misrepresents) with a guard direction, adjacent to PACT's model-side misrepresentation finding rather than a reproduction of it"
+  ],
+  "not_adopted": [
+   "multi-turn pushback scoring — the obvious next extension, not yet built"
+  ]
+ },
+ "discriminating_suite": {
+  "added_in": "5.8.1",
+  "what_this_is": "Eight scenario families, nineteen arrivals, each built so that one mechanism is the only thing that can decide it correctly. Bound to provisions by property rather than identifier, so the same eight instantiate in all five constitutions.",
+  "tiers": {
+   "structural": [
+    "S1-stale-clearance",
+    "S2-silent-reversal",
+    "S3-exception-creep",
+    "S4-consolidated-pressure",
+    "S5-authority-order"
+   ],
+   "measured": [
+    "S6-absolute-under-compound-pressure",
+    "S7-plausible-record"
+   ],
+   "adverse": [
+    "S8-scope-relocation"
+   ]
+  },
+  "offline_result_all_five_packs": {
+   "reader": "naive (a stand-in for three measured PACT behaviours; NOT a model and not evidence about one)",
+   "families_where_arm_B_answers_differently_from_at_least_one_other_arm": 3,
+   "families_total": 8,
+   "S4_separates_on_cost": "1 model call under arm B against 12 under every non-binding arm, for the same twelve co-pending changes"
+  },
+  "run": "bash reproduce/run_benchmark.sh discriminating",
+  "document": "docs/DISCRIMINATING_SCENARIOS.md in each pack, generated from the definitions",
+  "fairness_correction": "Monolith arms retrieve on coverage alone. An earlier build routed them through the engine's own retrieve, which drops lapsed records and so handed them the lapse clock, one of the mechanisms under test. Corrected before the result above was taken; S1 does not separate without the correction."
+ },
+ "audit_5_8_2": {
+  "against": "the programme's dataset-construction rules (skill: digital-judiciary-dataset-creator)",
+  "date": "2026-09-06",
+  "corpus_version": "1.1.0 — cases, stores and constitutions byte-identical to 1.0.0; the docket gains two fields",
+  "defects_closed": [
+   "the discriminating suite passed each family's own title into the change description shown to every arm, announcing the answer (§5)",
+   "scenario premises were minted as mk_rec-<id>, which the scaffolding stripper (matching mk_rec_) did not catch, so the marker reached both the case block and the record premise (§5)",
+   "scenario cases carried no contamination canary (§5)",
+   "guard items were drawn at random with a silent continue, so --guard N yielded fewer than N over a random subset of provisions, and no absolute provision had one at all (§8)",
+   "the transparency axis was two-valued and folded silence together with misrepresentation, the two failure modes PACT separates (§7)",
+   "docket entries omitted the consulted set and the rulebook version (§1)",
+   "the four intake routes were never mapped onto the seven disposition routes, so nobody could check the partitions agree (§1)",
+   "the discriminating overlay shipped with no conformance check and no mutant (§4)",
+   "a batch mutation run killed by a hard timeout left a mutated benchmark/discriminating.py on disk in one pack; the runner now writes a backup beside the target and recovers at startup (§4)",
+   "three packs had no proposed_amendments.json although the package README listed one (§11)",
+   "meridian's VC-13 comment claimed the sibling packs compare the disposition only, which stopped being true when the full-trace check was ported (§4.3)"
+  ],
+  "new_checks": {
+   "VC-45": "docket entry completeness; no unrated declination",
+   "VC-46": "the four intake routes are exhaustive and disjoint",
+   "VC-47": "the discriminating suite builds, binds by property, answers as specified and leaks nothing"
+  },
+  "new_mutants": {
+   "M19": "the suite announces its own trap in the change description",
+   "M20": "scenario cases ship without a canary",
+   "M21": "S3 stops distinguishing"
+  },
+  "guard_coverage": "every provision that can have a guard item now has one; absolute provisions get a synthesised compliant base, because no corpus case against a floor is compliant",
+  "provenance_marks": "the discriminating suite's monolith_trap strings are PROJECTED until --mode live; the offline divergence is measured; arm B's inability to over-apply on S8 is an identity"
+ },
+ "release_tiers": "simulation/RELEASE_TIERS.md",
+ "pack_archives": {
+  "directory": "simulation/zips (release assets; not committed)",
+  "rebuild": "bash reproduce/make_pack_zips.sh",
+  "note": "byte-identical to the extracted trees, omitting corpus/cases.jsonl, corpus/explorer_data.json and benchmark/results/*.json; --rebuild regenerates the first two. Attached to each GitHub release; the per-pack 'archive' entries below record the digest of the archive built at release time.",
+  "note_2_0_0": "2.0.0 archives exclude corpus/cases.jsonl and corpus/explorer_data.json (regenerated by --rebuild) and any *.mutation-backup."
+ },
+ "disclosure_overlay": {
+  "added_in": "5.8.3",
+  "what_this_is": "The author's own account of a change, attached to cases the corpora already contain. Four registers — disclosing, silent, misrepresenting, and a guard direction where the same false-sounding words are true over a clean change — in three computed classes. An overlay (--justify N), not a 26th category.",
+  "design": "the pressure twins' design: the same change filed twice, twin immediately after its control, control drawn uncontested, scored on whether anything moved between them",
+  "arm_B": "an identity, not a result: §4.6 takes factors and a note is prose. VC-48 checks the whole trace — disposition, route, controlling record, consulted set, stored status — and M22 breaks it by pushing the note into facts.",
+  "offline_result_all_five_packs": {
+   "reader": "naive (not a model, not evidence about one)",
+   "arm_B_pairs_held": "30 of 30",
+   "model_arms": "about three quarters held; roughly six of ten misrepresenting pairs lost; disclosing and guard directions held"
+  },
+  "check_hole_found_by_a_mutant": "M23 mislabels a truthful compliance claim and survived the first VC-48, because recomputing a label with the classifier that produced it cannot catch a classifier that is wrong. VC-48 now also holds the classifier to a stated seven-case specification; those triples are the spec, not any case's ground truth.",
+  "run": "bash reproduce/run_benchmark.sh disclosure"
+ },
+ "what_a_case_is": {
+  "definition": "a development change — something a developer or a coding agent proposes and a reviewer sees before the code is built and packaged: source, configuration, infrastructure, schema and migrations, pipeline definitions, tests, the policy repository, and documents that live in the tree beside them",
+  "what_it_is_not": "a runtime business transaction (a payment, a shipment, a prescription, a dispatched invoice) or a process act with no artefact (a completed review, a filed notification, a rehearsal)",
+  "audited": "2026-09-06, all 1,525 catalogue titles across the five packs",
+  "found": "48 titles across the five packs had drifted, in two forms: an act on live data, and a process with no artefact",
+  "closed_by": "rewriting each as the change that would appear in the pull request; VC-49 guards it, M24 breaks it",
+  "corpus_impact": "corpus_version 1.2.0 — only the change descriptions moved; every disposition, route, controlling record, consulted set, store entry, docket entry, category count and published figure is byte-identical to 1.1.0, verified field by field"
+ },
+ "scenario_extension": {
+  "added_in": "5.9.0 (corpus 2.0.0)",
+  "catalogue": "simulation/scenarios.json — 39 scenario classes, five harm classes; copied into every pack as constitution/scenarios.json",
+  "documents": [
+   "simulation/SCENARIO_INVENTORY.md",
+   "simulation/CONSTITUTION_AUDIT.md",
+   "simulation/SCENARIO_COVERAGE.md",
+   "<pack>/docs/SCENARIO_COVERAGE.md"
+  ],
+  "mechanism": "every provision carries `scenarios` and a computed `harm_classes`; the generator walks shuffled coverage queues so every provision receives a compliant touch, a plain violation per titled factor, a pressure twin and a like-case anchor, every absolute a floor case and a compliant touch; VC-50 computes the scenario x mechanism matrix from the executed corpus; M25 breaks the checker",
+  "human_arm": "benchmark/run.py --human — arm C, a priced human review desk; estimation-only, no decisions; every input a stated PROJECTED parameter in benchmark/human.py",
+  "generator_defect_fixed": "a pressure control is refused when a record it consulted lapses at the twin's timestamp (caught by VC-13 on the first 6,000-case build)",
+  "pack_name_header_fixed_in": [
+   "semifab",
+   "frontierllm",
+   "dcvigil"
+  ],
+  "tools": [
+   "simulation/tools/validate_extension.py",
+   "simulation/tools/integrate_extension.py",
+   "simulation/tools/coverage_matrix.py",
+   "simulation/tools/build_audit_docs.py",
+   "simulation/tools/EXTENSION_AUTHORING_SPEC.md"
+  ]
+ },
+ "numerals": {
+  "added_in": "5.10.0 (federation 1.0.0)",
+  "directory": "simulation/numerals",
+  "what_this_is": "The enterprise constitution every division inherits under minimum harmonisation, the curated inheritance map against the five division rulebooks, 26 draft amendments filed by the enterprise, and a 3,000-case federated stream with cross-division precedent.",
+  "provisions": 33,
+  "absolute": 6,
+  "proposed_absolute": 4,
+  "families": 6,
+  "cases": 3000,
+  "opening_store": 135,
+  "final_store": 504,
+  "bound_by_another_divisions_record": 400,
+  "like_case_pairs": 200,
+  "construction_anomalies": 0,
+  "checks": "FC-01..FC-11, 11/11",
+  "mutation_matrix": "7/7 faults killed, 2/2 controls survived",
+  "sha256": {
+   "constitution/rulebook.json": "95a6941535c70a80244ebfb8ef62e9f40edd8dc273de4b558622f0361dc4889d",
+   "constitution/inheritance.json": "e9d1a1d47bd7f37c280fb74d7436a5ec0cdb51a40dcf58615f1b88d4ab5c7701",
+   "constitution/proposed_amendments.json": "4db15b2bc9447ccdf0fe160c6cfa999944c230e8db4ba3b8323d51037743ce4c",
+   "corpus/cases.json": "967bc887921d33e0c6d1623258b0bf05250daef37c85c95e09aee558e3b92ea6",
+   "harness/federation.py": "03b2909662c6d195570b33b358ce487cbb8112a6b51cdfcc7343a8c964362639",
+   "harness/engine.py": "ed71d24447a6b824454f94ac7094cb96dfd4a8e759a22ece56149dee24e31d4c",
+   "harness/binding_gate.py": "8fe23be9b1330b90eacbdd89d76731c55738ac4db59f04c5c876e6eaaa2c78c0",
+   "constitution/dimensions.json": "a5cd9d1f1c875a312c9aba42926a42d96592c3546ef7ee2ee3b53e566e3cd7e3",
+   "harness/mutation_matrix.py": "bacc47773b73dc1e48fd8463cbebe18ba1a5c6b2cfcd42a8717495c1a69967c1",
+   "harness/run_federation_checks.py": "cb48f0287eeaae387b543098439285e71e7cfa0933502a3206d6b8edcb075374",
+   "corpus/manifest.json": "3393e42e78516c0bf0a57197586b5658cf71ef70682ee48ef6640595b528cf1b",
+   "corpus/docket.json": "364b37738032a28a72829f4d2192b70bd9353c9ee8dddfc5b70c2785f995d6ac",
+   "corpus/store_seed_initial.json": "20dd0bde44f618ae5c5b40d60257ca7bec5e536ff69724920b9d3b744b8efeff"
+  },
+  "archive": {
+   "path": "simulation/zips/numerals-1.3.0.zip",
+   "sha256": "011d11181a7314d0ed9159c3f6d4733b1034de53af8e4971be84103804060a03",
+   "bytes": 732947
+  },
+  "corpus_note_1_3_0": "corpus 1.3.0 — D-vertical construction corrected: permitting seeds now carry the violating factor v0 they interpret away; cases.json digest changes; 55 of 100 D-vertical outcomes move from permit to deny under the 5.13.0 adverse-fact rung; C-cross disposition agreement of the non-federated arms drops to 289/400 (A) and 307/400 (B_div) while the federated arms keep 400/400",
+  "cases_json_sha256_1_3_0": "967bc887921d33e0c6d1623258b0bf05250daef37c85c95e09aee558e3b92ea6"
+ },
+ "release_5_11_0": {
+  "engine": "harness/engine.py — the distinguishing gate is a comparison kernel: three-valued facts (Case.unrecorded), admission statuses a_fortiori/tolerant/distinguished/premise_unproven, gate outcomes governed/no_candidates/all_distinguished/premise_not_established/no_controlling on every trace, route floor_unresolved (A6 under silence), constitution/dimensions.json with coherence rules D1-D4. Reduction to the 2.0.1 gate verified on every case (VC-51); routes, decisions, controlling records, stores, dockets and generator digests byte-identical.",
+  "binding_gate": "harness/binding_gate.py — exact one-sided false-bind bound, attainability floors 300/3000, guard items, self-authored-oracle refusal; VC-53 in the suite, a binding_gate endpoint and falsebind column in benchmark/score.py",
+  "new_checks": {
+   "VC-51": "reduction + kernel self-test",
+   "VC-52": "silence never binds",
+   "VC-53": "binding gate verdict discipline",
+   "FC-11": "silence never binds across divisions (Numerals)"
+  },
+  "new_mutants": {
+   "M26": "silence binds (VC-52 kills)",
+   "M27": "tolerance padded by one (VC-51 kills)",
+   "MF7": "silence binds across divisions (FC-11 kills)"
+  },
+  "extraction": "tools/extraction/ — shared offline characterisation stage; cued baseline: round-trip gate pass on all five packs, bind retention 0.930-0.981, floors missed 0, results in tools/extraction/results/",
+  "provenance": "the kernel, the binding gate and the extraction harness are re-implementations (standard library) of the author's Likewise 0.15.0; measured first against these corpora, see LIKEWISE_INTEGRATION.md"
+ },
+ "release_5_12_0": {
+  "engine": "harness/engine.py — Record.cite_stance and Record.construction; _displaces requires stance superseded; a legacy citation with no stance is superseded (VC-54 reduction: 0 orderings differ).",
+  "new_checks": {
+   "VC-54": "citation stance — reduction and self-test"
+  },
+  "new_mutants": {
+   "M28": "stance ignored (VC-54 kills)"
+  },
+  "record_stage": "tools/extraction/records.py, run_record_stage.py — premise (inclusion-biased), stance (unstated on doubt), scope (widest on doubt), magnitude (unrecorded on doubt); cued reader passes on all five packs; under held-out phrasings 0 over-binds where the reference abstained; literal reader fails with 102-142 false supersessions",
+  "tolerance_sweep": "tools/extraction/dimensional_overlay.py — synthetic magnitude overlay on the 8 most-premised factors per pack; results in tools/extraction/results/overlay_*.json, marked synthetic overlay"
+ },
+ "release_5_13_0": {
+  "engine": "harness/engine.py — admission rungs adverse_unaddressed (a permissive holding falls on a violating factor of any engaged provision its facts never contained) and decided_under_prior_text (Provision.version / amendment_history; Record.prov_version); gate/admit take optional provisions, else the registry set by adjudicate/load_constitution. Inert on the five division corpora (VC-55, VC-56: zero changed traces).",
+  "numerals": "D-vertical construction corrected: the permitting seed now carries the violating factor v0 it interprets away, so home and foreign records both SAW v0; under the 5.12.0 gate 55 of 100 D-vertical cases had been decided permit on a case carrying a violation the permit never saw. Corpus 1.3.0, rebuilt deterministically.",
+  "discriminating": "S9-unaddressed-adverse-fact (measured): A+ follows the permit, B falls it. Seed records of S1/S2/S5 now carry the violation they excused.",
+  "new_checks": {
+   "VC-55": "unaddressed adverse fact",
+   "VC-56": "decided under prior text"
+  },
+  "new_mutants": {
+   "M29": "adverse rung removed (VC-55 kills)",
+   "M30": "prior-text rung removed (VC-56 kills)"
+  },
+  "tool": "tools/amendment_overlay.py — limb / compliant-factor / citation amendments adopted in memory at the stream midpoint; results in tools/extraction/results/amendments_*.json; finding: no record in any pack turned on a violating factor, so limb amendments unsettle nothing and compliant-factor amendments unsettle up to half a provision's records."
+ },
+ "release_5_14_0": {
+  "corpus": "2.1.0 — one plain denial in five contested and lost (PLAIN_DENY_CONTESTED_SHARE = 0.20 in generator/build_corpus.py); deny records whose premise is the violating factor plus one compliant factor; 82–113 deny records and 69–100 deny-side binds per pack; the violation-pair queue covers every ordinary provision first; 25-category composition unchanged and identical across packs; all case digests regenerated",
+  "engine": "record withheld (trace.record_withheld, referral) when a contested case's hinted premise carries an unrecorded factor — no law on facts nobody established; measured 167 over-binds on one pack before the rule, 0 after",
+  "new_mutants": {
+   "M31": "withholding removed (VC-52 kills)"
+  },
+  "measurements": "tools/extraction/results regenerated on 2.1.0; amendment_overlay adopts at the first quartile: limb amendments now unsettle 2–8 deny-side binds per provision; Meridian's filed amendments would unsettle 12 binds"
+ },
+ "release_5_15_0": {
+  "kind": "publication cut — no trace, corpus, expectation or figure changes",
+  "licensing": "full Apache-2.0 text, NOTICE, root LICENSE-DATA covering all data, per-pack LICENSE-DATA at pack 2.4.0 / corpus 2.1.0",
+  "packaging": "pyproject.toml (requires-python >= 3.10, no dependencies on the reproduction path, optional extras postgres / extraction / dev, dj-serve entry point), .gitignore, .gitattributes; cases.jsonl and explorer_data.json are derived and not committed; simulation/zips are release assets",
+  "tests_ci": "tests/ wires the demo suites, pack suites, Numerals, manifest digests, composition and engine identity into pytest; .github/workflows/ci.yml runs lint, the suites and the demo reproduction on 3.10/3.12/3.13, the mutation matrices on main, and a Docker build",
+  "sources": "ruff-clean (71 cosmetic findings fixed; one duplicated dict key in vetpoc generator/ext_vocab.py whose first value was dead); app/reviewui_v54_legacy.py removed; templates renamed *.py.frag; benchmark runners record pack-relative paths (_portable_config)",
+  "digests_moved": "docs/DISCRIMINATING_SCENARIOS.md (regenerated with a relative results path), benchmark/justification.py and harness/run_conformance.py (unused imports) in each pack; vetpoc generator/ext_vocab.py; Numerals constitution/rulebook.json (regenerated: divisions recorded at corpus 2.1.0, not 2.0.0) and harness/run_federation_checks.py",
+  "tool": "simulation/tools/refresh_manifest_digests.py"
+ }
+}

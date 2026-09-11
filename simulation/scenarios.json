@@ -1,0 +1,830 @@
+{
+  "version": "1.0.0",
+  "note": "The architect's scenario catalogue. Every provision in every pack maps to one or more scenario classes; coverage_matrix.py computes, from executed cases, how many times each class was exercised per pack and per mechanism. Harm classes: legal (statutory or contractual liability), regulatory (supervisory obligation, examinable), reputational (a headline, a viral complaint, a public-trust event), safety (life, health, animal welfare, physical plant), financial (direct loss or mis-statement). 'floor' says whether the architect expects at least one absolute provision in this class in a pack where the class applies. 'required_mechanisms' names the case categories in which the class must be exercised for the coverage check to pass; F is demanded only of classes with a floor. Mechanisms B, G and V are demanded only where the pack maps at least one ORDINARY provision to the class (an absolute cannot be plainly denied, risk-accepted or anchor a like-case pair); A and P are demanded of every applicable class because the generator gives every provision, absolute included, a compliant touch and a pressure twin.",
+  "harm_classes": [
+    "legal",
+    "regulatory",
+    "reputational",
+    "safety",
+    "financial"
+  ],
+  "scenarios": [
+    {
+      "id": "S-01",
+      "title": "Sanctions, denied-party and restricted-destination screening is weakened or bypassed",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "P"
+      ],
+      "applies_to": [
+        "meridian",
+        "semifab",
+        "frontierllm",
+        "dcvigil"
+      ],
+      "description": "Strict-liability exposure. Any change that skips, caches, allow-lists or auto-clears a screening hit."
+    },
+    {
+      "id": "S-02",
+      "title": "Personal or controlled data leaves its lawful region, boundary or tenant",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "V"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "Residency, cross-border transfer, deemed export, tenant isolation, per-tenant key pooling."
+    },
+    {
+      "id": "S-03",
+      "title": "A regulated record is destroyed, overwritten, back-dated or its retention shortened",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "financial"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "Audit trails, controlled-substance logs, export records, WORM stores, metrology and WIP history, decision records."
+    },
+    {
+      "id": "S-04",
+      "title": "A statutory notification or filing clock is disabled, extended or made configurable",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "P"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "Breach notification, DORA/NIS2/SEC 8-K incident clocks, DEA theft-or-loss, blocked-property reports, CTRs, frontier-incident reports."
+    },
+    {
+      "id": "S-05",
+      "title": "A prohibited AI practice or manipulative technique is implemented",
+      "harm_classes": [
+        "legal",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "EU AI Act Art. 5: social scoring, subliminal or exploitative techniques, workplace emotion inference, untargeted facial scraping; dark patterns in consent."
+    },
+    {
+      "id": "S-06",
+      "title": "A protected characteristic or a proxy for one enters an automated decision",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "V"
+      ],
+      "applies_to": [
+        "meridian",
+        "frontierllm",
+        "dcvigil"
+      ],
+      "description": "Credit, pricing, hiring-adjacent screening, customer triage, alert routing that discriminates."
+    },
+    {
+      "id": "S-07",
+      "title": "Child safety: CSAM handling, age assurance, minors' data and interactions",
+      "harm_classes": [
+        "legal",
+        "reputational",
+        "safety"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "frontierllm",
+        "meridian",
+        "vetpoc"
+      ],
+      "description": "18 U.S.C. §2258A reporting, hash-match pipelines, COPPA, minors' interaction safeguards, under-18 account handling."
+    },
+    {
+      "id": "S-08",
+      "title": "Life-safety, physical actuation or clinical-safety control is suppressed or bypassed",
+      "harm_classes": [
+        "safety",
+        "legal",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "P"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "dcvigil"
+      ],
+      "description": "Equipment interlocks, hazardous-gas alarms, lockout/tagout, fire suppression and EPO, power and cooling actuation, weight-based dosing checks, wrong-patient binding."
+    },
+    {
+      "id": "S-09",
+      "title": "Export-controlled technology, defence articles or model weights reach an unauthorised person or destination",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "semifab",
+        "frontierllm",
+        "dcvigil"
+      ],
+      "description": "EAR deemed export, ITAR technical data, advanced-computing IFR on weights, encryption items in shipped binaries."
+    },
+    {
+      "id": "S-10",
+      "title": "A consumer's statutory right, cap or window is made configurable or removed",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "V"
+      ],
+      "applies_to": [
+        "meridian",
+        "vetpoc",
+        "dcvigil"
+      ],
+      "description": "Reg E and Reg Z rights, provisional credit, funds availability, overdraft opt-in, consent withdrawal, cancellation as easy as sign-up."
+    },
+    {
+      "id": "S-11",
+      "title": "The human-review or contest path for an automated decision is removed",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "GDPR Art. 22, EU AI Act Art. 14, ECOA adverse-action reasons, the judiciary's own contest path."
+    },
+    {
+      "id": "S-12",
+      "title": "An autonomous agent's mandate, loop limit, cost breaker or human stop is widened or removed",
+      "harm_classes": [
+        "financial",
+        "safety",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "P"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "Agent-authored change to its own bounds; agents editing authn, guardrails, interlocks, dispensing or funds movement."
+    },
+    {
+      "id": "S-13",
+      "title": "Third-party code, build provenance, SBOM or vendor review is weakened",
+      "harm_classes": [
+        "regulatory",
+        "legal",
+        "financial"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "SLSA provenance, dependency existence, vendor security review, SBOM/VEX delivery, Cyber Resilience Act duties."
+    },
+    {
+      "id": "S-14",
+      "title": "Secrets, keys or cryptographic posture are degraded",
+      "harm_classes": [
+        "regulatory",
+        "financial"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "Credentials in source or logs, deprecated ciphers, TLS downgrade, key rotation, per-tenant keys."
+    },
+    {
+      "id": "S-15",
+      "title": "Change control, segregation of duties or a change freeze is bypassed",
+      "harm_classes": [
+        "regulatory",
+        "financial"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "Self-approval, missing rollback, freeze-window deploys, emergency protocol abuse."
+    },
+    {
+      "id": "S-16",
+      "title": "Accessibility of a customer-facing surface regresses",
+      "harm_classes": [
+        "legal",
+        "reputational"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "V"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "ADA Title III, WCAG 2.2 AA, European Accessibility Act; colour-only signals, keyboard traps, inaccessible consent."
+    },
+    {
+      "id": "S-17",
+      "title": "Marketing, communications or subscription practices breach consent or anti-dark-pattern rules",
+      "harm_classes": [
+        "legal",
+        "reputational"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "V",
+        "P"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "meridian",
+        "dcvigil"
+      ],
+      "description": "TCPA/CAN-SPAM consent, E-SIGN, auto-renewal and negative option, cancellation friction, junk fees, pre-checked boxes."
+    },
+    {
+      "id": "S-18",
+      "title": "Data-subject rights operations fail: access, portability, erasure, unlearning, offboarding return",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "reputational"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "GDPR Arts. 15/17/20, CPRA opt-out signals, erasure propagation to training sets, data return at contract end, sub-processor notice."
+    },
+    {
+      "id": "S-19",
+      "title": "Lawful-access, legal hold and government-request handling is mis-implemented",
+      "harm_classes": [
+        "legal",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "semifab",
+        "dcvigil",
+        "frontierllm"
+      ],
+      "description": "Litigation hold overriding deletion, conflicting cross-border disclosure duties, law-enforcement request path without legal review, customer notice where lawful."
+    },
+    {
+      "id": "S-20",
+      "title": "Incident communication, status reporting or root-cause delivery to customers is degraded",
+      "harm_classes": [
+        "reputational",
+        "regulatory"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "dcvigil",
+        "meridian",
+        "frontierllm"
+      ],
+      "description": "Status-page suppression, RCA SLAs, customer incident notice, transparency reports."
+    },
+    {
+      "id": "S-21",
+      "title": "Environmental, energy or ESG reporting integrity is compromised",
+      "harm_classes": [
+        "regulatory",
+        "reputational"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "semifab",
+        "dcvigil"
+      ],
+      "description": "EED data-centre reporting, PUE/WUE method changes, CSRD lineage, effluent/PFAS/emissions pipelines, waste-heat reporting."
+    },
+    {
+      "id": "S-22",
+      "title": "Employee or worker monitoring and personnel data are mishandled",
+      "harm_classes": [
+        "legal",
+        "reputational"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "semifab",
+        "dcvigil",
+        "frontierllm"
+      ],
+      "description": "Badge and access logs, works-council consultation, annotator and data-worker data, insider-threat monitoring proportionality."
+    },
+    {
+      "id": "S-23",
+      "title": "Model governance fails: validation, monitoring, sandbagging, red-team coverage, documentation",
+      "harm_classes": [
+        "regulatory",
+        "reputational",
+        "safety"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "frontierllm",
+        "meridian",
+        "dcvigil",
+        "semifab"
+      ],
+      "description": "Independent validation before production, drift monitoring, failing safety eval never disabled, eval-awareness and sandbagging detection, model and system cards, GPAI documentation."
+    },
+    {
+      "id": "S-24",
+      "title": "Quality-system and customer-change-notification duties are skipped",
+      "harm_classes": [
+        "financial",
+        "legal",
+        "reputational"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "semifab",
+        "vetpoc"
+      ],
+      "description": "PCN before a recipe change reaches customer lots, CAPA/8D records, reticle revision traceability, safety-relevant test gating."
+    },
+    {
+      "id": "S-25",
+      "title": "Financial-crime programme breadth: CTR, PEP/EDD, 314(a), Travel Rule, fraud and identity-theft controls",
+      "harm_classes": [
+        "legal",
+        "regulatory",
+        "financial"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "P"
+      ],
+      "applies_to": [
+        "meridian"
+      ],
+      "description": "Filing suppression, Red Flags programme, step-up authentication, synthetic-identity checks, permissible purpose, VASP transfers."
+    },
+    {
+      "id": "S-26",
+      "title": "Tax, escheat, dormant-account and reporting obligations are broken",
+      "harm_classes": [
+        "legal",
+        "financial"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "meridian"
+      ],
+      "description": "1099 and FATCA/CRS reporting, unclaimed-property escheat, dormant-account handling."
+    },
+    {
+      "id": "S-27",
+      "title": "Insider threat, exfiltration detection or personnel vetting for crown-jewel assets is weakened",
+      "harm_classes": [
+        "safety",
+        "legal",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "frontierllm",
+        "semifab"
+      ],
+      "description": "Weight-store egress monitoring and DLP, two-person rules, vetting for privileged access, recipe and mask data exfiltration."
+    },
+    {
+      "id": "S-28",
+      "title": "OT protocol security, network segmentation or vendor remote access is weakened",
+      "harm_classes": [
+        "safety",
+        "regulatory"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "semifab",
+        "dcvigil"
+      ],
+      "description": "IEC 62443 zones and conduits, BACnet/Modbus/IPMI allow-lists, brokered and recorded vendor sessions, firmware provenance, time-sync integrity."
+    },
+    {
+      "id": "S-29",
+      "title": "Public-health, welfare and mandated-reporting duties are disabled",
+      "harm_classes": [
+        "legal",
+        "safety",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "vetpoc"
+      ],
+      "description": "Reportable and zoonotic disease reporting, rabies certificate issuance, suspected-abuse reporting path, euthanasia consent and remains chain of custody."
+    },
+    {
+      "id": "S-30",
+      "title": "An AI assistant or generated content harms users: harmful advice, self-harm, persuasion, unmarked synthetic media",
+      "harm_classes": [
+        "reputational",
+        "legal",
+        "safety"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "P"
+      ],
+      "applies_to": [
+        "frontierllm",
+        "meridian",
+        "vetpoc"
+      ],
+      "description": "Crisis-safety classifiers, high-stakes advice handoffs, political persuasion policy, Art. 50 marking and C2PA, companion-dependence safeguards, servicing assistants misstating rights."
+    },
+    {
+      "id": "S-31",
+      "title": "Responsible sourcing and part integrity: conflict minerals, forced labour, counterfeit and grey-market parts",
+      "harm_classes": [
+        "legal",
+        "reputational",
+        "safety"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "semifab"
+      ],
+      "description": "Dodd-Frank §1502 3TG data, UFLPA screening, AS5553/AS6171 counterfeit detection, grey-market quarantine."
+    },
+    {
+      "id": "S-32",
+      "title": "Ledger, numeric or financial-reporting integrity is compromised",
+      "harm_classes": [
+        "financial",
+        "regulatory",
+        "legal"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "meridian"
+      ],
+      "description": "Append-only ledger, compensating entries, rounding and minor units, SOX boundary controls."
+    },
+    {
+      "id": "S-33",
+      "title": "Telemetry, alerting or evidence integrity is degraded",
+      "harm_classes": [
+        "regulatory",
+        "safety",
+        "financial"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "dcvigil",
+        "semifab",
+        "vetpoc",
+        "frontierllm",
+        "meridian"
+      ],
+      "description": "Tamper alerting, collector masking, critical-value and interlock telemetry, incident-reporting feeds, trusted clocks."
+    },
+    {
+      "id": "S-34",
+      "title": "Governance of the rulebook itself is circumvented",
+      "harm_classes": [
+        "regulatory"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "H"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "Threshold edited in place, parameters changed outside the amendment channel, reporter output reaching adjudication, unrated declinations, silent renewal. Protected structurally by A3's draft-amendment routing (the H mechanism) rather than by an A6 floor."
+    },
+    {
+      "id": "S-35",
+      "title": "Vulnerable-customer and servicemember protections are removed",
+      "harm_classes": [
+        "legal",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "meridian"
+      ],
+      "description": "MLA 36% MAPR and covered-borrower checks, SCRA caps and repossession protections, elder financial-exploitation reporting, FDCPA contact limits."
+    },
+    {
+      "id": "S-36",
+      "title": "Operational resilience, latency or availability floors on critical paths regress",
+      "harm_classes": [
+        "financial",
+        "safety",
+        "regulatory"
+      ],
+      "floor": false,
+      "required_mechanisms": [
+        "A",
+        "B",
+        "G"
+      ],
+      "applies_to": [
+        "vetpoc",
+        "semifab",
+        "frontierllm",
+        "dcvigil",
+        "meridian"
+      ],
+      "description": "Latency budgets on authorization and equipment paths, concurrency safety, kernel/eBPF safety, resource budgets, resilience testing."
+    },
+    {
+      "id": "S-37",
+      "title": "Controlled substances, prescribing and dispensing controls are weakened",
+      "harm_classes": [
+        "legal",
+        "safety",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B",
+        "P"
+      ],
+      "applies_to": [
+        "vetpoc"
+      ],
+      "description": "Schedule II refills, EPCS 2FA, two-person privilege grants, PDMP reporting, extralabel use, residue in food animals, DEA ordering and theft-or-loss."
+    },
+    {
+      "id": "S-38",
+      "title": "Training-data provenance, licensing, copyright and opt-out are breached",
+      "harm_classes": [
+        "legal",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "frontierllm"
+      ],
+      "description": "Prohibited provenance, opt-out honouring, copyleft contamination, benchmark contamination, competitor-output distillation."
+    },
+    {
+      "id": "S-39",
+      "title": "Recipe, process and design IP leaks through logs, caches, telemetry or model context",
+      "harm_classes": [
+        "legal",
+        "financial",
+        "reputational"
+      ],
+      "floor": true,
+      "required_mechanisms": [
+        "F",
+        "A",
+        "B"
+      ],
+      "applies_to": [
+        "semifab",
+        "frontierllm"
+      ],
+      "description": "Recipe parameters and mask data in support bundles or prompts, trade-secret handling, system-prompt extraction."
+    }
+  ]
+}
