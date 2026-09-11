@@ -1,0 +1,51 @@
+cff-version: 1.2.0
+title: VetPOC Constitution Corpus
+message: >-
+  If you use this corpus, please cite it and the Digital Judiciary programme
+  papers it instantiates.
+type: dataset
+version: 2.4.0
+license: CC-BY-4.0
+license-url: https://creativecommons.org/licenses/by/4.0/
+authors:
+  - family-names: Kadambi
+    given-names: Arun
+  - family-names: Kuppuswamy
+    given-names: Venkat
+    affiliation: >-
+      D'Amore-McKim School of Business, Northeastern University
+abstract: >-
+  An open 6,000-case conformance corpus for governing software change in
+  veterinary practice-management and point-of-care systems under a Digital
+  Judiciary: a constitution of 98 provisions (18 absolute), a contest-gated
+  admission rule, a distinguishing gate, a lexicographic ordering over
+  conflicting precedents, and a store of binding decision records with an
+  enforced lifecycle. Ground truth is computed from an executed trace rather
+  than authored. Ships a reference adjudication engine, 26 conformance checks
+  and a mutation matrix.
+keywords:
+  - compliance
+  - precedent
+  - policy-as-code
+  - veterinary software
+  - AI governance
+  - conformance testing
+references:
+  - type: article
+    title: >-
+      When Retrieval Binds: Appraisal, Authenticity and Disposition in
+      Automated Compliance Decisions
+    authors:
+      - family-names: Kadambi
+        given-names: Arun
+      - family-names: Kuppuswamy
+        given-names: Venkat
+  - type: article
+    title: >-
+      Case-Base Formation for Precedential Constraint: Standing, Admission
+      Rules, and the Reason Model
+    authors:
+      - family-names: Kadambi
+        given-names: Arun
+      - family-names: Kuppuswamy
+        given-names: Venkat

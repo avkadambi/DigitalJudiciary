@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vetpoc.example/schema/provision.schema.json",
+  "title": "Constitutional provision",
+  "description": "Chapter 5, Definition 1. A constitution is a pair (Rules, absolute): each provision is marked ordinary or non-overridable.",
+  "type": "object",
+  "required": ["id", "family", "title", "absolute", "tau", "scope_domain", "factors"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^VP-[A-Z]{2}-[0-9]{3}$"},
+    "family": {"type": "string"},
+    "family_title": {"type": "string"},
+    "title": {"type": "string"},
+    "absolute": {"type": "boolean",
+                 "description": "A statutory or safety floor no precedent of any authority can soften. A6 short-circuits it: immediate denial, no retrieval, no escalation path."},
+    "citation": {"type": "string"},
+    "source_status": {"type": "string", "description": "The licence position of the cited source. See docs/SOURCES.md."},
+    "risk_framework": {"type": "string"},
+    "tau": {"type": "integer", "minimum": 0, "maximum": 100,
+            "description": "The per-provision charging threshold. Constitutional: changed only by a legislative enactment, never by the function that applies it."},
+    "scope_domain": {"type": "string"},
+    "factors": {
+      "type": "object", "required": ["comply", "violate"], "additionalProperties": false,
+      "properties": {
+        "comply": {"type": "array", "items": {"type": "string"}},
+        "violate": {"type": "array", "items": {"type": "string"},
+                    "description": "violates(c,p) is true exactly when facts(c) intersects this set."}
+      }
+    }
+  }
+}

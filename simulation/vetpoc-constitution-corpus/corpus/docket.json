@@ -1,0 +1,4774 @@
+{
+  "entries": [
+    {
+      "case": "VP-Q-00020",
+      "route": "null",
+      "ts": 1020,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00029",
+      "route": "declined",
+      "ts": 1029,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00056",
+      "route": "declined",
+      "ts": 1056,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00066",
+      "route": "declined",
+      "ts": 1066,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00072",
+      "route": "declined",
+      "ts": 1072,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00100",
+      "route": "declined",
+      "ts": 1100,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00112",
+      "route": "declined",
+      "ts": 1112,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00114",
+      "route": "declined",
+      "ts": 1114,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00116",
+      "route": "declined",
+      "ts": 1116,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00137",
+      "route": "declined",
+      "ts": 1137,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00143",
+      "route": "declined",
+      "ts": 1143,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00146",
+      "route": "declined",
+      "ts": 1146,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00186",
+      "route": "declined",
+      "ts": 1186,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00210",
+      "route": "null",
+      "ts": 1210,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00214",
+      "route": "declined",
+      "ts": 1214,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00223",
+      "route": "declined",
+      "ts": 1223,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00225",
+      "route": "declined",
+      "ts": 1225,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00226",
+      "route": "declined",
+      "ts": 1226,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00258",
+      "route": "null",
+      "ts": 1258,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00262",
+      "route": "declined",
+      "ts": 1262,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00290",
+      "route": "declined",
+      "ts": 1290,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00291",
+      "route": "declined",
+      "ts": 1291,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00293",
+      "route": "declined",
+      "ts": 1293,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00307",
+      "route": "declined",
+      "ts": 1307,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00343",
+      "route": "declined",
+      "ts": 1343,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00394",
+      "route": "declined",
+      "ts": 1394,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00409",
+      "route": "declined",
+      "ts": 1409,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00417",
+      "route": "null",
+      "ts": 1417,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00425",
+      "route": "declined",
+      "ts": 1425,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00451",
+      "route": "declined",
+      "ts": 1451,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00487",
+      "route": "declined",
+      "ts": 1487,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00497",
+      "route": "declined",
+      "ts": 1497,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00537",
+      "route": "declined",
+      "ts": 1537,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00545",
+      "route": "declined",
+      "ts": 1545,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00571",
+      "route": "declined",
+      "ts": 1571,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00585",
+      "route": "declined",
+      "ts": 1585,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00586",
+      "route": "declined",
+      "ts": 1586,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00601",
+      "route": "declined",
+      "ts": 1601,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00602",
+      "route": "declined",
+      "ts": 1602,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00604",
+      "route": "declined",
+      "ts": 1604,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00608",
+      "route": "declined",
+      "ts": 1608,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00610",
+      "route": "declined",
+      "ts": 1610,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00634",
+      "route": "declined",
+      "ts": 1634,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00636",
+      "route": "declined",
+      "ts": 1636,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00655",
+      "route": "declined",
+      "ts": 1655,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00671",
+      "route": "declined",
+      "ts": 1671,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00688",
+      "route": "declined",
+      "ts": 1688,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00689",
+      "route": "declined",
+      "ts": 1689,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00695",
+      "route": "declined",
+      "ts": 1695,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00704",
+      "route": "declined",
+      "ts": 1704,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00727",
+      "route": "declined",
+      "ts": 1727,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00754",
+      "route": "declined",
+      "ts": 1754,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00788",
+      "route": "declined",
+      "ts": 1788,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00789",
+      "route": "declined",
+      "ts": 1789,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00795",
+      "route": "declined",
+      "ts": 1795,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00829",
+      "route": "declined",
+      "ts": 1829,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00870",
+      "route": "null",
+      "ts": 1870,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00893",
+      "route": "declined",
+      "ts": 1893,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00930",
+      "route": "declined",
+      "ts": 1930,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00940",
+      "route": "declined",
+      "ts": 1940,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00971",
+      "route": "declined",
+      "ts": 1971,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-00974",
+      "route": "declined",
+      "ts": 1974,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-00984",
+      "route": "declined",
+      "ts": 1984,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01012",
+      "route": "declined",
+      "ts": 2012,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01036",
+      "route": "null",
+      "ts": 2036,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01056",
+      "route": "declined",
+      "ts": 2056,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01072",
+      "route": "null",
+      "ts": 2072,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01083",
+      "route": "declined",
+      "ts": 2083,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01104",
+      "route": "declined",
+      "ts": 2104,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01133",
+      "route": "declined",
+      "ts": 2133,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01280",
+      "route": "declined",
+      "ts": 2280,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01301",
+      "route": "null",
+      "ts": 2301,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01338",
+      "route": "null",
+      "ts": 2338,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01342",
+      "route": "declined",
+      "ts": 2342,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01344",
+      "route": "declined",
+      "ts": 2344,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01388",
+      "route": "declined",
+      "ts": 2388,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01411",
+      "route": "declined",
+      "ts": 2411,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01429",
+      "route": "declined",
+      "ts": 2429,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01432",
+      "route": "declined",
+      "ts": 2432,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01463",
+      "route": "declined",
+      "ts": 2463,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01486",
+      "route": "declined",
+      "ts": 2486,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01514",
+      "route": "declined",
+      "ts": 2514,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01526",
+      "route": "declined",
+      "ts": 2526,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01539",
+      "route": "null",
+      "ts": 2539,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01543",
+      "route": "declined",
+      "ts": 2543,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01571",
+      "route": "declined",
+      "ts": 2571,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01580",
+      "route": "declined",
+      "ts": 2580,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01602",
+      "route": "declined",
+      "ts": 2602,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01636",
+      "route": "declined",
+      "ts": 2636,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01685",
+      "route": "declined",
+      "ts": 2685,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01698",
+      "route": "declined",
+      "ts": 2698,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01712",
+      "route": "declined",
+      "ts": 2712,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01714",
+      "route": "declined",
+      "ts": 2714,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01724",
+      "route": "declined",
+      "ts": 2724,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01730",
+      "route": "declined",
+      "ts": 2730,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01733",
+      "route": "declined",
+      "ts": 2733,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01735",
+      "route": "null",
+      "ts": 2735,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01762",
+      "route": "declined",
+      "ts": 2762,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01776",
+      "route": "declined",
+      "ts": 2776,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01787",
+      "route": "declined",
+      "ts": 2787,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01852",
+      "route": "declined",
+      "ts": 2852,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01853",
+      "route": "declined",
+      "ts": 2853,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01870",
+      "route": "declined",
+      "ts": 2870,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01874",
+      "route": "declined",
+      "ts": 2874,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01884",
+      "route": "declined",
+      "ts": 2884,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01886",
+      "route": "declined",
+      "ts": 2886,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01921",
+      "route": "declined",
+      "ts": 2921,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01939",
+      "route": "declined",
+      "ts": 2939,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-01952",
+      "route": "declined",
+      "ts": 2952,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01960",
+      "route": "declined",
+      "ts": 2960,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01985",
+      "route": "declined",
+      "ts": 2985,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01989",
+      "route": "declined",
+      "ts": 2989,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01991",
+      "route": "declined",
+      "ts": 2991,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-01997",
+      "route": "declined",
+      "ts": 2997,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02006",
+      "route": "declined",
+      "ts": 3006,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02025",
+      "route": "declined",
+      "ts": 3025,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02048",
+      "route": "declined",
+      "ts": 3048,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02055",
+      "route": "declined",
+      "ts": 3055,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02076",
+      "route": "declined",
+      "ts": 3076,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02099",
+      "route": "declined",
+      "ts": 3099,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02118",
+      "route": "declined",
+      "ts": 3118,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02137",
+      "route": "null",
+      "ts": 3137,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02141",
+      "route": "declined",
+      "ts": 3141,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02199",
+      "route": "declined",
+      "ts": 3199,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02204",
+      "route": "null",
+      "ts": 3204,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02210",
+      "route": "declined",
+      "ts": 3210,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02234",
+      "route": "declined",
+      "ts": 3234,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02253",
+      "route": "null",
+      "ts": 3253,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02260",
+      "route": "declined",
+      "ts": 3260,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02265",
+      "route": "declined",
+      "ts": 3265,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02267",
+      "route": "declined",
+      "ts": 3267,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02273",
+      "route": "declined",
+      "ts": 3273,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02461",
+      "route": "null",
+      "ts": 3461,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02462",
+      "route": "null",
+      "ts": 3462,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02479",
+      "route": "declined",
+      "ts": 3479,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02483",
+      "route": "declined",
+      "ts": 3483,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02510",
+      "route": "declined",
+      "ts": 3510,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02550",
+      "route": "declined",
+      "ts": 3550,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02596",
+      "route": "declined",
+      "ts": 3596,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02613",
+      "route": "declined",
+      "ts": 3613,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02632",
+      "route": "declined",
+      "ts": 3632,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02647",
+      "route": "declined",
+      "ts": 3647,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02655",
+      "route": "null",
+      "ts": 3655,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02673",
+      "route": "declined",
+      "ts": 3673,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02685",
+      "route": "declined",
+      "ts": 3685,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02742",
+      "route": "declined",
+      "ts": 3742,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02748",
+      "route": "declined",
+      "ts": 3748,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02796",
+      "route": "declined",
+      "ts": 3796,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02802",
+      "route": "declined",
+      "ts": 3802,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02808",
+      "route": "null",
+      "ts": 3808,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02822",
+      "route": "null",
+      "ts": 3822,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02853",
+      "route": "declined",
+      "ts": 3853,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02870",
+      "route": "declined",
+      "ts": 3870,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02913",
+      "route": "declined",
+      "ts": 3913,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02935",
+      "route": "declined",
+      "ts": 3935,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02952",
+      "route": "declined",
+      "ts": 3952,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02957",
+      "route": "null",
+      "ts": 3957,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02968",
+      "route": "declined",
+      "ts": 3968,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-02973",
+      "route": "declined",
+      "ts": 3973,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02993",
+      "route": "declined",
+      "ts": 3993,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-02998",
+      "route": "null",
+      "ts": 3998,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03016",
+      "route": "declined",
+      "ts": 4016,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03059",
+      "route": "declined",
+      "ts": 4059,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03064",
+      "route": "declined",
+      "ts": 4064,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03071",
+      "route": "declined",
+      "ts": 4071,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03084",
+      "route": "declined",
+      "ts": 4084,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03090",
+      "route": "declined",
+      "ts": 4090,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03092",
+      "route": "null",
+      "ts": 4092,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03105",
+      "route": "declined",
+      "ts": 4105,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03109",
+      "route": "declined",
+      "ts": 4109,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03118",
+      "route": "declined",
+      "ts": 4118,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03171",
+      "route": "declined",
+      "ts": 4171,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03183",
+      "route": "null",
+      "ts": 4183,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03186",
+      "route": "declined",
+      "ts": 4186,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03197",
+      "route": "declined",
+      "ts": 4197,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03214",
+      "route": "declined",
+      "ts": 4214,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03229",
+      "route": "declined",
+      "ts": 4229,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03245",
+      "route": "declined",
+      "ts": 4245,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03251",
+      "route": "declined",
+      "ts": 4251,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03258",
+      "route": "null",
+      "ts": 4258,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03265",
+      "route": "declined",
+      "ts": 4265,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03268",
+      "route": "declined",
+      "ts": 4268,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03273",
+      "route": "declined",
+      "ts": 4273,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03285",
+      "route": "declined",
+      "ts": 4285,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03294",
+      "route": "declined",
+      "ts": 4294,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03299",
+      "route": "declined",
+      "ts": 4299,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03313",
+      "route": "null",
+      "ts": 4313,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03319",
+      "route": "declined",
+      "ts": 4319,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03332",
+      "route": "declined",
+      "ts": 4332,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03338",
+      "route": "null",
+      "ts": 4338,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03364",
+      "route": "declined",
+      "ts": 4364,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03371",
+      "route": "declined",
+      "ts": 4371,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03389",
+      "route": "declined",
+      "ts": 4389,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03413",
+      "route": "declined",
+      "ts": 4413,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03446",
+      "route": "null",
+      "ts": 4446,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03473",
+      "route": "declined",
+      "ts": 4473,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03501",
+      "route": "declined",
+      "ts": 4501,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03503",
+      "route": "declined",
+      "ts": 4503,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03524",
+      "route": "declined",
+      "ts": 4524,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03536",
+      "route": "declined",
+      "ts": 4536,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03542",
+      "route": "declined",
+      "ts": 4542,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03546",
+      "route": "declined",
+      "ts": 4546,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03547",
+      "route": "declined",
+      "ts": 4547,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03549",
+      "route": "declined",
+      "ts": 4549,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03563",
+      "route": "declined",
+      "ts": 4563,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03565",
+      "route": "declined",
+      "ts": 4565,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03576",
+      "route": "null",
+      "ts": 4576,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03590",
+      "route": "null",
+      "ts": 4590,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03591",
+      "route": "declined",
+      "ts": 4591,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03621",
+      "route": "declined",
+      "ts": 4621,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03622",
+      "route": "declined",
+      "ts": 4622,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03652",
+      "route": "declined",
+      "ts": 4652,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03689",
+      "route": "declined",
+      "ts": 4689,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03707",
+      "route": "declined",
+      "ts": 4707,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03708",
+      "route": "null",
+      "ts": 4708,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03716",
+      "route": "declined",
+      "ts": 4716,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03764",
+      "route": "declined",
+      "ts": 4764,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03766",
+      "route": "declined",
+      "ts": 4766,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03767",
+      "route": "declined",
+      "ts": 4767,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03775",
+      "route": "null",
+      "ts": 4775,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03782",
+      "route": "null",
+      "ts": 4782,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03791",
+      "route": "declined",
+      "ts": 4791,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03796",
+      "route": "declined",
+      "ts": 4796,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03802",
+      "route": "declined",
+      "ts": 4802,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03811",
+      "route": "declined",
+      "ts": 4811,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03814",
+      "route": "declined",
+      "ts": 4814,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03846",
+      "route": "declined",
+      "ts": 4846,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03847",
+      "route": "declined",
+      "ts": 4847,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03849",
+      "route": "declined",
+      "ts": 4849,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03890",
+      "route": "declined",
+      "ts": 4890,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03893",
+      "route": "declined",
+      "ts": 4893,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03898",
+      "route": "null",
+      "ts": 4898,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03904",
+      "route": "declined",
+      "ts": 4904,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03918",
+      "route": "declined",
+      "ts": 4918,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03930",
+      "route": "declined",
+      "ts": 4930,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03940",
+      "route": "declined",
+      "ts": 4940,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03945",
+      "route": "declined",
+      "ts": 4945,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03946",
+      "route": "declined",
+      "ts": 4946,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03948",
+      "route": "declined",
+      "ts": 4948,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03950",
+      "route": "declined",
+      "ts": 4950,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03962",
+      "route": "null",
+      "ts": 4962,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03967",
+      "route": "declined",
+      "ts": 4967,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03972",
+      "route": "declined",
+      "ts": 4972,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03973",
+      "route": "declined",
+      "ts": 4973,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-03976",
+      "route": "declined",
+      "ts": 4976,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03987",
+      "route": "null",
+      "ts": 4987,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-03992",
+      "route": "declined",
+      "ts": 4992,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04000",
+      "route": "declined",
+      "ts": 5000,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04001",
+      "route": "declined",
+      "ts": 5001,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04009",
+      "route": "null",
+      "ts": 5009,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04021",
+      "route": "declined",
+      "ts": 5021,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04037",
+      "route": "declined",
+      "ts": 5037,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04044",
+      "route": "declined",
+      "ts": 5044,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04052",
+      "route": "declined",
+      "ts": 5052,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04061",
+      "route": "declined",
+      "ts": 5061,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04068",
+      "route": "declined",
+      "ts": 5068,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04073",
+      "route": "null",
+      "ts": 5073,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04089",
+      "route": "declined",
+      "ts": 5089,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04102",
+      "route": "null",
+      "ts": 5102,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04106",
+      "route": "declined",
+      "ts": 5106,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04116",
+      "route": "declined",
+      "ts": 5116,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04147",
+      "route": "declined",
+      "ts": 5147,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04151",
+      "route": "declined",
+      "ts": 5151,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04164",
+      "route": "declined",
+      "ts": 5164,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04167",
+      "route": "declined",
+      "ts": 5167,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04199",
+      "route": "null",
+      "ts": 5199,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04223",
+      "route": "declined",
+      "ts": 5223,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04251",
+      "route": "declined",
+      "ts": 5251,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04283",
+      "route": "declined",
+      "ts": 5283,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04294",
+      "route": "declined",
+      "ts": 5294,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04295",
+      "route": "declined",
+      "ts": 5295,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04305",
+      "route": "declined",
+      "ts": 5305,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04307",
+      "route": "null",
+      "ts": 5307,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04310",
+      "route": "declined",
+      "ts": 5310,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04343",
+      "route": "null",
+      "ts": 5343,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04387",
+      "route": "declined",
+      "ts": 5387,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04389",
+      "route": "null",
+      "ts": 5389,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04410",
+      "route": "declined",
+      "ts": 5410,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04411",
+      "route": "declined",
+      "ts": 5411,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04422",
+      "route": "declined",
+      "ts": 5422,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04427",
+      "route": "declined",
+      "ts": 5427,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04445",
+      "route": "declined",
+      "ts": 5445,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04485",
+      "route": "null",
+      "ts": 5485,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04505",
+      "route": "null",
+      "ts": 5505,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04508",
+      "route": "declined",
+      "ts": 5508,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04518",
+      "route": "declined",
+      "ts": 5518,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04536",
+      "route": "declined",
+      "ts": 5536,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04540",
+      "route": "declined",
+      "ts": 5540,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04550",
+      "route": "declined",
+      "ts": 5550,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04551",
+      "route": "null",
+      "ts": 5551,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04589",
+      "route": "declined",
+      "ts": 5589,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04599",
+      "route": "declined",
+      "ts": 5599,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04623",
+      "route": "declined",
+      "ts": 5623,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04646",
+      "route": "declined",
+      "ts": 5646,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04677",
+      "route": "declined",
+      "ts": 5677,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04686",
+      "route": "declined",
+      "ts": 5686,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04695",
+      "route": "declined",
+      "ts": 5695,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04716",
+      "route": "declined",
+      "ts": 5716,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04795",
+      "route": "declined",
+      "ts": 5795,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04826",
+      "route": "declined",
+      "ts": 5826,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04848",
+      "route": "declined",
+      "ts": 5848,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04858",
+      "route": "declined",
+      "ts": 5858,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04868",
+      "route": "declined",
+      "ts": 5868,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04889",
+      "route": "declined",
+      "ts": 5889,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04902",
+      "route": "declined",
+      "ts": 5902,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04917",
+      "route": "declined",
+      "ts": 5917,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04927",
+      "route": "declined",
+      "ts": 5927,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04932",
+      "route": "declined",
+      "ts": 5932,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04936",
+      "route": "declined",
+      "ts": 5936,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04937",
+      "route": "declined",
+      "ts": 5937,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04938",
+      "route": "declined",
+      "ts": 5938,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-04940",
+      "route": "declined",
+      "ts": 5940,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04948",
+      "route": "null",
+      "ts": 5948,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04949",
+      "route": "declined",
+      "ts": 5949,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04964",
+      "route": "declined",
+      "ts": 5964,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04985",
+      "route": "declined",
+      "ts": 5985,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-04992",
+      "route": "declined",
+      "ts": 5992,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05004",
+      "route": "declined",
+      "ts": 6004,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05009",
+      "route": "declined",
+      "ts": 6009,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05022",
+      "route": "null",
+      "ts": 6022,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05026",
+      "route": "declined",
+      "ts": 6026,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05029",
+      "route": "declined",
+      "ts": 6029,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05039",
+      "route": "declined",
+      "ts": 6039,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05042",
+      "route": "null",
+      "ts": 6042,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05045",
+      "route": "declined",
+      "ts": 6045,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05047",
+      "route": "declined",
+      "ts": 6047,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05108",
+      "route": "declined",
+      "ts": 6108,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05117",
+      "route": "declined",
+      "ts": 6117,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05128",
+      "route": "declined",
+      "ts": 6128,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05156",
+      "route": "declined",
+      "ts": 6156,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05159",
+      "route": "declined",
+      "ts": 6159,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05160",
+      "route": "declined",
+      "ts": 6160,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05176",
+      "route": "declined",
+      "ts": 6176,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05184",
+      "route": "declined",
+      "ts": 6184,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05185",
+      "route": "declined",
+      "ts": 6185,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05189",
+      "route": "declined",
+      "ts": 6189,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05209",
+      "route": "declined",
+      "ts": 6209,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05224",
+      "route": "null",
+      "ts": 6224,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05242",
+      "route": "declined",
+      "ts": 6242,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05248",
+      "route": "null",
+      "ts": 6248,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05249",
+      "route": "declined",
+      "ts": 6249,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05272",
+      "route": "declined",
+      "ts": 6272,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05285",
+      "route": "declined",
+      "ts": 6285,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05305",
+      "route": "null",
+      "ts": 6305,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05307",
+      "route": "declined",
+      "ts": 6307,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05311",
+      "route": "declined",
+      "ts": 6311,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05324",
+      "route": "declined",
+      "ts": 6324,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05335",
+      "route": "null",
+      "ts": 6335,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05361",
+      "route": "null",
+      "ts": 6361,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05371",
+      "route": "declined",
+      "ts": 6371,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05373",
+      "route": "declined",
+      "ts": 6373,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05374",
+      "route": "declined",
+      "ts": 6374,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05386",
+      "route": "declined",
+      "ts": 6386,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05396",
+      "route": "null",
+      "ts": 6396,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05397",
+      "route": "declined",
+      "ts": 6397,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05408",
+      "route": "declined",
+      "ts": 6408,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05409",
+      "route": "declined",
+      "ts": 6409,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05440",
+      "route": "declined",
+      "ts": 6440,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05455",
+      "route": "declined",
+      "ts": 6455,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05458",
+      "route": "null",
+      "ts": 6458,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05471",
+      "route": "declined",
+      "ts": 6471,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05488",
+      "route": "declined",
+      "ts": 6488,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05493",
+      "route": "declined",
+      "ts": 6493,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05506",
+      "route": "declined",
+      "ts": 6506,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05549",
+      "route": "declined",
+      "ts": 6549,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05559",
+      "route": "declined",
+      "ts": 6559,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05571",
+      "route": "declined",
+      "ts": 6571,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05594",
+      "route": "declined",
+      "ts": 6594,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05602",
+      "route": "declined",
+      "ts": 6602,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05608",
+      "route": "declined",
+      "ts": 6608,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05609",
+      "route": "declined",
+      "ts": 6609,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05612",
+      "route": "declined",
+      "ts": 6612,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05668",
+      "route": "null",
+      "ts": 6668,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05672",
+      "route": "declined",
+      "ts": 6672,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05674",
+      "route": "null",
+      "ts": 6674,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05683",
+      "route": "declined",
+      "ts": 6683,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05701",
+      "route": "declined",
+      "ts": 6701,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05702",
+      "route": "declined",
+      "ts": 6702,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05704",
+      "route": "null",
+      "ts": 6704,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05724",
+      "route": "declined",
+      "ts": 6724,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05740",
+      "route": "declined",
+      "ts": 6740,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05748",
+      "route": "null",
+      "ts": 6748,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05763",
+      "route": "declined",
+      "ts": 6763,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05773",
+      "route": "declined",
+      "ts": 6773,
+      "rules": [
+        "VP-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05776",
+      "route": "declined",
+      "ts": 6776,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05783",
+      "route": "declined",
+      "ts": 6783,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05786",
+      "route": "declined",
+      "ts": 6786,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05790",
+      "route": "declined",
+      "ts": 6790,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05796",
+      "route": "null",
+      "ts": 6796,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05807",
+      "route": "declined",
+      "ts": 6807,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05822",
+      "route": "declined",
+      "ts": 6822,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05827",
+      "route": "declined",
+      "ts": 6827,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05831",
+      "route": "declined",
+      "ts": 6831,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05856",
+      "route": "declined",
+      "ts": 6856,
+      "rules": [
+        "VP-HA-005"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05862",
+      "route": "null",
+      "ts": 6862,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05866",
+      "route": "null",
+      "ts": 6866,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05872",
+      "route": "declined",
+      "ts": 6872,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05881",
+      "route": "declined",
+      "ts": 6881,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05882",
+      "route": "declined",
+      "ts": 6882,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05884",
+      "route": "declined",
+      "ts": 6884,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05887",
+      "route": "declined",
+      "ts": 6887,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05918",
+      "route": "declined",
+      "ts": 6918,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05938",
+      "route": "declined",
+      "ts": 6938,
+      "rules": [
+        "VP-AS-008"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05947",
+      "route": "declined",
+      "ts": 6947,
+      "rules": [
+        "VP-HA-004"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05968",
+      "route": "declined",
+      "ts": 6968,
+      "rules": [
+        "VP-HA-006"
+      ],
+      "rating": 20,
+      "tau": 40,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-Q-05973",
+      "route": "null",
+      "ts": 6973,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05994",
+      "route": "declined",
+      "ts": 6994,
+      "rules": [
+        "VP-AS-007"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    },
+    {
+      "case": "VP-T-05995",
+      "route": "declined",
+      "ts": 6995,
+      "rules": [
+        "VP-AS-009"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "vetpoc-rb-000001"
+    }
+  ]
+}

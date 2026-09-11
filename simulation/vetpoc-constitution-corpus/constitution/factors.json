@@ -1,0 +1,2538 @@
+{
+  "VP-CS-001": {
+    "comply": [
+      "asap_4_2b_payload_schema_validated",
+      "biennial_inventory_completed_on_schedule",
+      "controlled_inventory_reconciled_to_millilitre",
+      "dea_registration_verified_and_current",
+      "epcs_two_factor_completed_by_credentialed_dvm",
+      "prescription_within_six_month_validity_window",
+      "refill_count_within_schedule_iii_v_limit",
+      "schedule_ii_written_prescription_no_refills",
+      "vp_cs_001_control_evidenced"
+    ],
+    "violate": [
+      "controlled_inventory_discrepancy_unexplained",
+      "epcs_signature_completed_with_single_factor",
+      "prescription_reissued_beyond_six_month_window",
+      "refill_count_exceeds_five_for_schedule_iii_iv",
+      "schedule_ii_prescription_carries_refills",
+      "vp_cs_001_control_absent"
+    ]
+  },
+  "VP-CS-002": {
+    "comply": [
+      "asap_4_2b_payload_schema_validated",
+      "asap_pat20_species_code_set_to_veterinary",
+      "asap_pat23_animal_name_populated",
+      "biennial_inventory_completed_on_schedule",
+      "controlled_inventory_reconciled_to_millilitre",
+      "pdmp_submission_acknowledged_by_state",
+      "prescription_within_six_month_validity_window",
+      "refill_count_within_schedule_iii_v_limit",
+      "vp_cs_002_control_evidenced"
+    ],
+    "violate": [
+      "asap_payload_omits_species_code",
+      "controlled_inventory_discrepancy_unexplained",
+      "dea_registration_expired_at_time_of_issue",
+      "prescription_reissued_beyond_six_month_window",
+      "refill_count_exceeds_five_for_schedule_iii_iv",
+      "vp_cs_002_control_absent"
+    ]
+  },
+  "VP-CS-003": {
+    "comply": [
+      "asap_4_2b_payload_schema_validated",
+      "asap_pat20_species_code_set_to_veterinary",
+      "asap_pat23_animal_name_populated",
+      "biennial_inventory_completed_on_schedule",
+      "dispensing_recorded_against_named_prescriber",
+      "euthanasia_solution_log_witnessed_by_second_licensee",
+      "pdmp_submission_acknowledged_by_state",
+      "two_person_authorization_for_signing_credential_change",
+      "vp_cs_003_control_evidenced"
+    ],
+    "violate": [
+      "asap_payload_omits_species_code",
+      "controlled_inventory_discrepancy_unexplained",
+      "dea_registration_expired_at_time_of_issue",
+      "euthanasia_solution_dispensed_without_witness",
+      "pdmp_submission_silently_dropped_on_error",
+      "vp_cs_003_control_absent"
+    ]
+  },
+  "VP-CS-004": {
+    "comply": [
+      "asap_pat23_animal_name_populated",
+      "controlled_record_retention_two_years_enforced",
+      "dispensing_recorded_against_named_prescriber",
+      "euthanasia_solution_log_witnessed_by_second_licensee",
+      "legitimate_medical_purpose_documented_in_record",
+      "pdmp_submission_acknowledged_by_state",
+      "prescriber_acting_in_usual_course_of_practice",
+      "two_person_authorization_for_signing_credential_change",
+      "vp_cs_004_control_evidenced"
+    ],
+    "violate": [
+      "asap_payload_omits_species_code",
+      "euthanasia_solution_dispensed_without_witness",
+      "pdmp_submission_silently_dropped_on_error",
+      "prescriber_identity_inferred_not_authenticated",
+      "signing_credential_granted_by_single_administrator",
+      "vp_cs_004_control_absent"
+    ]
+  },
+  "VP-CS-005": {
+    "comply": [
+      "controlled_record_retention_two_years_enforced",
+      "dea_registration_verified_and_current",
+      "dispensing_recorded_against_named_prescriber",
+      "diversion_alert_reviewed_within_24h",
+      "epcs_two_factor_completed_by_credentialed_dvm",
+      "legitimate_medical_purpose_documented_in_record",
+      "prescriber_acting_in_usual_course_of_practice",
+      "two_person_authorization_for_signing_credential_change",
+      "vp_cs_005_control_evidenced"
+    ],
+    "violate": [
+      "controlled_substance_record_deleted_before_retention_expiry",
+      "euthanasia_solution_dispensed_without_witness",
+      "prescriber_identity_inferred_not_authenticated",
+      "prescription_lacks_legitimate_medical_purpose",
+      "signing_credential_granted_by_single_administrator",
+      "vp_cs_005_control_absent"
+    ]
+  },
+  "VP-CS-006": {
+    "comply": [
+      "dea_registration_verified_and_current",
+      "diversion_alert_reviewed_within_24h",
+      "epcs_two_factor_completed_by_credentialed_dvm",
+      "legitimate_medical_purpose_documented_in_record",
+      "prescriber_acting_in_usual_course_of_practice",
+      "prescription_within_six_month_validity_window",
+      "refill_count_within_schedule_iii_v_limit",
+      "schedule_ii_written_prescription_no_refills",
+      "vp_cs_006_control_evidenced"
+    ],
+    "violate": [
+      "controlled_substance_record_deleted_before_retention_expiry",
+      "dispensing_logic_bypassed_by_feature_flag",
+      "epcs_signature_completed_with_single_factor",
+      "prescription_lacks_legitimate_medical_purpose",
+      "signing_credential_granted_by_single_administrator",
+      "vp_cs_006_control_absent"
+    ]
+  },
+  "VP-CS-007": {
+    "comply": [
+      "asap_4_2b_payload_schema_validated",
+      "biennial_inventory_completed_on_schedule",
+      "controlled_inventory_reconciled_to_millilitre",
+      "dea_registration_verified_and_current",
+      "epcs_two_factor_completed_by_credentialed_dvm",
+      "prescription_within_six_month_validity_window",
+      "refill_count_within_schedule_iii_v_limit",
+      "schedule_ii_written_prescription_no_refills",
+      "vp_cs_007_control_evidenced"
+    ],
+    "violate": [
+      "dispensing_logic_bypassed_by_feature_flag",
+      "epcs_signature_completed_with_single_factor",
+      "prescription_lacks_legitimate_medical_purpose",
+      "refill_count_exceeds_five_for_schedule_iii_iv",
+      "schedule_ii_prescription_carries_refills",
+      "vp_cs_007_control_absent"
+    ]
+  },
+  "VP-CS-008": {
+    "comply": [
+      "asap_4_2b_payload_schema_validated",
+      "asap_pat20_species_code_set_to_veterinary",
+      "asap_pat23_animal_name_populated",
+      "biennial_inventory_completed_on_schedule",
+      "controlled_inventory_reconciled_to_millilitre",
+      "pdmp_submission_acknowledged_by_state",
+      "prescription_within_six_month_validity_window",
+      "refill_count_within_schedule_iii_v_limit",
+      "vp_cs_008_control_evidenced"
+    ],
+    "violate": [
+      "controlled_inventory_discrepancy_unexplained",
+      "epcs_signature_completed_with_single_factor",
+      "prescription_reissued_beyond_six_month_window",
+      "refill_count_exceeds_five_for_schedule_iii_iv",
+      "schedule_ii_prescription_carries_refills",
+      "vp_cs_008_control_absent"
+    ]
+  },
+  "VP-CS-009": {
+    "comply": [
+      "asap_4_2b_payload_schema_validated",
+      "asap_pat20_species_code_set_to_veterinary",
+      "asap_pat23_animal_name_populated",
+      "biennial_inventory_completed_on_schedule",
+      "dispensing_recorded_against_named_prescriber",
+      "euthanasia_solution_log_witnessed_by_second_licensee",
+      "pdmp_submission_acknowledged_by_state",
+      "two_person_authorization_for_signing_credential_change",
+      "vp_cs_009_control_evidenced"
+    ],
+    "violate": [
+      "asap_payload_omits_species_code",
+      "controlled_inventory_discrepancy_unexplained",
+      "dea_registration_expired_at_time_of_issue",
+      "prescription_reissued_beyond_six_month_window",
+      "refill_count_exceeds_five_for_schedule_iii_iv",
+      "vp_cs_009_control_absent"
+    ]
+  },
+  "VP-CS-010": {
+    "comply": [
+      "asap_pat23_animal_name_populated",
+      "controlled_record_retention_two_years_enforced",
+      "dispensing_recorded_against_named_prescriber",
+      "euthanasia_solution_log_witnessed_by_second_licensee",
+      "legitimate_medical_purpose_documented_in_record",
+      "pdmp_submission_acknowledged_by_state",
+      "prescriber_acting_in_usual_course_of_practice",
+      "two_person_authorization_for_signing_credential_change",
+      "vp_cs_010_control_evidenced"
+    ],
+    "violate": [
+      "asap_payload_omits_species_code",
+      "controlled_inventory_discrepancy_unexplained",
+      "dea_registration_expired_at_time_of_issue",
+      "euthanasia_solution_dispensed_without_witness",
+      "pdmp_submission_silently_dropped_on_error",
+      "vp_cs_010_control_absent"
+    ]
+  },
+  "VP-CS-011": {
+    "comply": [
+      "controlled_record_retention_two_years_enforced",
+      "dea_registration_verified_and_current",
+      "dispensing_recorded_against_named_prescriber",
+      "diversion_alert_reviewed_within_24h",
+      "epcs_two_factor_completed_by_credentialed_dvm",
+      "legitimate_medical_purpose_documented_in_record",
+      "prescriber_acting_in_usual_course_of_practice",
+      "two_person_authorization_for_signing_credential_change",
+      "vp_cs_011_control_evidenced"
+    ],
+    "violate": [
+      "asap_payload_omits_species_code",
+      "euthanasia_solution_dispensed_without_witness",
+      "pdmp_submission_silently_dropped_on_error",
+      "prescriber_identity_inferred_not_authenticated",
+      "signing_credential_granted_by_single_administrator",
+      "vp_cs_011_control_absent"
+    ]
+  },
+  "VP-CS-012": {
+    "comply": [
+      "dea_registration_verified_and_current",
+      "diversion_alert_reviewed_within_24h",
+      "epcs_two_factor_completed_by_credentialed_dvm",
+      "legitimate_medical_purpose_documented_in_record",
+      "prescriber_acting_in_usual_course_of_practice",
+      "prescription_within_six_month_validity_window",
+      "refill_count_within_schedule_iii_v_limit",
+      "schedule_ii_written_prescription_no_refills",
+      "vp_cs_012_control_evidenced"
+    ],
+    "violate": [
+      "controlled_substance_record_deleted_before_retention_expiry",
+      "euthanasia_solution_dispensed_without_witness",
+      "prescriber_identity_inferred_not_authenticated",
+      "prescription_lacks_legitimate_medical_purpose",
+      "signing_credential_granted_by_single_administrator",
+      "vp_cs_012_control_absent"
+    ]
+  },
+  "VP-VC-001": {
+    "comply": [
+      "compounding_justified_by_clinical_necessity_note",
+      "extended_withdrawal_interval_calculated_and_recorded",
+      "extralabel_use_ordered_by_licensed_veterinarian",
+      "food_animal_status_confirmed_before_dispensing",
+      "owner_counselled_on_withdrawal_period",
+      "valid_vcpr_established_by_recent_in_person_examination",
+      "vcpr_premises_visit_within_statutory_window",
+      "veterinary_feed_directive_fields_complete",
+      "vp_vc_001_control_evidenced"
+    ],
+    "violate": [
+      "compounding_from_bulk_without_necessity_record",
+      "eldu_ordered_by_unlicensed_staff_member",
+      "extralabel_use_without_valid_vcpr",
+      "prohibited_eldu_substance_in_food_animal",
+      "vp_vc_001_control_absent",
+      "withdrawal_interval_absent_for_food_animal"
+    ]
+  },
+  "VP-VC-002": {
+    "comply": [
+      "compounding_justified_by_clinical_necessity_note",
+      "extended_withdrawal_interval_calculated_and_recorded",
+      "food_animal_status_confirmed_before_dispensing",
+      "off_label_rationale_recorded_in_medical_record",
+      "owner_counselled_on_withdrawal_period",
+      "species_dose_within_labelled_range",
+      "telehealth_vcpr_permitted_in_this_jurisdiction",
+      "veterinary_feed_directive_fields_complete",
+      "vp_vc_002_control_evidenced"
+    ],
+    "violate": [
+      "compounding_from_bulk_without_necessity_record",
+      "dose_exceeds_species_maximum_by_more_than_20_percent",
+      "eldu_ordered_by_unlicensed_staff_member",
+      "vfd_expiry_date_missing",
+      "vp_vc_002_control_absent",
+      "withdrawal_interval_absent_for_food_animal"
+    ]
+  },
+  "VP-VC-003": {
+    "comply": [
+      "off_label_rationale_recorded_in_medical_record",
+      "owner_counselled_on_withdrawal_period",
+      "residue_risk_assessment_attached",
+      "species_dose_within_labelled_range",
+      "telehealth_vcpr_permitted_in_this_jurisdiction",
+      "valid_vcpr_established_by_recent_in_person_examination",
+      "vcpr_premises_visit_within_statutory_window",
+      "veterinary_feed_directive_fields_complete",
+      "vp_vc_003_control_evidenced"
+    ],
+    "violate": [
+      "compounding_from_bulk_without_necessity_record",
+      "dose_exceeds_species_maximum_by_more_than_20_percent",
+      "telehealth_only_vcpr_where_jurisdiction_requires_in_person",
+      "vfd_expiry_date_missing",
+      "violative_residue_risk_accepted_without_assessment",
+      "vp_vc_003_control_absent"
+    ]
+  },
+  "VP-VC-004": {
+    "comply": [
+      "extended_withdrawal_interval_calculated_and_recorded",
+      "extralabel_use_ordered_by_licensed_veterinarian",
+      "food_animal_status_confirmed_before_dispensing",
+      "off_label_rationale_recorded_in_medical_record",
+      "residue_risk_assessment_attached",
+      "telehealth_vcpr_permitted_in_this_jurisdiction",
+      "valid_vcpr_established_by_recent_in_person_examination",
+      "vcpr_premises_visit_within_statutory_window",
+      "vp_vc_004_control_evidenced"
+    ],
+    "violate": [
+      "dose_exceeds_species_maximum_by_more_than_20_percent",
+      "extralabel_use_without_valid_vcpr",
+      "prohibited_eldu_substance_in_food_animal",
+      "telehealth_only_vcpr_where_jurisdiction_requires_in_person",
+      "violative_residue_risk_accepted_without_assessment",
+      "vp_vc_004_control_absent"
+    ]
+  },
+  "VP-VC-005": {
+    "comply": [
+      "compounding_justified_by_clinical_necessity_note",
+      "extended_withdrawal_interval_calculated_and_recorded",
+      "extralabel_use_ordered_by_licensed_veterinarian",
+      "food_animal_status_confirmed_before_dispensing",
+      "owner_counselled_on_withdrawal_period",
+      "valid_vcpr_established_by_recent_in_person_examination",
+      "vcpr_premises_visit_within_statutory_window",
+      "veterinary_feed_directive_fields_complete",
+      "vp_vc_005_control_evidenced"
+    ],
+    "violate": [
+      "eldu_ordered_by_unlicensed_staff_member",
+      "extralabel_use_without_valid_vcpr",
+      "prohibited_eldu_substance_in_food_animal",
+      "violative_residue_risk_accepted_without_assessment",
+      "vp_vc_005_control_absent",
+      "withdrawal_interval_absent_for_food_animal"
+    ]
+  },
+  "VP-VC-006": {
+    "comply": [
+      "compounding_justified_by_clinical_necessity_note",
+      "extended_withdrawal_interval_calculated_and_recorded",
+      "food_animal_status_confirmed_before_dispensing",
+      "off_label_rationale_recorded_in_medical_record",
+      "owner_counselled_on_withdrawal_period",
+      "species_dose_within_labelled_range",
+      "telehealth_vcpr_permitted_in_this_jurisdiction",
+      "veterinary_feed_directive_fields_complete",
+      "vp_vc_006_control_evidenced"
+    ],
+    "violate": [
+      "compounding_from_bulk_without_necessity_record",
+      "eldu_ordered_by_unlicensed_staff_member",
+      "prohibited_eldu_substance_in_food_animal",
+      "vfd_expiry_date_missing",
+      "vp_vc_006_control_absent",
+      "withdrawal_interval_absent_for_food_animal"
+    ]
+  },
+  "VP-VC-007": {
+    "comply": [
+      "off_label_rationale_recorded_in_medical_record",
+      "owner_counselled_on_withdrawal_period",
+      "residue_risk_assessment_attached",
+      "species_dose_within_labelled_range",
+      "telehealth_vcpr_permitted_in_this_jurisdiction",
+      "valid_vcpr_established_by_recent_in_person_examination",
+      "vcpr_premises_visit_within_statutory_window",
+      "veterinary_feed_directive_fields_complete",
+      "vp_vc_007_control_evidenced"
+    ],
+    "violate": [
+      "compounding_from_bulk_without_necessity_record",
+      "dose_exceeds_species_maximum_by_more_than_20_percent",
+      "eldu_ordered_by_unlicensed_staff_member",
+      "telehealth_only_vcpr_where_jurisdiction_requires_in_person",
+      "vfd_expiry_date_missing",
+      "vp_vc_007_control_absent"
+    ]
+  },
+  "VP-VC-008": {
+    "comply": [
+      "extended_withdrawal_interval_calculated_and_recorded",
+      "extralabel_use_ordered_by_licensed_veterinarian",
+      "food_animal_status_confirmed_before_dispensing",
+      "off_label_rationale_recorded_in_medical_record",
+      "residue_risk_assessment_attached",
+      "telehealth_vcpr_permitted_in_this_jurisdiction",
+      "valid_vcpr_established_by_recent_in_person_examination",
+      "vcpr_premises_visit_within_statutory_window",
+      "vp_vc_008_control_evidenced"
+    ],
+    "violate": [
+      "dose_exceeds_species_maximum_by_more_than_20_percent",
+      "extralabel_use_without_valid_vcpr",
+      "telehealth_only_vcpr_where_jurisdiction_requires_in_person",
+      "vfd_expiry_date_missing",
+      "violative_residue_risk_accepted_without_assessment",
+      "vp_vc_008_control_absent"
+    ]
+  },
+  "VP-PO-001": {
+    "comply": [
+      "analyzer_result_mapped_to_loinc_code",
+      "device_timeout_and_retry_ceiling_enforced",
+      "dicom_patient_id_matched_on_two_independent_keys",
+      "dicom_species_breed_tags_populated",
+      "hl7_message_length_bounded_before_parse",
+      "hl7_v2_oru_r01_parsed_against_pinned_profile",
+      "malformed_segment_rejected_without_partial_commit",
+      "result_bound_to_patient_within_single_transaction",
+      "vp_po_001_control_evidenced"
+    ],
+    "violate": [
+      "diagnostic_result_attached_to_wrong_patient_id",
+      "dicom_tag_trusted_without_validation",
+      "hl7_parser_accepts_unbounded_segment_length",
+      "malformed_hl7_message_causes_partial_patient_write",
+      "result_patient_binding_performed_outside_transaction",
+      "vp_po_001_control_absent"
+    ]
+  },
+  "VP-PO-002": {
+    "comply": [
+      "analyzer_result_mapped_to_loinc_code",
+      "critical_value_flagged_to_attending_dvm",
+      "device_network_segment_isolated_from_clinical_vlan",
+      "device_timeout_and_retry_ceiling_enforced",
+      "dicom_patient_id_matched_on_two_independent_keys",
+      "dicom_species_breed_tags_populated",
+      "result_bound_to_patient_within_single_transaction",
+      "unmatched_result_quarantined_for_human_review",
+      "vp_po_002_control_evidenced"
+    ],
+    "violate": [
+      "device_retry_loop_has_no_ceiling",
+      "diagnostic_result_attached_to_wrong_patient_id",
+      "dicom_tag_trusted_without_validation",
+      "poc_device_reachable_from_public_network_segment",
+      "result_patient_binding_performed_outside_transaction",
+      "vp_po_002_control_absent"
+    ]
+  },
+  "VP-PO-003": {
+    "comply": [
+      "analyzer_firmware_version_pinned_and_recorded",
+      "critical_value_flagged_to_attending_dvm",
+      "device_network_segment_isolated_from_clinical_vlan",
+      "device_timeout_and_retry_ceiling_enforced",
+      "modality_worklist_query_scoped_to_practice",
+      "orphaned_study_reconciliation_job_audited",
+      "result_bound_to_patient_within_single_transaction",
+      "unmatched_result_quarantined_for_human_review",
+      "vp_po_003_control_evidenced"
+    ],
+    "violate": [
+      "analyzer_result_discarded_on_parse_error_without_alert",
+      "critical_result_delivered_only_by_email",
+      "device_retry_loop_has_no_ceiling",
+      "dicom_tag_trusted_without_validation",
+      "poc_device_reachable_from_public_network_segment",
+      "vp_po_003_control_absent"
+    ]
+  },
+  "VP-PO-004": {
+    "comply": [
+      "analyzer_firmware_version_pinned_and_recorded",
+      "critical_value_flagged_to_attending_dvm",
+      "hl7_message_length_bounded_before_parse",
+      "hl7_v2_oru_r01_parsed_against_pinned_profile",
+      "malformed_segment_rejected_without_partial_commit",
+      "modality_worklist_query_scoped_to_practice",
+      "orphaned_study_reconciliation_job_audited",
+      "unmatched_result_quarantined_for_human_review",
+      "vp_po_004_control_evidenced"
+    ],
+    "violate": [
+      "analyzer_result_discarded_on_parse_error_without_alert",
+      "critical_result_delivered_only_by_email",
+      "hl7_parser_accepts_unbounded_segment_length",
+      "patient_identity_reassigned_without_reverification",
+      "poc_device_reachable_from_public_network_segment",
+      "vp_po_004_control_absent"
+    ]
+  },
+  "VP-PO-005": {
+    "comply": [
+      "analyzer_firmware_version_pinned_and_recorded",
+      "analyzer_result_mapped_to_loinc_code",
+      "dicom_patient_id_matched_on_two_independent_keys",
+      "dicom_species_breed_tags_populated",
+      "hl7_message_length_bounded_before_parse",
+      "hl7_v2_oru_r01_parsed_against_pinned_profile",
+      "malformed_segment_rejected_without_partial_commit",
+      "orphaned_study_reconciliation_job_audited",
+      "vp_po_005_control_evidenced"
+    ],
+    "violate": [
+      "analyzer_result_discarded_on_parse_error_without_alert",
+      "diagnostic_result_attached_to_wrong_patient_id",
+      "hl7_parser_accepts_unbounded_segment_length",
+      "malformed_hl7_message_causes_partial_patient_write",
+      "patient_identity_reassigned_without_reverification",
+      "vp_po_005_control_absent"
+    ]
+  },
+  "VP-PO-006": {
+    "comply": [
+      "analyzer_result_mapped_to_loinc_code",
+      "device_network_segment_isolated_from_clinical_vlan",
+      "device_timeout_and_retry_ceiling_enforced",
+      "dicom_patient_id_matched_on_two_independent_keys",
+      "dicom_species_breed_tags_populated",
+      "hl7_message_length_bounded_before_parse",
+      "malformed_segment_rejected_without_partial_commit",
+      "result_bound_to_patient_within_single_transaction",
+      "vp_po_006_control_evidenced"
+    ],
+    "violate": [
+      "diagnostic_result_attached_to_wrong_patient_id",
+      "dicom_tag_trusted_without_validation",
+      "hl7_parser_accepts_unbounded_segment_length",
+      "malformed_hl7_message_causes_partial_patient_write",
+      "result_patient_binding_performed_outside_transaction",
+      "vp_po_006_control_absent"
+    ]
+  },
+  "VP-PO-007": {
+    "comply": [
+      "analyzer_result_mapped_to_loinc_code",
+      "critical_value_flagged_to_attending_dvm",
+      "device_network_segment_isolated_from_clinical_vlan",
+      "device_timeout_and_retry_ceiling_enforced",
+      "dicom_species_breed_tags_populated",
+      "modality_worklist_query_scoped_to_practice",
+      "result_bound_to_patient_within_single_transaction",
+      "unmatched_result_quarantined_for_human_review",
+      "vp_po_007_control_evidenced"
+    ],
+    "violate": [
+      "device_retry_loop_has_no_ceiling",
+      "diagnostic_result_attached_to_wrong_patient_id",
+      "dicom_tag_trusted_without_validation",
+      "poc_device_reachable_from_public_network_segment",
+      "result_patient_binding_performed_outside_transaction",
+      "vp_po_007_control_absent"
+    ]
+  },
+  "VP-PO-008": {
+    "comply": [
+      "analyzer_firmware_version_pinned_and_recorded",
+      "critical_value_flagged_to_attending_dvm",
+      "device_network_segment_isolated_from_clinical_vlan",
+      "device_timeout_and_retry_ceiling_enforced",
+      "hl7_v2_oru_r01_parsed_against_pinned_profile",
+      "modality_worklist_query_scoped_to_practice",
+      "orphaned_study_reconciliation_job_audited",
+      "unmatched_result_quarantined_for_human_review",
+      "vp_po_008_control_evidenced"
+    ],
+    "violate": [
+      "analyzer_result_discarded_on_parse_error_without_alert",
+      "critical_result_delivered_only_by_email",
+      "device_retry_loop_has_no_ceiling",
+      "dicom_tag_trusted_without_validation",
+      "poc_device_reachable_from_public_network_segment",
+      "vp_po_008_control_absent"
+    ]
+  },
+  "VP-PO-009": {
+    "comply": [
+      "analyzer_firmware_version_pinned_and_recorded",
+      "critical_value_flagged_to_attending_dvm",
+      "dicom_patient_id_matched_on_two_independent_keys",
+      "hl7_message_length_bounded_before_parse",
+      "hl7_v2_oru_r01_parsed_against_pinned_profile",
+      "malformed_segment_rejected_without_partial_commit",
+      "modality_worklist_query_scoped_to_practice",
+      "orphaned_study_reconciliation_job_audited",
+      "vp_po_009_control_evidenced"
+    ],
+    "violate": [
+      "analyzer_result_discarded_on_parse_error_without_alert",
+      "critical_result_delivered_only_by_email",
+      "hl7_parser_accepts_unbounded_segment_length",
+      "patient_identity_reassigned_without_reverification",
+      "poc_device_reachable_from_public_network_segment",
+      "vp_po_009_control_absent"
+    ]
+  },
+  "VP-PO-010": {
+    "comply": [
+      "analyzer_result_mapped_to_loinc_code",
+      "dicom_patient_id_matched_on_two_independent_keys",
+      "dicom_species_breed_tags_populated",
+      "hl7_message_length_bounded_before_parse",
+      "hl7_v2_oru_r01_parsed_against_pinned_profile",
+      "malformed_segment_rejected_without_partial_commit",
+      "orphaned_study_reconciliation_job_audited",
+      "result_bound_to_patient_within_single_transaction",
+      "vp_po_010_control_evidenced"
+    ],
+    "violate": [
+      "analyzer_result_discarded_on_parse_error_without_alert",
+      "diagnostic_result_attached_to_wrong_patient_id",
+      "hl7_parser_accepts_unbounded_segment_length",
+      "malformed_hl7_message_causes_partial_patient_write",
+      "patient_identity_reassigned_without_reverification",
+      "vp_po_010_control_absent"
+    ]
+  },
+  "VP-PD-001": {
+    "comply": [
+      "consent_record_current_for_stated_purpose",
+      "consent_withdrawal_path_equal_effort_to_grant",
+      "data_subject_export_completes_within_statutory_window",
+      "dlp_scan_clean_on_changed_lines",
+      "marketing_communication_respects_opt_out",
+      "owner_pii_encrypted_at_rest",
+      "pan_tokenised_before_persistence",
+      "payment_flow_delegated_to_pci_validated_processor",
+      "vp_pd_001_control_evidenced"
+    ],
+    "violate": [
+      "consent_withdrawal_requires_phone_call_only",
+      "marketing_export_includes_opted_out_owners",
+      "owner_government_identifier_captured_in_free_text",
+      "owner_pii_transferred_without_lawful_basis",
+      "primary_account_number_written_to_application_log",
+      "vp_pd_001_control_absent"
+    ]
+  },
+  "VP-PD-002": {
+    "comply": [
+      "consent_record_current_for_stated_purpose",
+      "consent_withdrawal_path_equal_effort_to_grant",
+      "cross_border_transfer_has_lawful_basis",
+      "data_subject_export_completes_within_statutory_window",
+      "log_redaction_filter_covers_new_field",
+      "marketing_communication_respects_opt_out",
+      "owner_pii_encrypted_at_rest",
+      "retention_schedule_applied_to_owner_records",
+      "vp_pd_002_control_evidenced"
+    ],
+    "violate": [
+      "consent_withdrawal_requires_phone_call_only",
+      "debug_endpoint_returns_unredacted_owner_record",
+      "marketing_export_includes_opted_out_owners",
+      "owner_pii_transferred_without_lawful_basis",
+      "payment_card_stored_in_plaintext_column",
+      "vp_pd_002_control_absent"
+    ]
+  },
+  "VP-PD-003": {
+    "comply": [
+      "breach_notification_runbook_referenced",
+      "cross_border_transfer_has_lawful_basis",
+      "data_subject_export_completes_within_statutory_window",
+      "log_redaction_filter_covers_new_field",
+      "marketing_communication_respects_opt_out",
+      "pan_tokenised_before_persistence",
+      "payment_flow_delegated_to_pci_validated_processor",
+      "retention_schedule_applied_to_owner_records",
+      "vp_pd_003_control_evidenced"
+    ],
+    "violate": [
+      "consent_currency_not_checked_before_use",
+      "data_subject_request_queue_unbounded",
+      "debug_endpoint_returns_unredacted_owner_record",
+      "owner_pii_transferred_without_lawful_basis",
+      "payment_card_stored_in_plaintext_column",
+      "vp_pd_003_control_absent"
+    ]
+  },
+  "VP-PD-004": {
+    "comply": [
+      "breach_notification_runbook_referenced",
+      "consent_record_current_for_stated_purpose",
+      "cross_border_transfer_has_lawful_basis",
+      "dlp_scan_clean_on_changed_lines",
+      "owner_pii_encrypted_at_rest",
+      "pan_tokenised_before_persistence",
+      "payment_flow_delegated_to_pci_validated_processor",
+      "retention_schedule_applied_to_owner_records",
+      "vp_pd_004_control_evidenced"
+    ],
+    "violate": [
+      "consent_currency_not_checked_before_use",
+      "data_subject_request_queue_unbounded",
+      "owner_government_identifier_captured_in_free_text",
+      "payment_card_stored_in_plaintext_column",
+      "primary_account_number_written_to_application_log",
+      "vp_pd_004_control_absent"
+    ]
+  },
+  "VP-PD-005": {
+    "comply": [
+      "consent_record_current_for_stated_purpose",
+      "consent_withdrawal_path_equal_effort_to_grant",
+      "data_subject_export_completes_within_statutory_window",
+      "dlp_scan_clean_on_changed_lines",
+      "marketing_communication_respects_opt_out",
+      "owner_pii_encrypted_at_rest",
+      "pan_tokenised_before_persistence",
+      "payment_flow_delegated_to_pci_validated_processor",
+      "vp_pd_005_control_evidenced"
+    ],
+    "violate": [
+      "consent_currency_not_checked_before_use",
+      "consent_withdrawal_requires_phone_call_only",
+      "marketing_export_includes_opted_out_owners",
+      "owner_government_identifier_captured_in_free_text",
+      "primary_account_number_written_to_application_log",
+      "vp_pd_005_control_absent"
+    ]
+  },
+  "VP-PD-006": {
+    "comply": [
+      "consent_record_current_for_stated_purpose",
+      "consent_withdrawal_path_equal_effort_to_grant",
+      "cross_border_transfer_has_lawful_basis",
+      "data_subject_export_completes_within_statutory_window",
+      "log_redaction_filter_covers_new_field",
+      "marketing_communication_respects_opt_out",
+      "owner_pii_encrypted_at_rest",
+      "retention_schedule_applied_to_owner_records",
+      "vp_pd_006_control_evidenced"
+    ],
+    "violate": [
+      "consent_withdrawal_requires_phone_call_only",
+      "debug_endpoint_returns_unredacted_owner_record",
+      "marketing_export_includes_opted_out_owners",
+      "owner_government_identifier_captured_in_free_text",
+      "owner_pii_transferred_without_lawful_basis",
+      "vp_pd_006_control_absent"
+    ]
+  },
+  "VP-PD-007": {
+    "comply": [
+      "breach_notification_runbook_referenced",
+      "cross_border_transfer_has_lawful_basis",
+      "data_subject_export_completes_within_statutory_window",
+      "log_redaction_filter_covers_new_field",
+      "marketing_communication_respects_opt_out",
+      "pan_tokenised_before_persistence",
+      "payment_flow_delegated_to_pci_validated_processor",
+      "retention_schedule_applied_to_owner_records",
+      "vp_pd_007_control_evidenced"
+    ],
+    "violate": [
+      "data_subject_request_queue_unbounded",
+      "debug_endpoint_returns_unredacted_owner_record",
+      "marketing_export_includes_opted_out_owners",
+      "owner_pii_transferred_without_lawful_basis",
+      "payment_card_stored_in_plaintext_column",
+      "vp_pd_007_control_absent"
+    ]
+  },
+  "VP-PD-008": {
+    "comply": [
+      "breach_notification_runbook_referenced",
+      "consent_record_current_for_stated_purpose",
+      "cross_border_transfer_has_lawful_basis",
+      "dlp_scan_clean_on_changed_lines",
+      "owner_pii_encrypted_at_rest",
+      "pan_tokenised_before_persistence",
+      "payment_flow_delegated_to_pci_validated_processor",
+      "retention_schedule_applied_to_owner_records",
+      "vp_pd_008_control_evidenced"
+    ],
+    "violate": [
+      "consent_currency_not_checked_before_use",
+      "data_subject_request_queue_unbounded",
+      "debug_endpoint_returns_unredacted_owner_record",
+      "payment_card_stored_in_plaintext_column",
+      "primary_account_number_written_to_application_log",
+      "vp_pd_008_control_absent"
+    ]
+  },
+  "VP-PD-009": {
+    "comply": [
+      "consent_record_current_for_stated_purpose",
+      "consent_withdrawal_path_equal_effort_to_grant",
+      "data_subject_export_completes_within_statutory_window",
+      "dlp_scan_clean_on_changed_lines",
+      "marketing_communication_respects_opt_out",
+      "owner_pii_encrypted_at_rest",
+      "pan_tokenised_before_persistence",
+      "payment_flow_delegated_to_pci_validated_processor",
+      "vp_pd_009_control_evidenced"
+    ],
+    "violate": [
+      "consent_currency_not_checked_before_use",
+      "consent_withdrawal_requires_phone_call_only",
+      "data_subject_request_queue_unbounded",
+      "owner_government_identifier_captured_in_free_text",
+      "primary_account_number_written_to_application_log",
+      "vp_pd_009_control_absent"
+    ]
+  },
+  "VP-RB-001": {
+    "comply": [
+      "break_glass_access_time_boxed_and_logged",
+      "cross_practice_referral_uses_explicit_share_grant",
+      "least_privilege_applied_to_new_role",
+      "object_ownership_checked_before_read",
+      "receptionist_denied_clinical_note_write",
+      "role_permission_matrix_covered_by_test",
+      "technician_denied_prescription_finalisation",
+      "tenant_scope_enforced_at_query_layer",
+      "vp_rb_001_control_evidenced"
+    ],
+    "violate": [
+      "break_glass_access_never_expires",
+      "cross_tenant_record_returned_by_endpoint",
+      "patient_id_parameter_trusted_from_client",
+      "receptionist_granted_controlled_dispensing_right",
+      "role_check_omitted_on_new_endpoint",
+      "vp_rb_001_control_absent"
+    ]
+  },
+  "VP-RB-002": {
+    "comply": [
+      "admin_action_requires_second_approver",
+      "break_glass_access_time_boxed_and_logged",
+      "cross_practice_referral_uses_explicit_share_grant",
+      "least_privilege_applied_to_new_role",
+      "receptionist_denied_clinical_note_write",
+      "service_account_scoped_to_single_practice",
+      "session_role_revalidated_after_privilege_change",
+      "technician_denied_prescription_finalisation",
+      "vp_rb_002_control_evidenced"
+    ],
+    "violate": [
+      "authorization_decision_made_in_frontend_only",
+      "break_glass_access_never_expires",
+      "receptionist_granted_controlled_dispensing_right",
+      "role_check_omitted_on_new_endpoint",
+      "service_account_shared_across_practices",
+      "vp_rb_002_control_absent"
+    ]
+  },
+  "VP-RB-003": {
+    "comply": [
+      "admin_action_requires_second_approver",
+      "cross_practice_referral_uses_explicit_share_grant",
+      "object_ownership_checked_before_read",
+      "role_permission_matrix_covered_by_test",
+      "service_account_scoped_to_single_practice",
+      "session_role_revalidated_after_privilege_change",
+      "technician_denied_prescription_finalisation",
+      "tenant_scope_enforced_at_query_layer",
+      "vp_rb_003_control_evidenced"
+    ],
+    "violate": [
+      "authorization_decision_made_in_frontend_only",
+      "break_glass_access_never_expires",
+      "patient_id_parameter_trusted_from_client",
+      "service_account_shared_across_practices",
+      "tenant_id_derived_from_user_supplied_header",
+      "vp_rb_003_control_absent"
+    ]
+  },
+  "VP-RB-004": {
+    "comply": [
+      "admin_action_requires_second_approver",
+      "break_glass_access_time_boxed_and_logged",
+      "least_privilege_applied_to_new_role",
+      "object_ownership_checked_before_read",
+      "receptionist_denied_clinical_note_write",
+      "role_permission_matrix_covered_by_test",
+      "service_account_scoped_to_single_practice",
+      "tenant_scope_enforced_at_query_layer",
+      "vp_rb_004_control_evidenced"
+    ],
+    "violate": [
+      "authorization_decision_made_in_frontend_only",
+      "cross_tenant_record_returned_by_endpoint",
+      "patient_id_parameter_trusted_from_client",
+      "role_check_omitted_on_new_endpoint",
+      "tenant_id_derived_from_user_supplied_header",
+      "vp_rb_004_control_absent"
+    ]
+  },
+  "VP-RB-005": {
+    "comply": [
+      "break_glass_access_time_boxed_and_logged",
+      "cross_practice_referral_uses_explicit_share_grant",
+      "least_privilege_applied_to_new_role",
+      "object_ownership_checked_before_read",
+      "receptionist_denied_clinical_note_write",
+      "role_permission_matrix_covered_by_test",
+      "session_role_revalidated_after_privilege_change",
+      "technician_denied_prescription_finalisation",
+      "vp_rb_005_control_evidenced"
+    ],
+    "violate": [
+      "break_glass_access_never_expires",
+      "cross_tenant_record_returned_by_endpoint",
+      "patient_id_parameter_trusted_from_client",
+      "receptionist_granted_controlled_dispensing_right",
+      "role_check_omitted_on_new_endpoint",
+      "vp_rb_005_control_absent"
+    ]
+  },
+  "VP-RB-006": {
+    "comply": [
+      "admin_action_requires_second_approver",
+      "break_glass_access_time_boxed_and_logged",
+      "cross_practice_referral_uses_explicit_share_grant",
+      "receptionist_denied_clinical_note_write",
+      "service_account_scoped_to_single_practice",
+      "session_role_revalidated_after_privilege_change",
+      "technician_denied_prescription_finalisation",
+      "tenant_scope_enforced_at_query_layer",
+      "vp_rb_006_control_evidenced"
+    ],
+    "violate": [
+      "authorization_decision_made_in_frontend_only",
+      "break_glass_access_never_expires",
+      "receptionist_granted_controlled_dispensing_right",
+      "role_check_omitted_on_new_endpoint",
+      "service_account_shared_across_practices",
+      "vp_rb_006_control_absent"
+    ]
+  },
+  "VP-RB-007": {
+    "comply": [
+      "admin_action_requires_second_approver",
+      "cross_practice_referral_uses_explicit_share_grant",
+      "least_privilege_applied_to_new_role",
+      "object_ownership_checked_before_read",
+      "role_permission_matrix_covered_by_test",
+      "service_account_scoped_to_single_practice",
+      "session_role_revalidated_after_privilege_change",
+      "tenant_scope_enforced_at_query_layer",
+      "vp_rb_007_control_evidenced"
+    ],
+    "violate": [
+      "authorization_decision_made_in_frontend_only",
+      "break_glass_access_never_expires",
+      "patient_id_parameter_trusted_from_client",
+      "service_account_shared_across_practices",
+      "tenant_id_derived_from_user_supplied_header",
+      "vp_rb_007_control_absent"
+    ]
+  },
+  "VP-RB-008": {
+    "comply": [
+      "admin_action_requires_second_approver",
+      "break_glass_access_time_boxed_and_logged",
+      "least_privilege_applied_to_new_role",
+      "object_ownership_checked_before_read",
+      "receptionist_denied_clinical_note_write",
+      "role_permission_matrix_covered_by_test",
+      "technician_denied_prescription_finalisation",
+      "tenant_scope_enforced_at_query_layer",
+      "vp_rb_008_control_evidenced"
+    ],
+    "violate": [
+      "authorization_decision_made_in_frontend_only",
+      "cross_tenant_record_returned_by_endpoint",
+      "patient_id_parameter_trusted_from_client",
+      "role_check_omitted_on_new_endpoint",
+      "tenant_id_derived_from_user_supplied_header",
+      "vp_rb_008_control_absent"
+    ]
+  },
+  "VP-SC-001": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "commit_signature_verified_against_known_key",
+      "dependency_added_from_private_registry_first",
+      "dependency_license_on_allowlist",
+      "lockfile_updated_atomically_with_manifest",
+      "sbom_generated_and_attached_to_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "slsa_provenance_attestation_present_and_verified",
+      "vp_sc_001_control_evidenced"
+    ],
+    "violate": [
+      "build_runner_reused_across_jobs",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "dependency_introduces_cve_above_cvss_seven",
+      "package_name_resolves_to_public_registry_first",
+      "unsigned_commit_merged_to_protected_branch",
+      "vp_sc_001_control_absent"
+    ]
+  },
+  "VP-SC-002": {
+    "comply": [
+      "artifact_digest_recorded_in_release_ledger",
+      "dependency_added_from_private_registry_first",
+      "dependency_license_on_allowlist",
+      "lockfile_updated_atomically_with_manifest",
+      "sbom_generated_and_attached_to_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "secret_scan_clean_on_diff",
+      "vendored_dependency_reviewed_by_named_engineer",
+      "vp_sc_002_control_evidenced"
+    ],
+    "violate": [
+      "api_key_committed_in_diff",
+      "build_runner_reused_across_jobs",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "package_name_resolves_to_public_registry_first",
+      "provenance_attestation_absent_for_release_artifact",
+      "vp_sc_002_control_absent"
+    ]
+  },
+  "VP-SC-003": {
+    "comply": [
+      "artifact_digest_recorded_in_release_ledger",
+      "build_runner_ephemeral_and_image_pinned",
+      "commit_signature_verified_against_known_key",
+      "dependency_license_on_allowlist",
+      "lockfile_updated_atomically_with_manifest",
+      "secret_scan_clean_on_diff",
+      "slsa_provenance_attestation_present_and_verified",
+      "vendored_dependency_reviewed_by_named_engineer",
+      "vp_sc_003_control_evidenced"
+    ],
+    "violate": [
+      "api_key_committed_in_diff",
+      "build_runner_reused_across_jobs",
+      "lockfile_bypassed_by_direct_install_step",
+      "provenance_attestation_absent_for_release_artifact",
+      "transitive_dependency_from_unverified_maintainer",
+      "vp_sc_003_control_absent"
+    ]
+  },
+  "VP-SC-004": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "commit_signature_verified_against_known_key",
+      "dependency_added_from_private_registry_first",
+      "sbom_generated_and_attached_to_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "secret_scan_clean_on_diff",
+      "slsa_provenance_attestation_present_and_verified",
+      "vendored_dependency_reviewed_by_named_engineer",
+      "vp_sc_004_control_evidenced"
+    ],
+    "violate": [
+      "api_key_committed_in_diff",
+      "dependency_introduces_cve_above_cvss_seven",
+      "lockfile_bypassed_by_direct_install_step",
+      "transitive_dependency_from_unverified_maintainer",
+      "unsigned_commit_merged_to_protected_branch",
+      "vp_sc_004_control_absent"
+    ]
+  },
+  "VP-SC-005": {
+    "comply": [
+      "artifact_digest_recorded_in_release_ledger",
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_added_from_private_registry_first",
+      "dependency_license_on_allowlist",
+      "lockfile_updated_atomically_with_manifest",
+      "sbom_generated_and_attached_to_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "slsa_provenance_attestation_present_and_verified",
+      "vp_sc_005_control_evidenced"
+    ],
+    "violate": [
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "dependency_introduces_cve_above_cvss_seven",
+      "package_name_resolves_to_public_registry_first",
+      "transitive_dependency_from_unverified_maintainer",
+      "unsigned_commit_merged_to_protected_branch",
+      "vp_sc_005_control_absent"
+    ]
+  },
+  "VP-SC-006": {
+    "comply": [
+      "artifact_digest_recorded_in_release_ledger",
+      "commit_signature_verified_against_known_key",
+      "dependency_license_on_allowlist",
+      "lockfile_updated_atomically_with_manifest",
+      "sbom_generated_and_attached_to_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "secret_scan_clean_on_diff",
+      "vendored_dependency_reviewed_by_named_engineer",
+      "vp_sc_006_control_evidenced"
+    ],
+    "violate": [
+      "build_runner_reused_across_jobs",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "dependency_introduces_cve_above_cvss_seven",
+      "package_name_resolves_to_public_registry_first",
+      "provenance_attestation_absent_for_release_artifact",
+      "vp_sc_006_control_absent"
+    ]
+  },
+  "VP-SC-007": {
+    "comply": [
+      "artifact_digest_recorded_in_release_ledger",
+      "build_runner_ephemeral_and_image_pinned",
+      "commit_signature_verified_against_known_key",
+      "dependency_added_from_private_registry_first",
+      "lockfile_updated_atomically_with_manifest",
+      "secret_scan_clean_on_diff",
+      "slsa_provenance_attestation_present_and_verified",
+      "vendored_dependency_reviewed_by_named_engineer",
+      "vp_sc_007_control_evidenced"
+    ],
+    "violate": [
+      "api_key_committed_in_diff",
+      "build_runner_reused_across_jobs",
+      "copyleft_licensed_dependency_added_to_proprietary_service",
+      "lockfile_bypassed_by_direct_install_step",
+      "provenance_attestation_absent_for_release_artifact",
+      "vp_sc_007_control_absent"
+    ]
+  },
+  "VP-SC-008": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "commit_signature_verified_against_known_key",
+      "dependency_added_from_private_registry_first",
+      "dependency_license_on_allowlist",
+      "sbom_generated_and_attached_to_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "secret_scan_clean_on_diff",
+      "slsa_provenance_attestation_present_and_verified",
+      "vp_sc_008_control_evidenced"
+    ],
+    "violate": [
+      "api_key_committed_in_diff",
+      "lockfile_bypassed_by_direct_install_step",
+      "provenance_attestation_absent_for_release_artifact",
+      "transitive_dependency_from_unverified_maintainer",
+      "unsigned_commit_merged_to_protected_branch",
+      "vp_sc_008_control_absent"
+    ]
+  },
+  "VP-SC-009": {
+    "comply": [
+      "artifact_digest_recorded_in_release_ledger",
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_added_from_private_registry_first",
+      "dependency_license_on_allowlist",
+      "lockfile_updated_atomically_with_manifest",
+      "sbom_generated_and_attached_to_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "vendored_dependency_reviewed_by_named_engineer",
+      "vp_sc_009_control_evidenced"
+    ],
+    "violate": [
+      "dependency_introduces_cve_above_cvss_seven",
+      "lockfile_bypassed_by_direct_install_step",
+      "package_name_resolves_to_public_registry_first",
+      "transitive_dependency_from_unverified_maintainer",
+      "unsigned_commit_merged_to_protected_branch",
+      "vp_sc_009_control_absent"
+    ]
+  },
+  "VP-AI-001": {
+    "comply": [
+      "agent_authored_test_reviewed_for_tautology",
+      "agent_change_reviewed_by_named_human_engineer",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "cyclomatic_complexity_below_ten_on_changed_functions",
+      "imported_package_verified_to_exist_before_merge",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "vp_ai_001_control_evidenced"
+    ],
+    "violate": [
+      "agent_code_calls_non_allowlisted_external_host",
+      "agent_pr_modifies_authentication_middleware",
+      "agent_pr_modifies_controlled_dispensing_logic",
+      "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+      "hallucinated_dependency_not_present_in_registry",
+      "vp_ai_001_control_absent"
+    ]
+  },
+  "VP-AI-002": {
+    "comply": [
+      "agent_authored_test_reviewed_for_tautology",
+      "agent_change_reviewed_by_named_human_engineer",
+      "agent_change_scoped_to_non_authorisation_paths",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "cyclomatic_complexity_below_ten_on_changed_functions",
+      "human_signoff_recorded_for_clinical_logic_change",
+      "imported_package_verified_to_exist_before_merge",
+      "vp_ai_002_control_evidenced"
+    ],
+    "violate": [
+      "agent_code_calls_non_allowlisted_external_host",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+      "hallucinated_dependency_not_present_in_registry",
+      "prompt_injection_marker_present_in_issue_body",
+      "vp_ai_002_control_absent"
+    ]
+  },
+  "VP-AI-003": {
+    "comply": [
+      "agent_authored_test_reviewed_for_tautology",
+      "agent_change_reviewed_by_named_human_engineer",
+      "agent_change_scoped_to_non_authorisation_paths",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "cyclomatic_complexity_below_ten_on_changed_functions",
+      "human_signoff_recorded_for_clinical_logic_change",
+      "imported_package_verified_to_exist_before_merge",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "vp_ai_003_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_lacks_any_human_reviewer",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+      "prompt_injection_marker_present_in_issue_body",
+      "vp_ai_003_control_absent"
+    ]
+  },
+  "VP-AI-004": {
+    "comply": [
+      "agent_authored_test_reviewed_for_tautology",
+      "agent_change_reviewed_by_named_human_engineer",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "cyclomatic_complexity_below_ten_on_changed_functions",
+      "human_signoff_recorded_for_clinical_logic_change",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "vp_ai_004_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_lacks_any_human_reviewer",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_pr_modifies_authentication_middleware",
+      "agent_pr_modifies_controlled_dispensing_logic",
+      "prompt_injection_marker_present_in_issue_body",
+      "vp_ai_004_control_absent"
+    ]
+  },
+  "VP-AI-005": {
+    "comply": [
+      "agent_authored_test_reviewed_for_tautology",
+      "agent_change_scoped_to_non_authorisation_paths",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "cyclomatic_complexity_below_ten_on_changed_functions",
+      "human_signoff_recorded_for_clinical_logic_change",
+      "imported_package_verified_to_exist_before_merge",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "vp_ai_005_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_lacks_any_human_reviewer",
+      "agent_code_calls_non_allowlisted_external_host",
+      "agent_pr_modifies_authentication_middleware",
+      "agent_pr_modifies_controlled_dispensing_logic",
+      "hallucinated_dependency_not_present_in_registry",
+      "vp_ai_005_control_absent"
+    ]
+  },
+  "VP-AI-006": {
+    "comply": [
+      "agent_authored_test_reviewed_for_tautology",
+      "agent_change_reviewed_by_named_human_engineer",
+      "agent_change_scoped_to_non_authorisation_paths",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "human_signoff_recorded_for_clinical_logic_change",
+      "imported_package_verified_to_exist_before_merge",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "vp_ai_006_control_evidenced"
+    ],
+    "violate": [
+      "agent_code_calls_non_allowlisted_external_host",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "agent_pr_modifies_controlled_dispensing_logic",
+      "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+      "hallucinated_dependency_not_present_in_registry",
+      "vp_ai_006_control_absent"
+    ]
+  },
+  "VP-AI-007": {
+    "comply": [
+      "agent_change_reviewed_by_named_human_engineer",
+      "agent_change_scoped_to_non_authorisation_paths",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "cyclomatic_complexity_below_ten_on_changed_functions",
+      "human_signoff_recorded_for_clinical_logic_change",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "vp_ai_007_control_evidenced"
+    ],
+    "violate": [
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+      "hallucinated_dependency_not_present_in_registry",
+      "prompt_injection_marker_present_in_issue_body",
+      "vp_ai_007_control_absent"
+    ]
+  },
+  "VP-AI-008": {
+    "comply": [
+      "agent_authored_test_reviewed_for_tautology",
+      "agent_change_scoped_to_non_authorisation_paths",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "cyclomatic_complexity_below_ten_on_changed_functions",
+      "imported_package_verified_to_exist_before_merge",
+      "outbound_calls_restricted_to_allowlisted_hosts",
+      "vp_ai_008_control_evidenced"
+    ],
+    "violate": [
+      "agent_change_lacks_any_human_reviewer",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "agent_pr_modifies_authentication_middleware",
+      "prompt_injection_marker_present_in_issue_body",
+      "vp_ai_008_control_absent"
+    ]
+  },
+  "VP-AS-001": {
+    "comply": [
+      "content_security_policy_tightened_not_relaxed",
+      "deserialisation_restricted_to_known_types",
+      "file_upload_type_and_size_constrained",
+      "input_validation_allowlist_applied",
+      "orm_escape_hatch_avoided_on_changed_lines",
+      "output_encoding_applied_to_clinical_note_render",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced",
+      "vp_as_001_control_evidenced"
+    ],
+    "violate": [
+      "content_security_policy_relaxed_to_unsafe_inline",
+      "path_traversal_reachable_from_upload_handler",
+      "raw_html_rendered_from_owner_supplied_note",
+      "server_side_request_forgery_reachable_from_webhook",
+      "string_concatenated_sql_introduced",
+      "vp_as_001_control_absent"
+    ]
+  },
+  "VP-AS-002": {
+    "comply": [
+      "content_security_policy_tightened_not_relaxed",
+      "dependency_free_crypto_avoided",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_stack_trace",
+      "file_upload_type_and_size_constrained",
+      "input_validation_allowlist_applied",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced",
+      "vp_as_002_control_evidenced"
+    ],
+    "violate": [
+      "content_security_policy_relaxed_to_unsafe_inline",
+      "path_traversal_reachable_from_upload_handler",
+      "server_side_request_forgery_reachable_from_webhook",
+      "stack_trace_returned_to_client",
+      "unsafe_deserialisation_of_client_payload",
+      "vp_as_002_control_absent"
+    ]
+  },
+  "VP-AS-003": {
+    "comply": [
+      "content_security_policy_tightened_not_relaxed",
+      "dependency_free_crypto_avoided",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_stack_trace",
+      "orm_escape_hatch_avoided_on_changed_lines",
+      "output_encoding_applied_to_clinical_note_render",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced",
+      "vp_as_003_control_evidenced"
+    ],
+    "violate": [
+      "cryptographic_primitive_hand_rolled",
+      "server_side_request_forgery_reachable_from_webhook",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload",
+      "vp_as_003_control_absent"
+    ]
+  },
+  "VP-AS-004": {
+    "comply": [
+      "content_security_policy_tightened_not_relaxed",
+      "dependency_free_crypto_avoided",
+      "file_upload_type_and_size_constrained",
+      "input_validation_allowlist_applied",
+      "orm_escape_hatch_avoided_on_changed_lines",
+      "output_encoding_applied_to_clinical_note_render",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced",
+      "vp_as_004_control_evidenced"
+    ],
+    "violate": [
+      "content_security_policy_relaxed_to_unsafe_inline",
+      "cryptographic_primitive_hand_rolled",
+      "raw_html_rendered_from_owner_supplied_note",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "vp_as_004_control_absent"
+    ]
+  },
+  "VP-AS-005": {
+    "comply": [
+      "content_security_policy_tightened_not_relaxed",
+      "dependency_free_crypto_avoided",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_stack_trace",
+      "file_upload_type_and_size_constrained",
+      "input_validation_allowlist_applied",
+      "output_encoding_applied_to_clinical_note_render",
+      "server_side_authorization_enforced",
+      "vp_as_005_control_evidenced"
+    ],
+    "violate": [
+      "content_security_policy_relaxed_to_unsafe_inline",
+      "path_traversal_reachable_from_upload_handler",
+      "raw_html_rendered_from_owner_supplied_note",
+      "server_side_request_forgery_reachable_from_webhook",
+      "string_concatenated_sql_introduced",
+      "vp_as_005_control_absent"
+    ]
+  },
+  "VP-AS-006": {
+    "comply": [
+      "dependency_free_crypto_avoided",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_stack_trace",
+      "file_upload_type_and_size_constrained",
+      "orm_escape_hatch_avoided_on_changed_lines",
+      "output_encoding_applied_to_clinical_note_render",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced",
+      "vp_as_006_control_evidenced"
+    ],
+    "violate": [
+      "content_security_policy_relaxed_to_unsafe_inline",
+      "path_traversal_reachable_from_upload_handler",
+      "server_side_request_forgery_reachable_from_webhook",
+      "stack_trace_returned_to_client",
+      "unsafe_deserialisation_of_client_payload",
+      "vp_as_006_control_absent"
+    ]
+  },
+  "VP-AS-007": {
+    "comply": [
+      "content_security_policy_tightened_not_relaxed",
+      "dependency_free_crypto_avoided",
+      "error_response_omits_stack_trace",
+      "file_upload_type_and_size_constrained",
+      "input_validation_allowlist_applied",
+      "orm_escape_hatch_avoided_on_changed_lines",
+      "output_encoding_applied_to_clinical_note_render",
+      "parameterised_query_used_for_all_new_sql",
+      "vp_as_007_control_evidenced"
+    ],
+    "violate": [
+      "cryptographic_primitive_hand_rolled",
+      "server_side_request_forgery_reachable_from_webhook",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload",
+      "vp_as_007_control_absent"
+    ]
+  },
+  "VP-AS-008": {
+    "comply": [
+      "content_security_policy_tightened_not_relaxed",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_stack_trace",
+      "file_upload_type_and_size_constrained",
+      "input_validation_allowlist_applied",
+      "orm_escape_hatch_avoided_on_changed_lines",
+      "output_encoding_applied_to_clinical_note_render",
+      "server_side_authorization_enforced",
+      "vp_as_008_control_evidenced"
+    ],
+    "violate": [
+      "content_security_policy_relaxed_to_unsafe_inline",
+      "cryptographic_primitive_hand_rolled",
+      "raw_html_rendered_from_owner_supplied_note",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "vp_as_008_control_absent"
+    ]
+  },
+  "VP-AS-009": {
+    "comply": [
+      "dependency_free_crypto_avoided",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_stack_trace",
+      "file_upload_type_and_size_constrained",
+      "input_validation_allowlist_applied",
+      "orm_escape_hatch_avoided_on_changed_lines",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced",
+      "vp_as_009_control_evidenced"
+    ],
+    "violate": [
+      "content_security_policy_relaxed_to_unsafe_inline",
+      "path_traversal_reachable_from_upload_handler",
+      "raw_html_rendered_from_owner_supplied_note",
+      "server_side_request_forgery_reachable_from_webhook",
+      "string_concatenated_sql_introduced",
+      "vp_as_009_control_absent"
+    ]
+  },
+  "VP-HA-001": {
+    "comply": [
+      "circuit_breaker_configured_for_external_lab",
+      "clinical_note_save_idempotent_under_retry",
+      "database_migration_reversible",
+      "deploy_scheduled_outside_emergency_peak_window",
+      "graceful_degradation_path_documented",
+      "inventory_decrement_serialised_by_row_lock",
+      "load_test_covers_hundred_concurrent_clinicians",
+      "optimistic_concurrency_token_checked_on_write",
+      "vp_ha_001_control_evidenced"
+    ],
+    "violate": [
+      "deploy_freeze_window_overridden_without_approval",
+      "inventory_decrement_race_reachable_under_load",
+      "irreversible_migration_shipped_without_backup_proof",
+      "read_modify_write_without_locking_on_shared_row",
+      "unbounded_retry_amplifies_outage",
+      "vp_ha_001_control_absent"
+    ]
+  },
+  "VP-HA-002": {
+    "comply": [
+      "circuit_breaker_configured_for_external_lab",
+      "clinical_note_save_idempotent_under_retry",
+      "database_migration_reversible",
+      "deploy_scheduled_outside_emergency_peak_window",
+      "graceful_degradation_path_documented",
+      "inventory_decrement_serialised_by_row_lock",
+      "load_test_covers_hundred_concurrent_clinicians",
+      "optimistic_concurrency_token_checked_on_write",
+      "vp_ha_002_control_evidenced"
+    ],
+    "violate": [
+      "clinical_note_last_write_wins_silently",
+      "deploy_freeze_window_overridden_without_approval",
+      "irreversible_migration_shipped_without_backup_proof",
+      "read_modify_write_without_locking_on_shared_row",
+      "unbounded_retry_amplifies_outage",
+      "vp_ha_002_control_absent"
+    ]
+  },
+  "VP-HA-003": {
+    "comply": [
+      "circuit_breaker_configured_for_external_lab",
+      "clinical_note_save_idempotent_under_retry",
+      "database_migration_reversible",
+      "deploy_scheduled_outside_emergency_peak_window",
+      "graceful_degradation_path_documented",
+      "inventory_decrement_serialised_by_row_lock",
+      "load_test_covers_hundred_concurrent_clinicians",
+      "optimistic_concurrency_token_checked_on_write",
+      "vp_ha_003_control_evidenced"
+    ],
+    "violate": [
+      "clinical_note_last_write_wins_silently",
+      "deploy_freeze_window_overridden_without_approval",
+      "inventory_decrement_race_reachable_under_load",
+      "read_modify_write_without_locking_on_shared_row",
+      "unbounded_retry_amplifies_outage",
+      "vp_ha_003_control_absent"
+    ]
+  },
+  "VP-HA-004": {
+    "comply": [
+      "circuit_breaker_configured_for_external_lab",
+      "clinical_note_save_idempotent_under_retry",
+      "database_migration_reversible",
+      "deploy_scheduled_outside_emergency_peak_window",
+      "graceful_degradation_path_documented",
+      "inventory_decrement_serialised_by_row_lock",
+      "load_test_covers_hundred_concurrent_clinicians",
+      "optimistic_concurrency_token_checked_on_write",
+      "vp_ha_004_control_evidenced"
+    ],
+    "violate": [
+      "deploy_freeze_window_overridden_without_approval",
+      "inventory_decrement_race_reachable_under_load",
+      "irreversible_migration_shipped_without_backup_proof",
+      "read_modify_write_without_locking_on_shared_row",
+      "unbounded_retry_amplifies_outage",
+      "vp_ha_004_control_absent"
+    ]
+  },
+  "VP-HA-005": {
+    "comply": [
+      "circuit_breaker_configured_for_external_lab",
+      "clinical_note_save_idempotent_under_retry",
+      "database_migration_reversible",
+      "deploy_scheduled_outside_emergency_peak_window",
+      "graceful_degradation_path_documented",
+      "inventory_decrement_serialised_by_row_lock",
+      "load_test_covers_hundred_concurrent_clinicians",
+      "optimistic_concurrency_token_checked_on_write",
+      "vp_ha_005_control_evidenced"
+    ],
+    "violate": [
+      "clinical_note_last_write_wins_silently",
+      "deploy_freeze_window_overridden_without_approval",
+      "irreversible_migration_shipped_without_backup_proof",
+      "read_modify_write_without_locking_on_shared_row",
+      "unbounded_retry_amplifies_outage",
+      "vp_ha_005_control_absent"
+    ]
+  },
+  "VP-HA-006": {
+    "comply": [
+      "circuit_breaker_configured_for_external_lab",
+      "clinical_note_save_idempotent_under_retry",
+      "database_migration_reversible",
+      "deploy_scheduled_outside_emergency_peak_window",
+      "graceful_degradation_path_documented",
+      "inventory_decrement_serialised_by_row_lock",
+      "load_test_covers_hundred_concurrent_clinicians",
+      "optimistic_concurrency_token_checked_on_write",
+      "vp_ha_006_control_evidenced"
+    ],
+    "violate": [
+      "clinical_note_last_write_wins_silently",
+      "deploy_freeze_window_overridden_without_approval",
+      "inventory_decrement_race_reachable_under_load",
+      "read_modify_write_without_locking_on_shared_row",
+      "unbounded_retry_amplifies_outage",
+      "vp_ha_006_control_absent"
+    ]
+  },
+  "VP-RR-001": {
+    "comply": [
+      "audit_entry_written_append_only",
+      "audit_trail_reviewed_daily_by_named_role",
+      "decision_rationale_written_at_resolution_time",
+      "medical_record_amendment_preserves_original",
+      "record_export_carries_standing_declaration",
+      "record_hash_chain_verified_on_export",
+      "record_retention_period_configured_per_jurisdiction",
+      "timestamp_source_is_trusted_and_monotonic",
+      "vp_rr_001_control_evidenced"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_performance",
+      "audit_row_updated_in_place",
+      "export_omits_realised_adverse_contest_rate",
+      "medical_record_amendment_overwrites_original",
+      "retention_clock_reset_by_record_edit",
+      "vp_rr_001_control_absent"
+    ]
+  },
+  "VP-RR-002": {
+    "comply": [
+      "audit_entry_written_append_only",
+      "audit_trail_reviewed_daily_by_named_role",
+      "decision_rationale_written_at_resolution_time",
+      "medical_record_amendment_preserves_original",
+      "record_export_carries_standing_declaration",
+      "record_hash_chain_verified_on_export",
+      "record_retention_period_configured_per_jurisdiction",
+      "timestamp_source_is_trusted_and_monotonic",
+      "vp_rr_002_control_evidenced"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_performance",
+      "clock_source_client_supplied",
+      "export_omits_realised_adverse_contest_rate",
+      "rationale_summarised_after_the_fact",
+      "retention_clock_reset_by_record_edit",
+      "vp_rr_002_control_absent"
+    ]
+  },
+  "VP-RR-003": {
+    "comply": [
+      "audit_entry_written_append_only",
+      "audit_trail_reviewed_daily_by_named_role",
+      "decision_rationale_written_at_resolution_time",
+      "medical_record_amendment_preserves_original",
+      "record_export_carries_standing_declaration",
+      "record_hash_chain_verified_on_export",
+      "record_retention_period_configured_per_jurisdiction",
+      "timestamp_source_is_trusted_and_monotonic",
+      "vp_rr_003_control_evidenced"
+    ],
+    "violate": [
+      "audit_row_updated_in_place",
+      "clock_source_client_supplied",
+      "export_omits_realised_adverse_contest_rate",
+      "medical_record_amendment_overwrites_original",
+      "rationale_summarised_after_the_fact",
+      "vp_rr_003_control_absent"
+    ]
+  },
+  "VP-RR-004": {
+    "comply": [
+      "audit_entry_written_append_only",
+      "audit_trail_reviewed_daily_by_named_role",
+      "decision_rationale_written_at_resolution_time",
+      "medical_record_amendment_preserves_original",
+      "record_export_carries_standing_declaration",
+      "record_hash_chain_verified_on_export",
+      "record_retention_period_configured_per_jurisdiction",
+      "timestamp_source_is_trusted_and_monotonic",
+      "vp_rr_004_control_evidenced"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_performance",
+      "audit_row_updated_in_place",
+      "clock_source_client_supplied",
+      "medical_record_amendment_overwrites_original",
+      "retention_clock_reset_by_record_edit",
+      "vp_rr_004_control_absent"
+    ]
+  },
+  "VP-RR-005": {
+    "comply": [
+      "audit_entry_written_append_only",
+      "audit_trail_reviewed_daily_by_named_role",
+      "decision_rationale_written_at_resolution_time",
+      "medical_record_amendment_preserves_original",
+      "record_export_carries_standing_declaration",
+      "record_hash_chain_verified_on_export",
+      "record_retention_period_configured_per_jurisdiction",
+      "timestamp_source_is_trusted_and_monotonic",
+      "vp_rr_005_control_evidenced"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_performance",
+      "export_omits_realised_adverse_contest_rate",
+      "medical_record_amendment_overwrites_original",
+      "rationale_summarised_after_the_fact",
+      "retention_clock_reset_by_record_edit",
+      "vp_rr_005_control_absent"
+    ]
+  },
+  "VP-RR-006": {
+    "comply": [
+      "audit_entry_written_append_only",
+      "audit_trail_reviewed_daily_by_named_role",
+      "decision_rationale_written_at_resolution_time",
+      "medical_record_amendment_preserves_original",
+      "record_export_carries_standing_declaration",
+      "record_hash_chain_verified_on_export",
+      "record_retention_period_configured_per_jurisdiction",
+      "timestamp_source_is_trusted_and_monotonic",
+      "vp_rr_006_control_evidenced"
+    ],
+    "violate": [
+      "audit_row_updated_in_place",
+      "clock_source_client_supplied",
+      "export_omits_realised_adverse_contest_rate",
+      "rationale_summarised_after_the_fact",
+      "retention_clock_reset_by_record_edit",
+      "vp_rr_006_control_absent"
+    ]
+  },
+  "VP-RR-007": {
+    "comply": [
+      "audit_entry_written_append_only",
+      "audit_trail_reviewed_daily_by_named_role",
+      "decision_rationale_written_at_resolution_time",
+      "medical_record_amendment_preserves_original",
+      "record_export_carries_standing_declaration",
+      "record_hash_chain_verified_on_export",
+      "record_retention_period_configured_per_jurisdiction",
+      "timestamp_source_is_trusted_and_monotonic",
+      "vp_rr_007_control_evidenced"
+    ],
+    "violate": [
+      "audit_logging_disabled_for_performance",
+      "audit_row_updated_in_place",
+      "clock_source_client_supplied",
+      "medical_record_amendment_overwrites_original",
+      "rationale_summarised_after_the_fact",
+      "vp_rr_007_control_absent"
+    ]
+  },
+  "VP-AW-001": {
+    "comply": [
+      "adequate_veterinary_care_plan_on_file",
+      "anaesthesia_monitoring_record_complete",
+      "pain_management_plan_documented",
+      "procedure_within_delegated_scope_of_practice",
+      "research_animal_protocol_number_recorded",
+      "supervision_level_matches_task_risk",
+      "transport_welfare_checklist_completed",
+      "vp_aw_001_control_evidenced"
+    ],
+    "violate": [
+      "anaesthesia_monitoring_gap_exceeds_protocol",
+      "controlled_analgesia_omitted_without_rationale",
+      "procedure_performed_outside_licensed_scope",
+      "surgical_task_delegated_to_unqualified_staff",
+      "vp_aw_001_control_absent",
+      "welfare_inspection_finding_left_unremediated"
+    ]
+  },
+  "VP-AW-002": {
+    "comply": [
+      "adequate_veterinary_care_plan_on_file",
+      "anaesthesia_monitoring_record_complete",
+      "pain_management_plan_documented",
+      "procedure_within_delegated_scope_of_practice",
+      "research_animal_protocol_number_recorded",
+      "supervision_level_matches_task_risk",
+      "transport_welfare_checklist_completed",
+      "vp_aw_002_control_evidenced"
+    ],
+    "violate": [
+      "anaesthesia_monitoring_gap_exceeds_protocol",
+      "controlled_analgesia_omitted_without_rationale",
+      "procedure_performed_outside_licensed_scope",
+      "surgical_task_delegated_to_unqualified_staff",
+      "vp_aw_002_control_absent",
+      "welfare_inspection_finding_left_unremediated"
+    ]
+  },
+  "VP-AW-003": {
+    "comply": [
+      "adequate_veterinary_care_plan_on_file",
+      "anaesthesia_monitoring_record_complete",
+      "pain_management_plan_documented",
+      "procedure_within_delegated_scope_of_practice",
+      "research_animal_protocol_number_recorded",
+      "supervision_level_matches_task_risk",
+      "transport_welfare_checklist_completed",
+      "vp_aw_003_control_evidenced"
+    ],
+    "violate": [
+      "anaesthesia_monitoring_gap_exceeds_protocol",
+      "controlled_analgesia_omitted_without_rationale",
+      "procedure_performed_outside_licensed_scope",
+      "surgical_task_delegated_to_unqualified_staff",
+      "vp_aw_003_control_absent",
+      "welfare_inspection_finding_left_unremediated"
+    ]
+  },
+  "VP-AW-004": {
+    "comply": [
+      "adequate_veterinary_care_plan_on_file",
+      "anaesthesia_monitoring_record_complete",
+      "pain_management_plan_documented",
+      "procedure_within_delegated_scope_of_practice",
+      "research_animal_protocol_number_recorded",
+      "supervision_level_matches_task_risk",
+      "transport_welfare_checklist_completed",
+      "vp_aw_004_control_evidenced"
+    ],
+    "violate": [
+      "anaesthesia_monitoring_gap_exceeds_protocol",
+      "controlled_analgesia_omitted_without_rationale",
+      "procedure_performed_outside_licensed_scope",
+      "surgical_task_delegated_to_unqualified_staff",
+      "vp_aw_004_control_absent",
+      "welfare_inspection_finding_left_unremediated"
+    ]
+  },
+  "VP-AW-005": {
+    "comply": [
+      "adequate_veterinary_care_plan_on_file",
+      "anaesthesia_monitoring_record_complete",
+      "pain_management_plan_documented",
+      "procedure_within_delegated_scope_of_practice",
+      "research_animal_protocol_number_recorded",
+      "supervision_level_matches_task_risk",
+      "transport_welfare_checklist_completed",
+      "vp_aw_005_control_evidenced"
+    ],
+    "violate": [
+      "anaesthesia_monitoring_gap_exceeds_protocol",
+      "controlled_analgesia_omitted_without_rationale",
+      "procedure_performed_outside_licensed_scope",
+      "surgical_task_delegated_to_unqualified_staff",
+      "vp_aw_005_control_absent",
+      "welfare_inspection_finding_left_unremediated"
+    ]
+  },
+  "VP-GV-001": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed",
+      "vp_gv_001_control_evidenced"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "automated_decision_final_with_no_human_route",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export",
+      "vp_gv_001_control_absent"
+    ]
+  },
+  "VP-GV-002": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "vp_gv_002_control_evidenced"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export",
+      "vp_gv_002_control_absent",
+      "vulnerability_of_owner_exploited_by_pricing_logic"
+    ]
+  },
+  "VP-GV-003": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "standing_declaration_present_and_attributed",
+      "vp_gv_003_control_evidenced"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "audit_finding_read_during_retrieval",
+      "biometric_scraping_of_untargeted_images_enabled",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "vp_gv_003_control_absent",
+      "vulnerability_of_owner_exploited_by_pricing_logic"
+    ]
+  },
+  "VP-GV-004": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed",
+      "vp_gv_004_control_evidenced"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "automated_decision_final_with_no_human_route",
+      "biometric_scraping_of_untargeted_images_enabled",
+      "standing_declaration_absent_from_export",
+      "vp_gv_004_control_absent",
+      "vulnerability_of_owner_exploited_by_pricing_logic"
+    ]
+  },
+  "VP-GV-005": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "vp_gv_005_control_evidenced"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "automated_decision_final_with_no_human_route",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export",
+      "vp_gv_005_control_absent"
+    ]
+  },
+  "VP-GV-006": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "standing_declaration_present_and_attributed",
+      "vp_gv_006_control_evidenced"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export",
+      "vp_gv_006_control_absent",
+      "vulnerability_of_owner_exploited_by_pricing_logic"
+    ]
+  },
+  "VP-GV-007": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed",
+      "vp_gv_007_control_evidenced"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "audit_finding_read_during_retrieval",
+      "biometric_scraping_of_untargeted_images_enabled",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "vp_gv_007_control_absent",
+      "vulnerability_of_owner_exploited_by_pricing_logic"
+    ]
+  },
+  "VP-BN-001": {
+    "comply": [
+      "anomalous_bulk_export_alert_routed_to_oncall",
+      "breach_clock_constant_sourced_from_jurisdiction_table",
+      "breach_clock_override_rejected_by_configuration_loader",
+      "detection_signal_retained_beyond_notification_window",
+      "incident_runbook_linked_from_detection_alert",
+      "notification_deadline_computed_from_discovery_timestamp",
+      "processor_contract_carries_breach_notice_clause",
+      "vendor_incident_webhook_feeds_incident_queue",
+      "vp_bn_001_control_evidenced"
+    ],
+    "violate": [
+      "breach_notification_deadline_exposed_as_tenant_setting",
+      "bulk_export_anomaly_alert_disabled_to_cut_noise",
+      "incident_runbook_reference_removed_from_alert_payload",
+      "notification_clock_started_at_confirmation_not_discovery",
+      "vendor_contract_template_drops_breach_notice_clause",
+      "vp_bn_001_control_absent"
+    ]
+  },
+  "VP-BN-002": {
+    "comply": [
+      "affected_owner_count_computed_from_access_log",
+      "anomalous_bulk_export_alert_routed_to_oncall",
+      "detection_signal_retained_beyond_notification_window",
+      "incident_runbook_linked_from_detection_alert",
+      "processor_contract_carries_breach_notice_clause",
+      "regulator_notice_template_versioned_in_policy_repo",
+      "subprocessor_breach_notice_deadline_recorded_at_onboarding",
+      "vendor_incident_webhook_feeds_incident_queue",
+      "vp_bn_002_control_evidenced"
+    ],
+    "violate": [
+      "access_log_retention_shorter_than_notification_lookback",
+      "bulk_export_anomaly_alert_disabled_to_cut_noise",
+      "incident_runbook_reference_removed_from_alert_payload",
+      "vendor_contract_template_drops_breach_notice_clause",
+      "vendor_incident_notices_routed_to_unmonitored_mailbox",
+      "vp_bn_002_control_absent"
+    ]
+  },
+  "VP-BN-003": {
+    "comply": [
+      "affected_owner_count_computed_from_access_log",
+      "breach_drill_result_recorded_with_named_owner",
+      "credential_stuffing_detector_enabled_on_portal_login",
+      "notification_dispatch_evidenced_in_audit_ledger",
+      "processor_contract_carries_breach_notice_clause",
+      "regulator_notice_template_versioned_in_policy_repo",
+      "subprocessor_breach_notice_deadline_recorded_at_onboarding",
+      "vendor_incident_webhook_feeds_incident_queue",
+      "vp_bn_003_control_evidenced"
+    ],
+    "violate": [
+      "access_log_retention_shorter_than_notification_lookback",
+      "breach_scope_computed_from_sampled_logs_only",
+      "owner_notice_omits_statutory_content_elements",
+      "vendor_contract_template_drops_breach_notice_clause",
+      "vendor_incident_notices_routed_to_unmonitored_mailbox",
+      "vp_bn_003_control_absent"
+    ]
+  },
+  "VP-DR-001": {
+    "comply": [
+      "biennial_inventory_scheduled_within_two_year_window",
+      "csos_order_signed_with_dea_issued_certificate",
+      "form_106_filed_electronically_within_forty_five_days",
+      "inventory_count_exact_for_schedule_ii_containers",
+      "order_form_records_retained_two_years_at_registered_location",
+      "schedule_ii_order_placed_through_csos_or_form_222",
+      "significant_loss_determination_recorded_with_factors",
+      "theft_or_loss_notice_sent_within_one_business_day",
+      "vp_dr_001_control_evidenced"
+    ],
+    "violate": [
+      "biennial_inventory_job_disabled_or_skipped",
+      "form_106_filing_left_as_manual_optional_step",
+      "order_form_records_purged_before_two_years",
+      "schedule_ii_order_submitted_outside_csos_or_form_222",
+      "theft_or_loss_report_suppressed_below_configured_threshold",
+      "vp_dr_001_control_absent"
+    ]
+  },
+  "VP-DR-002": {
+    "comply": [
+      "anomalous_dispensing_pattern_flagged_to_medical_director",
+      "biennial_inventory_scheduled_within_two_year_window",
+      "csos_order_signed_with_dea_issued_certificate",
+      "diversion_analytics_run_over_every_dispensing_event",
+      "inventory_count_exact_for_schedule_ii_containers",
+      "inventory_record_signed_by_named_licensee",
+      "order_form_records_retained_two_years_at_registered_location",
+      "schedule_ii_order_placed_through_csos_or_form_222",
+      "vp_dr_002_control_evidenced"
+    ],
+    "violate": [
+      "biennial_inventory_job_disabled_or_skipped",
+      "diversion_analytics_disabled_for_named_practice",
+      "inventory_count_auto_filled_from_ledger_balance",
+      "order_form_records_purged_before_two_years",
+      "schedule_ii_order_submitted_outside_csos_or_form_222",
+      "vp_dr_002_control_absent"
+    ]
+  },
+  "VP-DR-003": {
+    "comply": [
+      "anomalous_dispensing_pattern_flagged_to_medical_director",
+      "biennial_inventory_scheduled_within_two_year_window",
+      "discrepancy_investigation_opened_before_closure",
+      "diversion_analytics_run_over_every_dispensing_event",
+      "effective_controls_against_diversion_documented",
+      "form_222_line_items_validated_against_receipt",
+      "inventory_count_exact_for_schedule_ii_containers",
+      "inventory_record_signed_by_named_licensee",
+      "vp_dr_003_control_evidenced"
+    ],
+    "violate": [
+      "anomalous_dispensing_alerts_routed_to_null_sink",
+      "biennial_inventory_job_disabled_or_skipped",
+      "csos_signature_replaced_by_shared_practice_credential",
+      "diversion_analytics_disabled_for_named_practice",
+      "inventory_count_auto_filled_from_ledger_balance",
+      "vp_dr_003_control_absent"
+    ]
+  },
+  "VP-DR-004": {
+    "comply": [
+      "anomalous_dispensing_pattern_flagged_to_medical_director",
+      "csos_certificate_expiry_checked_before_order_submit",
+      "discrepancy_investigation_opened_before_closure",
+      "diversion_analytics_run_over_every_dispensing_event",
+      "effective_controls_against_diversion_documented",
+      "form_222_line_items_validated_against_receipt",
+      "inventory_held_in_registered_location_only",
+      "partial_shipment_recorded_against_original_order",
+      "vp_dr_004_control_evidenced"
+    ],
+    "violate": [
+      "anomalous_dispensing_alerts_routed_to_null_sink",
+      "csos_signature_replaced_by_shared_practice_credential",
+      "diversion_analytics_disabled_for_named_practice",
+      "loss_discovery_timestamp_editable_after_the_fact",
+      "order_form_line_items_accepted_without_receipt_match",
+      "vp_dr_004_control_absent"
+    ]
+  },
+  "VP-CC-001": {
+    "comply": [
+      "auto_renewal_terms_disclosed_before_enrolment",
+      "consent_scope_matched_to_message_purpose",
+      "esign_consent_captured_before_electronic_delivery",
+      "hardware_and_software_requirements_disclosed_at_consent",
+      "online_cancellation_path_equal_steps_to_enrolment",
+      "prior_express_consent_recorded_before_automated_text",
+      "renewal_reminder_sent_before_annual_charge",
+      "vp_cc_001_control_evidenced",
+      "wireless_number_consent_captured_with_timestamp_and_source"
+    ],
+    "violate": [
+      "auto_renewal_enrolled_by_prechecked_box",
+      "automated_text_sent_without_recorded_prior_consent",
+      "cancellation_requires_phone_call_while_signup_is_online",
+      "consent_check_bypassed_for_reactivation_campaign",
+      "electronic_records_delivered_without_esign_consent",
+      "vp_cc_001_control_absent"
+    ]
+  },
+  "VP-CC-002": {
+    "comply": [
+      "auto_renewal_terms_disclosed_before_enrolment",
+      "esign_consent_captured_before_electronic_delivery",
+      "hardware_and_software_requirements_disclosed_at_consent",
+      "online_cancellation_path_equal_steps_to_enrolment",
+      "paper_copy_option_retained_after_esign_consent",
+      "prescription_pdf_generated_on_client_request",
+      "renewal_reminder_sent_before_annual_charge",
+      "vp_cc_002_control_evidenced",
+      "written_prescription_offered_at_dispensing_decision"
+    ],
+    "violate": [
+      "auto_renewal_enrolled_by_prechecked_box",
+      "cancellation_requires_phone_call_while_signup_is_online",
+      "electronic_records_delivered_without_esign_consent",
+      "esign_consent_inferred_from_portal_login",
+      "vp_cc_002_control_absent",
+      "written_prescription_option_hidden_from_client"
+    ]
+  },
+  "VP-CC-003": {
+    "comply": [
+      "esign_consent_captured_before_electronic_delivery",
+      "hardware_and_software_requirements_disclosed_at_consent",
+      "paper_copy_option_retained_after_esign_consent",
+      "prescription_pdf_generated_on_client_request",
+      "prescription_portability_rule_encoded_per_state",
+      "records_copy_released_within_state_deadline",
+      "records_release_request_tracked_with_due_date",
+      "vp_cc_003_control_evidenced",
+      "written_prescription_offered_at_dispensing_decision"
+    ],
+    "violate": [
+      "electronic_records_delivered_without_esign_consent",
+      "esign_consent_inferred_from_portal_login",
+      "prescription_copy_conditioned_on_in_house_purchase",
+      "records_release_delayed_beyond_state_deadline",
+      "vp_cc_003_control_absent",
+      "written_prescription_option_hidden_from_client"
+    ]
+  },
+  "VP-CC-004": {
+    "comply": [
+      "account_holder_age_verified_at_portal_signup",
+      "guardian_consent_captured_for_minor_account",
+      "prescription_pdf_generated_on_client_request",
+      "prescription_portability_rule_encoded_per_state",
+      "records_copy_released_within_state_deadline",
+      "records_release_not_conditioned_on_balance_paid",
+      "records_release_request_tracked_with_due_date",
+      "vp_cc_004_control_evidenced",
+      "written_prescription_offered_at_dispensing_decision"
+    ],
+    "violate": [
+      "minor_account_created_without_guardian_consent",
+      "prescription_copy_conditioned_on_in_house_purchase",
+      "records_release_blocked_until_balance_paid",
+      "records_release_delayed_beyond_state_deadline",
+      "vp_cc_004_control_absent",
+      "written_prescription_option_hidden_from_client"
+    ]
+  },
+  "VP-CC-005": {
+    "comply": [
+      "account_holder_age_verified_at_portal_signup",
+      "consent_revocation_honoured_across_all_channels",
+      "guardian_consent_captured_for_minor_account",
+      "minor_account_barred_from_payment_agreements",
+      "records_copy_released_within_state_deadline",
+      "records_release_not_conditioned_on_balance_paid",
+      "records_release_request_tracked_with_due_date",
+      "stop_keyword_processed_within_reasonable_time",
+      "vp_cc_005_control_evidenced"
+    ],
+    "violate": [
+      "minor_account_created_without_guardian_consent",
+      "payment_plan_signed_by_under_eighteen_account",
+      "records_release_blocked_until_balance_paid",
+      "records_release_delayed_beyond_state_deadline",
+      "stop_reply_ignored_by_reminder_engine",
+      "vp_cc_005_control_absent"
+    ]
+  },
+  "VP-CC-006": {
+    "comply": [
+      "account_holder_age_verified_at_portal_signup",
+      "consent_revocation_honoured_across_all_channels",
+      "fee_free_cancellation_confirmed_by_email",
+      "guardian_consent_captured_for_minor_account",
+      "marketing_texts_kept_within_quiet_hours",
+      "minor_account_barred_from_payment_agreements",
+      "price_change_notice_sent_before_renewal",
+      "stop_keyword_processed_within_reasonable_time",
+      "vp_cc_006_control_evidenced"
+    ],
+    "violate": [
+      "marketing_texts_scheduled_outside_permitted_hours",
+      "minor_account_created_without_guardian_consent",
+      "payment_plan_signed_by_under_eighteen_account",
+      "renewal_reminder_removed_before_annual_charge",
+      "stop_reply_ignored_by_reminder_engine",
+      "vp_cc_006_control_absent"
+    ]
+  },
+  "VP-PS-001": {
+    "comply": [
+      "critical_value_alert_requires_acknowledgement",
+      "critical_value_escalates_when_unacknowledged",
+      "dose_computed_from_current_recorded_weight",
+      "dose_outside_species_range_hard_stops_order",
+      "triage_assistant_discloses_automated_status_on_every_turn",
+      "triage_assistant_hands_off_to_licensed_staff_on_red_flag",
+      "triage_assistant_output_labelled_not_a_diagnosis",
+      "vp_ps_001_control_evidenced",
+      "weight_unit_declared_and_converted_before_dose"
+    ],
+    "violate": [
+      "critical_value_alert_suppressed_by_quiet_hours_setting",
+      "dose_computed_from_stale_or_absent_weight",
+      "triage_assistant_issues_treatment_without_handoff",
+      "triage_assistant_presents_as_licensed_veterinarian",
+      "vp_ps_001_control_absent",
+      "weight_unit_mismatch_downgraded_to_dismissable_warning"
+    ]
+  },
+  "VP-PS-002": {
+    "comply": [
+      "alert_route_change_reviewed_by_medical_director",
+      "critical_value_alert_requires_acknowledgement",
+      "critical_value_escalates_when_unacknowledged",
+      "euthanasia_consent_signed_by_verified_owner_or_agent",
+      "remains_disposition_choice_recorded_before_procedure",
+      "triage_assistant_discloses_automated_status_on_every_turn",
+      "triage_assistant_hands_off_to_licensed_staff_on_red_flag",
+      "triage_assistant_output_labelled_not_a_diagnosis",
+      "vp_ps_002_control_evidenced"
+    ],
+    "violate": [
+      "critical_value_alert_downgraded_to_passive_notification",
+      "critical_value_alert_suppressed_by_quiet_hours_setting",
+      "euthanasia_performed_without_recorded_owner_consent",
+      "triage_assistant_issues_treatment_without_handoff",
+      "triage_assistant_presents_as_licensed_veterinarian",
+      "vp_ps_002_control_absent"
+    ]
+  },
+  "VP-PS-003": {
+    "comply": [
+      "alert_route_change_reviewed_by_medical_director",
+      "concentration_and_volume_shown_alongside_dose",
+      "critical_value_alert_requires_acknowledgement",
+      "critical_value_escalates_when_unacknowledged",
+      "euthanasia_consent_signed_by_verified_owner_or_agent",
+      "remains_disposition_choice_recorded_before_procedure",
+      "remains_tag_scanned_at_every_custody_transfer",
+      "stale_weight_prompts_reweigh_before_dose",
+      "vp_ps_003_control_evidenced"
+    ],
+    "violate": [
+      "critical_value_alert_downgraded_to_passive_notification",
+      "critical_value_alert_suppressed_by_quiet_hours_setting",
+      "dose_range_hard_stop_replaced_by_override_button",
+      "euthanasia_performed_without_recorded_owner_consent",
+      "remains_custody_transfer_recorded_without_tag_scan",
+      "vp_ps_003_control_absent"
+    ]
+  },
+  "VP-PS-004": {
+    "comply": [
+      "alert_delivery_tested_in_release_pipeline",
+      "concentration_and_volume_shown_alongside_dose",
+      "cremation_return_verified_against_remains_tag",
+      "euthanasia_consent_signed_by_verified_owner_or_agent",
+      "remains_disposition_choice_recorded_before_procedure",
+      "remains_tag_scanned_at_every_custody_transfer",
+      "stale_weight_prompts_reweigh_before_dose",
+      "triage_transcript_attached_to_medical_record",
+      "vp_ps_004_control_evidenced"
+    ],
+    "violate": [
+      "alert_acknowledgement_auto_completed_by_timer",
+      "dose_range_hard_stop_replaced_by_override_button",
+      "euthanasia_performed_without_recorded_owner_consent",
+      "remains_custody_transfer_recorded_without_tag_scan",
+      "triage_assistant_disclosure_shown_once_per_session_only",
+      "vp_ps_004_control_absent"
+    ]
+  },
+  "VP-PH-001": {
+    "comply": [
+      "abuse_report_recorded_with_reporter_immunity_notice",
+      "disease_report_dispatched_to_state_animal_health_official",
+      "rabies_certificate_fields_complete_per_state_form",
+      "rabies_certificate_issuer_licence_verified_current",
+      "rabies_certificate_signed_by_licensed_veterinarian",
+      "report_dispatch_evidenced_with_acknowledgement",
+      "reportable_condition_matched_against_current_state_list",
+      "suspected_abuse_report_path_reachable_from_chart",
+      "vp_ph_001_control_evidenced"
+    ],
+    "violate": [
+      "rabies_certificate_issued_under_technician_signature",
+      "rabies_certificate_signature_auto_applied_from_template",
+      "reportable_condition_list_pruned_to_reduce_alerts",
+      "reportable_disease_report_gated_behind_practice_toggle",
+      "suspected_abuse_report_option_removed_from_chart",
+      "vp_ph_001_control_absent"
+    ]
+  },
+  "VP-PH-002": {
+    "comply": [
+      "abuse_report_recorded_with_reporter_immunity_notice",
+      "abuse_report_visible_only_to_authorised_roles",
+      "microchip_number_validated_against_iso_format",
+      "microchip_registry_submission_confirmed_by_registry",
+      "rabies_certificate_fields_complete_per_state_form",
+      "rabies_certificate_issuer_licence_verified_current",
+      "rabies_certificate_signed_by_licensed_veterinarian",
+      "suspected_abuse_report_path_reachable_from_chart",
+      "vp_ph_002_control_evidenced"
+    ],
+    "violate": [
+      "abuse_report_visible_to_client_on_portal",
+      "microchip_number_accepted_without_format_validation",
+      "rabies_certificate_issued_under_technician_signature",
+      "rabies_certificate_signature_auto_applied_from_template",
+      "suspected_abuse_report_option_removed_from_chart",
+      "vp_ph_002_control_absent"
+    ]
+  },
+  "VP-PH-003": {
+    "comply": [
+      "abuse_report_recorded_with_reporter_immunity_notice",
+      "abuse_report_visible_only_to_authorised_roles",
+      "microchip_number_validated_against_iso_format",
+      "microchip_reassignment_requires_verified_ownership",
+      "microchip_registry_submission_confirmed_by_registry",
+      "reportable_list_refreshed_from_versioned_fixture",
+      "suspected_abuse_report_path_reachable_from_chart",
+      "vp_ph_003_control_evidenced",
+      "zoonotic_exposure_flag_shown_to_staff"
+    ],
+    "violate": [
+      "abuse_report_visible_to_client_on_portal",
+      "microchip_number_accepted_without_format_validation",
+      "microchip_registry_submission_failures_silently_dropped",
+      "report_dispatch_batched_past_statutory_window",
+      "suspected_abuse_report_option_removed_from_chart",
+      "vp_ph_003_control_absent"
+    ]
+  },
+  "VP-PH-004": {
+    "comply": [
+      "lab_confirmed_result_triggers_report_workflow",
+      "microchip_number_validated_against_iso_format",
+      "microchip_reassignment_requires_verified_ownership",
+      "microchip_registry_submission_confirmed_by_registry",
+      "microchip_scan_recorded_at_intake",
+      "rabies_vaccine_lot_and_expiry_recorded",
+      "reportable_list_refreshed_from_versioned_fixture",
+      "vp_ph_004_control_evidenced",
+      "zoonotic_exposure_flag_shown_to_staff"
+    ],
+    "violate": [
+      "microchip_number_accepted_without_format_validation",
+      "microchip_owner_reassigned_from_client_self_service",
+      "microchip_registry_submission_failures_silently_dropped",
+      "rabies_certificate_issuable_with_expired_licence",
+      "report_dispatch_batched_past_statutory_window",
+      "vp_ph_004_control_absent"
+    ]
+  },
+  "VP-AX-001": {
+    "comply": [
+      "accessibility_regression_suite_runs_on_portal_build",
+      "accessibility_statement_versioned_in_repo",
+      "checkin_timeout_extendable_by_client",
+      "consent_control_operable_by_keyboard_alone",
+      "form_errors_announced_to_assistive_technology",
+      "manual_screen_reader_check_recorded_for_new_flow",
+      "status_conveyed_by_text_not_colour_alone",
+      "vp_ax_001_control_evidenced",
+      "wcag_aa_failure_blocks_portal_release"
+    ],
+    "violate": [
+      "accessibility_gate_removed_from_portal_pipeline",
+      "checkin_session_expires_with_no_extension",
+      "consent_signature_requires_mouse_drag_only",
+      "required_field_error_shown_by_colour_only",
+      "vp_ax_001_control_absent",
+      "wcag_failures_downgraded_to_warnings_in_ci"
+    ]
+  },
+  "VP-AX-002": {
+    "comply": [
+      "accessibility_statement_versioned_in_repo",
+      "accessible_name_present_on_every_control",
+      "captions_provided_for_discharge_video",
+      "checkin_timeout_extendable_by_client",
+      "consent_control_operable_by_keyboard_alone",
+      "focus_order_verified_on_consent_dialog",
+      "form_errors_announced_to_assistive_technology",
+      "status_conveyed_by_text_not_colour_alone",
+      "vp_ax_002_control_evidenced"
+    ],
+    "violate": [
+      "checkin_session_expires_with_no_extension",
+      "consent_signature_requires_mouse_drag_only",
+      "custom_control_shipped_without_accessible_name",
+      "focus_trapped_in_consent_modal",
+      "required_field_error_shown_by_colour_only",
+      "vp_ax_002_control_absent"
+    ]
+  }
+}

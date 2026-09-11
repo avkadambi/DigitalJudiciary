@@ -1,0 +1,72 @@
+{
+  "note": "Findings against existing provisions, filed as draft amendments rather than applied. Under Axiom A3 the only route from a case \u2014 or from a corpus author \u2014 to a rule change is a draft amendment the legislative process may adopt or reject.",
+  "amendments": [
+    {
+      "id": "PA-01",
+      "targets": [
+        "VP-CS-005"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (vetpoc)",
+      "finding": "The two-year retention floor is cited to 21 CFR 1304.04 and 1304.11. Verified: 1304.04(a) is the retention provision; 1304.11 is the inventory-requirements section and says nothing about how long a record is kept. The statutory root, 21 U.S.C. \u00a7827(b), is not cited at all. The obligation is real and the absolute status is sound; the second pin points a later adjudicator at the wrong section.",
+      "proposed": "Restate the citation as '21 U.S.C. \u00a7827(b); 21 CFR 1304.04(a)' and leave the provision text and its absolute status unchanged. The inventory cadence 1304.11 actually governs is now carried by VP-DR-003.",
+      "why_not_applied": "A citation is what the adjudicator reasons from; changing it under a frozen revision would move the ground beneath seed records that interpret the provision as cited. That is a legislative act.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-02",
+      "targets": [
+        "VP-CS-006"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (vetpoc)",
+      "finding": "The provision makes second-licensee witnessing of euthanasia-solution dispensing an absolute and cites 21 CFR 1304.22. Verified: 1304.22(c) requires a dispensing record (date, quantity, patient, dispenser) but contains no witness requirement. The witness rule comes from state board regulations and practice policy, and its scope varies by state. As written the absolute rests on a federal source that does not state it, which is a severity claim wearing a statutory label (Definition 1).",
+      "proposed": "Split the provision: keep 'recorded against a named licensee' absolute on 21 CFR 1304.22(c) and 21 U.S.C. \u00a7827; move 'and witnessed' into an ordinary provision cited to state board rules and keyed to the jurisdiction table, so a state that does not require a witness does not produce an F-absolute case against a compliant practice.",
+      "why_not_applied": "Reclassifying an absolute changes which cases short-circuit under A6 and invalidates every F-absolute record built on it. Only the legislature may do that.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-03",
+      "targets": [
+        "VP-PD-002"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (vetpoc)",
+      "finding": "'Withdrawing consent is no harder than granting it' is absolute and cited to 'EU AI Act and GDPR principles'. Verified: the operative text is GDPR Art. 7(3), final sentence ('It shall be as easy to withdraw as to give consent'); the AI Act contains no such rule. The provision is correct and the absolute status defensible for EU-IE and UK-ENG (UK GDPR Art. 7(3)), but for the six US jurisdictions the source is the FCC revocation rule (47 CFR 64.1200(a)(10), partly in force) and state auto-renewal law, none of which is cited.",
+      "proposed": "Re-pin to 'GDPR Art. 7(3); UK GDPR Art. 7(3); 47 CFR 64.1200(a)(10) for US jurisdictions' and drop the AI Act reference. Note the overlap with the new VP-CC-002 (cancellation as easy as sign-up) so the two provisions order rather than compete.",
+      "why_not_applied": "Re-anchoring a shipped absolute is a legislative act under A3; the overlap note is for the legislature, not the editor.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-04",
+      "targets": [
+        "VP-RR-001"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (vetpoc)",
+      "finding": "The append-only audit trail is cited to '21 CFR 1304.04 record integrity; SEC Rule 17a-4 analogue'. Verified: 1304.04 is a retention and availability rule and does not speak to in-place update; SEC Rule 17a-4 governs broker-dealers and has no bearing on a veterinary practice. The nearest instrument that actually binds this software is 21 CFR 1311.120(b)(...) and 1311.150 (the EPCS application's internal audit trail and its daily review), which are not cited.",
+      "proposed": "Restate the citation as '21 CFR 1311.120(b) and 1311.150 (EPCS audit trail); 21 CFR 1304.04 (availability)' and delete the SEC analogue. Keep the absolute: immutability of the controlled-substance audit trail is a registrant duty.",
+      "why_not_applied": "Citation changes to an absolute alter what later adjudicators reason from and are reserved to legislation.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-05",
+      "targets": [
+        "VP-AW-003",
+        "VP-AW-005"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (vetpoc)",
+      "finding": "Both provisions cite 9 CFR Part 2 without stating its scope. Verified: Part 2 implements the Animal Welfare Act for USDA-licensed dealers, exhibitors and registered research facilities. A private companion- or large-animal practice is not, as such, a regulated facility, and the 'adequate veterinary care' programme of 9 CFR 2.33 and 2.40 attaches to the licensee, with the attending veterinarian as its instrument. As drafted the provisions can charge an ordinary clinic with a duty it does not owe.",
+      "proposed": "Add the scope qualifier 'for a patient or premises that is a USDA-licensed or registered facility' to both titles and pin the citations to 9 CFR 2.33 (research facilities) and 2.40 (dealers and exhibitors) and 2.126 (access to records).",
+      "why_not_applied": "Narrowing a provision's scope changes which arrivals are charged; that is a rule change, not an edit.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-06",
+      "targets": [
+        "VP-PO-009"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (vetpoc)",
+      "finding": "VP-PO-009 (critical values surfaced through an acknowledged channel) and the new VP-PS-003 (critical-value alerting never suppressed) approach the same floor from the positive and the negative side. Both are ordinary and cited to 'clinical safety floor'. A change that suppresses the alert can now be charged under either, and the two will tie on every ordering key (K-tie) more often than the corpus designers intended.",
+      "proposed": "The legislature should either merge the two into one provision under PS with both duties stated, or mark VP-PO-009 as the delivery-channel rule and VP-PS-003 as the non-suppression rule in their titles so that the distinguishing gate can separate them.",
+      "why_not_applied": "The extension adds and never edits (A3). The overlap is filed so the legislature can decide which text survives.",
+      "disposition": "pending"
+    }
+  ]
+}

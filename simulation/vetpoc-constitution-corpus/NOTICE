@@ -1,0 +1,14 @@
+VetPOC Constitution Corpus
+Copyright 2026 Arun Kadambi and Venkat Kuppuswamy
+
+This product includes software developed for the Digital Judiciary programme.
+
+Code is licensed under the Apache License, Version 2.0 (see LICENSE).
+Data is licensed under CC BY 4.0 (see LICENSE-DATA).
+
+Third-party identifiers referenced in this corpus:
+  CWE™ and CAPEC™ are trademarks of The MITRE Corporation, used under MITRE's
+  royalty-free terms with attribution.
+  LOINC® is a registered trademark of Regenstrief Institute, Inc.
+No third-party data is redistributed. See docs/SOURCES.md for the full survey of
+sources consulted, their verified licences, and whether each was reusable.

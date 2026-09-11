@@ -1,0 +1,240 @@
+<title>VetPOC Case Reporter</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#f4f6f2; --surface:#ffffff; --surface-2:#eef1ec; --rule:#d5dbd3;
+  --ink:#15201b; --ink-2:#41504a; --ink-3:#6d7c75;
+  --accent:#1f5c46; --accent-soft:#e2ece7;
+  --deny:#8c2f2a; --deny-soft:#f6e6e4;
+  --cond:#95661f; --cond-soft:#f7ecd9;
+  --permit:#1f5c46; --permit-soft:#e2ece7;
+  --absolute:#6d1f1c;
+  --shadow:0 1px 2px rgba(21,32,27,.06), 0 8px 24px -16px rgba(21,32,27,.28);
+  --serif:"Spectral", Georgia, "Times New Roman", serif;
+  --sans:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1411; --surface:#161d19; --surface-2:#1d2621; --rule:#2b3630;
+    --ink:#e7ede9; --ink-2:#adbbb4; --ink-3:#7d8c85;
+    --accent:#74c39c; --accent-soft:#1a2c24;
+    --deny:#e39089; --deny-soft:#33201e;
+    --cond:#d7ab63; --cond-soft:#2e2517;
+    --permit:#74c39c; --permit-soft:#1a2c24;
+    --absolute:#f0a49c;
+    --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1411; --surface:#161d19; --surface-2:#1d2621; --rule:#2b3630;
+  --ink:#e7ede9; --ink-2:#adbbb4; --ink-3:#7d8c85;
+  --accent:#74c39c; --accent-soft:#1a2c24;
+  --deny:#e39089; --deny-soft:#33201e;
+  --cond:#d7ab63; --cond-soft:#2e2517;
+  --permit:#74c39c; --permit-soft:#1a2c24;
+  --absolute:#f0a49c;
+  --shadow:0 1px 2px rgba(0,0,0,.4), 0 10px 30px -18px rgba(0,0,0,.8);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:15px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent)}
+button{font:inherit; color:inherit}
+::selection{background:var(--accent-soft)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:2px solid var(--ink);
+  background:var(--surface);
+  padding:22px 26px 16px;
+}
+.masthead-inner{max-width:1420px; margin:0 auto; display:flex; flex-wrap:wrap; gap:24px; align-items:flex-end; justify-content:space-between}
+.wordmark{display:flex; flex-direction:column; gap:2px}
+.wordmark h1{
+  font-family:var(--serif); font-weight:700; font-size:clamp(26px,3.4vw,38px);
+  margin:0; letter-spacing:-.015em; text-wrap:balance;
+}
+.wordmark .sub{font-family:var(--serif); font-style:italic; color:var(--ink-2); font-size:15px}
+.imprint{
+  font-family:var(--mono); font-size:11px; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; gap:14px; flex-wrap:wrap; align-items:center;
+}
+.imprint .ok{color:var(--accent); font-weight:500}
+
+/* ---------- figures strip ---------- */
+.figures{
+  max-width:1420px; margin:0 auto; padding:14px 26px 0;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:0;
+  border-bottom:1px solid var(--rule);
+}
+.fig{padding:10px 16px 14px; border-left:1px solid var(--rule)}
+.fig:first-child{border-left:0; padding-left:0}
+.fig dt{font-family:var(--mono); font-size:10.5px; letter-spacing:.07em; text-transform:uppercase; color:var(--ink-3)}
+.fig dd{margin:2px 0 0; font-family:var(--serif); font-size:24px; font-weight:600; font-variant-numeric:tabular-nums}
+.fig dd small{font-family:var(--sans); font-size:12px; font-weight:400; color:var(--ink-3); margin-left:4px}
+
+/* ---------- layout ---------- */
+.shell{max-width:1420px; margin:0 auto; padding:20px 26px 64px; display:grid; grid-template-columns:262px minmax(0,1fr); gap:40px; align-items:start}
+.shell > section{max-width:960px}
+@media (max-width:1000px){ .shell{grid-template-columns:1fr; gap:20px} .rail{position:static !important} }
+
+/* ---------- filter rail ---------- */
+.rail{position:sticky; top:16px; display:flex; flex-direction:column; gap:18px; max-height:calc(100vh - 32px); overflow:auto; padding-right:6px}
+.rail::-webkit-scrollbar{width:8px} .rail::-webkit-scrollbar-thumb{background:var(--rule); border-radius:8px}
+.group{display:flex; flex-direction:column; gap:7px}
+.group > h2{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--ink-3); margin:0; padding-bottom:5px; border-bottom:1px solid var(--rule);
+}
+.search{
+  width:100%; padding:9px 11px; border:1px solid var(--rule); border-radius:3px;
+  background:var(--surface); color:var(--ink); font-family:var(--mono); font-size:12.5px;
+}
+.search::placeholder{color:var(--ink-3)}
+.chips{display:flex; flex-wrap:wrap; gap:5px}
+.chip{
+  border:1px solid var(--rule); background:var(--surface); border-radius:2px;
+  padding:4px 8px; font-family:var(--mono); font-size:11px; cursor:pointer;
+  display:inline-flex; gap:6px; align-items:baseline; color:var(--ink-2);
+}
+.chip:hover{border-color:var(--accent); color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:var(--surface)}
+:root[data-theme="dark"] .chip[aria-pressed="true"], :root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0f1411}
+@media (prefers-color-scheme: light){ :root:not([data-theme="dark"]) .chip[aria-pressed="true"]{color:#fff} }
+.chip .n{font-size:10px; opacity:.75; font-variant-numeric:tabular-nums}
+.catlist{display:flex; flex-direction:column; gap:1px}
+.cat{
+  display:grid; grid-template-columns:1fr auto; gap:8px; align-items:baseline;
+  padding:5px 7px; border:0; background:none; text-align:left; cursor:pointer; border-radius:2px;
+  font-family:var(--mono); font-size:11.5px; color:var(--ink-2); border-left:3px solid transparent;
+}
+.cat:hover{background:var(--surface-2); color:var(--ink)}
+.cat[aria-pressed="true"]{background:var(--accent-soft); color:var(--ink); border-left-color:var(--accent); font-weight:500}
+.cat .n{font-variant-numeric:tabular-nums; color:var(--ink-3); font-size:10.5px}
+.reset{
+  align-self:flex-start; background:none; border:1px solid var(--rule); border-radius:2px;
+  padding:5px 10px; font-family:var(--mono); font-size:11px; cursor:pointer; color:var(--ink-2);
+}
+.reset:hover{border-color:var(--deny); color:var(--deny)}
+
+/* ---------- results ---------- */
+.resultbar{
+  display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between;
+  padding-bottom:10px; margin-bottom:14px; border-bottom:1px solid var(--rule);
+}
+.count{font-family:var(--serif); font-size:19px; font-weight:600; font-variant-numeric:tabular-nums}
+.count span{color:var(--ink-3); font-weight:400; font-size:14px; font-family:var(--sans)}
+.sortnote{font-family:var(--mono); font-size:11px; color:var(--ink-3); letter-spacing:.04em}
+
+.cases{display:flex; flex-direction:column; gap:12px}
+.case{
+  background:var(--surface); border:1px solid var(--rule); border-radius:3px;
+  padding:15px 18px 16px; box-shadow:var(--shadow);
+}
+.case.absolute{border-left:3px solid var(--absolute)}
+.case-head{display:flex; flex-wrap:wrap; gap:10px 14px; align-items:baseline; justify-content:space-between}
+.cid{font-family:var(--mono); font-size:13px; font-weight:500; letter-spacing:.02em}
+.cid .cat-tag{color:var(--ink-3); font-weight:400}
+.pills{display:flex; flex-wrap:wrap; gap:6px}
+.pill{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.04em; text-transform:uppercase;
+  padding:3px 7px; border-radius:2px; white-space:nowrap;
+}
+.pill.permit{background:var(--permit-soft); color:var(--permit)}
+.pill.deny{background:var(--deny-soft); color:var(--deny)}
+.pill.permit_conditional{background:var(--cond-soft); color:var(--cond)}
+.pill.route{background:var(--surface-2); color:var(--ink-2)}
+.pill.abs{background:var(--deny-soft); color:var(--absolute); font-weight:500}
+
+.citation{
+  font-family:var(--mono); font-size:11.5px; color:var(--ink-3); margin-top:7px;
+  display:flex; flex-wrap:wrap; gap:4px 12px;
+}
+.citation b{font-weight:500; color:var(--ink-2)}
+.headnote{
+  font-family:var(--serif); font-size:15.5px; line-height:1.62; margin-top:10px; color:var(--ink);
+  max-width:74ch;
+}
+.headnote p{margin:0 0 9px}
+.headnote p:last-child{margin-bottom:0}
+.headnote em{color:var(--ink-2)}
+.headnote strong{font-weight:600}
+.headnote code{
+  font-family:var(--mono); font-size:12px; background:var(--surface-2);
+  padding:1px 4px; border-radius:2px; color:var(--ink-2); word-break:break-word;
+}
+.checks{
+  margin-top:11px; padding-top:9px; border-top:1px dotted var(--rule);
+  display:flex; flex-wrap:wrap; gap:5px; align-items:center;
+}
+.tag{font-family:var(--mono); font-size:10px; letter-spacing:.05em; color:var(--ink-3); border:1px solid var(--rule); padding:2px 5px; border-radius:2px}
+.tag.ax{color:var(--accent); border-color:var(--accent-soft); background:var(--accent-soft)}
+
+.more{
+  margin:22px auto 0; display:block; padding:10px 22px; background:var(--surface);
+  border:1px solid var(--rule); border-radius:3px; cursor:pointer;
+  font-family:var(--mono); font-size:12px; letter-spacing:.05em; color:var(--ink-2);
+}
+.more:hover{border-color:var(--accent); color:var(--accent)}
+.empty{padding:48px 8px; text-align:center; color:var(--ink-3); font-family:var(--serif); font-style:italic; font-size:17px}
+
+.loading{padding:80px 26px; text-align:center; font-family:var(--mono); font-size:12px; color:var(--ink-3); letter-spacing:.08em; text-transform:uppercase}
+
+.colophon{
+  max-width:1420px; margin:0 auto; padding:26px; border-top:1px solid var(--rule);
+  font-size:13px; color:var(--ink-2); max-width:1420px;
+}
+.colophon .inner{max-width:70ch}
+.colophon h3{font-family:var(--serif); font-size:16px; margin:0 0 6px}
+.colophon p{margin:0 0 10px}
+.colophon code{font-family:var(--mono); font-size:12px}
+
+@media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important} }
+</style>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="wordmark">
+      <h1>VetPOC Case Reporter</h1>
+      <div class="sub">Five thousand adjudicated compliance cases, under a constitution of ninety-eight provisions</div>
+    </div>
+    <div class="imprint">
+      <span>Corpus 1.0.0</span>
+      <span>Rulebook vetpoc-rb-000001</span>
+      <span class="ok">Conformance 26/26</span>
+      <span class="ok">Mutants 12/12 killed</span>
+      <span>CC BY 4.0</span>
+    </div>
+  </div>
+</header>
+
+<dl class="figures" id="figures"></dl>
+
+<main class="shell">
+  <aside class="rail" id="rail"></aside>
+  <section>
+    <div class="resultbar">
+      <div class="count" id="count">Loading…</div>
+      <div class="sortnote">Chronological — the store grows down the page</div>
+    </div>
+    <div class="cases" id="cases"><div class="loading">Decompressing corpus…</div></div>
+    <button class="more" id="more" hidden>Show 50 more</button>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="inner">
+    <h3>How to read a case</h3>
+    <p>Each entry is a headnote generated from the executed trace, not from an authored expectation. <b>Why this case exists</b> states the mechanism it was constructed to exercise; <b>what happens</b> states what the reference engine did with it; the tags at the foot name the axioms of the architectural contract (A1–A9) and the conformance checks (VC-01–VC-26) the case exercises.</p>
+    <p>A case bordered in oxblood engages an <b>absolute provision</b> — a statutory or safety floor no precedent of any authority can soften. Those cases are denied at once, before any retrieval runs, and no escalation path exists.</p>
+    <p>The corpus, its constitution, the reference engine, the conformance suite and the mutation matrix are open source: Apache-2.0 for code, CC BY 4.0 for data.</p>
+  </div>
+</footer>
