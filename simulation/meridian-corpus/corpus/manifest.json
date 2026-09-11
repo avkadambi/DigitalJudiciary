@@ -1,0 +1,60 @@
+{
+  "corpus_version": "2.1.0",
+  "generator_seed": 20260905,
+  "cases": 6000,
+  "opening_store": 211,
+  "final_store": 1136,
+  "records_written_in_run": 925,
+  "docket_entries": 408,
+  "like_case_pairs": 240,
+  "consolidation_classes": 65,
+  "construction_anomalies": 0,
+  "routes": {
+    "bound_by_precedent": 1201,
+    "fresh_interpretation": 3726,
+    "fresh_interpretation_after_tie": 135,
+    "docketed_declined": 312,
+    "absolute_shortcircuit": 397,
+    "consolidated_citation": 133,
+    "docketed_null": 96
+  },
+  "decisions": {
+    "permit": 3714,
+    "permit_conditional": 733,
+    "deny": 1553
+  },
+  "categories": {
+    "A-routine": 696,
+    "B-plain-deny": 372,
+    "C-precedent": 576,
+    "D-ordering": 204,
+    "E-distinguish": 300,
+    "F-absolute": 348,
+    "G-riskowner": 300,
+    "H-control-plane": 150,
+    "I-lapsed": 102,
+    "J-novel": 102,
+    "K-tie": 48,
+    "P-pressure": 222,
+    "L-consolidated": 198,
+    "M-supersession": 180,
+    "N-standing": 144,
+    "Q-docket": 312,
+    "R-reporter": 108,
+    "S-acknowledgement": 132,
+    "T-audit-register": 96,
+    "U-renewal": 156,
+    "V-likecase": 480,
+    "W-crossjurisdiction": 240,
+    "X-coldstart": 144,
+    "Y-adversarial": 210,
+    "Z-inexpressibility": 180
+  },
+  "sha256": {
+    "cases.json": "f14eb8d181da414980973e871da276e3bb29e59dbbbd9d7a59ad05ba15303b96",
+    "cases.jsonl": "06c307b54b460ce95a76f25b599161b348d3d67ef2527cc1cd311ba83fffea18",
+    "store_seed_initial.json": "7d29f9c99ecc8328c4ad4cde4b8d8f17c007db43c8c703d63936e14d1518a8d7",
+    "store_seed.json": "cda8bc1adee2c3bf03ac3dbdcc82a45d932402da4d9d356b7ae59b9342264db0",
+    "docket.json": "9406b89bbbd0050cfa7b39b8e39d01caf6017f25a8833e7d67820c081aa55c51"
+  }
+}

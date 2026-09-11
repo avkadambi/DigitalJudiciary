@@ -1,0 +1,48 @@
+Meridian Financial Constitution Corpus
+Copyright 2026 Arun Kadambi and Venkat Kuppuswamy
+
+This product includes software developed for the Digital Judiciary programme.
+
+Code is licensed under the Apache License, Version 2.0 (see LICENSE).
+Data is licensed under CC BY 4.0 (see LICENSE-DATA).
+
+Third-party material referenced in this corpus:
+
+  US federal law and regulation — Title 12, 15, 17, 31 U.S.C. and the
+  corresponding CFR parts, and Federal Register notices — are US Government
+  works, public domain within the United States under 17 U.S.C. 105.
+  NIST publications (SP 800-52, 800-53 via usnistgov/oscal-content (CC0),
+  800-57, 800-131A, 800-218, AI RMF 1.0) are likewise public domain.
+  EU legal texts (GDPR, DORA and RTS (EU) 2025/301, the AI Act and the AI
+  Omnibus) are reused under Commission Decision 2011/833/EU.
+  California Civil Code Sections 1798.100 et seq. is a public state statute.
+  OFAC sanctions list files are US Government works; no terms of use are
+  published with them. UK OFSI list data is under the Open Government
+  Licence v3.0. EU FSF list data is fetched from webgate.ec.europa.eu under
+  Decision 2011/833/EU and NOT via OpenSanctions, whose redistribution is
+  CC BY-NC 4.0 with a commercial-licence condition.
+  SEC EDGAR material is published by the SEC as public information that may be
+  copied or further distributed without the SEC's permission.
+  Anthropic, Claude's Constitution (January 2026) is CC0.
+  FATF typologies and Recommendation 16 are CC BY 4.0.
+  SLSA v1.0 (OpenSSF) is CC BY 4.0. SPDX licence identifiers are CC0.
+  CLDR currency data is used under the Unicode Licence v3.
+  Conformance-suite structure is drawn from rust_decimal (MIT), the JSR-354
+  TCK (Apache-2.0), the PostgreSQL isolation tests (PostgreSQL Licence),
+  Hermitage (CC BY 4.0) and TigerBeetle status enums (Apache-2.0).
+
+  NOT reproduced in any form, in whole or in part:
+  PCI DSS v4.0.1 (free download under a personal, non-commercial,
+  no-redistribution licence), the NACHA Operating Rules (no redistribution),
+  ISO/IEC 27001 and 27002 and ISO 4217 code-list files, SWIFT standards
+  documentation, Visa and Mastercard operating rules and specifications, the
+  AICPA Trust Services Criteria (account-gated, no reuse grant), the OWASP API
+  Top 10 text (CC BY-SA), and the IBM/Cowlishaw decTest vectors (no OSI
+  licence and no redistribution grant). Only their identifiers are cited, and
+  an identifier is a fact.
+
+  FRED (Federal Reserve Bank of St. Louis) is excluded entirely: its terms of
+  use forbid use of the data in machine-learning training.
+
+  Thirty-seven provisions are reproduced from the programme's own released
+  Meridian Financial pack with their text and absolute flags unchanged.

@@ -1,0 +1,63 @@
+cff-version: 1.2.0
+title: Meridian Financial Constitution Corpus
+message: >-
+  If you use this corpus, please cite it and the Digital Judiciary programme
+  papers it instantiates.
+type: dataset
+version: 2.4.0
+license: CC-BY-4.0
+license-url: https://creativecommons.org/licenses/by/4.0/
+authors:
+  - family-names: Kadambi
+    given-names: Arun
+  - family-names: Kuppuswamy
+    given-names: Venkat
+    affiliation: >-
+      D'Amore-McKim School of Business, Northeastern University
+abstract: >-
+  An open 6,000-case conformance corpus for governing software change in a
+  regulated financial institution under a Digital Judiciary. A constitution of
+  116 provisions (24 absolute) across financial-crime screening and BSA/AML,
+  payment card data, secrets and cryptography, software supply chain, change
+  control, ledger integrity and idempotency, numeric precision, operational
+  resilience and ICT third-party risk, data privacy and residency, credit
+  decisioning and fair lending, AI governance, agent-authored change,
+  consumer protection, audit evidence, and governance of the judiciary itself.
+  It is a superset of the released Meridian Financial pack: its thirty-seven
+  provisions, each citing a real regulatory instrument, are reproduced with
+  text and absolute flags unchanged. Seven findings against them — including
+  that SR 11-7 was superseded on 17 April 2026, that two CFPB circulars were
+  withdrawn, that the Reg B effects test was removed effective 21 July 2026,
+  and that one absolute provision is drafted stricter than the rule it cites —
+  are filed as draft amendments rather than applied. Ground truth is computed
+  from an executed trace. Ships a reference adjudication engine, 26 conformance
+  checks with a strengthened pressure-invariance check, a mutation matrix, and
+  a five-pack profile comparison.
+keywords:
+  - compliance
+  - precedent
+  - policy-as-code
+  - fintech
+  - financial regulation
+  - model risk management
+  - fair lending
+  - conformance testing
+references:
+  - type: article
+    title: >-
+      When Retrieval Binds: Appraisal, Authenticity and Disposition in
+      Automated Compliance Decisions
+    authors:
+      - family-names: Kadambi
+        given-names: Arun
+      - family-names: Kuppuswamy
+        given-names: Venkat
+  - type: article
+    title: >-
+      Case-Base Formation for Precedential Constraint: Standing, Admission
+      Rules, and the Reason Model
+    authors:
+      - family-names: Kadambi
+        given-names: Arun
+      - family-names: Kuppuswamy
+        given-names: Venkat

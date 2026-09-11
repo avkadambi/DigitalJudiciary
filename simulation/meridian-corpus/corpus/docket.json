@@ -1,0 +1,4708 @@
+{
+  "entries": [
+    {
+      "case": "MF-Q-00006",
+      "route": "declined",
+      "ts": 1006,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00070",
+      "route": "null",
+      "ts": 1070,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00094",
+      "route": "declined",
+      "ts": 1094,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00115",
+      "route": "declined",
+      "ts": 1115,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00130",
+      "route": "declined",
+      "ts": 1130,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00134",
+      "route": "null",
+      "ts": 1134,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00141",
+      "route": "declined",
+      "ts": 1141,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00151",
+      "route": "null",
+      "ts": 1151,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00163",
+      "route": "declined",
+      "ts": 1163,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00208",
+      "route": "declined",
+      "ts": 1208,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00209",
+      "route": "declined",
+      "ts": 1209,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00214",
+      "route": "declined",
+      "ts": 1214,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00223",
+      "route": "declined",
+      "ts": 1223,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00239",
+      "route": "declined",
+      "ts": 1239,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00242",
+      "route": "null",
+      "ts": 1242,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00263",
+      "route": "declined",
+      "ts": 1263,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00313",
+      "route": "declined",
+      "ts": 1313,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00318",
+      "route": "declined",
+      "ts": 1318,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00326",
+      "route": "declined",
+      "ts": 1326,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00347",
+      "route": "declined",
+      "ts": 1347,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00350",
+      "route": "declined",
+      "ts": 1350,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00358",
+      "route": "null",
+      "ts": 1358,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00364",
+      "route": "declined",
+      "ts": 1364,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00402",
+      "route": "null",
+      "ts": 1402,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00438",
+      "route": "null",
+      "ts": 1438,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00444",
+      "route": "declined",
+      "ts": 1444,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00467",
+      "route": "declined",
+      "ts": 1467,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00468",
+      "route": "declined",
+      "ts": 1468,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00474",
+      "route": "declined",
+      "ts": 1474,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00481",
+      "route": "declined",
+      "ts": 1481,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00494",
+      "route": "null",
+      "ts": 1494,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00503",
+      "route": "declined",
+      "ts": 1503,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00506",
+      "route": "null",
+      "ts": 1506,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00513",
+      "route": "declined",
+      "ts": 1513,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00514",
+      "route": "declined",
+      "ts": 1514,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00525",
+      "route": "declined",
+      "ts": 1525,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00589",
+      "route": "declined",
+      "ts": 1589,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00590",
+      "route": "declined",
+      "ts": 1590,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00599",
+      "route": "declined",
+      "ts": 1599,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00634",
+      "route": "declined",
+      "ts": 1634,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00638",
+      "route": "declined",
+      "ts": 1638,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00681",
+      "route": "declined",
+      "ts": 1681,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00692",
+      "route": "declined",
+      "ts": 1692,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00693",
+      "route": "null",
+      "ts": 1693,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00718",
+      "route": "null",
+      "ts": 1718,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00733",
+      "route": "null",
+      "ts": 1733,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00746",
+      "route": "declined",
+      "ts": 1746,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00747",
+      "route": "declined",
+      "ts": 1747,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00801",
+      "route": "declined",
+      "ts": 1801,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00808",
+      "route": "declined",
+      "ts": 1808,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00827",
+      "route": "null",
+      "ts": 1827,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-00870",
+      "route": "declined",
+      "ts": 1870,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00914",
+      "route": "null",
+      "ts": 1914,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00930",
+      "route": "null",
+      "ts": 1930,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00948",
+      "route": "null",
+      "ts": 1948,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-00973",
+      "route": "null",
+      "ts": 1973,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01003",
+      "route": "declined",
+      "ts": 2003,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01017",
+      "route": "declined",
+      "ts": 2017,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-01048",
+      "route": "declined",
+      "ts": 2048,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01064",
+      "route": "declined",
+      "ts": 2064,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01066",
+      "route": "declined",
+      "ts": 2066,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01074",
+      "route": "declined",
+      "ts": 2074,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01108",
+      "route": "declined",
+      "ts": 2108,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01120",
+      "route": "declined",
+      "ts": 2120,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01164",
+      "route": "null",
+      "ts": 2164,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-01196",
+      "route": "declined",
+      "ts": 2196,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01250",
+      "route": "null",
+      "ts": 2250,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01262",
+      "route": "declined",
+      "ts": 2262,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-01285",
+      "route": "declined",
+      "ts": 2285,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01300",
+      "route": "declined",
+      "ts": 2300,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01345",
+      "route": "declined",
+      "ts": 2345,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01383",
+      "route": "declined",
+      "ts": 2383,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01408",
+      "route": "declined",
+      "ts": 2408,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01435",
+      "route": "null",
+      "ts": 2435,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01463",
+      "route": "declined",
+      "ts": 2463,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01482",
+      "route": "declined",
+      "ts": 2482,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01488",
+      "route": "declined",
+      "ts": 2488,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01505",
+      "route": "declined",
+      "ts": 2505,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01538",
+      "route": "declined",
+      "ts": 2538,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01561",
+      "route": "declined",
+      "ts": 2561,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01615",
+      "route": "declined",
+      "ts": 2615,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01631",
+      "route": "declined",
+      "ts": 2631,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01649",
+      "route": "declined",
+      "ts": 2649,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-01653",
+      "route": "declined",
+      "ts": 2653,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01676",
+      "route": "declined",
+      "ts": 2676,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01678",
+      "route": "null",
+      "ts": 2678,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01700",
+      "route": "null",
+      "ts": 2700,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-01731",
+      "route": "declined",
+      "ts": 2731,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01755",
+      "route": "null",
+      "ts": 2755,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01779",
+      "route": "declined",
+      "ts": 2779,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01799",
+      "route": "declined",
+      "ts": 2799,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01803",
+      "route": "null",
+      "ts": 2803,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01821",
+      "route": "declined",
+      "ts": 2821,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01823",
+      "route": "null",
+      "ts": 2823,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01831",
+      "route": "declined",
+      "ts": 2831,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01848",
+      "route": "declined",
+      "ts": 2848,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01850",
+      "route": "declined",
+      "ts": 2850,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-01920",
+      "route": "declined",
+      "ts": 2920,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01941",
+      "route": "declined",
+      "ts": 2941,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01986",
+      "route": "declined",
+      "ts": 2986,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-01996",
+      "route": "declined",
+      "ts": 2996,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02010",
+      "route": "declined",
+      "ts": 3010,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02023",
+      "route": "null",
+      "ts": 3023,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02067",
+      "route": "declined",
+      "ts": 3067,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02110",
+      "route": "declined",
+      "ts": 3110,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02132",
+      "route": "declined",
+      "ts": 3132,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02134",
+      "route": "declined",
+      "ts": 3134,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02136",
+      "route": "declined",
+      "ts": 3136,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02174",
+      "route": "declined",
+      "ts": 3174,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02191",
+      "route": "null",
+      "ts": 3191,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02207",
+      "route": "null",
+      "ts": 3207,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02234",
+      "route": "declined",
+      "ts": 3234,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02250",
+      "route": "declined",
+      "ts": 3250,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02298",
+      "route": "declined",
+      "ts": 3298,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02341",
+      "route": "declined",
+      "ts": 3341,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02361",
+      "route": "declined",
+      "ts": 3361,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02390",
+      "route": "declined",
+      "ts": 3390,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02400",
+      "route": "null",
+      "ts": 3400,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02425",
+      "route": "declined",
+      "ts": 3425,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02469",
+      "route": "declined",
+      "ts": 3469,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02471",
+      "route": "declined",
+      "ts": 3471,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02514",
+      "route": "declined",
+      "ts": 3514,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02556",
+      "route": "declined",
+      "ts": 3556,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02587",
+      "route": "declined",
+      "ts": 3587,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02589",
+      "route": "declined",
+      "ts": 3589,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02613",
+      "route": "declined",
+      "ts": 3613,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02634",
+      "route": "declined",
+      "ts": 3634,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02666",
+      "route": "null",
+      "ts": 3666,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02673",
+      "route": "declined",
+      "ts": 3673,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02678",
+      "route": "declined",
+      "ts": 3678,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02694",
+      "route": "declined",
+      "ts": 3694,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02699",
+      "route": "declined",
+      "ts": 3699,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02722",
+      "route": "declined",
+      "ts": 3722,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02725",
+      "route": "declined",
+      "ts": 3725,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02755",
+      "route": "null",
+      "ts": 3755,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02761",
+      "route": "declined",
+      "ts": 3761,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02780",
+      "route": "declined",
+      "ts": 3780,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02781",
+      "route": "null",
+      "ts": 3781,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02788",
+      "route": "declined",
+      "ts": 3788,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02792",
+      "route": "declined",
+      "ts": 3792,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02801",
+      "route": "declined",
+      "ts": 3801,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02807",
+      "route": "declined",
+      "ts": 3807,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02835",
+      "route": "declined",
+      "ts": 3835,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02844",
+      "route": "declined",
+      "ts": 3844,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02855",
+      "route": "declined",
+      "ts": 3855,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02870",
+      "route": "declined",
+      "ts": 3870,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02872",
+      "route": "declined",
+      "ts": 3872,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02892",
+      "route": "declined",
+      "ts": 3892,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02894",
+      "route": "null",
+      "ts": 3894,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02899",
+      "route": "declined",
+      "ts": 3899,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02902",
+      "route": "declined",
+      "ts": 3902,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02903",
+      "route": "declined",
+      "ts": 3903,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02904",
+      "route": "declined",
+      "ts": 3904,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02905",
+      "route": "null",
+      "ts": 3905,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02914",
+      "route": "null",
+      "ts": 3914,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02918",
+      "route": "null",
+      "ts": 3918,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02922",
+      "route": "declined",
+      "ts": 3922,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02935",
+      "route": "null",
+      "ts": 3935,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-02952",
+      "route": "declined",
+      "ts": 3952,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02960",
+      "route": "declined",
+      "ts": 3960,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02964",
+      "route": "declined",
+      "ts": 3964,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02972",
+      "route": "declined",
+      "ts": 3972,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02980",
+      "route": "declined",
+      "ts": 3980,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-02987",
+      "route": "declined",
+      "ts": 3987,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03003",
+      "route": "declined",
+      "ts": 4003,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03017",
+      "route": "null",
+      "ts": 4017,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03020",
+      "route": "declined",
+      "ts": 4020,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03025",
+      "route": "declined",
+      "ts": 4025,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03048",
+      "route": "declined",
+      "ts": 4048,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03058",
+      "route": "declined",
+      "ts": 4058,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03069",
+      "route": "declined",
+      "ts": 4069,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03084",
+      "route": "declined",
+      "ts": 4084,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03090",
+      "route": "null",
+      "ts": 4090,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03125",
+      "route": "declined",
+      "ts": 4125,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03127",
+      "route": "declined",
+      "ts": 4127,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03128",
+      "route": "declined",
+      "ts": 4128,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03129",
+      "route": "null",
+      "ts": 4129,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03140",
+      "route": "declined",
+      "ts": 4140,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03150",
+      "route": "declined",
+      "ts": 4150,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03164",
+      "route": "null",
+      "ts": 4164,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03184",
+      "route": "declined",
+      "ts": 4184,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03216",
+      "route": "null",
+      "ts": 4216,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03243",
+      "route": "declined",
+      "ts": 4243,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03261",
+      "route": "declined",
+      "ts": 4261,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03264",
+      "route": "declined",
+      "ts": 4264,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03286",
+      "route": "declined",
+      "ts": 4286,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03295",
+      "route": "null",
+      "ts": 4295,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03312",
+      "route": "declined",
+      "ts": 4312,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03356",
+      "route": "declined",
+      "ts": 4356,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03367",
+      "route": "null",
+      "ts": 4367,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03373",
+      "route": "declined",
+      "ts": 4373,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03392",
+      "route": "declined",
+      "ts": 4392,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03399",
+      "route": "declined",
+      "ts": 4399,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03401",
+      "route": "declined",
+      "ts": 4401,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03402",
+      "route": "declined",
+      "ts": 4402,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03434",
+      "route": "null",
+      "ts": 4434,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03450",
+      "route": "null",
+      "ts": 4450,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03458",
+      "route": "null",
+      "ts": 4458,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03487",
+      "route": "declined",
+      "ts": 4487,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03495",
+      "route": "declined",
+      "ts": 4495,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03497",
+      "route": "declined",
+      "ts": 4497,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03500",
+      "route": "declined",
+      "ts": 4500,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03509",
+      "route": "null",
+      "ts": 4509,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03516",
+      "route": "declined",
+      "ts": 4516,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03528",
+      "route": "null",
+      "ts": 4528,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03560",
+      "route": "declined",
+      "ts": 4560,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03586",
+      "route": "declined",
+      "ts": 4586,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03593",
+      "route": "declined",
+      "ts": 4593,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03594",
+      "route": "declined",
+      "ts": 4594,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03633",
+      "route": "declined",
+      "ts": 4633,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03634",
+      "route": "declined",
+      "ts": 4634,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03645",
+      "route": "declined",
+      "ts": 4645,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03666",
+      "route": "null",
+      "ts": 4666,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03672",
+      "route": "null",
+      "ts": 4672,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03684",
+      "route": "declined",
+      "ts": 4684,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03694",
+      "route": "declined",
+      "ts": 4694,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03711",
+      "route": "null",
+      "ts": 4711,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03731",
+      "route": "declined",
+      "ts": 4731,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03757",
+      "route": "null",
+      "ts": 4757,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03764",
+      "route": "declined",
+      "ts": 4764,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03771",
+      "route": "declined",
+      "ts": 4771,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03781",
+      "route": "declined",
+      "ts": 4781,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03782",
+      "route": "declined",
+      "ts": 4782,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03796",
+      "route": "declined",
+      "ts": 4796,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03818",
+      "route": "declined",
+      "ts": 4818,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03820",
+      "route": "null",
+      "ts": 4820,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03836",
+      "route": "null",
+      "ts": 4836,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03854",
+      "route": "null",
+      "ts": 4854,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03870",
+      "route": "declined",
+      "ts": 4870,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03871",
+      "route": "declined",
+      "ts": 4871,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03899",
+      "route": "declined",
+      "ts": 4899,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03906",
+      "route": "declined",
+      "ts": 4906,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03929",
+      "route": "null",
+      "ts": 4929,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03931",
+      "route": "declined",
+      "ts": 4931,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03938",
+      "route": "declined",
+      "ts": 4938,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03950",
+      "route": "declined",
+      "ts": 4950,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03953",
+      "route": "declined",
+      "ts": 4953,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-03956",
+      "route": "declined",
+      "ts": 4956,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03979",
+      "route": "null",
+      "ts": 4979,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-03998",
+      "route": "declined",
+      "ts": 4998,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04017",
+      "route": "declined",
+      "ts": 5017,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04031",
+      "route": "declined",
+      "ts": 5031,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04036",
+      "route": "null",
+      "ts": 5036,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04049",
+      "route": "declined",
+      "ts": 5049,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04060",
+      "route": "declined",
+      "ts": 5060,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04099",
+      "route": "declined",
+      "ts": 5099,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04118",
+      "route": "null",
+      "ts": 5118,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04126",
+      "route": "declined",
+      "ts": 5126,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04146",
+      "route": "declined",
+      "ts": 5146,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04158",
+      "route": "declined",
+      "ts": 5158,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04164",
+      "route": "declined",
+      "ts": 5164,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04166",
+      "route": "declined",
+      "ts": 5166,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04168",
+      "route": "declined",
+      "ts": 5168,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04169",
+      "route": "null",
+      "ts": 5169,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04189",
+      "route": "declined",
+      "ts": 5189,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04191",
+      "route": "declined",
+      "ts": 5191,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04193",
+      "route": "null",
+      "ts": 5193,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04222",
+      "route": "null",
+      "ts": 5222,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04236",
+      "route": "null",
+      "ts": 5236,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04278",
+      "route": "declined",
+      "ts": 5278,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04301",
+      "route": "declined",
+      "ts": 5301,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04310",
+      "route": "declined",
+      "ts": 5310,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04337",
+      "route": "null",
+      "ts": 5337,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04342",
+      "route": "declined",
+      "ts": 5342,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04349",
+      "route": "declined",
+      "ts": 5349,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04350",
+      "route": "declined",
+      "ts": 5350,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04364",
+      "route": "declined",
+      "ts": 5364,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04367",
+      "route": "declined",
+      "ts": 5367,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04397",
+      "route": "declined",
+      "ts": 5397,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04432",
+      "route": "declined",
+      "ts": 5432,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04445",
+      "route": "null",
+      "ts": 5445,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04453",
+      "route": "declined",
+      "ts": 5453,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04459",
+      "route": "declined",
+      "ts": 5459,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04463",
+      "route": "declined",
+      "ts": 5463,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04478",
+      "route": "declined",
+      "ts": 5478,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04483",
+      "route": "declined",
+      "ts": 5483,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04504",
+      "route": "declined",
+      "ts": 5504,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04505",
+      "route": "declined",
+      "ts": 5505,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04509",
+      "route": "null",
+      "ts": 5509,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04517",
+      "route": "declined",
+      "ts": 5517,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04537",
+      "route": "null",
+      "ts": 5537,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04560",
+      "route": "declined",
+      "ts": 5560,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04574",
+      "route": "declined",
+      "ts": 5574,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04576",
+      "route": "declined",
+      "ts": 5576,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04584",
+      "route": "declined",
+      "ts": 5584,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04597",
+      "route": "declined",
+      "ts": 5597,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04602",
+      "route": "null",
+      "ts": 5602,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04606",
+      "route": "declined",
+      "ts": 5606,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04619",
+      "route": "declined",
+      "ts": 5619,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04637",
+      "route": "declined",
+      "ts": 5637,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04656",
+      "route": "declined",
+      "ts": 5656,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04661",
+      "route": "declined",
+      "ts": 5661,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04700",
+      "route": "declined",
+      "ts": 5700,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04729",
+      "route": "null",
+      "ts": 5729,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04754",
+      "route": "declined",
+      "ts": 5754,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04788",
+      "route": "declined",
+      "ts": 5788,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04791",
+      "route": "declined",
+      "ts": 5791,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04797",
+      "route": "declined",
+      "ts": 5797,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04801",
+      "route": "null",
+      "ts": 5801,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04825",
+      "route": "declined",
+      "ts": 5825,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04827",
+      "route": "declined",
+      "ts": 5827,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04829",
+      "route": "null",
+      "ts": 5829,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04836",
+      "route": "declined",
+      "ts": 5836,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04846",
+      "route": "declined",
+      "ts": 5846,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04848",
+      "route": "declined",
+      "ts": 5848,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04849",
+      "route": "declined",
+      "ts": 5849,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04852",
+      "route": "declined",
+      "ts": 5852,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04858",
+      "route": "declined",
+      "ts": 5858,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04863",
+      "route": "null",
+      "ts": 5863,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04866",
+      "route": "declined",
+      "ts": 5866,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04883",
+      "route": "declined",
+      "ts": 5883,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04884",
+      "route": "declined",
+      "ts": 5884,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04894",
+      "route": "null",
+      "ts": 5894,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04898",
+      "route": "declined",
+      "ts": 5898,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04906",
+      "route": "declined",
+      "ts": 5906,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04910",
+      "route": "declined",
+      "ts": 5910,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04918",
+      "route": "null",
+      "ts": 5918,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04943",
+      "route": "declined",
+      "ts": 5943,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04952",
+      "route": "declined",
+      "ts": 5952,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04971",
+      "route": "declined",
+      "ts": 5971,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-04978",
+      "route": "declined",
+      "ts": 5978,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-04982",
+      "route": "null",
+      "ts": 5982,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05009",
+      "route": "declined",
+      "ts": 6009,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05010",
+      "route": "declined",
+      "ts": 6010,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05029",
+      "route": "null",
+      "ts": 6029,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05030",
+      "route": "null",
+      "ts": 6030,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05057",
+      "route": "declined",
+      "ts": 6057,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05058",
+      "route": "null",
+      "ts": 6058,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05059",
+      "route": "declined",
+      "ts": 6059,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05073",
+      "route": "null",
+      "ts": 6073,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05081",
+      "route": "declined",
+      "ts": 6081,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05085",
+      "route": "null",
+      "ts": 6085,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05101",
+      "route": "null",
+      "ts": 6101,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05110",
+      "route": "declined",
+      "ts": 6110,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05111",
+      "route": "declined",
+      "ts": 6111,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05117",
+      "route": "declined",
+      "ts": 6117,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05134",
+      "route": "declined",
+      "ts": 6134,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05138",
+      "route": "declined",
+      "ts": 6138,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05159",
+      "route": "declined",
+      "ts": 6159,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05166",
+      "route": "declined",
+      "ts": 6166,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05176",
+      "route": "declined",
+      "ts": 6176,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05184",
+      "route": "declined",
+      "ts": 6184,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05210",
+      "route": "declined",
+      "ts": 6210,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05261",
+      "route": "declined",
+      "ts": 6261,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05274",
+      "route": "declined",
+      "ts": 6274,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05305",
+      "route": "declined",
+      "ts": 6305,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05320",
+      "route": "declined",
+      "ts": 6320,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05323",
+      "route": "null",
+      "ts": 6323,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05332",
+      "route": "null",
+      "ts": 6332,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05333",
+      "route": "declined",
+      "ts": 6333,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05344",
+      "route": "declined",
+      "ts": 6344,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05359",
+      "route": "declined",
+      "ts": 6359,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05394",
+      "route": "declined",
+      "ts": 6394,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05395",
+      "route": "declined",
+      "ts": 6395,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05405",
+      "route": "declined",
+      "ts": 6405,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05406",
+      "route": "declined",
+      "ts": 6406,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05412",
+      "route": "null",
+      "ts": 6412,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05425",
+      "route": "null",
+      "ts": 6425,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05432",
+      "route": "declined",
+      "ts": 6432,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05472",
+      "route": "declined",
+      "ts": 6472,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05482",
+      "route": "declined",
+      "ts": 6482,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05506",
+      "route": "declined",
+      "ts": 6506,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05522",
+      "route": "declined",
+      "ts": 6522,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05532",
+      "route": "declined",
+      "ts": 6532,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05534",
+      "route": "null",
+      "ts": 6534,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05538",
+      "route": "declined",
+      "ts": 6538,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05555",
+      "route": "null",
+      "ts": 6555,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05559",
+      "route": "declined",
+      "ts": 6559,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05606",
+      "route": "declined",
+      "ts": 6606,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05619",
+      "route": "null",
+      "ts": 6619,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05621",
+      "route": "declined",
+      "ts": 6621,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05637",
+      "route": "declined",
+      "ts": 6637,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05656",
+      "route": "declined",
+      "ts": 6656,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05659",
+      "route": "null",
+      "ts": 6659,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05681",
+      "route": "null",
+      "ts": 6681,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05685",
+      "route": "null",
+      "ts": 6685,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05694",
+      "route": "declined",
+      "ts": 6694,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05697",
+      "route": "declined",
+      "ts": 6697,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05740",
+      "route": "declined",
+      "ts": 6740,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05763",
+      "route": "declined",
+      "ts": 6763,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05769",
+      "route": "declined",
+      "ts": 6769,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05781",
+      "route": "declined",
+      "ts": 6781,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05794",
+      "route": "declined",
+      "ts": 6794,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05796",
+      "route": "declined",
+      "ts": 6796,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05799",
+      "route": "declined",
+      "ts": 6799,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05807",
+      "route": "declined",
+      "ts": 6807,
+      "rules": [
+        "MF-575"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05815",
+      "route": "null",
+      "ts": 6815,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05846",
+      "route": "declined",
+      "ts": 6846,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05867",
+      "route": "declined",
+      "ts": 6867,
+      "rules": [
+        "MF-542"
+      ],
+      "rating": 20,
+      "tau": 32,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05879",
+      "route": "declined",
+      "ts": 6879,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05894",
+      "route": "null",
+      "ts": 6894,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05898",
+      "route": "null",
+      "ts": 6898,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05899",
+      "route": "declined",
+      "ts": 6899,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05901",
+      "route": "declined",
+      "ts": 6901,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05908",
+      "route": "declined",
+      "ts": 6908,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05910",
+      "route": "declined",
+      "ts": 6910,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05912",
+      "route": "declined",
+      "ts": 6912,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05924",
+      "route": "declined",
+      "ts": 6924,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05929",
+      "route": "null",
+      "ts": 6929,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05937",
+      "route": "declined",
+      "ts": 6937,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05946",
+      "route": "declined",
+      "ts": 6946,
+      "rules": [
+        "MF-533"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05948",
+      "route": "declined",
+      "ts": 6948,
+      "rules": [
+        "MF-556"
+      ],
+      "rating": 20,
+      "tau": 26,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05953",
+      "route": "declined",
+      "ts": 6953,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05957",
+      "route": "declined",
+      "ts": 6957,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05964",
+      "route": "declined",
+      "ts": 6964,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-T-05970",
+      "route": "declined",
+      "ts": 6970,
+      "rules": [
+        "MF-570"
+      ],
+      "rating": 20,
+      "tau": 24,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05982",
+      "route": "declined",
+      "ts": 6982,
+      "rules": [
+        "MF-537"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    },
+    {
+      "case": "MF-Q-05983",
+      "route": "declined",
+      "ts": 6983,
+      "rules": [
+        "MF-572"
+      ],
+      "rating": 20,
+      "tau": 25,
+      "consulted": [],
+      "rulebook_version": "meridian-rb-000001"
+    }
+  ]
+}

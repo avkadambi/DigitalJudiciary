@@ -1,0 +1,54 @@
+{
+  "organizations": [
+    {
+      "org_id": "meridian",
+      "name": "Meridian Financial",
+      "principals": [
+        {
+          "principal_id": "lawmaker:board-risk-committee",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "board risk committee"
+        },
+        {
+          "principal_id": "lawmaker:compliance-policy-office",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "compliance policy office"
+        },
+        {
+          "principal_id": "lawmaker:model-risk-committee",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "model risk committee"
+        },
+        {
+          "principal_id": "judge:J1-first-instance",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "J1 first instance"
+        },
+        {
+          "principal_id": "judge:J2-review",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "J2 review"
+        },
+        {
+          "principal_id": "judge:J3-en-banc",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "J3 en banc"
+        },
+        {
+          "principal_id": "riskowner:chief-risk-officer",
+          "branch": "riskowner",
+          "kind": "human",
+          "role": "chief risk officer"
+        }
+      ]
+    }
+  ],
+  "disjointness": "A1. Each principal appears once and holds exactly one branch. No principal appears under two, and the roster is what CC-01 checks rather than an assurance in prose.",
+  "founding_scope": "meridian"
+}

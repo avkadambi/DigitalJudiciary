@@ -1,0 +1,2984 @@
+{
+  "MF-101": {
+    "comply": [
+      "beneficial_ownership_collected_before_entity_funding",
+      "cip_completed_before_funding",
+      "fuzzy_match_threshold_change_validated_before_release",
+      "list_source_is_the_authoritative_publication",
+      "match_disposition_recorded_with_reviewer_identity",
+      "mf_101_control_evidenced",
+      "sar_queue_access_restricted_to_authorized_role",
+      "screening_invoked_on_every_payment_leg",
+      "screening_list_refreshed_within_declared_interval"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "mf_101_control_absent",
+      "monitoring_rule_disabled_without_tuning_study",
+      "sar_existence_disclosed_to_subject",
+      "screening_bypassed_for_repeat_beneficiary",
+      "screening_served_from_cache_older_than_declared_interval"
+    ]
+  },
+  "MF-102": {
+    "comply": [
+      "beneficial_ownership_collected_before_entity_funding",
+      "blocked_property_report_filed_within_statutory_deadline",
+      "cip_completed_before_funding",
+      "fuzzy_match_threshold_change_validated_before_release",
+      "match_disposition_recorded_with_reviewer_identity",
+      "mf_102_control_evidenced",
+      "monitoring_rule_retirement_backed_by_tuning_study",
+      "sar_queue_access_restricted_to_authorized_role",
+      "travel_rule_data_accompanies_qualifying_transfer"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "blocked_property_report_deadline_missed",
+      "mf_102_control_absent",
+      "monitoring_rule_disabled_without_tuning_study",
+      "sar_existence_disclosed_to_subject",
+      "travel_rule_fields_dropped_on_qualifying_transfer"
+    ]
+  },
+  "MF-103": {
+    "comply": [
+      "alert_backlog_aged_and_escalated",
+      "beneficial_ownership_collected_before_entity_funding",
+      "blocked_property_report_filed_within_statutory_deadline",
+      "mf_103_control_evidenced",
+      "monitoring_rule_retirement_backed_by_tuning_study",
+      "sar_queue_access_restricted_to_authorized_role",
+      "screening_invoked_on_every_payment_leg",
+      "screening_list_refreshed_within_declared_interval",
+      "travel_rule_data_accompanies_qualifying_transfer"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "blocked_property_report_deadline_missed",
+      "mf_103_control_absent",
+      "screening_allow_list_added_without_authority",
+      "screening_bypassed_for_repeat_beneficiary",
+      "travel_rule_fields_dropped_on_qualifying_transfer"
+    ]
+  },
+  "MF-104": {
+    "comply": [
+      "cde_scope_change_documented_and_reassessed",
+      "mf_104_control_evidenced",
+      "pan_masked_in_every_log_sink",
+      "pan_rendered_unreadable_at_rest",
+      "payment_page_script_integrity_verified",
+      "payment_page_script_inventoried_with_justification",
+      "sad_discarded_immediately_after_authorization",
+      "segmentation_between_cde_and_corporate_network_tested",
+      "tamper_detection_active_on_payment_page"
+    ],
+    "violate": [
+      "card_verification_code_retained_after_authorization",
+      "mf_104_control_absent",
+      "pan_written_unmasked_to_log",
+      "payment_page_script_added_without_integrity_check",
+      "tamper_detection_disabled_on_payment_page",
+      "track_data_or_pin_block_persisted"
+    ]
+  },
+  "MF-105": {
+    "comply": [
+      "adequacy_decision_or_article_46_safeguard_in_force",
+      "deletion_and_cryptographic_shredding_exercised",
+      "dpia_completed_before_new_high_risk_processing",
+      "eu_personal_data_remains_in_region",
+      "mf_105_control_evidenced",
+      "opt_out_state_honoured_on_the_new_surface",
+      "retention_decision_recorded_for_new_personal_field",
+      "sub_processor_region_declared_before_flow",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "cross_border_flow_without_recorded_mechanism",
+      "deletion_path_absent_for_new_store",
+      "eu_personal_data_replicated_outside_region",
+      "high_risk_processing_added_without_dpia",
+      "mf_105_control_absent",
+      "new_personal_field_retained_without_decision"
+    ]
+  },
+  "MF-106": {
+    "comply": [
+      "conceptual_soundness_review_recorded",
+      "independent_validation_completed_before_deployment",
+      "mf_106_control_evidenced",
+      "no_prohibited_basis_attribute_in_the_feature_set",
+      "ongoing_monitoring_thresholds_declared",
+      "outcome_parity_measured_and_documented",
+      "outcomes_analysis_recorded",
+      "parity_exception_time_boxed_with_a_named_owner",
+      "proxy_screen_run_over_the_candidate_features"
+    ],
+    "violate": [
+      "human_reviewable_contest_path_removed",
+      "mf_106_control_absent",
+      "principal_reasons_not_derivable_from_output",
+      "prohibited_basis_attribute_in_the_feature_set",
+      "proxy_for_a_prohibited_basis_enters_the_model",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-107": {
+    "comply": [
+      "ai_interaction_disclosed_to_the_customer",
+      "ai_system_inventory_records_intended_purpose",
+      "annex_iii_obligations_tracked_to_the_applicable_date",
+      "human_oversight_control_operable_and_tested",
+      "mf_107_control_evidenced",
+      "no_prohibited_practice_in_the_feature_set",
+      "prompt_and_output_logging_sufficient_to_reconstruct",
+      "risk_classification_recorded_for_the_system",
+      "synthetic_content_machine_markable_at_generation"
+    ],
+    "violate": [
+      "ai_interaction_undisclosed_to_the_customer",
+      "facial_recognition_database_built_by_untargeted_scraping",
+      "mf_107_control_absent",
+      "social_scoring_or_manipulative_technique_introduced",
+      "synthetic_content_unmarked",
+      "workplace_emotion_inference_introduced"
+    ]
+  },
+  "MF-108": {
+    "comply": [
+      "audit_record_written_to_non_rewriteable_storage",
+      "audit_trail_enabled_on_the_changed_system",
+      "evidence_export_reproducible_for_an_examiner",
+      "log_clock_synchronised_to_a_trusted_source",
+      "mf_108_control_evidenced",
+      "privileged_action_attributable_to_a_named_individual",
+      "segregation_of_duties_intact_in_reporting_boundary",
+      "tamper_alerting_active_on_the_audit_store",
+      "worm_retention_period_declared_and_enforced"
+    ],
+    "violate": [
+      "audit_record_written_to_rewriteable_storage",
+      "audit_trail_disabled_on_the_changed_system",
+      "mf_108_control_absent",
+      "privileged_action_attributed_to_a_shared_account",
+      "segregation_of_duties_removed_in_reporting_boundary",
+      "tamper_alerting_disabled_or_narrowed"
+    ]
+  },
+  "MF-109": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "complaint_path_present_and_routed",
+      "cost_of_credit_disclosure_precedes_the_binding_moment",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_109_control_evidenced"
+    ],
+    "violate": [
+      "billing_dispute_clock_extendable_by_configuration",
+      "dark_pattern_introduced_in_the_changed_flow",
+      "error_resolution_clock_extendable_by_configuration",
+      "liability_cap_configurable_downward",
+      "material_term_omitted_from_the_disclosure",
+      "mf_109_control_absent"
+    ]
+  },
+  "MF-110": {
+    "comply": [
+      "adverse_action_notice_names_reasons_and_agency",
+      "conceptual_soundness_review_recorded",
+      "independent_validation_completed_before_deployment",
+      "mf_110_control_evidenced",
+      "model_inventory_entry_current",
+      "ongoing_monitoring_thresholds_declared",
+      "outcomes_analysis_recorded",
+      "parity_exception_time_boxed_with_a_named_owner",
+      "principal_reasons_derivable_from_the_model_output"
+    ],
+    "violate": [
+      "furnished_data_accuracy_control_removed",
+      "human_reviewable_contest_path_removed",
+      "mf_110_control_absent",
+      "monitoring_thresholds_removed_after_deployment",
+      "principal_reasons_not_derivable_from_output",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-111": {
+    "comply": [
+      "agent_action_bounded_by_value_and_rate_limit",
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "human_operable_stop_present_and_tested",
+      "link_to_originating_human_requirement_present",
+      "mandate_scope_declared_before_execution",
+      "mf_111_control_evidenced",
+      "multiparty_human_review_on_policy_or_rbac_change"
+    ],
+    "violate": [
+      "agent_action_unbounded_by_value_or_rate",
+      "agent_change_alters_security_policy_without_review",
+      "agent_change_missing_provenance_attestation",
+      "agent_moves_funds_outside_declared_mandate",
+      "human_operable_stop_removed_or_degraded",
+      "mf_111_control_absent"
+    ]
+  },
+  "MF-201": {
+    "comply": [
+      "approved_algorithm_used_for_asymmetric_exchange",
+      "approved_algorithm_used_for_symmetric_encryption",
+      "ci_log_redaction_verified_for_credential_patterns",
+      "key_rotation_interval_declared_and_enforced",
+      "leaked_credential_revoked_before_merge",
+      "mf_201_control_evidenced",
+      "secret_injected_from_vault_at_runtime",
+      "secret_scanner_clean_on_diff",
+      "tls_1_2_or_above_with_forward_secrecy_enforced"
+    ],
+    "violate": [
+      "credential_written_to_ci_log",
+      "deprecated_hash_or_cipher_introduced",
+      "encryption_weakened_without_ciso_finding",
+      "mf_201_control_absent",
+      "secret_present_in_source_or_configuration",
+      "tls_downgrade_permitted_on_production_path"
+    ]
+  },
+  "MF-202": {
+    "comply": [
+      "approved_algorithm_used_for_asymmetric_exchange",
+      "approved_algorithm_used_for_symmetric_encryption",
+      "compensating_control_written_and_ciso_approved",
+      "key_rotation_interval_declared_and_enforced",
+      "leaked_credential_revoked_before_merge",
+      "mf_202_control_evidenced",
+      "mfa_enforced_on_the_changed_access_path",
+      "secret_injected_from_vault_at_runtime",
+      "tls_1_2_or_above_with_forward_secrecy_enforced"
+    ],
+    "violate": [
+      "deprecated_hash_or_cipher_introduced",
+      "encryption_weakened_without_ciso_finding",
+      "key_rotation_disabled",
+      "mf_202_control_absent",
+      "mfa_exception_taken_without_compensating_control",
+      "tls_downgrade_permitted_on_production_path"
+    ]
+  },
+  "MF-203": {
+    "comply": [
+      "circuit_breaker_opens_on_downstream_failure",
+      "exit_strategy_documented_for_the_provider",
+      "failover_exercised_on_the_authorization_path",
+      "incident_notification_path_intact_and_timed",
+      "mf_203_control_evidenced",
+      "notification_clock_configured_to_the_statutory_value",
+      "recovery_objective_declared_for_critical_function",
+      "register_of_information_entry_present",
+      "timeout_declared_on_every_outbound_call"
+    ],
+    "violate": [
+      "circuit_breaker_absent_on_downstream_dependency",
+      "critical_function_provider_absent_from_register",
+      "mf_203_control_absent",
+      "notification_clock_extended_beyond_statutory_value",
+      "notification_telemetry_disabled_or_delayed",
+      "outbound_call_without_timeout"
+    ]
+  },
+  "MF-204": {
+    "comply": [
+      "concentration_risk_recorded_for_the_provider",
+      "exit_strategy_documented_for_the_provider",
+      "failover_exercised_on_the_authorization_path",
+      "mf_204_control_evidenced",
+      "recovery_objective_declared_for_critical_function",
+      "register_of_information_entry_present",
+      "resilience_test_completed_before_release",
+      "subcontracting_chain_disclosed",
+      "timeout_declared_on_every_outbound_call"
+    ],
+    "violate": [
+      "circuit_breaker_absent_on_downstream_dependency",
+      "critical_function_provider_absent_from_register",
+      "exit_strategy_undocumented",
+      "mf_204_control_absent",
+      "outbound_call_without_timeout",
+      "resilience_test_skipped_on_critical_function"
+    ]
+  },
+  "MF-205": {
+    "comply": [
+      "circuit_breaker_opens_on_downstream_failure",
+      "concentration_risk_recorded_for_the_provider",
+      "exit_strategy_documented_for_the_provider",
+      "incident_notification_path_intact_and_timed",
+      "mf_205_control_evidenced",
+      "notification_clock_configured_to_the_statutory_value",
+      "register_of_information_entry_present",
+      "resilience_test_completed_before_release",
+      "subcontracting_chain_disclosed"
+    ],
+    "violate": [
+      "critical_function_provider_absent_from_register",
+      "exit_strategy_undocumented",
+      "mf_205_control_absent",
+      "notification_clock_extended_beyond_statutory_value",
+      "notification_telemetry_disabled_or_delayed",
+      "resilience_test_skipped_on_critical_function"
+    ]
+  },
+  "MF-206": {
+    "comply": [
+      "approved_algorithm_used_for_asymmetric_exchange",
+      "ci_log_redaction_verified_for_credential_patterns",
+      "compensating_control_written_and_ciso_approved",
+      "key_rotation_interval_declared_and_enforced",
+      "mf_206_control_evidenced",
+      "mfa_enforced_on_the_changed_access_path",
+      "secret_injected_from_vault_at_runtime",
+      "secret_scanner_clean_on_diff",
+      "tls_1_2_or_above_with_forward_secrecy_enforced"
+    ],
+    "violate": [
+      "credential_written_to_ci_log",
+      "encryption_weakened_without_ciso_finding",
+      "key_rotation_disabled",
+      "mf_206_control_absent",
+      "mfa_exception_taken_without_compensating_control",
+      "secret_present_in_source_or_configuration"
+    ]
+  },
+  "MF-207": {
+    "comply": [
+      "cde_scope_change_documented_and_reassessed",
+      "key_ceremony_dual_controlled_and_logged",
+      "mf_207_control_evidenced",
+      "payment_page_script_integrity_verified",
+      "payment_page_script_inventoried_with_justification",
+      "sad_discarded_immediately_after_authorization",
+      "segmentation_between_cde_and_corporate_network_tested",
+      "tamper_detection_active_on_payment_page",
+      "tokenization_vault_access_restricted"
+    ],
+    "violate": [
+      "cde_scope_widened_without_reassessment",
+      "mf_207_control_absent",
+      "pan_written_unmasked_to_log",
+      "payment_page_script_added_without_integrity_check",
+      "tamper_detection_disabled_on_payment_page",
+      "tokenization_vault_opened_to_unscoped_caller"
+    ]
+  },
+  "MF-208": {
+    "comply": [
+      "author_and_approver_are_different_individuals",
+      "branch_protection_and_signed_commits_enforced",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "documented_approval_recorded_before_merge",
+      "emergency_change_retro_approved_within_window",
+      "feature_flag_defaults_closed_on_regulated_surface",
+      "mf_208_control_evidenced",
+      "tested_rollback_present"
+    ],
+    "violate": [
+      "change_control_bypassed_by_direct_push",
+      "change_self_approved_by_its_author",
+      "changed_line_coverage_below_floor",
+      "emergency_path_used_without_retro_approval",
+      "mf_208_control_absent",
+      "rollback_path_absent"
+    ]
+  },
+  "MF-209": {
+    "comply": [
+      "circuit_breaker_opens_on_downstream_failure",
+      "concentration_risk_recorded_for_the_provider",
+      "failover_exercised_on_the_authorization_path",
+      "incident_notification_path_intact_and_timed",
+      "mf_209_control_evidenced",
+      "notification_clock_configured_to_the_statutory_value",
+      "recovery_objective_declared_for_critical_function",
+      "resilience_test_completed_before_release",
+      "timeout_declared_on_every_outbound_call"
+    ],
+    "violate": [
+      "circuit_breaker_absent_on_downstream_dependency",
+      "mf_209_control_absent",
+      "notification_clock_extended_beyond_statutory_value",
+      "notification_telemetry_disabled_or_delayed",
+      "outbound_call_without_timeout",
+      "resilience_test_skipped_on_critical_function"
+    ]
+  },
+  "MF-210": {
+    "comply": [
+      "deletion_and_cryptographic_shredding_exercised",
+      "dpia_completed_before_new_high_risk_processing",
+      "eu_personal_data_remains_in_region",
+      "lawful_basis_and_contractual_carve_out_recorded",
+      "mf_210_control_evidenced",
+      "opt_out_state_honoured_on_the_new_surface",
+      "retention_decision_recorded_for_new_personal_field",
+      "sensitive_personal_information_limits_applied",
+      "sub_processor_region_declared_before_flow"
+    ],
+    "violate": [
+      "customer_data_enters_training_without_lawful_basis",
+      "deletion_path_absent_for_new_store",
+      "high_risk_processing_added_without_dpia",
+      "mf_210_control_absent",
+      "new_personal_field_retained_without_decision",
+      "opt_out_ignored_on_newly_built_surface"
+    ]
+  },
+  "MF-211": {
+    "comply": [
+      "build_runner_ephemeral_and_isolated",
+      "declared_dependency_resolves_in_approved_registry",
+      "dependency_licence_on_approved_list",
+      "mf_211_control_evidenced",
+      "private_package_scope_declared",
+      "provenance_attestation_present_on_artifact",
+      "public_resolution_refused_where_private_name_exists",
+      "sbom_generated_and_signed_for_the_build",
+      "sca_scan_clean_for_high_and_critical"
+    ],
+    "violate": [
+      "copyleft_dependency_in_proprietary_distribution",
+      "declared_package_absent_from_any_approved_registry",
+      "dependency_carries_cve_above_cvss_threshold",
+      "mf_211_control_absent",
+      "private_package_name_resolvable_publicly",
+      "provenance_attestation_absent_on_artifact"
+    ]
+  },
+  "MF-212": {
+    "comply": [
+      "author_and_approver_are_different_individuals",
+      "branch_protection_and_signed_commits_enforced",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "documented_approval_recorded_before_merge",
+      "emergency_change_retro_approved_within_window",
+      "feature_flag_defaults_closed_on_regulated_surface",
+      "mf_212_control_evidenced",
+      "tested_rollback_present"
+    ],
+    "violate": [
+      "change_self_approved_by_its_author",
+      "changed_line_coverage_below_floor",
+      "emergency_path_used_without_retro_approval",
+      "feature_flag_defaults_open_on_regulated_surface",
+      "mf_212_control_absent",
+      "rollback_path_absent"
+    ]
+  },
+  "MF-301": {
+    "comply": [
+      "adverse_action_notice_names_reasons_and_agency",
+      "champion_challenger_comparison_recorded",
+      "furnished_data_accuracy_controls_exercised",
+      "mf_301_control_evidenced",
+      "model_inventory_entry_current",
+      "ongoing_monitoring_thresholds_declared",
+      "outcomes_analysis_recorded",
+      "override_of_a_model_decision_logged_with_reason",
+      "principal_reasons_derivable_from_the_model_output"
+    ],
+    "violate": [
+      "furnished_data_accuracy_control_removed",
+      "human_reviewable_contest_path_removed",
+      "mf_301_control_absent",
+      "model_absent_from_inventory",
+      "monitoring_thresholds_removed_after_deployment",
+      "prohibited_basis_attribute_in_the_feature_set"
+    ]
+  },
+  "MF-302": {
+    "comply": [
+      "adverse_action_notice_names_reasons_and_agency",
+      "champion_challenger_comparison_recorded",
+      "furnished_data_accuracy_controls_exercised",
+      "mf_302_control_evidenced",
+      "no_prohibited_basis_attribute_in_the_feature_set",
+      "outcome_parity_measured_and_documented",
+      "override_of_a_model_decision_logged_with_reason",
+      "principal_reasons_derivable_from_the_model_output",
+      "proxy_screen_run_over_the_candidate_features"
+    ],
+    "violate": [
+      "mf_302_control_absent",
+      "model_absent_from_inventory",
+      "monitoring_thresholds_removed_after_deployment",
+      "prohibited_basis_attribute_in_the_feature_set",
+      "proxy_for_a_prohibited_basis_enters_the_model",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-303": {
+    "comply": [
+      "accuracy_and_robustness_evidence_recorded",
+      "ai_interaction_disclosed_to_the_customer",
+      "annex_iii_obligations_tracked_to_the_applicable_date",
+      "human_oversight_control_operable_and_tested",
+      "mf_303_control_evidenced",
+      "no_prohibited_practice_in_the_feature_set",
+      "post_market_monitoring_plan_present",
+      "prompt_and_output_logging_sufficient_to_reconstruct",
+      "risk_classification_recorded_for_the_system"
+    ],
+    "violate": [
+      "ai_interaction_undisclosed_to_the_customer",
+      "decision_logging_insufficient_to_reconstruct",
+      "facial_recognition_database_built_by_untargeted_scraping",
+      "human_oversight_control_nominal_only",
+      "mf_303_control_absent",
+      "synthetic_content_unmarked"
+    ]
+  },
+  "MF-304": {
+    "comply": [
+      "accuracy_and_robustness_evidence_recorded",
+      "ai_interaction_disclosed_to_the_customer",
+      "ai_system_inventory_records_intended_purpose",
+      "annex_iii_obligations_tracked_to_the_applicable_date",
+      "mf_304_control_evidenced",
+      "no_prohibited_practice_in_the_feature_set",
+      "post_market_monitoring_plan_present",
+      "risk_classification_recorded_for_the_system",
+      "synthetic_content_machine_markable_at_generation"
+    ],
+    "violate": [
+      "decision_logging_insufficient_to_reconstruct",
+      "human_oversight_control_nominal_only",
+      "mf_304_control_absent",
+      "social_scoring_or_manipulative_technique_introduced",
+      "synthetic_content_unmarked",
+      "workplace_emotion_inference_introduced"
+    ]
+  },
+  "MF-305": {
+    "comply": [
+      "champion_challenger_comparison_recorded",
+      "conceptual_soundness_review_recorded",
+      "independent_validation_completed_before_deployment",
+      "mf_305_control_evidenced",
+      "no_prohibited_basis_attribute_in_the_feature_set",
+      "outcome_parity_measured_and_documented",
+      "override_of_a_model_decision_logged_with_reason",
+      "parity_exception_time_boxed_with_a_named_owner",
+      "proxy_screen_run_over_the_candidate_features"
+    ],
+    "violate": [
+      "human_reviewable_contest_path_removed",
+      "mf_305_control_absent",
+      "principal_reasons_not_derivable_from_output",
+      "prohibited_basis_attribute_in_the_feature_set",
+      "proxy_for_a_prohibited_basis_enters_the_model",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-306": {
+    "comply": [
+      "ai_interaction_disclosed_to_the_customer",
+      "ai_system_inventory_records_intended_purpose",
+      "annex_iii_obligations_tracked_to_the_applicable_date",
+      "human_oversight_control_operable_and_tested",
+      "mf_306_control_evidenced",
+      "post_market_monitoring_plan_present",
+      "prompt_and_output_logging_sufficient_to_reconstruct",
+      "risk_classification_recorded_for_the_system",
+      "synthetic_content_machine_markable_at_generation"
+    ],
+    "violate": [
+      "ai_interaction_undisclosed_to_the_customer",
+      "decision_logging_insufficient_to_reconstruct",
+      "facial_recognition_database_built_by_untargeted_scraping",
+      "mf_306_control_absent",
+      "social_scoring_or_manipulative_technique_introduced",
+      "workplace_emotion_inference_introduced"
+    ]
+  },
+  "MF-307": {
+    "comply": [
+      "agent_action_bounded_by_value_and_rate_limit",
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "human_operable_stop_present_and_tested",
+      "link_to_originating_human_requirement_present",
+      "mandate_scope_declared_before_execution",
+      "mf_307_control_evidenced",
+      "multiparty_human_review_on_policy_or_rbac_change"
+    ],
+    "violate": [
+      "agent_change_alters_security_policy_without_review",
+      "agent_change_lacks_human_signoff_on_decisioning_code",
+      "agent_change_missing_provenance_attestation",
+      "agent_moves_funds_outside_declared_mandate",
+      "human_operable_stop_removed_or_degraded",
+      "mf_307_control_absent"
+    ]
+  },
+  "MF-308": {
+    "comply": [
+      "adequacy_decision_or_article_46_safeguard_in_force",
+      "eu_personal_data_remains_in_region",
+      "lawful_basis_and_contractual_carve_out_recorded",
+      "mf_308_control_evidenced",
+      "opt_out_state_honoured_on_the_new_surface",
+      "retention_decision_recorded_for_new_personal_field",
+      "sensitive_personal_information_limits_applied",
+      "sub_processor_region_declared_before_flow",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "cross_border_flow_without_recorded_mechanism",
+      "customer_data_enters_training_without_lawful_basis",
+      "eu_personal_data_replicated_outside_region",
+      "high_risk_processing_added_without_dpia",
+      "mf_308_control_absent",
+      "opt_out_ignored_on_newly_built_surface"
+    ]
+  },
+  "MF-401": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "complaint_path_present_and_routed",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_401_control_evidenced",
+      "no_dark_pattern_in_the_changed_flow"
+    ],
+    "violate": [
+      "billing_dispute_clock_extendable_by_configuration",
+      "cancellation_harder_than_signup",
+      "complaint_path_removed_without_replacement",
+      "dark_pattern_introduced_in_the_changed_flow",
+      "material_term_omitted_from_the_disclosure",
+      "mf_401_control_absent"
+    ]
+  },
+  "MF-402": {
+    "comply": [
+      "conceptual_soundness_review_recorded",
+      "independent_validation_completed_before_deployment",
+      "mf_402_control_evidenced",
+      "model_inventory_entry_current",
+      "ongoing_monitoring_thresholds_declared",
+      "outcome_parity_measured_and_documented",
+      "outcomes_analysis_recorded",
+      "parity_exception_time_boxed_with_a_named_owner",
+      "proxy_screen_run_over_the_candidate_features"
+    ],
+    "violate": [
+      "furnished_data_accuracy_control_removed",
+      "human_reviewable_contest_path_removed",
+      "mf_402_control_absent",
+      "monitoring_thresholds_removed_after_deployment",
+      "principal_reasons_not_derivable_from_output",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-403": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "cost_of_credit_disclosure_precedes_the_binding_moment",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_403_control_evidenced",
+      "no_dark_pattern_in_the_changed_flow"
+    ],
+    "violate": [
+      "cancellation_harder_than_signup",
+      "complaint_path_removed_without_replacement",
+      "dark_pattern_introduced_in_the_changed_flow",
+      "error_resolution_clock_extendable_by_configuration",
+      "liability_cap_configurable_downward",
+      "mf_403_control_absent"
+    ]
+  },
+  "MF-404": {
+    "comply": [
+      "adequacy_decision_or_article_46_safeguard_in_force",
+      "deletion_and_cryptographic_shredding_exercised",
+      "dpia_completed_before_new_high_risk_processing",
+      "eu_personal_data_remains_in_region",
+      "lawful_basis_and_contractual_carve_out_recorded",
+      "mf_404_control_evidenced",
+      "retention_decision_recorded_for_new_personal_field",
+      "sub_processor_region_declared_before_flow",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "cross_border_flow_without_recorded_mechanism",
+      "customer_data_enters_training_without_lawful_basis",
+      "deletion_path_absent_for_new_store",
+      "eu_personal_data_replicated_outside_region",
+      "mf_404_control_absent",
+      "new_personal_field_retained_without_decision"
+    ]
+  },
+  "MF-405": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "complaint_path_present_and_routed",
+      "cost_of_credit_disclosure_precedes_the_binding_moment",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_405_control_evidenced"
+    ],
+    "violate": [
+      "billing_dispute_clock_extendable_by_configuration",
+      "cancellation_harder_than_signup",
+      "error_resolution_clock_extendable_by_configuration",
+      "liability_cap_configurable_downward",
+      "material_term_omitted_from_the_disclosure",
+      "mf_405_control_absent"
+    ]
+  },
+  "MF-406": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "complaint_path_present_and_routed",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_406_control_evidenced",
+      "no_dark_pattern_in_the_changed_flow"
+    ],
+    "violate": [
+      "billing_dispute_clock_extendable_by_configuration",
+      "complaint_path_removed_without_replacement",
+      "dark_pattern_introduced_in_the_changed_flow",
+      "error_resolution_clock_extendable_by_configuration",
+      "material_term_omitted_from_the_disclosure",
+      "mf_406_control_absent"
+    ]
+  },
+  "MF-501": {
+    "comply": [
+      "approved_algorithm_used_for_asymmetric_exchange",
+      "approved_algorithm_used_for_symmetric_encryption",
+      "ci_log_redaction_verified_for_credential_patterns",
+      "compensating_control_written_and_ciso_approved",
+      "key_rotation_interval_declared_and_enforced",
+      "leaked_credential_revoked_before_merge",
+      "mf_501_control_evidenced",
+      "secret_injected_from_vault_at_runtime",
+      "secret_scanner_clean_on_diff"
+    ],
+    "violate": [
+      "credential_written_to_ci_log",
+      "deprecated_hash_or_cipher_introduced",
+      "mf_501_control_absent",
+      "mfa_exception_taken_without_compensating_control",
+      "secret_present_in_source_or_configuration",
+      "tls_downgrade_permitted_on_production_path"
+    ]
+  },
+  "MF-502": {
+    "comply": [
+      "author_and_approver_are_different_individuals",
+      "branch_protection_and_signed_commits_enforced",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "documented_approval_recorded_before_merge",
+      "emergency_change_retro_approved_within_window",
+      "feature_flag_defaults_closed_on_regulated_surface",
+      "mf_502_control_evidenced",
+      "tested_rollback_present"
+    ],
+    "violate": [
+      "change_control_bypassed_by_direct_push",
+      "change_self_approved_by_its_author",
+      "emergency_path_used_without_retro_approval",
+      "feature_flag_defaults_open_on_regulated_surface",
+      "mf_502_control_absent",
+      "rollback_path_absent"
+    ]
+  },
+  "MF-503": {
+    "comply": [
+      "circuit_breaker_opens_on_downstream_failure",
+      "exit_strategy_documented_for_the_provider",
+      "failover_exercised_on_the_authorization_path",
+      "mf_503_control_evidenced",
+      "notification_clock_configured_to_the_statutory_value",
+      "recovery_objective_declared_for_critical_function",
+      "register_of_information_entry_present",
+      "subcontracting_chain_disclosed",
+      "timeout_declared_on_every_outbound_call"
+    ],
+    "violate": [
+      "circuit_breaker_absent_on_downstream_dependency",
+      "critical_function_provider_absent_from_register",
+      "exit_strategy_undocumented",
+      "mf_503_control_absent",
+      "notification_clock_extended_beyond_statutory_value",
+      "outbound_call_without_timeout"
+    ]
+  },
+  "MF-504": {
+    "comply": [
+      "alert_backlog_aged_and_escalated",
+      "blocked_property_report_filed_within_statutory_deadline",
+      "fuzzy_match_threshold_change_validated_before_release",
+      "list_source_is_the_authoritative_publication",
+      "match_disposition_recorded_with_reviewer_identity",
+      "mf_504_control_evidenced",
+      "screening_invoked_on_every_payment_leg",
+      "screening_list_refreshed_within_declared_interval",
+      "travel_rule_data_accompanies_qualifying_transfer"
+    ],
+    "violate": [
+      "mf_504_control_absent",
+      "sar_existence_disclosed_to_subject",
+      "screening_allow_list_added_without_authority",
+      "screening_bypassed_for_repeat_beneficiary",
+      "screening_served_from_cache_older_than_declared_interval",
+      "travel_rule_fields_dropped_on_qualifying_transfer"
+    ]
+  },
+  "MF-505": {
+    "comply": [
+      "adverse_action_notice_names_reasons_and_agency",
+      "conceptual_soundness_review_recorded",
+      "furnished_data_accuracy_controls_exercised",
+      "independent_validation_completed_before_deployment",
+      "mf_505_control_evidenced",
+      "model_inventory_entry_current",
+      "ongoing_monitoring_thresholds_declared",
+      "outcomes_analysis_recorded",
+      "principal_reasons_derivable_from_the_model_output"
+    ],
+    "violate": [
+      "furnished_data_accuracy_control_removed",
+      "human_reviewable_contest_path_removed",
+      "mf_505_control_absent",
+      "model_absent_from_inventory",
+      "monitoring_thresholds_removed_after_deployment",
+      "prohibited_basis_attribute_in_the_feature_set"
+    ]
+  },
+  "MF-506": {
+    "comply": [
+      "concurrent_debit_serialised_by_lock_or_version",
+      "correction_posted_as_compensating_entry",
+      "duplicate_submission_returns_original_result",
+      "idempotency_key_required_on_mutable_endpoint",
+      "isolation_level_declared_and_tested",
+      "ledger_entries_append_only",
+      "mf_506_control_evidenced",
+      "reconciliation_break_aged_and_escalated",
+      "transaction_rolls_back_completely_under_injected_failure"
+    ],
+    "violate": [
+      "duplicate_submission_executes_twice",
+      "historical_event_mutated",
+      "idempotency_key_absent_on_mutable_endpoint",
+      "ledger_row_updated_in_place",
+      "mf_506_control_absent",
+      "partial_transaction_survives_failure"
+    ]
+  },
+  "MF-507": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "cost_of_credit_disclosure_precedes_the_binding_moment",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_507_control_evidenced",
+      "no_dark_pattern_in_the_changed_flow"
+    ],
+    "violate": [
+      "cancellation_harder_than_signup",
+      "complaint_path_removed_without_replacement",
+      "dark_pattern_introduced_in_the_changed_flow",
+      "liability_cap_configurable_downward",
+      "material_term_omitted_from_the_disclosure",
+      "mf_507_control_absent"
+    ]
+  },
+  "MF-508": {
+    "comply": [
+      "cde_scope_change_documented_and_reassessed",
+      "key_ceremony_dual_controlled_and_logged",
+      "mf_508_control_evidenced",
+      "pan_masked_in_every_log_sink",
+      "pan_rendered_unreadable_at_rest",
+      "payment_page_script_inventoried_with_justification",
+      "sad_discarded_immediately_after_authorization",
+      "segmentation_between_cde_and_corporate_network_tested",
+      "tokenization_vault_access_restricted"
+    ],
+    "violate": [
+      "card_verification_code_retained_after_authorization",
+      "cde_scope_widened_without_reassessment",
+      "mf_508_control_absent",
+      "tamper_detection_disabled_on_payment_page",
+      "tokenization_vault_opened_to_unscoped_caller",
+      "track_data_or_pin_block_persisted"
+    ]
+  },
+  "MF-509": {
+    "comply": [
+      "beneficial_ownership_collected_before_entity_funding",
+      "cip_completed_before_funding",
+      "fuzzy_match_threshold_change_validated_before_release",
+      "list_source_is_the_authoritative_publication",
+      "match_disposition_recorded_with_reviewer_identity",
+      "mf_509_control_evidenced",
+      "sar_queue_access_restricted_to_authorized_role",
+      "screening_invoked_on_every_payment_leg",
+      "screening_list_refreshed_within_declared_interval"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "mf_509_control_absent",
+      "monitoring_rule_disabled_without_tuning_study",
+      "sar_existence_disclosed_to_subject",
+      "screening_bypassed_for_repeat_beneficiary",
+      "screening_served_from_cache_older_than_declared_interval"
+    ]
+  },
+  "MF-510": {
+    "comply": [
+      "adverse_action_notice_names_reasons_and_agency",
+      "champion_challenger_comparison_recorded",
+      "furnished_data_accuracy_controls_exercised",
+      "mf_510_control_evidenced",
+      "model_inventory_entry_current",
+      "no_prohibited_basis_attribute_in_the_feature_set",
+      "ongoing_monitoring_thresholds_declared",
+      "override_of_a_model_decision_logged_with_reason",
+      "principal_reasons_derivable_from_the_model_output"
+    ],
+    "violate": [
+      "mf_510_control_absent",
+      "model_absent_from_inventory",
+      "monitoring_thresholds_removed_after_deployment",
+      "prohibited_basis_attribute_in_the_feature_set",
+      "proxy_for_a_prohibited_basis_enters_the_model",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-511": {
+    "comply": [
+      "agent_action_bounded_by_value_and_rate_limit",
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "human_operable_stop_present_and_tested",
+      "link_to_originating_human_requirement_present",
+      "mandate_scope_declared_before_execution",
+      "mf_511_control_evidenced",
+      "multiparty_human_review_on_policy_or_rbac_change"
+    ],
+    "violate": [
+      "agent_action_unbounded_by_value_or_rate",
+      "agent_change_lacks_human_signoff_on_decisioning_code",
+      "agent_change_missing_provenance_attestation",
+      "agent_moves_funds_outside_declared_mandate",
+      "human_operable_stop_removed_or_degraded",
+      "mf_511_control_absent"
+    ]
+  },
+  "MF-512": {
+    "comply": [
+      "access_review_completed_for_the_changed_role",
+      "audit_trail_enabled_on_the_changed_system",
+      "evidence_export_reproducible_for_an_examiner",
+      "log_clock_synchronised_to_a_trusted_source",
+      "mf_512_control_evidenced",
+      "privileged_action_attributable_to_a_named_individual",
+      "segregation_of_duties_intact_in_reporting_boundary",
+      "tamper_alerting_active_on_the_audit_store",
+      "worm_retention_period_declared_and_enforced"
+    ],
+    "violate": [
+      "audit_record_written_to_rewriteable_storage",
+      "mf_512_control_absent",
+      "privileged_action_attributed_to_a_shared_account",
+      "retention_shortened_below_the_declared_period",
+      "segregation_of_duties_removed_in_reporting_boundary",
+      "tamper_alerting_disabled_or_narrowed"
+    ]
+  },
+  "MF-513": {
+    "comply": [
+      "access_review_completed_for_the_changed_role",
+      "audit_record_written_to_non_rewriteable_storage",
+      "audit_trail_enabled_on_the_changed_system",
+      "evidence_export_reproducible_for_an_examiner",
+      "log_clock_synchronised_to_a_trusted_source",
+      "mf_513_control_evidenced",
+      "segregation_of_duties_intact_in_reporting_boundary",
+      "tamper_alerting_active_on_the_audit_store",
+      "worm_retention_period_declared_and_enforced"
+    ],
+    "violate": [
+      "audit_record_written_to_rewriteable_storage",
+      "audit_trail_disabled_on_the_changed_system",
+      "mf_513_control_absent",
+      "privileged_action_attributed_to_a_shared_account",
+      "retention_shortened_below_the_declared_period",
+      "segregation_of_duties_removed_in_reporting_boundary"
+    ]
+  },
+  "MF-520": {
+    "comply": [
+      "beneficial_ownership_collected_before_entity_funding",
+      "blocked_property_report_filed_within_statutory_deadline",
+      "cip_completed_before_funding",
+      "fuzzy_match_threshold_change_validated_before_release",
+      "match_disposition_recorded_with_reviewer_identity",
+      "mf_520_control_evidenced",
+      "monitoring_rule_retirement_backed_by_tuning_study",
+      "sar_queue_access_restricted_to_authorized_role",
+      "travel_rule_data_accompanies_qualifying_transfer"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "blocked_property_report_deadline_missed",
+      "mf_520_control_absent",
+      "monitoring_rule_disabled_without_tuning_study",
+      "sar_existence_disclosed_to_subject",
+      "travel_rule_fields_dropped_on_qualifying_transfer"
+    ]
+  },
+  "MF-521": {
+    "comply": [
+      "alert_backlog_aged_and_escalated",
+      "beneficial_ownership_collected_before_entity_funding",
+      "blocked_property_report_filed_within_statutory_deadline",
+      "mf_521_control_evidenced",
+      "monitoring_rule_retirement_backed_by_tuning_study",
+      "sar_queue_access_restricted_to_authorized_role",
+      "screening_invoked_on_every_payment_leg",
+      "screening_list_refreshed_within_declared_interval",
+      "travel_rule_data_accompanies_qualifying_transfer"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "blocked_property_report_deadline_missed",
+      "mf_521_control_absent",
+      "screening_allow_list_added_without_authority",
+      "screening_bypassed_for_repeat_beneficiary",
+      "travel_rule_fields_dropped_on_qualifying_transfer"
+    ]
+  },
+  "MF-522": {
+    "comply": [
+      "alert_backlog_aged_and_escalated",
+      "blocked_property_report_filed_within_statutory_deadline",
+      "fuzzy_match_threshold_change_validated_before_release",
+      "list_source_is_the_authoritative_publication",
+      "match_disposition_recorded_with_reviewer_identity",
+      "mf_522_control_evidenced",
+      "screening_invoked_on_every_payment_leg",
+      "screening_list_refreshed_within_declared_interval",
+      "travel_rule_data_accompanies_qualifying_transfer"
+    ],
+    "violate": [
+      "mf_522_control_absent",
+      "sar_existence_disclosed_to_subject",
+      "screening_allow_list_added_without_authority",
+      "screening_bypassed_for_repeat_beneficiary",
+      "screening_served_from_cache_older_than_declared_interval",
+      "travel_rule_fields_dropped_on_qualifying_transfer"
+    ]
+  },
+  "MF-523": {
+    "comply": [
+      "beneficial_ownership_collected_before_entity_funding",
+      "cip_completed_before_funding",
+      "fuzzy_match_threshold_change_validated_before_release",
+      "list_source_is_the_authoritative_publication",
+      "match_disposition_recorded_with_reviewer_identity",
+      "mf_523_control_evidenced",
+      "sar_queue_access_restricted_to_authorized_role",
+      "screening_invoked_on_every_payment_leg",
+      "screening_list_refreshed_within_declared_interval"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "mf_523_control_absent",
+      "monitoring_rule_disabled_without_tuning_study",
+      "sar_existence_disclosed_to_subject",
+      "screening_bypassed_for_repeat_beneficiary",
+      "screening_served_from_cache_older_than_declared_interval"
+    ]
+  },
+  "MF-524": {
+    "comply": [
+      "beneficial_ownership_collected_before_entity_funding",
+      "blocked_property_report_filed_within_statutory_deadline",
+      "cip_completed_before_funding",
+      "fuzzy_match_threshold_change_validated_before_release",
+      "match_disposition_recorded_with_reviewer_identity",
+      "mf_524_control_evidenced",
+      "monitoring_rule_retirement_backed_by_tuning_study",
+      "sar_queue_access_restricted_to_authorized_role",
+      "travel_rule_data_accompanies_qualifying_transfer"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "blocked_property_report_deadline_missed",
+      "mf_524_control_absent",
+      "monitoring_rule_disabled_without_tuning_study",
+      "sar_existence_disclosed_to_subject",
+      "travel_rule_fields_dropped_on_qualifying_transfer"
+    ]
+  },
+  "MF-525": {
+    "comply": [
+      "alert_backlog_aged_and_escalated",
+      "beneficial_ownership_collected_before_entity_funding",
+      "blocked_property_report_filed_within_statutory_deadline",
+      "mf_525_control_evidenced",
+      "monitoring_rule_retirement_backed_by_tuning_study",
+      "sar_queue_access_restricted_to_authorized_role",
+      "screening_invoked_on_every_payment_leg",
+      "screening_list_refreshed_within_declared_interval",
+      "travel_rule_data_accompanies_qualifying_transfer"
+    ],
+    "violate": [
+      "account_funded_before_cip_completed",
+      "blocked_property_report_deadline_missed",
+      "mf_525_control_absent",
+      "screening_allow_list_added_without_authority",
+      "screening_bypassed_for_repeat_beneficiary",
+      "travel_rule_fields_dropped_on_qualifying_transfer"
+    ]
+  },
+  "MF-526": {
+    "comply": [
+      "cde_scope_change_documented_and_reassessed",
+      "mf_526_control_evidenced",
+      "pan_masked_in_every_log_sink",
+      "pan_rendered_unreadable_at_rest",
+      "payment_page_script_integrity_verified",
+      "payment_page_script_inventoried_with_justification",
+      "sad_discarded_immediately_after_authorization",
+      "tamper_detection_active_on_payment_page",
+      "tokenization_vault_access_restricted"
+    ],
+    "violate": [
+      "card_verification_code_retained_after_authorization",
+      "mf_526_control_absent",
+      "pan_written_unmasked_to_log",
+      "payment_page_script_added_without_integrity_check",
+      "tokenization_vault_opened_to_unscoped_caller",
+      "track_data_or_pin_block_persisted"
+    ]
+  },
+  "MF-527": {
+    "comply": [
+      "cde_scope_change_documented_and_reassessed",
+      "key_ceremony_dual_controlled_and_logged",
+      "mf_527_control_evidenced",
+      "pan_rendered_unreadable_at_rest",
+      "payment_page_script_integrity_verified",
+      "payment_page_script_inventoried_with_justification",
+      "segmentation_between_cde_and_corporate_network_tested",
+      "tamper_detection_active_on_payment_page",
+      "tokenization_vault_access_restricted"
+    ],
+    "violate": [
+      "cde_scope_widened_without_reassessment",
+      "mf_527_control_absent",
+      "pan_written_unmasked_to_log",
+      "payment_page_script_added_without_integrity_check",
+      "tamper_detection_disabled_on_payment_page",
+      "track_data_or_pin_block_persisted"
+    ]
+  },
+  "MF-528": {
+    "comply": [
+      "cde_scope_change_documented_and_reassessed",
+      "key_ceremony_dual_controlled_and_logged",
+      "mf_528_control_evidenced",
+      "pan_masked_in_every_log_sink",
+      "pan_rendered_unreadable_at_rest",
+      "sad_discarded_immediately_after_authorization",
+      "segmentation_between_cde_and_corporate_network_tested",
+      "tamper_detection_active_on_payment_page",
+      "tokenization_vault_access_restricted"
+    ],
+    "violate": [
+      "card_verification_code_retained_after_authorization",
+      "cde_scope_widened_without_reassessment",
+      "mf_528_control_absent",
+      "payment_page_script_added_without_integrity_check",
+      "tamper_detection_disabled_on_payment_page",
+      "tokenization_vault_opened_to_unscoped_caller"
+    ]
+  },
+  "MF-529": {
+    "comply": [
+      "key_ceremony_dual_controlled_and_logged",
+      "mf_529_control_evidenced",
+      "pan_masked_in_every_log_sink",
+      "pan_rendered_unreadable_at_rest",
+      "payment_page_script_integrity_verified",
+      "payment_page_script_inventoried_with_justification",
+      "sad_discarded_immediately_after_authorization",
+      "tamper_detection_active_on_payment_page",
+      "tokenization_vault_access_restricted"
+    ],
+    "violate": [
+      "card_verification_code_retained_after_authorization",
+      "cde_scope_widened_without_reassessment",
+      "mf_529_control_absent",
+      "pan_written_unmasked_to_log",
+      "tokenization_vault_opened_to_unscoped_caller",
+      "track_data_or_pin_block_persisted"
+    ]
+  },
+  "MF-530": {
+    "comply": [
+      "approved_algorithm_used_for_asymmetric_exchange",
+      "approved_algorithm_used_for_symmetric_encryption",
+      "ci_log_redaction_verified_for_credential_patterns",
+      "compensating_control_written_and_ciso_approved",
+      "key_rotation_interval_declared_and_enforced",
+      "leaked_credential_revoked_before_merge",
+      "mf_530_control_evidenced",
+      "mfa_enforced_on_the_changed_access_path",
+      "tls_1_2_or_above_with_forward_secrecy_enforced"
+    ],
+    "violate": [
+      "credential_written_to_ci_log",
+      "deprecated_hash_or_cipher_introduced",
+      "encryption_weakened_without_ciso_finding",
+      "key_rotation_disabled",
+      "mf_530_control_absent",
+      "tls_downgrade_permitted_on_production_path"
+    ]
+  },
+  "MF-531": {
+    "comply": [
+      "approved_algorithm_used_for_asymmetric_exchange",
+      "approved_algorithm_used_for_symmetric_encryption",
+      "ci_log_redaction_verified_for_credential_patterns",
+      "compensating_control_written_and_ciso_approved",
+      "mf_531_control_evidenced",
+      "mfa_enforced_on_the_changed_access_path",
+      "secret_injected_from_vault_at_runtime",
+      "secret_scanner_clean_on_diff",
+      "tls_1_2_or_above_with_forward_secrecy_enforced"
+    ],
+    "violate": [
+      "encryption_weakened_without_ciso_finding",
+      "key_rotation_disabled",
+      "mf_531_control_absent",
+      "mfa_exception_taken_without_compensating_control",
+      "secret_present_in_source_or_configuration",
+      "tls_downgrade_permitted_on_production_path"
+    ]
+  },
+  "MF-532": {
+    "comply": [
+      "approved_algorithm_used_for_symmetric_encryption",
+      "ci_log_redaction_verified_for_credential_patterns",
+      "compensating_control_written_and_ciso_approved",
+      "key_rotation_interval_declared_and_enforced",
+      "leaked_credential_revoked_before_merge",
+      "mf_532_control_evidenced",
+      "mfa_enforced_on_the_changed_access_path",
+      "secret_injected_from_vault_at_runtime",
+      "secret_scanner_clean_on_diff"
+    ],
+    "violate": [
+      "credential_written_to_ci_log",
+      "deprecated_hash_or_cipher_introduced",
+      "key_rotation_disabled",
+      "mf_532_control_absent",
+      "mfa_exception_taken_without_compensating_control",
+      "secret_present_in_source_or_configuration"
+    ]
+  },
+  "MF-533": {
+    "comply": [
+      "approved_algorithm_used_for_asymmetric_exchange",
+      "approved_algorithm_used_for_symmetric_encryption",
+      "ci_log_redaction_verified_for_credential_patterns",
+      "key_rotation_interval_declared_and_enforced",
+      "leaked_credential_revoked_before_merge",
+      "mf_533_control_evidenced",
+      "mfa_enforced_on_the_changed_access_path",
+      "secret_scanner_clean_on_diff",
+      "tls_1_2_or_above_with_forward_secrecy_enforced"
+    ],
+    "violate": [
+      "credential_written_to_ci_log",
+      "deprecated_hash_or_cipher_introduced",
+      "encryption_weakened_without_ciso_finding",
+      "mf_533_control_absent",
+      "secret_present_in_source_or_configuration",
+      "tls_downgrade_permitted_on_production_path"
+    ]
+  },
+  "MF-534": {
+    "comply": [
+      "declared_dependency_resolves_in_approved_registry",
+      "dependency_licence_on_approved_list",
+      "mf_534_control_evidenced",
+      "private_package_scope_declared",
+      "public_resolution_refused_where_private_name_exists",
+      "sbom_generated_and_signed_for_the_build",
+      "sca_scan_clean_for_high_and_critical",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "declared_package_absent_from_any_approved_registry",
+      "mf_534_control_absent",
+      "private_package_name_resolvable_publicly",
+      "provenance_attestation_absent_on_artifact",
+      "vendor_security_review_pending_on_cardholder_path"
+    ]
+  },
+  "MF-535": {
+    "comply": [
+      "build_runner_ephemeral_and_isolated",
+      "declared_dependency_resolves_in_approved_registry",
+      "dependency_licence_on_approved_list",
+      "mf_535_control_evidenced",
+      "provenance_attestation_present_on_artifact",
+      "sbom_generated_and_signed_for_the_build",
+      "sca_scan_clean_for_high_and_critical",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "copyleft_dependency_in_proprietary_distribution",
+      "dependency_carries_cve_above_cvss_threshold",
+      "mf_535_control_absent",
+      "private_package_name_resolvable_publicly",
+      "vendor_security_review_pending_on_cardholder_path"
+    ]
+  },
+  "MF-536": {
+    "comply": [
+      "build_runner_ephemeral_and_isolated",
+      "declared_dependency_resolves_in_approved_registry",
+      "dependency_licence_on_approved_list",
+      "mf_536_control_evidenced",
+      "private_package_scope_declared",
+      "provenance_attestation_present_on_artifact",
+      "public_resolution_refused_where_private_name_exists",
+      "sbom_generated_and_signed_for_the_build",
+      "transitive_dependency_graph_pinned"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "copyleft_dependency_in_proprietary_distribution",
+      "declared_package_absent_from_any_approved_registry",
+      "dependency_carries_cve_above_cvss_threshold",
+      "mf_536_control_absent",
+      "provenance_attestation_absent_on_artifact"
+    ]
+  },
+  "MF-537": {
+    "comply": [
+      "build_runner_ephemeral_and_isolated",
+      "declared_dependency_resolves_in_approved_registry",
+      "dependency_licence_on_approved_list",
+      "mf_537_control_evidenced",
+      "private_package_scope_declared",
+      "public_resolution_refused_where_private_name_exists",
+      "sca_scan_clean_for_high_and_critical",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "copyleft_dependency_in_proprietary_distribution",
+      "declared_package_absent_from_any_approved_registry",
+      "mf_537_control_absent",
+      "private_package_name_resolvable_publicly",
+      "provenance_attestation_absent_on_artifact",
+      "vendor_security_review_pending_on_cardholder_path"
+    ]
+  },
+  "MF-538": {
+    "comply": [
+      "build_runner_ephemeral_and_isolated",
+      "dependency_licence_on_approved_list",
+      "mf_538_control_evidenced",
+      "provenance_attestation_present_on_artifact",
+      "public_resolution_refused_where_private_name_exists",
+      "sbom_generated_and_signed_for_the_build",
+      "sca_scan_clean_for_high_and_critical",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "declared_package_absent_from_any_approved_registry",
+      "dependency_carries_cve_above_cvss_threshold",
+      "mf_538_control_absent",
+      "private_package_name_resolvable_publicly",
+      "vendor_security_review_pending_on_cardholder_path"
+    ]
+  },
+  "MF-539": {
+    "comply": [
+      "build_runner_ephemeral_and_isolated",
+      "declared_dependency_resolves_in_approved_registry",
+      "mf_539_control_evidenced",
+      "private_package_scope_declared",
+      "provenance_attestation_present_on_artifact",
+      "public_resolution_refused_where_private_name_exists",
+      "sbom_generated_and_signed_for_the_build",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "copyleft_dependency_in_proprietary_distribution",
+      "dependency_carries_cve_above_cvss_threshold",
+      "mf_539_control_absent",
+      "provenance_attestation_absent_on_artifact",
+      "vendor_security_review_pending_on_cardholder_path"
+    ]
+  },
+  "MF-540": {
+    "comply": [
+      "author_and_approver_are_different_individuals",
+      "branch_protection_and_signed_commits_enforced",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "documented_approval_recorded_before_merge",
+      "emergency_change_retro_approved_within_window",
+      "feature_flag_defaults_closed_on_regulated_surface",
+      "mf_540_control_evidenced",
+      "tested_rollback_present"
+    ],
+    "violate": [
+      "change_control_bypassed_by_direct_push",
+      "change_self_approved_by_its_author",
+      "changed_line_coverage_below_floor",
+      "emergency_path_used_without_retro_approval",
+      "mf_540_control_absent",
+      "rollback_path_absent"
+    ]
+  },
+  "MF-541": {
+    "comply": [
+      "author_and_approver_are_different_individuals",
+      "branch_protection_and_signed_commits_enforced",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "documented_approval_recorded_before_merge",
+      "emergency_change_retro_approved_within_window",
+      "feature_flag_defaults_closed_on_regulated_surface",
+      "mf_541_control_evidenced",
+      "tested_rollback_present"
+    ],
+    "violate": [
+      "change_self_approved_by_its_author",
+      "changed_line_coverage_below_floor",
+      "emergency_path_used_without_retro_approval",
+      "feature_flag_defaults_open_on_regulated_surface",
+      "mf_541_control_absent",
+      "rollback_path_absent"
+    ]
+  },
+  "MF-542": {
+    "comply": [
+      "author_and_approver_are_different_individuals",
+      "branch_protection_and_signed_commits_enforced",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "documented_approval_recorded_before_merge",
+      "emergency_change_retro_approved_within_window",
+      "feature_flag_defaults_closed_on_regulated_surface",
+      "mf_542_control_evidenced",
+      "tested_rollback_present"
+    ],
+    "violate": [
+      "change_control_bypassed_by_direct_push",
+      "change_self_approved_by_its_author",
+      "emergency_path_used_without_retro_approval",
+      "feature_flag_defaults_open_on_regulated_surface",
+      "mf_542_control_absent",
+      "rollback_path_absent"
+    ]
+  },
+  "MF-543": {
+    "comply": [
+      "author_and_approver_are_different_individuals",
+      "branch_protection_and_signed_commits_enforced",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "documented_approval_recorded_before_merge",
+      "emergency_change_retro_approved_within_window",
+      "feature_flag_defaults_closed_on_regulated_surface",
+      "mf_543_control_evidenced",
+      "tested_rollback_present"
+    ],
+    "violate": [
+      "change_control_bypassed_by_direct_push",
+      "change_self_approved_by_its_author",
+      "changed_line_coverage_below_floor",
+      "emergency_path_used_without_retro_approval",
+      "mf_543_control_absent",
+      "rollback_path_absent"
+    ]
+  },
+  "MF-544": {
+    "comply": [
+      "concurrent_debit_serialised_by_lock_or_version",
+      "double_entry_balance_asserted_after_every_post",
+      "duplicate_submission_returns_original_result",
+      "event_history_immutable_under_replay_test",
+      "isolation_level_declared_and_tested",
+      "ledger_entries_append_only",
+      "mf_544_control_evidenced",
+      "reconciliation_break_aged_and_escalated",
+      "transaction_rolls_back_completely_under_injected_failure"
+    ],
+    "violate": [
+      "concurrent_debit_permits_double_spend",
+      "duplicate_submission_executes_twice",
+      "idempotency_key_absent_on_mutable_endpoint",
+      "mf_544_control_absent",
+      "partial_transaction_survives_failure",
+      "reconciliation_break_suppressed"
+    ]
+  },
+  "MF-545": {
+    "comply": [
+      "concurrent_debit_serialised_by_lock_or_version",
+      "correction_posted_as_compensating_entry",
+      "double_entry_balance_asserted_after_every_post",
+      "duplicate_submission_returns_original_result",
+      "event_history_immutable_under_replay_test",
+      "idempotency_key_required_on_mutable_endpoint",
+      "ledger_entries_append_only",
+      "mf_545_control_evidenced",
+      "reconciliation_break_aged_and_escalated"
+    ],
+    "violate": [
+      "concurrent_debit_permits_double_spend",
+      "historical_event_mutated",
+      "ledger_row_updated_in_place",
+      "mf_545_control_absent",
+      "partial_transaction_survives_failure",
+      "reconciliation_break_suppressed"
+    ]
+  },
+  "MF-546": {
+    "comply": [
+      "concurrent_debit_serialised_by_lock_or_version",
+      "correction_posted_as_compensating_entry",
+      "double_entry_balance_asserted_after_every_post",
+      "duplicate_submission_returns_original_result",
+      "idempotency_key_required_on_mutable_endpoint",
+      "isolation_level_declared_and_tested",
+      "ledger_entries_append_only",
+      "mf_546_control_evidenced",
+      "transaction_rolls_back_completely_under_injected_failure"
+    ],
+    "violate": [
+      "duplicate_submission_executes_twice",
+      "historical_event_mutated",
+      "idempotency_key_absent_on_mutable_endpoint",
+      "ledger_row_updated_in_place",
+      "mf_546_control_absent",
+      "reconciliation_break_suppressed"
+    ]
+  },
+  "MF-547": {
+    "comply": [
+      "concurrent_debit_serialised_by_lock_or_version",
+      "double_entry_balance_asserted_after_every_post",
+      "duplicate_submission_returns_original_result",
+      "event_history_immutable_under_replay_test",
+      "idempotency_key_required_on_mutable_endpoint",
+      "isolation_level_declared_and_tested",
+      "mf_547_control_evidenced",
+      "reconciliation_break_aged_and_escalated",
+      "transaction_rolls_back_completely_under_injected_failure"
+    ],
+    "violate": [
+      "concurrent_debit_permits_double_spend",
+      "duplicate_submission_executes_twice",
+      "historical_event_mutated",
+      "idempotency_key_absent_on_mutable_endpoint",
+      "mf_547_control_absent",
+      "partial_transaction_survives_failure"
+    ]
+  },
+  "MF-548": {
+    "comply": [
+      "concurrent_debit_serialised_by_lock_or_version",
+      "correction_posted_as_compensating_entry",
+      "double_entry_balance_asserted_after_every_post",
+      "event_history_immutable_under_replay_test",
+      "idempotency_key_required_on_mutable_endpoint",
+      "isolation_level_declared_and_tested",
+      "ledger_entries_append_only",
+      "mf_548_control_evidenced",
+      "reconciliation_break_aged_and_escalated"
+    ],
+    "violate": [
+      "concurrent_debit_permits_double_spend",
+      "duplicate_submission_executes_twice",
+      "ledger_row_updated_in_place",
+      "mf_548_control_absent",
+      "partial_transaction_survives_failure",
+      "reconciliation_break_suppressed"
+    ]
+  },
+  "MF-549": {
+    "comply": [
+      "aggregate_slippage_bounded_and_monitored",
+      "apr_computation_matches_the_declared_method",
+      "bankers_rounding_applied_to_currency_totals",
+      "currency_minor_unit_taken_from_declared_reference_data",
+      "day_count_convention_documented_for_interest",
+      "mf_549_control_evidenced",
+      "monetary_value_held_in_exact_decimal_type",
+      "no_binary_floating_point_in_money_path",
+      "rounding_mode_declared_per_currency"
+    ],
+    "violate": [
+      "binary_floating_point_used_in_money_path",
+      "currency_minor_unit_hardcoded_to_two",
+      "day_count_convention_unstated",
+      "half_up_rounding_applied_to_currency_totals",
+      "mf_549_control_absent",
+      "rounding_mode_undeclared"
+    ]
+  },
+  "MF-550": {
+    "comply": [
+      "aggregate_slippage_bounded_and_monitored",
+      "apr_computation_matches_the_declared_method",
+      "bankers_rounding_applied_to_currency_totals",
+      "currency_minor_unit_taken_from_declared_reference_data",
+      "day_count_convention_documented_for_interest",
+      "mf_550_control_evidenced",
+      "monetary_value_held_in_exact_decimal_type",
+      "no_binary_floating_point_in_money_path",
+      "rounding_mode_declared_per_currency"
+    ],
+    "violate": [
+      "aggregate_slippage_unmonitored",
+      "binary_floating_point_used_in_money_path",
+      "currency_minor_unit_hardcoded_to_two",
+      "day_count_convention_unstated",
+      "half_up_rounding_applied_to_currency_totals",
+      "mf_550_control_absent"
+    ]
+  },
+  "MF-551": {
+    "comply": [
+      "aggregate_slippage_bounded_and_monitored",
+      "apr_computation_matches_the_declared_method",
+      "bankers_rounding_applied_to_currency_totals",
+      "currency_minor_unit_taken_from_declared_reference_data",
+      "day_count_convention_documented_for_interest",
+      "mf_551_control_evidenced",
+      "monetary_value_held_in_exact_decimal_type",
+      "no_binary_floating_point_in_money_path",
+      "rounding_mode_declared_per_currency"
+    ],
+    "violate": [
+      "aggregate_slippage_unmonitored",
+      "binary_floating_point_used_in_money_path",
+      "day_count_convention_unstated",
+      "half_up_rounding_applied_to_currency_totals",
+      "mf_551_control_absent",
+      "rounding_mode_undeclared"
+    ]
+  },
+  "MF-552": {
+    "comply": [
+      "aggregate_slippage_bounded_and_monitored",
+      "apr_computation_matches_the_declared_method",
+      "bankers_rounding_applied_to_currency_totals",
+      "currency_minor_unit_taken_from_declared_reference_data",
+      "day_count_convention_documented_for_interest",
+      "mf_552_control_evidenced",
+      "monetary_value_held_in_exact_decimal_type",
+      "no_binary_floating_point_in_money_path",
+      "rounding_mode_declared_per_currency"
+    ],
+    "violate": [
+      "binary_floating_point_used_in_money_path",
+      "currency_minor_unit_hardcoded_to_two",
+      "day_count_convention_unstated",
+      "half_up_rounding_applied_to_currency_totals",
+      "mf_552_control_absent",
+      "rounding_mode_undeclared"
+    ]
+  },
+  "MF-553": {
+    "comply": [
+      "aggregate_slippage_bounded_and_monitored",
+      "apr_computation_matches_the_declared_method",
+      "bankers_rounding_applied_to_currency_totals",
+      "currency_minor_unit_taken_from_declared_reference_data",
+      "day_count_convention_documented_for_interest",
+      "mf_553_control_evidenced",
+      "monetary_value_held_in_exact_decimal_type",
+      "no_binary_floating_point_in_money_path",
+      "rounding_mode_declared_per_currency"
+    ],
+    "violate": [
+      "aggregate_slippage_unmonitored",
+      "binary_floating_point_used_in_money_path",
+      "currency_minor_unit_hardcoded_to_two",
+      "day_count_convention_unstated",
+      "half_up_rounding_applied_to_currency_totals",
+      "mf_553_control_absent"
+    ]
+  },
+  "MF-554": {
+    "comply": [
+      "concentration_risk_recorded_for_the_provider",
+      "exit_strategy_documented_for_the_provider",
+      "failover_exercised_on_the_authorization_path",
+      "incident_notification_path_intact_and_timed",
+      "mf_554_control_evidenced",
+      "recovery_objective_declared_for_critical_function",
+      "register_of_information_entry_present",
+      "resilience_test_completed_before_release",
+      "subcontracting_chain_disclosed"
+    ],
+    "violate": [
+      "critical_function_provider_absent_from_register",
+      "exit_strategy_undocumented",
+      "mf_554_control_absent",
+      "notification_telemetry_disabled_or_delayed",
+      "outbound_call_without_timeout",
+      "resilience_test_skipped_on_critical_function"
+    ]
+  },
+  "MF-555": {
+    "comply": [
+      "circuit_breaker_opens_on_downstream_failure",
+      "concentration_risk_recorded_for_the_provider",
+      "exit_strategy_documented_for_the_provider",
+      "incident_notification_path_intact_and_timed",
+      "mf_555_control_evidenced",
+      "notification_clock_configured_to_the_statutory_value",
+      "resilience_test_completed_before_release",
+      "subcontracting_chain_disclosed",
+      "timeout_declared_on_every_outbound_call"
+    ],
+    "violate": [
+      "circuit_breaker_absent_on_downstream_dependency",
+      "exit_strategy_undocumented",
+      "mf_555_control_absent",
+      "notification_clock_extended_beyond_statutory_value",
+      "notification_telemetry_disabled_or_delayed",
+      "resilience_test_skipped_on_critical_function"
+    ]
+  },
+  "MF-556": {
+    "comply": [
+      "circuit_breaker_opens_on_downstream_failure",
+      "failover_exercised_on_the_authorization_path",
+      "incident_notification_path_intact_and_timed",
+      "mf_556_control_evidenced",
+      "notification_clock_configured_to_the_statutory_value",
+      "recovery_objective_declared_for_critical_function",
+      "register_of_information_entry_present",
+      "resilience_test_completed_before_release",
+      "timeout_declared_on_every_outbound_call"
+    ],
+    "violate": [
+      "circuit_breaker_absent_on_downstream_dependency",
+      "critical_function_provider_absent_from_register",
+      "mf_556_control_absent",
+      "notification_clock_extended_beyond_statutory_value",
+      "notification_telemetry_disabled_or_delayed",
+      "outbound_call_without_timeout"
+    ]
+  },
+  "MF-557": {
+    "comply": [
+      "circuit_breaker_opens_on_downstream_failure",
+      "concentration_risk_recorded_for_the_provider",
+      "exit_strategy_documented_for_the_provider",
+      "failover_exercised_on_the_authorization_path",
+      "mf_557_control_evidenced",
+      "recovery_objective_declared_for_critical_function",
+      "register_of_information_entry_present",
+      "subcontracting_chain_disclosed",
+      "timeout_declared_on_every_outbound_call"
+    ],
+    "violate": [
+      "circuit_breaker_absent_on_downstream_dependency",
+      "critical_function_provider_absent_from_register",
+      "exit_strategy_undocumented",
+      "mf_557_control_absent",
+      "outbound_call_without_timeout",
+      "resilience_test_skipped_on_critical_function"
+    ]
+  },
+  "MF-558": {
+    "comply": [
+      "adequacy_decision_or_article_46_safeguard_in_force",
+      "deletion_and_cryptographic_shredding_exercised",
+      "dpia_completed_before_new_high_risk_processing",
+      "lawful_basis_and_contractual_carve_out_recorded",
+      "mf_558_control_evidenced",
+      "opt_out_state_honoured_on_the_new_surface",
+      "retention_decision_recorded_for_new_personal_field",
+      "sensitive_personal_information_limits_applied",
+      "sub_processor_region_declared_before_flow"
+    ],
+    "violate": [
+      "cross_border_flow_without_recorded_mechanism",
+      "deletion_path_absent_for_new_store",
+      "high_risk_processing_added_without_dpia",
+      "mf_558_control_absent",
+      "new_personal_field_retained_without_decision",
+      "opt_out_ignored_on_newly_built_surface"
+    ]
+  },
+  "MF-559": {
+    "comply": [
+      "adequacy_decision_or_article_46_safeguard_in_force",
+      "dpia_completed_before_new_high_risk_processing",
+      "eu_personal_data_remains_in_region",
+      "lawful_basis_and_contractual_carve_out_recorded",
+      "mf_559_control_evidenced",
+      "opt_out_state_honoured_on_the_new_surface",
+      "sensitive_personal_information_limits_applied",
+      "sub_processor_region_declared_before_flow",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "customer_data_enters_training_without_lawful_basis",
+      "deletion_path_absent_for_new_store",
+      "eu_personal_data_replicated_outside_region",
+      "high_risk_processing_added_without_dpia",
+      "mf_559_control_absent",
+      "opt_out_ignored_on_newly_built_surface"
+    ]
+  },
+  "MF-560": {
+    "comply": [
+      "adequacy_decision_or_article_46_safeguard_in_force",
+      "deletion_and_cryptographic_shredding_exercised",
+      "dpia_completed_before_new_high_risk_processing",
+      "eu_personal_data_remains_in_region",
+      "lawful_basis_and_contractual_carve_out_recorded",
+      "mf_560_control_evidenced",
+      "retention_decision_recorded_for_new_personal_field",
+      "sensitive_personal_information_limits_applied",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "cross_border_flow_without_recorded_mechanism",
+      "customer_data_enters_training_without_lawful_basis",
+      "eu_personal_data_replicated_outside_region",
+      "mf_560_control_absent",
+      "new_personal_field_retained_without_decision",
+      "opt_out_ignored_on_newly_built_surface"
+    ]
+  },
+  "MF-561": {
+    "comply": [
+      "adequacy_decision_or_article_46_safeguard_in_force",
+      "deletion_and_cryptographic_shredding_exercised",
+      "dpia_completed_before_new_high_risk_processing",
+      "mf_561_control_evidenced",
+      "opt_out_state_honoured_on_the_new_surface",
+      "retention_decision_recorded_for_new_personal_field",
+      "sensitive_personal_information_limits_applied",
+      "sub_processor_region_declared_before_flow",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "cross_border_flow_without_recorded_mechanism",
+      "deletion_path_absent_for_new_store",
+      "eu_personal_data_replicated_outside_region",
+      "high_risk_processing_added_without_dpia",
+      "mf_561_control_absent",
+      "new_personal_field_retained_without_decision"
+    ]
+  },
+  "MF-562": {
+    "comply": [
+      "adverse_action_notice_names_reasons_and_agency",
+      "champion_challenger_comparison_recorded",
+      "furnished_data_accuracy_controls_exercised",
+      "mf_562_control_evidenced",
+      "no_prohibited_basis_attribute_in_the_feature_set",
+      "outcome_parity_measured_and_documented",
+      "override_of_a_model_decision_logged_with_reason",
+      "parity_exception_time_boxed_with_a_named_owner",
+      "proxy_screen_run_over_the_candidate_features"
+    ],
+    "violate": [
+      "human_reviewable_contest_path_removed",
+      "mf_562_control_absent",
+      "principal_reasons_not_derivable_from_output",
+      "prohibited_basis_attribute_in_the_feature_set",
+      "proxy_for_a_prohibited_basis_enters_the_model",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-563": {
+    "comply": [
+      "champion_challenger_comparison_recorded",
+      "conceptual_soundness_review_recorded",
+      "independent_validation_completed_before_deployment",
+      "mf_563_control_evidenced",
+      "no_prohibited_basis_attribute_in_the_feature_set",
+      "outcome_parity_measured_and_documented",
+      "outcomes_analysis_recorded",
+      "parity_exception_time_boxed_with_a_named_owner",
+      "proxy_screen_run_over_the_candidate_features"
+    ],
+    "violate": [
+      "furnished_data_accuracy_control_removed",
+      "human_reviewable_contest_path_removed",
+      "mf_563_control_absent",
+      "monitoring_thresholds_removed_after_deployment",
+      "principal_reasons_not_derivable_from_output",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-564": {
+    "comply": [
+      "conceptual_soundness_review_recorded",
+      "independent_validation_completed_before_deployment",
+      "mf_564_control_evidenced",
+      "model_inventory_entry_current",
+      "ongoing_monitoring_thresholds_declared",
+      "outcome_parity_measured_and_documented",
+      "outcomes_analysis_recorded",
+      "parity_exception_time_boxed_with_a_named_owner",
+      "principal_reasons_derivable_from_the_model_output"
+    ],
+    "violate": [
+      "furnished_data_accuracy_control_removed",
+      "human_reviewable_contest_path_removed",
+      "mf_564_control_absent",
+      "model_absent_from_inventory",
+      "monitoring_thresholds_removed_after_deployment",
+      "prohibited_basis_attribute_in_the_feature_set"
+    ]
+  },
+  "MF-565": {
+    "comply": [
+      "adverse_action_notice_names_reasons_and_agency",
+      "conceptual_soundness_review_recorded",
+      "furnished_data_accuracy_controls_exercised",
+      "mf_565_control_evidenced",
+      "model_inventory_entry_current",
+      "ongoing_monitoring_thresholds_declared",
+      "outcomes_analysis_recorded",
+      "override_of_a_model_decision_logged_with_reason",
+      "principal_reasons_derivable_from_the_model_output"
+    ],
+    "violate": [
+      "mf_565_control_absent",
+      "model_absent_from_inventory",
+      "monitoring_thresholds_removed_after_deployment",
+      "prohibited_basis_attribute_in_the_feature_set",
+      "proxy_for_a_prohibited_basis_enters_the_model",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-566": {
+    "comply": [
+      "adverse_action_notice_names_reasons_and_agency",
+      "champion_challenger_comparison_recorded",
+      "furnished_data_accuracy_controls_exercised",
+      "mf_566_control_evidenced",
+      "model_inventory_entry_current",
+      "no_prohibited_basis_attribute_in_the_feature_set",
+      "override_of_a_model_decision_logged_with_reason",
+      "principal_reasons_derivable_from_the_model_output",
+      "proxy_screen_run_over_the_candidate_features"
+    ],
+    "violate": [
+      "human_reviewable_contest_path_removed",
+      "mf_566_control_absent",
+      "principal_reasons_not_derivable_from_output",
+      "prohibited_basis_attribute_in_the_feature_set",
+      "proxy_for_a_prohibited_basis_enters_the_model",
+      "unvalidated_model_reaches_the_decision_path"
+    ]
+  },
+  "MF-567": {
+    "comply": [
+      "accuracy_and_robustness_evidence_recorded",
+      "ai_system_inventory_records_intended_purpose",
+      "annex_iii_obligations_tracked_to_the_applicable_date",
+      "human_oversight_control_operable_and_tested",
+      "mf_567_control_evidenced",
+      "no_prohibited_practice_in_the_feature_set",
+      "post_market_monitoring_plan_present",
+      "prompt_and_output_logging_sufficient_to_reconstruct",
+      "risk_classification_recorded_for_the_system"
+    ],
+    "violate": [
+      "ai_interaction_undisclosed_to_the_customer",
+      "facial_recognition_database_built_by_untargeted_scraping",
+      "human_oversight_control_nominal_only",
+      "mf_567_control_absent",
+      "synthetic_content_unmarked",
+      "workplace_emotion_inference_introduced"
+    ]
+  },
+  "MF-568": {
+    "comply": [
+      "accuracy_and_robustness_evidence_recorded",
+      "ai_interaction_disclosed_to_the_customer",
+      "ai_system_inventory_records_intended_purpose",
+      "annex_iii_obligations_tracked_to_the_applicable_date",
+      "mf_568_control_evidenced",
+      "no_prohibited_practice_in_the_feature_set",
+      "post_market_monitoring_plan_present",
+      "prompt_and_output_logging_sufficient_to_reconstruct",
+      "synthetic_content_machine_markable_at_generation"
+    ],
+    "violate": [
+      "ai_interaction_undisclosed_to_the_customer",
+      "decision_logging_insufficient_to_reconstruct",
+      "human_oversight_control_nominal_only",
+      "mf_568_control_absent",
+      "social_scoring_or_manipulative_technique_introduced",
+      "synthetic_content_unmarked"
+    ]
+  },
+  "MF-569": {
+    "comply": [
+      "accuracy_and_robustness_evidence_recorded",
+      "ai_interaction_disclosed_to_the_customer",
+      "ai_system_inventory_records_intended_purpose",
+      "human_oversight_control_operable_and_tested",
+      "mf_569_control_evidenced",
+      "post_market_monitoring_plan_present",
+      "prompt_and_output_logging_sufficient_to_reconstruct",
+      "risk_classification_recorded_for_the_system",
+      "synthetic_content_machine_markable_at_generation"
+    ],
+    "violate": [
+      "decision_logging_insufficient_to_reconstruct",
+      "facial_recognition_database_built_by_untargeted_scraping",
+      "human_oversight_control_nominal_only",
+      "mf_569_control_absent",
+      "social_scoring_or_manipulative_technique_introduced",
+      "workplace_emotion_inference_introduced"
+    ]
+  },
+  "MF-570": {
+    "comply": [
+      "accuracy_and_robustness_evidence_recorded",
+      "ai_system_inventory_records_intended_purpose",
+      "annex_iii_obligations_tracked_to_the_applicable_date",
+      "human_oversight_control_operable_and_tested",
+      "mf_570_control_evidenced",
+      "no_prohibited_practice_in_the_feature_set",
+      "prompt_and_output_logging_sufficient_to_reconstruct",
+      "risk_classification_recorded_for_the_system",
+      "synthetic_content_machine_markable_at_generation"
+    ],
+    "violate": [
+      "ai_interaction_undisclosed_to_the_customer",
+      "facial_recognition_database_built_by_untargeted_scraping",
+      "mf_570_control_absent",
+      "social_scoring_or_manipulative_technique_introduced",
+      "synthetic_content_unmarked",
+      "workplace_emotion_inference_introduced"
+    ]
+  },
+  "MF-571": {
+    "comply": [
+      "agent_action_bounded_by_value_and_rate_limit",
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "human_operable_stop_present_and_tested",
+      "link_to_originating_human_requirement_present",
+      "mandate_scope_declared_before_execution",
+      "mf_571_control_evidenced",
+      "multiparty_human_review_on_policy_or_rbac_change"
+    ],
+    "violate": [
+      "agent_action_unbounded_by_value_or_rate",
+      "agent_change_alters_security_policy_without_review",
+      "agent_change_missing_provenance_attestation",
+      "agent_moves_funds_outside_declared_mandate",
+      "human_operable_stop_removed_or_degraded",
+      "mf_571_control_absent"
+    ]
+  },
+  "MF-572": {
+    "comply": [
+      "agent_action_bounded_by_value_and_rate_limit",
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "human_operable_stop_present_and_tested",
+      "link_to_originating_human_requirement_present",
+      "mandate_scope_declared_before_execution",
+      "mf_572_control_evidenced",
+      "multiparty_human_review_on_policy_or_rbac_change"
+    ],
+    "violate": [
+      "agent_change_alters_security_policy_without_review",
+      "agent_change_lacks_human_signoff_on_decisioning_code",
+      "agent_change_missing_provenance_attestation",
+      "agent_moves_funds_outside_declared_mandate",
+      "human_operable_stop_removed_or_degraded",
+      "mf_572_control_absent"
+    ]
+  },
+  "MF-573": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "complaint_path_present_and_routed",
+      "cost_of_credit_disclosure_precedes_the_binding_moment",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_573_control_evidenced"
+    ],
+    "violate": [
+      "billing_dispute_clock_extendable_by_configuration",
+      "cancellation_harder_than_signup",
+      "complaint_path_removed_without_replacement",
+      "error_resolution_clock_extendable_by_configuration",
+      "liability_cap_configurable_downward",
+      "mf_573_control_absent"
+    ]
+  },
+  "MF-574": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "complaint_path_present_and_routed",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_574_control_evidenced",
+      "no_dark_pattern_in_the_changed_flow"
+    ],
+    "violate": [
+      "billing_dispute_clock_extendable_by_configuration",
+      "dark_pattern_introduced_in_the_changed_flow",
+      "error_resolution_clock_extendable_by_configuration",
+      "liability_cap_configurable_downward",
+      "material_term_omitted_from_the_disclosure",
+      "mf_574_control_absent"
+    ]
+  },
+  "MF-575": {
+    "comply": [
+      "adverse_action_notice_issued_within_the_window",
+      "billing_dispute_clock_at_the_statutory_value",
+      "cancellation_as_easy_as_signup",
+      "complaint_closed_within_the_stated_window",
+      "cost_of_credit_disclosure_precedes_the_binding_moment",
+      "fee_and_term_stated_where_a_consumer_will_see_it",
+      "liability_cap_and_error_clock_at_the_statutory_value",
+      "mf_575_control_evidenced",
+      "no_dark_pattern_in_the_changed_flow"
+    ],
+    "violate": [
+      "billing_dispute_clock_extendable_by_configuration",
+      "cancellation_harder_than_signup",
+      "complaint_path_removed_without_replacement",
+      "dark_pattern_introduced_in_the_changed_flow",
+      "material_term_omitted_from_the_disclosure",
+      "mf_575_control_absent"
+    ]
+  },
+  "MF-576": {
+    "comply": [
+      "audit_record_written_to_non_rewriteable_storage",
+      "audit_trail_enabled_on_the_changed_system",
+      "evidence_export_reproducible_for_an_examiner",
+      "log_clock_synchronised_to_a_trusted_source",
+      "mf_576_control_evidenced",
+      "privileged_action_attributable_to_a_named_individual",
+      "segregation_of_duties_intact_in_reporting_boundary",
+      "tamper_alerting_active_on_the_audit_store",
+      "worm_retention_period_declared_and_enforced"
+    ],
+    "violate": [
+      "audit_record_written_to_rewriteable_storage",
+      "audit_trail_disabled_on_the_changed_system",
+      "mf_576_control_absent",
+      "privileged_action_attributed_to_a_shared_account",
+      "segregation_of_duties_removed_in_reporting_boundary",
+      "tamper_alerting_disabled_or_narrowed"
+    ]
+  },
+  "MF-577": {
+    "comply": [
+      "access_review_completed_for_the_changed_role",
+      "audit_trail_enabled_on_the_changed_system",
+      "evidence_export_reproducible_for_an_examiner",
+      "log_clock_synchronised_to_a_trusted_source",
+      "mf_577_control_evidenced",
+      "privileged_action_attributable_to_a_named_individual",
+      "segregation_of_duties_intact_in_reporting_boundary",
+      "tamper_alerting_active_on_the_audit_store",
+      "worm_retention_period_declared_and_enforced"
+    ],
+    "violate": [
+      "audit_record_written_to_rewriteable_storage",
+      "mf_577_control_absent",
+      "privileged_action_attributed_to_a_shared_account",
+      "retention_shortened_below_the_declared_period",
+      "segregation_of_duties_removed_in_reporting_boundary",
+      "tamper_alerting_disabled_or_narrowed"
+    ]
+  },
+  "MF-578": {
+    "comply": [
+      "access_review_completed_for_the_changed_role",
+      "audit_record_written_to_non_rewriteable_storage",
+      "audit_trail_enabled_on_the_changed_system",
+      "evidence_export_reproducible_for_an_examiner",
+      "log_clock_synchronised_to_a_trusted_source",
+      "mf_578_control_evidenced",
+      "segregation_of_duties_intact_in_reporting_boundary",
+      "tamper_alerting_active_on_the_audit_store",
+      "worm_retention_period_declared_and_enforced"
+    ],
+    "violate": [
+      "audit_record_written_to_rewriteable_storage",
+      "audit_trail_disabled_on_the_changed_system",
+      "mf_578_control_absent",
+      "privileged_action_attributed_to_a_shared_account",
+      "retention_shortened_below_the_declared_period",
+      "segregation_of_duties_removed_in_reporting_boundary"
+    ]
+  },
+  "MF-590": {
+    "comply": [
+      "absolute_and_ordinary_status_stated_on_the_face_of_the_rule",
+      "acceptance_carries_expiry_and_referral",
+      "audit_register_excluded_from_resolve",
+      "mf_590_control_evidenced",
+      "renewal_recorded_visibly_on_the_record",
+      "reporter_output_excluded_from_the_adjudication_input",
+      "standing_declaration_present_in_the_constitution",
+      "threshold_change_routed_to_the_amendment_channel",
+      "uncharged_arrival_leaves_exactly_one_docket_entry"
+    ],
+    "violate": [
+      "acceptance_recorded_without_expiry_or_referral",
+      "mf_590_control_absent",
+      "renewal_applied_silently",
+      "reporter_output_reaches_the_adjudicator",
+      "standing_declaration_absent",
+      "threshold_edited_in_place"
+    ]
+  },
+  "MF-591": {
+    "comply": [
+      "acceptance_carries_expiry_and_referral",
+      "audit_register_excluded_from_resolve",
+      "exception_authority_named_and_role_keyed",
+      "mf_591_control_evidenced",
+      "rationale_recorded_in_full_at_decision_time",
+      "reporter_output_excluded_from_the_adjudication_input",
+      "standing_declaration_present_in_the_constitution",
+      "threshold_change_routed_to_the_amendment_channel",
+      "uncharged_arrival_leaves_exactly_one_docket_entry"
+    ],
+    "violate": [
+      "audit_register_read_by_resolve",
+      "mf_591_control_absent",
+      "reporter_output_reaches_the_adjudicator",
+      "standing_declaration_absent",
+      "threshold_edited_in_place",
+      "uncharged_arrival_leaves_no_docket_entry"
+    ]
+  },
+  "MF-592": {
+    "comply": [
+      "absolute_and_ordinary_status_stated_on_the_face_of_the_rule",
+      "acceptance_carries_expiry_and_referral",
+      "audit_register_excluded_from_resolve",
+      "exception_authority_named_and_role_keyed",
+      "mf_592_control_evidenced",
+      "rationale_recorded_in_full_at_decision_time",
+      "renewal_recorded_visibly_on_the_record",
+      "threshold_change_routed_to_the_amendment_channel",
+      "uncharged_arrival_leaves_exactly_one_docket_entry"
+    ],
+    "violate": [
+      "acceptance_recorded_without_expiry_or_referral",
+      "audit_register_read_by_resolve",
+      "mf_592_control_absent",
+      "renewal_applied_silently",
+      "reporter_output_reaches_the_adjudicator",
+      "uncharged_arrival_leaves_no_docket_entry"
+    ]
+  },
+  "MF-593": {
+    "comply": [
+      "absolute_and_ordinary_status_stated_on_the_face_of_the_rule",
+      "acceptance_carries_expiry_and_referral",
+      "audit_register_excluded_from_resolve",
+      "exception_authority_named_and_role_keyed",
+      "mf_593_control_evidenced",
+      "renewal_recorded_visibly_on_the_record",
+      "reporter_output_excluded_from_the_adjudication_input",
+      "standing_declaration_present_in_the_constitution",
+      "threshold_change_routed_to_the_amendment_channel"
+    ],
+    "violate": [
+      "acceptance_recorded_without_expiry_or_referral",
+      "mf_593_control_absent",
+      "renewal_applied_silently",
+      "standing_declaration_absent",
+      "threshold_edited_in_place",
+      "uncharged_arrival_leaves_no_docket_entry"
+    ]
+  },
+  "MF-594": {
+    "comply": [
+      "absolute_and_ordinary_status_stated_on_the_face_of_the_rule",
+      "audit_register_excluded_from_resolve",
+      "exception_authority_named_and_role_keyed",
+      "mf_594_control_evidenced",
+      "rationale_recorded_in_full_at_decision_time",
+      "reporter_output_excluded_from_the_adjudication_input",
+      "standing_declaration_present_in_the_constitution",
+      "threshold_change_routed_to_the_amendment_channel",
+      "uncharged_arrival_leaves_exactly_one_docket_entry"
+    ],
+    "violate": [
+      "audit_register_read_by_resolve",
+      "mf_594_control_absent",
+      "renewal_applied_silently",
+      "reporter_output_reaches_the_adjudicator",
+      "standing_declaration_absent",
+      "threshold_edited_in_place"
+    ]
+  },
+  "MF-595": {
+    "comply": [
+      "absolute_and_ordinary_status_stated_on_the_face_of_the_rule",
+      "acceptance_carries_expiry_and_referral",
+      "audit_register_excluded_from_resolve",
+      "exception_authority_named_and_role_keyed",
+      "mf_595_control_evidenced",
+      "rationale_recorded_in_full_at_decision_time",
+      "renewal_recorded_visibly_on_the_record",
+      "reporter_output_excluded_from_the_adjudication_input",
+      "uncharged_arrival_leaves_exactly_one_docket_entry"
+    ],
+    "violate": [
+      "acceptance_recorded_without_expiry_or_referral",
+      "audit_register_read_by_resolve",
+      "mf_595_control_absent",
+      "reporter_output_reaches_the_adjudicator",
+      "standing_declaration_absent",
+      "uncharged_arrival_leaves_no_docket_entry"
+    ]
+  },
+  "MF-596": {
+    "comply": [
+      "absolute_and_ordinary_status_stated_on_the_face_of_the_rule",
+      "acceptance_carries_expiry_and_referral",
+      "exception_authority_named_and_role_keyed",
+      "mf_596_control_evidenced",
+      "rationale_recorded_in_full_at_decision_time",
+      "renewal_recorded_visibly_on_the_record",
+      "reporter_output_excluded_from_the_adjudication_input",
+      "standing_declaration_present_in_the_constitution",
+      "threshold_change_routed_to_the_amendment_channel"
+    ],
+    "violate": [
+      "acceptance_recorded_without_expiry_or_referral",
+      "audit_register_read_by_resolve",
+      "mf_596_control_absent",
+      "renewal_applied_silently",
+      "threshold_edited_in_place",
+      "uncharged_arrival_leaves_no_docket_entry"
+    ]
+  },
+  "MF-601": {
+    "comply": [
+      "dynamic_linking_binds_amount_and_payee_to_the_code",
+      "mf_601_control_evidenced",
+      "payee_matching_response_returned_within_the_declared_time",
+      "payee_name_verified_before_the_transfer_is_confirmed",
+      "reimbursement_assessment_runs_on_every_reported_scam_claim",
+      "reimbursement_decision_recorded_within_the_required_window",
+      "sca_applied_on_every_remote_payment_initiation",
+      "sca_exemption_taken_only_from_the_declared_list",
+      "verification_result_shown_to_the_payer_before_confirmation"
+    ],
+    "violate": [
+      "dynamic_linking_removed_from_the_authentication_code",
+      "mf_601_control_absent",
+      "payee_mismatch_warning_hidden_from_the_payer",
+      "payee_name_check_bypassed_for_bulk_transfers",
+      "scam_reimbursement_threshold_made_a_product_setting",
+      "strong_authentication_skipped_outside_the_declared_exemptions"
+    ]
+  },
+  "MF-602": {
+    "comply": [
+      "instant_payment_fraud_score_evaluated_before_settlement",
+      "mf_602_control_evidenced",
+      "payee_matching_response_returned_within_the_declared_time",
+      "payee_name_verified_before_the_transfer_is_confirmed",
+      "reimbursement_assessment_runs_on_every_reported_scam_claim",
+      "reimbursement_decision_recorded_within_the_required_window",
+      "request_for_payment_sender_verified_before_delivery",
+      "verification_result_shown_to_the_payer_before_confirmation",
+      "vulnerable_customer_flag_suppresses_the_claim_excess"
+    ],
+    "violate": [
+      "mf_602_control_absent",
+      "payee_mismatch_warning_hidden_from_the_payer",
+      "payee_name_check_bypassed_for_bulk_transfers",
+      "reimbursement_claim_window_shortened_by_configuration",
+      "request_for_payment_sender_verification_disabled",
+      "scam_reimbursement_threshold_made_a_product_setting"
+    ]
+  },
+  "MF-603": {
+    "comply": [
+      "authentication_element_independence_tested_before_release",
+      "exemption_fraud_rate_monitored_against_the_declared_threshold",
+      "instant_payment_fraud_score_evaluated_before_settlement",
+      "mf_603_control_evidenced",
+      "payment_recall_path_available_on_the_instant_rail",
+      "reimbursement_assessment_runs_on_every_reported_scam_claim",
+      "reimbursement_decision_recorded_within_the_required_window",
+      "request_for_payment_sender_verified_before_delivery",
+      "vulnerable_customer_flag_suppresses_the_claim_excess"
+    ],
+    "violate": [
+      "authentication_elements_drawn_from_the_same_category",
+      "instant_payment_fraud_scoring_bypassed_under_load",
+      "mf_603_control_absent",
+      "reimbursement_claim_window_shortened_by_configuration",
+      "request_for_payment_sender_verification_disabled",
+      "scam_reimbursement_threshold_made_a_product_setting"
+    ]
+  },
+  "MF-604": {
+    "comply": [
+      "account_access_consent_re_authenticated_on_expiry",
+      "authentication_element_independence_tested_before_release",
+      "exemption_fraud_rate_monitored_against_the_declared_threshold",
+      "instant_payment_fraud_score_evaluated_before_settlement",
+      "mf_604_control_evidenced",
+      "payer_notified_of_a_mismatch_before_funds_leave",
+      "payment_recall_path_available_on_the_instant_rail",
+      "request_for_payment_sender_verified_before_delivery",
+      "third_party_provider_certificate_validated_at_the_interface"
+    ],
+    "violate": [
+      "account_access_consent_renewed_without_re_authentication",
+      "authentication_elements_drawn_from_the_same_category",
+      "exemption_fraud_rate_monitoring_removed",
+      "instant_payment_fraud_scoring_bypassed_under_load",
+      "mf_604_control_absent",
+      "request_for_payment_sender_verification_disabled"
+    ]
+  },
+  "MF-605": {
+    "comply": [
+      "authentication_bypass_route_removed_from_the_recovery_flow",
+      "device_and_behaviour_signals_feed_the_risk_decision",
+      "identity_attributes_verified_against_an_authoritative_source",
+      "identity_theft_red_flag_rules_evaluated_on_every_application",
+      "mf_605_control_evidenced",
+      "red_flag_detection_triggers_the_documented_response",
+      "red_flag_programme_updated_on_the_declared_review_cycle",
+      "step_up_challenge_required_on_high_risk_account_changes",
+      "synthetic_identity_indicators_scored_before_funding"
+    ],
+    "violate": [
+      "account_recovery_flow_reintroduces_an_authentication_bypass",
+      "identity_theft_red_flag_rules_switched_off_for_a_channel",
+      "mf_605_control_absent",
+      "red_flag_detection_left_without_a_response_path",
+      "step_up_challenge_dropped_from_high_risk_account_changes",
+      "synthetic_identity_screening_skipped_for_thin_file_applicants"
+    ]
+  },
+  "MF-606": {
+    "comply": [
+      "applicant_identity_element_reuse_checked_across_accounts",
+      "authentication_bypass_route_removed_from_the_recovery_flow",
+      "device_and_behaviour_signals_feed_the_risk_decision",
+      "identity_attributes_verified_against_an_authoritative_source",
+      "mf_606_control_evidenced",
+      "permissible_purpose_certification_bound_to_the_requesting_role",
+      "permissible_purpose_recorded_before_the_consumer_report_pull",
+      "step_up_challenge_required_on_high_risk_account_changes",
+      "synthetic_identity_indicators_scored_before_funding"
+    ],
+    "violate": [
+      "account_recovery_flow_reintroduces_an_authentication_bypass",
+      "consumer_report_pulled_without_a_recorded_permissible_purpose",
+      "identity_attributes_accepted_without_authoritative_verification",
+      "mf_606_control_absent",
+      "step_up_challenge_dropped_from_high_risk_account_changes",
+      "synthetic_identity_screening_skipped_for_thin_file_applicants"
+    ]
+  },
+  "MF-607": {
+    "comply": [
+      "adult_custodian_verified_on_a_minor_account",
+      "applicant_date_of_birth_verified_before_account_opening",
+      "applicant_identity_element_reuse_checked_across_accounts",
+      "identity_attributes_verified_against_an_authoritative_source",
+      "mf_607_control_evidenced",
+      "permissible_purpose_certification_bound_to_the_requesting_role",
+      "permissible_purpose_recorded_before_the_consumer_report_pull",
+      "soft_pull_and_hard_pull_distinguished_in_the_request",
+      "synthetic_identity_indicators_scored_before_funding"
+    ],
+    "violate": [
+      "consumer_report_pulled_without_a_recorded_permissible_purpose",
+      "identity_attributes_accepted_without_authoritative_verification",
+      "mf_607_control_absent",
+      "minor_account_opened_without_a_verified_adult_custodian",
+      "permissible_purpose_defaulted_to_a_blanket_value",
+      "synthetic_identity_screening_skipped_for_thin_file_applicants"
+    ]
+  },
+  "MF-608": {
+    "comply": [
+      "account_takeover_alert_routed_to_the_fraud_queue",
+      "adult_custodian_verified_on_a_minor_account",
+      "applicant_date_of_birth_verified_before_account_opening",
+      "credential_stuffing_detection_enabled_on_the_login_path",
+      "mf_608_control_evidenced",
+      "parental_consent_captured_before_a_child_record_is_created",
+      "permissible_purpose_certification_bound_to_the_requesting_role",
+      "permissible_purpose_recorded_before_the_consumer_report_pull",
+      "soft_pull_and_hard_pull_distinguished_in_the_request"
+    ],
+    "violate": [
+      "account_takeover_alerts_routed_to_an_unmonitored_queue",
+      "child_personal_information_collected_without_parental_consent",
+      "consumer_report_pulled_without_a_recorded_permissible_purpose",
+      "mf_608_control_absent",
+      "minor_account_opened_without_a_verified_adult_custodian",
+      "permissible_purpose_defaulted_to_a_blanket_value"
+    ]
+  },
+  "MF-609": {
+    "comply": [
+      "account_takeover_alert_routed_to_the_fraud_queue",
+      "adult_custodian_verified_on_a_minor_account",
+      "applicant_date_of_birth_verified_before_account_opening",
+      "change_of_address_followed_by_a_notice_to_the_prior_address",
+      "credential_stuffing_detection_enabled_on_the_login_path",
+      "fraud_model_thresholds_reviewed_against_recorded_outcomes",
+      "identity_document_check_result_retained_with_the_application",
+      "mf_609_control_evidenced",
+      "parental_consent_captured_before_a_child_record_is_created"
+    ],
+    "violate": [
+      "account_takeover_alerts_routed_to_an_unmonitored_queue",
+      "change_of_address_notice_removed_from_the_servicing_flow",
+      "child_personal_information_collected_without_parental_consent",
+      "credential_stuffing_detection_disabled_on_the_login_path",
+      "mf_609_control_absent",
+      "minor_account_opened_without_a_verified_adult_custodian"
+    ]
+  },
+  "MF-610": {
+    "comply": [
+      "esign_consent_captured_before_electronic_delivery",
+      "hardware_and_software_requirements_disclosed_at_consent",
+      "mf_610_control_evidenced",
+      "opt_out_keyword_processed_on_the_next_send",
+      "paper_copy_route_retained_after_electronic_consent",
+      "prior_express_consent_recorded_before_an_automated_message",
+      "privacy_notice_delivered_before_information_is_shared",
+      "sharing_opt_out_propagated_to_every_disclosure_path",
+      "written_consent_required_where_the_message_is_marketing"
+    ],
+    "violate": [
+      "automated_message_sent_without_recorded_prior_consent",
+      "electronic_consent_inferred_from_a_portal_login",
+      "electronic_disclosure_delivered_without_electronic_consent",
+      "mf_610_control_absent",
+      "opt_out_keyword_left_unprocessed_by_the_campaign_sender",
+      "privacy_notice_skipped_before_a_new_sharing_flow"
+    ]
+  },
+  "MF-611": {
+    "comply": [
+      "annual_notice_exception_conditions_checked_before_relying_on_it",
+      "collection_contact_attempts_counted_against_the_weekly_cap",
+      "consumer_contact_suppressed_after_a_cease_request",
+      "mf_611_control_evidenced",
+      "opt_out_keyword_processed_on_the_next_send",
+      "prior_express_consent_recorded_before_an_automated_message",
+      "privacy_notice_delivered_before_information_is_shared",
+      "sharing_opt_out_propagated_to_every_disclosure_path",
+      "written_consent_required_where_the_message_is_marketing"
+    ],
+    "violate": [
+      "automated_message_sent_without_recorded_prior_consent",
+      "collection_contact_cap_removed_from_the_dialer",
+      "mf_611_control_absent",
+      "opt_out_keyword_left_unprocessed_by_the_campaign_sender",
+      "privacy_notice_skipped_before_a_new_sharing_flow",
+      "sharing_opt_out_not_propagated_to_a_new_disclosure_path"
+    ]
+  },
+  "MF-612": {
+    "comply": [
+      "annual_notice_exception_conditions_checked_before_relying_on_it",
+      "collection_contact_attempts_counted_against_the_weekly_cap",
+      "consent_revocation_honoured_across_every_channel",
+      "consumer_contact_suppressed_after_a_cease_request",
+      "message_send_window_kept_within_permitted_hours",
+      "mf_612_control_evidenced",
+      "privacy_notice_delivered_before_information_is_shared",
+      "sharing_opt_out_propagated_to_every_disclosure_path",
+      "validation_information_delivered_before_collection_activity"
+    ],
+    "violate": [
+      "cease_communication_request_ignored_by_the_dialer",
+      "collection_contact_cap_removed_from_the_dialer",
+      "consent_revocation_honoured_on_one_channel_only",
+      "mf_612_control_absent",
+      "privacy_notice_skipped_before_a_new_sharing_flow",
+      "sharing_opt_out_not_propagated_to_a_new_disclosure_path"
+    ]
+  },
+  "MF-613": {
+    "comply": [
+      "collection_contact_attempts_counted_against_the_weekly_cap",
+      "consent_revocation_honoured_across_every_channel",
+      "consent_scope_matched_to_the_message_purpose",
+      "consumer_contact_suppressed_after_a_cease_request",
+      "disclosure_delivery_evidenced_with_a_timestamp",
+      "message_send_window_kept_within_permitted_hours",
+      "mf_613_control_evidenced",
+      "servicing_notice_available_in_the_channel_the_consumer_chose",
+      "validation_information_delivered_before_collection_activity"
+    ],
+    "violate": [
+      "cease_communication_request_ignored_by_the_dialer",
+      "collection_contact_cap_removed_from_the_dialer",
+      "consent_revocation_honoured_on_one_channel_only",
+      "messages_scheduled_outside_the_permitted_hours",
+      "mf_613_control_absent",
+      "validation_information_delivered_after_collection_begins"
+    ]
+  },
+  "MF-614": {
+    "comply": [
+      "advertised_yield_matches_the_declared_computation_method",
+      "fee_change_notice_sent_before_the_change_takes_effect",
+      "fee_schedule_and_yield_disclosed_before_account_opening",
+      "funds_availability_schedule_read_from_the_regulated_table",
+      "mf_614_control_evidenced",
+      "next_business_day_availability_applied_to_qualifying_deposits",
+      "opt_in_confirmation_delivered_in_the_required_form",
+      "overdraft_opt_in_recorded_before_any_overdraft_fee",
+      "overdraft_service_defaults_to_declined_without_opt_in"
+    ],
+    "violate": [
+      "account_fee_omitted_from_the_pre_opening_disclosure",
+      "funds_availability_hold_extended_beyond_the_regulated_schedule",
+      "mf_614_control_absent",
+      "overdraft_fee_charged_without_a_recorded_opt_in",
+      "overdraft_service_defaulted_to_enabled_at_account_opening",
+      "yield_advertised_on_a_method_other_than_the_declared_one"
+    ]
+  },
+  "MF-615": {
+    "comply": [
+      "dormancy_period_read_from_the_state_property_table",
+      "exception_hold_notice_issued_when_a_hold_is_placed",
+      "funds_availability_schedule_read_from_the_regulated_table",
+      "mf_615_control_evidenced",
+      "next_business_day_availability_applied_to_qualifying_deposits",
+      "opt_in_confirmation_delivered_in_the_required_form",
+      "overdraft_opt_in_recorded_before_any_overdraft_fee",
+      "overdraft_service_defaults_to_declined_without_opt_in",
+      "owner_due_diligence_notice_sent_before_remittance"
+    ],
+    "violate": [
+      "dormancy_clock_reset_by_an_internal_system_event",
+      "exception_hold_placed_without_a_notice_to_the_depositor",
+      "funds_availability_hold_extended_beyond_the_regulated_schedule",
+      "mf_615_control_absent",
+      "overdraft_fee_charged_without_a_recorded_opt_in",
+      "overdraft_service_defaulted_to_enabled_at_account_opening"
+    ]
+  },
+  "MF-616": {
+    "comply": [
+      "closing_balance_returned_or_escheated_rather_than_absorbed",
+      "dormancy_period_read_from_the_state_property_table",
+      "exception_hold_notice_issued_when_a_hold_is_placed",
+      "fee_waiver_rules_applied_consistently_across_portfolios",
+      "funds_availability_schedule_read_from_the_regulated_table",
+      "mf_616_control_evidenced",
+      "next_business_day_availability_applied_to_qualifying_deposits",
+      "owner_due_diligence_notice_sent_before_remittance",
+      "unclaimed_property_report_filed_on_the_state_schedule"
+    ],
+    "violate": [
+      "dormancy_clock_reset_by_an_internal_system_event",
+      "due_diligence_notice_dropped_from_the_dormancy_job",
+      "exception_hold_placed_without_a_notice_to_the_depositor",
+      "funds_availability_hold_extended_beyond_the_regulated_schedule",
+      "mf_616_control_absent",
+      "unclaimed_property_remittance_deferred_past_the_state_deadline"
+    ]
+  },
+  "MF-617": {
+    "comply": [
+      "closing_balance_returned_or_escheated_rather_than_absorbed",
+      "dormancy_period_read_from_the_state_property_table",
+      "dormant_account_fee_limits_read_from_the_state_table",
+      "fee_waiver_rules_applied_consistently_across_portfolios",
+      "hold_reason_recorded_against_the_deposit",
+      "mf_617_control_evidenced",
+      "owner_due_diligence_notice_sent_before_remittance",
+      "statement_shows_every_fee_charged_in_the_period",
+      "unclaimed_property_report_filed_on_the_state_schedule"
+    ],
+    "violate": [
+      "dormancy_clock_reset_by_an_internal_system_event",
+      "dormant_account_fees_applied_beyond_the_state_limit",
+      "due_diligence_notice_dropped_from_the_dormancy_job",
+      "mf_617_control_absent",
+      "posting_order_changed_to_maximise_fee_events",
+      "unclaimed_property_remittance_deferred_past_the_state_deadline"
+    ]
+  },
+  "MF-618": {
+    "comply": [
+      "covered_borrower_status_checked_before_consummation",
+      "mf_618_control_evidenced",
+      "military_annual_percentage_rate_computed_with_every_charge",
+      "prohibited_loan_terms_refused_for_a_covered_borrower",
+      "protected_status_flag_persisted_across_servicing_transfers",
+      "repossession_gated_on_a_court_order_during_service",
+      "service_member_rate_cap_applied_on_valid_notice",
+      "suspected_elder_exploitation_escalated_to_the_named_team",
+      "transaction_hold_available_where_state_law_permits_one"
+    ],
+    "violate": [
+      "covered_borrower_check_skipped_to_shorten_the_application",
+      "elder_exploitation_escalation_path_removed_from_servicing",
+      "mf_618_control_absent",
+      "military_annual_percentage_rate_computed_without_all_charges",
+      "repossession_executed_without_the_required_court_order",
+      "service_member_rate_cap_left_unapplied_after_valid_notice"
+    ]
+  },
+  "MF-619": {
+    "comply": [
+      "covered_borrower_check_result_retained_with_the_loan_file",
+      "mf_619_control_evidenced",
+      "oral_and_written_military_disclosures_delivered_before_consummation",
+      "protected_status_flag_persisted_across_servicing_transfers",
+      "repossession_gated_on_a_court_order_during_service",
+      "service_member_rate_cap_applied_on_valid_notice",
+      "suspected_elder_exploitation_escalated_to_the_named_team",
+      "transaction_hold_available_where_state_law_permits_one",
+      "trusted_contact_recorded_and_used_on_escalation"
+    ],
+    "violate": [
+      "elder_exploitation_escalation_path_removed_from_servicing",
+      "mf_619_control_absent",
+      "protected_status_flag_dropped_on_a_servicing_transfer",
+      "repossession_executed_without_the_required_court_order",
+      "service_member_rate_cap_left_unapplied_after_valid_notice",
+      "suspected_exploitation_alerts_downgraded_to_a_report_only"
+    ]
+  },
+  "MF-620": {
+    "comply": [
+      "covered_borrower_check_result_retained_with_the_loan_file",
+      "exploitation_reporting_path_reachable_from_the_servicing_case",
+      "exploitation_response_playbook_versioned_in_the_policy_repo",
+      "interest_refunded_where_the_rate_cap_applied_retroactively",
+      "mf_620_control_evidenced",
+      "oral_and_written_military_disclosures_delivered_before_consummation",
+      "suspected_elder_exploitation_escalated_to_the_named_team",
+      "transaction_hold_available_where_state_law_permits_one",
+      "trusted_contact_recorded_and_used_on_escalation"
+    ],
+    "violate": [
+      "elder_exploitation_escalation_path_removed_from_servicing",
+      "mf_620_control_absent",
+      "prohibited_loan_term_offered_to_a_covered_borrower",
+      "protected_status_flag_dropped_on_a_servicing_transfer",
+      "suspected_exploitation_alerts_downgraded_to_a_report_only",
+      "trusted_contact_field_dropped_from_the_account_record"
+    ]
+  },
+  "MF-621": {
+    "comply": [
+      "access_request_fulfilled_within_the_statutory_month",
+      "accessibility_regression_suite_runs_on_the_portal_build",
+      "conformance_failure_blocks_the_customer_surface_release",
+      "extension_of_the_response_period_notified_with_reasons",
+      "mf_621_control_evidenced",
+      "opt_out_preference_signal_detected_on_page_load",
+      "portable_export_produced_in_a_structured_machine_readable_form",
+      "signal_derived_opt_out_applied_without_further_prompting",
+      "status_and_errors_conveyed_in_text_not_colour_alone"
+    ],
+    "violate": [
+      "access_request_left_unanswered_past_the_statutory_month",
+      "accessibility_gate_removed_from_the_portal_pipeline",
+      "conformance_failures_downgraded_to_warnings_in_the_pipeline",
+      "mf_621_control_absent",
+      "opt_out_preference_signal_ignored_by_the_new_surface",
+      "portable_export_returned_only_as_a_rendered_document"
+    ]
+  },
+  "MF-622": {
+    "comply": [
+      "accessibility_regression_suite_runs_on_the_portal_build",
+      "conformance_failure_blocks_the_customer_surface_release",
+      "mf_622_control_evidenced",
+      "opt_out_preference_signal_detected_on_page_load",
+      "opt_out_state_linked_to_the_known_customer_record",
+      "requester_identity_verified_before_any_disclosure",
+      "signal_derived_opt_out_applied_without_further_prompting",
+      "status_and_errors_conveyed_in_text_not_colour_alone",
+      "third_party_data_redacted_from_the_access_response"
+    ],
+    "violate": [
+      "accessibility_gate_removed_from_the_portal_pipeline",
+      "conformance_failures_downgraded_to_warnings_in_the_pipeline",
+      "mf_622_control_absent",
+      "opt_out_preference_signal_ignored_by_the_new_surface",
+      "requester_identity_check_dropped_from_the_access_path",
+      "signal_derived_opt_out_overridden_by_a_banner_choice"
+    ]
+  },
+  "MF-623": {
+    "comply": [
+      "accessible_name_present_on_every_interactive_control",
+      "keyboard_only_completion_verified_for_the_payment_flow",
+      "mf_623_control_evidenced",
+      "opt_out_preference_signal_detected_on_page_load",
+      "opt_out_state_linked_to_the_known_customer_record",
+      "requester_identity_verified_before_any_disclosure",
+      "rights_request_intake_reachable_from_the_customer_portal",
+      "signal_derived_opt_out_applied_without_further_prompting",
+      "third_party_data_redacted_from_the_access_response"
+    ],
+    "violate": [
+      "dispute_status_conveyed_by_colour_alone",
+      "mf_623_control_absent",
+      "opt_out_preference_signal_ignored_by_the_new_surface",
+      "requester_identity_check_dropped_from_the_access_path",
+      "signal_derived_opt_out_overridden_by_a_banner_choice",
+      "third_party_data_returned_unredacted_in_an_access_response"
+    ]
+  },
+  "MF-624": {
+    "comply": [
+      "counterparty_wallet_provider_identified_before_the_transfer",
+      "currency_transaction_aggregation_runs_across_the_business_day",
+      "currency_transaction_report_emitted_within_the_statutory_window",
+      "information_request_list_matched_across_every_account_system",
+      "mf_624_control_evidenced",
+      "originator_and_beneficiary_records_transmitted_with_the_transfer",
+      "politically_exposed_person_screening_runs_at_onboarding_and_refresh",
+      "reporting_exemption_supported_by_a_filed_designation",
+      "unhosted_wallet_transfer_recorded_with_the_declared_evidence"
+    ],
+    "violate": [
+      "counterparty_wallet_provider_left_unidentified_before_transfer",
+      "currency_transaction_report_suppressed_by_a_threshold_setting",
+      "information_request_search_narrowed_to_open_accounts_only",
+      "mf_624_control_absent",
+      "same_day_currency_transactions_left_unaggregated",
+      "virtual_asset_transfer_sent_without_the_originator_record"
+    ]
+  },
+  "MF-625": {
+    "comply": [
+      "blockchain_analytics_risk_score_evaluated_before_settlement",
+      "currency_transaction_aggregation_runs_across_the_business_day",
+      "currency_transaction_report_emitted_within_the_statutory_window",
+      "enhanced_due_diligence_file_completed_before_the_relationship_opens",
+      "information_request_list_matched_across_every_account_system",
+      "mf_625_control_evidenced",
+      "politically_exposed_person_screening_runs_at_onboarding_and_refresh",
+      "reporting_exemption_supported_by_a_filed_designation",
+      "sanctioned_wallet_addresses_refreshed_from_the_published_list"
+    ],
+    "violate": [
+      "currency_transaction_report_suppressed_by_a_threshold_setting",
+      "enhanced_due_diligence_file_deferred_until_after_funding",
+      "information_request_search_narrowed_to_open_accounts_only",
+      "mf_625_control_absent",
+      "politically_exposed_person_screening_dropped_from_refresh",
+      "same_day_currency_transactions_left_unaggregated"
+    ]
+  },
+  "MF-626": {
+    "comply": [
+      "blockchain_analytics_risk_score_evaluated_before_settlement",
+      "correspondent_relationship_due_diligence_recorded_before_opening",
+      "enhanced_due_diligence_file_completed_before_the_relationship_opens",
+      "information_request_list_matched_across_every_account_system",
+      "information_request_search_results_retained_for_the_required_period",
+      "mf_626_control_evidenced",
+      "politically_exposed_person_screening_runs_at_onboarding_and_refresh",
+      "relationship_risk_rating_refreshed_on_the_declared_cycle",
+      "sanctioned_wallet_addresses_refreshed_from_the_published_list"
+    ],
+    "violate": [
+      "blockchain_analytics_scoring_bypassed_for_priority_partners",
+      "enhanced_due_diligence_file_deferred_until_after_funding",
+      "information_request_search_narrowed_to_open_accounts_only",
+      "mf_626_control_absent",
+      "politically_exposed_person_screening_dropped_from_refresh",
+      "sanctioned_wallet_address_list_left_unrefreshed"
+    ]
+  }
+}

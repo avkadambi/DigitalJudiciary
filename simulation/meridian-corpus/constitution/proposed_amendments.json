@@ -1,0 +1,145 @@
+{
+  "note": "Findings against existing provisions, filed as draft amendments rather than applied. Under Axiom A3 the only route from a case \u2014 or from a corpus author \u2014 to a rule change is a draft amendment the legislative process may adopt or reject.",
+  "amendments": [
+    {
+      "id": "PA-01",
+      "targets": [
+        "MF-301",
+        "MF-302",
+        "MF-307",
+        "MF-563",
+        "MF-564"
+      ],
+      "raised_by": "corpus survey 04-model-risk-and-fair-lending",
+      "finding": "Five provisions rest on SR 11-7 / OCC Bulletin 2011-12 as their primary anchor, and two more cite it in support. Verified: that guidance was superseded on 17 April 2026 by SR 26-2, OCC Bulletin 2026-13 and FDIC FIL-15-2026. Two consequences, and they cut in opposite directions. First, the replacement expressly excludes generative and agentic AI from the definition of a model, so MF-307 \u2014 which governs agent-authored change \u2014 now cites an instrument that disclaims the subject matter. Second, the replacement states that it sets no enforceable standards, so a provision that reads as a restatement of supervisory requirement is now a firm control wearing a supervisor's name. The section pins are separately wrong: model use is \u00a7IV, validation \u00a7V, inventory \u00a7VI, not \u00a7V and \u00a7VII as cited.",
+      "proposed": "Re-anchor MF-301 and MF-302 on SR 26-2 / OCC 2026-13 with corrected section pins, and restate them as firm controls informed by supervisory guidance rather than as restatements of it. Re-anchor MF-307 away from SR 11-7 entirely \u2014 agentic oversight now has no model-risk instrument to sit under, which is itself the finding, and MF-511 and MF-572 state the duty on the firm's own authority.",
+      "why_not_applied": "A provision's citation is what a later adjudicator reasons from, and the opening store already holds fifteen seed records interpreting these five provisions as cited \u2014 nine of them on shipped provisions. Re-anchoring is a legislative act.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-02",
+      "targets": [
+        "MF-110",
+        "MF-305"
+      ],
+      "raised_by": "corpus survey 04-model-risk-and-fair-lending",
+      "finding": "Both provisions cite CFPB Circulars 2022-03 and 2023-03. Verified: both circulars were withdrawn on 12 May 2025 (90 FR, Doc. 2025-08286). The duty they described did not go with them \u2014 it is statutory, at 15 U.S.C. \u00a71691(d) and 12 CFR \u00a71002.9(b)(2) \u2014 but the provisions now cite withdrawn guidance for a live obligation, which is the worst of both: it invites a contest that the rule is gone when the rule is not.",
+      "proposed": "Re-anchor both on \u00a71691(d) and \u00a71002.9(b)(2) directly, and drop the circular citations. The operative text of MF-110 needs no change.",
+      "why_not_applied": "Same reason as PA-01. Note that the absolute status of MF-110 is unaffected either way: the statute, not the circular, is what makes it a floor.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-03",
+      "targets": [
+        "MF-305"
+      ],
+      "raised_by": "corpus survey 04-model-risk-and-fair-lending",
+      "finding": "MF-305 cites the Reg B effects test at 12 CFR \u00a71002.6(a). Verified: 91 FR 21620, effective 21 July 2026, amended \u00a71002.6(a) to remove it. The amendment is under APA challenge; no injunction has been sought, so it is in force. Disparate treatment, and the prohibition on proxies for a prohibited basis, are untouched \u2014 they are statutory. The consequence for drafting is sharp: proxy detection remains a floor, and outcome parity becomes a documented, time-boxed firm control rather than a restatement of a regulatory test.",
+      "proposed": "Split MF-305. Proxy detection is already stated absolutely at MF-510. Restate MF-305's parity limb as the firm control it now is, which MF-562 does, and drop the \u00a71002.6(a) anchor.",
+      "why_not_applied": "MF-510 and MF-562 close the gap by addition, which is the route open to a corpus author. Whether MF-305 should itself be split is for the lawmakers, and the routes are not equivalent: a separate provision is citable separately, and 'the effects test' as a phrase now means something different than it did when the shipped cases were written.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-04",
+      "targets": [
+        "MF-405"
+      ],
+      "raised_by": "corpus survey 01-financial-regulation",
+      "finding": "MF-405 is the pack's one provision carrying the status 'readiness', which is right: 12 CFR Part 1033 was enjoined \u2014 not vacated \u2014 by the Eastern District of Kentucky in Forcht Bank, N.A. v. CFPB on 29 October 2025, and is under CFPB reconsideration. The distinction matters. An enjoined rule can be revived; a vacated one cannot. The statutory duty at 12 U.S.C. \u00a75533 is untouched by either.",
+      "proposed": "Retain the provision and its readiness status. Re-anchor the citation on 12 U.S.C. \u00a75533 so that the obligation survives whatever happens to Part 1033, and state the Part 1033 history as context rather than as the source. Do not make it absolute: a readiness provision cannot be, and the build refuses it.",
+      "why_not_applied": "The build already refuses an absolute readiness provision, so the unsafe form is unreachable. The citation change is legislative.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-05",
+      "targets": [
+        "MF-202"
+      ],
+      "raised_by": "corpus survey 03-fintech-appsec-and-fraud",
+      "finding": "MF-202 cites 23 NYCRR \u00a7500.12(a) for the compensating-control path. Verified: the compensating-control provision is \u00a7500.12(b). Subsection (a) is the universal MFA requirement itself, in force since 1 November 2025. As cited, the provision points at the obligation and calls it the exception.",
+      "proposed": "Correct the pin to \u00a7500.12(b). No change to the operative text.",
+      "why_not_applied": "It is a one-character correction, which is exactly why it is worth refusing to make unilaterally: if a corpus author may fix an obvious typo in a citation, the boundary between editorial and legislative is set by the author's judgement rather than by A3.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-06",
+      "targets": [
+        "MF-102",
+        "MF-509"
+      ],
+      "raised_by": "corpus survey 01-financial-regulation",
+      "finding": "The shipped rationale describes tipping-off as an offence under 18 U.S.C. \u00a71510(b). Verified: \u00a71510(b) covers obstruction relating to subpoenas and does not reach SARs. The exposure is real but runs through 31 U.S.C. \u00a75318(g)(2) with the penalty at \u00a75322, and through 31 CFR \u00a71020.320(e)(1).",
+      "proposed": "Correct the rationale to cite \u00a75318(g)(2), \u00a75322 and \u00a71020.320(e)(1). MF-509 already states the confidentiality duty on the correct anchors.",
+      "why_not_applied": "MF-102's absolute status does not depend on which statute is named \u2014 the duty is real under either reading \u2014 so the correction is not urgent, and an unurgent correction is the easiest kind to make legislatively.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-07",
+      "targets": [
+        "MF-103"
+      ],
+      "raised_by": "corpus survey 01-financial-regulation",
+      "finding": "MF-103 requires CIP completion before an account is opened, funded, or raised in limit. Verified: 31 CFR \u00a71020.220(a)(2)(ii) permits verification within a reasonable time AFTER account opening, on risk-based procedures. As drafted the provision is stricter than the rule it cites, so it will flag conforming behaviour as a violation \u2014 and because it is absolute, the flag cannot be risk-accepted.",
+      "proposed": "Retain the absolute status for funding and limit increases, where the firm's own exposure is immediate. Restate the account-opening limb as an ordinary provision requiring documented risk-based procedures and a completion deadline.",
+      "why_not_applied": "This is the sharpest of the seven findings and the one most tempting to apply, because the provision as written will generate false denials. It is also the one where applying it unilaterally would do the most damage: narrowing an absolute provision is precisely the act A6 and A3 exist to prevent a non-lawmaker from performing. The finding is filed; the provision stands until the lawmakers move it.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-08",
+      "targets": [
+        "MF-524"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (meridian)",
+      "finding": "MF-524 states the travel-rule duty on the citation '31 CFR \u00a71010.410(e)-(f); FATF Recommendation 16'. Two problems. First, the two subsections are different obligations bundled into one pin: \u00a71010.410(e) is the Recordkeeping Rule, which requires the transmittor's institution to obtain and retain records for a transmittal of funds at or above the threshold, and \u00a71010.410(f) is the Travel Rule, which requires those records to be forwarded to the next institution in the chain. A change can breach one and comply with the other, and as drafted the provision cannot say which. Second, the provision speaks only of 'a qualifying funds transfer'. That convertible virtual currency is 'funds' for these purposes rests on FinCEN Guidance FIN-2019-G001, not on the text of \u00a71010.410, and the guidance is not cited \u2014 so a change that drops originator data from a virtual-asset transfer is charged, if at all, on an unstated interpretive step.",
+      "proposed": "Split MF-524 into a recordkeeping limb pinned to \u00a71010.410(e) and a transmittal limb pinned to \u00a71010.410(f), and add FIN-2019-G001 to the citation so that the virtual-asset reading is on the face of the rule. The new MF-624 states the virtual-asset duty on its own authority, which closes the gap by addition; whether MF-524 should also be split is for the lawmakers.",
+      "why_not_applied": "MF-524 is an extension provision, not a shipped one, but A3 draws no distinction: the corpus author's route to a rule change is a draft amendment either way. Splitting a provision also changes which arrivals are charged and under how many counts, which is a legislative act and not an editorial one.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-09",
+      "targets": [
+        "MF-574"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (meridian)",
+      "finding": "MF-574 \u2014 cancellation at least as easy as sign-up \u2014 cites 'Dodd-Frank \u00a71031 UDAAP; FTC Negative Option Rule, 16 CFR Part 425'. Verified: the Eighth Circuit vacated the FTC's 2024 Negative Option Rule in its entirety on 8 July 2025 in Custom Communications, Inc. v. FTC, for a failure to issue a preliminary regulatory analysis. The provision therefore names a vacated instrument as one of its two anchors. The duty itself survives \u2014 through ROSCA, 15 U.S.C. \u00a78403, and through state automatic-renewal statutes \u2014 so the consequence is not that the rule is gone but that the citation invites a contest that it is.",
+      "proposed": "Re-anchor MF-574 on ROSCA, 15 U.S.C. \u00a78403, and on the governing state's automatic-renewal statute read from the jurisdiction table, retaining the Dodd-Frank \u00a71031 UDAAP limb and deleting the reference to Part 425. No change to the operative text is needed.",
+      "why_not_applied": "Identical in kind to PA-02: a citation is what a later adjudicator reasons from, and re-anchoring it under a frozen revision moves the ground beneath every record that interprets the provision as cited.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-10",
+      "targets": [
+        "MF-109"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (meridian)",
+      "finding": "Two findings, one of them about the rulebook's own bookkeeping. First, MF-109's source_status reads 'see proposed amendment PA-10' and no PA-10 exists: the shipped sequence stops at PA-07. A provision that points at an amendment which is not there is worse than one that points at nothing, because a reader concludes the finding was considered and resolved. This amendment takes that id so the reference resolves. Second, the substantive point the reference presumably meant: MF-109 makes 'error-resolution clocks' absolute on the pins '12 CFR \u00a7\u00a71005.6, 1005.11'. \u00a71005.11 does contain the investigation periods, but the ten-business-day provisional-credit duty that a product decision is most likely to erode sits specifically at \u00a71005.11(c)(2)(i), and \u00a71005.11(c)(3) provides the extension to forty-five days that a compliant firm may take. Pinned at section level, the provision cannot distinguish a lawful extension from an unlawful one, and because it is absolute the distinction cannot be made by risk acceptance either.",
+      "proposed": "Register this amendment id against MF-109 so the forward reference resolves, and pin the provision to '12 CFR \u00a7\u00a71005.6, 1005.11(b), 1005.11(c)(2)(i) and 1005.11(c)(3)', naming the provisional-credit duty and its lawful extension on the face of the rule.",
+      "why_not_applied": "MF-109 is one of the eleven shipped absolutes; narrowing or elaborating it changes which arrivals short-circuit under A6. The extension declined to add a competing provisional-credit provision in the CN family for the same reason: two provisions stating one duty would tie on every ordering key, and the honest route is to file the finding rather than to legislate around it.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-11",
+      "targets": [
+        "MF-303",
+        "MF-569"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (meridian)",
+      "finding": "MF-303 states two duties in one sentence \u2014 tell the customer they are talking to an AI system, and make generated content machine-markable \u2014 and cites 'EU AI Act Art. 50, applicable from 2 August 2026'. Two consequences. First, the date phrasing has gone stale: as of this build the applicability date has passed, so a provision drafted in the future tense now reads as if the obligation were still ahead. Second, MF-569 states the marking limb again, on the narrower and more accurate pin Art. 50(2). The two provisions overlap on their face: a change that ships unmarked synthetic content is chargeable under either, and they will tie on every ordering key more often than the K-tie budget contemplates. The precise scope of the Art. 50 transparency duties after the AI Omnibus package the pack already notes at MF-304 is directionally supported, not verified.",
+      "proposed": "Split MF-303: keep the Art. 50(1) disclosure duty in MF-303 with the tense corrected to the present, and let MF-569 carry the Art. 50(2) marking duty alone, so the distinguishing gate can separate them. Re-verify both against the AI Omnibus as adopted before the split is enacted.",
+      "why_not_applied": "MF-303 is a shipped provision whose text is reproduced unchanged by construction, and the pack's whole claim to comparability with the released cases rests on that. Deciding which of two overlapping provisions survives is the legislature's, not the editor's.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-12",
+      "targets": [
+        "MF-406",
+        "MF-575"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (meridian)",
+      "finding": "MF-406 rests on 'CFPB supervisory expectations; UDAAP' with the source_status conceding it is 'stated as firm policy', and MF-575 restates the same duty with a window and adds the pin 'Dodd-Frank \u00a71034(c) 15-day response'. Verified: 12 U.S.C. \u00a75534(c) requires a timely response to a consumer complaint or inquiry, but it is addressed to covered persons subject to supervision under \u00a75515 or \u00a75516 \u2014 the larger depositories, their affiliates and the defined larger participants \u2014 not to every covered person. As drafted MF-575 states a statutory deadline of general application that the statute does not impose, and the two provisions between them charge one duty twice, once on policy and once on a pin that may not reach the firm.",
+      "proposed": "Qualify MF-575's citation with the \u00a75515/\u00a75516 supervisory scope and state the fifteen-day window as a firm control where the statute does not reach, then merge MF-406 into it or mark MF-406 as the path-existence rule and MF-575 as the timeliness rule so the two order rather than compete.",
+      "why_not_applied": "The same overlap logic as PA-11, with an added reason: MF-406 is shipped and MF-575 is an extension, so a merge would silently move a shipped provision's duty into an extension one. Only the legislature may decide which text survives.",
+      "disposition": "pending"
+    }
+  ]
+}
