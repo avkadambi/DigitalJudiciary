@@ -1,0 +1,72 @@
+{
+  "note": "Findings against existing provisions, filed as draft amendments rather than applied. Under Axiom A3 the only route from a case \u2014 or from a corpus author \u2014 to a rule change is a draft amendment the legislative process may adopt or reject.",
+  "amendments": [
+    {
+      "id": "PA-01",
+      "targets": [
+        "FL-SF-007"
+      ],
+      "raised_by": "scenario-extension survey 2026-09 (frontierllm)",
+      "finding": "The provision cites only 'California SB 53 (15-day / 24-hour)'. Verified: EU AI Act Art. 55(1)(c) has bound systemic-risk GPAI providers since 2 Aug 2025 to report serious incidents to the AI Office without undue delay, and it attaches at the 10^25 FLOP presumption, not SB 53's 10^26 \u2014 so a run can owe an EU report and no Californian one. Separately, SB 53 is under the EO 14365 preemption challenge and the pack carries no instability flag on it.",
+      "proposed": "Restate the citation as 'California SB 53 \u00a722757.13 (15-day / 24-hour; under EO 14365 preemption challenge); EU AI Act Art. 55(1)(c); GPAI Code of Practice Commitment 9'. Leave the provision ordinary; the extension's FL-TR-004 carries the configurability floor for the clock itself, and the two should be read together.",
+      "why_not_applied": "Changing a provision's stated source changes what a later adjudicator reasons from. That is a legislative act under A3, not an editorial one.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-02",
+      "targets": [
+        "FL-SF-002",
+        "FL-SF-003"
+      ],
+      "raised_by": "scenario-extension survey 2026-09 (frontierllm)",
+      "finding": "Both weight-security absolutes rest on 'California SB 53' plus RAND security levels (FL-SF-002) and on 'practice policy; RAND SL3+ paraphrased' (FL-SF-003). The strongest binding source \u2014 EU AI Act Art. 55(1)(d), in force since 2 Aug 2025, with GPAI Code of Practice Commitment 6 / Measure 6.2 / Appendix 4 as the presumption-of-conformity route \u2014 is cited by neither. FL-SF-003 is an absolute whose only external authority is a noncommercial-use-only report; as written it reads as a severity claim rather than a who-may-decide floor.",
+      "proposed": "Add Art. 55(1)(d) and Code of Practice Commitment 6 to both citations. Keep both absolute: the two-person rule is the access-control floor that Measure 6.2 names, and the citation change gives it the statutory footing its absolute status needs.",
+      "why_not_applied": "The 290 F-absolute cases in the shipped corpus cite these provisions as they stand; re-grounding a floor is for the responsible-scaling council, not the corpus author.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-03",
+      "targets": [
+        "FL-GV-001"
+      ],
+      "raised_by": "scenario-extension survey 2026-09 (frontierllm)",
+      "finding": "The provision cites 'EU AI Act Art. 14(4)\u2013(5)' alongside GDPR Art. 22(3) and the CPPA ADMT regulations as if all three bound now. Verified: Art. 14 sits in the Annex III high-risk block that Reg. (EU) 2026/1744 deferred to 2 Dec 2027 \u2014 the same deferral the pack itself records on FL-GV-009, FL-GV-010 and FL-GV-011 for Arts. 9, 10 and 15. The absolute status still stands on GDPR Art. 22(3) (in force) and the CPPA ADMT rules (effective 1 Jan 2026, compliance 1 Jan 2027).",
+      "proposed": "Restate the citation as 'GDPR Art. 22(3); CPPA ADMT regulations; EU AI Act Art. 14(4)\u2013(5) (deferred to 2 Dec 2027 by Reg. (EU) 2026/1744)'. Keep absolute on the in-force limbs.",
+      "why_not_applied": "A citation that mis-states an instrument's application date is a defect in the rulebook, and the rulebook changes only by enactment (A3, FL-GV-006).",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-04",
+      "targets": [
+        "FL-GV-002"
+      ],
+      "raised_by": "scenario-extension survey 2026-09 (frontierllm)",
+      "finding": "The provision cites 'EU AI Act Art. 5' as of the original Regulation. Reg. (EU) 2026/1744 inserted a new Art. 5 prohibition on AI systems generating non-consensual intimate imagery and child sexual abuse material, with a transitional period to 2 Dec 2026. The pack's Art. 5 floor therefore has a limb that is enacted but not yet binding, and the provision text ('practices prohibited under Article 5') will silently widen on that date.",
+      "proposed": "Add to the citation 'as amended by Reg. (EU) 2026/1744 \u2014 NCII/CSAM limb binding from 2 Dec 2026', and record in source_status that until then the CSAM limb is carried by the extension's FL-CS-001 under 18 U.S.C. \u00a72252A rather than by Art. 5.",
+      "why_not_applied": "Widening an absolute's scope, even by acknowledging an amendment to its source, is a legislative act; the responsible-scaling council should decide whether the limb becomes absolute on 2 Dec 2026 or stays deferred in a separate provision.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-05",
+      "targets": [
+        "FL-BS-001"
+      ],
+      "raised_by": "scenario-extension survey 2026-09 (frontierllm)",
+      "finding": "The only absolute in the brand-safety family cites 'risk architecture \u00a75.2' alone. Under Definition 1 an absolute means no one below the legislature may decide, not that the harm is severe. A toxicity threshold is, by the pack's own FL-BS-006 and the 'toxicity_threshold_relaxed_without_approval' factor, a governed parameter with an approval route \u2014 which is the signature of an ordinary provision. The provision reads as a severity claim.",
+      "proposed": "Either ground the floor in an external instrument (EU AI Act Art. 55(1)(b) systemic-risk mitigation for the flagged-content classes; DSA Art. 16 for illegal content) and narrow it to illegal-content classes, or reclassify it as ordinary with the policy board as the named exception authority.",
+      "why_not_applied": "Reclassifying an absolute rewrites which cases short-circuit under A6 and would re-base every F-absolute case that cites it.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-06",
+      "targets": [
+        "FL-TD-001"
+      ],
+      "raised_by": "scenario-extension survey 2026-09 (frontierllm)",
+      "finding": "The absolute provenance floor cites 'DSM Directive 2019/790 Art. 4; EDPB Opinion 28/2024'. Verified: Art. 4 of the DSM Directive is the text-and-data-mining exception with its opt-out \u2014 it is the source for FL-TD-003, not for a prohibited-provenance bar. The instruments that actually make provenance a floor are EU AI Act Art. 5(1)(e) (untargeted facial-image scraping, in force since 2 Feb 2025) and the EDPB's holding (4) on unlawful development tainting deployment; the LAION appeal (BGH hearing 3 Sept 2026) may also move the Art. 4 contours.",
+      "proposed": "Restate the citation as 'EU AI Act Art. 5(1)(e); EDPB Opinion 28/2024 holding (4); DSM Directive 2019/790 Art. 4(3) for the opt-out limb only', and flag the LAION appeal as an instability marker.",
+      "why_not_applied": "Changing the grounding of an absolute is a legislative act; the finding is filed for the privacy-and-data-stewardship office.",
+      "disposition": "pending"
+    }
+  ]
+}

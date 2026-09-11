@@ -1,0 +1,59 @@
+cff-version: 1.2.0
+title: FrontierLLM Constitution Corpus
+message: >-
+  If you use this corpus, please cite it and the Digital Judiciary programme
+  papers it instantiates.
+type: dataset
+version: 2.4.0
+license: CC-BY-4.0
+license-url: https://creativecommons.org/licenses/by/4.0/
+authors:
+  - family-names: Kadambi
+    given-names: Arun
+  - family-names: Kuppuswamy
+    given-names: Venkat
+    affiliation: >-
+      D'Amore-McKim School of Business, Northeastern University
+abstract: >-
+  An open 6,000-case conformance corpus for governing software change at a
+  frontier large-language-model developer under a Digital Judiciary: a
+  constitution of 113 provisions (22 absolute) spanning model and prompt bills
+  of materials, training-data provenance and opt-out, personal data, agent
+  identity and agent-authored code, LLM-specific security, probabilistic
+  evaluation and contamination, frontier safety and weight security, inference
+  latency and determinism, financial guardrails, brand safety, IP
+  contamination, classic software supply chain, application security and
+  governance of the judiciary itself. Every provision carries a status —
+  in force, deferred, or advisory — and a provision that is not in force may
+  never be marked absolute. Ground truth is computed from an executed trace
+  rather than authored. Ships a reference adjudication engine, 26 conformance
+  checks, a mutation matrix, and a three-pack profile comparison against the
+  VetPOC and SemiFab corpora.
+keywords:
+  - compliance
+  - precedent
+  - policy-as-code
+  - frontier AI
+  - AI governance
+  - EU AI Act
+  - model provenance
+  - conformance testing
+references:
+  - type: article
+    title: >-
+      When Retrieval Binds: Appraisal, Authenticity and Disposition in
+      Automated Compliance Decisions
+    authors:
+      - family-names: Kadambi
+        given-names: Arun
+      - family-names: Kuppuswamy
+        given-names: Venkat
+  - type: article
+    title: >-
+      Case-Base Formation for Precedential Constraint: Standing, Admission
+      Rules, and the Reason Model
+    authors:
+      - family-names: Kadambi
+        given-names: Arun
+      - family-names: Kuppuswamy
+        given-names: Venkat

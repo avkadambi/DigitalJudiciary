@@ -1,0 +1,2879 @@
+{
+  "FL-MB-001": {
+    "comply": [
+      "base_model_list_complete_for_merges",
+      "finetuned_on_relationship_declared",
+      "fl_mb_001_control_evidenced",
+      "model_hash_on_approved_registry",
+      "no_unsigned_files_in_model_scope",
+      "root_digest_recomputes_from_resource_digests",
+      "served_artifact_hash_matches_registry_hash",
+      "signing_certificate_has_code_signing_eku",
+      "trained_on_relationship_declared"
+    ],
+    "violate": [
+      "checkpoint_deployed_without_verified_signature",
+      "deprecated_model_hash_referenced_by_commit",
+      "fl_mb_001_control_absent",
+      "model_hash_absent_from_approved_registry",
+      "root_digest_does_not_recompute",
+      "unsigned_file_present_in_model_scope"
+    ]
+  },
+  "FL-MB-002": {
+    "comply": [
+      "base_model_list_complete_for_merges",
+      "finetuned_on_relationship_declared",
+      "fl_mb_002_control_evidenced",
+      "no_unsigned_files_in_model_scope",
+      "production_label_move_reviewed_by_named_owner",
+      "prompt_artifact_has_immutable_version_identity",
+      "prompt_deployment_label_distinct_from_version",
+      "served_artifact_hash_matches_registry_hash",
+      "trained_on_relationship_declared"
+    ],
+    "violate": [
+      "base_model_omitted_from_merge_declaration",
+      "checkpoint_deployed_without_verified_signature",
+      "fl_mb_002_control_absent",
+      "prompt_version_recorded_as_freeform_metadata",
+      "root_digest_does_not_recompute",
+      "unsigned_file_present_in_model_scope"
+    ]
+  },
+  "FL-MB-003": {
+    "comply": [
+      "checkpoint_lineage_reconstructable_from_records",
+      "finetuned_on_relationship_declared",
+      "fl_mb_003_control_evidenced",
+      "mbom_generated_and_attached_to_release",
+      "production_label_move_reviewed_by_named_owner",
+      "prompt_artifact_has_immutable_version_identity",
+      "prompt_deployment_label_distinct_from_version",
+      "trained_on_relationship_declared",
+      "weights_format_precludes_code_execution"
+    ],
+    "violate": [
+      "base_model_omitted_from_merge_declaration",
+      "fl_mb_003_control_absent",
+      "production_prompt_label_moved_without_review",
+      "prompt_version_recorded_as_freeform_metadata",
+      "unsigned_file_present_in_model_scope",
+      "weights_serialised_in_format_permitting_code_execution"
+    ]
+  },
+  "FL-MB-004": {
+    "comply": [
+      "checkpoint_lineage_reconstructable_from_records",
+      "fl_mb_004_control_evidenced",
+      "mbom_generated_and_attached_to_release",
+      "model_hash_on_approved_registry",
+      "production_label_move_reviewed_by_named_owner",
+      "prompt_deployment_label_distinct_from_version",
+      "root_digest_recomputes_from_resource_digests",
+      "transparency_log_inclusion_proof_checked",
+      "weights_format_precludes_code_execution"
+    ],
+    "violate": [
+      "fl_mb_004_control_absent",
+      "model_hash_absent_from_approved_registry",
+      "production_prompt_label_moved_without_review",
+      "prompt_version_recorded_as_freeform_metadata",
+      "served_artifact_hash_differs_from_registry",
+      "weights_serialised_in_format_permitting_code_execution"
+    ]
+  },
+  "FL-MB-005": {
+    "comply": [
+      "checkpoint_lineage_reconstructable_from_records",
+      "fl_mb_005_control_evidenced",
+      "model_hash_on_approved_registry",
+      "no_unsigned_files_in_model_scope",
+      "root_digest_recomputes_from_resource_digests",
+      "served_artifact_hash_matches_registry_hash",
+      "signing_certificate_has_code_signing_eku",
+      "transparency_log_inclusion_proof_checked",
+      "weights_format_precludes_code_execution"
+    ],
+    "violate": [
+      "checkpoint_deployed_without_verified_signature",
+      "deprecated_model_hash_referenced_by_commit",
+      "fl_mb_005_control_absent",
+      "model_hash_absent_from_approved_registry",
+      "served_artifact_hash_differs_from_registry",
+      "weights_serialised_in_format_permitting_code_execution"
+    ]
+  },
+  "FL-MB-006": {
+    "comply": [
+      "base_model_list_complete_for_merges",
+      "finetuned_on_relationship_declared",
+      "fl_mb_006_control_evidenced",
+      "model_hash_on_approved_registry",
+      "no_unsigned_files_in_model_scope",
+      "root_digest_recomputes_from_resource_digests",
+      "served_artifact_hash_matches_registry_hash",
+      "signing_certificate_has_code_signing_eku",
+      "trained_on_relationship_declared"
+    ],
+    "violate": [
+      "checkpoint_deployed_without_verified_signature",
+      "deprecated_model_hash_referenced_by_commit",
+      "fl_mb_006_control_absent",
+      "model_hash_absent_from_approved_registry",
+      "root_digest_does_not_recompute",
+      "unsigned_file_present_in_model_scope"
+    ]
+  },
+  "FL-MB-007": {
+    "comply": [
+      "base_model_list_complete_for_merges",
+      "finetuned_on_relationship_declared",
+      "fl_mb_007_control_evidenced",
+      "no_unsigned_files_in_model_scope",
+      "production_label_move_reviewed_by_named_owner",
+      "prompt_artifact_has_immutable_version_identity",
+      "prompt_deployment_label_distinct_from_version",
+      "served_artifact_hash_matches_registry_hash",
+      "trained_on_relationship_declared"
+    ],
+    "violate": [
+      "base_model_omitted_from_merge_declaration",
+      "checkpoint_deployed_without_verified_signature",
+      "fl_mb_007_control_absent",
+      "prompt_version_recorded_as_freeform_metadata",
+      "root_digest_does_not_recompute",
+      "unsigned_file_present_in_model_scope"
+    ]
+  },
+  "FL-MB-008": {
+    "comply": [
+      "checkpoint_lineage_reconstructable_from_records",
+      "finetuned_on_relationship_declared",
+      "fl_mb_008_control_evidenced",
+      "mbom_generated_and_attached_to_release",
+      "production_label_move_reviewed_by_named_owner",
+      "prompt_artifact_has_immutable_version_identity",
+      "prompt_deployment_label_distinct_from_version",
+      "trained_on_relationship_declared",
+      "weights_format_precludes_code_execution"
+    ],
+    "violate": [
+      "base_model_omitted_from_merge_declaration",
+      "fl_mb_008_control_absent",
+      "production_prompt_label_moved_without_review",
+      "prompt_version_recorded_as_freeform_metadata",
+      "unsigned_file_present_in_model_scope",
+      "weights_serialised_in_format_permitting_code_execution"
+    ]
+  },
+  "FL-MB-009": {
+    "comply": [
+      "checkpoint_lineage_reconstructable_from_records",
+      "fl_mb_009_control_evidenced",
+      "mbom_generated_and_attached_to_release",
+      "model_hash_on_approved_registry",
+      "production_label_move_reviewed_by_named_owner",
+      "prompt_deployment_label_distinct_from_version",
+      "root_digest_recomputes_from_resource_digests",
+      "transparency_log_inclusion_proof_checked",
+      "weights_format_precludes_code_execution"
+    ],
+    "violate": [
+      "fl_mb_009_control_absent",
+      "model_hash_absent_from_approved_registry",
+      "production_prompt_label_moved_without_review",
+      "prompt_version_recorded_as_freeform_metadata",
+      "served_artifact_hash_differs_from_registry",
+      "weights_serialised_in_format_permitting_code_execution"
+    ]
+  },
+  "FL-TD-001": {
+    "comply": [
+      "attribution_obligation_propagated_to_release",
+      "content_acquired_without_bypassing_clickthrough",
+      "dataset_availability_type_recorded",
+      "dataset_licence_permits_commercial_use",
+      "dataset_licence_recognised_and_recorded",
+      "fl_td_001_control_evidenced",
+      "robots_txt_ai_directive_respected",
+      "share_alike_obligation_evaluated_before_ingestion",
+      "tdm_opt_out_signal_checked_at_crawl_time"
+    ],
+    "violate": [
+      "conflicting_licence_claims_on_dataset_unresolved",
+      "content_acquired_by_scraping_around_clickthrough",
+      "dataset_licence_string_unrecognised_and_treated_as_permissive",
+      "fl_td_001_control_absent",
+      "noncommercial_licensed_corpus_used_in_commercial_training",
+      "tdm_opt_out_signal_ignored"
+    ]
+  },
+  "FL-TD-002": {
+    "comply": [
+      "content_acquired_without_bypassing_clickthrough",
+      "croissant_metadata_attached_to_dataset",
+      "data_governance_custodian_named",
+      "dataset_availability_type_recorded",
+      "fl_td_002_control_evidenced",
+      "provenance_chain_recorded_for_derived_corpus",
+      "robots_txt_ai_directive_respected",
+      "share_alike_obligation_evaluated_before_ingestion",
+      "tdm_opt_out_signal_checked_at_crawl_time"
+    ],
+    "violate": [
+      "content_acquired_by_scraping_around_clickthrough",
+      "dataset_provenance_unrecorded_for_new_corpus",
+      "fl_td_002_control_absent",
+      "noncommercial_licensed_corpus_used_in_commercial_training",
+      "share_alike_corpus_mixed_into_proprietary_release",
+      "tdm_opt_out_signal_ignored"
+    ]
+  },
+  "FL-TD-003": {
+    "comply": [
+      "attribution_obligation_propagated_to_release",
+      "content_acquired_without_bypassing_clickthrough",
+      "croissant_metadata_attached_to_dataset",
+      "data_governance_custodian_named",
+      "dataset_availability_type_recorded",
+      "dataset_licence_permits_commercial_use",
+      "dataset_licence_recognised_and_recorded",
+      "fl_td_003_control_evidenced",
+      "provenance_chain_recorded_for_derived_corpus"
+    ],
+    "violate": [
+      "dataset_licence_string_unrecognised_and_treated_as_permissive",
+      "dataset_provenance_unrecorded_for_new_corpus",
+      "fl_td_003_control_absent",
+      "noncommercial_licensed_corpus_used_in_commercial_training",
+      "prohibited_provenance_corpus_ingested",
+      "share_alike_corpus_mixed_into_proprietary_release"
+    ]
+  },
+  "FL-TD-004": {
+    "comply": [
+      "attribution_obligation_propagated_to_release",
+      "croissant_metadata_attached_to_dataset",
+      "dataset_licence_permits_commercial_use",
+      "dataset_licence_recognised_and_recorded",
+      "fl_td_004_control_evidenced",
+      "provenance_chain_recorded_for_derived_corpus",
+      "robots_txt_ai_directive_respected",
+      "share_alike_obligation_evaluated_before_ingestion",
+      "tdm_opt_out_signal_checked_at_crawl_time"
+    ],
+    "violate": [
+      "conflicting_licence_claims_on_dataset_unresolved",
+      "dataset_licence_string_unrecognised_and_treated_as_permissive",
+      "dataset_provenance_unrecorded_for_new_corpus",
+      "fl_td_004_control_absent",
+      "prohibited_provenance_corpus_ingested",
+      "tdm_opt_out_signal_ignored"
+    ]
+  },
+  "FL-TD-005": {
+    "comply": [
+      "attribution_obligation_propagated_to_release",
+      "content_acquired_without_bypassing_clickthrough",
+      "data_governance_custodian_named",
+      "dataset_availability_type_recorded",
+      "dataset_licence_permits_commercial_use",
+      "fl_td_005_control_evidenced",
+      "robots_txt_ai_directive_respected",
+      "share_alike_obligation_evaluated_before_ingestion",
+      "tdm_opt_out_signal_checked_at_crawl_time"
+    ],
+    "violate": [
+      "conflicting_licence_claims_on_dataset_unresolved",
+      "content_acquired_by_scraping_around_clickthrough",
+      "dataset_licence_string_unrecognised_and_treated_as_permissive",
+      "fl_td_005_control_absent",
+      "noncommercial_licensed_corpus_used_in_commercial_training",
+      "tdm_opt_out_signal_ignored"
+    ]
+  },
+  "FL-TD-006": {
+    "comply": [
+      "content_acquired_without_bypassing_clickthrough",
+      "croissant_metadata_attached_to_dataset",
+      "data_governance_custodian_named",
+      "dataset_availability_type_recorded",
+      "dataset_licence_recognised_and_recorded",
+      "fl_td_006_control_evidenced",
+      "provenance_chain_recorded_for_derived_corpus",
+      "robots_txt_ai_directive_respected",
+      "tdm_opt_out_signal_checked_at_crawl_time"
+    ],
+    "violate": [
+      "content_acquired_by_scraping_around_clickthrough",
+      "dataset_provenance_unrecorded_for_new_corpus",
+      "fl_td_006_control_absent",
+      "noncommercial_licensed_corpus_used_in_commercial_training",
+      "share_alike_corpus_mixed_into_proprietary_release",
+      "tdm_opt_out_signal_ignored"
+    ]
+  },
+  "FL-TD-007": {
+    "comply": [
+      "attribution_obligation_propagated_to_release",
+      "croissant_metadata_attached_to_dataset",
+      "data_governance_custodian_named",
+      "dataset_availability_type_recorded",
+      "dataset_licence_permits_commercial_use",
+      "dataset_licence_recognised_and_recorded",
+      "fl_td_007_control_evidenced",
+      "provenance_chain_recorded_for_derived_corpus",
+      "share_alike_obligation_evaluated_before_ingestion"
+    ],
+    "violate": [
+      "dataset_licence_string_unrecognised_and_treated_as_permissive",
+      "dataset_provenance_unrecorded_for_new_corpus",
+      "fl_td_007_control_absent",
+      "noncommercial_licensed_corpus_used_in_commercial_training",
+      "prohibited_provenance_corpus_ingested",
+      "share_alike_corpus_mixed_into_proprietary_release"
+    ]
+  },
+  "FL-TD-008": {
+    "comply": [
+      "attribution_obligation_propagated_to_release",
+      "content_acquired_without_bypassing_clickthrough",
+      "dataset_licence_permits_commercial_use",
+      "dataset_licence_recognised_and_recorded",
+      "fl_td_008_control_evidenced",
+      "provenance_chain_recorded_for_derived_corpus",
+      "robots_txt_ai_directive_respected",
+      "share_alike_obligation_evaluated_before_ingestion",
+      "tdm_opt_out_signal_checked_at_crawl_time"
+    ],
+    "violate": [
+      "conflicting_licence_claims_on_dataset_unresolved",
+      "dataset_licence_string_unrecognised_and_treated_as_permissive",
+      "dataset_provenance_unrecorded_for_new_corpus",
+      "fl_td_008_control_absent",
+      "prohibited_provenance_corpus_ingested",
+      "tdm_opt_out_signal_ignored"
+    ]
+  },
+  "FL-PI-001": {
+    "comply": [
+      "data_protection_impact_assessment_attached",
+      "de_identification_verified_by_sampling",
+      "fl_pi_001_control_evidenced",
+      "lawful_basis_recorded_for_personal_data",
+      "pii_scan_clean_on_prompt_template",
+      "pii_scan_clean_on_training_shard",
+      "prompt_logs_redacted_before_retention",
+      "special_category_data_excluded_or_justified",
+      "subject_request_path_documented_for_this_pipeline"
+    ],
+    "violate": [
+      "fl_pi_001_control_absent",
+      "personal_data_used_without_recorded_lawful_basis",
+      "pii_regex_match_in_prompt_template",
+      "prompt_logs_retained_unredacted",
+      "special_category_data_ingested_without_basis",
+      "unsanitised_pii_present_in_training_corpus"
+    ]
+  },
+  "FL-PI-002": {
+    "comply": [
+      "data_protection_impact_assessment_attached",
+      "de_identification_verified_by_sampling",
+      "fl_pi_002_control_evidenced",
+      "lawful_basis_recorded_for_personal_data",
+      "pii_scan_clean_on_prompt_template",
+      "pii_scan_clean_on_training_shard",
+      "prompt_logs_redacted_before_retention",
+      "special_category_data_excluded_or_justified",
+      "subject_request_path_documented_for_this_pipeline"
+    ],
+    "violate": [
+      "de_identification_check_skipped_for_new_source",
+      "fl_pi_002_control_absent",
+      "personal_data_used_without_recorded_lawful_basis",
+      "prompt_logs_retained_unredacted",
+      "special_category_data_ingested_without_basis",
+      "unsanitised_pii_present_in_training_corpus"
+    ]
+  },
+  "FL-PI-003": {
+    "comply": [
+      "data_protection_impact_assessment_attached",
+      "de_identification_verified_by_sampling",
+      "fl_pi_003_control_evidenced",
+      "lawful_basis_recorded_for_personal_data",
+      "pii_scan_clean_on_prompt_template",
+      "pii_scan_clean_on_training_shard",
+      "prompt_logs_redacted_before_retention",
+      "special_category_data_excluded_or_justified",
+      "subject_request_path_documented_for_this_pipeline"
+    ],
+    "violate": [
+      "de_identification_check_skipped_for_new_source",
+      "fl_pi_003_control_absent",
+      "personal_data_used_without_recorded_lawful_basis",
+      "pii_regex_match_in_prompt_template",
+      "special_category_data_ingested_without_basis",
+      "unsanitised_pii_present_in_training_corpus"
+    ]
+  },
+  "FL-PI-004": {
+    "comply": [
+      "data_protection_impact_assessment_attached",
+      "de_identification_verified_by_sampling",
+      "fl_pi_004_control_evidenced",
+      "lawful_basis_recorded_for_personal_data",
+      "pii_scan_clean_on_prompt_template",
+      "pii_scan_clean_on_training_shard",
+      "prompt_logs_redacted_before_retention",
+      "special_category_data_excluded_or_justified",
+      "subject_request_path_documented_for_this_pipeline"
+    ],
+    "violate": [
+      "fl_pi_004_control_absent",
+      "personal_data_used_without_recorded_lawful_basis",
+      "pii_regex_match_in_prompt_template",
+      "prompt_logs_retained_unredacted",
+      "special_category_data_ingested_without_basis",
+      "unsanitised_pii_present_in_training_corpus"
+    ]
+  },
+  "FL-PI-005": {
+    "comply": [
+      "data_protection_impact_assessment_attached",
+      "de_identification_verified_by_sampling",
+      "fl_pi_005_control_evidenced",
+      "lawful_basis_recorded_for_personal_data",
+      "pii_scan_clean_on_prompt_template",
+      "pii_scan_clean_on_training_shard",
+      "prompt_logs_redacted_before_retention",
+      "special_category_data_excluded_or_justified",
+      "subject_request_path_documented_for_this_pipeline"
+    ],
+    "violate": [
+      "de_identification_check_skipped_for_new_source",
+      "fl_pi_005_control_absent",
+      "personal_data_used_without_recorded_lawful_basis",
+      "prompt_logs_retained_unredacted",
+      "special_category_data_ingested_without_basis",
+      "unsanitised_pii_present_in_training_corpus"
+    ]
+  },
+  "FL-PI-006": {
+    "comply": [
+      "data_protection_impact_assessment_attached",
+      "de_identification_verified_by_sampling",
+      "fl_pi_006_control_evidenced",
+      "lawful_basis_recorded_for_personal_data",
+      "pii_scan_clean_on_prompt_template",
+      "pii_scan_clean_on_training_shard",
+      "prompt_logs_redacted_before_retention",
+      "special_category_data_excluded_or_justified",
+      "subject_request_path_documented_for_this_pipeline"
+    ],
+    "violate": [
+      "de_identification_check_skipped_for_new_source",
+      "fl_pi_006_control_absent",
+      "personal_data_used_without_recorded_lawful_basis",
+      "pii_regex_match_in_prompt_template",
+      "special_category_data_ingested_without_basis",
+      "unsanitised_pii_present_in_training_corpus"
+    ]
+  },
+  "FL-PI-007": {
+    "comply": [
+      "data_protection_impact_assessment_attached",
+      "de_identification_verified_by_sampling",
+      "fl_pi_007_control_evidenced",
+      "lawful_basis_recorded_for_personal_data",
+      "pii_scan_clean_on_prompt_template",
+      "pii_scan_clean_on_training_shard",
+      "prompt_logs_redacted_before_retention",
+      "special_category_data_excluded_or_justified",
+      "subject_request_path_documented_for_this_pipeline"
+    ],
+    "violate": [
+      "fl_pi_007_control_absent",
+      "personal_data_used_without_recorded_lawful_basis",
+      "pii_regex_match_in_prompt_template",
+      "prompt_logs_retained_unredacted",
+      "special_category_data_ingested_without_basis",
+      "unsanitised_pii_present_in_training_corpus"
+    ]
+  },
+  "FL-AG-001": {
+    "comply": [
+      "agent_change_labelled_and_isolated_for_review",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_commit_carries_verifiable_signature",
+      "agent_identity_bound_to_workload_not_person",
+      "fl_ag_001_control_evidenced",
+      "human_reviewer_approval_recorded_for_core_change",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts"
+    ],
+    "violate": [
+      "agent_change_modifies_ci_cd_configuration",
+      "agent_change_modifies_core_system_without_human_signoff",
+      "agent_change_modifies_security_policy_or_guardrail",
+      "agent_commit_lacks_cryptographic_signature",
+      "fl_ag_001_control_absent",
+      "hallucinated_dependency_name_emitted"
+    ]
+  },
+  "FL-AG-002": {
+    "comply": [
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_commit_carries_verifiable_signature",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "fl_ag_002_control_evidenced",
+      "human_reviewer_approval_recorded_for_core_change",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts"
+    ],
+    "violate": [
+      "agent_change_modifies_ci_cd_configuration",
+      "agent_commit_lacks_cryptographic_signature",
+      "agent_disabled_a_failing_compliance_test",
+      "dependency_name_unregistered_upstream",
+      "fl_ag_002_control_absent",
+      "hallucinated_dependency_name_emitted"
+    ]
+  },
+  "FL-AG-003": {
+    "comply": [
+      "agent_change_labelled_and_isolated_for_review",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_commit_carries_verifiable_signature",
+      "agent_identity_bound_to_workload_not_person",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "fl_ag_003_control_evidenced",
+      "human_reviewer_approval_recorded_for_core_change",
+      "outbound_calls_restricted_to_allowlisted_hosts"
+    ],
+    "violate": [
+      "agent_change_modifies_core_system_without_human_signoff",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "dependency_name_unregistered_upstream",
+      "fl_ag_003_control_absent",
+      "hallucinated_dependency_name_emitted"
+    ]
+  },
+  "FL-AG-004": {
+    "comply": [
+      "agent_change_labelled_and_isolated_for_review",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_commit_carries_verifiable_signature",
+      "agent_identity_bound_to_workload_not_person",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "fl_ag_004_control_evidenced",
+      "human_reviewer_approval_recorded_for_core_change",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created"
+    ],
+    "violate": [
+      "agent_change_modifies_ci_cd_configuration",
+      "agent_change_modifies_core_system_without_human_signoff",
+      "agent_change_modifies_security_policy_or_guardrail",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "fl_ag_004_control_absent"
+    ]
+  },
+  "FL-AG-005": {
+    "comply": [
+      "agent_change_labelled_and_isolated_for_review",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "fl_ag_005_control_evidenced",
+      "human_reviewer_approval_recorded_for_core_change",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts"
+    ],
+    "violate": [
+      "agent_change_modifies_ci_cd_configuration",
+      "agent_change_modifies_core_system_without_human_signoff",
+      "agent_change_modifies_security_policy_or_guardrail",
+      "agent_commit_lacks_cryptographic_signature",
+      "fl_ag_005_control_absent",
+      "hallucinated_dependency_name_emitted"
+    ]
+  },
+  "FL-AG-006": {
+    "comply": [
+      "agent_change_labelled_and_isolated_for_review",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_commit_carries_verifiable_signature",
+      "agent_identity_bound_to_workload_not_person",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "fl_ag_006_control_evidenced",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts"
+    ],
+    "violate": [
+      "agent_change_modifies_ci_cd_configuration",
+      "agent_commit_lacks_cryptographic_signature",
+      "agent_disabled_a_failing_compliance_test",
+      "dependency_name_unregistered_upstream",
+      "fl_ag_006_control_absent",
+      "hallucinated_dependency_name_emitted"
+    ]
+  },
+  "FL-AG-007": {
+    "comply": [
+      "agent_change_labelled_and_isolated_for_review",
+      "agent_commit_carries_verifiable_signature",
+      "agent_identity_bound_to_workload_not_person",
+      "agent_prompt_and_context_hash_recorded",
+      "ast_semantic_analysis_clean_on_agent_diff",
+      "fl_ag_007_control_evidenced",
+      "human_reviewer_approval_recorded_for_core_change",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created"
+    ],
+    "violate": [
+      "agent_change_modifies_core_system_without_human_signoff",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "dependency_name_unregistered_upstream",
+      "fl_ag_007_control_absent",
+      "hallucinated_dependency_name_emitted"
+    ]
+  },
+  "FL-AG-008": {
+    "comply": [
+      "agent_change_labelled_and_isolated_for_review",
+      "agent_code_executed_only_in_sandboxed_runner",
+      "agent_identity_bound_to_workload_not_person",
+      "agent_prompt_and_context_hash_recorded",
+      "fl_ag_008_control_evidenced",
+      "human_reviewer_approval_recorded_for_core_change",
+      "imported_package_exists_in_registry",
+      "imported_package_not_newly_created",
+      "outbound_calls_restricted_to_allowlisted_hosts"
+    ],
+    "violate": [
+      "agent_change_modifies_ci_cd_configuration",
+      "agent_change_modifies_core_system_without_human_signoff",
+      "agent_change_modifies_security_policy_or_guardrail",
+      "agent_disabled_a_failing_compliance_test",
+      "agent_instruction_sourced_from_untrusted_ticket_text",
+      "fl_ag_008_control_absent"
+    ]
+  },
+  "FL-LS-001": {
+    "comply": [
+      "canary_token_absent_from_model_output",
+      "carrier_channel_declared_for_untrusted_input",
+      "downstream_sink_declared_for_model_output",
+      "fl_ls_001_control_evidenced",
+      "human_confirmation_required_before_execution",
+      "instruction_data_boundary_enforced_on_retrieved_content",
+      "output_escaped_before_downstream_sink",
+      "rate_limit_and_output_perturbation_configured",
+      "system_prompt_confidentiality_preserved"
+    ],
+    "violate": [
+      "canary_token_leaked_in_output",
+      "exfiltration_destination_attacker_controlled",
+      "fl_ls_001_control_absent",
+      "instruction_data_boundary_removed_from_retrieval_path",
+      "system_prompt_extracted_by_adversarial_input",
+      "unvalidated_model_output_reaches_execution_sink"
+    ]
+  },
+  "FL-LS-002": {
+    "comply": [
+      "backdoor_trigger_screen_run_on_new_shards",
+      "canary_token_absent_from_model_output",
+      "defence_evaluated_for_this_attack_class",
+      "downstream_sink_declared_for_model_output",
+      "fl_ls_002_control_evidenced",
+      "human_confirmation_required_before_execution",
+      "rate_limit_and_output_perturbation_configured",
+      "system_prompt_confidentiality_preserved",
+      "training_data_distribution_within_variance_threshold"
+    ],
+    "violate": [
+      "canary_token_leaked_in_output",
+      "exfiltration_destination_attacker_controlled",
+      "fl_ls_002_control_absent",
+      "system_prompt_extracted_by_adversarial_input",
+      "training_data_contains_activated_trigger",
+      "training_data_variance_exceeds_threshold_without_halt"
+    ]
+  },
+  "FL-LS-003": {
+    "comply": [
+      "backdoor_trigger_screen_run_on_new_shards",
+      "defence_evaluated_for_this_attack_class",
+      "fl_ls_003_control_evidenced",
+      "injection_detection_exercised_on_changed_path",
+      "instruction_data_boundary_enforced_on_retrieved_content",
+      "membership_inference_advantage_below_threshold",
+      "rate_limit_and_output_perturbation_configured",
+      "system_prompt_confidentiality_preserved",
+      "training_data_distribution_within_variance_threshold"
+    ],
+    "violate": [
+      "exfiltration_destination_attacker_controlled",
+      "fl_ls_003_control_absent",
+      "rate_limiting_removed_from_inference_endpoint",
+      "training_data_contains_activated_trigger",
+      "training_data_variance_exceeds_threshold_without_halt",
+      "verbatim_training_data_emitted_above_span_threshold"
+    ]
+  },
+  "FL-LS-004": {
+    "comply": [
+      "backdoor_trigger_screen_run_on_new_shards",
+      "carrier_channel_declared_for_untrusted_input",
+      "defence_evaluated_for_this_attack_class",
+      "fl_ls_004_control_evidenced",
+      "human_confirmation_required_before_execution",
+      "injection_detection_exercised_on_changed_path",
+      "instruction_data_boundary_enforced_on_retrieved_content",
+      "membership_inference_advantage_below_threshold",
+      "output_escaped_before_downstream_sink"
+    ],
+    "violate": [
+      "fl_ls_004_control_absent",
+      "goal_hijack_achieved_by_injected_instruction",
+      "rate_limiting_removed_from_inference_endpoint",
+      "training_data_contains_activated_trigger",
+      "unvalidated_model_output_reaches_execution_sink",
+      "verbatim_training_data_emitted_above_span_threshold"
+    ]
+  },
+  "FL-LS-005": {
+    "comply": [
+      "canary_token_absent_from_model_output",
+      "carrier_channel_declared_for_untrusted_input",
+      "downstream_sink_declared_for_model_output",
+      "fl_ls_005_control_evidenced",
+      "human_confirmation_required_before_execution",
+      "injection_detection_exercised_on_changed_path",
+      "instruction_data_boundary_enforced_on_retrieved_content",
+      "output_escaped_before_downstream_sink",
+      "system_prompt_confidentiality_preserved"
+    ],
+    "violate": [
+      "fl_ls_005_control_absent",
+      "goal_hijack_achieved_by_injected_instruction",
+      "instruction_data_boundary_removed_from_retrieval_path",
+      "rate_limiting_removed_from_inference_endpoint",
+      "system_prompt_extracted_by_adversarial_input",
+      "unvalidated_model_output_reaches_execution_sink"
+    ]
+  },
+  "FL-LS-006": {
+    "comply": [
+      "backdoor_trigger_screen_run_on_new_shards",
+      "canary_token_absent_from_model_output",
+      "downstream_sink_declared_for_model_output",
+      "fl_ls_006_control_evidenced",
+      "human_confirmation_required_before_execution",
+      "output_escaped_before_downstream_sink",
+      "rate_limit_and_output_perturbation_configured",
+      "system_prompt_confidentiality_preserved",
+      "training_data_distribution_within_variance_threshold"
+    ],
+    "violate": [
+      "canary_token_leaked_in_output",
+      "exfiltration_destination_attacker_controlled",
+      "fl_ls_006_control_absent",
+      "instruction_data_boundary_removed_from_retrieval_path",
+      "system_prompt_extracted_by_adversarial_input",
+      "unvalidated_model_output_reaches_execution_sink"
+    ]
+  },
+  "FL-LS-007": {
+    "comply": [
+      "backdoor_trigger_screen_run_on_new_shards",
+      "canary_token_absent_from_model_output",
+      "defence_evaluated_for_this_attack_class",
+      "fl_ls_007_control_evidenced",
+      "injection_detection_exercised_on_changed_path",
+      "membership_inference_advantage_below_threshold",
+      "rate_limit_and_output_perturbation_configured",
+      "system_prompt_confidentiality_preserved",
+      "training_data_distribution_within_variance_threshold"
+    ],
+    "violate": [
+      "canary_token_leaked_in_output",
+      "exfiltration_destination_attacker_controlled",
+      "fl_ls_007_control_absent",
+      "system_prompt_extracted_by_adversarial_input",
+      "training_data_contains_activated_trigger",
+      "training_data_variance_exceeds_threshold_without_halt"
+    ]
+  },
+  "FL-LS-008": {
+    "comply": [
+      "backdoor_trigger_screen_run_on_new_shards",
+      "carrier_channel_declared_for_untrusted_input",
+      "defence_evaluated_for_this_attack_class",
+      "fl_ls_008_control_evidenced",
+      "injection_detection_exercised_on_changed_path",
+      "instruction_data_boundary_enforced_on_retrieved_content",
+      "membership_inference_advantage_below_threshold",
+      "output_escaped_before_downstream_sink",
+      "training_data_distribution_within_variance_threshold"
+    ],
+    "violate": [
+      "exfiltration_destination_attacker_controlled",
+      "fl_ls_008_control_absent",
+      "rate_limiting_removed_from_inference_endpoint",
+      "training_data_contains_activated_trigger",
+      "training_data_variance_exceeds_threshold_without_halt",
+      "verbatim_training_data_emitted_above_span_threshold"
+    ]
+  },
+  "FL-LS-009": {
+    "comply": [
+      "canary_token_absent_from_model_output",
+      "carrier_channel_declared_for_untrusted_input",
+      "downstream_sink_declared_for_model_output",
+      "fl_ls_009_control_evidenced",
+      "human_confirmation_required_before_execution",
+      "injection_detection_exercised_on_changed_path",
+      "instruction_data_boundary_enforced_on_retrieved_content",
+      "membership_inference_advantage_below_threshold",
+      "output_escaped_before_downstream_sink"
+    ],
+    "violate": [
+      "fl_ls_009_control_absent",
+      "goal_hijack_achieved_by_injected_instruction",
+      "rate_limiting_removed_from_inference_endpoint",
+      "training_data_contains_activated_trigger",
+      "unvalidated_model_output_reaches_execution_sink",
+      "verbatim_training_data_emitted_above_span_threshold"
+    ]
+  },
+  "FL-LS-010": {
+    "comply": [
+      "canary_token_absent_from_model_output",
+      "carrier_channel_declared_for_untrusted_input",
+      "downstream_sink_declared_for_model_output",
+      "fl_ls_010_control_evidenced",
+      "human_confirmation_required_before_execution",
+      "output_escaped_before_downstream_sink",
+      "rate_limit_and_output_perturbation_configured",
+      "system_prompt_confidentiality_preserved",
+      "training_data_distribution_within_variance_threshold"
+    ],
+    "violate": [
+      "fl_ls_010_control_absent",
+      "goal_hijack_achieved_by_injected_instruction",
+      "instruction_data_boundary_removed_from_retrieval_path",
+      "rate_limiting_removed_from_inference_endpoint",
+      "system_prompt_extracted_by_adversarial_input",
+      "unvalidated_model_output_reaches_execution_sink"
+    ]
+  },
+  "FL-LS-011": {
+    "comply": [
+      "backdoor_trigger_screen_run_on_new_shards",
+      "canary_token_absent_from_model_output",
+      "defence_evaluated_for_this_attack_class",
+      "downstream_sink_declared_for_model_output",
+      "fl_ls_011_control_evidenced",
+      "membership_inference_advantage_below_threshold",
+      "rate_limit_and_output_perturbation_configured",
+      "system_prompt_confidentiality_preserved",
+      "training_data_distribution_within_variance_threshold"
+    ],
+    "violate": [
+      "canary_token_leaked_in_output",
+      "exfiltration_destination_attacker_controlled",
+      "fl_ls_011_control_absent",
+      "instruction_data_boundary_removed_from_retrieval_path",
+      "system_prompt_extracted_by_adversarial_input",
+      "unvalidated_model_output_reaches_execution_sink"
+    ]
+  },
+  "FL-EV-001": {
+    "comply": [
+      "accuracy_within_relative_tolerance",
+      "case_carries_canary_string",
+      "fl_ev_001_control_evidenced",
+      "judge_human_agreement_measured_for_this_config",
+      "objective_ground_truth_used_where_available",
+      "optimisation_still_engaged_under_test",
+      "parity_class_is_identical_or_immaterial",
+      "sample_size_declared_with_result",
+      "tie_disposition_available_to_judge"
+    ],
+    "violate": [
+      "accuracy_outside_relative_tolerance",
+      "benchmark_data_present_in_training_corpus",
+      "failing_safety_evaluation_excluded_from_gate",
+      "fl_ev_001_control_absent",
+      "model_recognises_canary_guid",
+      "parity_class_is_disagreement"
+    ]
+  },
+  "FL-EV-002": {
+    "comply": [
+      "case_carries_canary_string",
+      "case_release_date_after_training_cutoff",
+      "decontamination_check_configured_for_new_corpus",
+      "fl_ev_002_control_evidenced",
+      "golden_prompt_baseline_pinned_to_commit",
+      "judge_human_agreement_measured_for_this_config",
+      "objective_ground_truth_used_where_available",
+      "optimisation_still_engaged_under_test",
+      "tie_disposition_available_to_judge"
+    ],
+    "violate": [
+      "benchmark_data_present_in_training_corpus",
+      "failing_safety_evaluation_excluded_from_gate",
+      "fl_ev_002_control_absent",
+      "judge_agreement_never_measured",
+      "judge_used_where_objective_checker_exists",
+      "model_recognises_canary_guid"
+    ]
+  },
+  "FL-EV-003": {
+    "comply": [
+      "accuracy_within_relative_tolerance",
+      "case_carries_canary_string",
+      "case_release_date_after_training_cutoff",
+      "decontamination_check_configured_for_new_corpus",
+      "eval_result_attested_not_self_reported",
+      "fl_ev_003_control_evidenced",
+      "golden_prompt_baseline_pinned_to_commit",
+      "parity_class_is_identical_or_immaterial",
+      "tie_disposition_available_to_judge"
+    ],
+    "violate": [
+      "failing_safety_evaluation_excluded_from_gate",
+      "fl_ev_003_control_absent",
+      "golden_prompt_baseline_rewritten_to_match_output",
+      "judge_agreement_never_measured",
+      "judge_used_where_objective_checker_exists",
+      "sample_size_undeclared_for_parity_claim"
+    ]
+  },
+  "FL-EV-004": {
+    "comply": [
+      "accuracy_within_relative_tolerance",
+      "case_release_date_after_training_cutoff",
+      "eval_result_attested_not_self_reported",
+      "fl_ev_004_control_evidenced",
+      "golden_prompt_baseline_pinned_to_commit",
+      "judge_human_agreement_measured_for_this_config",
+      "optimisation_still_engaged_under_test",
+      "parity_class_is_identical_or_immaterial",
+      "sample_size_declared_with_result"
+    ],
+    "violate": [
+      "fl_ev_004_control_absent",
+      "golden_prompt_baseline_rewritten_to_match_output",
+      "judge_agreement_never_measured",
+      "optimisation_silently_disengaged_while_accuracy_passes",
+      "parity_class_is_disagreement",
+      "sample_size_undeclared_for_parity_claim"
+    ]
+  },
+  "FL-EV-005": {
+    "comply": [
+      "accuracy_within_relative_tolerance",
+      "case_carries_canary_string",
+      "fl_ev_005_control_evidenced",
+      "judge_human_agreement_measured_for_this_config",
+      "objective_ground_truth_used_where_available",
+      "optimisation_still_engaged_under_test",
+      "parity_class_is_identical_or_immaterial",
+      "sample_size_declared_with_result",
+      "tie_disposition_available_to_judge"
+    ],
+    "violate": [
+      "accuracy_outside_relative_tolerance",
+      "benchmark_data_present_in_training_corpus",
+      "fl_ev_005_control_absent",
+      "golden_prompt_baseline_rewritten_to_match_output",
+      "optimisation_silently_disengaged_while_accuracy_passes",
+      "parity_class_is_disagreement"
+    ]
+  },
+  "FL-EV-006": {
+    "comply": [
+      "case_carries_canary_string",
+      "case_release_date_after_training_cutoff",
+      "decontamination_check_configured_for_new_corpus",
+      "fl_ev_006_control_evidenced",
+      "golden_prompt_baseline_pinned_to_commit",
+      "judge_human_agreement_measured_for_this_config",
+      "objective_ground_truth_used_where_available",
+      "optimisation_still_engaged_under_test",
+      "tie_disposition_available_to_judge"
+    ],
+    "violate": [
+      "accuracy_outside_relative_tolerance",
+      "benchmark_data_present_in_training_corpus",
+      "failing_safety_evaluation_excluded_from_gate",
+      "fl_ev_006_control_absent",
+      "model_recognises_canary_guid",
+      "parity_class_is_disagreement"
+    ]
+  },
+  "FL-EV-007": {
+    "comply": [
+      "accuracy_within_relative_tolerance",
+      "case_carries_canary_string",
+      "case_release_date_after_training_cutoff",
+      "decontamination_check_configured_for_new_corpus",
+      "eval_result_attested_not_self_reported",
+      "fl_ev_007_control_evidenced",
+      "golden_prompt_baseline_pinned_to_commit",
+      "parity_class_is_identical_or_immaterial",
+      "tie_disposition_available_to_judge"
+    ],
+    "violate": [
+      "benchmark_data_present_in_training_corpus",
+      "failing_safety_evaluation_excluded_from_gate",
+      "fl_ev_007_control_absent",
+      "judge_agreement_never_measured",
+      "judge_used_where_objective_checker_exists",
+      "model_recognises_canary_guid"
+    ]
+  },
+  "FL-EV-008": {
+    "comply": [
+      "accuracy_within_relative_tolerance",
+      "case_release_date_after_training_cutoff",
+      "eval_result_attested_not_self_reported",
+      "fl_ev_008_control_evidenced",
+      "golden_prompt_baseline_pinned_to_commit",
+      "judge_human_agreement_measured_for_this_config",
+      "optimisation_still_engaged_under_test",
+      "parity_class_is_identical_or_immaterial",
+      "sample_size_declared_with_result"
+    ],
+    "violate": [
+      "failing_safety_evaluation_excluded_from_gate",
+      "fl_ev_008_control_absent",
+      "golden_prompt_baseline_rewritten_to_match_output",
+      "judge_agreement_never_measured",
+      "judge_used_where_objective_checker_exists",
+      "sample_size_undeclared_for_parity_claim"
+    ]
+  },
+  "FL-EV-009": {
+    "comply": [
+      "accuracy_within_relative_tolerance",
+      "case_carries_canary_string",
+      "fl_ev_009_control_evidenced",
+      "judge_human_agreement_measured_for_this_config",
+      "objective_ground_truth_used_where_available",
+      "optimisation_still_engaged_under_test",
+      "parity_class_is_identical_or_immaterial",
+      "sample_size_declared_with_result",
+      "tie_disposition_available_to_judge"
+    ],
+    "violate": [
+      "fl_ev_009_control_absent",
+      "golden_prompt_baseline_rewritten_to_match_output",
+      "judge_agreement_never_measured",
+      "optimisation_silently_disengaged_while_accuracy_passes",
+      "parity_class_is_disagreement",
+      "sample_size_undeclared_for_parity_claim"
+    ]
+  },
+  "FL-SF-001": {
+    "comply": [
+      "capability_evaluation_completed_before_deployment",
+      "capability_threshold_determination_recorded",
+      "external_evaluator_access_provisioned_under_agreement",
+      "fl_sf_001_control_evidenced",
+      "mitigation_level_matches_assessed_capability",
+      "safety_case_signed_by_named_authority",
+      "signing_key_backed_by_hardware_module",
+      "weight_access_requires_two_person_authorisation",
+      "weight_egress_path_restricted_to_declared_boundary"
+    ],
+    "violate": [
+      "capability_evaluation_skipped_for_this_checkpoint",
+      "deployment_above_threshold_without_completed_safety_case",
+      "fl_sf_001_control_absent",
+      "mitigation_level_below_assessed_capability",
+      "weight_access_granted_by_single_administrator",
+      "weights_reachable_outside_declared_control_boundary"
+    ]
+  },
+  "FL-SF-002": {
+    "comply": [
+      "capability_evaluation_completed_before_deployment",
+      "external_evaluator_access_provisioned_under_agreement",
+      "fl_sf_002_control_evidenced",
+      "frontier_framework_version_cited_in_release_record",
+      "incident_reporting_path_exercised_in_drill",
+      "mitigation_level_matches_assessed_capability",
+      "signing_key_backed_by_hardware_module",
+      "weight_access_requires_two_person_authorisation",
+      "weight_egress_path_restricted_to_declared_boundary"
+    ],
+    "violate": [
+      "fl_sf_002_control_absent",
+      "incident_reporting_deadline_missed",
+      "mitigation_level_below_assessed_capability",
+      "safety_case_signed_by_the_team_that_authored_it",
+      "weight_access_granted_by_single_administrator",
+      "weights_reachable_outside_declared_control_boundary"
+    ]
+  },
+  "FL-SF-003": {
+    "comply": [
+      "capability_evaluation_completed_before_deployment",
+      "capability_threshold_determination_recorded",
+      "external_evaluator_access_provisioned_under_agreement",
+      "fl_sf_003_control_evidenced",
+      "frontier_framework_version_cited_in_release_record",
+      "incident_reporting_path_exercised_in_drill",
+      "mitigation_level_matches_assessed_capability",
+      "safety_case_signed_by_named_authority",
+      "signing_key_backed_by_hardware_module"
+    ],
+    "violate": [
+      "capability_threshold_determination_absent",
+      "deployment_above_threshold_without_completed_safety_case",
+      "fl_sf_003_control_absent",
+      "incident_reporting_deadline_missed",
+      "mitigation_level_below_assessed_capability",
+      "safety_case_signed_by_the_team_that_authored_it"
+    ]
+  },
+  "FL-SF-004": {
+    "comply": [
+      "capability_evaluation_completed_before_deployment",
+      "capability_threshold_determination_recorded",
+      "fl_sf_004_control_evidenced",
+      "frontier_framework_version_cited_in_release_record",
+      "mitigation_level_matches_assessed_capability",
+      "safety_case_signed_by_named_authority",
+      "signing_key_backed_by_hardware_module",
+      "weight_access_requires_two_person_authorisation",
+      "weight_egress_path_restricted_to_declared_boundary"
+    ],
+    "violate": [
+      "capability_evaluation_skipped_for_this_checkpoint",
+      "capability_threshold_determination_absent",
+      "deployment_above_threshold_without_completed_safety_case",
+      "fl_sf_004_control_absent",
+      "incident_reporting_deadline_missed",
+      "weights_reachable_outside_declared_control_boundary"
+    ]
+  },
+  "FL-SF-005": {
+    "comply": [
+      "capability_threshold_determination_recorded",
+      "external_evaluator_access_provisioned_under_agreement",
+      "fl_sf_005_control_evidenced",
+      "frontier_framework_version_cited_in_release_record",
+      "incident_reporting_path_exercised_in_drill",
+      "mitigation_level_matches_assessed_capability",
+      "signing_key_backed_by_hardware_module",
+      "weight_access_requires_two_person_authorisation",
+      "weight_egress_path_restricted_to_declared_boundary"
+    ],
+    "violate": [
+      "capability_evaluation_skipped_for_this_checkpoint",
+      "deployment_above_threshold_without_completed_safety_case",
+      "fl_sf_005_control_absent",
+      "mitigation_level_below_assessed_capability",
+      "weight_access_granted_by_single_administrator",
+      "weights_reachable_outside_declared_control_boundary"
+    ]
+  },
+  "FL-SF-006": {
+    "comply": [
+      "capability_evaluation_completed_before_deployment",
+      "capability_threshold_determination_recorded",
+      "external_evaluator_access_provisioned_under_agreement",
+      "fl_sf_006_control_evidenced",
+      "frontier_framework_version_cited_in_release_record",
+      "incident_reporting_path_exercised_in_drill",
+      "safety_case_signed_by_named_authority",
+      "signing_key_backed_by_hardware_module",
+      "weight_access_requires_two_person_authorisation"
+    ],
+    "violate": [
+      "fl_sf_006_control_absent",
+      "incident_reporting_deadline_missed",
+      "mitigation_level_below_assessed_capability",
+      "safety_case_signed_by_the_team_that_authored_it",
+      "weight_access_granted_by_single_administrator",
+      "weights_reachable_outside_declared_control_boundary"
+    ]
+  },
+  "FL-SF-007": {
+    "comply": [
+      "capability_evaluation_completed_before_deployment",
+      "capability_threshold_determination_recorded",
+      "fl_sf_007_control_evidenced",
+      "frontier_framework_version_cited_in_release_record",
+      "incident_reporting_path_exercised_in_drill",
+      "mitigation_level_matches_assessed_capability",
+      "safety_case_signed_by_named_authority",
+      "weight_access_requires_two_person_authorisation",
+      "weight_egress_path_restricted_to_declared_boundary"
+    ],
+    "violate": [
+      "capability_threshold_determination_absent",
+      "deployment_above_threshold_without_completed_safety_case",
+      "fl_sf_007_control_absent",
+      "incident_reporting_deadline_missed",
+      "mitigation_level_below_assessed_capability",
+      "safety_case_signed_by_the_team_that_authored_it"
+    ]
+  },
+  "FL-SF-008": {
+    "comply": [
+      "capability_threshold_determination_recorded",
+      "external_evaluator_access_provisioned_under_agreement",
+      "fl_sf_008_control_evidenced",
+      "incident_reporting_path_exercised_in_drill",
+      "mitigation_level_matches_assessed_capability",
+      "safety_case_signed_by_named_authority",
+      "signing_key_backed_by_hardware_module",
+      "weight_access_requires_two_person_authorisation",
+      "weight_egress_path_restricted_to_declared_boundary"
+    ],
+    "violate": [
+      "capability_evaluation_skipped_for_this_checkpoint",
+      "capability_threshold_determination_absent",
+      "deployment_above_threshold_without_completed_safety_case",
+      "fl_sf_008_control_absent",
+      "incident_reporting_deadline_missed",
+      "weights_reachable_outside_declared_control_boundary"
+    ]
+  },
+  "FL-IN-001": {
+    "comply": [
+      "arrival_distribution_declared_with_measurement",
+      "fl_in_001_control_evidenced",
+      "goodput_ratio_at_or_above_threshold",
+      "kv_cache_usage_below_threshold",
+      "no_cuda_tensor_leak_after_warmup",
+      "no_preemptions_observed_under_load",
+      "percentile_declared_for_latency_claim",
+      "tpot_within_declared_budget",
+      "ttft_within_declared_budget"
+    ],
+    "violate": [
+      "cuda_tensor_leak_detected_in_profile",
+      "fl_in_001_control_absent",
+      "kv_cache_growth_unbounded_under_concurrency",
+      "latency_regression_above_five_percent",
+      "tpot_exceeds_declared_budget",
+      "ttft_exceeds_declared_budget"
+    ]
+  },
+  "FL-IN-002": {
+    "comply": [
+      "arrival_distribution_declared_with_measurement",
+      "batch_invariance_enabled_for_replay_claim",
+      "fl_in_002_control_evidenced",
+      "kv_cache_budget_explicitly_pinned",
+      "kv_cache_usage_below_threshold",
+      "no_cuda_tensor_leak_after_warmup",
+      "no_preemptions_observed_under_load",
+      "percentile_declared_for_latency_claim",
+      "same_hardware_and_engine_version_as_baseline"
+    ],
+    "violate": [
+      "bitwise_replay_claimed_without_batch_invariance",
+      "cuda_tensor_leak_detected_in_profile",
+      "fl_in_002_control_absent",
+      "kv_cache_growth_unbounded_under_concurrency",
+      "latency_regression_above_five_percent",
+      "preemptions_observed_at_target_concurrency"
+    ]
+  },
+  "FL-IN-003": {
+    "comply": [
+      "batch_invariance_enabled_for_replay_claim",
+      "fl_in_003_control_evidenced",
+      "kv_cache_budget_explicitly_pinned",
+      "no_cuda_tensor_leak_after_warmup",
+      "no_preemptions_observed_under_load",
+      "nondeterministic_operation_declared_and_registered",
+      "same_hardware_and_engine_version_as_baseline",
+      "tpot_within_declared_budget",
+      "ttft_within_declared_budget"
+    ],
+    "violate": [
+      "bitwise_replay_claimed_without_batch_invariance",
+      "cuda_tensor_leak_detected_in_profile",
+      "fl_in_003_control_absent",
+      "nondeterministic_operation_introduced_undeclared",
+      "percentile_omitted_from_latency_claim",
+      "preemptions_observed_at_target_concurrency"
+    ]
+  },
+  "FL-IN-004": {
+    "comply": [
+      "arrival_distribution_declared_with_measurement",
+      "batch_invariance_enabled_for_replay_claim",
+      "fl_in_004_control_evidenced",
+      "goodput_ratio_at_or_above_threshold",
+      "nondeterministic_operation_declared_and_registered",
+      "percentile_declared_for_latency_claim",
+      "same_hardware_and_engine_version_as_baseline",
+      "tpot_within_declared_budget",
+      "ttft_within_declared_budget"
+    ],
+    "violate": [
+      "bitwise_replay_claimed_without_batch_invariance",
+      "fl_in_004_control_absent",
+      "nondeterministic_operation_introduced_undeclared",
+      "percentile_omitted_from_latency_claim",
+      "tpot_exceeds_declared_budget",
+      "ttft_exceeds_declared_budget"
+    ]
+  },
+  "FL-IN-005": {
+    "comply": [
+      "arrival_distribution_declared_with_measurement",
+      "fl_in_005_control_evidenced",
+      "goodput_ratio_at_or_above_threshold",
+      "kv_cache_usage_below_threshold",
+      "no_cuda_tensor_leak_after_warmup",
+      "no_preemptions_observed_under_load",
+      "percentile_declared_for_latency_claim",
+      "tpot_within_declared_budget",
+      "ttft_within_declared_budget"
+    ],
+    "violate": [
+      "fl_in_005_control_absent",
+      "kv_cache_growth_unbounded_under_concurrency",
+      "latency_regression_above_five_percent",
+      "percentile_omitted_from_latency_claim",
+      "tpot_exceeds_declared_budget",
+      "ttft_exceeds_declared_budget"
+    ]
+  },
+  "FL-IN-006": {
+    "comply": [
+      "arrival_distribution_declared_with_measurement",
+      "batch_invariance_enabled_for_replay_claim",
+      "fl_in_006_control_evidenced",
+      "kv_cache_budget_explicitly_pinned",
+      "kv_cache_usage_below_threshold",
+      "no_cuda_tensor_leak_after_warmup",
+      "no_preemptions_observed_under_load",
+      "percentile_declared_for_latency_claim",
+      "same_hardware_and_engine_version_as_baseline"
+    ],
+    "violate": [
+      "cuda_tensor_leak_detected_in_profile",
+      "fl_in_006_control_absent",
+      "kv_cache_growth_unbounded_under_concurrency",
+      "latency_regression_above_five_percent",
+      "preemptions_observed_at_target_concurrency",
+      "tpot_exceeds_declared_budget"
+    ]
+  },
+  "FL-IN-007": {
+    "comply": [
+      "batch_invariance_enabled_for_replay_claim",
+      "fl_in_007_control_evidenced",
+      "kv_cache_budget_explicitly_pinned",
+      "no_cuda_tensor_leak_after_warmup",
+      "no_preemptions_observed_under_load",
+      "nondeterministic_operation_declared_and_registered",
+      "same_hardware_and_engine_version_as_baseline",
+      "tpot_within_declared_budget",
+      "ttft_within_declared_budget"
+    ],
+    "violate": [
+      "bitwise_replay_claimed_without_batch_invariance",
+      "cuda_tensor_leak_detected_in_profile",
+      "fl_in_007_control_absent",
+      "kv_cache_growth_unbounded_under_concurrency",
+      "nondeterministic_operation_introduced_undeclared",
+      "preemptions_observed_at_target_concurrency"
+    ]
+  },
+  "FL-IN-008": {
+    "comply": [
+      "arrival_distribution_declared_with_measurement",
+      "batch_invariance_enabled_for_replay_claim",
+      "fl_in_008_control_evidenced",
+      "goodput_ratio_at_or_above_threshold",
+      "nondeterministic_operation_declared_and_registered",
+      "percentile_declared_for_latency_claim",
+      "same_hardware_and_engine_version_as_baseline",
+      "tpot_within_declared_budget",
+      "ttft_within_declared_budget"
+    ],
+    "violate": [
+      "bitwise_replay_claimed_without_batch_invariance",
+      "fl_in_008_control_absent",
+      "nondeterministic_operation_introduced_undeclared",
+      "percentile_omitted_from_latency_claim",
+      "preemptions_observed_at_target_concurrency",
+      "ttft_exceeds_declared_budget"
+    ]
+  },
+  "FL-FG-001": {
+    "comply": [
+      "circuit_breaker_present_on_recursive_path",
+      "cost_centre_quota_bound_to_agent_identity",
+      "fl_fg_001_control_evidenced",
+      "loop_limit_declared_numerically",
+      "loop_limit_not_disabled",
+      "loop_limit_not_environment_overridable",
+      "loop_limit_units_declared",
+      "pre_flight_cost_projection_enforced"
+    ],
+    "violate": [
+      "agent_bypasses_cost_centre_quota",
+      "cost_projection_is_a_meter_not_a_breaker",
+      "fl_fg_001_control_absent",
+      "loop_limit_absent_from_agentic_workflow",
+      "loop_limit_overridable_by_environment_variable",
+      "loop_limit_set_to_unbounded"
+    ]
+  },
+  "FL-FG-002": {
+    "comply": [
+      "circuit_breaker_present_on_recursive_path",
+      "cost_centre_quota_bound_to_agent_identity",
+      "fl_fg_002_control_evidenced",
+      "loop_limit_declared_numerically",
+      "loop_limit_not_disabled",
+      "loop_limit_not_environment_overridable",
+      "loop_limit_units_declared",
+      "pre_flight_cost_projection_enforced"
+    ],
+    "violate": [
+      "agent_bypasses_cost_centre_quota",
+      "cost_projection_is_a_meter_not_a_breaker",
+      "fl_fg_002_control_absent",
+      "loop_limit_absent_from_agentic_workflow",
+      "loop_limit_overridable_by_environment_variable",
+      "recursive_tool_call_path_has_no_terminator"
+    ]
+  },
+  "FL-FG-003": {
+    "comply": [
+      "circuit_breaker_present_on_recursive_path",
+      "cost_centre_quota_bound_to_agent_identity",
+      "fl_fg_003_control_evidenced",
+      "loop_limit_declared_numerically",
+      "loop_limit_not_disabled",
+      "loop_limit_not_environment_overridable",
+      "loop_limit_units_declared",
+      "pre_flight_cost_projection_enforced"
+    ],
+    "violate": [
+      "agent_bypasses_cost_centre_quota",
+      "fl_fg_003_control_absent",
+      "loop_limit_absent_from_agentic_workflow",
+      "loop_limit_overridable_by_environment_variable",
+      "loop_limit_set_to_unbounded",
+      "recursive_tool_call_path_has_no_terminator"
+    ]
+  },
+  "FL-FG-004": {
+    "comply": [
+      "circuit_breaker_present_on_recursive_path",
+      "cost_centre_quota_bound_to_agent_identity",
+      "fl_fg_004_control_evidenced",
+      "loop_limit_declared_numerically",
+      "loop_limit_not_disabled",
+      "loop_limit_not_environment_overridable",
+      "loop_limit_units_declared",
+      "pre_flight_cost_projection_enforced"
+    ],
+    "violate": [
+      "agent_bypasses_cost_centre_quota",
+      "cost_projection_is_a_meter_not_a_breaker",
+      "fl_fg_004_control_absent",
+      "loop_limit_absent_from_agentic_workflow",
+      "loop_limit_overridable_by_environment_variable",
+      "loop_limit_set_to_unbounded"
+    ]
+  },
+  "FL-FG-005": {
+    "comply": [
+      "circuit_breaker_present_on_recursive_path",
+      "cost_centre_quota_bound_to_agent_identity",
+      "fl_fg_005_control_evidenced",
+      "loop_limit_declared_numerically",
+      "loop_limit_not_disabled",
+      "loop_limit_not_environment_overridable",
+      "loop_limit_units_declared",
+      "pre_flight_cost_projection_enforced"
+    ],
+    "violate": [
+      "agent_bypasses_cost_centre_quota",
+      "cost_projection_is_a_meter_not_a_breaker",
+      "fl_fg_005_control_absent",
+      "loop_limit_absent_from_agentic_workflow",
+      "loop_limit_overridable_by_environment_variable",
+      "recursive_tool_call_path_has_no_terminator"
+    ]
+  },
+  "FL-FG-006": {
+    "comply": [
+      "circuit_breaker_present_on_recursive_path",
+      "cost_centre_quota_bound_to_agent_identity",
+      "fl_fg_006_control_evidenced",
+      "loop_limit_declared_numerically",
+      "loop_limit_not_disabled",
+      "loop_limit_not_environment_overridable",
+      "loop_limit_units_declared",
+      "pre_flight_cost_projection_enforced"
+    ],
+    "violate": [
+      "agent_bypasses_cost_centre_quota",
+      "fl_fg_006_control_absent",
+      "loop_limit_absent_from_agentic_workflow",
+      "loop_limit_overridable_by_environment_variable",
+      "loop_limit_set_to_unbounded",
+      "recursive_tool_call_path_has_no_terminator"
+    ]
+  },
+  "FL-BS-001": {
+    "comply": [
+      "ambiguous_context_answered_as_unknown",
+      "demographic_disparity_below_threshold",
+      "fl_bs_001_control_evidenced",
+      "no_refusal_on_safe_prompt",
+      "persona_and_tone_evaluation_passed",
+      "refusal_correct_on_harmful_prompt",
+      "toxicity_filter_blocks_flagged_response"
+    ],
+    "violate": [
+      "demographic_disparity_above_threshold",
+      "fl_bs_001_control_absent",
+      "over_refusal_on_safe_prompt_above_threshold",
+      "persona_guidance_violated_in_release_build",
+      "toxicity_filter_bypassed_and_response_propagated",
+      "toxicity_threshold_relaxed_without_approval"
+    ]
+  },
+  "FL-BS-002": {
+    "comply": [
+      "ambiguous_context_answered_as_unknown",
+      "demographic_disparity_below_threshold",
+      "fl_bs_002_control_evidenced",
+      "no_refusal_on_safe_prompt",
+      "persona_and_tone_evaluation_passed",
+      "refusal_correct_on_harmful_prompt",
+      "toxicity_filter_blocks_flagged_response"
+    ],
+    "violate": [
+      "demographic_disparity_above_threshold",
+      "fl_bs_002_control_absent",
+      "over_refusal_on_safe_prompt_above_threshold",
+      "persona_guidance_violated_in_release_build",
+      "toxicity_filter_bypassed_and_response_propagated",
+      "toxicity_threshold_relaxed_without_approval"
+    ]
+  },
+  "FL-BS-003": {
+    "comply": [
+      "ambiguous_context_answered_as_unknown",
+      "demographic_disparity_below_threshold",
+      "fl_bs_003_control_evidenced",
+      "no_refusal_on_safe_prompt",
+      "persona_and_tone_evaluation_passed",
+      "refusal_correct_on_harmful_prompt",
+      "toxicity_filter_blocks_flagged_response"
+    ],
+    "violate": [
+      "demographic_disparity_above_threshold",
+      "fl_bs_003_control_absent",
+      "over_refusal_on_safe_prompt_above_threshold",
+      "persona_guidance_violated_in_release_build",
+      "toxicity_filter_bypassed_and_response_propagated",
+      "toxicity_threshold_relaxed_without_approval"
+    ]
+  },
+  "FL-BS-004": {
+    "comply": [
+      "ambiguous_context_answered_as_unknown",
+      "demographic_disparity_below_threshold",
+      "fl_bs_004_control_evidenced",
+      "no_refusal_on_safe_prompt",
+      "persona_and_tone_evaluation_passed",
+      "refusal_correct_on_harmful_prompt",
+      "toxicity_filter_blocks_flagged_response"
+    ],
+    "violate": [
+      "demographic_disparity_above_threshold",
+      "fl_bs_004_control_absent",
+      "over_refusal_on_safe_prompt_above_threshold",
+      "persona_guidance_violated_in_release_build",
+      "toxicity_filter_bypassed_and_response_propagated",
+      "toxicity_threshold_relaxed_without_approval"
+    ]
+  },
+  "FL-BS-005": {
+    "comply": [
+      "ambiguous_context_answered_as_unknown",
+      "demographic_disparity_below_threshold",
+      "fl_bs_005_control_evidenced",
+      "no_refusal_on_safe_prompt",
+      "persona_and_tone_evaluation_passed",
+      "refusal_correct_on_harmful_prompt",
+      "toxicity_filter_blocks_flagged_response"
+    ],
+    "violate": [
+      "demographic_disparity_above_threshold",
+      "fl_bs_005_control_absent",
+      "over_refusal_on_safe_prompt_above_threshold",
+      "persona_guidance_violated_in_release_build",
+      "toxicity_filter_bypassed_and_response_propagated",
+      "toxicity_threshold_relaxed_without_approval"
+    ]
+  },
+  "FL-BS-006": {
+    "comply": [
+      "ambiguous_context_answered_as_unknown",
+      "demographic_disparity_below_threshold",
+      "fl_bs_006_control_evidenced",
+      "no_refusal_on_safe_prompt",
+      "persona_and_tone_evaluation_passed",
+      "refusal_correct_on_harmful_prompt",
+      "toxicity_filter_blocks_flagged_response"
+    ],
+    "violate": [
+      "demographic_disparity_above_threshold",
+      "fl_bs_006_control_absent",
+      "over_refusal_on_safe_prompt_above_threshold",
+      "persona_guidance_violated_in_release_build",
+      "toxicity_filter_bypassed_and_response_propagated",
+      "toxicity_threshold_relaxed_without_approval"
+    ]
+  },
+  "FL-IP-001": {
+    "comply": [
+      "attribution_recorded_for_reused_snippet",
+      "copyrighted_text_reproduction_below_threshold",
+      "fl_ip_001_control_evidenced",
+      "generated_code_screened_against_copyleft_signatures",
+      "licence_detection_run_on_agent_authored_files",
+      "memorisation_probe_run_on_release_candidate",
+      "third_party_licence_inventory_updated"
+    ],
+    "violate": [
+      "attribution_obligation_dropped_at_release",
+      "copyleft_licensed_snippet_merged_into_proprietary_service",
+      "copyrighted_text_reproduced_above_threshold",
+      "fl_ip_001_control_absent",
+      "generated_code_structurally_identical_to_copyleft_library",
+      "licence_detection_skipped_on_agent_diff"
+    ]
+  },
+  "FL-IP-002": {
+    "comply": [
+      "attribution_recorded_for_reused_snippet",
+      "copyrighted_text_reproduction_below_threshold",
+      "fl_ip_002_control_evidenced",
+      "generated_code_screened_against_copyleft_signatures",
+      "licence_detection_run_on_agent_authored_files",
+      "memorisation_probe_run_on_release_candidate",
+      "third_party_licence_inventory_updated"
+    ],
+    "violate": [
+      "attribution_obligation_dropped_at_release",
+      "copyleft_licensed_snippet_merged_into_proprietary_service",
+      "copyrighted_text_reproduced_above_threshold",
+      "fl_ip_002_control_absent",
+      "generated_code_structurally_identical_to_copyleft_library",
+      "licence_detection_skipped_on_agent_diff"
+    ]
+  },
+  "FL-IP-003": {
+    "comply": [
+      "attribution_recorded_for_reused_snippet",
+      "copyrighted_text_reproduction_below_threshold",
+      "fl_ip_003_control_evidenced",
+      "generated_code_screened_against_copyleft_signatures",
+      "licence_detection_run_on_agent_authored_files",
+      "memorisation_probe_run_on_release_candidate",
+      "third_party_licence_inventory_updated"
+    ],
+    "violate": [
+      "attribution_obligation_dropped_at_release",
+      "copyleft_licensed_snippet_merged_into_proprietary_service",
+      "copyrighted_text_reproduced_above_threshold",
+      "fl_ip_003_control_absent",
+      "generated_code_structurally_identical_to_copyleft_library",
+      "licence_detection_skipped_on_agent_diff"
+    ]
+  },
+  "FL-IP-004": {
+    "comply": [
+      "attribution_recorded_for_reused_snippet",
+      "copyrighted_text_reproduction_below_threshold",
+      "fl_ip_004_control_evidenced",
+      "generated_code_screened_against_copyleft_signatures",
+      "licence_detection_run_on_agent_authored_files",
+      "memorisation_probe_run_on_release_candidate",
+      "third_party_licence_inventory_updated"
+    ],
+    "violate": [
+      "attribution_obligation_dropped_at_release",
+      "copyleft_licensed_snippet_merged_into_proprietary_service",
+      "copyrighted_text_reproduced_above_threshold",
+      "fl_ip_004_control_absent",
+      "generated_code_structurally_identical_to_copyleft_library",
+      "licence_detection_skipped_on_agent_diff"
+    ]
+  },
+  "FL-IP-005": {
+    "comply": [
+      "attribution_recorded_for_reused_snippet",
+      "copyrighted_text_reproduction_below_threshold",
+      "fl_ip_005_control_evidenced",
+      "generated_code_screened_against_copyleft_signatures",
+      "licence_detection_run_on_agent_authored_files",
+      "memorisation_probe_run_on_release_candidate",
+      "third_party_licence_inventory_updated"
+    ],
+    "violate": [
+      "attribution_obligation_dropped_at_release",
+      "copyleft_licensed_snippet_merged_into_proprietary_service",
+      "copyrighted_text_reproduced_above_threshold",
+      "fl_ip_005_control_absent",
+      "generated_code_structurally_identical_to_copyleft_library",
+      "licence_detection_skipped_on_agent_diff"
+    ]
+  },
+  "FL-IP-006": {
+    "comply": [
+      "attribution_recorded_for_reused_snippet",
+      "copyrighted_text_reproduction_below_threshold",
+      "fl_ip_006_control_evidenced",
+      "generated_code_screened_against_copyleft_signatures",
+      "licence_detection_run_on_agent_authored_files",
+      "memorisation_probe_run_on_release_candidate",
+      "third_party_licence_inventory_updated"
+    ],
+    "violate": [
+      "attribution_obligation_dropped_at_release",
+      "copyleft_licensed_snippet_merged_into_proprietary_service",
+      "copyrighted_text_reproduced_above_threshold",
+      "fl_ip_006_control_absent",
+      "generated_code_structurally_identical_to_copyleft_library",
+      "licence_detection_skipped_on_agent_diff"
+    ]
+  },
+  "FL-SC-001": {
+    "comply": [
+      "build_is_hermetic_and_reproducible",
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_pinned_to_immutable_digest",
+      "dependency_resolved_from_declared_internal_registry_first",
+      "fl_sc_001_control_evidenced",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact",
+      "sbom_generated_and_signed_for_release",
+      "sca_scan_clean_above_cvss_threshold"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "builder_id_mismatch_in_provenance",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "fl_sc_001_control_absent",
+      "package_name_resolves_to_public_registry_first",
+      "provenance_attestation_absent_for_release_artifact"
+    ]
+  },
+  "FL-SC-002": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_pinned_to_immutable_digest",
+      "dependency_resolved_from_declared_internal_registry_first",
+      "fl_sc_002_control_evidenced",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact",
+      "sbom_generated_and_signed_for_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "component_integrity_drift_detected",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "fl_sc_002_control_absent",
+      "package_name_resolves_to_public_registry_first",
+      "secret_material_present_in_diff"
+    ]
+  },
+  "FL-SC-003": {
+    "comply": [
+      "build_is_hermetic_and_reproducible",
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_pinned_to_immutable_digest",
+      "fl_sc_003_control_evidenced",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact",
+      "sbom_generated_and_signed_for_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "builder_id_mismatch_in_provenance",
+      "component_integrity_drift_detected",
+      "fl_sc_003_control_absent",
+      "package_name_resolves_to_public_registry_first",
+      "provenance_attestation_absent_for_release_artifact",
+      "secret_material_present_in_diff"
+    ]
+  },
+  "FL-SC-004": {
+    "comply": [
+      "build_is_hermetic_and_reproducible",
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_pinned_to_immutable_digest",
+      "dependency_resolved_from_declared_internal_registry_first",
+      "fl_sc_004_control_evidenced",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact",
+      "sbom_generated_and_signed_for_release",
+      "sca_scan_clean_above_cvss_threshold"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "builder_id_mismatch_in_provenance",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "fl_sc_004_control_absent",
+      "provenance_attestation_absent_for_release_artifact",
+      "secret_material_present_in_diff"
+    ]
+  },
+  "FL-SC-005": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_pinned_to_immutable_digest",
+      "dependency_resolved_from_declared_internal_registry_first",
+      "fl_sc_005_control_evidenced",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact",
+      "sbom_generated_and_signed_for_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "builder_id_mismatch_in_provenance",
+      "component_integrity_drift_detected",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "fl_sc_005_control_absent",
+      "package_name_resolves_to_public_registry_first"
+    ]
+  },
+  "FL-SC-006": {
+    "comply": [
+      "build_is_hermetic_and_reproducible",
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_pinned_to_immutable_digest",
+      "fl_sc_006_control_evidenced",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact",
+      "sbom_generated_and_signed_for_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "component_integrity_drift_detected",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "fl_sc_006_control_absent",
+      "package_name_resolves_to_public_registry_first",
+      "provenance_attestation_absent_for_release_artifact",
+      "secret_material_present_in_diff"
+    ]
+  },
+  "FL-SC-007": {
+    "comply": [
+      "build_is_hermetic_and_reproducible",
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_pinned_to_immutable_digest",
+      "dependency_resolved_from_declared_internal_registry_first",
+      "fl_sc_007_control_evidenced",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact",
+      "sbom_generated_and_signed_for_release",
+      "sca_scan_clean_above_cvss_threshold"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "builder_id_mismatch_in_provenance",
+      "component_integrity_drift_detected",
+      "fl_sc_007_control_absent",
+      "provenance_attestation_absent_for_release_artifact",
+      "secret_material_present_in_diff"
+    ]
+  },
+  "FL-SC-008": {
+    "comply": [
+      "build_runner_ephemeral_and_image_pinned",
+      "dependency_pinned_to_immutable_digest",
+      "dependency_resolved_from_declared_internal_registry_first",
+      "fl_sc_008_control_evidenced",
+      "provenance_attestation_verified_against_expected_builder_id",
+      "provenance_subject_digest_matches_distributed_artifact",
+      "sbom_generated_and_signed_for_release",
+      "sca_scan_clean_above_cvss_threshold",
+      "workflow_actions_pinned_to_commit_sha"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "builder_id_mismatch_in_provenance",
+      "dependency_introduces_cve_above_cvss_threshold",
+      "fl_sc_008_control_absent",
+      "package_name_resolves_to_public_registry_first",
+      "provenance_attestation_absent_for_release_artifact"
+    ]
+  },
+  "FL-AS-001": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "fl_as_001_control_evidenced",
+      "input_validation_allowlist_applied",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced_on_new_endpoint"
+    ],
+    "violate": [
+      "authorization_check_omitted_on_new_endpoint",
+      "fl_as_001_control_absent",
+      "server_side_request_forgery_reachable_from_tool",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "FL-AS-002": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "fl_as_002_control_evidenced",
+      "input_validation_allowlist_applied",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced_on_new_endpoint"
+    ],
+    "violate": [
+      "authorization_check_omitted_on_new_endpoint",
+      "fl_as_002_control_absent",
+      "server_side_request_forgery_reachable_from_tool",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "FL-AS-003": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "fl_as_003_control_evidenced",
+      "input_validation_allowlist_applied",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced_on_new_endpoint"
+    ],
+    "violate": [
+      "authorization_check_omitted_on_new_endpoint",
+      "fl_as_003_control_absent",
+      "server_side_request_forgery_reachable_from_tool",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "FL-AS-004": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "fl_as_004_control_evidenced",
+      "input_validation_allowlist_applied",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced_on_new_endpoint"
+    ],
+    "violate": [
+      "authorization_check_omitted_on_new_endpoint",
+      "fl_as_004_control_absent",
+      "server_side_request_forgery_reachable_from_tool",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "FL-AS-005": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "fl_as_005_control_evidenced",
+      "input_validation_allowlist_applied",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced_on_new_endpoint"
+    ],
+    "violate": [
+      "authorization_check_omitted_on_new_endpoint",
+      "fl_as_005_control_absent",
+      "server_side_request_forgery_reachable_from_tool",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "FL-AS-006": {
+    "comply": [
+      "api_parameter_fuzzing_run_on_changed_endpoints",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_internal_identifiers",
+      "fl_as_006_control_evidenced",
+      "input_validation_allowlist_applied",
+      "parameterised_query_used_for_all_new_sql",
+      "server_side_authorization_enforced_on_new_endpoint"
+    ],
+    "violate": [
+      "authorization_check_omitted_on_new_endpoint",
+      "fl_as_006_control_absent",
+      "server_side_request_forgery_reachable_from_tool",
+      "stack_trace_returned_to_client",
+      "string_concatenated_sql_introduced",
+      "unsafe_deserialisation_of_client_payload"
+    ]
+  },
+  "FL-GV-001": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "fl_gv_001_control_evidenced",
+      "human_oversight_override_reachable_for_high_risk_feature",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "fl_gv_001_control_absent",
+      "human_oversight_override_removed_by_configuration",
+      "prohibited_practice_implemented_in_product_surface",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "FL-GV-002": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "compute_threshold_determination_recorded_per_jurisdiction",
+      "constitutional_parameter_changed_only_by_legislation",
+      "decision_record_append_only",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "fl_gv_002_control_evidenced",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "fl_gv_002_control_absent",
+      "prohibited_practice_implemented_in_product_surface",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "FL-GV-003": {
+    "comply": [
+      "audit_register_disjoint_from_precedent_store",
+      "compute_threshold_determination_recorded_per_jurisdiction",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "decision_record_append_only",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "fl_gv_003_control_evidenced",
+      "human_oversight_override_reachable_for_high_risk_feature",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "compute_threshold_determination_conflates_jurisdictions",
+      "decision_record_amended_in_place",
+      "fl_gv_003_control_absent",
+      "reporter_bulletin_injected_into_adjudicator_context"
+    ]
+  },
+  "FL-GV-004": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "compute_threshold_determination_recorded_per_jurisdiction",
+      "contest_path_available_to_affected_party",
+      "decision_record_append_only",
+      "fl_gv_004_control_evidenced",
+      "human_oversight_override_reachable_for_high_risk_feature",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "audit_finding_read_during_retrieval",
+      "compute_threshold_determination_conflates_jurisdictions",
+      "decision_record_amended_in_place",
+      "fl_gv_004_control_absent",
+      "human_oversight_override_removed_by_configuration"
+    ]
+  },
+  "FL-GV-005": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "fl_gv_005_control_evidenced",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "compute_threshold_determination_conflates_jurisdictions",
+      "fl_gv_005_control_absent",
+      "human_oversight_override_removed_by_configuration",
+      "prohibited_practice_implemented_in_product_surface",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "FL-GV-006": {
+    "comply": [
+      "audit_register_disjoint_from_precedent_store",
+      "compute_threshold_determination_recorded_per_jurisdiction",
+      "constitutional_parameter_changed_only_by_legislation",
+      "decision_record_append_only",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "fl_gv_006_control_evidenced",
+      "human_oversight_override_reachable_for_high_risk_feature",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "fl_gv_006_control_absent",
+      "prohibited_practice_implemented_in_product_surface",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "FL-GV-007": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "compute_threshold_determination_recorded_per_jurisdiction",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "decision_record_append_only",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "fl_gv_007_control_evidenced",
+      "human_oversight_override_reachable_for_high_risk_feature",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "decision_record_amended_in_place",
+      "fl_gv_007_control_absent",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "FL-GV-008": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "compute_threshold_determination_recorded_per_jurisdiction",
+      "contest_path_available_to_affected_party",
+      "fl_gv_008_control_evidenced",
+      "human_oversight_override_reachable_for_high_risk_feature",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "compute_threshold_determination_conflates_jurisdictions",
+      "decision_record_amended_in_place",
+      "fl_gv_008_control_absent",
+      "human_oversight_override_removed_by_configuration",
+      "reporter_bulletin_injected_into_adjudicator_context"
+    ]
+  },
+  "FL-GV-009": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "decision_record_append_only",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "fl_gv_009_control_evidenced",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "compute_threshold_determination_conflates_jurisdictions",
+      "decision_record_amended_in_place",
+      "fl_gv_009_control_absent",
+      "human_oversight_override_removed_by_configuration",
+      "prohibited_practice_implemented_in_product_surface"
+    ]
+  },
+  "FL-GV-010": {
+    "comply": [
+      "audit_register_disjoint_from_precedent_store",
+      "compute_threshold_determination_recorded_per_jurisdiction",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "decision_record_append_only",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "fl_gv_010_control_evidenced",
+      "human_oversight_override_reachable_for_high_risk_feature",
+      "reporter_output_kept_off_adjudication_input_path"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "fl_gv_010_control_absent",
+      "human_oversight_override_removed_by_configuration",
+      "prohibited_practice_implemented_in_product_surface",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "FL-GV-011": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "compute_threshold_determination_recorded_per_jurisdiction",
+      "contest_path_available_to_affected_party",
+      "decision_record_append_only",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "fl_gv_011_control_evidenced",
+      "human_oversight_override_reachable_for_high_risk_feature",
+      "referral_acknowledged_with_recorded_disposition",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "fl_gv_011_control_absent",
+      "prohibited_practice_implemented_in_product_surface",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "FL-EV-010": {
+    "comply": [
+      "case_carries_canary_string",
+      "case_release_date_after_training_cutoff",
+      "decontamination_check_configured_for_new_corpus",
+      "fl_ev_010_control_evidenced",
+      "golden_prompt_baseline_pinned_to_commit",
+      "judge_human_agreement_measured_for_this_config",
+      "objective_ground_truth_used_where_available",
+      "optimisation_still_engaged_under_test",
+      "tie_disposition_available_to_judge"
+    ],
+    "violate": [
+      "accuracy_outside_relative_tolerance",
+      "benchmark_data_present_in_training_corpus",
+      "fl_ev_010_control_absent",
+      "golden_prompt_baseline_rewritten_to_match_output",
+      "optimisation_silently_disengaged_while_accuracy_passes",
+      "parity_class_is_disagreement"
+    ]
+  },
+  "FL-SF-009": {
+    "comply": [
+      "capability_evaluation_completed_before_deployment",
+      "external_evaluator_access_provisioned_under_agreement",
+      "fl_sf_009_control_evidenced",
+      "frontier_framework_version_cited_in_release_record",
+      "incident_reporting_path_exercised_in_drill",
+      "safety_case_signed_by_named_authority",
+      "signing_key_backed_by_hardware_module",
+      "weight_access_requires_two_person_authorisation",
+      "weight_egress_path_restricted_to_declared_boundary"
+    ],
+    "violate": [
+      "capability_evaluation_skipped_for_this_checkpoint",
+      "deployment_above_threshold_without_completed_safety_case",
+      "fl_sf_009_control_absent",
+      "mitigation_level_below_assessed_capability",
+      "weight_access_granted_by_single_administrator",
+      "weights_reachable_outside_declared_control_boundary"
+    ]
+  },
+  "FL-CS-001": {
+    "comply": [
+      "age_assurance_signal_checked_at_account_creation",
+      "csam_classifier_in_path_for_every_generation_modality",
+      "csam_report_content_preserved_for_one_year",
+      "cybertipline_report_emitted_within_statutory_window",
+      "fl_cs_001_control_evidenced",
+      "hash_list_refreshed_from_clearinghouse_on_schedule",
+      "hash_matched_material_quarantined_and_never_stored",
+      "known_csam_hash_match_run_before_shard_storage",
+      "minor_mode_restrictions_enforced_server_side"
+    ],
+    "violate": [
+      "age_assurance_check_removed_from_consumer_signup",
+      "csam_classifier_disabled_on_generation_path",
+      "cybertipline_report_path_suppressed_or_batched",
+      "fl_cs_001_control_absent",
+      "hash_matched_shard_written_to_corpus_before_quarantine",
+      "known_csam_hash_match_skipped_at_ingest"
+    ]
+  },
+  "FL-CS-002": {
+    "comply": [
+      "age_assurance_signal_checked_at_account_creation",
+      "age_signal_propagated_to_safety_filter_context",
+      "fl_cs_002_control_evidenced",
+      "hash_list_refreshed_from_clearinghouse_on_schedule",
+      "hash_matched_material_quarantined_and_never_stored",
+      "known_csam_hash_match_run_before_shard_storage",
+      "minor_mode_restrictions_enforced_server_side",
+      "under_13_sources_excluded_from_training_manifest",
+      "verifiable_parental_consent_recorded_for_child_data_use"
+    ],
+    "violate": [
+      "age_assurance_check_removed_from_consumer_signup",
+      "fl_cs_002_control_absent",
+      "hash_matched_shard_written_to_corpus_before_quarantine",
+      "known_csam_hash_match_skipped_at_ingest",
+      "minor_mode_restrictions_bypassable_by_client_flag",
+      "under_13_personal_data_ingested_without_parental_consent"
+    ]
+  },
+  "FL-CS-003": {
+    "comply": [
+      "age_assurance_signal_checked_at_account_creation",
+      "age_signal_propagated_to_safety_filter_context",
+      "child_directed_service_data_carries_no_training_flag",
+      "child_safety_escalation_path_staffed_and_exercised",
+      "csam_detection_coverage_tested_in_release_gate",
+      "fl_cs_003_control_evidenced",
+      "minor_mode_restrictions_enforced_server_side",
+      "under_13_sources_excluded_from_training_manifest",
+      "verifiable_parental_consent_recorded_for_child_data_use"
+    ],
+    "violate": [
+      "age_assurance_check_removed_from_consumer_signup",
+      "child_directed_service_logs_retained_for_training",
+      "csam_preservation_window_shortened_below_one_year",
+      "fl_cs_003_control_absent",
+      "minor_mode_restrictions_bypassable_by_client_flag",
+      "under_13_personal_data_ingested_without_parental_consent"
+    ]
+  },
+  "FL-CS-004": {
+    "comply": [
+      "age_assurance_vendor_result_bound_to_session",
+      "child_data_retention_limited_to_declared_purpose",
+      "child_directed_service_data_carries_no_training_flag",
+      "child_safety_escalation_path_staffed_and_exercised",
+      "csam_detection_coverage_tested_in_release_gate",
+      "csam_detection_thresholds_change_only_by_legislation",
+      "fl_cs_004_control_evidenced",
+      "under_13_sources_excluded_from_training_manifest",
+      "verifiable_parental_consent_recorded_for_child_data_use"
+    ],
+    "violate": [
+      "age_signal_dropped_from_request_context_before_safety_filter",
+      "child_directed_service_logs_retained_for_training",
+      "csam_preservation_window_shortened_below_one_year",
+      "fl_cs_004_control_absent",
+      "known_csam_hash_list_pinned_to_stale_snapshot",
+      "under_13_personal_data_ingested_without_parental_consent"
+    ]
+  },
+  "FL-CB-001": {
+    "comply": [
+      "autonomous_replication_eval_completed_for_agentic_checkpoint",
+      "bio_chem_uplift_screen_completed_below_threshold",
+      "cyber_eval_task_set_matches_declared_protocol",
+      "cyber_uplift_eval_in_promotion_gate",
+      "cyber_uplift_result_attested_by_external_evaluator",
+      "deployment_held_until_threshold_mitigations_verified",
+      "fl_cb_001_control_evidenced",
+      "mitigation_package_for_assessed_level_fully_applied",
+      "self_exfiltration_probe_active_in_agent_sandbox"
+    ],
+    "violate": [
+      "autonomous_replication_eval_skipped_for_agentic_checkpoint",
+      "bio_chem_uplift_screen_result_overridden_by_release_owner",
+      "bio_uplift_threshold_crossed_without_mitigation_package",
+      "cyber_uplift_eval_removed_from_promotion_gate",
+      "cyber_uplift_eval_run_on_reduced_task_subset_without_disclosure",
+      "fl_cb_001_control_absent"
+    ]
+  },
+  "FL-CB-002": {
+    "comply": [
+      "agentic_checkpoint_release_gated_on_autonomy_results",
+      "autonomous_replication_eval_completed_for_agentic_checkpoint",
+      "cyber_eval_task_set_matches_declared_protocol",
+      "cyber_uplift_eval_in_promotion_gate",
+      "cyber_uplift_result_attested_by_external_evaluator",
+      "eval_awareness_probe_results_included_in_report",
+      "fl_cb_002_control_evidenced",
+      "sandbagging_detector_active_in_eval_harness",
+      "self_exfiltration_probe_active_in_agent_sandbox"
+    ],
+    "violate": [
+      "autonomous_replication_eval_skipped_for_agentic_checkpoint",
+      "cyber_uplift_eval_removed_from_promotion_gate",
+      "cyber_uplift_eval_run_on_reduced_task_subset_without_disclosure",
+      "fl_cb_002_control_absent",
+      "sandbagging_detector_removed_from_eval_harness",
+      "self_exfiltration_probe_disabled_in_agent_sandbox"
+    ]
+  },
+  "FL-CB-003": {
+    "comply": [
+      "agentic_checkpoint_release_gated_on_autonomy_results",
+      "autonomous_replication_eval_completed_for_agentic_checkpoint",
+      "elicitation_effort_declared_with_uplift_result",
+      "eval_awareness_probe_results_included_in_report",
+      "fl_cb_003_control_evidenced",
+      "sandbagging_detector_active_in_eval_harness",
+      "self_exfiltration_probe_active_in_agent_sandbox",
+      "threshold_determination_made_by_independent_reviewer",
+      "uplift_eval_run_on_helpful_only_variant"
+    ],
+    "violate": [
+      "autonomous_replication_eval_skipped_for_agentic_checkpoint",
+      "eval_awareness_probe_results_excluded_from_report",
+      "fl_cb_003_control_absent",
+      "mitigation_package_partially_applied_and_recorded_as_complete",
+      "sandbagging_detector_removed_from_eval_harness",
+      "self_exfiltration_probe_disabled_in_agent_sandbox"
+    ]
+  },
+  "FL-CB-004": {
+    "comply": [
+      "elicitation_effort_declared_with_uplift_result",
+      "eval_awareness_probe_results_included_in_report",
+      "fl_cb_004_control_evidenced",
+      "mitigation_effectiveness_measured_not_asserted",
+      "risk_report_shared_with_governance_body_before_release",
+      "sandbagging_detector_active_in_eval_harness",
+      "threshold_crossing_triggers_automatic_deployment_hold",
+      "threshold_determination_made_by_independent_reviewer",
+      "uplift_eval_run_on_helpful_only_variant"
+    ],
+    "violate": [
+      "eval_awareness_probe_results_excluded_from_report",
+      "fl_cb_004_control_absent",
+      "mitigation_package_partially_applied_and_recorded_as_complete",
+      "sandbagging_detector_removed_from_eval_harness",
+      "threshold_determination_made_by_the_team_seeking_release",
+      "uplift_eval_run_with_safety_training_but_without_elicitation"
+    ]
+  },
+  "FL-WX-001": {
+    "comply": [
+      "dlp_alert_on_weights_blocks_transfer",
+      "egress_allowlist_limited_to_declared_perimeter",
+      "export_classification_recorded_before_transfer",
+      "fl_wx_001_control_evidenced",
+      "foreign_national_access_reviewed_under_deemed_export_rule",
+      "insider_anomaly_detection_active_on_training_cluster",
+      "weight_access_bound_to_current_vetting_record",
+      "weight_access_revoked_on_role_change",
+      "weight_store_egress_monitoring_active"
+    ],
+    "violate": [
+      "dlp_alert_on_weights_downgraded_to_advisory",
+      "fl_wx_001_control_absent",
+      "weight_access_granted_without_vetting_record",
+      "weight_access_retained_after_role_change",
+      "weight_store_egress_monitoring_disabled",
+      "weights_transferred_without_export_classification_record"
+    ]
+  },
+  "FL-WX-002": {
+    "comply": [
+      "controlled_technology_boundary_declared_for_cluster",
+      "denied_party_screening_run_at_account_enablement",
+      "export_classification_recorded_before_transfer",
+      "fl_wx_002_control_evidenced",
+      "foreign_national_access_reviewed_under_deemed_export_rule",
+      "insider_anomaly_detection_active_on_training_cluster",
+      "sanctioned_destination_requests_blocked_at_gateway",
+      "weight_access_bound_to_current_vetting_record",
+      "weight_access_revoked_on_role_change"
+    ],
+    "violate": [
+      "denied_party_screening_bypassed_on_account_enablement",
+      "fl_wx_002_control_absent",
+      "foreign_national_access_to_controlled_weights_unreviewed",
+      "weight_access_granted_without_vetting_record",
+      "weight_access_retained_after_role_change",
+      "weights_transferred_without_export_classification_record"
+    ]
+  },
+  "FL-WX-003": {
+    "comply": [
+      "controlled_technology_boundary_declared_for_cluster",
+      "denied_party_screening_run_at_account_enablement",
+      "export_classification_recorded_before_transfer",
+      "fl_wx_003_control_evidenced",
+      "foreign_national_access_reviewed_under_deemed_export_rule",
+      "sanctioned_destination_requests_blocked_at_gateway",
+      "screening_hit_held_for_named_reviewer",
+      "two_person_rule_covers_egress_allowlist_changes",
+      "weight_store_access_logged_to_tamper_evident_trail"
+    ],
+    "violate": [
+      "denied_party_screening_bypassed_on_account_enablement",
+      "fl_wx_003_control_absent",
+      "foreign_national_access_to_controlled_weights_unreviewed",
+      "sanctioned_destination_blocklist_replaced_by_allow_by_default",
+      "weight_store_egress_allowlist_widened_to_any_destination",
+      "weights_transferred_without_export_classification_record"
+    ]
+  },
+  "FL-WX-004": {
+    "comply": [
+      "classification_determination_signed_by_trade_counsel",
+      "denied_party_screening_run_at_account_enablement",
+      "egress_monitoring_coverage_tested_in_drill",
+      "fl_wx_004_control_evidenced",
+      "sanctioned_destination_requests_blocked_at_gateway",
+      "screening_hit_held_for_named_reviewer",
+      "screening_list_refreshed_within_declared_interval",
+      "two_person_rule_covers_egress_allowlist_changes",
+      "weight_store_access_logged_to_tamper_evident_trail"
+    ],
+    "violate": [
+      "denied_party_screening_bypassed_on_account_enablement",
+      "fl_wx_004_control_absent",
+      "insider_anomaly_detection_removed_from_training_cluster",
+      "sanctioned_destination_blocklist_replaced_by_allow_by_default",
+      "screening_hit_auto_cleared_without_reviewer",
+      "weight_store_egress_allowlist_widened_to_any_destination"
+    ]
+  },
+  "FL-TR-001": {
+    "comply": [
+      "downstream_provider_information_delivered",
+      "fl_tr_001_control_evidenced",
+      "gpai_technical_documentation_current_at_release",
+      "marking_detectable_by_public_detection_tool",
+      "marking_survives_downstream_transcoding",
+      "synthetic_content_marking_present_on_every_modality",
+      "training_content_summary_published_on_template",
+      "transparency_report_published_before_deployment",
+      "whistleblower_channel_anonymous_and_reachable"
+    ],
+    "violate": [
+      "fl_tr_001_control_absent",
+      "gpai_technical_documentation_stale_at_release",
+      "provenance_metadata_stripped_by_downstream_transcoder",
+      "synthetic_content_marking_removed_from_output_path",
+      "training_content_summary_omitted_from_release",
+      "transparency_report_published_after_deployment"
+    ]
+  },
+  "FL-TR-002": {
+    "comply": [
+      "downstream_provider_information_delivered",
+      "fl_tr_002_control_evidenced",
+      "frontier_framework_published_and_reviewed_annually",
+      "gpai_technical_documentation_current_at_release",
+      "incident_detection_signal_reaches_reporting_queue",
+      "incident_reporting_clock_hardcoded_to_statute",
+      "training_content_summary_published_on_template",
+      "transparency_report_published_before_deployment",
+      "whistleblower_channel_anonymous_and_reachable"
+    ],
+    "violate": [
+      "fl_tr_002_control_absent",
+      "gpai_technical_documentation_stale_at_release",
+      "incident_reporting_deadline_made_configurable",
+      "training_content_summary_omitted_from_release",
+      "transparency_report_published_after_deployment",
+      "whistleblower_channel_removed_or_deanonymised"
+    ]
+  },
+  "FL-TR-003": {
+    "comply": [
+      "fl_tr_003_control_evidenced",
+      "frontier_framework_published_and_reviewed_annually",
+      "incident_detection_signal_reaches_reporting_queue",
+      "incident_reporting_clock_hardcoded_to_statute",
+      "incident_severity_assigned_by_named_reviewer",
+      "marking_removal_requires_legislative_change",
+      "model_card_diffed_against_previous_release",
+      "transparency_report_published_before_deployment",
+      "whistleblower_channel_anonymous_and_reachable"
+    ],
+    "violate": [
+      "fl_tr_003_control_absent",
+      "incident_detection_signal_routed_away_from_reporting_queue",
+      "incident_reporting_deadline_made_configurable",
+      "marking_made_opt_out_per_tenant",
+      "transparency_report_published_after_deployment",
+      "whistleblower_channel_removed_or_deanonymised"
+    ]
+  },
+  "FL-TR-004": {
+    "comply": [
+      "documentation_ownership_named_on_release_record",
+      "fl_tr_004_control_evidenced",
+      "incident_detection_signal_reaches_reporting_queue",
+      "incident_reporting_clock_hardcoded_to_statute",
+      "incident_severity_assigned_by_named_reviewer",
+      "marking_removal_requires_legislative_change",
+      "model_card_diffed_against_previous_release",
+      "redaction_indicators_present_in_public_report",
+      "reporting_path_exercised_in_drill_within_quarter"
+    ],
+    "violate": [
+      "downstream_provider_information_withheld",
+      "fl_tr_004_control_absent",
+      "incident_detection_signal_routed_away_from_reporting_queue",
+      "incident_reporting_deadline_made_configurable",
+      "incident_severity_downgraded_to_avoid_clock",
+      "marking_made_opt_out_per_tenant"
+    ]
+  },
+  "FL-UH-001": {
+    "comply": [
+      "crisis_resource_handoff_present_in_response_path",
+      "election_integrity_classifier_in_release_gate",
+      "fl_uh_001_control_evidenced",
+      "medical_legal_financial_handoff_present_in_prompt",
+      "political_content_labelled_per_transparency_rule",
+      "political_persuasion_policy_check_active_for_all_tenants",
+      "regulated_profession_disclosure_present_on_request",
+      "self_harm_classifier_active_at_approved_threshold",
+      "self_harm_classifier_covers_streaming_responses"
+    ],
+    "violate": [
+      "crisis_resource_handoff_removed_from_response_path",
+      "election_integrity_classifier_excluded_from_gate",
+      "fl_uh_001_control_absent",
+      "medical_advice_handoff_removed_from_system_prompt",
+      "political_persuasion_policy_check_disabled_for_campaign_tenant",
+      "self_harm_classifier_threshold_raised_to_cut_false_positives"
+    ]
+  },
+  "FL-UH-002": {
+    "comply": [
+      "companion_persona_blocks_sexual_content_for_minors",
+      "election_integrity_classifier_in_release_gate",
+      "fl_uh_002_control_evidenced",
+      "high_stakes_advice_routed_to_qualified_referral",
+      "medical_legal_financial_handoff_present_in_prompt",
+      "minor_break_reminder_active_in_companion_mode",
+      "political_content_labelled_per_transparency_rule",
+      "political_persuasion_policy_check_active_for_all_tenants",
+      "regulated_profession_disclosure_present_on_request"
+    ],
+    "violate": [
+      "election_integrity_classifier_excluded_from_gate",
+      "fl_uh_002_control_absent",
+      "medical_advice_handoff_removed_from_system_prompt",
+      "minor_break_reminder_disabled_in_companion_mode",
+      "political_persuasion_policy_check_disabled_for_campaign_tenant",
+      "regulated_profession_disclosure_suppressed_for_brand_voice"
+    ]
+  },
+  "FL-UH-003": {
+    "comply": [
+      "abuse_monitoring_pipeline_at_declared_sample_rate",
+      "ai_disclosure_present_in_companion_persona",
+      "companion_persona_blocks_sexual_content_for_minors",
+      "fl_uh_003_control_evidenced",
+      "high_stakes_advice_routed_to_qualified_referral",
+      "medical_legal_financial_handoff_present_in_prompt",
+      "minor_break_reminder_active_in_companion_mode",
+      "nonconsensual_intimate_imagery_removed_within_clock",
+      "regulated_profession_disclosure_present_on_request"
+    ],
+    "violate": [
+      "abuse_monitoring_pipeline_sampled_below_declared_rate",
+      "companion_persona_permitted_sexual_content_with_minor_flag",
+      "fl_uh_003_control_absent",
+      "medical_advice_handoff_removed_from_system_prompt",
+      "minor_break_reminder_disabled_in_companion_mode",
+      "regulated_profession_disclosure_suppressed_for_brand_voice"
+    ]
+  },
+  "FL-UH-004": {
+    "comply": [
+      "abuse_monitoring_pipeline_at_declared_sample_rate",
+      "ai_disclosure_present_in_companion_persona",
+      "companion_persona_blocks_sexual_content_for_minors",
+      "crisis_handoff_localised_for_served_jurisdictions",
+      "fl_uh_004_control_evidenced",
+      "minor_break_reminder_active_in_companion_mode",
+      "nonconsensual_intimate_imagery_removed_within_clock",
+      "safety_classifier_threshold_change_reviewed_by_policy_counsel",
+      "usage_policy_enforcement_actions_active_on_all_tiers"
+    ],
+    "violate": [
+      "abuse_monitoring_pipeline_sampled_below_declared_rate",
+      "companion_persona_permitted_sexual_content_with_minor_flag",
+      "fl_uh_004_control_absent",
+      "minor_break_reminder_disabled_in_companion_mode",
+      "nonconsensual_intimate_imagery_removal_clock_exceeded",
+      "self_harm_classifier_bypassed_for_streaming_responses"
+    ]
+  },
+  "FL-UH-005": {
+    "comply": [
+      "abuse_monitoring_pipeline_at_declared_sample_rate",
+      "abuse_reports_routed_to_staffed_trust_and_safety_queue",
+      "crisis_handoff_localised_for_served_jurisdictions",
+      "dependence_signals_monitored_for_minor_accounts",
+      "fl_uh_005_control_evidenced",
+      "nonconsensual_intimate_imagery_removed_within_clock",
+      "persuasion_eval_run_on_release_candidate",
+      "safety_classifier_threshold_change_reviewed_by_policy_counsel",
+      "usage_policy_enforcement_actions_active_on_all_tiers"
+    ],
+    "violate": [
+      "abuse_monitoring_pipeline_sampled_below_declared_rate",
+      "ai_disclosure_removed_from_companion_persona",
+      "fl_uh_005_control_absent",
+      "nonconsensual_intimate_imagery_removal_clock_exceeded",
+      "self_harm_classifier_bypassed_for_streaming_responses",
+      "usage_policy_enforcement_actions_disabled_for_enterprise_tier"
+    ]
+  },
+  "FL-PV-001": {
+    "comply": [
+      "debug_capture_disabled_for_zero_retention_tenants",
+      "erasure_completed_within_statutory_window",
+      "erasure_request_propagated_to_training_manifest",
+      "fine_tune_adapter_bound_to_owning_tenant",
+      "fl_pv_001_control_evidenced",
+      "kv_cache_partitioned_per_tenant",
+      "retention_policy_enforced_in_code_not_config",
+      "unlearning_exclusion_list_enforced_at_run_start",
+      "zero_retention_tenant_prompts_never_persisted"
+    ],
+    "violate": [
+      "erasure_request_not_propagated_to_training_manifest",
+      "fl_pv_001_control_absent",
+      "kv_cache_shared_across_tenants_for_hit_rate",
+      "retention_override_flag_exposed_in_service_config",
+      "unlearning_exclusion_list_ignored_by_next_training_run",
+      "zero_retention_tenant_prompts_written_to_debug_store"
+    ]
+  },
+  "FL-PV-002": {
+    "comply": [
+      "annotator_identity_stripped_from_preference_dataset",
+      "data_worker_exposure_limits_enforced_in_queue",
+      "debug_capture_disabled_for_zero_retention_tenants",
+      "fine_tune_adapter_bound_to_owning_tenant",
+      "fl_pv_002_control_evidenced",
+      "kv_cache_partitioned_per_tenant",
+      "retention_policy_enforced_in_code_not_config",
+      "retrieval_index_scoped_to_tenant_boundary",
+      "zero_retention_tenant_prompts_never_persisted"
+    ],
+    "violate": [
+      "annotator_identity_retained_in_preference_dataset",
+      "fine_tune_adapter_loadable_by_another_tenant",
+      "fl_pv_002_control_absent",
+      "kv_cache_shared_across_tenants_for_hit_rate",
+      "retention_override_flag_exposed_in_service_config",
+      "zero_retention_tenant_prompts_written_to_debug_store"
+    ]
+  },
+  "FL-PV-003": {
+    "comply": [
+      "annotator_identity_stripped_from_preference_dataset",
+      "annotator_personal_data_processed_under_recorded_basis",
+      "data_worker_exposure_limits_enforced_in_queue",
+      "fine_tune_adapter_bound_to_owning_tenant",
+      "fl_pv_003_control_evidenced",
+      "government_request_log_append_only_and_complete",
+      "kv_cache_partitioned_per_tenant",
+      "law_enforcement_request_routed_through_legal_review",
+      "retrieval_index_scoped_to_tenant_boundary"
+    ],
+    "violate": [
+      "annotator_identity_retained_in_preference_dataset",
+      "data_worker_exposure_limits_removed_from_queue_config",
+      "fine_tune_adapter_loadable_by_another_tenant",
+      "fl_pv_003_control_absent",
+      "kv_cache_shared_across_tenants_for_hit_rate",
+      "law_enforcement_request_fulfilled_without_legal_review"
+    ]
+  },
+  "FL-PV-004": {
+    "comply": [
+      "annotator_identity_stripped_from_preference_dataset",
+      "annotator_personal_data_processed_under_recorded_basis",
+      "cross_border_disclosure_conflict_resolved_at_design_time",
+      "customer_notified_of_request_where_lawful",
+      "data_worker_exposure_limits_enforced_in_queue",
+      "fl_pv_004_control_evidenced",
+      "government_request_log_append_only_and_complete",
+      "law_enforcement_request_routed_through_legal_review",
+      "tenant_isolation_covered_by_regression_suite"
+    ],
+    "violate": [
+      "annotator_identity_retained_in_preference_dataset",
+      "data_worker_exposure_limits_removed_from_queue_config",
+      "fl_pv_004_control_absent",
+      "government_request_log_disabled_for_bulk_export",
+      "law_enforcement_request_fulfilled_without_legal_review",
+      "retrieval_index_queryable_across_tenant_boundary"
+    ]
+  },
+  "FL-PV-005": {
+    "comply": [
+      "cross_border_disclosure_conflict_resolved_at_design_time",
+      "customer_notified_of_request_where_lawful",
+      "erasure_propagation_verified_by_sampling",
+      "fl_pv_005_control_evidenced",
+      "government_request_log_append_only_and_complete",
+      "law_enforcement_request_routed_through_legal_review",
+      "tenant_isolation_covered_by_regression_suite",
+      "worker_wellbeing_controls_documented_on_pipeline_record",
+      "zero_retention_commitment_tested_in_release_gate"
+    ],
+    "violate": [
+      "customer_notice_of_request_suppressed_where_lawful",
+      "erasure_window_extended_beyond_statutory_month",
+      "fl_pv_005_control_absent",
+      "government_request_log_disabled_for_bulk_export",
+      "law_enforcement_request_fulfilled_without_legal_review",
+      "retrieval_index_queryable_across_tenant_boundary"
+    ]
+  }
+}

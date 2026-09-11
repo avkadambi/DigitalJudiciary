@@ -1,0 +1,4738 @@
+{
+  "entries": [
+    {
+      "case": "FL-Q-00018",
+      "route": "declined",
+      "ts": 1018,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00039",
+      "route": "declined",
+      "ts": 1039,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00054",
+      "route": "declined",
+      "ts": 1054,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00065",
+      "route": "declined",
+      "ts": 1065,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00093",
+      "route": "declined",
+      "ts": 1093,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00107",
+      "route": "declined",
+      "ts": 1107,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00119",
+      "route": "declined",
+      "ts": 1119,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00132",
+      "route": "declined",
+      "ts": 1132,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00135",
+      "route": "null",
+      "ts": 1135,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00160",
+      "route": "declined",
+      "ts": 1160,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00161",
+      "route": "declined",
+      "ts": 1161,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00186",
+      "route": "declined",
+      "ts": 1186,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00210",
+      "route": "declined",
+      "ts": 1210,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00246",
+      "route": "declined",
+      "ts": 1246,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00270",
+      "route": "declined",
+      "ts": 1270,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00279",
+      "route": "declined",
+      "ts": 1279,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00297",
+      "route": "declined",
+      "ts": 1297,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00315",
+      "route": "declined",
+      "ts": 1315,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00322",
+      "route": "null",
+      "ts": 1322,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00332",
+      "route": "declined",
+      "ts": 1332,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00353",
+      "route": "declined",
+      "ts": 1353,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00357",
+      "route": "declined",
+      "ts": 1357,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00365",
+      "route": "declined",
+      "ts": 1365,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00407",
+      "route": "declined",
+      "ts": 1407,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00408",
+      "route": "declined",
+      "ts": 1408,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00440",
+      "route": "declined",
+      "ts": 1440,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00445",
+      "route": "declined",
+      "ts": 1445,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00448",
+      "route": "declined",
+      "ts": 1448,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00464",
+      "route": "declined",
+      "ts": 1464,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00488",
+      "route": "declined",
+      "ts": 1488,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00490",
+      "route": "null",
+      "ts": 1490,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00498",
+      "route": "declined",
+      "ts": 1498,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00503",
+      "route": "declined",
+      "ts": 1503,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00548",
+      "route": "declined",
+      "ts": 1548,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00558",
+      "route": "null",
+      "ts": 1558,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00563",
+      "route": "null",
+      "ts": 1563,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00576",
+      "route": "declined",
+      "ts": 1576,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00592",
+      "route": "declined",
+      "ts": 1592,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00593",
+      "route": "declined",
+      "ts": 1593,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00613",
+      "route": "declined",
+      "ts": 1613,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00627",
+      "route": "declined",
+      "ts": 1627,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00653",
+      "route": "declined",
+      "ts": 1653,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00660",
+      "route": "declined",
+      "ts": 1660,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00680",
+      "route": "declined",
+      "ts": 1680,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00689",
+      "route": "declined",
+      "ts": 1689,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00690",
+      "route": "declined",
+      "ts": 1690,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00696",
+      "route": "null",
+      "ts": 1696,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00705",
+      "route": "declined",
+      "ts": 1705,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00739",
+      "route": "null",
+      "ts": 1739,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00746",
+      "route": "declined",
+      "ts": 1746,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00759",
+      "route": "declined",
+      "ts": 1759,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00769",
+      "route": "declined",
+      "ts": 1769,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00774",
+      "route": "declined",
+      "ts": 1774,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00776",
+      "route": "declined",
+      "ts": 1776,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00799",
+      "route": "declined",
+      "ts": 1799,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00806",
+      "route": "declined",
+      "ts": 1806,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00807",
+      "route": "declined",
+      "ts": 1807,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00817",
+      "route": "declined",
+      "ts": 1817,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00824",
+      "route": "declined",
+      "ts": 1824,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00864",
+      "route": "null",
+      "ts": 1864,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00874",
+      "route": "declined",
+      "ts": 1874,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00881",
+      "route": "null",
+      "ts": 1881,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00888",
+      "route": "null",
+      "ts": 1888,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00895",
+      "route": "declined",
+      "ts": 1895,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00898",
+      "route": "declined",
+      "ts": 1898,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00922",
+      "route": "declined",
+      "ts": 1922,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-00939",
+      "route": "declined",
+      "ts": 1939,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00962",
+      "route": "null",
+      "ts": 1962,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00969",
+      "route": "declined",
+      "ts": 1969,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-00984",
+      "route": "declined",
+      "ts": 1984,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01106",
+      "route": "declined",
+      "ts": 2106,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01111",
+      "route": "declined",
+      "ts": 2111,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01137",
+      "route": "declined",
+      "ts": 2137,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01138",
+      "route": "declined",
+      "ts": 2138,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01151",
+      "route": "declined",
+      "ts": 2151,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01218",
+      "route": "declined",
+      "ts": 2218,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01219",
+      "route": "declined",
+      "ts": 2219,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01247",
+      "route": "null",
+      "ts": 2247,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01285",
+      "route": "declined",
+      "ts": 2285,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01299",
+      "route": "null",
+      "ts": 2299,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01311",
+      "route": "declined",
+      "ts": 2311,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01331",
+      "route": "declined",
+      "ts": 2331,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01334",
+      "route": "declined",
+      "ts": 2334,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01345",
+      "route": "null",
+      "ts": 2345,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01401",
+      "route": "declined",
+      "ts": 2401,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01432",
+      "route": "declined",
+      "ts": 2432,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01440",
+      "route": "declined",
+      "ts": 2440,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01462",
+      "route": "declined",
+      "ts": 2462,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01481",
+      "route": "declined",
+      "ts": 2481,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01504",
+      "route": "declined",
+      "ts": 2504,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01517",
+      "route": "declined",
+      "ts": 2517,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01521",
+      "route": "declined",
+      "ts": 2521,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01554",
+      "route": "declined",
+      "ts": 2554,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01662",
+      "route": "declined",
+      "ts": 2662,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01693",
+      "route": "declined",
+      "ts": 2693,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01711",
+      "route": "null",
+      "ts": 2711,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01725",
+      "route": "null",
+      "ts": 2725,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01731",
+      "route": "null",
+      "ts": 2731,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01748",
+      "route": "null",
+      "ts": 2748,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01812",
+      "route": "declined",
+      "ts": 2812,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01815",
+      "route": "null",
+      "ts": 2815,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01819",
+      "route": "null",
+      "ts": 2819,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01835",
+      "route": "declined",
+      "ts": 2835,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01851",
+      "route": "declined",
+      "ts": 2851,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01878",
+      "route": "declined",
+      "ts": 2878,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01906",
+      "route": "declined",
+      "ts": 2906,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01908",
+      "route": "declined",
+      "ts": 2908,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01910",
+      "route": "declined",
+      "ts": 2910,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01927",
+      "route": "declined",
+      "ts": 2927,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-01963",
+      "route": "declined",
+      "ts": 2963,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01966",
+      "route": "declined",
+      "ts": 2966,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01983",
+      "route": "declined",
+      "ts": 2983,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01992",
+      "route": "declined",
+      "ts": 2992,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-01997",
+      "route": "declined",
+      "ts": 2997,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02029",
+      "route": "declined",
+      "ts": 3029,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02058",
+      "route": "declined",
+      "ts": 3058,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02088",
+      "route": "declined",
+      "ts": 3088,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02098",
+      "route": "declined",
+      "ts": 3098,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02126",
+      "route": "declined",
+      "ts": 3126,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02166",
+      "route": "declined",
+      "ts": 3166,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02173",
+      "route": "declined",
+      "ts": 3173,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02193",
+      "route": "declined",
+      "ts": 3193,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02200",
+      "route": "declined",
+      "ts": 3200,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02222",
+      "route": "declined",
+      "ts": 3222,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02244",
+      "route": "declined",
+      "ts": 3244,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02266",
+      "route": "declined",
+      "ts": 3266,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02280",
+      "route": "declined",
+      "ts": 3280,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02284",
+      "route": "declined",
+      "ts": 3284,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02331",
+      "route": "declined",
+      "ts": 3331,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02343",
+      "route": "null",
+      "ts": 3343,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02349",
+      "route": "declined",
+      "ts": 3349,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02355",
+      "route": "declined",
+      "ts": 3355,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02359",
+      "route": "declined",
+      "ts": 3359,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02360",
+      "route": "declined",
+      "ts": 3360,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02425",
+      "route": "declined",
+      "ts": 3425,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02432",
+      "route": "declined",
+      "ts": 3432,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02446",
+      "route": "declined",
+      "ts": 3446,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02458",
+      "route": "declined",
+      "ts": 3458,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02476",
+      "route": "declined",
+      "ts": 3476,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02510",
+      "route": "null",
+      "ts": 3510,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02524",
+      "route": "declined",
+      "ts": 3524,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02538",
+      "route": "null",
+      "ts": 3538,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02553",
+      "route": "declined",
+      "ts": 3553,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02564",
+      "route": "declined",
+      "ts": 3564,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02588",
+      "route": "null",
+      "ts": 3588,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02628",
+      "route": "declined",
+      "ts": 3628,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02678",
+      "route": "declined",
+      "ts": 3678,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02724",
+      "route": "declined",
+      "ts": 3724,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02745",
+      "route": "null",
+      "ts": 3745,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02757",
+      "route": "declined",
+      "ts": 3757,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02789",
+      "route": "declined",
+      "ts": 3789,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02790",
+      "route": "declined",
+      "ts": 3790,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02910",
+      "route": "declined",
+      "ts": 3910,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02930",
+      "route": "declined",
+      "ts": 3930,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02951",
+      "route": "null",
+      "ts": 3951,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02959",
+      "route": "declined",
+      "ts": 3959,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02962",
+      "route": "declined",
+      "ts": 3962,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02964",
+      "route": "declined",
+      "ts": 3964,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02965",
+      "route": "null",
+      "ts": 3965,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02971",
+      "route": "declined",
+      "ts": 3971,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02977",
+      "route": "null",
+      "ts": 3977,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02983",
+      "route": "null",
+      "ts": 3983,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-02989",
+      "route": "declined",
+      "ts": 3989,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02995",
+      "route": "declined",
+      "ts": 3995,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-02999",
+      "route": "declined",
+      "ts": 3999,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03011",
+      "route": "declined",
+      "ts": 4011,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03019",
+      "route": "declined",
+      "ts": 4019,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03036",
+      "route": "declined",
+      "ts": 4036,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03037",
+      "route": "null",
+      "ts": 4037,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03053",
+      "route": "null",
+      "ts": 4053,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03063",
+      "route": "declined",
+      "ts": 4063,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03066",
+      "route": "declined",
+      "ts": 4066,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03077",
+      "route": "declined",
+      "ts": 4077,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03083",
+      "route": "declined",
+      "ts": 4083,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03104",
+      "route": "declined",
+      "ts": 4104,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03111",
+      "route": "declined",
+      "ts": 4111,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03116",
+      "route": "declined",
+      "ts": 4116,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03120",
+      "route": "declined",
+      "ts": 4120,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03123",
+      "route": "null",
+      "ts": 4123,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03132",
+      "route": "declined",
+      "ts": 4132,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03136",
+      "route": "declined",
+      "ts": 4136,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03137",
+      "route": "declined",
+      "ts": 4137,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03164",
+      "route": "declined",
+      "ts": 4164,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03174",
+      "route": "null",
+      "ts": 4174,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03200",
+      "route": "declined",
+      "ts": 4200,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03224",
+      "route": "declined",
+      "ts": 4224,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03261",
+      "route": "null",
+      "ts": 4261,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03271",
+      "route": "null",
+      "ts": 4271,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03295",
+      "route": "declined",
+      "ts": 4295,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03296",
+      "route": "null",
+      "ts": 4296,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03302",
+      "route": "declined",
+      "ts": 4302,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03334",
+      "route": "declined",
+      "ts": 4334,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03335",
+      "route": "null",
+      "ts": 4335,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03352",
+      "route": "declined",
+      "ts": 4352,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03371",
+      "route": "null",
+      "ts": 4371,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03377",
+      "route": "declined",
+      "ts": 4377,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03410",
+      "route": "declined",
+      "ts": 4410,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03411",
+      "route": "declined",
+      "ts": 4411,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03436",
+      "route": "null",
+      "ts": 4436,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03470",
+      "route": "declined",
+      "ts": 4470,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03517",
+      "route": "declined",
+      "ts": 4517,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03555",
+      "route": "declined",
+      "ts": 4555,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03572",
+      "route": "declined",
+      "ts": 4572,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03573",
+      "route": "null",
+      "ts": 4573,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03577",
+      "route": "null",
+      "ts": 4577,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03583",
+      "route": "declined",
+      "ts": 4583,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03596",
+      "route": "null",
+      "ts": 4596,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03623",
+      "route": "declined",
+      "ts": 4623,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03625",
+      "route": "declined",
+      "ts": 4625,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03678",
+      "route": "declined",
+      "ts": 4678,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03679",
+      "route": "declined",
+      "ts": 4679,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03682",
+      "route": "declined",
+      "ts": 4682,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03686",
+      "route": "declined",
+      "ts": 4686,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03688",
+      "route": "declined",
+      "ts": 4688,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03693",
+      "route": "declined",
+      "ts": 4693,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03704",
+      "route": "declined",
+      "ts": 4704,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03723",
+      "route": "declined",
+      "ts": 4723,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03737",
+      "route": "declined",
+      "ts": 4737,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03757",
+      "route": "declined",
+      "ts": 4757,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03781",
+      "route": "null",
+      "ts": 4781,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03791",
+      "route": "declined",
+      "ts": 4791,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03794",
+      "route": "declined",
+      "ts": 4794,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03803",
+      "route": "declined",
+      "ts": 4803,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03838",
+      "route": "declined",
+      "ts": 4838,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03880",
+      "route": "declined",
+      "ts": 4880,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03895",
+      "route": "declined",
+      "ts": 4895,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-03896",
+      "route": "declined",
+      "ts": 4896,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03900",
+      "route": "declined",
+      "ts": 4900,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03901",
+      "route": "declined",
+      "ts": 4901,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03921",
+      "route": "null",
+      "ts": 4921,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03927",
+      "route": "declined",
+      "ts": 4927,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03932",
+      "route": "declined",
+      "ts": 4932,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03942",
+      "route": "declined",
+      "ts": 4942,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03953",
+      "route": "null",
+      "ts": 4953,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-03992",
+      "route": "null",
+      "ts": 4992,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04001",
+      "route": "declined",
+      "ts": 5001,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04018",
+      "route": "declined",
+      "ts": 5018,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04042",
+      "route": "declined",
+      "ts": 5042,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04043",
+      "route": "declined",
+      "ts": 5043,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04055",
+      "route": "declined",
+      "ts": 5055,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04061",
+      "route": "declined",
+      "ts": 5061,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04068",
+      "route": "declined",
+      "ts": 5068,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04070",
+      "route": "null",
+      "ts": 5070,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04085",
+      "route": "declined",
+      "ts": 5085,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04094",
+      "route": "declined",
+      "ts": 5094,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04110",
+      "route": "declined",
+      "ts": 5110,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04124",
+      "route": "declined",
+      "ts": 5124,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04125",
+      "route": "declined",
+      "ts": 5125,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04136",
+      "route": "declined",
+      "ts": 5136,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04137",
+      "route": "declined",
+      "ts": 5137,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04142",
+      "route": "declined",
+      "ts": 5142,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04150",
+      "route": "declined",
+      "ts": 5150,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04155",
+      "route": "declined",
+      "ts": 5155,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04167",
+      "route": "declined",
+      "ts": 5167,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04178",
+      "route": "null",
+      "ts": 5178,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04186",
+      "route": "declined",
+      "ts": 5186,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04204",
+      "route": "null",
+      "ts": 5204,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04211",
+      "route": "declined",
+      "ts": 5211,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04237",
+      "route": "declined",
+      "ts": 5237,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04246",
+      "route": "null",
+      "ts": 5246,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04255",
+      "route": "null",
+      "ts": 5255,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04269",
+      "route": "declined",
+      "ts": 5269,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04276",
+      "route": "null",
+      "ts": 5276,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04278",
+      "route": "declined",
+      "ts": 5278,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04282",
+      "route": "declined",
+      "ts": 5282,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04290",
+      "route": "declined",
+      "ts": 5290,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04294",
+      "route": "declined",
+      "ts": 5294,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04321",
+      "route": "declined",
+      "ts": 5321,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04324",
+      "route": "declined",
+      "ts": 5324,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04330",
+      "route": "declined",
+      "ts": 5330,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04334",
+      "route": "declined",
+      "ts": 5334,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04374",
+      "route": "declined",
+      "ts": 5374,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04394",
+      "route": "declined",
+      "ts": 5394,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04424",
+      "route": "declined",
+      "ts": 5424,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04431",
+      "route": "declined",
+      "ts": 5431,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04439",
+      "route": "declined",
+      "ts": 5439,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04462",
+      "route": "declined",
+      "ts": 5462,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04463",
+      "route": "null",
+      "ts": 5463,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04499",
+      "route": "declined",
+      "ts": 5499,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04503",
+      "route": "declined",
+      "ts": 5503,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04504",
+      "route": "declined",
+      "ts": 5504,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04520",
+      "route": "declined",
+      "ts": 5520,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04525",
+      "route": "null",
+      "ts": 5525,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04595",
+      "route": "null",
+      "ts": 5595,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04641",
+      "route": "declined",
+      "ts": 5641,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04642",
+      "route": "declined",
+      "ts": 5642,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04659",
+      "route": "declined",
+      "ts": 5659,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04664",
+      "route": "declined",
+      "ts": 5664,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04669",
+      "route": "declined",
+      "ts": 5669,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04672",
+      "route": "declined",
+      "ts": 5672,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04680",
+      "route": "declined",
+      "ts": 5680,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04700",
+      "route": "declined",
+      "ts": 5700,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04708",
+      "route": "declined",
+      "ts": 5708,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04709",
+      "route": "declined",
+      "ts": 5709,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04714",
+      "route": "declined",
+      "ts": 5714,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04740",
+      "route": "null",
+      "ts": 5740,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04751",
+      "route": "declined",
+      "ts": 5751,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04754",
+      "route": "declined",
+      "ts": 5754,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04763",
+      "route": "declined",
+      "ts": 5763,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04771",
+      "route": "declined",
+      "ts": 5771,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04780",
+      "route": "declined",
+      "ts": 5780,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04794",
+      "route": "null",
+      "ts": 5794,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04818",
+      "route": "declined",
+      "ts": 5818,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04868",
+      "route": "declined",
+      "ts": 5868,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04869",
+      "route": "declined",
+      "ts": 5869,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04900",
+      "route": "declined",
+      "ts": 5900,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04952",
+      "route": "declined",
+      "ts": 5952,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04953",
+      "route": "declined",
+      "ts": 5953,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04964",
+      "route": "declined",
+      "ts": 5964,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-04966",
+      "route": "declined",
+      "ts": 5966,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04975",
+      "route": "null",
+      "ts": 5975,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-04999",
+      "route": "null",
+      "ts": 5999,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05004",
+      "route": "declined",
+      "ts": 6004,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05016",
+      "route": "declined",
+      "ts": 6016,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05022",
+      "route": "declined",
+      "ts": 6022,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05029",
+      "route": "null",
+      "ts": 6029,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05041",
+      "route": "declined",
+      "ts": 6041,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05046",
+      "route": "declined",
+      "ts": 6046,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05049",
+      "route": "declined",
+      "ts": 6049,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05051",
+      "route": "declined",
+      "ts": 6051,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05054",
+      "route": "declined",
+      "ts": 6054,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05064",
+      "route": "null",
+      "ts": 6064,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05065",
+      "route": "declined",
+      "ts": 6065,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05078",
+      "route": "declined",
+      "ts": 6078,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05100",
+      "route": "null",
+      "ts": 6100,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05105",
+      "route": "declined",
+      "ts": 6105,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05119",
+      "route": "null",
+      "ts": 6119,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05125",
+      "route": "declined",
+      "ts": 6125,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05139",
+      "route": "declined",
+      "ts": 6139,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05142",
+      "route": "declined",
+      "ts": 6142,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05153",
+      "route": "declined",
+      "ts": 6153,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05156",
+      "route": "declined",
+      "ts": 6156,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05158",
+      "route": "declined",
+      "ts": 6158,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05160",
+      "route": "declined",
+      "ts": 6160,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05217",
+      "route": "declined",
+      "ts": 6217,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05231",
+      "route": "null",
+      "ts": 6231,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05243",
+      "route": "declined",
+      "ts": 6243,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05275",
+      "route": "declined",
+      "ts": 6275,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05277",
+      "route": "declined",
+      "ts": 6277,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05278",
+      "route": "declined",
+      "ts": 6278,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05294",
+      "route": "declined",
+      "ts": 6294,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05302",
+      "route": "declined",
+      "ts": 6302,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05303",
+      "route": "declined",
+      "ts": 6303,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05304",
+      "route": "declined",
+      "ts": 6304,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05327",
+      "route": "null",
+      "ts": 6327,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05343",
+      "route": "declined",
+      "ts": 6343,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05359",
+      "route": "declined",
+      "ts": 6359,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05367",
+      "route": "declined",
+      "ts": 6367,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05368",
+      "route": "declined",
+      "ts": 6368,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05392",
+      "route": "declined",
+      "ts": 6392,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05406",
+      "route": "declined",
+      "ts": 6406,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05429",
+      "route": "declined",
+      "ts": 6429,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05431",
+      "route": "declined",
+      "ts": 6431,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05435",
+      "route": "declined",
+      "ts": 6435,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05449",
+      "route": "declined",
+      "ts": 6449,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05460",
+      "route": "declined",
+      "ts": 6460,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05485",
+      "route": "null",
+      "ts": 6485,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05497",
+      "route": "declined",
+      "ts": 6497,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05499",
+      "route": "declined",
+      "ts": 6499,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05500",
+      "route": "null",
+      "ts": 6500,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05514",
+      "route": "declined",
+      "ts": 6514,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05523",
+      "route": "null",
+      "ts": 6523,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05524",
+      "route": "declined",
+      "ts": 6524,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05534",
+      "route": "null",
+      "ts": 6534,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05535",
+      "route": "declined",
+      "ts": 6535,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05568",
+      "route": "declined",
+      "ts": 6568,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05583",
+      "route": "declined",
+      "ts": 6583,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05589",
+      "route": "null",
+      "ts": 6589,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05599",
+      "route": "declined",
+      "ts": 6599,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05618",
+      "route": "null",
+      "ts": 6618,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05621",
+      "route": "declined",
+      "ts": 6621,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05635",
+      "route": "null",
+      "ts": 6635,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05678",
+      "route": "null",
+      "ts": 6678,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05690",
+      "route": "declined",
+      "ts": 6690,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05701",
+      "route": "declined",
+      "ts": 6701,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05724",
+      "route": "null",
+      "ts": 6724,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05733",
+      "route": "null",
+      "ts": 6733,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05741",
+      "route": "declined",
+      "ts": 6741,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05742",
+      "route": "declined",
+      "ts": 6742,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05743",
+      "route": "declined",
+      "ts": 6743,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05796",
+      "route": "declined",
+      "ts": 6796,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05799",
+      "route": "declined",
+      "ts": 6799,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05801",
+      "route": "null",
+      "ts": 6801,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05807",
+      "route": "declined",
+      "ts": 6807,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05811",
+      "route": "declined",
+      "ts": 6811,
+      "rules": [
+        "FL-AS-005"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05826",
+      "route": "declined",
+      "ts": 6826,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05827",
+      "route": "null",
+      "ts": 6827,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05829",
+      "route": "declined",
+      "ts": 6829,
+      "rules": [
+        "FL-AS-002"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05846",
+      "route": "declined",
+      "ts": 6846,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05859",
+      "route": "declined",
+      "ts": 6859,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05867",
+      "route": "declined",
+      "ts": 6867,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05881",
+      "route": "declined",
+      "ts": 6881,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05891",
+      "route": "declined",
+      "ts": 6891,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05894",
+      "route": "declined",
+      "ts": 6894,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05901",
+      "route": "null",
+      "ts": 6901,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05904",
+      "route": "null",
+      "ts": 6904,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05908",
+      "route": "null",
+      "ts": 6908,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05914",
+      "route": "declined",
+      "ts": 6914,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05924",
+      "route": "declined",
+      "ts": 6924,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05939",
+      "route": "declined",
+      "ts": 6939,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05944",
+      "route": "declined",
+      "ts": 6944,
+      "rules": [
+        "FL-AS-004"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05948",
+      "route": "declined",
+      "ts": 6948,
+      "rules": [
+        "FL-IN-008"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05973",
+      "route": "declined",
+      "ts": 6973,
+      "rules": [
+        "FL-IN-007"
+      ],
+      "rating": 20,
+      "tau": 38,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05979",
+      "route": "null",
+      "ts": 6979,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-Q-05983",
+      "route": "declined",
+      "ts": 6983,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05990",
+      "route": "declined",
+      "ts": 6990,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-05999",
+      "route": "declined",
+      "ts": 6999,
+      "rules": [
+        "FL-AS-006"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    },
+    {
+      "case": "FL-T-06000",
+      "route": "declined",
+      "ts": 7000,
+      "rules": [
+        "FL-AS-003"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "frontierllm-rb-000001"
+    }
+  ]
+}

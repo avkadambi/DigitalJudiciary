@@ -1,0 +1,39 @@
+# Data licence — Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The data in this repository — the constitution (`constitution/`), the case corpus
+and precedent store (`corpus/`), the generated catalog and coverage documents
+(`docs/`), and the research surveys (`research/`) — are licensed under the
+Creative Commons Attribution 4.0 International Public License.
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, provide a link to the
+licence, and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+## How to attribute
+
+    FrontierLLM Constitution Corpus, pack 2.4.0 (corpus data 2.1.0), CC BY 4.0.
+    Kadambi, A. and Kuppuswamy, V., the Digital Judiciary programme.
+
+## What is NOT covered by this licence
+
+Provision *prose* in this corpus is original drafting. Where a provision cites an
+external instrument, the citation is a reference and the instrument's own terms
+govern that instrument:
+
+- US Code of Federal Regulations text (21 CFR, 9 CFR, 45 CFR) is a US Government
+  work and is in the public domain.
+- EU legal texts (EU AI Act, GDPR) are reusable under Commission Decision
+  2011/833/EU, with the source acknowledged.
+- CWE and CAPEC identifiers are used under MITRE's royalty-free terms, with
+  attribution: CWE™ is a trademark of The MITRE Corporation.
+- The frontier safety frameworks of Google DeepMind, Anthropic, OpenAI and Meta
+  are all rights reserved and are NOT reproduced. Their obligations are
+  paraphrased. The Seoul Frontier AI Safety Commitments (UK OGL v3.0) are the
+  openly licensed source used where one was needed.
+- RAND RR-A2849-1 is noncommercial-use-only and is cited by link only.
+- Red-team corpora are referenced by taxonomy only. No harmful content is
+  redistributed here, including from permissively licensed sources.
+- Datasets under CC BY-NC, CC BY-SA, CC BY-ND, or a gated agreement are cited
+  and never included. See docs/SOURCES.md for the full list.

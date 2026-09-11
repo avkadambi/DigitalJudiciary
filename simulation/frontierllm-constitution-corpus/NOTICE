@@ -1,0 +1,25 @@
+FrontierLLM Constitution Corpus
+Copyright 2026 Arun Kadambi and Venkat Kuppuswamy
+
+This product includes software developed for the Digital Judiciary programme.
+
+Code is licensed under the Apache License, Version 2.0 (see LICENSE).
+Data is licensed under CC BY 4.0 (see LICENSE-DATA).
+
+Third-party identifiers referenced in this corpus:
+  CWE™ and CAPEC™ are trademarks of The MITRE Corporation, used under MITRE's
+  royalty-free terms with attribution.
+  NIST publications (AI RMF 1.0, AI 600-1, AI 100-2) are US Government works,
+  public domain within the United States under 17 U.S.C. 105; foreign rights
+  reserved. Attribution requested.
+  The Seoul Frontier AI Safety Commitments are used under the UK Open
+  Government Licence v3.0.
+  EU legal texts are reused under Commission Decision 2011/833/EU.
+  The frontier safety frameworks published by Google DeepMind, Anthropic,
+  OpenAI and Meta are all rights reserved. Their obligations are paraphrased in
+  original words and cited by link; no text is reproduced. RAND RR-A2849-1 is
+  noncommercial-use-only and is likewise cited by link only.
+  No harmful red-team content is redistributed in any form, regardless of the
+  licence of its source corpus.
+No third-party data is redistributed. See docs/SOURCES.md for the full survey of
+sources consulted, their verified licences, and whether each was reusable.

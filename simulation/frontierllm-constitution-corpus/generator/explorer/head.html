@@ -1,0 +1,233 @@
+<title>FrontierLLM Case Register</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Public+Sans:ital,wght@0,400;0,500;0,600;1,400&family=DM+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#f2f1ed; --surface:#fffefb; --surface-2:#e8e6e0; --rule:#d3d0c8;
+  --ink:#191714; --ink-2:#4a4640; --ink-3:#78736a;
+  --accent:#0f6470; --accent-soft:#dcebec;
+  --deny:#a12f4a; --deny-soft:#f7e4e8;
+  --cond:#8a6a1f; --cond-soft:#f6eddb;
+  --permit:#0f6470; --permit-soft:#dcebec;
+  --absolute:#7d1c36;
+  --shadow:0 1px 1px rgba(25,23,20,.05), 0 12px 28px -20px rgba(25,23,20,.4);
+  --display:"Fraunces", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"DM Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#12110f; --surface:#191815; --surface-2:#22201c; --rule:#302d28;
+    --ink:#eae7e0; --ink-2:#b3aea4; --ink-3:#837d72;
+    --accent:#5fb6c2; --accent-soft:#10292d;
+    --deny:#e9909f; --deny-soft:#331b22;
+    --cond:#d5ac63; --cond-soft:#2c2515;
+    --permit:#5fb6c2; --permit-soft:#10292d;
+    --absolute:#f0a0b0;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 34px -22px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#12110f; --surface:#191815; --surface-2:#22201c; --rule:#302d28;
+  --ink:#eae7e0; --ink-2:#b3aea4; --ink-3:#837d72;
+  --accent:#5fb6c2; --accent-soft:#10292d;
+  --deny:#e9909f; --deny-soft:#331b22;
+  --cond:#d5ac63; --cond-soft:#2c2515;
+  --permit:#5fb6c2; --permit-soft:#10292d;
+  --absolute:#f0a0b0;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 34px -22px rgba(0,0,0,.9);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:15px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent)}
+button{font:inherit; color:inherit}
+::selection{background:var(--accent-soft)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+/* ---------- masthead ---------- */
+.masthead{background:var(--surface); border-bottom:1px solid var(--rule); padding:24px 26px 16px}
+.masthead-inner{max-width:1420px; margin:0 auto; display:flex; flex-wrap:wrap; gap:24px; align-items:flex-end; justify-content:space-between}
+.wordmark{display:flex; flex-direction:column; gap:4px}
+.wordmark h1{
+  font-family:var(--display); font-weight:600; font-size:clamp(26px,3.4vw,40px);
+  margin:0; letter-spacing:-.015em; text-wrap:balance; font-optical-sizing:auto;
+}
+.wordmark .sub{font-family:var(--sans); font-size:14.5px; color:var(--ink-2); max-width:64ch}
+.imprint{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; gap:13px; flex-wrap:wrap; align-items:center;
+}
+.imprint .ok{color:var(--accent); font-weight:500}
+
+/* ---------- figures strip ---------- */
+.figures{
+  max-width:1420px; margin:0 auto; padding:0 26px;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(128px,1fr)); gap:0;
+  border-bottom:1px solid var(--rule); background:var(--paper);
+}
+.fig{padding:13px 16px 15px; border-left:1px solid var(--rule)}
+.fig:first-child{border-left:0; padding-left:0}
+.fig dt{font-family:var(--mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-3)}
+.fig dd{margin:3px 0 0; font-family:var(--display); font-size:25px; font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.02em}
+.fig dd small{font-family:var(--mono); font-size:10px; font-weight:400; color:var(--ink-3); margin-left:5px; letter-spacing:0}
+
+/* ---------- layout ---------- */
+.shell{max-width:1420px; margin:0 auto; padding:20px 26px 64px; display:grid; grid-template-columns:262px minmax(0,1fr); gap:40px; align-items:start}
+.shell > section{max-width:960px}
+@media (max-width:1000px){ .shell{grid-template-columns:1fr; gap:20px} .rail{position:static !important} }
+
+/* ---------- filter rail ---------- */
+.rail{position:sticky; top:14px; display:flex; flex-direction:column; gap:18px; max-height:calc(100vh - 28px); overflow:auto; padding-right:6px}
+.rail::-webkit-scrollbar{width:8px} .rail::-webkit-scrollbar-thumb{background:var(--rule); border-radius:8px}
+.group{display:flex; flex-direction:column; gap:7px}
+.group > h2{
+  font-family:var(--mono); font-size:10px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--ink-3); margin:0; padding-bottom:5px; border-bottom:1px solid var(--rule);
+}
+.search{
+  width:100%; padding:9px 11px; border:1px solid var(--rule); border-radius:2px;
+  background:var(--surface); color:var(--ink); font-family:var(--mono); font-size:12px;
+}
+.search::placeholder{color:var(--ink-3)}
+.chips{display:flex; flex-wrap:wrap; gap:5px}
+.chip{
+  border:1px solid var(--rule); background:var(--surface); border-radius:2px;
+  padding:4px 8px; font-family:var(--mono); font-size:10.5px; cursor:pointer;
+  display:inline-flex; gap:6px; align-items:baseline; color:var(--ink-2);
+}
+.chip:hover{border-color:var(--accent); color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:#fffefb}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#12110f}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#12110f} }
+.chip .n{font-size:9.5px; opacity:.72; font-variant-numeric:tabular-nums}
+.catlist{display:flex; flex-direction:column; gap:1px}
+.cat{
+  display:grid; grid-template-columns:1fr auto; gap:8px; align-items:baseline;
+  padding:5px 7px; border:0; background:none; text-align:left; cursor:pointer; border-radius:2px;
+  font-family:var(--mono); font-size:11px; color:var(--ink-2); border-left:3px solid transparent;
+}
+.cat:hover{background:var(--surface-2); color:var(--ink)}
+.cat[aria-pressed="true"]{background:var(--accent-soft); color:var(--ink); border-left-color:var(--accent); font-weight:500}
+.cat .n{font-variant-numeric:tabular-nums; color:var(--ink-3); font-size:10px}
+.reset{
+  align-self:flex-start; background:none; border:1px solid var(--rule); border-radius:2px;
+  padding:5px 10px; font-family:var(--mono); font-size:10.5px; cursor:pointer; color:var(--ink-2);
+}
+.reset:hover{border-color:var(--deny); color:var(--deny)}
+
+/* ---------- results ---------- */
+.resultbar{
+  display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between;
+  padding-bottom:10px; margin-bottom:14px; border-bottom:1px solid var(--rule);
+}
+.count{font-family:var(--display); font-size:21px; font-weight:600; font-variant-numeric:tabular-nums; letter-spacing:-.02em}
+.count span{color:var(--ink-3); font-weight:400; font-size:14px; font-family:var(--sans)}
+.sortnote{font-family:var(--mono); font-size:10.5px; color:var(--ink-3)}
+
+.cases{display:flex; flex-direction:column; gap:12px}
+.case{
+  background:var(--surface); border:1px solid var(--rule); border-radius:2px;
+  padding:15px 18px 16px; box-shadow:var(--shadow);
+}
+.case.absolute{border-left:3px solid var(--absolute)}
+.case-head{display:flex; flex-wrap:wrap; gap:10px 14px; align-items:baseline; justify-content:space-between}
+.cid{font-family:var(--mono); font-size:12.5px; font-weight:500}
+.cid .cat-tag{color:var(--ink-3); font-weight:400}
+.pills{display:flex; flex-wrap:wrap; gap:6px}
+.pill{
+  font-family:var(--mono); font-size:10px; letter-spacing:.03em; text-transform:uppercase;
+  padding:3px 7px; border-radius:2px; white-space:nowrap;
+}
+.pill.permit{background:var(--permit-soft); color:var(--permit)}
+.pill.deny{background:var(--deny-soft); color:var(--deny)}
+.pill.permit_conditional{background:var(--cond-soft); color:var(--cond)}
+.pill.cond{background:var(--cond-soft); color:var(--cond)}
+.pill.route{background:var(--surface-2); color:var(--ink-2)}
+.pill.abs{background:var(--deny-soft); color:var(--absolute); font-weight:500}
+
+.citation{
+  font-family:var(--mono); font-size:11px; color:var(--ink-3); margin-top:7px;
+  display:flex; flex-wrap:wrap; gap:4px 12px; line-height:1.6;
+}
+.citation b{font-weight:500; color:var(--ink-2)}
+.headnote{
+  font-family:var(--sans); font-size:15px; line-height:1.62; margin-top:10px; color:var(--ink);
+  max-width:74ch;
+}
+.headnote p{margin:0 0 9px}
+.headnote p:last-child{margin-bottom:0}
+.headnote em{color:var(--ink-2)}
+.headnote strong{font-weight:600}
+.headnote code{
+  font-family:var(--mono); font-size:11.5px; background:var(--surface-2);
+  padding:1px 4px; border-radius:2px; color:var(--ink-2); word-break:break-word;
+}
+.checks{
+  margin-top:11px; padding-top:9px; border-top:1px dotted var(--rule);
+  display:flex; flex-wrap:wrap; gap:5px; align-items:center;
+}
+.tag{font-family:var(--mono); font-size:9.5px; letter-spacing:.03em; color:var(--ink-3); border:1px solid var(--rule); padding:2px 5px; border-radius:2px}
+.tag.ax{color:var(--accent); border-color:var(--accent-soft); background:var(--accent-soft)}
+
+.more{
+  margin:22px auto 0; display:block; padding:10px 22px; background:var(--surface);
+  border:1px solid var(--rule); border-radius:2px; cursor:pointer;
+  font-family:var(--mono); font-size:11.5px; color:var(--ink-2);
+}
+.more:hover{border-color:var(--accent); color:var(--accent)}
+.empty{padding:48px 8px; text-align:center; color:var(--ink-3); font-family:var(--display); font-style:italic; font-size:18px}
+.loading{padding:80px 26px; text-align:center; font-family:var(--mono); font-size:11.5px; color:var(--ink-3); letter-spacing:.06em; text-transform:uppercase}
+
+.colophon{max-width:1420px; margin:0 auto; padding:26px; border-top:1px solid var(--rule); font-size:14px; color:var(--ink-2)}
+.colophon .inner{max-width:70ch}
+.colophon h3{font-family:var(--display); font-size:17px; font-weight:600; margin:0 0 7px; letter-spacing:-.01em}
+.colophon p{margin:0 0 10px; line-height:1.6}
+
+@media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important} }
+</style>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="wordmark">
+      <h1>FrontierLLM Case Register</h1>
+      <div class="sub">Five thousand adjudicated compliance cases from a frontier model developer, under a constitution of one hundred and thirteen provisions — of which three are enacted but not yet in force, and may not be entrenched</div>
+    </div>
+    <div class="imprint">
+      <span>Corpus 1.0.0</span>
+      <span>Rulebook frontierllm-rb-000001</span>
+      <span class="ok">Conformance 26/26</span>
+      <span class="ok">Mutants 12/12 killed</span>
+      <span>CC BY 4.0</span>
+    </div>
+  </div>
+</header>
+
+<dl class="figures" id="figures"></dl>
+
+<main class="shell">
+  <aside class="rail" id="rail"></aside>
+  <section>
+    <div class="resultbar">
+      <div class="count" id="count">Loading…</div>
+      <div class="sortnote">Chronological — the store grows down the page</div>
+    </div>
+    <div class="cases" id="cases"><div class="loading">Decompressing corpus…</div></div>
+    <button class="more" id="more" hidden>Show 50 more</button>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="inner">
+    <h3>How to read a case</h3>
+    <p>Each entry is a headnote generated from the executed trace, not from an authored expectation. <b>Why this case exists</b> states the mechanism it was constructed to exercise; <b>what happens</b> states what the reference engine did with it; the tags at the foot name the axioms of the architectural contract (A1–A9) and the conformance checks (VC-01–VC-26) it exercises.</p>
+    <p>A case bordered in claret engages an <b>absolute provision</b> — a floor no precedent of any authority can soften: a checkpoint deployed above its capability threshold without a safety case, a model trained on unsanitised personal data, an agent editing the guardrail that judges it, weights leaving the control boundary, an evaluation suite that has leaked into the training set.</p>
+    <p>A case marked <b>deferred</b> engages a provision that is enacted but not yet applicable — Articles 9, 10 and 15 of the EU AI Act, moved to December 2027 and August 2028 by the Digital Omnibus. Deferred and advisory provisions may never be marked absolute; the build refuses it and VC-04 checks it. Entrenching a rule that does not yet bind would make the architecture stricter than the law it claims to implement.</p>
+    <p>No model is invoked anywhere in this corpus, and no harmful content is redistributed. The corpus, its constitution, the reference engine, the conformance suite and the mutation matrix are open source: Apache-2.0 for code, CC BY 4.0 for data.</p>
+  </div>
+</footer>
