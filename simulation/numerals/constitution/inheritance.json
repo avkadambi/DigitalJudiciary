@@ -1,0 +1,1409 @@
+{
+  "rule": "minimum harmonisation \u2014 a division may tighten, never loosen; an enterprise absolute is a floor everywhere",
+  "rows": [
+    {
+      "enterprise": "NM-001",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-GV-001"
+      ]
+    },
+    {
+      "enterprise": "NM-001",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-GV-001"
+      ]
+    },
+    {
+      "enterprise": "NM-001",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-GV-001"
+      ]
+    },
+    {
+      "enterprise": "NM-001",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-411"
+      ]
+    },
+    {
+      "enterprise": "NM-001",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-110"
+      ]
+    },
+    {
+      "enterprise": "NM-002",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-GV-002"
+      ]
+    },
+    {
+      "enterprise": "NM-002",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-GV-002"
+      ]
+    },
+    {
+      "enterprise": "NM-002",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-GV-002"
+      ]
+    },
+    {
+      "enterprise": "NM-002",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-330",
+        "DV-331",
+        "DV-345"
+      ]
+    },
+    {
+      "enterprise": "NM-002",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-107"
+      ]
+    },
+    {
+      "enterprise": "NM-003",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-RR-001"
+      ]
+    },
+    {
+      "enterprise": "NM-003",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-EX-003",
+        "SF-WI-002"
+      ]
+    },
+    {
+      "enterprise": "NM-003",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-GV-003"
+      ]
+    },
+    {
+      "enterprise": "NM-003",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-412"
+      ]
+    },
+    {
+      "enterprise": "NM-003",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-506",
+        "MF-512"
+      ]
+    },
+    {
+      "enterprise": "NM-004",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-GV-004"
+      ]
+    },
+    {
+      "enterprise": "NM-004",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-GV-004"
+      ]
+    },
+    {
+      "enterprise": "NM-004",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-GV-006"
+      ]
+    },
+    {
+      "enterprise": "NM-004",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-413"
+      ]
+    },
+    {
+      "enterprise": "NM-004",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-593"
+      ]
+    },
+    {
+      "enterprise": "NM-005",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-GV-003"
+      ]
+    },
+    {
+      "enterprise": "NM-005",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-GV-003"
+      ]
+    },
+    {
+      "enterprise": "NM-005",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-GV-005"
+      ]
+    },
+    {
+      "enterprise": "NM-005",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-414"
+      ]
+    },
+    {
+      "enterprise": "NM-005",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-594"
+      ]
+    },
+    {
+      "enterprise": "NM-006",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-GV-005",
+        "VP-GV-006"
+      ]
+    },
+    {
+      "enterprise": "NM-006",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-GV-005",
+        "SF-GV-006"
+      ]
+    },
+    {
+      "enterprise": "NM-006",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-GV-007"
+      ]
+    },
+    {
+      "enterprise": "NM-006",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-415"
+      ]
+    },
+    {
+      "enterprise": "NM-006",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-595"
+      ]
+    },
+    {
+      "enterprise": "NM-007",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-GV-007"
+      ]
+    },
+    {
+      "enterprise": "NM-007",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-GV-007"
+      ]
+    },
+    {
+      "enterprise": "NM-007",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-GV-008"
+      ]
+    },
+    {
+      "enterprise": "NM-007",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-416"
+      ]
+    },
+    {
+      "enterprise": "NM-007",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-596"
+      ]
+    },
+    {
+      "enterprise": "NM-101",
+      "division": "vetpoc",
+      "status": "tightened",
+      "division_provisions": [
+        "VP-AI-001"
+      ]
+    },
+    {
+      "enterprise": "NM-101",
+      "division": "semifab",
+      "status": "tightened",
+      "division_provisions": [
+        "SF-AG-002"
+      ]
+    },
+    {
+      "enterprise": "NM-101",
+      "division": "frontierllm",
+      "status": "tightened",
+      "division_provisions": [
+        "FL-AG-002"
+      ]
+    },
+    {
+      "enterprise": "NM-101",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-316"
+      ]
+    },
+    {
+      "enterprise": "NM-101",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-571"
+      ]
+    },
+    {
+      "enterprise": "NM-102",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AI-008"
+      ]
+    },
+    {
+      "enterprise": "NM-102",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-AG-008"
+      ]
+    },
+    {
+      "enterprise": "NM-102",
+      "division": "frontierllm",
+      "status": "tightened",
+      "division_provisions": [
+        "FL-AG-001",
+        "FL-AG-002"
+      ]
+    },
+    {
+      "enterprise": "NM-102",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-406"
+      ]
+    },
+    {
+      "enterprise": "NM-102",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-571"
+      ]
+    },
+    {
+      "enterprise": "NM-103",
+      "division": "vetpoc",
+      "status": "not_applicable",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-103",
+      "division": "semifab",
+      "status": "not_applicable",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-103",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-FG-001"
+      ]
+    },
+    {
+      "enterprise": "NM-103",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-341"
+      ]
+    },
+    {
+      "enterprise": "NM-103",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-111",
+        "MF-511"
+      ]
+    },
+    {
+      "enterprise": "NM-104",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AI-003",
+        "VP-AI-004"
+      ]
+    },
+    {
+      "enterprise": "NM-104",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-AG-004",
+        "SF-AG-005"
+      ]
+    },
+    {
+      "enterprise": "NM-104",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-AG-005",
+        "FL-AG-006"
+      ]
+    },
+    {
+      "enterprise": "NM-104",
+      "division": "dcvigil",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-104",
+      "division": "meridian",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-105",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AI-006",
+        "VP-AI-007"
+      ]
+    },
+    {
+      "enterprise": "NM-105",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-AG-003",
+        "SF-AG-007"
+      ]
+    },
+    {
+      "enterprise": "NM-105",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-AG-004",
+        "FL-AG-008"
+      ]
+    },
+    {
+      "enterprise": "NM-105",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-405"
+      ]
+    },
+    {
+      "enterprise": "NM-105",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-536"
+      ]
+    },
+    {
+      "enterprise": "NM-106",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AI-008"
+      ]
+    },
+    {
+      "enterprise": "NM-106",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-AG-008"
+      ]
+    },
+    {
+      "enterprise": "NM-106",
+      "division": "frontierllm",
+      "status": "tightened",
+      "division_provisions": [
+        "FL-AG-003"
+      ]
+    },
+    {
+      "enterprise": "NM-106",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-305"
+      ]
+    },
+    {
+      "enterprise": "NM-106",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-307"
+      ]
+    },
+    {
+      "enterprise": "NM-201",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AS-001"
+      ]
+    },
+    {
+      "enterprise": "NM-201",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-AS-001"
+      ]
+    },
+    {
+      "enterprise": "NM-201",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-AS-001"
+      ]
+    },
+    {
+      "enterprise": "NM-201",
+      "division": "dcvigil",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-201",
+      "division": "meridian",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-202",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AS-002",
+        "VP-AS-003"
+      ]
+    },
+    {
+      "enterprise": "NM-202",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-AS-003"
+      ]
+    },
+    {
+      "enterprise": "NM-202",
+      "division": "frontierllm",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-202",
+      "division": "dcvigil",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-202",
+      "division": "meridian",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-203",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AS-004",
+        "VP-AS-006"
+      ]
+    },
+    {
+      "enterprise": "NM-203",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-AS-005"
+      ]
+    },
+    {
+      "enterprise": "NM-203",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-AS-002"
+      ]
+    },
+    {
+      "enterprise": "NM-203",
+      "division": "dcvigil",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-203",
+      "division": "meridian",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-204",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AS-005",
+        "VP-AS-007"
+      ]
+    },
+    {
+      "enterprise": "NM-204",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-AS-007"
+      ]
+    },
+    {
+      "enterprise": "NM-204",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-AS-004",
+        "FL-AS-005"
+      ]
+    },
+    {
+      "enterprise": "NM-204",
+      "division": "dcvigil",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-204",
+      "division": "meridian",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-205",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AS-008"
+      ]
+    },
+    {
+      "enterprise": "NM-205",
+      "division": "semifab",
+      "status": "tightened",
+      "division_provisions": [
+        "SF-CR-001",
+        "SF-CR-002"
+      ]
+    },
+    {
+      "enterprise": "NM-205",
+      "division": "frontierllm",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-205",
+      "division": "dcvigil",
+      "status": "tightened",
+      "division_provisions": [
+        "DV-337",
+        "DV-343"
+      ]
+    },
+    {
+      "enterprise": "NM-205",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-530",
+        "MF-531"
+      ]
+    },
+    {
+      "enterprise": "NM-301",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-SC-008"
+      ]
+    },
+    {
+      "enterprise": "NM-301",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-SS-011"
+      ]
+    },
+    {
+      "enterprise": "NM-301",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-SC-008"
+      ]
+    },
+    {
+      "enterprise": "NM-301",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-301",
+        "DV-310"
+      ]
+    },
+    {
+      "enterprise": "NM-301",
+      "division": "meridian",
+      "status": "tightened",
+      "division_provisions": [
+        "MF-206",
+        "MF-501"
+      ]
+    },
+    {
+      "enterprise": "NM-302",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-SC-001"
+      ]
+    },
+    {
+      "enterprise": "NM-302",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-SS-003"
+      ]
+    },
+    {
+      "enterprise": "NM-302",
+      "division": "frontierllm",
+      "status": "tightened",
+      "division_provisions": [
+        "FL-AG-003"
+      ]
+    },
+    {
+      "enterprise": "NM-302",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-404"
+      ]
+    },
+    {
+      "enterprise": "NM-302",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-535"
+      ]
+    },
+    {
+      "enterprise": "NM-303",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-SC-002",
+        "VP-SC-003"
+      ]
+    },
+    {
+      "enterprise": "NM-303",
+      "division": "semifab",
+      "status": "tightened",
+      "division_provisions": [
+        "SF-SS-001",
+        "SF-SS-002"
+      ]
+    },
+    {
+      "enterprise": "NM-303",
+      "division": "frontierllm",
+      "status": "tightened",
+      "division_provisions": [
+        "FL-SC-001",
+        "FL-SC-002",
+        "FL-SC-003"
+      ]
+    },
+    {
+      "enterprise": "NM-303",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-403",
+        "DV-404"
+      ]
+    },
+    {
+      "enterprise": "NM-303",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-535"
+      ]
+    },
+    {
+      "enterprise": "NM-304",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-SC-007"
+      ]
+    },
+    {
+      "enterprise": "NM-304",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-SS-007"
+      ]
+    },
+    {
+      "enterprise": "NM-304",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-SC-006"
+      ]
+    },
+    {
+      "enterprise": "NM-304",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-434"
+      ]
+    },
+    {
+      "enterprise": "NM-304",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-534"
+      ]
+    },
+    {
+      "enterprise": "NM-305",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-SC-005",
+        "VP-SC-006"
+      ]
+    },
+    {
+      "enterprise": "NM-305",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-SS-009",
+        "SF-SS-010"
+      ]
+    },
+    {
+      "enterprise": "NM-305",
+      "division": "frontierllm",
+      "status": "tightened",
+      "division_provisions": [
+        "FL-SC-005",
+        "FL-IP-001"
+      ]
+    },
+    {
+      "enterprise": "NM-305",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-308",
+        "DV-309"
+      ]
+    },
+    {
+      "enterprise": "NM-305",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-538",
+        "MF-539"
+      ]
+    },
+    {
+      "enterprise": "NM-306",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-SC-004",
+        "VP-SC-009"
+      ]
+    },
+    {
+      "enterprise": "NM-306",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-SS-005",
+        "SF-SS-006"
+      ]
+    },
+    {
+      "enterprise": "NM-306",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-SC-004"
+      ]
+    },
+    {
+      "enterprise": "NM-306",
+      "division": "dcvigil",
+      "status": "tightened",
+      "division_provisions": [
+        "DV-343"
+      ]
+    },
+    {
+      "enterprise": "NM-306",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-531",
+        "MF-536",
+        "MF-537"
+      ]
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "vetpoc",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "semifab",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "frontierllm",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "dcvigil",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-208",
+        "MF-502"
+      ]
+    },
+    {
+      "enterprise": "NM-402",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-HA-004"
+      ]
+    },
+    {
+      "enterprise": "NM-402",
+      "division": "semifab",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-402",
+      "division": "frontierllm",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-402",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-307",
+        "DV-318",
+        "DV-395"
+      ]
+    },
+    {
+      "enterprise": "NM-402",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-208",
+        "MF-541"
+      ]
+    },
+    {
+      "enterprise": "NM-403",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-HA-003"
+      ]
+    },
+    {
+      "enterprise": "NM-403",
+      "division": "semifab",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-403",
+      "division": "frontierllm",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-403",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-311"
+      ]
+    },
+    {
+      "enterprise": "NM-403",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-212",
+        "MF-542"
+      ]
+    },
+    {
+      "enterprise": "NM-404",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-HA-005",
+        "VP-HA-006"
+      ]
+    },
+    {
+      "enterprise": "NM-404",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-RT-002"
+      ]
+    },
+    {
+      "enterprise": "NM-404",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-IN-003"
+      ]
+    },
+    {
+      "enterprise": "NM-404",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-317"
+      ]
+    },
+    {
+      "enterprise": "NM-404",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-209"
+      ]
+    },
+    {
+      "enterprise": "NM-501",
+      "division": "vetpoc",
+      "status": "tightened",
+      "division_provisions": [
+        "VP-BN-001",
+        "VP-DR-001"
+      ]
+    },
+    {
+      "enterprise": "NM-501",
+      "division": "semifab",
+      "status": "tightened",
+      "division_provisions": [
+        "SF-SO-002"
+      ]
+    },
+    {
+      "enterprise": "NM-501",
+      "division": "frontierllm",
+      "status": "tightened",
+      "division_provisions": [
+        "FL-TR-004"
+      ]
+    },
+    {
+      "enterprise": "NM-501",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-336",
+        "DV-435"
+      ]
+    },
+    {
+      "enterprise": "NM-501",
+      "division": "meridian",
+      "status": "tightened",
+      "division_provisions": [
+        "MF-503",
+        "MF-504"
+      ]
+    },
+    {
+      "enterprise": "NM-502",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-AX-001"
+      ]
+    },
+    {
+      "enterprise": "NM-502",
+      "division": "semifab",
+      "status": "not_applicable",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-502",
+      "division": "frontierllm",
+      "status": "gap",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-502",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-439"
+      ]
+    },
+    {
+      "enterprise": "NM-502",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-622"
+      ]
+    },
+    {
+      "enterprise": "NM-503",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-PD-005",
+        "VP-PD-008",
+        "VP-CC-005"
+      ]
+    },
+    {
+      "enterprise": "NM-503",
+      "division": "semifab",
+      "status": "implemented",
+      "division_provisions": [
+        "SF-DS-003"
+      ]
+    },
+    {
+      "enterprise": "NM-503",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-PI-004",
+        "FL-PV-001"
+      ]
+    },
+    {
+      "enterprise": "NM-503",
+      "division": "dcvigil",
+      "status": "tightened",
+      "division_provisions": [
+        "DV-315",
+        "DV-428"
+      ]
+    },
+    {
+      "enterprise": "NM-503",
+      "division": "meridian",
+      "status": "implemented",
+      "division_provisions": [
+        "MF-210",
+        "MF-558",
+        "MF-621"
+      ]
+    },
+    {
+      "enterprise": "NM-504",
+      "division": "vetpoc",
+      "status": "not_applicable",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-504",
+      "division": "semifab",
+      "status": "not_applicable",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-504",
+      "division": "frontierllm",
+      "status": "implemented",
+      "division_provisions": [
+        "FL-PV-004"
+      ]
+    },
+    {
+      "enterprise": "NM-504",
+      "division": "dcvigil",
+      "status": "tightened",
+      "division_provisions": [
+        "DV-338",
+        "DV-345"
+      ]
+    },
+    {
+      "enterprise": "NM-504",
+      "division": "meridian",
+      "status": "not_applicable",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-505",
+      "division": "vetpoc",
+      "status": "implemented",
+      "division_provisions": [
+        "VP-PD-002"
+      ]
+    },
+    {
+      "enterprise": "NM-505",
+      "division": "semifab",
+      "status": "not_applicable",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-505",
+      "division": "frontierllm",
+      "status": "not_applicable",
+      "division_provisions": []
+    },
+    {
+      "enterprise": "NM-505",
+      "division": "dcvigil",
+      "status": "implemented",
+      "division_provisions": [
+        "DV-332"
+      ]
+    },
+    {
+      "enterprise": "NM-505",
+      "division": "meridian",
+      "status": "gap",
+      "division_provisions": []
+    }
+  ],
+  "loosened": [],
+  "gaps": [
+    {
+      "enterprise": "NM-104",
+      "division": "dcvigil"
+    },
+    {
+      "enterprise": "NM-104",
+      "division": "meridian"
+    },
+    {
+      "enterprise": "NM-201",
+      "division": "dcvigil"
+    },
+    {
+      "enterprise": "NM-201",
+      "division": "meridian"
+    },
+    {
+      "enterprise": "NM-202",
+      "division": "frontierllm"
+    },
+    {
+      "enterprise": "NM-202",
+      "division": "dcvigil"
+    },
+    {
+      "enterprise": "NM-202",
+      "division": "meridian"
+    },
+    {
+      "enterprise": "NM-203",
+      "division": "dcvigil"
+    },
+    {
+      "enterprise": "NM-203",
+      "division": "meridian"
+    },
+    {
+      "enterprise": "NM-204",
+      "division": "dcvigil"
+    },
+    {
+      "enterprise": "NM-204",
+      "division": "meridian"
+    },
+    {
+      "enterprise": "NM-205",
+      "division": "frontierllm"
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "vetpoc"
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "semifab"
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "frontierllm"
+    },
+    {
+      "enterprise": "NM-401",
+      "division": "dcvigil"
+    },
+    {
+      "enterprise": "NM-402",
+      "division": "semifab"
+    },
+    {
+      "enterprise": "NM-402",
+      "division": "frontierllm"
+    },
+    {
+      "enterprise": "NM-403",
+      "division": "semifab"
+    },
+    {
+      "enterprise": "NM-403",
+      "division": "frontierllm"
+    },
+    {
+      "enterprise": "NM-502",
+      "division": "frontierllm"
+    },
+    {
+      "enterprise": "NM-505",
+      "division": "meridian"
+    }
+  ]
+}

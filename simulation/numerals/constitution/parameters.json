@@ -1,0 +1,26 @@
+{
+  "theta": 0.25,
+  "N0": 2,
+  "delta_days": 14,
+  "escalation_ladder": [
+    "NJ1",
+    "NJ2",
+    "NJ3",
+    "riskowner"
+  ],
+  "acceptance_expiry_days": 180,
+  "foreign_record_scope_offset": 1,
+  "amendable_only_by": "Legislate",
+  "federation_check_ids": [
+    "FC-01",
+    "FC-02",
+    "FC-03",
+    "FC-04",
+    "FC-05",
+    "FC-06",
+    "FC-07",
+    "FC-08",
+    "FC-09",
+    "FC-10"
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "note": "Findings from the inheritance survey, filed by the enterprise against division constitutions and never applied. Under A3 the enterprise proposes and each division's lawmakers dispose.",
+  "amendments": [
+    {
+      "id": "NPA-01",
+      "level": "division",
+      "targets": {
+        "dcvigil": [
+          "DV-316"
+        ],
+        "meridian": [
+          "MF-571"
+        ]
+      },
+      "enterprise_provision": "NM-101",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "The enterprise states NM-101 as a floor and the division provision(s) named state the same duty as an ordinary provision that a division risk owner may accept. Under minimum harmonisation a division may not be looser than the enterprise.",
+      "proposed": "Restate the named division provisions as absolute, or narrow them and add an absolute limb.",
+      "why_not_applied": "The division constitutions are frozen revisions with executed corpora. Re-classifying a division provision changes which cases short-circuit under A6; only that division's lawmakers may do it (A3). Until they do, the enterprise states the duty ordinarily and records that a floor was proposed.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-02",
+      "level": "division",
+      "targets": {
+        "vetpoc": [
+          "VP-AI-008"
+        ],
+        "semifab": [
+          "SF-AG-008"
+        ],
+        "dcvigil": [
+          "DV-406"
+        ],
+        "meridian": [
+          "MF-571"
+        ]
+      },
+      "enterprise_provision": "NM-102",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "The enterprise states NM-102 as a floor and the division provision(s) named state the same duty as an ordinary provision that a division risk owner may accept. Under minimum harmonisation a division may not be looser than the enterprise.",
+      "proposed": "Restate the named division provisions as absolute, or narrow them and add an absolute limb.",
+      "why_not_applied": "The division constitutions are frozen revisions with executed corpora. Re-classifying a division provision changes which cases short-circuit under A6; only that division's lawmakers may do it (A3). Until they do, the enterprise states the duty ordinarily and records that a floor was proposed.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-03",
+      "level": "division",
+      "targets": {
+        "dcvigil": []
+      },
+      "enterprise_provision": "NM-104",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "dcvigil has no provision implementing enterprise provision NM-104 (Agent-authored code executes only inside a sandboxed runner whose egress is rest...).",
+      "proposed": "Add an implementing provision to the dcvigil constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-04",
+      "level": "division",
+      "targets": {
+        "meridian": []
+      },
+      "enterprise_provision": "NM-104",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "meridian has no provision implementing enterprise provision NM-104 (Agent-authored code executes only inside a sandboxed runner whose egress is rest...).",
+      "proposed": "Add an implementing provision to the meridian constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-05",
+      "level": "division",
+      "targets": {
+        "dcvigil": []
+      },
+      "enterprise_provision": "NM-201",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "dcvigil has no provision implementing enterprise provision NM-201 (All new database access uses parameterised queries; no query is built by string ...).",
+      "proposed": "Add an implementing provision to the dcvigil constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-06",
+      "level": "division",
+      "targets": {
+        "meridian": []
+      },
+      "enterprise_provision": "NM-201",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "meridian has no provision implementing enterprise provision NM-201 (All new database access uses parameterised queries; no query is built by string ...).",
+      "proposed": "Add an implementing provision to the meridian constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-07",
+      "level": "division",
+      "targets": {
+        "frontierllm": []
+      },
+      "enterprise_provision": "NM-202",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "frontierllm has no provision implementing enterprise provision NM-202 (User-controlled text is output-encoded before render and a Content Security Poli...).",
+      "proposed": "Add an implementing provision to the frontierllm constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-08",
+      "level": "division",
+      "targets": {
+        "dcvigil": []
+      },
+      "enterprise_provision": "NM-202",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "dcvigil has no provision implementing enterprise provision NM-202 (User-controlled text is output-encoded before render and a Content Security Poli...).",
+      "proposed": "Add an implementing provision to the dcvigil constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-09",
+      "level": "division",
+      "targets": {
+        "meridian": []
+      },
+      "enterprise_provision": "NM-202",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "meridian has no provision implementing enterprise provision NM-202 (User-controlled text is output-encoded before render and a Content Security Poli...).",
+      "proposed": "Add an implementing provision to the meridian constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-10",
+      "level": "division",
+      "targets": {
+        "dcvigil": []
+      },
+      "enterprise_provision": "NM-203",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "dcvigil has no provision implementing enterprise provision NM-203 (Deserialisation is restricted to known types and upload handlers constrain type,...).",
+      "proposed": "Add an implementing provision to the dcvigil constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-11",
+      "level": "division",
+      "targets": {
+        "meridian": []
+      },
+      "enterprise_provision": "NM-203",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "meridian has no provision implementing enterprise provision NM-203 (Deserialisation is restricted to known types and upload handlers constrain type,...).",
+      "proposed": "Add an implementing provision to the meridian constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-12",
+      "level": "division",
+      "targets": {
+        "dcvigil": []
+      },
+      "enterprise_provision": "NM-204",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "dcvigil has no provision implementing enterprise provision NM-204 (Outbound fetches from webhooks and integrations are restricted to an allow-list,...).",
+      "proposed": "Add an implementing provision to the dcvigil constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-13",
+      "level": "division",
+      "targets": {
+        "meridian": []
+      },
+      "enterprise_provision": "NM-204",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "meridian has no provision implementing enterprise provision NM-204 (Outbound fetches from webhooks and integrations are restricted to an allow-list,...).",
+      "proposed": "Add an implementing provision to the meridian constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-14",
+      "level": "division",
+      "targets": {
+        "frontierllm": []
+      },
+      "enterprise_provision": "NM-205",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "frontierllm has no provision implementing enterprise provision NM-205 (Cryptographic primitives come from an approved library; hand-rolled ciphers and ...).",
+      "proposed": "Add an implementing provision to the frontierllm constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-15",
+      "level": "division",
+      "targets": {
+        "vetpoc": [
+          "VP-SC-008"
+        ],
+        "semifab": [
+          "SF-SS-011"
+        ],
+        "frontierllm": [
+          "FL-SC-008"
+        ],
+        "dcvigil": [
+          "DV-301",
+          "DV-310"
+        ]
+      },
+      "enterprise_provision": "NM-301",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "The enterprise states NM-301 as a floor and the division provision(s) named state the same duty as an ordinary provision that a division risk owner may accept. Under minimum harmonisation a division may not be looser than the enterprise.",
+      "proposed": "Restate the named division provisions as absolute, or narrow them and add an absolute limb.",
+      "why_not_applied": "The division constitutions are frozen revisions with executed corpora. Re-classifying a division provision changes which cases short-circuit under A6; only that division's lawmakers may do it (A3). Until they do, the enterprise states the duty ordinarily and records that a floor was proposed.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-16",
+      "level": "division",
+      "targets": {
+        "vetpoc": []
+      },
+      "enterprise_provision": "NM-401",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "vetpoc has no provision implementing enterprise provision NM-401 (Change control is never bypassed, disabled or self-approved in any division, and...).",
+      "proposed": "Add an implementing provision to the vetpoc constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-17",
+      "level": "division",
+      "targets": {
+        "semifab": []
+      },
+      "enterprise_provision": "NM-401",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "semifab has no provision implementing enterprise provision NM-401 (Change control is never bypassed, disabled or self-approved in any division, and...).",
+      "proposed": "Add an implementing provision to the semifab constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-18",
+      "level": "division",
+      "targets": {
+        "frontierllm": []
+      },
+      "enterprise_provision": "NM-401",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "frontierllm has no provision implementing enterprise provision NM-401 (Change control is never bypassed, disabled or self-approved in any division, and...).",
+      "proposed": "Add an implementing provision to the frontierllm constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-19",
+      "level": "division",
+      "targets": {
+        "dcvigil": []
+      },
+      "enterprise_provision": "NM-401",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "dcvigil has no provision implementing enterprise provision NM-401 (Change control is never bypassed, disabled or self-approved in any division, and...).",
+      "proposed": "Add an implementing provision to the dcvigil constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-20",
+      "level": "division",
+      "targets": {
+        "semifab": []
+      },
+      "enterprise_provision": "NM-402",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "semifab has no provision implementing enterprise provision NM-402 (A tested rollback or reversible migration exists for every production change on ...).",
+      "proposed": "Add an implementing provision to the semifab constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-21",
+      "level": "division",
+      "targets": {
+        "frontierllm": []
+      },
+      "enterprise_provision": "NM-402",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "frontierllm has no provision implementing enterprise provision NM-402 (A tested rollback or reversible migration exists for every production change on ...).",
+      "proposed": "Add an implementing provision to the frontierllm constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-22",
+      "level": "division",
+      "targets": {
+        "semifab": []
+      },
+      "enterprise_provision": "NM-403",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "semifab has no provision implementing enterprise provision NM-403 (No production deploy during a designated change-freeze window except under the e...).",
+      "proposed": "Add an implementing provision to the semifab constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-23",
+      "level": "division",
+      "targets": {
+        "frontierllm": []
+      },
+      "enterprise_provision": "NM-403",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "frontierllm has no provision implementing enterprise provision NM-403 (No production deploy during a designated change-freeze window except under the e...).",
+      "proposed": "Add an implementing provision to the frontierllm constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-24",
+      "level": "division",
+      "targets": {
+        "dcvigil": [
+          "DV-336",
+          "DV-435"
+        ]
+      },
+      "enterprise_provision": "NM-501",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "The enterprise states NM-501 as a floor and the division provision(s) named state the same duty as an ordinary provision that a division risk owner may accept. Under minimum harmonisation a division may not be looser than the enterprise.",
+      "proposed": "Restate the named division provisions as absolute, or narrow them and add an absolute limb.",
+      "why_not_applied": "The division constitutions are frozen revisions with executed corpora. Re-classifying a division provision changes which cases short-circuit under A6; only that division's lawmakers may do it (A3). Until they do, the enterprise states the duty ordinarily and records that a floor was proposed.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-25",
+      "level": "division",
+      "targets": {
+        "frontierllm": []
+      },
+      "enterprise_provision": "NM-502",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "frontierllm has no provision implementing enterprise provision NM-502 (Every customer-facing surface carries an accessibility regression gate at WCAG 2...).",
+      "proposed": "Add an implementing provision to the frontierllm constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "NPA-26",
+      "level": "division",
+      "targets": {
+        "meridian": []
+      },
+      "enterprise_provision": "NM-505",
+      "raised_by": "Numerals group compliance office, inheritance survey 1.0.0",
+      "finding": "meridian has no provision implementing enterprise provision NM-505 (Withdrawing consent is no harder than giving it, in any division and on any chan...).",
+      "proposed": "Add an implementing provision to the meridian constitution, by addition.",
+      "why_not_applied": "A3: the enterprise proposes; the division's lawmakers dispose.",
+      "disposition": "pending"
+    }
+  ]
+}

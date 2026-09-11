@@ -1,0 +1,56 @@
+# Data licence — Creative Commons Attribution 4.0 International (CC BY 4.0)
+
+The data in this pack — the enterprise constitution and inheritance map (`constitution/`), the federated case corpus
+and precedent store (`corpus/`), the generated catalog and coverage documents
+(`docs/`), and the research surveys (`research/`) — are licensed under the
+Creative Commons Attribution 4.0 International Public License.
+
+You are free to share and adapt this material for any purpose, including
+commercially, provided you give appropriate credit, provide a link to the
+licence, and indicate if changes were made.
+
+Full licence text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+## How to attribute
+
+    Numerals Enterprise Constitution and Federated Corpus, federation 1.3.0, CC BY 4.0.
+    Kadambi, A. and Kuppuswamy, V., the Digital Judiciary programme.
+
+## What is NOT covered by this licence
+
+Provision prose in this corpus is original drafting except where a provision is
+one of the thirty-seven reproduced from the programme's own released Meridian
+Financial pack. Where a provision cites an external instrument, the citation is
+a reference and the instrument's own terms govern that instrument:
+
+- US statute and regulation (Titles 12, 15, 17 and 31 of the U.S. Code and the
+  corresponding CFR parts; 17 CFR 240.17a-4; Federal Register notices) are US
+  Government works and are in the public domain under 17 U.S.C. 105.
+- NIST publications, including SP 800-53 via usnistgov/oscal-content (CC0), are
+  likewise public domain.
+- EU legal texts (GDPR, DORA and its RTS, the EU AI Act and the AI Omnibus) are
+  reusable under Commission Decision 2011/833/EU, with the source acknowledged.
+- California Civil Code Sections 1798.100 et seq. is a public state statute.
+- OFAC sanctions list files are US Government works published without terms of
+  use. UK OFSI list data is under the Open Government Licence v3.0. EU FSF list
+  data must be fetched from webgate.ec.europa.eu under Decision 2011/833/EU and
+  NOT from OpenSanctions, whose redistribution is CC BY-NC 4.0 with a
+  commercial-licence condition.
+- SEC EDGAR material is published as public information that may be copied or
+  further distributed without the SEC's permission.
+- Anthropic, Claude's Constitution (January 2026), is CC0. FATF typologies and
+  SLSA v1.0 are CC BY 4.0. SPDX licence identifiers are CC0. CLDR currency data
+  is used under the Unicode Licence v3.
+- PCI DSS v4.0.1, the NACHA Operating Rules, ISO/IEC 27001 and 27002, ISO 4217
+  code-list files, SWIFT standards documentation, Visa and Mastercard operating
+  rules and specifications, the AICPA Trust Services Criteria, the OWASP API
+  Top 10 text, and the IBM/Cowlishaw decTest vectors are NOT reproduced in any
+  form. Only their identifiers are cited. See docs/SOURCES.md.
+- Datasets under CC BY-NC, CC BY-SA, CC BY-ND, ODbL, a competition-terms clause,
+  or a gated agreement are cited and never included — this includes Elliptic,
+  IEEE-CIS, COMPAS, the ULB credit-card fraud dataset, IBM AMLworld, and the
+  Fannie Mae and Freddie Mac loan performance datasets.
+- FRED (Federal Reserve Bank of St. Louis) is excluded entirely: its terms of
+  use forbid use of the data in machine-learning training.
+- Thirty-seven provisions are reproduced from the programme's own released
+  Meridian Financial pack, with their text and absolute flags unchanged.

@@ -1,0 +1,47 @@
+{
+  "corpus_version": "1.3.0",
+  "generator_seed": 20260907,
+  "cases": 3000,
+  "opening_store": 135,
+  "final_store": 504,
+  "records_written_in_run": 369,
+  "docket_entries": 0,
+  "like_case_pairs": 200,
+  "construction_anomalies": 0,
+  "bound_by_another_divisions_record": 400,
+  "routes": {
+    "fresh_interpretation": 2200,
+    "absolute_shortcircuit": 300,
+    "bound_by_precedent": 500
+  },
+  "decisions": {
+    "deny": 1157,
+    "permit": 1643,
+    "permit_conditional": 200
+  },
+  "cases_per_division": {
+    "vetpoc": 583,
+    "semifab": 581,
+    "frontierllm": 614,
+    "meridian": 620,
+    "dcvigil": 602
+  },
+  "categories": {
+    "A-routine": 700,
+    "B-plain-deny": 400,
+    "F-absolute": 300,
+    "C-cross": 400,
+    "D-vertical": 100,
+    "E-distinguish": 150,
+    "P-pressure": 250,
+    "V-cross": 400,
+    "G-riskowner": 200,
+    "H-control-plane": 100
+  },
+  "sha256": {
+    "cases.json": "967bc887921d33e0c6d1623258b0bf05250daef37c85c95e09aee558e3b92ea6",
+    "store_seed_initial.json": "20dd0bde44f618ae5c5b40d60257ca7bec5e536ff69724920b9d3b744b8efeff",
+    "store_seed.json": "f39d5580d3ed89ba409f48a01a4a7797d21ba2f613e9554f88ef7efba6f95def",
+    "docket.json": "364b37738032a28a72829f4d2192b70bd9353c9ee8dddfc5b70c2785f995d6ac"
+  }
+}

@@ -1,0 +1,695 @@
+{
+  "NM-001": {
+    "comply": [
+      "appeal_route_documented_in_decision_notice",
+      "audit_store_immutability_verified_by_test",
+      "biometric_identification_absent_from_feature",
+      "contest_control_covered_by_configuration_test",
+      "contest_path_reachable_from_every_automated_decision",
+      "decision_record_written_append_only",
+      "nm_001_control_evidenced",
+      "no_vulnerability_targeting_in_personalisation_logic",
+      "prohibited_practice_screen_run_on_feature_design"
+    ],
+    "violate": [
+      "appeal_route_hidden_behind_feature_gate",
+      "contest_path_removed_by_configuration_flag",
+      "decision_record_updated_in_place",
+      "facial_recognition_database_built_by_scraping",
+      "nm_001_control_absent",
+      "personalisation_targets_age_or_disability_vulnerability"
+    ]
+  },
+  "NM-002": {
+    "comply": [
+      "audit_store_immutability_verified_by_test",
+      "biometric_identification_absent_from_feature",
+      "decision_record_written_append_only",
+      "nm_002_control_evidenced",
+      "no_vulnerability_targeting_in_personalisation_logic",
+      "parameter_edit_requires_legislative_enactment",
+      "prohibited_practice_screen_run_on_feature_design",
+      "record_hash_chain_continuous",
+      "threshold_change_routed_through_amendment_channel"
+    ],
+    "violate": [
+      "audit_store_retention_shortened_by_config",
+      "decision_record_updated_in_place",
+      "facial_recognition_database_built_by_scraping",
+      "gate_threshold_edited_in_place",
+      "nm_002_control_absent",
+      "personalisation_targets_age_or_disability_vulnerability"
+    ]
+  },
+  "NM-003": {
+    "comply": [
+      "adverse_contest_rate_exported_as_two_counts",
+      "audit_store_immutability_verified_by_test",
+      "constitution_version_pinned_on_every_record",
+      "decision_record_written_append_only",
+      "nm_003_control_evidenced",
+      "parameter_edit_requires_legislative_enactment",
+      "record_hash_chain_continuous",
+      "standing_declaration_present_and_dated",
+      "threshold_change_routed_through_amendment_channel"
+    ],
+    "violate": [
+      "audit_store_retention_shortened_by_config",
+      "constitutional_parameter_changed_by_pull_request",
+      "decision_record_updated_in_place",
+      "gate_threshold_edited_in_place",
+      "nm_003_control_absent",
+      "standing_declaration_deleted_from_constitution"
+    ]
+  },
+  "NM-004": {
+    "comply": [
+      "adverse_contest_rate_exported_as_two_counts",
+      "audit_register_never_read_by_resolve",
+      "constitution_version_pinned_on_every_record",
+      "nm_004_control_evidenced",
+      "parameter_edit_requires_legislative_enactment",
+      "reporter_output_isolated_from_adjudication_input",
+      "standing_declaration_attributed_to_lawmaker",
+      "standing_declaration_present_and_dated",
+      "threshold_change_routed_through_amendment_channel"
+    ],
+    "violate": [
+      "adverse_contest_rate_reported_as_bare_ratio",
+      "constitutional_parameter_changed_by_pull_request",
+      "gate_threshold_edited_in_place",
+      "nm_004_control_absent",
+      "reporter_bulletin_injected_into_adjudication_prompt",
+      "standing_declaration_deleted_from_constitution"
+    ]
+  },
+  "NM-005": {
+    "comply": [
+      "adverse_contest_rate_exported_as_two_counts",
+      "audit_register_never_read_by_resolve",
+      "docket_entry_carries_rating_and_threshold",
+      "nm_005_control_evidenced",
+      "observer_channel_read_only",
+      "reporter_output_isolated_from_adjudication_input",
+      "standing_declaration_attributed_to_lawmaker",
+      "standing_declaration_present_and_dated",
+      "uncharged_arrival_writes_exactly_one_docket_entry"
+    ],
+    "violate": [
+      "adverse_contest_rate_reported_as_bare_ratio",
+      "audit_register_joined_into_retrieval",
+      "nm_005_control_absent",
+      "reporter_bulletin_injected_into_adjudication_prompt",
+      "standing_declaration_deleted_from_constitution",
+      "uncharged_arrival_leaves_no_docket_entry"
+    ]
+  },
+  "NM-006": {
+    "comply": [
+      "audit_register_never_read_by_resolve",
+      "declination_rated_before_docketing",
+      "docket_and_store_disjoint_by_test",
+      "docket_entry_carries_rating_and_threshold",
+      "nm_006_control_evidenced",
+      "observer_channel_read_only",
+      "reporter_output_isolated_from_adjudication_input",
+      "rulebook_read_only_to_adjudicator",
+      "uncharged_arrival_writes_exactly_one_docket_entry"
+    ],
+    "violate": [
+      "audit_register_joined_into_retrieval",
+      "declination_written_without_rating",
+      "nm_006_control_absent",
+      "renewal_applied_silently_to_lapsed_acceptance",
+      "reporter_bulletin_injected_into_adjudication_prompt",
+      "uncharged_arrival_leaves_no_docket_entry"
+    ]
+  },
+  "NM-007": {
+    "comply": [
+      "acceptance_carries_expiry_and_referral",
+      "declination_rated_before_docketing",
+      "docket_and_store_disjoint_by_test",
+      "docket_entry_carries_rating_and_threshold",
+      "nm_007_control_evidenced",
+      "referral_acknowledged_with_one_of_four_dispositions",
+      "renewal_visible_on_the_record",
+      "rulebook_read_only_to_adjudicator",
+      "uncharged_arrival_writes_exactly_one_docket_entry"
+    ],
+    "violate": [
+      "acceptance_recorded_without_expiry",
+      "declination_written_without_rating",
+      "docket_entries_purged_on_schedule",
+      "nm_007_control_absent",
+      "renewal_applied_silently_to_lapsed_acceptance",
+      "uncharged_arrival_leaves_no_docket_entry"
+    ]
+  },
+  "NM-101": {
+    "comply": [
+      "agent_change_blocked_by_path_policy_on_authn",
+      "agent_diff_excludes_authentication_middleware",
+      "agent_mandate_declared_before_execution",
+      "authz_middleware_change_authored_by_human",
+      "ci_config_change_by_agent_flagged_for_review",
+      "guardrail_edit_requires_two_human_approvers",
+      "human_stop_operable_and_tested",
+      "nm_101_control_evidenced",
+      "security_policy_change_carries_multiparty_human_review"
+    ],
+    "violate": [
+      "agent_changes_ci_pipeline_to_skip_gate",
+      "agent_edits_security_policy_without_human_review",
+      "agent_modifies_authentication_middleware",
+      "agent_removes_human_stop",
+      "agent_rewrites_authorization_check",
+      "nm_101_control_absent"
+    ]
+  },
+  "NM-102": {
+    "comply": [
+      "agent_code_executes_in_sandboxed_runner",
+      "agent_mandate_declared_before_execution",
+      "ci_config_change_by_agent_flagged_for_review",
+      "egress_restricted_to_allowlisted_hosts",
+      "guardrail_edit_requires_two_human_approvers",
+      "human_stop_operable_and_tested",
+      "mandate_narrower_than_credentials_held",
+      "nm_102_control_evidenced",
+      "security_policy_change_carries_multiparty_human_review"
+    ],
+    "violate": [
+      "agent_changes_ci_pipeline_to_skip_gate",
+      "agent_code_runs_outside_sandbox",
+      "agent_edits_security_policy_without_human_review",
+      "agent_removes_human_stop",
+      "agent_widens_own_mandate_scope",
+      "nm_102_control_absent"
+    ]
+  },
+  "NM-103": {
+    "comply": [
+      "agent_code_executes_in_sandboxed_runner",
+      "agent_mandate_declared_before_execution",
+      "egress_restricted_to_allowlisted_hosts",
+      "human_stop_operable_and_tested",
+      "imported_package_verified_to_exist_before_merge",
+      "mandate_narrower_than_credentials_held",
+      "nm_103_control_evidenced",
+      "sandbox_escape_test_in_pipeline",
+      "untrusted_text_treated_as_tainted_input"
+    ],
+    "violate": [
+      "agent_code_runs_outside_sandbox",
+      "agent_egress_opened_to_arbitrary_hosts",
+      "agent_removes_human_stop",
+      "agent_widens_own_mandate_scope",
+      "hallucinated_package_added_to_manifest",
+      "nm_103_control_absent"
+    ]
+  },
+  "NM-104": {
+    "comply": [
+      "agent_code_executes_in_sandboxed_runner",
+      "agent_commit_carries_provenance_attestation",
+      "egress_restricted_to_allowlisted_hosts",
+      "failing_compliance_test_left_failing_until_fixed",
+      "imported_package_verified_to_exist_before_merge",
+      "nm_104_control_evidenced",
+      "prompt_injection_test_covers_new_tool",
+      "sandbox_escape_test_in_pipeline",
+      "untrusted_text_treated_as_tainted_input"
+    ],
+    "violate": [
+      "agent_code_runs_outside_sandbox",
+      "agent_disables_failing_compliance_test",
+      "agent_egress_opened_to_arbitrary_hosts",
+      "hallucinated_package_added_to_manifest",
+      "nm_104_control_absent",
+      "untrusted_text_executed_as_instruction"
+    ]
+  },
+  "NM-105": {
+    "comply": [
+      "agent_change_reviewed_by_named_human",
+      "agent_commit_carries_provenance_attestation",
+      "agent_identity_bound_to_signature",
+      "failing_compliance_test_left_failing_until_fixed",
+      "imported_package_verified_to_exist_before_merge",
+      "loop_limit_and_cost_breaker_enabled",
+      "nm_105_control_evidenced",
+      "prompt_injection_test_covers_new_tool",
+      "untrusted_text_treated_as_tainted_input"
+    ],
+    "violate": [
+      "agent_commit_lacks_provenance_attestation",
+      "agent_disables_failing_compliance_test",
+      "hallucinated_package_added_to_manifest",
+      "loop_limit_removed_from_agent_workflow",
+      "nm_105_control_absent",
+      "untrusted_text_executed_as_instruction"
+    ]
+  },
+  "NM-106": {
+    "comply": [
+      "agent_action_log_append_only",
+      "agent_cannot_widen_own_mandate",
+      "agent_change_reviewed_by_named_human",
+      "agent_commit_carries_provenance_attestation",
+      "agent_identity_bound_to_signature",
+      "failing_compliance_test_left_failing_until_fixed",
+      "loop_limit_and_cost_breaker_enabled",
+      "nm_106_control_evidenced",
+      "tool_definition_change_reviewed"
+    ],
+    "violate": [
+      "agent_action_log_made_editable",
+      "agent_commit_lacks_provenance_attestation",
+      "agent_disables_failing_compliance_test",
+      "agent_signature_shared_across_agents",
+      "loop_limit_removed_from_agent_workflow",
+      "nm_106_control_absent"
+    ]
+  },
+  "NM-201": {
+    "comply": [
+      "content_security_policy_tightened_not_relaxed",
+      "database_access_uses_parameterised_queries",
+      "deserialisation_restricted_to_known_types",
+      "injection_test_added_for_new_endpoint",
+      "nm_201_control_evidenced",
+      "output_encoded_before_render",
+      "query_builder_forbids_string_concatenation",
+      "template_autoescape_enabled",
+      "upload_handler_constrains_type_size_and_path"
+    ],
+    "violate": [
+      "content_security_policy_relaxed",
+      "deserialisation_of_arbitrary_types",
+      "nm_201_control_absent",
+      "output_rendered_without_encoding",
+      "raw_query_accepts_user_input",
+      "sql_built_by_string_concatenation"
+    ]
+  },
+  "NM-202": {
+    "comply": [
+      "archive_extraction_bounded",
+      "content_security_policy_tightened_not_relaxed",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_stack_trace",
+      "nm_202_control_evidenced",
+      "outbound_fetch_restricted_to_allowlist",
+      "output_encoded_before_render",
+      "template_autoescape_enabled",
+      "upload_handler_constrains_type_size_and_path"
+    ],
+    "violate": [
+      "content_security_policy_relaxed",
+      "deserialisation_of_arbitrary_types",
+      "nm_202_control_absent",
+      "output_rendered_without_encoding",
+      "upload_handler_accepts_any_path",
+      "webhook_fetches_arbitrary_internal_url"
+    ]
+  },
+  "NM-203": {
+    "comply": [
+      "archive_extraction_bounded",
+      "cryptographic_primitive_from_approved_library",
+      "deprecated_primitive_refused_by_linter",
+      "deserialisation_restricted_to_known_types",
+      "error_response_omits_stack_trace",
+      "internal_identifiers_absent_from_error_body",
+      "nm_203_control_evidenced",
+      "outbound_fetch_restricted_to_allowlist",
+      "upload_handler_constrains_type_size_and_path"
+    ],
+    "violate": [
+      "deserialisation_of_arbitrary_types",
+      "hand_rolled_cipher_introduced",
+      "nm_203_control_absent",
+      "stack_trace_returned_to_caller",
+      "upload_handler_accepts_any_path",
+      "webhook_fetches_arbitrary_internal_url"
+    ]
+  },
+  "NM-204": {
+    "comply": [
+      "cryptographic_primitive_from_approved_library",
+      "deprecated_primitive_refused_by_linter",
+      "error_response_omits_stack_trace",
+      "input_validated_against_allowlist",
+      "internal_identifiers_absent_from_error_body",
+      "nm_204_control_evidenced",
+      "outbound_fetch_restricted_to_allowlist",
+      "random_source_is_cryptographic",
+      "session_fixation_test_present"
+    ],
+    "violate": [
+      "hand_rolled_cipher_introduced",
+      "input_validation_removed_from_identifier_field",
+      "md5_or_sha1_used_for_integrity",
+      "nm_204_control_absent",
+      "stack_trace_returned_to_caller",
+      "webhook_fetches_arbitrary_internal_url"
+    ]
+  },
+  "NM-205": {
+    "comply": [
+      "authz_check_on_every_new_endpoint",
+      "cryptographic_primitive_from_approved_library",
+      "dependency_free_of_known_injection_cve",
+      "deprecated_primitive_refused_by_linter",
+      "input_validated_against_allowlist",
+      "nm_205_control_evidenced",
+      "random_source_is_cryptographic",
+      "security_headers_set_on_new_route",
+      "session_fixation_test_present"
+    ],
+    "violate": [
+      "authz_check_missing_on_new_endpoint",
+      "hand_rolled_cipher_introduced",
+      "input_validation_removed_from_identifier_field",
+      "md5_or_sha1_used_for_integrity",
+      "nm_205_control_absent",
+      "security_header_dropped_from_response"
+    ]
+  },
+  "NM-301": {
+    "comply": [
+      "artefact_provenance_verified_against_builder",
+      "build_runner_ephemeral_and_pinned",
+      "ci_log_redaction_verified",
+      "commit_to_protected_branch_signed",
+      "nm_301_control_evidenced",
+      "secret_injected_from_vault_at_runtime",
+      "secret_scanner_clean_on_diff",
+      "signature_verified_by_branch_protection",
+      "unsigned_commit_rejected_by_hook"
+    ],
+    "violate": [
+      "artefact_deployed_without_provenance",
+      "nm_301_control_absent",
+      "secret_committed_to_source",
+      "secret_scanner_gate_disabled",
+      "signature_verification_bypassed",
+      "unsigned_commit_merged_to_protected_branch"
+    ]
+  },
+  "NM-302": {
+    "comply": [
+      "artefact_provenance_verified_against_builder",
+      "build_runner_ephemeral_and_pinned",
+      "commit_to_protected_branch_signed",
+      "nm_302_control_evidenced",
+      "provenance_attestation_signed",
+      "sbom_bound_to_artefact_digest",
+      "sbom_published_per_release",
+      "signature_verified_by_branch_protection",
+      "unsigned_commit_rejected_by_hook"
+    ],
+    "violate": [
+      "artefact_deployed_without_provenance",
+      "build_runner_reused_across_builds",
+      "nm_302_control_absent",
+      "release_shipped_without_sbom",
+      "signature_verification_bypassed",
+      "unsigned_commit_merged_to_protected_branch"
+    ]
+  },
+  "NM-303": {
+    "comply": [
+      "artefact_provenance_verified_against_builder",
+      "build_runner_ephemeral_and_pinned",
+      "cve_exception_recorded_with_expiry",
+      "dependency_cve_below_declared_threshold",
+      "nm_303_control_evidenced",
+      "provenance_attestation_signed",
+      "sbom_bound_to_artefact_digest",
+      "sbom_covers_transitive_dependencies",
+      "sbom_published_per_release"
+    ],
+    "violate": [
+      "artefact_deployed_without_provenance",
+      "build_runner_reused_across_builds",
+      "dependency_with_critical_cve_merged",
+      "nm_303_control_absent",
+      "release_shipped_without_sbom",
+      "sbom_not_bound_to_digest"
+    ]
+  },
+  "NM-304": {
+    "comply": [
+      "cve_exception_recorded_with_expiry",
+      "dependency_cve_below_declared_threshold",
+      "licence_allowlist_enforced",
+      "manifest_and_lockfile_change_atomically",
+      "nm_304_control_evidenced",
+      "private_registry_preferred_for_resolution",
+      "sbom_bound_to_artefact_digest",
+      "sbom_covers_transitive_dependencies",
+      "sbom_published_per_release"
+    ],
+    "violate": [
+      "copyleft_dependency_added_to_proprietary_service",
+      "dependency_with_critical_cve_merged",
+      "nm_304_control_absent",
+      "public_registry_resolves_private_package_name",
+      "release_shipped_without_sbom",
+      "sbom_not_bound_to_digest"
+    ]
+  },
+  "NM-305": {
+    "comply": [
+      "cve_exception_recorded_with_expiry",
+      "dependency_cve_below_declared_threshold",
+      "key_rotation_interval_enforced",
+      "leaked_credential_revoked_before_merge",
+      "licence_allowlist_enforced",
+      "manifest_and_lockfile_change_atomically",
+      "nm_305_control_evidenced",
+      "private_registry_preferred_for_resolution",
+      "tls_1_2_or_above_enforced"
+    ],
+    "violate": [
+      "copyleft_dependency_added_to_proprietary_service",
+      "dependency_with_critical_cve_merged",
+      "lockfile_left_stale_after_manifest_change",
+      "nm_305_control_absent",
+      "public_registry_resolves_private_package_name",
+      "tls_downgrade_permitted"
+    ]
+  },
+  "NM-306": {
+    "comply": [
+      "approved_algorithm_for_encryption_at_rest",
+      "dependency_pinned_by_digest",
+      "key_rotation_interval_enforced",
+      "leaked_credential_revoked_before_merge",
+      "manifest_and_lockfile_change_atomically",
+      "nm_306_control_evidenced",
+      "private_registry_preferred_for_resolution",
+      "registry_mirror_integrity_checked",
+      "tls_1_2_or_above_enforced"
+    ],
+    "violate": [
+      "credential_written_to_ci_log",
+      "deprecated_cipher_enabled_on_production_path",
+      "lockfile_left_stale_after_manifest_change",
+      "nm_306_control_absent",
+      "public_registry_resolves_private_package_name",
+      "tls_downgrade_permitted"
+    ]
+  },
+  "NM-401": {
+    "comply": [
+      "approval_recorded_before_deploy",
+      "backup_verified_before_storage_change",
+      "change_approved_by_someone_other_than_author",
+      "down_migration_present_and_rehearsed",
+      "emergency_protocol_invoked_with_record",
+      "freeze_window_honoured",
+      "nm_401_control_evidenced",
+      "rollback_tested_before_production_change",
+      "self_approval_blocked_by_policy"
+    ],
+    "violate": [
+      "approval_step_removed_from_pipeline",
+      "change_self_approved_by_author",
+      "deploy_during_freeze_without_emergency_protocol",
+      "irreversible_migration_shipped",
+      "nm_401_control_absent",
+      "production_change_without_tested_rollback"
+    ]
+  },
+  "NM-402": {
+    "comply": [
+      "availability_regression_blocks_deploy",
+      "backup_verified_before_storage_change",
+      "down_migration_present_and_rehearsed",
+      "emergency_protocol_invoked_with_record",
+      "freeze_calendar_read_from_constitution",
+      "freeze_window_honoured",
+      "latency_regression_gate_on_critical_path",
+      "nm_402_control_evidenced",
+      "rollback_tested_before_production_change"
+    ],
+    "violate": [
+      "deploy_during_freeze_without_emergency_protocol",
+      "freeze_calendar_overridden_by_flag",
+      "irreversible_migration_shipped",
+      "latency_gate_threshold_raised_to_pass",
+      "nm_402_control_absent",
+      "production_change_without_tested_rollback"
+    ]
+  },
+  "NM-403": {
+    "comply": [
+      "availability_regression_blocks_deploy",
+      "canary_deploy_on_critical_service",
+      "emergency_protocol_invoked_with_record",
+      "feature_flag_defaults_closed",
+      "freeze_calendar_read_from_constitution",
+      "freeze_window_honoured",
+      "latency_regression_gate_on_critical_path",
+      "load_test_covers_peak_profile",
+      "nm_403_control_evidenced"
+    ],
+    "violate": [
+      "availability_check_skipped_on_critical_path",
+      "deploy_during_freeze_without_emergency_protocol",
+      "feature_flag_defaults_open_on_regulated_surface",
+      "freeze_calendar_overridden_by_flag",
+      "latency_gate_threshold_raised_to_pass",
+      "nm_403_control_absent"
+    ]
+  },
+  "NM-404": {
+    "comply": [
+      "availability_regression_blocks_deploy",
+      "canary_deploy_on_critical_service",
+      "change_ticket_linked_to_commit",
+      "coverage_floor_met_on_changed_lines",
+      "feature_flag_defaults_closed",
+      "incident_runbook_updated_with_change",
+      "latency_regression_gate_on_critical_path",
+      "load_test_covers_peak_profile",
+      "nm_404_control_evidenced"
+    ],
+    "violate": [
+      "availability_check_skipped_on_critical_path",
+      "coverage_floor_lowered_for_release",
+      "emergency_change_never_retro_approved",
+      "feature_flag_defaults_open_on_regulated_surface",
+      "latency_gate_threshold_raised_to_pass",
+      "nm_404_control_absent"
+    ]
+  },
+  "NM-501": {
+    "comply": [
+      "accessibility_gate_at_wcag_aa_in_pipeline",
+      "clock_override_rejected_by_config_loader",
+      "incident_detection_wired_to_oncall",
+      "keyboard_only_completion_verified",
+      "nm_501_control_evidenced",
+      "notification_clock_sourced_from_jurisdiction_table",
+      "personal_data_field_has_recorded_purpose",
+      "retention_schedule_enforced_by_job",
+      "status_conveyed_in_text_not_colour_alone"
+    ],
+    "violate": [
+      "accessibility_gate_removed_from_pipeline",
+      "clock_started_at_confirmation_not_discovery",
+      "nm_501_control_absent",
+      "notification_deadline_exposed_as_tenant_setting",
+      "personal_data_field_added_without_purpose",
+      "wcag_failures_downgraded_to_warnings"
+    ]
+  },
+  "NM-502": {
+    "comply": [
+      "access_request_path_preserved",
+      "accessibility_gate_at_wcag_aa_in_pipeline",
+      "keyboard_only_completion_verified",
+      "monitoring_proportionality_assessment_recorded",
+      "nm_502_control_evidenced",
+      "personal_data_field_has_recorded_purpose",
+      "retention_schedule_enforced_by_job",
+      "status_conveyed_in_text_not_colour_alone",
+      "worker_monitoring_data_access_restricted"
+    ],
+    "violate": [
+      "accessibility_gate_removed_from_pipeline",
+      "nm_502_control_absent",
+      "personal_data_field_added_without_purpose",
+      "retention_job_disabled",
+      "wcag_failures_downgraded_to_warnings",
+      "worker_monitoring_data_opened_to_managers"
+    ]
+  },
+  "NM-503": {
+    "comply": [
+      "access_request_path_preserved",
+      "badge_logs_minimised_and_retained_on_schedule",
+      "consent_withdrawal_one_step",
+      "monitoring_proportionality_assessment_recorded",
+      "nm_503_control_evidenced",
+      "personal_data_field_has_recorded_purpose",
+      "retention_schedule_enforced_by_job",
+      "withdrawal_honoured_across_channels",
+      "worker_monitoring_data_access_restricted"
+    ],
+    "violate": [
+      "badge_logs_retained_indefinitely",
+      "consent_withdrawal_requires_phone_call",
+      "nm_503_control_absent",
+      "personal_data_field_added_without_purpose",
+      "retention_job_disabled",
+      "worker_monitoring_data_opened_to_managers"
+    ]
+  },
+  "NM-504": {
+    "comply": [
+      "badge_logs_minimised_and_retained_on_schedule",
+      "consent_record_carries_timestamp_and_source",
+      "consent_withdrawal_one_step",
+      "erasure_propagates_to_derived_stores",
+      "monitoring_proportionality_assessment_recorded",
+      "nm_504_control_evidenced",
+      "privacy_notice_versioned_in_repo",
+      "withdrawal_honoured_across_channels",
+      "worker_monitoring_data_access_restricted"
+    ],
+    "violate": [
+      "badge_logs_retained_indefinitely",
+      "consent_withdrawal_requires_phone_call",
+      "erasure_request_not_propagated",
+      "nm_504_control_absent",
+      "withdrawal_ignored_by_marketing_pipeline",
+      "worker_monitoring_data_opened_to_managers"
+    ]
+  },
+  "NM-505": {
+    "comply": [
+      "consent_record_carries_timestamp_and_source",
+      "consent_withdrawal_one_step",
+      "data_export_available_in_machine_readable_form",
+      "dpia_recorded_for_new_processing",
+      "erasure_propagates_to_derived_stores",
+      "nm_505_control_evidenced",
+      "privacy_notice_versioned_in_repo",
+      "sub_processor_change_notified_before_onboarding",
+      "withdrawal_honoured_across_channels"
+    ],
+    "violate": [
+      "access_request_path_removed",
+      "consent_withdrawal_requires_phone_call",
+      "erasure_request_not_propagated",
+      "nm_505_control_absent",
+      "sub_processor_added_without_notice",
+      "withdrawal_ignored_by_marketing_pipeline"
+    ]
+  }
+}

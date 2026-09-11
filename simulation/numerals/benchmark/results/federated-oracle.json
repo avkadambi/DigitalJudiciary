@@ -1,0 +1,124 @@
+{
+  "config": {
+    "mode": "oracle",
+    "models": "sonnet",
+    "arms": "A,B_mem,B_div,B",
+    "out": "benchmark/results"
+  },
+  "stream": 3000,
+  "results": [
+    {
+      "arm": "A",
+      "model": "claude-sonnet-5",
+      "label": "Monolith \u2014 whole constitution, no case base",
+      "cross_division_consistency": {
+        "pairs": 200,
+        "consistent": 200,
+        "rate": 1.0
+      },
+      "c_cross_stratum": {
+        "cases": 400,
+        "disposition_agrees_with_reference": 289,
+        "cites_the_foreign_record": 0
+      },
+      "floors": {
+        "cases": 300,
+        "upheld": 300
+      },
+      "answers_citing_a_foreign_division_record": 0,
+      "no_call_fraction": 0.0,
+      "usage": {
+        "calls": 3000,
+        "input_tokens": 1395525,
+        "cached_input_tokens": 11286000,
+        "output_tokens": 360000,
+        "cost_usd": 4.3241
+      }
+    },
+    {
+      "arm": "B_mem",
+      "model": "claude-sonnet-5",
+      "label": "Advisory memory \u2014 gated survivors shown as advice",
+      "cross_division_consistency": {
+        "pairs": 200,
+        "consistent": 200,
+        "rate": 1.0
+      },
+      "c_cross_stratum": {
+        "cases": 400,
+        "disposition_agrees_with_reference": 400,
+        "cites_the_foreign_record": 400
+      },
+      "floors": {
+        "cases": 300,
+        "upheld": 300
+      },
+      "answers_citing_a_foreign_division_record": 400,
+      "no_call_fraction": 0.0,
+      "usage": {
+        "calls": 3000,
+        "input_tokens": 1482274,
+        "cached_input_tokens": 11286000,
+        "output_tokens": 360000,
+        "cost_usd": 4.4109
+      }
+    },
+    {
+      "arm": "B_div",
+      "model": "claude-sonnet-5",
+      "label": "Digital Judiciary, division-local store \u2014 records bind, nothing is shared",
+      "cross_division_consistency": {
+        "pairs": 200,
+        "consistent": 200,
+        "rate": 1.0
+      },
+      "c_cross_stratum": {
+        "cases": 400,
+        "disposition_agrees_with_reference": 307,
+        "cites_the_foreign_record": 0
+      },
+      "floors": {
+        "cases": 300,
+        "upheld": 300
+      },
+      "answers_citing_a_foreign_division_record": 0,
+      "no_call_fraction": 0.146,
+      "usage": {
+        "calls": 2562,
+        "input_tokens": 1206347,
+        "cached_input_tokens": 0,
+        "output_tokens": 307440,
+        "cost_usd": 2.7435
+      }
+    },
+    {
+      "arm": "B",
+      "model": "claude-sonnet-5",
+      "label": "Digital Judiciary, federated \u2014 one enterprise store, foreign records bind, home records win on scope",
+      "cross_division_consistency": {
+        "pairs": 200,
+        "consistent": 200,
+        "rate": 1.0
+      },
+      "c_cross_stratum": {
+        "cases": 400,
+        "disposition_agrees_with_reference": 400,
+        "cites_the_foreign_record": 400
+      },
+      "floors": {
+        "cases": 300,
+        "upheld": 300
+      },
+      "answers_citing_a_foreign_division_record": 400,
+      "no_call_fraction": 0.26666666666666666,
+      "usage": {
+        "calls": 2200,
+        "input_tokens": 1030699,
+        "cached_input_tokens": 0,
+        "output_tokens": 264000,
+        "cost_usd": 2.3507
+      }
+    }
+  ],
+  "note": "oracle mode is a perfect reader of what each arm was shown \u2014 an upper bound on the arm, not a prediction about any model"
+}

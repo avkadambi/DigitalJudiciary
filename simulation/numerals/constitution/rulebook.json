@@ -1,0 +1,3287 @@
+{
+  "rulebook_version": "numerals-rb-000001",
+  "corpus_version": "1.3.0",
+  "level": "enterprise",
+  "name": "Numerals Enterprise Constitution",
+  "description": "The constitution every Numerals division inherits. Inheritance is minimum harmonisation: a division may tighten an enterprise provision and may never loosen one; an enterprise absolute is a floor in every division. Records on enterprise provisions bind enterprise-wide; a division's own record is narrower in scope and wins on the ordering rule's scope key.",
+  "inheritance_rule": {
+    "may_tighten": true,
+    "may_loosen": false,
+    "enterprise_absolute_is_division_floor": true,
+    "foreign_record_scope_offset": 1
+  },
+  "counts": {
+    "provisions": 33,
+    "absolute": 6,
+    "proposed_absolute": 4,
+    "families": 6,
+    "divisions": 5
+  },
+  "authorities": {
+    "lawmakers": [
+      "lawmaker:numerals-group-policy-board",
+      "lawmaker:numerals-group-compliance-office",
+      "lawmaker:numerals-group-technology-council"
+    ],
+    "judges": [
+      "judge:NJ1-first-instance",
+      "judge:NJ2-review",
+      "judge:NJ3-en-banc"
+    ],
+    "riskowner": [
+      "riskowner:numerals-group-chief-risk-officer"
+    ]
+  },
+  "standing_declaration": {
+    "id": "NM-STAND-0001",
+    "scope": "global",
+    "adverse_contest_standing_exists": true,
+    "declared_by": "lawmaker:numerals-group-compliance-office",
+    "declared_at": 0,
+    "note": "A9 first limb at the enterprise level: the group compliance office holds contest standing adverse to grants in every division."
+  },
+  "divisions": {
+    "vetpoc": {
+      "label": "VetPOC",
+      "pack": "vetpoc-constitution-corpus",
+      "rulebook_version": "vetpoc-rb-000001",
+      "corpus_version": "2.1.0"
+    },
+    "semifab": {
+      "label": "SemiFab",
+      "pack": "semifab-constitution-corpus",
+      "rulebook_version": "semifab-rb-000001",
+      "corpus_version": "2.1.0"
+    },
+    "frontierllm": {
+      "label": "FrontierLLM",
+      "pack": "frontierllm-constitution-corpus",
+      "rulebook_version": "frontierllm-rb-000001",
+      "corpus_version": "2.1.0"
+    },
+    "dcvigil": {
+      "label": "DCVigil",
+      "pack": "dcvigil-constitution-corpus",
+      "rulebook_version": "dcvigil-rb-000001",
+      "corpus_version": "2.1.0"
+    },
+    "meridian": {
+      "label": "Meridian",
+      "pack": "meridian-corpus",
+      "rulebook_version": "meridian-rb-000001",
+      "corpus_version": "2.1.0"
+    }
+  },
+  "provisions": [
+    {
+      "id": "NM-001",
+      "level": "enterprise",
+      "family": "GV",
+      "family_title": "Governance of the rulebook and of automated decisions",
+      "title": "No configuration, feature flag or release removes the affected party's path to contest an automated decision, in any division",
+      "absolute": true,
+      "proposed_absolute": false,
+      "citation": "GDPR Art. 22(3); EU AI Act Art. 14(4); Chapter 5 A8",
+      "source_status": "EU text reusable; group floor",
+      "risk_framework": "Chapter 5 axioms; GDPR Art. 22; EU AI Act Art. 5 and Art. 12",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:GV",
+      "factors": {
+        "comply": [
+          "appeal_route_documented_in_decision_notice",
+          "audit_store_immutability_verified_by_test",
+          "biometric_identification_absent_from_feature",
+          "contest_control_covered_by_configuration_test",
+          "contest_path_reachable_from_every_automated_decision",
+          "decision_record_written_append_only",
+          "nm_001_control_evidenced",
+          "no_vulnerability_targeting_in_personalisation_logic",
+          "prohibited_practice_screen_run_on_feature_design"
+        ],
+        "violate": [
+          "appeal_route_hidden_behind_feature_gate",
+          "contest_path_removed_by_configuration_flag",
+          "decision_record_updated_in_place",
+          "facial_recognition_database_built_by_scraping",
+          "nm_001_control_absent",
+          "personalisation_targets_age_or_disability_vulnerability"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-GV-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No configuration removes the affected party's path to contest an automated decision"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-GV-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No configuration removes the affected party's path to contest an automated decision"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-GV-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Human oversight override for a high-risk feature is never removed by configuration"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-411",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No configuration removes the affected party's path to contest an automated decision"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-110",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No adverse credit action rests on a model output that cannot produce specific principal reasons, and no change removes the human-reviewable path to contest one."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-002",
+      "level": "enterprise",
+      "family": "GV",
+      "family_title": "Governance of the rulebook and of automated decisions",
+      "title": "No Numerals system performs a practice prohibited by EU AI Act Article 5 \u2014 social scoring, subliminal or exploitative manipulation, workplace emotion inference, untargeted facial scraping",
+      "absolute": true,
+      "proposed_absolute": false,
+      "citation": "EU AI Act, Reg. (EU) 2024/1689 Art. 5",
+      "source_status": "EU text reusable",
+      "risk_framework": "Chapter 5 axioms; GDPR Art. 22; EU AI Act Art. 5 and Art. 12",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:GV",
+      "factors": {
+        "comply": [
+          "audit_store_immutability_verified_by_test",
+          "biometric_identification_absent_from_feature",
+          "decision_record_written_append_only",
+          "nm_002_control_evidenced",
+          "no_vulnerability_targeting_in_personalisation_logic",
+          "parameter_edit_requires_legislative_enactment",
+          "prohibited_practice_screen_run_on_feature_design",
+          "record_hash_chain_continuous",
+          "threshold_change_routed_through_amendment_channel"
+        ],
+        "violate": [
+          "audit_store_retention_shortened_by_config",
+          "decision_record_updated_in_place",
+          "facial_recognition_database_built_by_scraping",
+          "gate_threshold_edited_in_place",
+          "nm_002_control_absent",
+          "personalisation_targets_age_or_disability_vulnerability"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-GV-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No system exploits vulnerabilities of age, disability or socio-economic situation, and no untargeted biometric scraping is enabled"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-GV-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No system exploits vulnerabilities of a person, and no untargeted biometric scraping is enabled"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-GV-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Practices prohibited under EU AI Act Article 5 are never implemented in a product surface"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-330",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour."
+            },
+            {
+              "id": "DV-331",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage."
+            },
+            {
+              "id": "DV-345",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Emotion inference on facility personnel with no documented Article 5(1)(f) medical or safety justification and no completed assessment is refused outright"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-107",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No system performs social scoring, deploys subliminal or purposefully manipulative techniques, infers emotion in the workplace, or builds facial-recognition databases by untargeted scraping."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-003",
+      "level": "enterprise",
+      "family": "GV",
+      "family_title": "Governance of the rulebook and of automated decisions",
+      "title": "Decision and audit records are append-only in every division; a correction is a new record that cites the old",
+      "absolute": true,
+      "proposed_absolute": false,
+      "citation": "Chapter 5 A5; SEC 17a-4(f) and 21 CFR 1304.04 as division instances",
+      "source_status": "group floor; division instruments vary",
+      "risk_framework": "Chapter 5 axioms; GDPR Art. 22; EU AI Act Art. 5 and Art. 12",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:GV",
+      "factors": {
+        "comply": [
+          "adverse_contest_rate_exported_as_two_counts",
+          "audit_store_immutability_verified_by_test",
+          "constitution_version_pinned_on_every_record",
+          "decision_record_written_append_only",
+          "nm_003_control_evidenced",
+          "parameter_edit_requires_legislative_enactment",
+          "record_hash_chain_continuous",
+          "standing_declaration_present_and_dated",
+          "threshold_change_routed_through_amendment_channel"
+        ],
+        "violate": [
+          "audit_store_retention_shortened_by_config",
+          "constitutional_parameter_changed_by_pull_request",
+          "decision_record_updated_in_place",
+          "gate_threshold_edited_in_place",
+          "nm_003_control_absent",
+          "standing_declaration_deleted_from_constitution"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-RR-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "The audit trail is append-only and never updated in place"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-EX-003",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Export records are append-only: the initial image is preserved and every change records who made it and when"
+            },
+            {
+              "id": "SF-WI-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Metrology and recipe-execution records are never overwritten in place"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-GV-003",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Decision and audit records are append-only"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-412",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Decision and audit records are append-only"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-506",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Ledger entries are append-only. A posted entry is never updated in place or deleted; a correction is a compensating entry that leaves both records visible."
+            },
+            {
+              "id": "MF-512",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Records the firm is required to preserve in non-rewriteable, non-erasable form are written to storage that provides it, and no change may redirect them to rewriteable storage or shorten the declared period."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-004",
+      "level": "enterprise",
+      "family": "GV",
+      "family_title": "Governance of the rulebook and of automated decisions",
+      "title": "Constitutional parameters \u2014 thresholds, windows, class sizes \u2014 change only by legislative enactment through the amendment channel, never in place",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Chapter 5 A3; CC-29",
+      "source_status": "original",
+      "risk_framework": "Chapter 5 axioms; GDPR Art. 22; EU AI Act Art. 5 and Art. 12",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:GV",
+      "factors": {
+        "comply": [
+          "adverse_contest_rate_exported_as_two_counts",
+          "audit_register_never_read_by_resolve",
+          "constitution_version_pinned_on_every_record",
+          "nm_004_control_evidenced",
+          "parameter_edit_requires_legislative_enactment",
+          "reporter_output_isolated_from_adjudication_input",
+          "standing_declaration_attributed_to_lawmaker",
+          "standing_declaration_present_and_dated",
+          "threshold_change_routed_through_amendment_channel"
+        ],
+        "violate": [
+          "adverse_contest_rate_reported_as_bare_ratio",
+          "constitutional_parameter_changed_by_pull_request",
+          "gate_threshold_edited_in_place",
+          "nm_004_control_absent",
+          "reporter_bulletin_injected_into_adjudication_prompt",
+          "standing_declaration_deleted_from_constitution"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-GV-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Constitutional parameters change only by legislative enactment"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-GV-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Constitutional parameters change only by legislative enactment"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-GV-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Constitutional parameters change only by legislative enactment"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-413",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A change to a gate threshold is routed to the amendment channel, never applied in place"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-593",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A change to a gate threshold is routed to the amendment channel, never applied in place"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-005",
+      "level": "enterprise",
+      "family": "GV",
+      "family_title": "Governance of the rulebook and of automated decisions",
+      "title": "Every division constitution declares whether any party holds contest standing adverse to grants, and every export carries the realised adverse-contest rate as two counts",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Chapter 5 A9",
+      "source_status": "original",
+      "risk_framework": "Chapter 5 axioms; GDPR Art. 22; EU AI Act Art. 5 and Art. 12",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:GV",
+      "factors": {
+        "comply": [
+          "adverse_contest_rate_exported_as_two_counts",
+          "audit_register_never_read_by_resolve",
+          "docket_entry_carries_rating_and_threshold",
+          "nm_005_control_evidenced",
+          "observer_channel_read_only",
+          "reporter_output_isolated_from_adjudication_input",
+          "standing_declaration_attributed_to_lawmaker",
+          "standing_declaration_present_and_dated",
+          "uncharged_arrival_writes_exactly_one_docket_entry"
+        ],
+        "violate": [
+          "adverse_contest_rate_reported_as_bare_ratio",
+          "audit_register_joined_into_retrieval",
+          "nm_005_control_absent",
+          "reporter_bulletin_injected_into_adjudication_prompt",
+          "standing_declaration_deleted_from_constitution",
+          "uncharged_arrival_leaves_no_docket_entry"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-GV-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The constitution declares whether any party holds contest standing adverse to grants"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-GV-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The constitution declares whether any party holds contest standing adverse to grants"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-GV-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The constitution declares whether any party holds contest standing adverse to grants"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-414",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The constitution declares whether any party holds contest standing adverse to grants"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-594",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The constitution declares whether any party holds contest standing adverse to grants"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-006",
+      "level": "enterprise",
+      "family": "GV",
+      "family_title": "Governance of the rulebook and of automated decisions",
+      "title": "Reporter output never reaches the adjudication input path and the audit register is never read by resolve, in any division",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Chapter 5 Definitions 17 and 19",
+      "source_status": "original",
+      "risk_framework": "Chapter 5 axioms; GDPR Art. 22; EU AI Act Art. 5 and Art. 12",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:GV",
+      "factors": {
+        "comply": [
+          "audit_register_never_read_by_resolve",
+          "declination_rated_before_docketing",
+          "docket_and_store_disjoint_by_test",
+          "docket_entry_carries_rating_and_threshold",
+          "nm_006_control_evidenced",
+          "observer_channel_read_only",
+          "reporter_output_isolated_from_adjudication_input",
+          "rulebook_read_only_to_adjudicator",
+          "uncharged_arrival_writes_exactly_one_docket_entry"
+        ],
+        "violate": [
+          "audit_register_joined_into_retrieval",
+          "declination_written_without_rating",
+          "nm_006_control_absent",
+          "renewal_applied_silently_to_lapsed_acceptance",
+          "reporter_bulletin_injected_into_adjudication_prompt",
+          "uncharged_arrival_leaves_no_docket_entry"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-GV-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Reporter output never reaches the adjudication input path"
+            },
+            {
+              "id": "VP-GV-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The audit register is disjoint from the precedent store and is never read by resolve"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-GV-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Reporter output never reaches the adjudication input path"
+            },
+            {
+              "id": "SF-GV-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The audit register is disjoint from the precedent store and is never read by resolve"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-GV-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Reporter output never reaches the adjudication input path, and the audit register is never read by resolve"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-415",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Reporter output never reaches the adjudication input path, and the audit register is never read by resolve"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-595",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Reporter output never reaches the adjudication input path, and the audit register is never read by resolve"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-007",
+      "level": "enterprise",
+      "family": "GV",
+      "family_title": "Governance of the rulebook and of automated decisions",
+      "title": "Every arrival that is not charged leaves exactly one docket entry, rated where it was declined",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Chapter 5 Definition 14",
+      "source_status": "original",
+      "risk_framework": "Chapter 5 axioms; GDPR Art. 22; EU AI Act Art. 5 and Art. 12",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:GV",
+      "factors": {
+        "comply": [
+          "acceptance_carries_expiry_and_referral",
+          "declination_rated_before_docketing",
+          "docket_and_store_disjoint_by_test",
+          "docket_entry_carries_rating_and_threshold",
+          "nm_007_control_evidenced",
+          "referral_acknowledged_with_one_of_four_dispositions",
+          "renewal_visible_on_the_record",
+          "rulebook_read_only_to_adjudicator",
+          "uncharged_arrival_writes_exactly_one_docket_entry"
+        ],
+        "violate": [
+          "acceptance_recorded_without_expiry",
+          "declination_written_without_rating",
+          "docket_entries_purged_on_schedule",
+          "nm_007_control_absent",
+          "renewal_applied_silently_to_lapsed_acceptance",
+          "uncharged_arrival_leaves_no_docket_entry"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-GV-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every arrival that is not charged leaves exactly one docket entry"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-GV-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every arrival that is not charged leaves exactly one docket entry"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-GV-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every arrival that is not charged leaves exactly one docket entry"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-416",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every arrival that is not charged leaves exactly one docket entry"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-596",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every arrival that is not charged leaves exactly one docket entry"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-101",
+      "level": "enterprise",
+      "family": "AG",
+      "family_title": "Agent-authored change and autonomous action",
+      "title": "No AI agent modifies authentication or authorisation middleware, tenant-access code or session handling in any division",
+      "absolute": false,
+      "proposed_absolute": true,
+      "citation": "Group AI policy; NIST SP 800-53 AC-3; Chapter 5 \u00a74 Rego example",
+      "source_status": "group floor",
+      "risk_framework": "Agentic code provenance; EU AI Act Art. 14; group AI policy",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:AG",
+      "factors": {
+        "comply": [
+          "agent_change_blocked_by_path_policy_on_authn",
+          "agent_diff_excludes_authentication_middleware",
+          "agent_mandate_declared_before_execution",
+          "authz_middleware_change_authored_by_human",
+          "ci_config_change_by_agent_flagged_for_review",
+          "guardrail_edit_requires_two_human_approvers",
+          "human_stop_operable_and_tested",
+          "nm_101_control_evidenced",
+          "security_policy_change_carries_multiparty_human_review"
+        ],
+        "violate": [
+          "agent_changes_ci_pipeline_to_skip_gate",
+          "agent_edits_security_policy_without_human_review",
+          "agent_modifies_authentication_middleware",
+          "agent_removes_human_stop",
+          "agent_rewrites_authorization_check",
+          "nm_101_control_absent"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AI-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "AI agents never modify authentication or authorisation middleware"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AG-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "AI agents never modify export-control enforcement logic"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AG-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Agents never modify security policies, compliance guardrails or CI/CD configuration"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-316",
+              "absolute": false,
+              "status": "in_force",
+              "title": "AI-agent-authored changes to authorization/tenant-access code require human reviewer sign-off."
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-571",
+              "absolute": false,
+              "status": "in_force",
+              "title": "An agent-authored change to security policy, RBAC, or a decisioning path requires multiparty human review"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-102",
+      "level": "enterprise",
+      "family": "AG",
+      "family_title": "Agent-authored change and autonomous action",
+      "title": "An agent-authored change to security policy, guardrails, CI/CD configuration or a decisioning path carries multiparty human review before merge",
+      "absolute": false,
+      "proposed_absolute": true,
+      "citation": "Group AI policy; EU AI Act Art. 14",
+      "source_status": "group floor; frontierllm and meridian state it absolutely, others ordinarily",
+      "risk_framework": "Agentic code provenance; EU AI Act Art. 14; group AI policy",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:AG",
+      "factors": {
+        "comply": [
+          "agent_code_executes_in_sandboxed_runner",
+          "agent_mandate_declared_before_execution",
+          "ci_config_change_by_agent_flagged_for_review",
+          "egress_restricted_to_allowlisted_hosts",
+          "guardrail_edit_requires_two_human_approvers",
+          "human_stop_operable_and_tested",
+          "mandate_narrower_than_credentials_held",
+          "nm_102_control_evidenced",
+          "security_policy_change_carries_multiparty_human_review"
+        ],
+        "violate": [
+          "agent_changes_ci_pipeline_to_skip_gate",
+          "agent_code_runs_outside_sandbox",
+          "agent_edits_security_policy_without_human_review",
+          "agent_removes_human_stop",
+          "agent_widens_own_mandate_scope",
+          "nm_102_control_absent"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AI-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "An agent may not disable or weaken a failing compliance test"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AG-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "An agent may not disable or weaken a failing compliance test"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AG-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Agentic code modifying core system logic requires recorded human sign-off"
+            },
+            {
+              "id": "FL-AG-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Agents never modify security policies, compliance guardrails or CI/CD configuration"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-406",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent-authored changes to kernel-level monitoring components require multiparty human review"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-571",
+              "absolute": false,
+              "status": "in_force",
+              "title": "An agent-authored change to security policy, RBAC, or a decisioning path requires multiparty human review"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-103",
+      "level": "enterprise",
+      "family": "AG",
+      "family_title": "Agent-authored change and autonomous action",
+      "title": "An autonomous agent's mandate is declared before execution, is narrower than the credentials it holds, and its human-operable stop is never removed or widened by an agent-authored change",
+      "absolute": true,
+      "proposed_absolute": false,
+      "citation": "Anthropic, Claude's Constitution (Jan 2026, CC0); EU AI Act Art. 14",
+      "source_status": "CC0 source; group floor",
+      "risk_framework": "Agentic code provenance; EU AI Act Art. 14; group AI policy",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:AG",
+      "factors": {
+        "comply": [
+          "agent_code_executes_in_sandboxed_runner",
+          "agent_mandate_declared_before_execution",
+          "egress_restricted_to_allowlisted_hosts",
+          "human_stop_operable_and_tested",
+          "imported_package_verified_to_exist_before_merge",
+          "mandate_narrower_than_credentials_held",
+          "nm_103_control_evidenced",
+          "sandbox_escape_test_in_pipeline",
+          "untrusted_text_treated_as_tainted_input"
+        ],
+        "violate": [
+          "agent_code_runs_outside_sandbox",
+          "agent_egress_opened_to_arbitrary_hosts",
+          "agent_removes_human_stop",
+          "agent_widens_own_mandate_scope",
+          "hallucinated_package_added_to_manifest",
+          "nm_103_control_absent"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": false,
+          "provisions": []
+        },
+        "semifab": {
+          "applies": false,
+          "provisions": []
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-FG-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Every agentic workflow enforces a numerically declared loop limit and a cost circuit breaker that cannot be disabled"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-341",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Remediation halts after its declared action threshold, and no change removes or raises the kill switch without amendment"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-111",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No autonomous agent moves customer funds, changes a credit limit, or closes an account without a bounded mandate and a human-operable stop, and no change removes or degrades that stop."
+            },
+            {
+              "id": "MF-511",
+              "absolute": true,
+              "status": "in_force",
+              "title": "An autonomous agent's mandate bound and its human-operable stop are never removed, widened, or degraded by a change the agent itself authored."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-104",
+      "level": "enterprise",
+      "family": "AG",
+      "family_title": "Agent-authored change and autonomous action",
+      "title": "Agent-authored code executes only inside a sandboxed runner whose egress is restricted to allow-listed hosts",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Group AI policy; AgentDojo threat model",
+      "source_status": "original",
+      "risk_framework": "Agentic code provenance; EU AI Act Art. 14; group AI policy",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:AG",
+      "factors": {
+        "comply": [
+          "agent_code_executes_in_sandboxed_runner",
+          "agent_commit_carries_provenance_attestation",
+          "egress_restricted_to_allowlisted_hosts",
+          "failing_compliance_test_left_failing_until_fixed",
+          "imported_package_verified_to_exist_before_merge",
+          "nm_104_control_evidenced",
+          "prompt_injection_test_covers_new_tool",
+          "sandbox_escape_test_in_pipeline",
+          "untrusted_text_treated_as_tainted_input"
+        ],
+        "violate": [
+          "agent_code_runs_outside_sandbox",
+          "agent_disables_failing_compliance_test",
+          "agent_egress_opened_to_arbitrary_hosts",
+          "hallucinated_package_added_to_manifest",
+          "nm_104_control_absent",
+          "untrusted_text_executed_as_instruction"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AI-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent-authored code executes only inside a sandboxed runner"
+            },
+            {
+              "id": "VP-AI-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent code calls only allowlisted external hosts"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AG-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent-authored code executes only inside a sandboxed runner"
+            },
+            {
+              "id": "SF-AG-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent code calls only allowlisted external hosts"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AG-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent-authored code executes only inside a sandboxed runner"
+            },
+            {
+              "id": "FL-AG-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent code calls only allowlisted external hosts"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": []
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": []
+        }
+      }
+    },
+    {
+      "id": "NM-105",
+      "level": "enterprise",
+      "family": "AG",
+      "family_title": "Agent-authored change and autonomous action",
+      "title": "Every package an agent imports is verified to exist in an approved registry before merge, and instructions derived from untrusted text are treated as tainted input",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Group AI policy; slopsquatting and prompt-injection findings",
+      "source_status": "original",
+      "risk_framework": "Agentic code provenance; EU AI Act Art. 14; group AI policy",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:AG",
+      "factors": {
+        "comply": [
+          "agent_change_reviewed_by_named_human",
+          "agent_commit_carries_provenance_attestation",
+          "agent_identity_bound_to_signature",
+          "failing_compliance_test_left_failing_until_fixed",
+          "imported_package_verified_to_exist_before_merge",
+          "loop_limit_and_cost_breaker_enabled",
+          "nm_105_control_evidenced",
+          "prompt_injection_test_covers_new_tool",
+          "untrusted_text_treated_as_tainted_input"
+        ],
+        "violate": [
+          "agent_commit_lacks_provenance_attestation",
+          "agent_disables_failing_compliance_test",
+          "hallucinated_package_added_to_manifest",
+          "loop_limit_removed_from_agent_workflow",
+          "nm_105_control_absent",
+          "untrusted_text_executed_as_instruction"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AI-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every imported package is verified to exist before merge"
+            },
+            {
+              "id": "VP-AI-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent instructions derived from untrusted text are treated as tainted input"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AG-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every imported package is verified to exist in the registry before merge"
+            },
+            {
+              "id": "SF-AG-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent instructions derived from untrusted text are treated as tainted input"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AG-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every newly imported package is verified to exist in the upstream registry before compilation"
+            },
+            {
+              "id": "FL-AG-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent instructions derived from untrusted text are treated as tainted input"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-405",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A hallucinated monitoring integration or endpoint is rejected before the build stage"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-536",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every package declared in a manifest resolves in an approved registry before the build advances; a name that resolves nowhere fails the build"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-106",
+      "level": "enterprise",
+      "family": "AG",
+      "family_title": "Agent-authored change and autonomous action",
+      "title": "An agent never disables or weakens a failing compliance test, and every agent-authored commit carries a provenance attestation bound to the agent's identity",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Group AI policy; in-toto attestations",
+      "source_status": "original",
+      "risk_framework": "Agentic code provenance; EU AI Act Art. 14; group AI policy",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:AG",
+      "factors": {
+        "comply": [
+          "agent_action_log_append_only",
+          "agent_cannot_widen_own_mandate",
+          "agent_change_reviewed_by_named_human",
+          "agent_commit_carries_provenance_attestation",
+          "agent_identity_bound_to_signature",
+          "failing_compliance_test_left_failing_until_fixed",
+          "loop_limit_and_cost_breaker_enabled",
+          "nm_106_control_evidenced",
+          "tool_definition_change_reviewed"
+        ],
+        "violate": [
+          "agent_action_log_made_editable",
+          "agent_commit_lacks_provenance_attestation",
+          "agent_disables_failing_compliance_test",
+          "agent_signature_shared_across_agents",
+          "loop_limit_removed_from_agent_workflow",
+          "nm_106_control_absent"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AI-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "An agent may not disable or weaken a failing compliance test"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AG-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "An agent may not disable or weaken a failing compliance test"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AG-003",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Every agentic commit carries a verifiable cryptographic signature bound to the agent identity"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-305",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement."
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-307",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every agent-authored change carries a provenance attestation \u2014 agent identity, model version, and a link to the originating human requirement \u2014 and every agent action in production runs under an explicit value and rate bound."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-201",
+      "level": "enterprise",
+      "family": "AS",
+      "family_title": "Application security of customer-facing surfaces",
+      "title": "All new database access uses parameterised queries; no query is built by string concatenation from user input",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "CWE-89",
+      "source_status": "original",
+      "risk_framework": "CWE Top 25; OWASP identifiers; group secure-coding standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 26,
+      "scope_domain": "NM:AS",
+      "factors": {
+        "comply": [
+          "content_security_policy_tightened_not_relaxed",
+          "database_access_uses_parameterised_queries",
+          "deserialisation_restricted_to_known_types",
+          "injection_test_added_for_new_endpoint",
+          "nm_201_control_evidenced",
+          "output_encoded_before_render",
+          "query_builder_forbids_string_concatenation",
+          "template_autoescape_enabled",
+          "upload_handler_constrains_type_size_and_path"
+        ],
+        "violate": [
+          "content_security_policy_relaxed",
+          "deserialisation_of_arbitrary_types",
+          "nm_201_control_absent",
+          "output_rendered_without_encoding",
+          "raw_query_accepts_user_input",
+          "sql_built_by_string_concatenation"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AS-001",
+              "absolute": false,
+              "status": "in_force",
+              "title": "All new database access uses parameterised queries"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AS-001",
+              "absolute": false,
+              "status": "in_force",
+              "title": "All new database access uses parameterised queries"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AS-001",
+              "absolute": false,
+              "status": "in_force",
+              "title": "All new database access uses parameterised queries"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": []
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": []
+        }
+      }
+    },
+    {
+      "id": "NM-202",
+      "level": "enterprise",
+      "family": "AS",
+      "family_title": "Application security of customer-facing surfaces",
+      "title": "User-controlled text is output-encoded before render and a Content Security Policy is tightened, never relaxed",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "CWE-79",
+      "source_status": "original",
+      "risk_framework": "CWE Top 25; OWASP identifiers; group secure-coding standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 26,
+      "scope_domain": "NM:AS",
+      "factors": {
+        "comply": [
+          "archive_extraction_bounded",
+          "content_security_policy_tightened_not_relaxed",
+          "deserialisation_restricted_to_known_types",
+          "error_response_omits_stack_trace",
+          "nm_202_control_evidenced",
+          "outbound_fetch_restricted_to_allowlist",
+          "output_encoded_before_render",
+          "template_autoescape_enabled",
+          "upload_handler_constrains_type_size_and_path"
+        ],
+        "violate": [
+          "content_security_policy_relaxed",
+          "deserialisation_of_arbitrary_types",
+          "nm_202_control_absent",
+          "output_rendered_without_encoding",
+          "upload_handler_accepts_any_path",
+          "webhook_fetches_arbitrary_internal_url"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AS-002",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Clinical free text is output-encoded before render"
+            },
+            {
+              "id": "VP-AS-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Content Security Policy is tightened, never relaxed"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AS-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Operator notes are output-encoded before render"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": []
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": []
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": []
+        }
+      }
+    },
+    {
+      "id": "NM-203",
+      "level": "enterprise",
+      "family": "AS",
+      "family_title": "Application security of customer-facing surfaces",
+      "title": "Deserialisation is restricted to known types and upload handlers constrain type, size and path",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "CWE-502; CWE-434",
+      "source_status": "original",
+      "risk_framework": "CWE Top 25; OWASP identifiers; group secure-coding standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 26,
+      "scope_domain": "NM:AS",
+      "factors": {
+        "comply": [
+          "archive_extraction_bounded",
+          "cryptographic_primitive_from_approved_library",
+          "deprecated_primitive_refused_by_linter",
+          "deserialisation_restricted_to_known_types",
+          "error_response_omits_stack_trace",
+          "internal_identifiers_absent_from_error_body",
+          "nm_203_control_evidenced",
+          "outbound_fetch_restricted_to_allowlist",
+          "upload_handler_constrains_type_size_and_path"
+        ],
+        "violate": [
+          "deserialisation_of_arbitrary_types",
+          "hand_rolled_cipher_introduced",
+          "nm_203_control_absent",
+          "stack_trace_returned_to_caller",
+          "upload_handler_accepts_any_path",
+          "webhook_fetches_arbitrary_internal_url"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AS-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "File upload handlers constrain type, size and path"
+            },
+            {
+              "id": "VP-AS-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Deserialisation is restricted to known types"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AS-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Deserialisation is restricted to known types"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AS-002",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Deserialisation is restricted to known types"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": []
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": []
+        }
+      }
+    },
+    {
+      "id": "NM-204",
+      "level": "enterprise",
+      "family": "AS",
+      "family_title": "Application security of customer-facing surfaces",
+      "title": "Outbound fetches from webhooks and integrations are restricted to an allow-list, and error responses omit stack traces and internal identifiers",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "CWE-918; CWE-209",
+      "source_status": "original",
+      "risk_framework": "CWE Top 25; OWASP identifiers; group secure-coding standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 26,
+      "scope_domain": "NM:AS",
+      "factors": {
+        "comply": [
+          "cryptographic_primitive_from_approved_library",
+          "deprecated_primitive_refused_by_linter",
+          "error_response_omits_stack_trace",
+          "input_validated_against_allowlist",
+          "internal_identifiers_absent_from_error_body",
+          "nm_204_control_evidenced",
+          "outbound_fetch_restricted_to_allowlist",
+          "random_source_is_cryptographic",
+          "session_fixation_test_present"
+        ],
+        "violate": [
+          "hand_rolled_cipher_introduced",
+          "input_validation_removed_from_identifier_field",
+          "md5_or_sha1_used_for_integrity",
+          "nm_204_control_absent",
+          "stack_trace_returned_to_caller",
+          "webhook_fetches_arbitrary_internal_url"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AS-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Outbound fetches from webhooks are restricted"
+            },
+            {
+              "id": "VP-AS-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Error responses omit stack traces and internal identifiers"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-AS-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Error responses omit internal identifiers and stack traces"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AS-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Tool integrations cannot be steered into internal network addresses"
+            },
+            {
+              "id": "FL-AS-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Error responses omit internal identifiers and stack traces"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": []
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": []
+        }
+      }
+    },
+    {
+      "id": "NM-205",
+      "level": "enterprise",
+      "family": "AS",
+      "family_title": "Application security of customer-facing surfaces",
+      "title": "Cryptographic primitives come from an approved library; hand-rolled ciphers and deprecated primitives are refused on any new or changed path",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "NIST SP 800-131A r3; CWE-327",
+      "source_status": "original",
+      "risk_framework": "CWE Top 25; OWASP identifiers; group secure-coding standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 26,
+      "scope_domain": "NM:AS",
+      "factors": {
+        "comply": [
+          "authz_check_on_every_new_endpoint",
+          "cryptographic_primitive_from_approved_library",
+          "dependency_free_of_known_injection_cve",
+          "deprecated_primitive_refused_by_linter",
+          "input_validated_against_allowlist",
+          "nm_205_control_evidenced",
+          "random_source_is_cryptographic",
+          "security_headers_set_on_new_route",
+          "session_fixation_test_present"
+        ],
+        "violate": [
+          "authz_check_missing_on_new_endpoint",
+          "hand_rolled_cipher_introduced",
+          "input_validation_removed_from_identifier_field",
+          "md5_or_sha1_used_for_integrity",
+          "nm_205_control_absent",
+          "security_header_dropped_from_response"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AS-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Cryptographic primitives are not hand-rolled"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-CR-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Controlled technical data in transit never uses a deprecated protocol version or cipher"
+            },
+            {
+              "id": "SF-CR-002",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Cipher suites stay on the current allowlist"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": []
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-337",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport."
+            },
+            {
+              "id": "DV-343",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No production telemetry or control path ships unauthenticated or in plaintext"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-530",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Deprecated cryptographic primitives \u2014 MD5, SHA-1, DES, 3DES, RC4 \u2014 are refused on any new or changed path"
+            },
+            {
+              "id": "MF-531",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every ingress and egress path enforces TLS 1.2 or above with forward secrecy"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-301",
+      "level": "enterprise",
+      "family": "SC",
+      "family_title": "Secrets, cryptographic posture and the software supply chain",
+      "title": "No credential, key or token appears in source, configuration or CI logs in any division, and the secret scanner is never weakened or bypassed",
+      "absolute": false,
+      "proposed_absolute": true,
+      "citation": "NIST SP 800-53 IA-5; group secrets standard",
+      "source_status": "group floor; meridian states it absolutely (MF-501)",
+      "risk_framework": "SLSA; NIST SP 800-218; group secrets standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:SC",
+      "factors": {
+        "comply": [
+          "artefact_provenance_verified_against_builder",
+          "build_runner_ephemeral_and_pinned",
+          "ci_log_redaction_verified",
+          "commit_to_protected_branch_signed",
+          "nm_301_control_evidenced",
+          "secret_injected_from_vault_at_runtime",
+          "secret_scanner_clean_on_diff",
+          "signature_verified_by_branch_protection",
+          "unsigned_commit_rejected_by_hook"
+        ],
+        "violate": [
+          "artefact_deployed_without_provenance",
+          "nm_301_control_absent",
+          "secret_committed_to_source",
+          "secret_scanner_gate_disabled",
+          "signature_verification_bypassed",
+          "unsigned_commit_merged_to_protected_branch"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-SC-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No secret material appears in a diff"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-SS-011",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The pipeline denies privileged credentials to untrusted code and sanitises untrusted metadata before use"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-SC-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No secret material appears in a diff"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-301",
+              "absolute": false,
+              "status": "in_force",
+              "title": "BMS/sensor-gateway credentials live only in the secrets vault; no credentials in collector configuration."
+            },
+            {
+              "id": "DV-310",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No secrets in source or CI logs (secret-scanner gate)."
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-206",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No credential, key, or token appears in source, configuration, or CI logs; secrets live in the vault."
+            },
+            {
+              "id": "MF-501",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No credential, key, token or private key material is hard-coded into source, committed to a repository, or written to a log at any severity level, and no change may weaken the scanner that detects one."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-302",
+      "level": "enterprise",
+      "family": "SC",
+      "family_title": "Secrets, cryptographic posture and the software supply chain",
+      "title": "Commits merged to a protected branch carry a verified signature bound to a known identity",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Sigstore / gitsign; SLSA source requirements",
+      "source_status": "original",
+      "risk_framework": "SLSA; NIST SP 800-218; group secrets standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:SC",
+      "factors": {
+        "comply": [
+          "artefact_provenance_verified_against_builder",
+          "build_runner_ephemeral_and_pinned",
+          "commit_to_protected_branch_signed",
+          "nm_302_control_evidenced",
+          "provenance_attestation_signed",
+          "sbom_bound_to_artefact_digest",
+          "sbom_published_per_release",
+          "signature_verified_by_branch_protection",
+          "unsigned_commit_rejected_by_hook"
+        ],
+        "violate": [
+          "artefact_deployed_without_provenance",
+          "build_runner_reused_across_builds",
+          "nm_302_control_absent",
+          "release_shipped_without_sbom",
+          "signature_verification_bypassed",
+          "unsigned_commit_merged_to_protected_branch"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-SC-001",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Commits merged to a protected branch carry a verified signature"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-SS-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Signing certificates come from a trusted OIDC issuer set"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-AG-003",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Every agentic commit carries a verifiable cryptographic signature bound to the agent identity"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-404",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every binary, container image and dynamic library shipped to customer infrastructure is signed"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-535",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Build provenance meets SLSA Build Level 3: hermetic, ephemeral runners and a signed attestation naming the source and the steps"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-303",
+      "level": "enterprise",
+      "family": "SC",
+      "family_title": "Secrets, cryptographic posture and the software supply chain",
+      "title": "No artefact deploys to production without provenance verified against the builder identity; build runners are ephemeral and pinned",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "SLSA v1.0 Build L3; in-toto",
+      "source_status": "original",
+      "risk_framework": "SLSA; NIST SP 800-218; group secrets standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:SC",
+      "factors": {
+        "comply": [
+          "artefact_provenance_verified_against_builder",
+          "build_runner_ephemeral_and_pinned",
+          "cve_exception_recorded_with_expiry",
+          "dependency_cve_below_declared_threshold",
+          "nm_303_control_evidenced",
+          "provenance_attestation_signed",
+          "sbom_bound_to_artefact_digest",
+          "sbom_covers_transitive_dependencies",
+          "sbom_published_per_release"
+        ],
+        "violate": [
+          "artefact_deployed_without_provenance",
+          "build_runner_reused_across_builds",
+          "dependency_with_critical_cve_merged",
+          "nm_303_control_absent",
+          "release_shipped_without_sbom",
+          "sbom_not_bound_to_digest"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-SC-002",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Release artefacts carry verified SLSA provenance"
+            },
+            {
+              "id": "VP-SC-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Build runners are ephemeral and start from pinned images"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-SS-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No release artifact is deployed to a fab network without a provenance attestation verified against the expected builder identity"
+            },
+            {
+              "id": "SF-SS-002",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The provenance subject digest matches the artifact actually distributed"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-SC-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No artifact deploys without provenance verified against the expected builder identity"
+            },
+            {
+              "id": "FL-SC-002",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Builds are hermetic and reproducible in ephemeral isolated environments"
+            },
+            {
+              "id": "FL-SC-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The provenance subject digest matches the artifact actually distributed"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-403",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Agent builds are hermetic and reproducible across runners"
+            },
+            {
+              "id": "DV-404",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every binary, container image and dynamic library shipped to customer infrastructure is signed"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-535",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Build provenance meets SLSA Build Level 3: hermetic, ephemeral runners and a signed attestation naming the source and the steps"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-304",
+      "level": "enterprise",
+      "family": "SC",
+      "family_title": "Secrets, cryptographic posture and the software supply chain",
+      "title": "Every release publishes a software bill of materials bound to the artefact digest",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "NTIA minimum elements; SPDX / CycloneDX identifiers",
+      "source_status": "original",
+      "risk_framework": "SLSA; NIST SP 800-218; group secrets standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:SC",
+      "factors": {
+        "comply": [
+          "cve_exception_recorded_with_expiry",
+          "dependency_cve_below_declared_threshold",
+          "licence_allowlist_enforced",
+          "manifest_and_lockfile_change_atomically",
+          "nm_304_control_evidenced",
+          "private_registry_preferred_for_resolution",
+          "sbom_bound_to_artefact_digest",
+          "sbom_covers_transitive_dependencies",
+          "sbom_published_per_release"
+        ],
+        "violate": [
+          "copyleft_dependency_added_to_proprietary_service",
+          "dependency_with_critical_cve_merged",
+          "nm_304_control_absent",
+          "public_registry_resolves_private_package_name",
+          "release_shipped_without_sbom",
+          "sbom_not_bound_to_digest"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-SC-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every release publishes an SBOM bound to the artefact digest"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-SS-007",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every release publishes a signed SBOM that matches the approved baseline"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-SC-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every release publishes a signed SBOM covering transitive dependencies"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-434",
+              "absolute": false,
+              "status": "deferred",
+              "title": "Every customer-facing release publishes a software bill of materials covering at least the top-level dependencies, regenerated when a dependency changes, with an exploitability statement for each reported component finding"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-534",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A signed software bill of materials in SPDX or CycloneDX form is produced for every build"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-305",
+      "level": "enterprise",
+      "family": "SC",
+      "family_title": "Secrets, cryptographic posture and the software supply chain",
+      "title": "No dependency carrying a vulnerability above the declared CVSS threshold merges without a recorded, expiring exception, and no copyleft licence enters a proprietary distribution",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Group supply-chain standard; OSV/GHSA identifiers",
+      "source_status": "original",
+      "risk_framework": "SLSA; NIST SP 800-218; group secrets standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:SC",
+      "factors": {
+        "comply": [
+          "cve_exception_recorded_with_expiry",
+          "dependency_cve_below_declared_threshold",
+          "key_rotation_interval_enforced",
+          "leaked_credential_revoked_before_merge",
+          "licence_allowlist_enforced",
+          "manifest_and_lockfile_change_atomically",
+          "nm_305_control_evidenced",
+          "private_registry_preferred_for_resolution",
+          "tls_1_2_or_above_enforced"
+        ],
+        "violate": [
+          "copyleft_dependency_added_to_proprietary_service",
+          "dependency_with_critical_cve_merged",
+          "lockfile_left_stale_after_manifest_change",
+          "nm_305_control_absent",
+          "public_registry_resolves_private_package_name",
+          "tls_downgrade_permitted"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-SC-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No dependency is introduced carrying a known CVE above CVSS 7.0"
+            },
+            {
+              "id": "VP-SC-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Dependency licences stay on the allowlist; copyleft is refused in proprietary services"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-SS-009",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No dependency is introduced carrying a known vulnerability above the CVSS threshold"
+            },
+            {
+              "id": "SF-SS-010",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Dependency licences stay on the allowlist"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-SC-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No dependency is introduced carrying a known vulnerability above the CVSS threshold"
+            },
+            {
+              "id": "FL-IP-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Generated code structurally identical to a restricted copyleft library never merges"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-308",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No dependency carrying a high/critical CVE may deploy."
+            },
+            {
+              "id": "DV-309",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Third-party licenses restricted to the approved list; no AGPL in customer-deployed edge collectors."
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-538",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No copyleft or otherwise viral licence enters the proprietary distribution"
+            },
+            {
+              "id": "MF-539",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A dependency carrying a CVE above the declared CVSS threshold blocks the merge unless an explicit, time-bound risk-acceptance waiver is attached"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-306",
+      "level": "enterprise",
+      "family": "SC",
+      "family_title": "Secrets, cryptographic posture and the software supply chain",
+      "title": "Dependency resolution prefers the private registry, manifest and lockfile change atomically, and every ingress and egress path enforces TLS 1.2 or above",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "NIST SP 800-52r2; group supply-chain standard",
+      "source_status": "original",
+      "risk_framework": "SLSA; NIST SP 800-218; group secrets standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 24,
+      "scope_domain": "NM:SC",
+      "factors": {
+        "comply": [
+          "approved_algorithm_for_encryption_at_rest",
+          "dependency_pinned_by_digest",
+          "key_rotation_interval_enforced",
+          "leaked_credential_revoked_before_merge",
+          "manifest_and_lockfile_change_atomically",
+          "nm_306_control_evidenced",
+          "private_registry_preferred_for_resolution",
+          "registry_mirror_integrity_checked",
+          "tls_1_2_or_above_enforced"
+        ],
+        "violate": [
+          "credential_written_to_ci_log",
+          "deprecated_cipher_enabled_on_production_path",
+          "lockfile_left_stale_after_manifest_change",
+          "nm_306_control_absent",
+          "public_registry_resolves_private_package_name",
+          "tls_downgrade_permitted"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-SC-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Dependency resolution prefers the private registry"
+            },
+            {
+              "id": "VP-SC-009",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Manifest and lockfile change atomically"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-SS-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Dependencies resolve from the declared internal registry first"
+            },
+            {
+              "id": "SF-SS-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Dependencies are pinned to an immutable digest, never a floating range"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-SC-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Dependencies are pinned to an immutable digest and resolve from the internal registry first"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-343",
+              "absolute": true,
+              "status": "in_force",
+              "title": "No production telemetry or control path ships unauthenticated or in plaintext"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-531",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every ingress and egress path enforces TLS 1.2 or above with forward secrecy"
+            },
+            {
+              "id": "MF-536",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Every package declared in a manifest resolves in an approved registry before the build advances; a name that resolves nowhere fails the build"
+            },
+            {
+              "id": "MF-537",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Private package names are explicitly scoped, and the artifact repository never resolves a public package where a private name of the same shape exists"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-401",
+      "level": "enterprise",
+      "family": "CQ",
+      "family_title": "Change control and operational resilience",
+      "title": "Change control is never bypassed, disabled or self-approved in any division, and no change grants its own approval",
+      "absolute": true,
+      "proposed_absolute": false,
+      "citation": "SOC 2 CC8.1; SEC Rule 13a-15(d) as a division instance",
+      "source_status": "group floor; meridian states it absolutely (MF-502)",
+      "risk_framework": "SOC 2 CC8.1; group change-management standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 28,
+      "scope_domain": "NM:CQ",
+      "factors": {
+        "comply": [
+          "approval_recorded_before_deploy",
+          "backup_verified_before_storage_change",
+          "change_approved_by_someone_other_than_author",
+          "down_migration_present_and_rehearsed",
+          "emergency_protocol_invoked_with_record",
+          "freeze_window_honoured",
+          "nm_401_control_evidenced",
+          "rollback_tested_before_production_change",
+          "self_approval_blocked_by_policy"
+        ],
+        "violate": [
+          "approval_step_removed_from_pipeline",
+          "change_self_approved_by_author",
+          "deploy_during_freeze_without_emergency_protocol",
+          "irreversible_migration_shipped",
+          "nm_401_control_absent",
+          "production_change_without_tested_rollback"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": []
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": []
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": []
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": []
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-208",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No production change to a cardholder or ledger system without documented approval, a tested rollback, and separation between author and approver."
+            },
+            {
+              "id": "MF-502",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Change control is never bypassed, disabled, or self-approved, and no change may grant its own author the approval right."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-402",
+      "level": "enterprise",
+      "family": "CQ",
+      "family_title": "Change control and operational resilience",
+      "title": "A tested rollback or reversible migration exists for every production change on a critical surface",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Group change-management standard",
+      "source_status": "original",
+      "risk_framework": "SOC 2 CC8.1; group change-management standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 28,
+      "scope_domain": "NM:CQ",
+      "factors": {
+        "comply": [
+          "availability_regression_blocks_deploy",
+          "backup_verified_before_storage_change",
+          "down_migration_present_and_rehearsed",
+          "emergency_protocol_invoked_with_record",
+          "freeze_calendar_read_from_constitution",
+          "freeze_window_honoured",
+          "latency_regression_gate_on_critical_path",
+          "nm_402_control_evidenced",
+          "rollback_tested_before_production_change"
+        ],
+        "violate": [
+          "deploy_during_freeze_without_emergency_protocol",
+          "freeze_calendar_overridden_by_flag",
+          "irreversible_migration_shipped",
+          "latency_gate_threshold_raised_to_pass",
+          "nm_402_control_absent",
+          "production_change_without_tested_rollback"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-HA-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Migrations are reversible or ship with proven backups"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": []
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": []
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-307",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Schema migrations on telemetry time-series tables require a reversible down-migration."
+            },
+            {
+              "id": "DV-318",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Storage-touching changes require a verified backup/restore run in staging."
+            },
+            {
+              "id": "DV-395",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A rollback path is verified for every change to a customer-deployed component"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-208",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No production change to a cardholder or ledger system without documented approval, a tested rollback, and separation between author and approver."
+            },
+            {
+              "id": "MF-541",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A tested rollback exists and has been exercised for every production change on a regulated surface"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-403",
+      "level": "enterprise",
+      "family": "CQ",
+      "family_title": "Change control and operational resilience",
+      "title": "No production deploy during a designated change-freeze window except under the emergency protocol, and every emergency change is retro-approved within the stated window",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Group change-management standard",
+      "source_status": "original",
+      "risk_framework": "SOC 2 CC8.1; group change-management standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 28,
+      "scope_domain": "NM:CQ",
+      "factors": {
+        "comply": [
+          "availability_regression_blocks_deploy",
+          "canary_deploy_on_critical_service",
+          "emergency_protocol_invoked_with_record",
+          "feature_flag_defaults_closed",
+          "freeze_calendar_read_from_constitution",
+          "freeze_window_honoured",
+          "latency_regression_gate_on_critical_path",
+          "load_test_covers_peak_profile",
+          "nm_403_control_evidenced"
+        ],
+        "violate": [
+          "availability_check_skipped_on_critical_path",
+          "deploy_during_freeze_without_emergency_protocol",
+          "feature_flag_defaults_open_on_regulated_surface",
+          "freeze_calendar_overridden_by_flag",
+          "latency_gate_threshold_raised_to_pass",
+          "nm_403_control_absent"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-HA-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Deploy freeze windows for emergency hours are honoured"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": []
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": []
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-311",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No production deploys during customer-declared maintenance blackout windows except under the emergency protocol."
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-212",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No production deploy during a designated market-close or peak-period change freeze except under the emergency protocol."
+            },
+            {
+              "id": "MF-542",
+              "absolute": false,
+              "status": "in_force",
+              "title": "An emergency change is retro-approved within the stated window, and the window is a constitutional parameter"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-404",
+      "level": "enterprise",
+      "family": "CQ",
+      "family_title": "Change control and operational resilience",
+      "title": "Deploys are blocked on a latency or availability regression beyond the declared threshold on a critical path",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "Group SRE standard",
+      "source_status": "original",
+      "risk_framework": "SOC 2 CC8.1; group change-management standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 28,
+      "scope_domain": "NM:CQ",
+      "factors": {
+        "comply": [
+          "availability_regression_blocks_deploy",
+          "canary_deploy_on_critical_service",
+          "change_ticket_linked_to_commit",
+          "coverage_floor_met_on_changed_lines",
+          "feature_flag_defaults_closed",
+          "incident_runbook_updated_with_change",
+          "latency_regression_gate_on_critical_path",
+          "load_test_covers_peak_profile",
+          "nm_404_control_evidenced"
+        ],
+        "violate": [
+          "availability_check_skipped_on_critical_path",
+          "coverage_floor_lowered_for_release",
+          "emergency_change_never_retro_approved",
+          "feature_flag_defaults_open_on_regulated_surface",
+          "latency_gate_threshold_raised_to_pass",
+          "nm_404_control_absent"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-HA-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Retries are bounded and circuit-broken against external labs"
+            },
+            {
+              "id": "VP-HA-006",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Load tests cover the emergency-hospital concurrency profile"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-RT-002",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Measured p99.9 latency stays within the declared budget"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-IN-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A change causing more than five percent latency degradation is rejected"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-317",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Deploys blocked on >10% p95 latency regression for the live alerting pipeline tier."
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-209",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Deploys are blocked on a greater-than-10% p95 latency regression, or any availability regression, on the payment-authorization path."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-501",
+      "level": "enterprise",
+      "family": "PP",
+      "family_title": "People, privacy, accessibility and statutory clocks",
+      "title": "Every statutory notification or filing clock is a legislated constant read from the jurisdiction table; no configuration, flag or tenant setting extends, pauses or disables it",
+      "absolute": false,
+      "proposed_absolute": true,
+      "citation": "GDPR Art. 33(1); DORA Art. 19; NIS2 Art. 23; state breach-notification statutes; 21 CFR 1301.76(b)",
+      "source_status": "EU text reusable; US statutes public; group floor",
+      "risk_framework": "GDPR Arts. 5, 7(3), 17, 33; ADA Title III / WCAG 2.2; group people-data standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:PP",
+      "factors": {
+        "comply": [
+          "accessibility_gate_at_wcag_aa_in_pipeline",
+          "clock_override_rejected_by_config_loader",
+          "incident_detection_wired_to_oncall",
+          "keyboard_only_completion_verified",
+          "nm_501_control_evidenced",
+          "notification_clock_sourced_from_jurisdiction_table",
+          "personal_data_field_has_recorded_purpose",
+          "retention_schedule_enforced_by_job",
+          "status_conveyed_in_text_not_colour_alone"
+        ],
+        "violate": [
+          "accessibility_gate_removed_from_pipeline",
+          "clock_started_at_confirmation_not_discovery",
+          "nm_501_control_absent",
+          "notification_deadline_exposed_as_tenant_setting",
+          "personal_data_field_added_without_purpose",
+          "wcag_failures_downgraded_to_warnings"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-BN-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "The breach-notification clock for each jurisdiction is a legislated constant that no configuration, feature flag or tenant setting can extend, pause or disable"
+            },
+            {
+              "id": "VP-DR-001",
+              "absolute": true,
+              "status": "in_force",
+              "title": "A theft or significant loss of a controlled substance is notified to the DEA within one business day of discovery and followed by an electronic Form 106 within forty-five days; no threshold, flag or workflow setting suppresses either filing"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-SO-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "A request to take a boycott-related action is never acted on and never dropped from the quarterly report, whether it arrives in a purchase order, a letter of credit or a portal form"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-TR-004",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Critical safety incident detection signals reach the reporting queue, and the statutory reporting clock is fixed in code, never configurable, extended or avoided by severity defaults"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-336",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning)."
+            },
+            {
+              "id": "DV-435",
+              "absolute": false,
+              "status": "readiness",
+              "title": "The path that reports an actively exploited vulnerability or a severe incident to the designated authority stays wired to the single reporting entry point, its clock starts at first awareness, and a named owner is recorded on the release"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-503",
+              "absolute": true,
+              "status": "in_force",
+              "title": "A statutory or supervisory notification clock is never extended, suspended, or disabled by a code or configuration change."
+            },
+            {
+              "id": "MF-504",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Blocked-property and rejected-transaction reports are filed within the statutory deadline, and no change may suppress, delay, or reroute the filing path."
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-502",
+      "level": "enterprise",
+      "family": "PP",
+      "family_title": "People, privacy, accessibility and statutory clocks",
+      "title": "Every customer-facing surface carries an accessibility regression gate at WCAG 2.2 Level AA, and a Level A or AA failure blocks release",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "ADA Title III; Directive (EU) 2019/882; WCAG 2.2 (identifier)",
+      "source_status": "original",
+      "risk_framework": "GDPR Arts. 5, 7(3), 17, 33; ADA Title III / WCAG 2.2; group people-data standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:PP",
+      "factors": {
+        "comply": [
+          "access_request_path_preserved",
+          "accessibility_gate_at_wcag_aa_in_pipeline",
+          "keyboard_only_completion_verified",
+          "monitoring_proportionality_assessment_recorded",
+          "nm_502_control_evidenced",
+          "personal_data_field_has_recorded_purpose",
+          "retention_schedule_enforced_by_job",
+          "status_conveyed_in_text_not_colour_alone",
+          "worker_monitoring_data_access_restricted"
+        ],
+        "violate": [
+          "accessibility_gate_removed_from_pipeline",
+          "nm_502_control_absent",
+          "personal_data_field_added_without_purpose",
+          "retention_job_disabled",
+          "wcag_failures_downgraded_to_warnings",
+          "worker_monitoring_data_opened_to_managers"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-AX-001",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The client portal and mobile check-in app carry an accessibility regression gate at WCAG 2.2 Level AA in the release pipeline, and a Level A or AA failure blocks release rather than being downgraded to a warning"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": false,
+          "provisions": []
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": []
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-439",
+              "absolute": false,
+              "status": "in_force",
+              "title": "The customer portal carries an accessibility regression gate at WCAG 2.2 Level AA in its release pipeline, and a Level A or AA conformance failure blocks the release rather than being downgraded to a build warning"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-622",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Customer-facing surfaces carry an accessibility regression gate at WCAG 2.2 Level AA in the release pipeline, and a Level A or AA failure blocks the release rather than being downgraded to a warning"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-503",
+      "level": "enterprise",
+      "family": "PP",
+      "family_title": "People, privacy, accessibility and statutory clocks",
+      "title": "Personal data is collected for a stated purpose and retained on schedule, and the paths for access, portability and erasure are preserved and propagate to derived stores",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "GDPR Arts. 5(1)(b)(e), 15, 17, 20; CCPA/CPRA",
+      "source_status": "EU text reusable; state statute public",
+      "risk_framework": "GDPR Arts. 5, 7(3), 17, 33; ADA Title III / WCAG 2.2; group people-data standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:PP",
+      "factors": {
+        "comply": [
+          "access_request_path_preserved",
+          "badge_logs_minimised_and_retained_on_schedule",
+          "consent_withdrawal_one_step",
+          "monitoring_proportionality_assessment_recorded",
+          "nm_503_control_evidenced",
+          "personal_data_field_has_recorded_purpose",
+          "retention_schedule_enforced_by_job",
+          "withdrawal_honoured_across_channels",
+          "worker_monitoring_data_access_restricted"
+        ],
+        "violate": [
+          "badge_logs_retained_indefinitely",
+          "consent_withdrawal_requires_phone_call",
+          "nm_503_control_absent",
+          "personal_data_field_added_without_purpose",
+          "retention_job_disabled",
+          "worker_monitoring_data_opened_to_managers"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-PD-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Data subject export completes within the statutory window"
+            },
+            {
+              "id": "VP-PD-008",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Owner records follow the jurisdiction's retention schedule"
+            },
+            {
+              "id": "VP-CC-005",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A client's request for a copy or transfer of the patient's medical record is fulfilled within the state board's deadline and is not conditioned on payment of an outstanding balance"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "SF-DS-003",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Regulated records are stored in the declared jurisdiction"
+            }
+          ]
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-PI-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A lawful basis is recorded for every personal-data source"
+            },
+            {
+              "id": "FL-PV-001",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Erasure and unlearning requests propagate to training manifests, derived corpora and the next-run exclusion list, and complete within the statutory window"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-315",
+              "absolute": false,
+              "status": "in_force",
+              "title": "No new external analytics/telemetry on customer data without a completed data-protection impact assessment (DPIA)."
+            },
+            {
+              "id": "DV-428",
+              "absolute": true,
+              "status": "in_force",
+              "title": "At the end of a customer relationship the tenant's data is returned in the documented format and then deleted within the contracted window, including derived features, caches and backups, and a deletion certificate is issued"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "MF-210",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Personal data is collected for a stated purpose and deleted on schedule; no new personal-data field is retained without a recorded retention decision."
+            },
+            {
+              "id": "MF-558",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Deletion and cryptographic-shredding paths exist and are exercised for every new personal-data store"
+            },
+            {
+              "id": "MF-621",
+              "absolute": false,
+              "status": "in_force",
+              "title": "A data-subject access request is answered within one month and a portability request produces a structured, commonly used, machine-readable export; an extension is notified with its reasons rather than taken silently"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "NM-504",
+      "level": "enterprise",
+      "family": "PP",
+      "family_title": "People, privacy, accessibility and statutory clocks",
+      "title": "Worker and personnel monitoring data \u2014 badge, access and productivity telemetry \u2014 is collected proportionately, access-restricted and retained on a declared schedule",
+      "absolute": false,
+      "proposed_absolute": false,
+      "citation": "GDPR Art. 88; EU AI Act Art. 5(1)(f) (workplace emotion inference)",
+      "source_status": "EU text reusable",
+      "risk_framework": "GDPR Arts. 5, 7(3), 17, 33; ADA Title III / WCAG 2.2; group people-data standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:PP",
+      "factors": {
+        "comply": [
+          "badge_logs_minimised_and_retained_on_schedule",
+          "consent_record_carries_timestamp_and_source",
+          "consent_withdrawal_one_step",
+          "erasure_propagates_to_derived_stores",
+          "monitoring_proportionality_assessment_recorded",
+          "nm_504_control_evidenced",
+          "privacy_notice_versioned_in_repo",
+          "withdrawal_honoured_across_channels",
+          "worker_monitoring_data_access_restricted"
+        ],
+        "violate": [
+          "badge_logs_retained_indefinitely",
+          "consent_withdrawal_requires_phone_call",
+          "erasure_request_not_propagated",
+          "nm_504_control_absent",
+          "withdrawal_ignored_by_marketing_pipeline",
+          "worker_monitoring_data_opened_to_managers"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": false,
+          "provisions": []
+        },
+        "semifab": {
+          "applies": false,
+          "provisions": []
+        },
+        "frontierllm": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "FL-PV-004",
+              "absolute": false,
+              "status": "in_force",
+              "title": "Annotator and data-worker personal data is processed under a recorded basis, stripped from exported preference datasets, and the workers' graphic-content exposure limits stay enforced in the queue"
+            }
+          ]
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-338",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Biometric identifiers or templates are never collected or enrolled without prior written notice of the specific purpose and term, and a written release from the subject, under a published retention and destruction schedule"
+            },
+            {
+              "id": "DV-345",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Emotion inference on facility personnel with no documented Article 5(1)(f) medical or safety justification and no completed assessment is refused outright"
+            }
+          ]
+        },
+        "meridian": {
+          "applies": false,
+          "provisions": []
+        }
+      }
+    },
+    {
+      "id": "NM-505",
+      "level": "enterprise",
+      "family": "PP",
+      "family_title": "People, privacy, accessibility and statutory clocks",
+      "title": "Withdrawing consent is no harder than giving it, in any division and on any channel",
+      "absolute": true,
+      "proposed_absolute": false,
+      "citation": "GDPR Art. 7(3); UK GDPR Art. 7(3); 47 CFR 64.1200(a)(10) for US channels",
+      "source_status": "EU text reusable; US CFR public; group floor",
+      "risk_framework": "GDPR Arts. 5, 7(3), 17, 33; ADA Title III / WCAG 2.2; group people-data standard",
+      "status": "in_force",
+      "origin": "enterprise",
+      "tau": 22,
+      "scope_domain": "NM:PP",
+      "factors": {
+        "comply": [
+          "consent_record_carries_timestamp_and_source",
+          "consent_withdrawal_one_step",
+          "data_export_available_in_machine_readable_form",
+          "dpia_recorded_for_new_processing",
+          "erasure_propagates_to_derived_stores",
+          "nm_505_control_evidenced",
+          "privacy_notice_versioned_in_repo",
+          "sub_processor_change_notified_before_onboarding",
+          "withdrawal_honoured_across_channels"
+        ],
+        "violate": [
+          "access_request_path_removed",
+          "consent_withdrawal_requires_phone_call",
+          "erasure_request_not_propagated",
+          "nm_505_control_absent",
+          "sub_processor_added_without_notice",
+          "withdrawal_ignored_by_marketing_pipeline"
+        ]
+      },
+      "implemented_by": {
+        "vetpoc": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "VP-PD-002",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Withdrawing consent is no harder than granting it"
+            }
+          ]
+        },
+        "semifab": {
+          "applies": false,
+          "provisions": []
+        },
+        "frontierllm": {
+          "applies": false,
+          "provisions": []
+        },
+        "dcvigil": {
+          "applies": true,
+          "provisions": [
+            {
+              "id": "DV-332",
+              "absolute": true,
+              "status": "in_force",
+              "title": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one."
+            }
+          ]
+        },
+        "meridian": {
+          "applies": true,
+          "provisions": []
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,4758 @@
+{
+  "records": [
+    {
+      "id": "REC-NM-S0001",
+      "case": "seed:vetpoc:NM-004",
+      "prov": "NM-004",
+      "rules": [
+        "NM-004"
+      ],
+      "facts": [
+        "adverse_contest_rate_exported_as_two_counts",
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "audit_register_never_read_by_resolve",
+        "standing_declaration_present_and_dated"
+      ],
+      "premise": [
+        "adverse_contest_rate_exported_as_two_counts",
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "audit_register_never_read_by_resolve",
+        "standing_declaration_present_and_dated"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-004, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 1,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0002",
+      "case": "seed:semifab:NM-004",
+      "prov": "NM-004",
+      "rules": [
+        "NM-004"
+      ],
+      "facts": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "constitution_version_pinned_on_every_record",
+        "nm_004_control_evidenced"
+      ],
+      "premise": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "constitution_version_pinned_on_every_record",
+        "nm_004_control_evidenced"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-004, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 2,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0003",
+      "case": "seed:frontierllm:NM-004",
+      "prov": "NM-004",
+      "rules": [
+        "NM-004"
+      ],
+      "facts": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "parameter_edit_requires_legislative_enactment",
+        "reporter_output_isolated_from_adjudication_input",
+        "standing_declaration_present_and_dated"
+      ],
+      "premise": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "parameter_edit_requires_legislative_enactment",
+        "reporter_output_isolated_from_adjudication_input",
+        "standing_declaration_present_and_dated"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-004, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 3,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0004",
+      "case": "seed:dcvigil:NM-004",
+      "prov": "NM-004",
+      "rules": [
+        "NM-004"
+      ],
+      "facts": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "standing_declaration_attributed_to_lawmaker",
+        "standing_declaration_present_and_dated"
+      ],
+      "premise": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "standing_declaration_attributed_to_lawmaker",
+        "standing_declaration_present_and_dated"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-004, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 4,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0005",
+      "case": "seed:meridian:NM-004",
+      "prov": "NM-004",
+      "rules": [
+        "NM-004"
+      ],
+      "facts": [
+        "adverse_contest_rate_exported_as_two_counts",
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "audit_register_never_read_by_resolve",
+        "standing_declaration_present_and_dated"
+      ],
+      "premise": [
+        "adverse_contest_rate_exported_as_two_counts",
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "audit_register_never_read_by_resolve",
+        "standing_declaration_present_and_dated"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-004, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 5,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0006",
+      "case": "seed:vetpoc:NM-005",
+      "prov": "NM-005",
+      "rules": [
+        "NM-005"
+      ],
+      "facts": [
+        "adverse_contest_rate_exported_as_two_counts",
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "audit_register_never_read_by_resolve",
+        "standing_declaration_present_and_dated"
+      ],
+      "premise": [
+        "adverse_contest_rate_exported_as_two_counts",
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "audit_register_never_read_by_resolve",
+        "standing_declaration_present_and_dated"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-005, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 6,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0007",
+      "case": "seed:semifab:NM-005",
+      "prov": "NM-005",
+      "rules": [
+        "NM-005"
+      ],
+      "facts": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "docket_entry_carries_rating_and_threshold",
+        "nm_005_control_evidenced"
+      ],
+      "premise": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "docket_entry_carries_rating_and_threshold",
+        "nm_005_control_evidenced"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-005, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 7,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0008",
+      "case": "seed:frontierllm:NM-005",
+      "prov": "NM-005",
+      "rules": [
+        "NM-005"
+      ],
+      "facts": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "observer_channel_read_only",
+        "reporter_output_isolated_from_adjudication_input",
+        "standing_declaration_present_and_dated"
+      ],
+      "premise": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "observer_channel_read_only",
+        "reporter_output_isolated_from_adjudication_input",
+        "standing_declaration_present_and_dated"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-005, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 8,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0009",
+      "case": "seed:dcvigil:NM-005",
+      "prov": "NM-005",
+      "rules": [
+        "NM-005"
+      ],
+      "facts": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "standing_declaration_attributed_to_lawmaker",
+        "standing_declaration_present_and_dated"
+      ],
+      "premise": [
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "standing_declaration_attributed_to_lawmaker",
+        "standing_declaration_present_and_dated"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-005, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 9,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0010",
+      "case": "seed:meridian:NM-005",
+      "prov": "NM-005",
+      "rules": [
+        "NM-005"
+      ],
+      "facts": [
+        "adverse_contest_rate_exported_as_two_counts",
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "audit_register_never_read_by_resolve",
+        "standing_declaration_present_and_dated"
+      ],
+      "premise": [
+        "adverse_contest_rate_exported_as_two_counts",
+        "adverse_contest_rate_reported_as_bare_ratio",
+        "audit_register_never_read_by_resolve",
+        "standing_declaration_present_and_dated"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-005, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 10,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0011",
+      "case": "seed:vetpoc:NM-006",
+      "prov": "NM-006",
+      "rules": [
+        "NM-006"
+      ],
+      "facts": [
+        "audit_register_joined_into_retrieval",
+        "audit_register_never_read_by_resolve",
+        "declination_rated_before_docketing",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "premise": [
+        "audit_register_joined_into_retrieval",
+        "audit_register_never_read_by_resolve",
+        "declination_rated_before_docketing",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-006, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 11,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0012",
+      "case": "seed:semifab:NM-006",
+      "prov": "NM-006",
+      "rules": [
+        "NM-006"
+      ],
+      "facts": [
+        "audit_register_joined_into_retrieval",
+        "docket_and_store_disjoint_by_test",
+        "docket_entry_carries_rating_and_threshold"
+      ],
+      "premise": [
+        "audit_register_joined_into_retrieval",
+        "docket_and_store_disjoint_by_test",
+        "docket_entry_carries_rating_and_threshold"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-006, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 12,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0013",
+      "case": "seed:frontierllm:NM-006",
+      "prov": "NM-006",
+      "rules": [
+        "NM-006"
+      ],
+      "facts": [
+        "audit_register_joined_into_retrieval",
+        "nm_006_control_evidenced",
+        "observer_channel_read_only",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "premise": [
+        "audit_register_joined_into_retrieval",
+        "nm_006_control_evidenced",
+        "observer_channel_read_only",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-006, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 13,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0014",
+      "case": "seed:dcvigil:NM-006",
+      "prov": "NM-006",
+      "rules": [
+        "NM-006"
+      ],
+      "facts": [
+        "audit_register_joined_into_retrieval",
+        "reporter_output_isolated_from_adjudication_input",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "premise": [
+        "audit_register_joined_into_retrieval",
+        "reporter_output_isolated_from_adjudication_input",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-006, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 14,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0015",
+      "case": "seed:meridian:NM-006",
+      "prov": "NM-006",
+      "rules": [
+        "NM-006"
+      ],
+      "facts": [
+        "audit_register_joined_into_retrieval",
+        "audit_register_never_read_by_resolve",
+        "declination_rated_before_docketing",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "premise": [
+        "audit_register_joined_into_retrieval",
+        "audit_register_never_read_by_resolve",
+        "declination_rated_before_docketing",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-006, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 15,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0016",
+      "case": "seed:vetpoc:NM-007",
+      "prov": "NM-007",
+      "rules": [
+        "NM-007"
+      ],
+      "facts": [
+        "acceptance_carries_expiry_and_referral",
+        "acceptance_recorded_without_expiry",
+        "declination_rated_before_docketing",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "premise": [
+        "acceptance_carries_expiry_and_referral",
+        "acceptance_recorded_without_expiry",
+        "declination_rated_before_docketing",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-007, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 16,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0017",
+      "case": "seed:semifab:NM-007",
+      "prov": "NM-007",
+      "rules": [
+        "NM-007"
+      ],
+      "facts": [
+        "acceptance_recorded_without_expiry",
+        "docket_and_store_disjoint_by_test",
+        "docket_entry_carries_rating_and_threshold"
+      ],
+      "premise": [
+        "acceptance_recorded_without_expiry",
+        "docket_and_store_disjoint_by_test",
+        "docket_entry_carries_rating_and_threshold"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-007, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 17,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0018",
+      "case": "seed:frontierllm:NM-007",
+      "prov": "NM-007",
+      "rules": [
+        "NM-007"
+      ],
+      "facts": [
+        "acceptance_recorded_without_expiry",
+        "nm_007_control_evidenced",
+        "referral_acknowledged_with_one_of_four_dispositions",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "premise": [
+        "acceptance_recorded_without_expiry",
+        "nm_007_control_evidenced",
+        "referral_acknowledged_with_one_of_four_dispositions",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-007, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 18,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0019",
+      "case": "seed:dcvigil:NM-007",
+      "prov": "NM-007",
+      "rules": [
+        "NM-007"
+      ],
+      "facts": [
+        "acceptance_recorded_without_expiry",
+        "renewal_visible_on_the_record",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "premise": [
+        "acceptance_recorded_without_expiry",
+        "renewal_visible_on_the_record",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-007, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 19,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0020",
+      "case": "seed:meridian:NM-007",
+      "prov": "NM-007",
+      "rules": [
+        "NM-007"
+      ],
+      "facts": [
+        "acceptance_carries_expiry_and_referral",
+        "acceptance_recorded_without_expiry",
+        "declination_rated_before_docketing",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "premise": [
+        "acceptance_carries_expiry_and_referral",
+        "acceptance_recorded_without_expiry",
+        "declination_rated_before_docketing",
+        "rulebook_read_only_to_adjudicator"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-007, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:GV",
+        "width": 3
+      },
+      "ts": 20,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0021",
+      "case": "seed:vetpoc:NM-101",
+      "prov": "NM-101",
+      "rules": [
+        "NM-101"
+      ],
+      "facts": [
+        "agent_change_blocked_by_path_policy_on_authn",
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_diff_excludes_authentication_middleware",
+        "nm_101_control_evidenced"
+      ],
+      "premise": [
+        "agent_change_blocked_by_path_policy_on_authn",
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_diff_excludes_authentication_middleware",
+        "nm_101_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-101, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 21,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0022",
+      "case": "seed:semifab:NM-101",
+      "prov": "NM-101",
+      "rules": [
+        "NM-101"
+      ],
+      "facts": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_mandate_declared_before_execution",
+        "authz_middleware_change_authored_by_human"
+      ],
+      "premise": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_mandate_declared_before_execution",
+        "authz_middleware_change_authored_by_human"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-101, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 22,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0023",
+      "case": "seed:frontierllm:NM-101",
+      "prov": "NM-101",
+      "rules": [
+        "NM-101"
+      ],
+      "facts": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "ci_config_change_by_agent_flagged_for_review",
+        "guardrail_edit_requires_two_human_approvers",
+        "nm_101_control_evidenced"
+      ],
+      "premise": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "ci_config_change_by_agent_flagged_for_review",
+        "guardrail_edit_requires_two_human_approvers",
+        "nm_101_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-101, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 23,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0024",
+      "case": "seed:dcvigil:NM-101",
+      "prov": "NM-101",
+      "rules": [
+        "NM-101"
+      ],
+      "facts": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "human_stop_operable_and_tested",
+        "nm_101_control_evidenced"
+      ],
+      "premise": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "human_stop_operable_and_tested",
+        "nm_101_control_evidenced"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-101, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 24,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0025",
+      "case": "seed:meridian:NM-101",
+      "prov": "NM-101",
+      "rules": [
+        "NM-101"
+      ],
+      "facts": [
+        "agent_change_blocked_by_path_policy_on_authn",
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_diff_excludes_authentication_middleware",
+        "nm_101_control_evidenced"
+      ],
+      "premise": [
+        "agent_change_blocked_by_path_policy_on_authn",
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_diff_excludes_authentication_middleware",
+        "nm_101_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-101, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 25,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0026",
+      "case": "seed:vetpoc:NM-102",
+      "prov": "NM-102",
+      "rules": [
+        "NM-102"
+      ],
+      "facts": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_code_executes_in_sandboxed_runner",
+        "agent_mandate_declared_before_execution",
+        "nm_102_control_evidenced"
+      ],
+      "premise": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_code_executes_in_sandboxed_runner",
+        "agent_mandate_declared_before_execution",
+        "nm_102_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-102, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 26,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0027",
+      "case": "seed:semifab:NM-102",
+      "prov": "NM-102",
+      "rules": [
+        "NM-102"
+      ],
+      "facts": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "ci_config_change_by_agent_flagged_for_review",
+        "egress_restricted_to_allowlisted_hosts"
+      ],
+      "premise": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "ci_config_change_by_agent_flagged_for_review",
+        "egress_restricted_to_allowlisted_hosts"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-102, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 27,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0028",
+      "case": "seed:frontierllm:NM-102",
+      "prov": "NM-102",
+      "rules": [
+        "NM-102"
+      ],
+      "facts": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "guardrail_edit_requires_two_human_approvers",
+        "human_stop_operable_and_tested",
+        "nm_102_control_evidenced"
+      ],
+      "premise": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "guardrail_edit_requires_two_human_approvers",
+        "human_stop_operable_and_tested",
+        "nm_102_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-102, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 28,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0029",
+      "case": "seed:dcvigil:NM-102",
+      "prov": "NM-102",
+      "rules": [
+        "NM-102"
+      ],
+      "facts": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "mandate_narrower_than_credentials_held",
+        "nm_102_control_evidenced"
+      ],
+      "premise": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "mandate_narrower_than_credentials_held",
+        "nm_102_control_evidenced"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-102, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 29,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0030",
+      "case": "seed:meridian:NM-102",
+      "prov": "NM-102",
+      "rules": [
+        "NM-102"
+      ],
+      "facts": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_code_executes_in_sandboxed_runner",
+        "agent_mandate_declared_before_execution",
+        "nm_102_control_evidenced"
+      ],
+      "premise": [
+        "agent_changes_ci_pipeline_to_skip_gate",
+        "agent_code_executes_in_sandboxed_runner",
+        "agent_mandate_declared_before_execution",
+        "nm_102_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-102, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 30,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0031",
+      "case": "seed:vetpoc:NM-104",
+      "prov": "NM-104",
+      "rules": [
+        "NM-104"
+      ],
+      "facts": [
+        "agent_code_executes_in_sandboxed_runner",
+        "agent_code_runs_outside_sandbox",
+        "agent_commit_carries_provenance_attestation",
+        "sandbox_escape_test_in_pipeline"
+      ],
+      "premise": [
+        "agent_code_executes_in_sandboxed_runner",
+        "agent_code_runs_outside_sandbox",
+        "agent_commit_carries_provenance_attestation",
+        "sandbox_escape_test_in_pipeline"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-104, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 31,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0032",
+      "case": "seed:semifab:NM-104",
+      "prov": "NM-104",
+      "rules": [
+        "NM-104"
+      ],
+      "facts": [
+        "agent_code_runs_outside_sandbox",
+        "egress_restricted_to_allowlisted_hosts",
+        "failing_compliance_test_left_failing_until_fixed"
+      ],
+      "premise": [
+        "agent_code_runs_outside_sandbox",
+        "egress_restricted_to_allowlisted_hosts",
+        "failing_compliance_test_left_failing_until_fixed"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-104, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 32,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0033",
+      "case": "seed:frontierllm:NM-104",
+      "prov": "NM-104",
+      "rules": [
+        "NM-104"
+      ],
+      "facts": [
+        "agent_code_runs_outside_sandbox",
+        "imported_package_verified_to_exist_before_merge",
+        "nm_104_control_evidenced",
+        "sandbox_escape_test_in_pipeline"
+      ],
+      "premise": [
+        "agent_code_runs_outside_sandbox",
+        "imported_package_verified_to_exist_before_merge",
+        "nm_104_control_evidenced",
+        "sandbox_escape_test_in_pipeline"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-104, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 33,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0034",
+      "case": "seed:dcvigil:NM-104",
+      "prov": "NM-104",
+      "rules": [
+        "NM-104"
+      ],
+      "facts": [
+        "agent_code_runs_outside_sandbox",
+        "prompt_injection_test_covers_new_tool",
+        "sandbox_escape_test_in_pipeline"
+      ],
+      "premise": [
+        "agent_code_runs_outside_sandbox",
+        "prompt_injection_test_covers_new_tool",
+        "sandbox_escape_test_in_pipeline"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-104, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 34,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0035",
+      "case": "seed:meridian:NM-104",
+      "prov": "NM-104",
+      "rules": [
+        "NM-104"
+      ],
+      "facts": [
+        "agent_code_executes_in_sandboxed_runner",
+        "agent_code_runs_outside_sandbox",
+        "agent_commit_carries_provenance_attestation",
+        "sandbox_escape_test_in_pipeline"
+      ],
+      "premise": [
+        "agent_code_executes_in_sandboxed_runner",
+        "agent_code_runs_outside_sandbox",
+        "agent_commit_carries_provenance_attestation",
+        "sandbox_escape_test_in_pipeline"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-104, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 35,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0036",
+      "case": "seed:vetpoc:NM-105",
+      "prov": "NM-105",
+      "rules": [
+        "NM-105"
+      ],
+      "facts": [
+        "agent_change_reviewed_by_named_human",
+        "agent_commit_carries_provenance_attestation",
+        "agent_commit_lacks_provenance_attestation",
+        "prompt_injection_test_covers_new_tool"
+      ],
+      "premise": [
+        "agent_change_reviewed_by_named_human",
+        "agent_commit_carries_provenance_attestation",
+        "agent_commit_lacks_provenance_attestation",
+        "prompt_injection_test_covers_new_tool"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-105, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 36,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0037",
+      "case": "seed:semifab:NM-105",
+      "prov": "NM-105",
+      "rules": [
+        "NM-105"
+      ],
+      "facts": [
+        "agent_commit_lacks_provenance_attestation",
+        "agent_identity_bound_to_signature",
+        "failing_compliance_test_left_failing_until_fixed"
+      ],
+      "premise": [
+        "agent_commit_lacks_provenance_attestation",
+        "agent_identity_bound_to_signature",
+        "failing_compliance_test_left_failing_until_fixed"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-105, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 37,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0038",
+      "case": "seed:frontierllm:NM-105",
+      "prov": "NM-105",
+      "rules": [
+        "NM-105"
+      ],
+      "facts": [
+        "agent_commit_lacks_provenance_attestation",
+        "imported_package_verified_to_exist_before_merge",
+        "loop_limit_and_cost_breaker_enabled",
+        "prompt_injection_test_covers_new_tool"
+      ],
+      "premise": [
+        "agent_commit_lacks_provenance_attestation",
+        "imported_package_verified_to_exist_before_merge",
+        "loop_limit_and_cost_breaker_enabled",
+        "prompt_injection_test_covers_new_tool"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-105, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 38,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0039",
+      "case": "seed:dcvigil:NM-105",
+      "prov": "NM-105",
+      "rules": [
+        "NM-105"
+      ],
+      "facts": [
+        "agent_commit_lacks_provenance_attestation",
+        "nm_105_control_evidenced",
+        "prompt_injection_test_covers_new_tool"
+      ],
+      "premise": [
+        "agent_commit_lacks_provenance_attestation",
+        "nm_105_control_evidenced",
+        "prompt_injection_test_covers_new_tool"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-105, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 39,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0040",
+      "case": "seed:meridian:NM-105",
+      "prov": "NM-105",
+      "rules": [
+        "NM-105"
+      ],
+      "facts": [
+        "agent_change_reviewed_by_named_human",
+        "agent_commit_carries_provenance_attestation",
+        "agent_commit_lacks_provenance_attestation",
+        "prompt_injection_test_covers_new_tool"
+      ],
+      "premise": [
+        "agent_change_reviewed_by_named_human",
+        "agent_commit_carries_provenance_attestation",
+        "agent_commit_lacks_provenance_attestation",
+        "prompt_injection_test_covers_new_tool"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-105, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 40,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0041",
+      "case": "seed:vetpoc:NM-106",
+      "prov": "NM-106",
+      "rules": [
+        "NM-106"
+      ],
+      "facts": [
+        "agent_action_log_append_only",
+        "agent_action_log_made_editable",
+        "agent_cannot_widen_own_mandate",
+        "nm_106_control_evidenced"
+      ],
+      "premise": [
+        "agent_action_log_append_only",
+        "agent_action_log_made_editable",
+        "agent_cannot_widen_own_mandate",
+        "nm_106_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-106, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 41,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0042",
+      "case": "seed:semifab:NM-106",
+      "prov": "NM-106",
+      "rules": [
+        "NM-106"
+      ],
+      "facts": [
+        "agent_action_log_made_editable",
+        "agent_change_reviewed_by_named_human",
+        "agent_commit_carries_provenance_attestation"
+      ],
+      "premise": [
+        "agent_action_log_made_editable",
+        "agent_change_reviewed_by_named_human",
+        "agent_commit_carries_provenance_attestation"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-106, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 42,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0043",
+      "case": "seed:frontierllm:NM-106",
+      "prov": "NM-106",
+      "rules": [
+        "NM-106"
+      ],
+      "facts": [
+        "agent_action_log_made_editable",
+        "agent_identity_bound_to_signature",
+        "failing_compliance_test_left_failing_until_fixed",
+        "nm_106_control_evidenced"
+      ],
+      "premise": [
+        "agent_action_log_made_editable",
+        "agent_identity_bound_to_signature",
+        "failing_compliance_test_left_failing_until_fixed",
+        "nm_106_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-106, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 43,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0044",
+      "case": "seed:dcvigil:NM-106",
+      "prov": "NM-106",
+      "rules": [
+        "NM-106"
+      ],
+      "facts": [
+        "agent_action_log_made_editable",
+        "loop_limit_and_cost_breaker_enabled",
+        "nm_106_control_evidenced"
+      ],
+      "premise": [
+        "agent_action_log_made_editable",
+        "loop_limit_and_cost_breaker_enabled",
+        "nm_106_control_evidenced"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-106, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 44,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0045",
+      "case": "seed:meridian:NM-106",
+      "prov": "NM-106",
+      "rules": [
+        "NM-106"
+      ],
+      "facts": [
+        "agent_action_log_append_only",
+        "agent_action_log_made_editable",
+        "agent_cannot_widen_own_mandate",
+        "nm_106_control_evidenced"
+      ],
+      "premise": [
+        "agent_action_log_append_only",
+        "agent_action_log_made_editable",
+        "agent_cannot_widen_own_mandate",
+        "nm_106_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-106, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AG",
+        "width": 3
+      },
+      "ts": 45,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0046",
+      "case": "seed:vetpoc:NM-201",
+      "prov": "NM-201",
+      "rules": [
+        "NM-201"
+      ],
+      "facts": [
+        "content_security_policy_relaxed",
+        "content_security_policy_tightened_not_relaxed",
+        "database_access_uses_parameterised_queries",
+        "template_autoescape_enabled"
+      ],
+      "premise": [
+        "content_security_policy_relaxed",
+        "content_security_policy_tightened_not_relaxed",
+        "database_access_uses_parameterised_queries",
+        "template_autoescape_enabled"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-201, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 46,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0047",
+      "case": "seed:semifab:NM-201",
+      "prov": "NM-201",
+      "rules": [
+        "NM-201"
+      ],
+      "facts": [
+        "content_security_policy_relaxed",
+        "deserialisation_restricted_to_known_types",
+        "injection_test_added_for_new_endpoint"
+      ],
+      "premise": [
+        "content_security_policy_relaxed",
+        "deserialisation_restricted_to_known_types",
+        "injection_test_added_for_new_endpoint"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-201, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 47,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0048",
+      "case": "seed:frontierllm:NM-201",
+      "prov": "NM-201",
+      "rules": [
+        "NM-201"
+      ],
+      "facts": [
+        "content_security_policy_relaxed",
+        "nm_201_control_evidenced",
+        "output_encoded_before_render",
+        "template_autoescape_enabled"
+      ],
+      "premise": [
+        "content_security_policy_relaxed",
+        "nm_201_control_evidenced",
+        "output_encoded_before_render",
+        "template_autoescape_enabled"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-201, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 48,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0049",
+      "case": "seed:dcvigil:NM-201",
+      "prov": "NM-201",
+      "rules": [
+        "NM-201"
+      ],
+      "facts": [
+        "content_security_policy_relaxed",
+        "query_builder_forbids_string_concatenation",
+        "template_autoescape_enabled"
+      ],
+      "premise": [
+        "content_security_policy_relaxed",
+        "query_builder_forbids_string_concatenation",
+        "template_autoescape_enabled"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-201, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 49,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0050",
+      "case": "seed:meridian:NM-201",
+      "prov": "NM-201",
+      "rules": [
+        "NM-201"
+      ],
+      "facts": [
+        "content_security_policy_relaxed",
+        "content_security_policy_tightened_not_relaxed",
+        "database_access_uses_parameterised_queries",
+        "template_autoescape_enabled"
+      ],
+      "premise": [
+        "content_security_policy_relaxed",
+        "content_security_policy_tightened_not_relaxed",
+        "database_access_uses_parameterised_queries",
+        "template_autoescape_enabled"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-201, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 50,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0051",
+      "case": "seed:vetpoc:NM-202",
+      "prov": "NM-202",
+      "rules": [
+        "NM-202"
+      ],
+      "facts": [
+        "archive_extraction_bounded",
+        "content_security_policy_relaxed",
+        "content_security_policy_tightened_not_relaxed",
+        "template_autoescape_enabled"
+      ],
+      "premise": [
+        "archive_extraction_bounded",
+        "content_security_policy_relaxed",
+        "content_security_policy_tightened_not_relaxed",
+        "template_autoescape_enabled"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-202, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 51,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0052",
+      "case": "seed:semifab:NM-202",
+      "prov": "NM-202",
+      "rules": [
+        "NM-202"
+      ],
+      "facts": [
+        "content_security_policy_relaxed",
+        "deserialisation_restricted_to_known_types",
+        "error_response_omits_stack_trace"
+      ],
+      "premise": [
+        "content_security_policy_relaxed",
+        "deserialisation_restricted_to_known_types",
+        "error_response_omits_stack_trace"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-202, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 52,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0053",
+      "case": "seed:frontierllm:NM-202",
+      "prov": "NM-202",
+      "rules": [
+        "NM-202"
+      ],
+      "facts": [
+        "content_security_policy_relaxed",
+        "nm_202_control_evidenced",
+        "outbound_fetch_restricted_to_allowlist",
+        "template_autoescape_enabled"
+      ],
+      "premise": [
+        "content_security_policy_relaxed",
+        "nm_202_control_evidenced",
+        "outbound_fetch_restricted_to_allowlist",
+        "template_autoescape_enabled"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-202, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 53,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0054",
+      "case": "seed:dcvigil:NM-202",
+      "prov": "NM-202",
+      "rules": [
+        "NM-202"
+      ],
+      "facts": [
+        "content_security_policy_relaxed",
+        "output_encoded_before_render",
+        "template_autoescape_enabled"
+      ],
+      "premise": [
+        "content_security_policy_relaxed",
+        "output_encoded_before_render",
+        "template_autoescape_enabled"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-202, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 54,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0055",
+      "case": "seed:meridian:NM-202",
+      "prov": "NM-202",
+      "rules": [
+        "NM-202"
+      ],
+      "facts": [
+        "archive_extraction_bounded",
+        "content_security_policy_relaxed",
+        "content_security_policy_tightened_not_relaxed",
+        "template_autoescape_enabled"
+      ],
+      "premise": [
+        "archive_extraction_bounded",
+        "content_security_policy_relaxed",
+        "content_security_policy_tightened_not_relaxed",
+        "template_autoescape_enabled"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-202, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 55,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0056",
+      "case": "seed:vetpoc:NM-203",
+      "prov": "NM-203",
+      "rules": [
+        "NM-203"
+      ],
+      "facts": [
+        "archive_extraction_bounded",
+        "cryptographic_primitive_from_approved_library",
+        "deserialisation_of_arbitrary_types",
+        "outbound_fetch_restricted_to_allowlist"
+      ],
+      "premise": [
+        "archive_extraction_bounded",
+        "cryptographic_primitive_from_approved_library",
+        "deserialisation_of_arbitrary_types",
+        "outbound_fetch_restricted_to_allowlist"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-203, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 56,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0057",
+      "case": "seed:semifab:NM-203",
+      "prov": "NM-203",
+      "rules": [
+        "NM-203"
+      ],
+      "facts": [
+        "deprecated_primitive_refused_by_linter",
+        "deserialisation_of_arbitrary_types",
+        "deserialisation_restricted_to_known_types"
+      ],
+      "premise": [
+        "deprecated_primitive_refused_by_linter",
+        "deserialisation_of_arbitrary_types",
+        "deserialisation_restricted_to_known_types"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-203, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 57,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0058",
+      "case": "seed:frontierllm:NM-203",
+      "prov": "NM-203",
+      "rules": [
+        "NM-203"
+      ],
+      "facts": [
+        "deserialisation_of_arbitrary_types",
+        "error_response_omits_stack_trace",
+        "internal_identifiers_absent_from_error_body",
+        "outbound_fetch_restricted_to_allowlist"
+      ],
+      "premise": [
+        "deserialisation_of_arbitrary_types",
+        "error_response_omits_stack_trace",
+        "internal_identifiers_absent_from_error_body",
+        "outbound_fetch_restricted_to_allowlist"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-203, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 58,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0059",
+      "case": "seed:dcvigil:NM-203",
+      "prov": "NM-203",
+      "rules": [
+        "NM-203"
+      ],
+      "facts": [
+        "deserialisation_of_arbitrary_types",
+        "nm_203_control_evidenced",
+        "outbound_fetch_restricted_to_allowlist"
+      ],
+      "premise": [
+        "deserialisation_of_arbitrary_types",
+        "nm_203_control_evidenced",
+        "outbound_fetch_restricted_to_allowlist"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-203, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 59,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0060",
+      "case": "seed:meridian:NM-203",
+      "prov": "NM-203",
+      "rules": [
+        "NM-203"
+      ],
+      "facts": [
+        "archive_extraction_bounded",
+        "cryptographic_primitive_from_approved_library",
+        "deserialisation_of_arbitrary_types",
+        "outbound_fetch_restricted_to_allowlist"
+      ],
+      "premise": [
+        "archive_extraction_bounded",
+        "cryptographic_primitive_from_approved_library",
+        "deserialisation_of_arbitrary_types",
+        "outbound_fetch_restricted_to_allowlist"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-203, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 60,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0061",
+      "case": "seed:vetpoc:NM-204",
+      "prov": "NM-204",
+      "rules": [
+        "NM-204"
+      ],
+      "facts": [
+        "cryptographic_primitive_from_approved_library",
+        "deprecated_primitive_refused_by_linter",
+        "hand_rolled_cipher_introduced",
+        "random_source_is_cryptographic"
+      ],
+      "premise": [
+        "cryptographic_primitive_from_approved_library",
+        "deprecated_primitive_refused_by_linter",
+        "hand_rolled_cipher_introduced",
+        "random_source_is_cryptographic"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-204, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 61,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0062",
+      "case": "seed:semifab:NM-204",
+      "prov": "NM-204",
+      "rules": [
+        "NM-204"
+      ],
+      "facts": [
+        "error_response_omits_stack_trace",
+        "hand_rolled_cipher_introduced",
+        "input_validated_against_allowlist"
+      ],
+      "premise": [
+        "error_response_omits_stack_trace",
+        "hand_rolled_cipher_introduced",
+        "input_validated_against_allowlist"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-204, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 62,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0063",
+      "case": "seed:frontierllm:NM-204",
+      "prov": "NM-204",
+      "rules": [
+        "NM-204"
+      ],
+      "facts": [
+        "hand_rolled_cipher_introduced",
+        "internal_identifiers_absent_from_error_body",
+        "nm_204_control_evidenced",
+        "random_source_is_cryptographic"
+      ],
+      "premise": [
+        "hand_rolled_cipher_introduced",
+        "internal_identifiers_absent_from_error_body",
+        "nm_204_control_evidenced",
+        "random_source_is_cryptographic"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-204, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 63,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0064",
+      "case": "seed:dcvigil:NM-204",
+      "prov": "NM-204",
+      "rules": [
+        "NM-204"
+      ],
+      "facts": [
+        "hand_rolled_cipher_introduced",
+        "outbound_fetch_restricted_to_allowlist",
+        "random_source_is_cryptographic"
+      ],
+      "premise": [
+        "hand_rolled_cipher_introduced",
+        "outbound_fetch_restricted_to_allowlist",
+        "random_source_is_cryptographic"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-204, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 64,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0065",
+      "case": "seed:meridian:NM-204",
+      "prov": "NM-204",
+      "rules": [
+        "NM-204"
+      ],
+      "facts": [
+        "cryptographic_primitive_from_approved_library",
+        "deprecated_primitive_refused_by_linter",
+        "hand_rolled_cipher_introduced",
+        "random_source_is_cryptographic"
+      ],
+      "premise": [
+        "cryptographic_primitive_from_approved_library",
+        "deprecated_primitive_refused_by_linter",
+        "hand_rolled_cipher_introduced",
+        "random_source_is_cryptographic"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-204, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 65,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0066",
+      "case": "seed:vetpoc:NM-205",
+      "prov": "NM-205",
+      "rules": [
+        "NM-205"
+      ],
+      "facts": [
+        "authz_check_missing_on_new_endpoint",
+        "authz_check_on_every_new_endpoint",
+        "cryptographic_primitive_from_approved_library",
+        "security_headers_set_on_new_route"
+      ],
+      "premise": [
+        "authz_check_missing_on_new_endpoint",
+        "authz_check_on_every_new_endpoint",
+        "cryptographic_primitive_from_approved_library",
+        "security_headers_set_on_new_route"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-205, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 66,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0067",
+      "case": "seed:semifab:NM-205",
+      "prov": "NM-205",
+      "rules": [
+        "NM-205"
+      ],
+      "facts": [
+        "authz_check_missing_on_new_endpoint",
+        "dependency_free_of_known_injection_cve",
+        "deprecated_primitive_refused_by_linter"
+      ],
+      "premise": [
+        "authz_check_missing_on_new_endpoint",
+        "dependency_free_of_known_injection_cve",
+        "deprecated_primitive_refused_by_linter"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-205, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 67,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0068",
+      "case": "seed:frontierllm:NM-205",
+      "prov": "NM-205",
+      "rules": [
+        "NM-205"
+      ],
+      "facts": [
+        "authz_check_missing_on_new_endpoint",
+        "input_validated_against_allowlist",
+        "nm_205_control_evidenced",
+        "security_headers_set_on_new_route"
+      ],
+      "premise": [
+        "authz_check_missing_on_new_endpoint",
+        "input_validated_against_allowlist",
+        "nm_205_control_evidenced",
+        "security_headers_set_on_new_route"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-205, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 68,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0069",
+      "case": "seed:dcvigil:NM-205",
+      "prov": "NM-205",
+      "rules": [
+        "NM-205"
+      ],
+      "facts": [
+        "authz_check_missing_on_new_endpoint",
+        "random_source_is_cryptographic",
+        "security_headers_set_on_new_route"
+      ],
+      "premise": [
+        "authz_check_missing_on_new_endpoint",
+        "random_source_is_cryptographic",
+        "security_headers_set_on_new_route"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-205, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 69,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0070",
+      "case": "seed:meridian:NM-205",
+      "prov": "NM-205",
+      "rules": [
+        "NM-205"
+      ],
+      "facts": [
+        "authz_check_missing_on_new_endpoint",
+        "authz_check_on_every_new_endpoint",
+        "cryptographic_primitive_from_approved_library",
+        "security_headers_set_on_new_route"
+      ],
+      "premise": [
+        "authz_check_missing_on_new_endpoint",
+        "authz_check_on_every_new_endpoint",
+        "cryptographic_primitive_from_approved_library",
+        "security_headers_set_on_new_route"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-205, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:AS",
+        "width": 3
+      },
+      "ts": 70,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0071",
+      "case": "seed:vetpoc:NM-301",
+      "prov": "NM-301",
+      "rules": [
+        "NM-301"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "signature_verified_by_branch_protection"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "signature_verified_by_branch_protection"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-301, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 71,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0072",
+      "case": "seed:semifab:NM-301",
+      "prov": "NM-301",
+      "rules": [
+        "NM-301"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "ci_log_redaction_verified",
+        "commit_to_protected_branch_signed"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "ci_log_redaction_verified",
+        "commit_to_protected_branch_signed"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-301, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 72,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0073",
+      "case": "seed:frontierllm:NM-301",
+      "prov": "NM-301",
+      "rules": [
+        "NM-301"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "nm_301_control_evidenced",
+        "secret_injected_from_vault_at_runtime",
+        "signature_verified_by_branch_protection"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "nm_301_control_evidenced",
+        "secret_injected_from_vault_at_runtime",
+        "signature_verified_by_branch_protection"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-301, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 73,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0074",
+      "case": "seed:dcvigil:NM-301",
+      "prov": "NM-301",
+      "rules": [
+        "NM-301"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "secret_scanner_clean_on_diff",
+        "signature_verified_by_branch_protection"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "secret_scanner_clean_on_diff",
+        "signature_verified_by_branch_protection"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-301, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 74,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0075",
+      "case": "seed:meridian:NM-301",
+      "prov": "NM-301",
+      "rules": [
+        "NM-301"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "signature_verified_by_branch_protection"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "signature_verified_by_branch_protection"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-301, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 75,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0076",
+      "case": "seed:vetpoc:NM-302",
+      "prov": "NM-302",
+      "rules": [
+        "NM-302"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "signature_verified_by_branch_protection"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "signature_verified_by_branch_protection"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-302, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 76,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0077",
+      "case": "seed:semifab:NM-302",
+      "prov": "NM-302",
+      "rules": [
+        "NM-302"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "commit_to_protected_branch_signed",
+        "nm_302_control_evidenced"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "commit_to_protected_branch_signed",
+        "nm_302_control_evidenced"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-302, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 77,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0078",
+      "case": "seed:frontierllm:NM-302",
+      "prov": "NM-302",
+      "rules": [
+        "NM-302"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "provenance_attestation_signed",
+        "sbom_bound_to_artefact_digest",
+        "signature_verified_by_branch_protection"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "provenance_attestation_signed",
+        "sbom_bound_to_artefact_digest",
+        "signature_verified_by_branch_protection"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-302, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 78,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0079",
+      "case": "seed:dcvigil:NM-302",
+      "prov": "NM-302",
+      "rules": [
+        "NM-302"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "sbom_published_per_release",
+        "signature_verified_by_branch_protection"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "sbom_published_per_release",
+        "signature_verified_by_branch_protection"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-302, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 79,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0080",
+      "case": "seed:meridian:NM-302",
+      "prov": "NM-302",
+      "rules": [
+        "NM-302"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "signature_verified_by_branch_protection"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "signature_verified_by_branch_protection"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-302, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 80,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0081",
+      "case": "seed:vetpoc:NM-303",
+      "prov": "NM-303",
+      "rules": [
+        "NM-303"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-303, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 81,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0082",
+      "case": "seed:semifab:NM-303",
+      "prov": "NM-303",
+      "rules": [
+        "NM-303"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-303, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 82,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0083",
+      "case": "seed:frontierllm:NM-303",
+      "prov": "NM-303",
+      "rules": [
+        "NM-303"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "nm_303_control_evidenced",
+        "provenance_attestation_signed",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "nm_303_control_evidenced",
+        "provenance_attestation_signed",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-303, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 83,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0084",
+      "case": "seed:dcvigil:NM-303",
+      "prov": "NM-303",
+      "rules": [
+        "NM-303"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "sbom_bound_to_artefact_digest",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "sbom_bound_to_artefact_digest",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-303, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 84,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0085",
+      "case": "seed:meridian:NM-303",
+      "prov": "NM-303",
+      "rules": [
+        "NM-303"
+      ],
+      "facts": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "premise": [
+        "artefact_deployed_without_provenance",
+        "artefact_provenance_verified_against_builder",
+        "build_runner_ephemeral_and_pinned",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-303, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 85,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0086",
+      "case": "seed:vetpoc:NM-304",
+      "prov": "NM-304",
+      "rules": [
+        "NM-304"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-304, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 86,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0087",
+      "case": "seed:semifab:NM-304",
+      "prov": "NM-304",
+      "rules": [
+        "NM-304"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "licence_allowlist_enforced",
+        "manifest_and_lockfile_change_atomically"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "licence_allowlist_enforced",
+        "manifest_and_lockfile_change_atomically"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-304, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 87,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0088",
+      "case": "seed:frontierllm:NM-304",
+      "prov": "NM-304",
+      "rules": [
+        "NM-304"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "nm_304_control_evidenced",
+        "private_registry_preferred_for_resolution",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "nm_304_control_evidenced",
+        "private_registry_preferred_for_resolution",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-304, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 88,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0089",
+      "case": "seed:dcvigil:NM-304",
+      "prov": "NM-304",
+      "rules": [
+        "NM-304"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "sbom_bound_to_artefact_digest",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "sbom_bound_to_artefact_digest",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-304, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 89,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0090",
+      "case": "seed:meridian:NM-304",
+      "prov": "NM-304",
+      "rules": [
+        "NM-304"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold",
+        "sbom_covers_transitive_dependencies"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-304, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 90,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0091",
+      "case": "seed:vetpoc:NM-305",
+      "prov": "NM-305",
+      "rules": [
+        "NM-305"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold",
+        "private_registry_preferred_for_resolution"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold",
+        "private_registry_preferred_for_resolution"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-305, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 91,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0092",
+      "case": "seed:semifab:NM-305",
+      "prov": "NM-305",
+      "rules": [
+        "NM-305"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "key_rotation_interval_enforced",
+        "leaked_credential_revoked_before_merge"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "key_rotation_interval_enforced",
+        "leaked_credential_revoked_before_merge"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-305, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 92,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0093",
+      "case": "seed:frontierllm:NM-305",
+      "prov": "NM-305",
+      "rules": [
+        "NM-305"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "licence_allowlist_enforced",
+        "manifest_and_lockfile_change_atomically",
+        "private_registry_preferred_for_resolution"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "licence_allowlist_enforced",
+        "manifest_and_lockfile_change_atomically",
+        "private_registry_preferred_for_resolution"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-305, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 93,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0094",
+      "case": "seed:dcvigil:NM-305",
+      "prov": "NM-305",
+      "rules": [
+        "NM-305"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "nm_305_control_evidenced",
+        "private_registry_preferred_for_resolution"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "nm_305_control_evidenced",
+        "private_registry_preferred_for_resolution"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-305, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 94,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0095",
+      "case": "seed:meridian:NM-305",
+      "prov": "NM-305",
+      "rules": [
+        "NM-305"
+      ],
+      "facts": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold",
+        "private_registry_preferred_for_resolution"
+      ],
+      "premise": [
+        "copyleft_dependency_added_to_proprietary_service",
+        "cve_exception_recorded_with_expiry",
+        "dependency_cve_below_declared_threshold",
+        "private_registry_preferred_for_resolution"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-305, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 95,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0096",
+      "case": "seed:vetpoc:NM-306",
+      "prov": "NM-306",
+      "rules": [
+        "NM-306"
+      ],
+      "facts": [
+        "approved_algorithm_for_encryption_at_rest",
+        "credential_written_to_ci_log",
+        "dependency_pinned_by_digest",
+        "registry_mirror_integrity_checked"
+      ],
+      "premise": [
+        "approved_algorithm_for_encryption_at_rest",
+        "credential_written_to_ci_log",
+        "dependency_pinned_by_digest",
+        "registry_mirror_integrity_checked"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-306, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 96,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0097",
+      "case": "seed:semifab:NM-306",
+      "prov": "NM-306",
+      "rules": [
+        "NM-306"
+      ],
+      "facts": [
+        "credential_written_to_ci_log",
+        "key_rotation_interval_enforced",
+        "leaked_credential_revoked_before_merge"
+      ],
+      "premise": [
+        "credential_written_to_ci_log",
+        "key_rotation_interval_enforced",
+        "leaked_credential_revoked_before_merge"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-306, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 97,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0098",
+      "case": "seed:frontierllm:NM-306",
+      "prov": "NM-306",
+      "rules": [
+        "NM-306"
+      ],
+      "facts": [
+        "credential_written_to_ci_log",
+        "manifest_and_lockfile_change_atomically",
+        "nm_306_control_evidenced",
+        "registry_mirror_integrity_checked"
+      ],
+      "premise": [
+        "credential_written_to_ci_log",
+        "manifest_and_lockfile_change_atomically",
+        "nm_306_control_evidenced",
+        "registry_mirror_integrity_checked"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-306, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 98,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0099",
+      "case": "seed:dcvigil:NM-306",
+      "prov": "NM-306",
+      "rules": [
+        "NM-306"
+      ],
+      "facts": [
+        "credential_written_to_ci_log",
+        "private_registry_preferred_for_resolution",
+        "registry_mirror_integrity_checked"
+      ],
+      "premise": [
+        "credential_written_to_ci_log",
+        "private_registry_preferred_for_resolution",
+        "registry_mirror_integrity_checked"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-306, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 99,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0100",
+      "case": "seed:meridian:NM-306",
+      "prov": "NM-306",
+      "rules": [
+        "NM-306"
+      ],
+      "facts": [
+        "approved_algorithm_for_encryption_at_rest",
+        "credential_written_to_ci_log",
+        "dependency_pinned_by_digest",
+        "registry_mirror_integrity_checked"
+      ],
+      "premise": [
+        "approved_algorithm_for_encryption_at_rest",
+        "credential_written_to_ci_log",
+        "dependency_pinned_by_digest",
+        "registry_mirror_integrity_checked"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-306, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:SC",
+        "width": 3
+      },
+      "ts": 100,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0101",
+      "case": "seed:vetpoc:NM-402",
+      "prov": "NM-402",
+      "rules": [
+        "NM-402"
+      ],
+      "facts": [
+        "availability_regression_blocks_deploy",
+        "backup_verified_before_storage_change",
+        "deploy_during_freeze_without_emergency_protocol",
+        "nm_402_control_evidenced"
+      ],
+      "premise": [
+        "availability_regression_blocks_deploy",
+        "backup_verified_before_storage_change",
+        "deploy_during_freeze_without_emergency_protocol",
+        "nm_402_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-402, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 101,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0102",
+      "case": "seed:semifab:NM-402",
+      "prov": "NM-402",
+      "rules": [
+        "NM-402"
+      ],
+      "facts": [
+        "deploy_during_freeze_without_emergency_protocol",
+        "down_migration_present_and_rehearsed",
+        "emergency_protocol_invoked_with_record"
+      ],
+      "premise": [
+        "deploy_during_freeze_without_emergency_protocol",
+        "down_migration_present_and_rehearsed",
+        "emergency_protocol_invoked_with_record"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-402, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 102,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0103",
+      "case": "seed:frontierllm:NM-402",
+      "prov": "NM-402",
+      "rules": [
+        "NM-402"
+      ],
+      "facts": [
+        "deploy_during_freeze_without_emergency_protocol",
+        "freeze_calendar_read_from_constitution",
+        "freeze_window_honoured",
+        "nm_402_control_evidenced"
+      ],
+      "premise": [
+        "deploy_during_freeze_without_emergency_protocol",
+        "freeze_calendar_read_from_constitution",
+        "freeze_window_honoured",
+        "nm_402_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-402, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 103,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0104",
+      "case": "seed:dcvigil:NM-402",
+      "prov": "NM-402",
+      "rules": [
+        "NM-402"
+      ],
+      "facts": [
+        "deploy_during_freeze_without_emergency_protocol",
+        "latency_regression_gate_on_critical_path",
+        "nm_402_control_evidenced"
+      ],
+      "premise": [
+        "deploy_during_freeze_without_emergency_protocol",
+        "latency_regression_gate_on_critical_path",
+        "nm_402_control_evidenced"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-402, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 104,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0105",
+      "case": "seed:meridian:NM-402",
+      "prov": "NM-402",
+      "rules": [
+        "NM-402"
+      ],
+      "facts": [
+        "availability_regression_blocks_deploy",
+        "backup_verified_before_storage_change",
+        "deploy_during_freeze_without_emergency_protocol",
+        "nm_402_control_evidenced"
+      ],
+      "premise": [
+        "availability_regression_blocks_deploy",
+        "backup_verified_before_storage_change",
+        "deploy_during_freeze_without_emergency_protocol",
+        "nm_402_control_evidenced"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-402, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 105,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0106",
+      "case": "seed:vetpoc:NM-403",
+      "prov": "NM-403",
+      "rules": [
+        "NM-403"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "availability_regression_blocks_deploy",
+        "canary_deploy_on_critical_service",
+        "load_test_covers_peak_profile"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "availability_regression_blocks_deploy",
+        "canary_deploy_on_critical_service",
+        "load_test_covers_peak_profile"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-403, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 106,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0107",
+      "case": "seed:semifab:NM-403",
+      "prov": "NM-403",
+      "rules": [
+        "NM-403"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "emergency_protocol_invoked_with_record",
+        "feature_flag_defaults_closed"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "emergency_protocol_invoked_with_record",
+        "feature_flag_defaults_closed"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-403, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 107,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0108",
+      "case": "seed:frontierllm:NM-403",
+      "prov": "NM-403",
+      "rules": [
+        "NM-403"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "freeze_calendar_read_from_constitution",
+        "freeze_window_honoured",
+        "load_test_covers_peak_profile"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "freeze_calendar_read_from_constitution",
+        "freeze_window_honoured",
+        "load_test_covers_peak_profile"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-403, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 108,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0109",
+      "case": "seed:dcvigil:NM-403",
+      "prov": "NM-403",
+      "rules": [
+        "NM-403"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "latency_regression_gate_on_critical_path",
+        "load_test_covers_peak_profile"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "latency_regression_gate_on_critical_path",
+        "load_test_covers_peak_profile"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-403, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 109,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0110",
+      "case": "seed:meridian:NM-403",
+      "prov": "NM-403",
+      "rules": [
+        "NM-403"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "availability_regression_blocks_deploy",
+        "canary_deploy_on_critical_service",
+        "load_test_covers_peak_profile"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "availability_regression_blocks_deploy",
+        "canary_deploy_on_critical_service",
+        "load_test_covers_peak_profile"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-403, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 110,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0111",
+      "case": "seed:vetpoc:NM-404",
+      "prov": "NM-404",
+      "rules": [
+        "NM-404"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "availability_regression_blocks_deploy",
+        "canary_deploy_on_critical_service",
+        "load_test_covers_peak_profile"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "availability_regression_blocks_deploy",
+        "canary_deploy_on_critical_service",
+        "load_test_covers_peak_profile"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-404, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 111,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0112",
+      "case": "seed:semifab:NM-404",
+      "prov": "NM-404",
+      "rules": [
+        "NM-404"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "change_ticket_linked_to_commit",
+        "coverage_floor_met_on_changed_lines"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "change_ticket_linked_to_commit",
+        "coverage_floor_met_on_changed_lines"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-404, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 112,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0113",
+      "case": "seed:frontierllm:NM-404",
+      "prov": "NM-404",
+      "rules": [
+        "NM-404"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "feature_flag_defaults_closed",
+        "incident_runbook_updated_with_change",
+        "load_test_covers_peak_profile"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "feature_flag_defaults_closed",
+        "incident_runbook_updated_with_change",
+        "load_test_covers_peak_profile"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-404, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 113,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0114",
+      "case": "seed:dcvigil:NM-404",
+      "prov": "NM-404",
+      "rules": [
+        "NM-404"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "latency_regression_gate_on_critical_path",
+        "load_test_covers_peak_profile"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "latency_regression_gate_on_critical_path",
+        "load_test_covers_peak_profile"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-404, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 114,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0115",
+      "case": "seed:meridian:NM-404",
+      "prov": "NM-404",
+      "rules": [
+        "NM-404"
+      ],
+      "facts": [
+        "availability_check_skipped_on_critical_path",
+        "availability_regression_blocks_deploy",
+        "canary_deploy_on_critical_service",
+        "load_test_covers_peak_profile"
+      ],
+      "premise": [
+        "availability_check_skipped_on_critical_path",
+        "availability_regression_blocks_deploy",
+        "canary_deploy_on_critical_service",
+        "load_test_covers_peak_profile"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-404, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:CQ",
+        "width": 3
+      },
+      "ts": 115,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0116",
+      "case": "seed:vetpoc:NM-501",
+      "prov": "NM-501",
+      "rules": [
+        "NM-501"
+      ],
+      "facts": [
+        "accessibility_gate_at_wcag_aa_in_pipeline",
+        "accessibility_gate_removed_from_pipeline",
+        "clock_override_rejected_by_config_loader",
+        "retention_schedule_enforced_by_job"
+      ],
+      "premise": [
+        "accessibility_gate_at_wcag_aa_in_pipeline",
+        "accessibility_gate_removed_from_pipeline",
+        "clock_override_rejected_by_config_loader",
+        "retention_schedule_enforced_by_job"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-501, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 116,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0117",
+      "case": "seed:semifab:NM-501",
+      "prov": "NM-501",
+      "rules": [
+        "NM-501"
+      ],
+      "facts": [
+        "accessibility_gate_removed_from_pipeline",
+        "incident_detection_wired_to_oncall",
+        "keyboard_only_completion_verified"
+      ],
+      "premise": [
+        "accessibility_gate_removed_from_pipeline",
+        "incident_detection_wired_to_oncall",
+        "keyboard_only_completion_verified"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-501, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 117,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0118",
+      "case": "seed:frontierllm:NM-501",
+      "prov": "NM-501",
+      "rules": [
+        "NM-501"
+      ],
+      "facts": [
+        "accessibility_gate_removed_from_pipeline",
+        "nm_501_control_evidenced",
+        "notification_clock_sourced_from_jurisdiction_table",
+        "retention_schedule_enforced_by_job"
+      ],
+      "premise": [
+        "accessibility_gate_removed_from_pipeline",
+        "nm_501_control_evidenced",
+        "notification_clock_sourced_from_jurisdiction_table",
+        "retention_schedule_enforced_by_job"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-501, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 118,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0119",
+      "case": "seed:dcvigil:NM-501",
+      "prov": "NM-501",
+      "rules": [
+        "NM-501"
+      ],
+      "facts": [
+        "accessibility_gate_removed_from_pipeline",
+        "personal_data_field_has_recorded_purpose",
+        "retention_schedule_enforced_by_job"
+      ],
+      "premise": [
+        "accessibility_gate_removed_from_pipeline",
+        "personal_data_field_has_recorded_purpose",
+        "retention_schedule_enforced_by_job"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-501, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 119,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0120",
+      "case": "seed:meridian:NM-501",
+      "prov": "NM-501",
+      "rules": [
+        "NM-501"
+      ],
+      "facts": [
+        "accessibility_gate_at_wcag_aa_in_pipeline",
+        "accessibility_gate_removed_from_pipeline",
+        "clock_override_rejected_by_config_loader",
+        "retention_schedule_enforced_by_job"
+      ],
+      "premise": [
+        "accessibility_gate_at_wcag_aa_in_pipeline",
+        "accessibility_gate_removed_from_pipeline",
+        "clock_override_rejected_by_config_loader",
+        "retention_schedule_enforced_by_job"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-501, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 120,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0121",
+      "case": "seed:vetpoc:NM-502",
+      "prov": "NM-502",
+      "rules": [
+        "NM-502"
+      ],
+      "facts": [
+        "access_request_path_preserved",
+        "accessibility_gate_at_wcag_aa_in_pipeline",
+        "accessibility_gate_removed_from_pipeline",
+        "status_conveyed_in_text_not_colour_alone"
+      ],
+      "premise": [
+        "access_request_path_preserved",
+        "accessibility_gate_at_wcag_aa_in_pipeline",
+        "accessibility_gate_removed_from_pipeline",
+        "status_conveyed_in_text_not_colour_alone"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-502, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 121,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0122",
+      "case": "seed:semifab:NM-502",
+      "prov": "NM-502",
+      "rules": [
+        "NM-502"
+      ],
+      "facts": [
+        "accessibility_gate_removed_from_pipeline",
+        "keyboard_only_completion_verified",
+        "monitoring_proportionality_assessment_recorded"
+      ],
+      "premise": [
+        "accessibility_gate_removed_from_pipeline",
+        "keyboard_only_completion_verified",
+        "monitoring_proportionality_assessment_recorded"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-502, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 122,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0123",
+      "case": "seed:frontierllm:NM-502",
+      "prov": "NM-502",
+      "rules": [
+        "NM-502"
+      ],
+      "facts": [
+        "accessibility_gate_removed_from_pipeline",
+        "nm_502_control_evidenced",
+        "personal_data_field_has_recorded_purpose",
+        "status_conveyed_in_text_not_colour_alone"
+      ],
+      "premise": [
+        "accessibility_gate_removed_from_pipeline",
+        "nm_502_control_evidenced",
+        "personal_data_field_has_recorded_purpose",
+        "status_conveyed_in_text_not_colour_alone"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-502, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 123,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0124",
+      "case": "seed:dcvigil:NM-502",
+      "prov": "NM-502",
+      "rules": [
+        "NM-502"
+      ],
+      "facts": [
+        "accessibility_gate_removed_from_pipeline",
+        "retention_schedule_enforced_by_job",
+        "status_conveyed_in_text_not_colour_alone"
+      ],
+      "premise": [
+        "accessibility_gate_removed_from_pipeline",
+        "retention_schedule_enforced_by_job",
+        "status_conveyed_in_text_not_colour_alone"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-502, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 124,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0125",
+      "case": "seed:meridian:NM-502",
+      "prov": "NM-502",
+      "rules": [
+        "NM-502"
+      ],
+      "facts": [
+        "access_request_path_preserved",
+        "accessibility_gate_at_wcag_aa_in_pipeline",
+        "accessibility_gate_removed_from_pipeline",
+        "status_conveyed_in_text_not_colour_alone"
+      ],
+      "premise": [
+        "access_request_path_preserved",
+        "accessibility_gate_at_wcag_aa_in_pipeline",
+        "accessibility_gate_removed_from_pipeline",
+        "status_conveyed_in_text_not_colour_alone"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-502, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 125,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0126",
+      "case": "seed:vetpoc:NM-503",
+      "prov": "NM-503",
+      "rules": [
+        "NM-503"
+      ],
+      "facts": [
+        "access_request_path_preserved",
+        "badge_logs_minimised_and_retained_on_schedule",
+        "badge_logs_retained_indefinitely",
+        "withdrawal_honoured_across_channels"
+      ],
+      "premise": [
+        "access_request_path_preserved",
+        "badge_logs_minimised_and_retained_on_schedule",
+        "badge_logs_retained_indefinitely",
+        "withdrawal_honoured_across_channels"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-503, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 126,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0127",
+      "case": "seed:semifab:NM-503",
+      "prov": "NM-503",
+      "rules": [
+        "NM-503"
+      ],
+      "facts": [
+        "badge_logs_retained_indefinitely",
+        "consent_withdrawal_one_step",
+        "monitoring_proportionality_assessment_recorded"
+      ],
+      "premise": [
+        "badge_logs_retained_indefinitely",
+        "consent_withdrawal_one_step",
+        "monitoring_proportionality_assessment_recorded"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-503, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 127,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0128",
+      "case": "seed:frontierllm:NM-503",
+      "prov": "NM-503",
+      "rules": [
+        "NM-503"
+      ],
+      "facts": [
+        "badge_logs_retained_indefinitely",
+        "nm_503_control_evidenced",
+        "personal_data_field_has_recorded_purpose",
+        "withdrawal_honoured_across_channels"
+      ],
+      "premise": [
+        "badge_logs_retained_indefinitely",
+        "nm_503_control_evidenced",
+        "personal_data_field_has_recorded_purpose",
+        "withdrawal_honoured_across_channels"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-503, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 128,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0129",
+      "case": "seed:dcvigil:NM-503",
+      "prov": "NM-503",
+      "rules": [
+        "NM-503"
+      ],
+      "facts": [
+        "badge_logs_retained_indefinitely",
+        "retention_schedule_enforced_by_job",
+        "withdrawal_honoured_across_channels"
+      ],
+      "premise": [
+        "badge_logs_retained_indefinitely",
+        "retention_schedule_enforced_by_job",
+        "withdrawal_honoured_across_channels"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-503, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 129,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0130",
+      "case": "seed:meridian:NM-503",
+      "prov": "NM-503",
+      "rules": [
+        "NM-503"
+      ],
+      "facts": [
+        "access_request_path_preserved",
+        "badge_logs_minimised_and_retained_on_schedule",
+        "badge_logs_retained_indefinitely",
+        "withdrawal_honoured_across_channels"
+      ],
+      "premise": [
+        "access_request_path_preserved",
+        "badge_logs_minimised_and_retained_on_schedule",
+        "badge_logs_retained_indefinitely",
+        "withdrawal_honoured_across_channels"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-503, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 130,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0131",
+      "case": "seed:vetpoc:NM-504",
+      "prov": "NM-504",
+      "rules": [
+        "NM-504"
+      ],
+      "facts": [
+        "badge_logs_minimised_and_retained_on_schedule",
+        "badge_logs_retained_indefinitely",
+        "consent_record_carries_timestamp_and_source",
+        "withdrawal_honoured_across_channels"
+      ],
+      "premise": [
+        "badge_logs_minimised_and_retained_on_schedule",
+        "badge_logs_retained_indefinitely",
+        "consent_record_carries_timestamp_and_source",
+        "withdrawal_honoured_across_channels"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-504, first written when vetpoc contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 131,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0132",
+      "case": "seed:semifab:NM-504",
+      "prov": "NM-504",
+      "rules": [
+        "NM-504"
+      ],
+      "facts": [
+        "badge_logs_retained_indefinitely",
+        "consent_withdrawal_one_step",
+        "erasure_propagates_to_derived_stores"
+      ],
+      "premise": [
+        "badge_logs_retained_indefinitely",
+        "consent_withdrawal_one_step",
+        "erasure_propagates_to_derived_stores"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-504, first written when semifab contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 132,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0133",
+      "case": "seed:frontierllm:NM-504",
+      "prov": "NM-504",
+      "rules": [
+        "NM-504"
+      ],
+      "facts": [
+        "badge_logs_retained_indefinitely",
+        "monitoring_proportionality_assessment_recorded",
+        "nm_504_control_evidenced",
+        "withdrawal_honoured_across_channels"
+      ],
+      "premise": [
+        "badge_logs_retained_indefinitely",
+        "monitoring_proportionality_assessment_recorded",
+        "nm_504_control_evidenced",
+        "withdrawal_honoured_across_channels"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-504, first written when frontierllm contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 133,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0134",
+      "case": "seed:dcvigil:NM-504",
+      "prov": "NM-504",
+      "rules": [
+        "NM-504"
+      ],
+      "facts": [
+        "badge_logs_retained_indefinitely",
+        "privacy_notice_versioned_in_repo",
+        "withdrawal_honoured_across_channels"
+      ],
+      "premise": [
+        "badge_logs_retained_indefinitely",
+        "privacy_notice_versioned_in_repo",
+        "withdrawal_honoured_across_channels"
+      ],
+      "interp": "deny",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-504, first written when dcvigil contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 134,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "deny",
+      "admission_ground": "seed"
+    },
+    {
+      "id": "REC-NM-S0135",
+      "case": "seed:meridian:NM-504",
+      "prov": "NM-504",
+      "rules": [
+        "NM-504"
+      ],
+      "facts": [
+        "badge_logs_minimised_and_retained_on_schedule",
+        "badge_logs_retained_indefinitely",
+        "consent_record_carries_timestamp_and_source",
+        "withdrawal_honoured_across_channels"
+      ],
+      "premise": [
+        "badge_logs_minimised_and_retained_on_schedule",
+        "badge_logs_retained_indefinitely",
+        "consent_record_carries_timestamp_and_source",
+        "withdrawal_honoured_across_channels"
+      ],
+      "interp": "permit",
+      "auth_class": "judges",
+      "auth_id": "judge:NJ2-review",
+      "rationale": "Seeded enterprise holding on NM-504, first written when meridian contested a change.",
+      "scope": {
+        "domain": "NM:PP",
+        "width": 3
+      },
+      "ts": 135,
+      "depth": 2,
+      "expiry": null,
+      "referral": null,
+      "cites": [],
+      "outcome": "permit",
+      "admission_ground": "seed"
+    }
+  ],
+  "record_division": {
+    "REC-NM-S0001": "vetpoc",
+    "REC-NM-S0002": "semifab",
+    "REC-NM-S0003": "frontierllm",
+    "REC-NM-S0004": "dcvigil",
+    "REC-NM-S0005": "meridian",
+    "REC-NM-S0006": "vetpoc",
+    "REC-NM-S0007": "semifab",
+    "REC-NM-S0008": "frontierllm",
+    "REC-NM-S0009": "dcvigil",
+    "REC-NM-S0010": "meridian",
+    "REC-NM-S0011": "vetpoc",
+    "REC-NM-S0012": "semifab",
+    "REC-NM-S0013": "frontierllm",
+    "REC-NM-S0014": "dcvigil",
+    "REC-NM-S0015": "meridian",
+    "REC-NM-S0016": "vetpoc",
+    "REC-NM-S0017": "semifab",
+    "REC-NM-S0018": "frontierllm",
+    "REC-NM-S0019": "dcvigil",
+    "REC-NM-S0020": "meridian",
+    "REC-NM-S0021": "vetpoc",
+    "REC-NM-S0022": "semifab",
+    "REC-NM-S0023": "frontierllm",
+    "REC-NM-S0024": "dcvigil",
+    "REC-NM-S0025": "meridian",
+    "REC-NM-S0026": "vetpoc",
+    "REC-NM-S0027": "semifab",
+    "REC-NM-S0028": "frontierllm",
+    "REC-NM-S0029": "dcvigil",
+    "REC-NM-S0030": "meridian",
+    "REC-NM-S0031": "vetpoc",
+    "REC-NM-S0032": "semifab",
+    "REC-NM-S0033": "frontierllm",
+    "REC-NM-S0034": "dcvigil",
+    "REC-NM-S0035": "meridian",
+    "REC-NM-S0036": "vetpoc",
+    "REC-NM-S0037": "semifab",
+    "REC-NM-S0038": "frontierllm",
+    "REC-NM-S0039": "dcvigil",
+    "REC-NM-S0040": "meridian",
+    "REC-NM-S0041": "vetpoc",
+    "REC-NM-S0042": "semifab",
+    "REC-NM-S0043": "frontierllm",
+    "REC-NM-S0044": "dcvigil",
+    "REC-NM-S0045": "meridian",
+    "REC-NM-S0046": "vetpoc",
+    "REC-NM-S0047": "semifab",
+    "REC-NM-S0048": "frontierllm",
+    "REC-NM-S0049": "dcvigil",
+    "REC-NM-S0050": "meridian",
+    "REC-NM-S0051": "vetpoc",
+    "REC-NM-S0052": "semifab",
+    "REC-NM-S0053": "frontierllm",
+    "REC-NM-S0054": "dcvigil",
+    "REC-NM-S0055": "meridian",
+    "REC-NM-S0056": "vetpoc",
+    "REC-NM-S0057": "semifab",
+    "REC-NM-S0058": "frontierllm",
+    "REC-NM-S0059": "dcvigil",
+    "REC-NM-S0060": "meridian",
+    "REC-NM-S0061": "vetpoc",
+    "REC-NM-S0062": "semifab",
+    "REC-NM-S0063": "frontierllm",
+    "REC-NM-S0064": "dcvigil",
+    "REC-NM-S0065": "meridian",
+    "REC-NM-S0066": "vetpoc",
+    "REC-NM-S0067": "semifab",
+    "REC-NM-S0068": "frontierllm",
+    "REC-NM-S0069": "dcvigil",
+    "REC-NM-S0070": "meridian",
+    "REC-NM-S0071": "vetpoc",
+    "REC-NM-S0072": "semifab",
+    "REC-NM-S0073": "frontierllm",
+    "REC-NM-S0074": "dcvigil",
+    "REC-NM-S0075": "meridian",
+    "REC-NM-S0076": "vetpoc",
+    "REC-NM-S0077": "semifab",
+    "REC-NM-S0078": "frontierllm",
+    "REC-NM-S0079": "dcvigil",
+    "REC-NM-S0080": "meridian",
+    "REC-NM-S0081": "vetpoc",
+    "REC-NM-S0082": "semifab",
+    "REC-NM-S0083": "frontierllm",
+    "REC-NM-S0084": "dcvigil",
+    "REC-NM-S0085": "meridian",
+    "REC-NM-S0086": "vetpoc",
+    "REC-NM-S0087": "semifab",
+    "REC-NM-S0088": "frontierllm",
+    "REC-NM-S0089": "dcvigil",
+    "REC-NM-S0090": "meridian",
+    "REC-NM-S0091": "vetpoc",
+    "REC-NM-S0092": "semifab",
+    "REC-NM-S0093": "frontierllm",
+    "REC-NM-S0094": "dcvigil",
+    "REC-NM-S0095": "meridian",
+    "REC-NM-S0096": "vetpoc",
+    "REC-NM-S0097": "semifab",
+    "REC-NM-S0098": "frontierllm",
+    "REC-NM-S0099": "dcvigil",
+    "REC-NM-S0100": "meridian",
+    "REC-NM-S0101": "vetpoc",
+    "REC-NM-S0102": "semifab",
+    "REC-NM-S0103": "frontierllm",
+    "REC-NM-S0104": "dcvigil",
+    "REC-NM-S0105": "meridian",
+    "REC-NM-S0106": "vetpoc",
+    "REC-NM-S0107": "semifab",
+    "REC-NM-S0108": "frontierllm",
+    "REC-NM-S0109": "dcvigil",
+    "REC-NM-S0110": "meridian",
+    "REC-NM-S0111": "vetpoc",
+    "REC-NM-S0112": "semifab",
+    "REC-NM-S0113": "frontierllm",
+    "REC-NM-S0114": "dcvigil",
+    "REC-NM-S0115": "meridian",
+    "REC-NM-S0116": "vetpoc",
+    "REC-NM-S0117": "semifab",
+    "REC-NM-S0118": "frontierllm",
+    "REC-NM-S0119": "dcvigil",
+    "REC-NM-S0120": "meridian",
+    "REC-NM-S0121": "vetpoc",
+    "REC-NM-S0122": "semifab",
+    "REC-NM-S0123": "frontierllm",
+    "REC-NM-S0124": "dcvigil",
+    "REC-NM-S0125": "meridian",
+    "REC-NM-S0126": "vetpoc",
+    "REC-NM-S0127": "semifab",
+    "REC-NM-S0128": "frontierllm",
+    "REC-NM-S0129": "dcvigil",
+    "REC-NM-S0130": "meridian",
+    "REC-NM-S0131": "vetpoc",
+    "REC-NM-S0132": "semifab",
+    "REC-NM-S0133": "frontierllm",
+    "REC-NM-S0134": "dcvigil",
+    "REC-NM-S0135": "meridian"
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "organizations": [
+    {
+      "org_id": "numerals",
+      "name": "Numerals (enterprise)",
+      "principals": [
+        {
+          "principal_id": "lawmaker:numerals-group-policy-board",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "numerals group policy board"
+        },
+        {
+          "principal_id": "lawmaker:numerals-group-compliance-office",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "numerals group compliance office"
+        },
+        {
+          "principal_id": "lawmaker:numerals-group-technology-council",
+          "branch": "lawmakers",
+          "kind": "human",
+          "role": "numerals group technology council"
+        },
+        {
+          "principal_id": "judge:NJ1-first-instance",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "NJ1 first instance"
+        },
+        {
+          "principal_id": "judge:NJ2-review",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "NJ2 review"
+        },
+        {
+          "principal_id": "judge:NJ3-en-banc",
+          "branch": "judges",
+          "kind": "automated instance",
+          "role": "NJ3 en banc"
+        },
+        {
+          "principal_id": "riskowner:numerals-group-chief-risk-officer",
+          "branch": "riskowner",
+          "kind": "human",
+          "role": "numerals group chief risk officer"
+        }
+      ],
+      "divisions": [
+        {
+          "org_id": "vetpoc",
+          "name": "VetPOC",
+          "pack": "vetpoc-constitution-corpus"
+        },
+        {
+          "org_id": "semifab",
+          "name": "SemiFab",
+          "pack": "semifab-constitution-corpus"
+        },
+        {
+          "org_id": "frontierllm",
+          "name": "FrontierLLM",
+          "pack": "frontierllm-constitution-corpus"
+        },
+        {
+          "org_id": "dcvigil",
+          "name": "DCVigil",
+          "pack": "dcvigil-constitution-corpus"
+        },
+        {
+          "org_id": "meridian",
+          "name": "Meridian",
+          "pack": "meridian-corpus"
+        }
+      ]
+    }
+  ],
+  "disjointness": "A1 per level: no enterprise principal appears in any division roster, and the three enterprise branches are pairwise disjoint. FC-04 checks both against the six files.",
+  "founding_scope": "numerals"
+}
