@@ -1,0 +1,33 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vetpoc.example/schema/record.schema.json",
+  "title": "Precedent record",
+  "description": "Chapter 5, Definition 8. Append-only: records are added when cases resolve and never removed.",
+  "type": "object",
+  "required": ["id", "case", "prov", "rules", "facts", "premise", "interp", "auth_class", "auth_id", "rationale", "scope", "ts", "depth", "expiry", "referral", "cites", "outcome", "admission_ground"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string"},
+    "case": {"type": "string", "description": "The case that produced the record."},
+    "prov": {"type": "string", "description": "The provision the record is filed under. This is the retrieval key."},
+    "rules": {"type": "array", "items": {"type": "string"}, "description": "The full set of provisions the case touched."},
+    "facts": {"type": "array", "items": {"type": "string"}},
+    "premise": {"type": "array", "items": {"type": "string"},
+                "description": "The subset of facts on which the holding rested. This is the input to distinguishing: distinguish(r,c) holds exactly when premise is not a subset of facts(c)."},
+    "interp": {"enum": ["permit", "permit_conditional", "deny"]},
+    "auth_class": {"enum": ["judges", "riskowner"], "description": "The ordering key. riskowner outranks judges; all adjudicative instances are equal."},
+    "auth_id": {"type": "string", "description": "The individual who resolved, so that attribution is a fact of the record and not of the configuration."},
+    "rationale": {"type": "string"},
+    "scope": {"type": "object", "required": ["domain", "width"],
+              "properties": {"domain": {"type": "string"}, "width": {"type": "integer", "description": "Smaller is narrower. Incomparable domains tie."}}},
+    "ts": {"type": "integer"},
+    "depth": {"type": "integer", "description": "Deliberation depth. The final tiebreaker only."},
+    "expiry": {"type": ["integer", "null"], "description": "Mandatory on every risk acceptance (A7). Null on interpretive records, which do not age out by clock."},
+    "referral": {"type": ["string", "null"], "enum": ["pending", "rejected", "adopted", null]},
+    "cites": {"type": "array", "items": {"type": "string"},
+              "description": "The record this one is filed against. Carries two obligations: a renewal must name what it renews, and a record departing from an earlier holding on the same provision must name that holding. A newer record that conflicts and is silent displaces nothing."},
+    "outcome": {"type": "string"},
+    "admission_ground": {"enum": ["clause_i", "clause_ii", "seed"],
+                         "description": "clause_i: contested and resolved above first instance. clause_ii: the representative of a consolidation class. seed: opening jurisprudence, admitted at deployment, whose neutrality cost is priced by the admission theory."}
+  }
+}

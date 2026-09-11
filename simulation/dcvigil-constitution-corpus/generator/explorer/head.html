@@ -1,0 +1,235 @@
+<title>DCVigil Change Ledger</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Fira+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --paper:#eff1f3; --surface:#ffffff; --surface-2:#e3e6ea; --rule:#ccd2d8;
+  --ink:#14181c; --ink-2:#414951; --ink-3:#6d7681;
+  --accent:#a85416; --accent-soft:#f6e9dd;
+  --deny:#9d1f2e; --deny-soft:#f7e3e5;
+  --cond:#6b6212; --cond-soft:#f0eed6;
+  --permit:#1b5e57; --permit-soft:#ddecea;
+  --absolute:#7a1523;
+  --ship:#3a4a7a; --ship-soft:#e2e6f2;
+  --shadow:0 1px 1px rgba(20,24,28,.05), 0 10px 26px -18px rgba(20,24,28,.35);
+  --display:"Bitter", Georgia, serif;
+  --sans:"Atkinson Hyperlegible", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:"Fira Mono", ui-monospace, "SF Mono", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#0d1012; --surface:#151a1e; --surface-2:#1d2328; --rule:#2a3138;
+    --ink:#e6e9ec; --ink-2:#aab2ba; --ink-3:#79828b;
+    --accent:#e3944f; --accent-soft:#2e2013;
+    --deny:#eb8f99; --deny-soft:#331a1f;
+    --cond:#cbbf62; --cond-soft:#2a2814;
+    --permit:#6bbcaf; --permit-soft:#122a27;
+    --absolute:#f2a0ab;
+    --ship:#93a4d8; --ship-soft:#1b2138;
+    --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 32px -22px rgba(0,0,0,.9);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0d1012; --surface:#151a1e; --surface-2:#1d2328; --rule:#2a3138;
+  --ink:#e6e9ec; --ink-2:#aab2ba; --ink-3:#79828b;
+  --accent:#e3944f; --accent-soft:#2e2013;
+  --deny:#eb8f99; --deny-soft:#331a1f;
+  --cond:#cbbf62; --cond-soft:#2a2814;
+  --permit:#6bbcaf; --permit-soft:#122a27;
+  --absolute:#f2a0ab;
+  --ship:#93a4d8; --ship-soft:#1b2138;
+  --shadow:0 1px 2px rgba(0,0,0,.5), 0 14px 32px -22px rgba(0,0,0,.9);
+}
+
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:14.5px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent)}
+button{font:inherit; color:inherit}
+::selection{background:var(--accent-soft)}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+/* ---------- masthead ---------- */
+.masthead{background:var(--surface); border-bottom:1px solid var(--rule); padding:22px 26px 15px}
+.masthead-inner{max-width:1420px; margin:0 auto; display:flex; flex-wrap:wrap; gap:22px; align-items:flex-end; justify-content:space-between}
+.wordmark{display:flex; flex-direction:column; gap:4px}
+.wordmark h1{
+  font-family:var(--display); font-weight:700; font-size:clamp(25px,3.2vw,36px);
+  margin:0; letter-spacing:-.015em; text-wrap:balance;
+}
+.wordmark .sub{font-size:14px; color:var(--ink-2); max-width:64ch}
+.imprint{
+  font-family:var(--mono); font-size:10.5px; letter-spacing:.03em; text-transform:uppercase;
+  color:var(--ink-3); display:flex; gap:12px; flex-wrap:wrap; align-items:center;
+}
+.imprint .ok{color:var(--accent); font-weight:500}
+
+/* ---------- figures strip ---------- */
+.figures{
+  max-width:1420px; margin:0 auto; padding:0 26px;
+  display:grid; grid-template-columns:repeat(auto-fit,minmax(126px,1fr)); gap:0;
+  border-bottom:1px solid var(--rule); background:var(--paper);
+}
+.fig{padding:12px 16px 14px; border-left:1px solid var(--rule)}
+.fig:first-child{border-left:0; padding-left:0}
+.fig dt{font-family:var(--mono); font-size:10px; letter-spacing:.05em; text-transform:uppercase; color:var(--ink-3)}
+.fig dd{margin:3px 0 0; font-family:var(--display); font-size:23px; font-weight:600; font-variant-numeric:tabular-nums}
+.fig dd small{font-family:var(--mono); font-size:10px; font-weight:400; color:var(--ink-3); margin-left:5px}
+
+/* ---------- layout ---------- */
+.shell{max-width:1420px; margin:0 auto; padding:20px 26px 64px; display:grid; grid-template-columns:260px minmax(0,1fr); gap:40px; align-items:start}
+.shell > section{max-width:960px}
+@media (max-width:1000px){ .shell{grid-template-columns:1fr; gap:20px} .rail{position:static !important} }
+
+/* ---------- filter rail ---------- */
+.rail{position:sticky; top:14px; display:flex; flex-direction:column; gap:17px; max-height:calc(100vh - 28px); overflow:auto; padding-right:6px}
+.rail::-webkit-scrollbar{width:8px} .rail::-webkit-scrollbar-thumb{background:var(--rule); border-radius:8px}
+.group{display:flex; flex-direction:column; gap:7px}
+.group > h2{
+  font-family:var(--mono); font-size:10px; letter-spacing:.09em; text-transform:uppercase;
+  color:var(--ink-3); margin:0; padding-bottom:5px; border-bottom:1px solid var(--rule);
+}
+.search{
+  width:100%; padding:9px 11px; border:1px solid var(--rule); border-radius:2px;
+  background:var(--surface); color:var(--ink); font-family:var(--mono); font-size:12px;
+}
+.search::placeholder{color:var(--ink-3)}
+.chips{display:flex; flex-wrap:wrap; gap:5px}
+.chip{
+  border:1px solid var(--rule); background:var(--surface); border-radius:2px;
+  padding:4px 8px; font-family:var(--mono); font-size:10.5px; cursor:pointer;
+  display:inline-flex; gap:6px; align-items:baseline; color:var(--ink-2);
+}
+.chip:hover{border-color:var(--accent); color:var(--ink)}
+.chip[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:#ffffff}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#0d1012}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#0d1012} }
+.chip .n{font-size:9.5px; opacity:.72; font-variant-numeric:tabular-nums}
+.catlist{display:flex; flex-direction:column; gap:1px}
+.cat{
+  display:grid; grid-template-columns:1fr auto; gap:8px; align-items:baseline;
+  padding:5px 7px; border:0; background:none; text-align:left; cursor:pointer; border-radius:2px;
+  font-family:var(--mono); font-size:11px; color:var(--ink-2); border-left:3px solid transparent;
+}
+.cat:hover{background:var(--surface-2); color:var(--ink)}
+.cat[aria-pressed="true"]{background:var(--accent-soft); color:var(--ink); border-left-color:var(--accent); font-weight:500}
+.cat .n{font-variant-numeric:tabular-nums; color:var(--ink-3); font-size:10px}
+.reset{
+  align-self:flex-start; background:none; border:1px solid var(--rule); border-radius:2px;
+  padding:5px 10px; font-family:var(--mono); font-size:10.5px; cursor:pointer; color:var(--ink-2);
+}
+.reset:hover{border-color:var(--deny); color:var(--deny)}
+
+/* ---------- results ---------- */
+.resultbar{
+  display:flex; flex-wrap:wrap; gap:14px; align-items:baseline; justify-content:space-between;
+  padding-bottom:10px; margin-bottom:14px; border-bottom:1px solid var(--rule);
+}
+.count{font-family:var(--display); font-size:20px; font-weight:600; font-variant-numeric:tabular-nums}
+.count span{color:var(--ink-3); font-weight:400; font-size:13.5px; font-family:var(--sans)}
+.sortnote{font-family:var(--mono); font-size:10.5px; color:var(--ink-3)}
+
+.cases{display:flex; flex-direction:column; gap:12px}
+.case{
+  background:var(--surface); border:1px solid var(--rule); border-radius:2px;
+  padding:15px 18px 16px; box-shadow:var(--shadow);
+}
+.case.absolute{border-left:3px solid var(--absolute)}
+.case-head{display:flex; flex-wrap:wrap; gap:10px 14px; align-items:baseline; justify-content:space-between}
+.cid{font-family:var(--mono); font-size:12.5px; font-weight:500}
+.cid .cat-tag{color:var(--ink-3); font-weight:400}
+.pills{display:flex; flex-wrap:wrap; gap:6px}
+.pill{
+  font-family:var(--mono); font-size:10px; letter-spacing:.03em; text-transform:uppercase;
+  padding:3px 7px; border-radius:2px; white-space:nowrap;
+}
+.pill.permit{background:var(--permit-soft); color:var(--permit)}
+.pill.deny{background:var(--deny-soft); color:var(--deny)}
+.pill.permit_conditional{background:var(--cond-soft); color:var(--cond)}
+.pill.cond{background:var(--cond-soft); color:var(--cond)}
+.pill.ship{background:var(--ship-soft); color:var(--ship); font-weight:500}
+.pill.route{background:var(--surface-2); color:var(--ink-2)}
+.pill.abs{background:var(--deny-soft); color:var(--absolute); font-weight:500}
+
+.citation{
+  font-family:var(--mono); font-size:10.5px; color:var(--ink-3); margin-top:7px;
+  display:flex; flex-wrap:wrap; gap:4px 12px; line-height:1.65;
+}
+.citation b{font-weight:500; color:var(--ink-2)}
+.headnote{font-size:14.5px; line-height:1.62; margin-top:10px; color:var(--ink); max-width:74ch}
+.headnote p{margin:0 0 9px}
+.headnote p:last-child{margin-bottom:0}
+.headnote em{color:var(--ink-2)}
+.headnote strong{font-weight:700}
+.headnote code{
+  font-family:var(--mono); font-size:11.5px; background:var(--surface-2);
+  padding:1px 4px; border-radius:2px; color:var(--ink-2); word-break:break-word;
+}
+.checks{
+  margin-top:11px; padding-top:9px; border-top:1px dotted var(--rule);
+  display:flex; flex-wrap:wrap; gap:5px; align-items:center;
+}
+.tag{font-family:var(--mono); font-size:9.5px; color:var(--ink-3); border:1px solid var(--rule); padding:2px 5px; border-radius:2px}
+.tag.ax{color:var(--accent); border-color:var(--accent-soft); background:var(--accent-soft)}
+
+.more{
+  margin:22px auto 0; display:block; padding:10px 22px; background:var(--surface);
+  border:1px solid var(--rule); border-radius:2px; cursor:pointer;
+  font-family:var(--mono); font-size:11.5px; color:var(--ink-2);
+}
+.more:hover{border-color:var(--accent); color:var(--accent)}
+.empty{padding:48px 8px; text-align:center; color:var(--ink-3); font-family:var(--display); font-style:italic; font-size:17px}
+.loading{padding:80px 26px; text-align:center; font-family:var(--mono); font-size:11.5px; color:var(--ink-3); letter-spacing:.06em; text-transform:uppercase}
+
+.colophon{max-width:1420px; margin:0 auto; padding:26px; border-top:1px solid var(--rule); font-size:14px; color:var(--ink-2)}
+.colophon .inner{max-width:70ch}
+.colophon h3{font-family:var(--display); font-size:16px; font-weight:600; margin:0 0 7px}
+.colophon p{margin:0 0 10px; line-height:1.6}
+
+@media (prefers-reduced-motion: reduce){ *{animation:none !important; transition:none !important} }
+</style>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <div class="wordmark">
+      <h1>DCVigil Change Ledger</h1>
+      <div class="sub">Five thousand adjudicated compliance cases from a multi-tenant data-centre monitoring platform, under a constitution of one hundred and eight provisions — twenty-nine of them the released pack's own, reproduced unchanged</div>
+    </div>
+    <div class="imprint">
+      <span>Corpus 1.0.0</span>
+      <span>Rulebook dcvigil-rb-000001</span>
+      <span class="ok">Conformance 26/26</span>
+      <span class="ok">Mutants 12/12 killed</span>
+      <span class="ok">Pressure 185/185 invariant</span>
+      <span>CC BY 4.0</span>
+    </div>
+  </div>
+</header>
+
+<dl class="figures" id="figures"></dl>
+
+<main class="shell">
+  <aside class="rail" id="rail"></aside>
+  <section>
+    <div class="resultbar">
+      <div class="count" id="count">Loading…</div>
+      <div class="sortnote">Chronological — the store grows down the page</div>
+    </div>
+    <div class="cases" id="cases"><div class="loading">Decompressing corpus…</div></div>
+    <button class="more" id="more" hidden>Show 50 more</button>
+  </section>
+</main>
+
+<footer class="colophon">
+  <div class="inner">
+    <h3>How to read a case</h3>
+    <p>Each entry is a headnote generated from the executed trace, not from an authored expectation. <b>Why this case exists</b> states the mechanism it was constructed to exercise; <b>what happens</b> states what the reference engine did with it; the tags at the foot name the axioms of the architectural contract (A1–A9) and the conformance checks (VC-01–VC-26) it exercises.</p>
+    <p>A case bordered in crimson engages an <b>absolute provision</b> — short-circuited at the first instance, never risk-acceptable at any tier, exit only by amendment. The word is doing unusual work here, and the distinction is about authority: actuating a customer's cooling setpoints is not a risk this vendor's engineers can accept, because the risk is not theirs. It belongs to the customer whose floor is at stake.</p>
+    <p>A case marked <b>shipped</b> engages one of the twenty-nine provisions of the released DCVigil pack, reproduced here with its text and absolute flag unchanged so that the 144 shipped cases remain valid. Five findings against those provisions — including that the seven-year audit retention rests on no external instrument — are filed as draft amendments rather than applied, because an adjudicator may not edit the rulebook and neither may a corpus author.</p>
+    <p>The corpus, its constitution, the reference engine, the conformance suite and the mutation matrix are open source: Apache-2.0 for code, CC BY 4.0 for data.</p>
+  </div>
+</footer>

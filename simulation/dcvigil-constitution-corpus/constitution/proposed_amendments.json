@@ -1,0 +1,119 @@
+{
+  "note": "Findings against existing provisions, filed as draft amendments rather than applied. Under Axiom A3 the only route from a case \u2014 or from a corpus author \u2014 to a rule change is a draft amendment the legislative process may adopt or reject.",
+  "amendments": [
+    {
+      "id": "PA-01",
+      "targets": [
+        "DV-313"
+      ],
+      "raised_by": "corpus survey 04-compliance-and-overhead",
+      "finding": "The provision is labelled a GDPR residency floor. Verified: the GDPR does not require EU data to remain in the EU. It requires a Chapter V transfer mechanism for a transfer outside it. The obligation as written is real but its source is the customer contract, not the Regulation.",
+      "proposed": "Retain the provision and its absolute status. Restate the citation as a contractual residency commitment, and add a separate ordinary provision requiring a recorded transfer mechanism where a flow does leave the region (DV-400 already does this).",
+      "why_not_applied": "Changing a provision's stated source changes what a later adjudicator reasons from. That is a legislative act, not an editorial one.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-02",
+      "targets": [
+        "DV-321"
+      ],
+      "raised_by": "corpus survey 04-compliance-and-overhead",
+      "finding": "The provision fuses two obligations with very different footings. Immutability is well grounded \u2014 NIST SP 800-53 AU-9 and AU-9(3), public domain and quotable. The seven-year retention rests on nothing external: AU-11 leaves the period organisation-defined, FedRAMP leaves it unfilled, PCI DSS says twelve months, HIPAA's six years covers documentation rather than audit logs, and SOC 2 sets none. It is a contractual commitment. Separately, AU-9(3) requires tamper alerting, which the current wording does not reach, so a change could disable alerting without engaging this provision at all.",
+      "proposed": "Split into two provisions. Keep immutability absolute, cited to AU-9. Make the retention term absolute but cited to the customer contract, stating the term as a parameter rather than a constant. DV-339 already adds tamper alerting as a separate floor.",
+      "why_not_applied": "Splitting a provision renumbers what existing records cite. The 144 shipped cases cite DV-321 and would have to be re-based.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-03",
+      "targets": [
+        "DV-332"
+      ],
+      "raised_by": "corpus survey 04-compliance-and-overhead",
+      "finding": "Article 7(3) governs withdrawal of consent. In this platform consent is rarely the lawful basis for telemetry \u2014 legitimate interests or contract usually are. The provision is correct where consent is the basis and simply does not engage where it is not, which risks reading as broader protection than it gives.",
+      "proposed": "Retain unchanged, and add ordinary provisions for Article 17 erasure and Article 21 objection so the withdrawal-adjacent duties that do apply are reachable.",
+      "why_not_applied": "The addition is a legislative act; the corpus proposes, the lawmakers dispose.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-04",
+      "targets": [
+        "DV-302"
+      ],
+      "raised_by": "corpus survey 04-compliance-and-overhead",
+      "finding": "'Actuate customer physical infrastructure (power, cooling, setpoints)' does not unambiguously cover physical access control. A door release or cage unlock is actuation with a life-safety dimension and is arguably outside the enumeration as written.",
+      "proposed": "Amend the enumeration to include physical access control. Pending that, DV-340 states it as a separate absolute floor so the gap is closed without editing the shipped provision.",
+      "why_not_applied": "DV-340 closes the gap by addition. Whether the enumeration itself should be widened is for the lawmakers, and the two routes are not equivalent: a separate provision is citable separately.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-05",
+      "targets": [
+        "DV-336"
+      ],
+      "raised_by": "corpus survey 04-compliance-and-overhead",
+      "finding": "The provision states a hard NIS2 24-hour clock. Verified: NIS2's transposition deadline was 17 October 2024; four member states met it, infringement procedures were opened against twenty-three, and reasoned opinions issued to nineteen in 2026. The operative deadline is the applicable national transposition, which varies. A hard EU clock stated as the rule is legally wrong in most member states today.",
+      "proposed": "Restate as the deadline of the applicable national transposition, with the Directive's figure as the default where a transposition is in force. DV-407 states the transposed form as a deferred provision in the meantime.",
+      "why_not_applied": "Same reason as PA-01: the citation is what a later adjudicator reasons from.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-06",
+      "targets": [
+        "DV-343",
+        "DV-337"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (dcvigil)",
+      "finding": "DV-343 makes 'no production telemetry or control path ships unauthenticated or in plaintext' absolute and cites NIST SP 800-53 IA-2 and SC-8(1). Verified: SP 800-53 is a control catalogue. It binds federal information systems through FISMA and OMB A-130, and binds a private vendor only through a contract that adopts it \u2014 FedRAMP, a customer's security schedule, or an audit programme. As an absolute, DV-343 therefore rests on a source that does not itself make it a who-may-decide floor, which is the defect Definition 1 warns against. Separately, DV-343 and the ordinary DV-337 state overlapping duties at different strengths, and the new DV-432 adds a third statement of the same idea for OT device paths, so one change that polls a PDU with an SNMPv2c community string can be charged under all three and will tie on every ordering key.",
+      "proposed": "Keep DV-343 absolute but re-cite it to the customer security schedule and to the platform's own transport commitment, with the NIST identifiers retained as the control mapping rather than as the source of obligation. Then state the boundary between the three expressly: DV-337 for principal identification, DV-343 for production telemetry and control transport, DV-432 for device polling paths inside a facility zone.",
+      "why_not_applied": "Re-anchoring an absolute changes what a later adjudicator reasons from and changes which cases short-circuit under A6. That is a legislative act, not an editorial one.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-07",
+      "targets": [
+        "DV-342",
+        "DV-341"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (dcvigil)",
+      "finding": "DV-342 ('the monitoring control plane is never a target of automated remediation') is absolute and cited to 'practice policy'; DV-341 (halt threshold and kill switch) is absolute and cited to the risk architecture. Both duties are sound engineering, and both are severe. Neither is a floor in the sense of Definition 1: nothing outside the organisation forbids the risk owner from accepting a self-remediating control plane on a named service for a named window. As drafted they are severity claims wearing the absolute label, which is precisely the confusion Definition 1 exists to prevent, and they make every such case an F-absolute that never reaches an escalation the corpus wants to exercise.",
+      "proposed": "Either reclassify both as ordinary provisions in AC with a high family tau, or keep them absolute and record in source_status that the deciding authority is the platform governance board acting as legislature, not an external instrument \u2014 so a reader can see which kind of absolute it is.",
+      "why_not_applied": "Reclassifying an absolute invalidates every F-absolute record built on it and is reserved to the legislature under A3.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-08",
+      "targets": [
+        "DV-338"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (dcvigil)",
+      "finding": "DV-338 states the biometric notice-and-written-release floor and cites 740 ILCS 14/15(a) and 15(b). Verified: BIPA is an Illinois statute and reaches conduct with a sufficient Illinois nexus. The provision as drafted is jurisdiction-blind, so a badge-reader change at a site in eu-central-1 or ap-southeast-1 is charged under an Illinois statute that does not apply to it, while the instruments that do apply there \u2014 GDPR Art. 9(2)(a) explicit consent, and the Texas CUBI and Washington biometric statutes for other US sites \u2014 are not cited. Note also that BIPA was amended in August 2024 (SB 2979) so that repeated collection by the same means is a single violation, which changes the exposure figure a risk owner would weigh but not the duty.",
+      "proposed": "Key the provision to the site's jurisdiction and give it a citation per jurisdiction: 740 ILCS 14/15 for Illinois, Tex. Bus. & Com. Code \u00a7503.001 for Texas, RCW 19.375 for Washington, GDPR Art. 9(2)(a) with Art. 4(14) for EU sites. Keep the absolute status: written release before enrolment is a floor in every one of them.",
+      "why_not_applied": "Narrowing or keying a provision's scope changes which arrivals are charged. That is a rule change.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-09",
+      "targets": [
+        "DV-302",
+        "DV-340"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (dcvigil)",
+      "finding": "PA-04 already records that DV-302's enumeration ('power, cooling, setpoints') does not clearly reach physical access control, and DV-340 closes that gap by addition. The same reading shows a second gap the extension has had to close the same way: fire detection and suppression, emergency power off, and UPS or transfer-switch operation are not 'power, cooling, setpoints' as an engineer would read that list, and they carry a life-safety dimension the other items do not. The new DV-421 states them as a separate absolute. The constitution now has three absolutes covering one idea \u2014 do not let software actuate the physical plant \u2014 with three different enumerations and no stated ordering between them.",
+      "proposed": "Consolidate at the legislative level: one absolute stating that monitoring and remediation software never actuates, inhibits or silences any physical or life-safety system, with the enumeration moved to a named parameter list the lawmakers maintain, and DV-302, DV-340 and DV-421 restated as instances of it.",
+      "why_not_applied": "Consolidation renumbers what the 144 shipped cases cite and would re-base every F-absolute record on DV-302. Only the legislature may do it, and the gap is closed by addition in the meantime.",
+      "disposition": "pending"
+    },
+    {
+      "id": "PA-10",
+      "targets": [
+        "DV-407",
+        "DV-336"
+      ],
+      "raised_by": "corpus survey 2.0.0 scenario extension (dcvigil)",
+      "finding": "DV-407 is deferred because NIS2 transposition is incomplete, and PA-05 records the same finding against DV-336. The extension has now had to take the identical posture twice more \u2014 DV-423 for the CER Directive, whose transposition and critical-entity designation are likewise incomplete, and DV-426 for CSRD, whose scope was moved by the stop-the-clock Directive (EU) 2025/794. Four provisions are using the 'deferred' status to express something it does not mean. Deferred means enacted but not yet applicable; what is actually true of these four is that the duty is in force in some jurisdictions the platform serves and not in others. The constitution has no jurisdiction parameter, so the status field is carrying a load it was not designed for, and a case at a German site is treated exactly like a case at a site in a member state that has not transposed.",
+      "proposed": "Add a jurisdiction dimension to the constitution \u2014 a per-site jurisdiction attribute and a per-provision applicability map read at charging time \u2014 and restore DV-407, DV-423 and DV-426 to in_force for the jurisdictions where the transposing instrument is in force. Until then the deferred status is the honest reading and should stay.",
+      "why_not_applied": "Adding a dimension to the charging inputs is a change to the constitution's own machinery and belongs to the legislature under A3, not to a corpus author.",
+      "disposition": "pending"
+    }
+  ]
+}

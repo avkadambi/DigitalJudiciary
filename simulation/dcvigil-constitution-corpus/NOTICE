@@ -1,0 +1,23 @@
+DCVigil Constitution Corpus
+Copyright 2026 Arun Kadambi and Venkat Kuppuswamy
+
+This product includes software developed for the Digital Judiciary programme.
+
+Code is licensed under the Apache License, Version 2.0 (see LICENSE).
+Data is licensed under CC BY 4.0 (see LICENSE-DATA).
+
+Third-party identifiers referenced in this corpus:
+  CWE™ and CAPEC™ are trademarks of The MITRE Corporation, used under MITRE's
+  royalty-free terms with attribution.
+  NIST publications (SP 800-53 Rev 5 via usnistgov/oscal-content, CC0) are US
+  Government works, public domain within the United States under 17 U.S.C. 105.
+  EU legal texts are reused under Commission Decision 2011/833/EU.
+  Illinois BIPA (740 ILCS 14) and OSHA 29 CFR 1910.147 are public.
+  The AICPA Trust Services Criteria, ISO/IEC 27001 and 27002, and PCI DSS are
+  NOT reproduced in any form. The TSC are account-gated with no reuse grant;
+  ISO/IEC 27001 is paywalled and ISO prohibits use of its content for AI/ML
+  training; PCI DSS is licensed for personal, non-commercial use without
+  redistribution. Only their identifiers are cited.
+  SEMI, BACnet/ASHRAE, IEC 62443 and Modbus specifications are not reproduced.
+  Twenty-nine provisions are reproduced from the programme's own released
+  DCVigil pack with their text and absolute flags unchanged.

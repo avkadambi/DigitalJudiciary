@@ -1,0 +1,4726 @@
+{
+  "entries": [
+    {
+      "case": "DV-T-00007",
+      "route": "declined",
+      "ts": 1007,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00008",
+      "route": "null",
+      "ts": 1008,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00021",
+      "route": "declined",
+      "ts": 1021,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00022",
+      "route": "declined",
+      "ts": 1022,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00062",
+      "route": "null",
+      "ts": 1062,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00077",
+      "route": "declined",
+      "ts": 1077,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00089",
+      "route": "declined",
+      "ts": 1089,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00098",
+      "route": "declined",
+      "ts": 1098,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00102",
+      "route": "null",
+      "ts": 1102,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00104",
+      "route": "declined",
+      "ts": 1104,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00106",
+      "route": "null",
+      "ts": 1106,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00110",
+      "route": "null",
+      "ts": 1110,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00115",
+      "route": "declined",
+      "ts": 1115,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00131",
+      "route": "declined",
+      "ts": 1131,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00153",
+      "route": "null",
+      "ts": 1153,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00182",
+      "route": "declined",
+      "ts": 1182,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00189",
+      "route": "declined",
+      "ts": 1189,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00195",
+      "route": "declined",
+      "ts": 1195,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00211",
+      "route": "declined",
+      "ts": 1211,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00225",
+      "route": "null",
+      "ts": 1225,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00239",
+      "route": "declined",
+      "ts": 1239,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00241",
+      "route": "declined",
+      "ts": 1241,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00260",
+      "route": "declined",
+      "ts": 1260,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00276",
+      "route": "declined",
+      "ts": 1276,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00303",
+      "route": "null",
+      "ts": 1303,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00397",
+      "route": "declined",
+      "ts": 1397,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00420",
+      "route": "declined",
+      "ts": 1420,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00443",
+      "route": "null",
+      "ts": 1443,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00456",
+      "route": "declined",
+      "ts": 1456,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00480",
+      "route": "declined",
+      "ts": 1480,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00502",
+      "route": "null",
+      "ts": 1502,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00504",
+      "route": "declined",
+      "ts": 1504,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00539",
+      "route": "declined",
+      "ts": 1539,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00540",
+      "route": "declined",
+      "ts": 1540,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00551",
+      "route": "null",
+      "ts": 1551,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00576",
+      "route": "declined",
+      "ts": 1576,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00594",
+      "route": "declined",
+      "ts": 1594,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00609",
+      "route": "declined",
+      "ts": 1609,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00641",
+      "route": "null",
+      "ts": 1641,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00645",
+      "route": "declined",
+      "ts": 1645,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00659",
+      "route": "null",
+      "ts": 1659,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00663",
+      "route": "declined",
+      "ts": 1663,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00687",
+      "route": "declined",
+      "ts": 1687,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00688",
+      "route": "declined",
+      "ts": 1688,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00690",
+      "route": "declined",
+      "ts": 1690,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00693",
+      "route": "declined",
+      "ts": 1693,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00710",
+      "route": "null",
+      "ts": 1710,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00739",
+      "route": "declined",
+      "ts": 1739,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00772",
+      "route": "null",
+      "ts": 1772,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00783",
+      "route": "null",
+      "ts": 1783,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00788",
+      "route": "null",
+      "ts": 1788,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00813",
+      "route": "declined",
+      "ts": 1813,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00824",
+      "route": "null",
+      "ts": 1824,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00827",
+      "route": "declined",
+      "ts": 1827,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00841",
+      "route": "declined",
+      "ts": 1841,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00860",
+      "route": "declined",
+      "ts": 1860,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00863",
+      "route": "declined",
+      "ts": 1863,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00875",
+      "route": "declined",
+      "ts": 1875,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00876",
+      "route": "declined",
+      "ts": 1876,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00879",
+      "route": "null",
+      "ts": 1879,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00881",
+      "route": "declined",
+      "ts": 1881,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00890",
+      "route": "declined",
+      "ts": 1890,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00904",
+      "route": "null",
+      "ts": 1904,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00916",
+      "route": "declined",
+      "ts": 1916,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00919",
+      "route": "declined",
+      "ts": 1919,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00929",
+      "route": "null",
+      "ts": 1929,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00935",
+      "route": "declined",
+      "ts": 1935,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-00945",
+      "route": "declined",
+      "ts": 1945,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-00993",
+      "route": "null",
+      "ts": 1993,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01028",
+      "route": "declined",
+      "ts": 2028,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01047",
+      "route": "declined",
+      "ts": 2047,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01086",
+      "route": "declined",
+      "ts": 2086,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01116",
+      "route": "null",
+      "ts": 2116,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01148",
+      "route": "null",
+      "ts": 2148,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01208",
+      "route": "declined",
+      "ts": 2208,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01253",
+      "route": "null",
+      "ts": 2253,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01287",
+      "route": "declined",
+      "ts": 2287,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01310",
+      "route": "null",
+      "ts": 2310,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01339",
+      "route": "declined",
+      "ts": 2339,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01349",
+      "route": "declined",
+      "ts": 2349,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01369",
+      "route": "declined",
+      "ts": 2369,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01376",
+      "route": "declined",
+      "ts": 2376,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01388",
+      "route": "declined",
+      "ts": 2388,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01429",
+      "route": "declined",
+      "ts": 2429,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01440",
+      "route": "declined",
+      "ts": 2440,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01442",
+      "route": "declined",
+      "ts": 2442,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01452",
+      "route": "declined",
+      "ts": 2452,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01505",
+      "route": "declined",
+      "ts": 2505,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01513",
+      "route": "null",
+      "ts": 2513,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01523",
+      "route": "declined",
+      "ts": 2523,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01606",
+      "route": "null",
+      "ts": 2606,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01641",
+      "route": "declined",
+      "ts": 2641,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01681",
+      "route": "declined",
+      "ts": 2681,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01696",
+      "route": "declined",
+      "ts": 2696,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01698",
+      "route": "declined",
+      "ts": 2698,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01706",
+      "route": "declined",
+      "ts": 2706,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01726",
+      "route": "null",
+      "ts": 2726,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01784",
+      "route": "declined",
+      "ts": 2784,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01804",
+      "route": "declined",
+      "ts": 2804,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01819",
+      "route": "null",
+      "ts": 2819,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01831",
+      "route": "declined",
+      "ts": 2831,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01894",
+      "route": "declined",
+      "ts": 2894,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01904",
+      "route": "declined",
+      "ts": 2904,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-01920",
+      "route": "declined",
+      "ts": 2920,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-01994",
+      "route": "declined",
+      "ts": 2994,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02008",
+      "route": "declined",
+      "ts": 3008,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02014",
+      "route": "declined",
+      "ts": 3014,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02030",
+      "route": "declined",
+      "ts": 3030,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02032",
+      "route": "null",
+      "ts": 3032,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02041",
+      "route": "declined",
+      "ts": 3041,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02045",
+      "route": "declined",
+      "ts": 3045,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02070",
+      "route": "declined",
+      "ts": 3070,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02107",
+      "route": "declined",
+      "ts": 3107,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02115",
+      "route": "declined",
+      "ts": 3115,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02169",
+      "route": "declined",
+      "ts": 3169,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02224",
+      "route": "declined",
+      "ts": 3224,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02255",
+      "route": "declined",
+      "ts": 3255,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02286",
+      "route": "declined",
+      "ts": 3286,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02297",
+      "route": "declined",
+      "ts": 3297,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02305",
+      "route": "null",
+      "ts": 3305,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02320",
+      "route": "null",
+      "ts": 3320,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02338",
+      "route": "declined",
+      "ts": 3338,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02450",
+      "route": "declined",
+      "ts": 3450,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02454",
+      "route": "declined",
+      "ts": 3454,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02483",
+      "route": "declined",
+      "ts": 3483,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02501",
+      "route": "declined",
+      "ts": 3501,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02521",
+      "route": "declined",
+      "ts": 3521,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02580",
+      "route": "declined",
+      "ts": 3580,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02584",
+      "route": "declined",
+      "ts": 3584,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02631",
+      "route": "declined",
+      "ts": 3631,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02653",
+      "route": "declined",
+      "ts": 3653,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02670",
+      "route": "declined",
+      "ts": 3670,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02672",
+      "route": "declined",
+      "ts": 3672,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02682",
+      "route": "null",
+      "ts": 3682,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02689",
+      "route": "declined",
+      "ts": 3689,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02698",
+      "route": "null",
+      "ts": 3698,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02699",
+      "route": "declined",
+      "ts": 3699,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02712",
+      "route": "declined",
+      "ts": 3712,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02715",
+      "route": "declined",
+      "ts": 3715,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02724",
+      "route": "declined",
+      "ts": 3724,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02740",
+      "route": "declined",
+      "ts": 3740,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02772",
+      "route": "null",
+      "ts": 3772,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02781",
+      "route": "null",
+      "ts": 3781,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02787",
+      "route": "declined",
+      "ts": 3787,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02808",
+      "route": "declined",
+      "ts": 3808,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02816",
+      "route": "declined",
+      "ts": 3816,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02841",
+      "route": "declined",
+      "ts": 3841,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02847",
+      "route": "declined",
+      "ts": 3847,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02852",
+      "route": "null",
+      "ts": 3852,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02860",
+      "route": "null",
+      "ts": 3860,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02889",
+      "route": "declined",
+      "ts": 3889,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02893",
+      "route": "declined",
+      "ts": 3893,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02897",
+      "route": "declined",
+      "ts": 3897,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02916",
+      "route": "declined",
+      "ts": 3916,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02926",
+      "route": "null",
+      "ts": 3926,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02927",
+      "route": "null",
+      "ts": 3927,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02946",
+      "route": "declined",
+      "ts": 3946,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02951",
+      "route": "declined",
+      "ts": 3951,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-02952",
+      "route": "declined",
+      "ts": 3952,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02962",
+      "route": "declined",
+      "ts": 3962,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02973",
+      "route": "declined",
+      "ts": 3973,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-02983",
+      "route": "null",
+      "ts": 3983,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03012",
+      "route": "declined",
+      "ts": 4012,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03013",
+      "route": "declined",
+      "ts": 4013,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03016",
+      "route": "declined",
+      "ts": 4016,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03024",
+      "route": "declined",
+      "ts": 4024,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03032",
+      "route": "declined",
+      "ts": 4032,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03046",
+      "route": "null",
+      "ts": 4046,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03062",
+      "route": "declined",
+      "ts": 4062,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03085",
+      "route": "null",
+      "ts": 4085,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03086",
+      "route": "declined",
+      "ts": 4086,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03087",
+      "route": "declined",
+      "ts": 4087,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03102",
+      "route": "declined",
+      "ts": 4102,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03109",
+      "route": "declined",
+      "ts": 4109,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03121",
+      "route": "null",
+      "ts": 4121,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03136",
+      "route": "declined",
+      "ts": 4136,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03145",
+      "route": "null",
+      "ts": 4145,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03168",
+      "route": "null",
+      "ts": 4168,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03187",
+      "route": "declined",
+      "ts": 4187,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03188",
+      "route": "declined",
+      "ts": 4188,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03197",
+      "route": "declined",
+      "ts": 4197,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03207",
+      "route": "declined",
+      "ts": 4207,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03226",
+      "route": "declined",
+      "ts": 4226,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03227",
+      "route": "null",
+      "ts": 4227,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03228",
+      "route": "declined",
+      "ts": 4228,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03241",
+      "route": "declined",
+      "ts": 4241,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03245",
+      "route": "declined",
+      "ts": 4245,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03254",
+      "route": "declined",
+      "ts": 4254,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03268",
+      "route": "declined",
+      "ts": 4268,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03274",
+      "route": "declined",
+      "ts": 4274,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03291",
+      "route": "declined",
+      "ts": 4291,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03295",
+      "route": "null",
+      "ts": 4295,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03298",
+      "route": "declined",
+      "ts": 4298,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03300",
+      "route": "declined",
+      "ts": 4300,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03328",
+      "route": "declined",
+      "ts": 4328,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03329",
+      "route": "declined",
+      "ts": 4329,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03352",
+      "route": "null",
+      "ts": 4352,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03359",
+      "route": "declined",
+      "ts": 4359,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03361",
+      "route": "declined",
+      "ts": 4361,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03421",
+      "route": "declined",
+      "ts": 4421,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03448",
+      "route": "declined",
+      "ts": 4448,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03458",
+      "route": "declined",
+      "ts": 4458,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03474",
+      "route": "declined",
+      "ts": 4474,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03492",
+      "route": "declined",
+      "ts": 4492,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03493",
+      "route": "declined",
+      "ts": 4493,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03513",
+      "route": "declined",
+      "ts": 4513,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03514",
+      "route": "declined",
+      "ts": 4514,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03537",
+      "route": "declined",
+      "ts": 4537,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03551",
+      "route": "declined",
+      "ts": 4551,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03555",
+      "route": "declined",
+      "ts": 4555,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03566",
+      "route": "declined",
+      "ts": 4566,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03571",
+      "route": "declined",
+      "ts": 4571,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03588",
+      "route": "null",
+      "ts": 4588,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03598",
+      "route": "declined",
+      "ts": 4598,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03633",
+      "route": "declined",
+      "ts": 4633,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03693",
+      "route": "null",
+      "ts": 4693,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03707",
+      "route": "declined",
+      "ts": 4707,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03722",
+      "route": "declined",
+      "ts": 4722,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03759",
+      "route": "null",
+      "ts": 4759,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03779",
+      "route": "declined",
+      "ts": 4779,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03781",
+      "route": "null",
+      "ts": 4781,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03787",
+      "route": "declined",
+      "ts": 4787,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03817",
+      "route": "null",
+      "ts": 4817,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03829",
+      "route": "declined",
+      "ts": 4829,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03832",
+      "route": "null",
+      "ts": 4832,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03855",
+      "route": "null",
+      "ts": 4855,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03862",
+      "route": "declined",
+      "ts": 4862,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03874",
+      "route": "null",
+      "ts": 4874,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03881",
+      "route": "declined",
+      "ts": 4881,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03892",
+      "route": "null",
+      "ts": 4892,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03901",
+      "route": "declined",
+      "ts": 4901,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03907",
+      "route": "declined",
+      "ts": 4907,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03910",
+      "route": "declined",
+      "ts": 4910,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03931",
+      "route": "declined",
+      "ts": 4931,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03950",
+      "route": "declined",
+      "ts": 4950,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03951",
+      "route": "declined",
+      "ts": 4951,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-03956",
+      "route": "declined",
+      "ts": 4956,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03986",
+      "route": "declined",
+      "ts": 4986,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-03989",
+      "route": "declined",
+      "ts": 4989,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04003",
+      "route": "declined",
+      "ts": 5003,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04005",
+      "route": "null",
+      "ts": 5005,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04009",
+      "route": "null",
+      "ts": 5009,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04015",
+      "route": "declined",
+      "ts": 5015,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04020",
+      "route": "declined",
+      "ts": 5020,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04026",
+      "route": "declined",
+      "ts": 5026,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04052",
+      "route": "declined",
+      "ts": 5052,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04067",
+      "route": "declined",
+      "ts": 5067,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04068",
+      "route": "declined",
+      "ts": 5068,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04070",
+      "route": "null",
+      "ts": 5070,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04072",
+      "route": "null",
+      "ts": 5072,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04082",
+      "route": "declined",
+      "ts": 5082,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04091",
+      "route": "null",
+      "ts": 5091,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04099",
+      "route": "null",
+      "ts": 5099,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04109",
+      "route": "null",
+      "ts": 5109,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04114",
+      "route": "declined",
+      "ts": 5114,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04116",
+      "route": "declined",
+      "ts": 5116,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04120",
+      "route": "null",
+      "ts": 5120,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04121",
+      "route": "declined",
+      "ts": 5121,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04129",
+      "route": "declined",
+      "ts": 5129,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04143",
+      "route": "declined",
+      "ts": 5143,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04145",
+      "route": "null",
+      "ts": 5145,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04172",
+      "route": "null",
+      "ts": 5172,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04206",
+      "route": "declined",
+      "ts": 5206,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04226",
+      "route": "declined",
+      "ts": 5226,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04250",
+      "route": "declined",
+      "ts": 5250,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04256",
+      "route": "declined",
+      "ts": 5256,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04259",
+      "route": "declined",
+      "ts": 5259,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04263",
+      "route": "declined",
+      "ts": 5263,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04291",
+      "route": "declined",
+      "ts": 5291,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04298",
+      "route": "declined",
+      "ts": 5298,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04314",
+      "route": "declined",
+      "ts": 5314,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04318",
+      "route": "declined",
+      "ts": 5318,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04394",
+      "route": "declined",
+      "ts": 5394,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04408",
+      "route": "declined",
+      "ts": 5408,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04412",
+      "route": "declined",
+      "ts": 5412,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04431",
+      "route": "declined",
+      "ts": 5431,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04435",
+      "route": "declined",
+      "ts": 5435,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04436",
+      "route": "declined",
+      "ts": 5436,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04452",
+      "route": "null",
+      "ts": 5452,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04453",
+      "route": "declined",
+      "ts": 5453,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04454",
+      "route": "declined",
+      "ts": 5454,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04457",
+      "route": "declined",
+      "ts": 5457,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04477",
+      "route": "declined",
+      "ts": 5477,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04505",
+      "route": "declined",
+      "ts": 5505,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04518",
+      "route": "declined",
+      "ts": 5518,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04530",
+      "route": "declined",
+      "ts": 5530,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04548",
+      "route": "declined",
+      "ts": 5548,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04562",
+      "route": "null",
+      "ts": 5562,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04566",
+      "route": "declined",
+      "ts": 5566,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04598",
+      "route": "declined",
+      "ts": 5598,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04602",
+      "route": "declined",
+      "ts": 5602,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04608",
+      "route": "declined",
+      "ts": 5608,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04656",
+      "route": "null",
+      "ts": 5656,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04661",
+      "route": "declined",
+      "ts": 5661,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04669",
+      "route": "declined",
+      "ts": 5669,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04694",
+      "route": "declined",
+      "ts": 5694,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04726",
+      "route": "declined",
+      "ts": 5726,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04729",
+      "route": "declined",
+      "ts": 5729,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04738",
+      "route": "null",
+      "ts": 5738,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04742",
+      "route": "declined",
+      "ts": 5742,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04751",
+      "route": "declined",
+      "ts": 5751,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04765",
+      "route": "null",
+      "ts": 5765,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04767",
+      "route": "declined",
+      "ts": 5767,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04769",
+      "route": "declined",
+      "ts": 5769,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04773",
+      "route": "null",
+      "ts": 5773,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04786",
+      "route": "declined",
+      "ts": 5786,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04791",
+      "route": "declined",
+      "ts": 5791,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04810",
+      "route": "null",
+      "ts": 5810,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04825",
+      "route": "declined",
+      "ts": 5825,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04827",
+      "route": "declined",
+      "ts": 5827,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04860",
+      "route": "declined",
+      "ts": 5860,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04865",
+      "route": "null",
+      "ts": 5865,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04869",
+      "route": "declined",
+      "ts": 5869,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04877",
+      "route": "null",
+      "ts": 5877,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04912",
+      "route": "null",
+      "ts": 5912,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04934",
+      "route": "declined",
+      "ts": 5934,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04938",
+      "route": "declined",
+      "ts": 5938,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04943",
+      "route": "null",
+      "ts": 5943,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04945",
+      "route": "declined",
+      "ts": 5945,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04968",
+      "route": "declined",
+      "ts": 5968,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-04982",
+      "route": "declined",
+      "ts": 5982,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04987",
+      "route": "declined",
+      "ts": 5987,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-04988",
+      "route": "declined",
+      "ts": 5988,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05000",
+      "route": "declined",
+      "ts": 6000,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05016",
+      "route": "declined",
+      "ts": 6016,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05017",
+      "route": "declined",
+      "ts": 6017,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05018",
+      "route": "null",
+      "ts": 6018,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05031",
+      "route": "declined",
+      "ts": 6031,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05039",
+      "route": "declined",
+      "ts": 6039,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05043",
+      "route": "declined",
+      "ts": 6043,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05057",
+      "route": "declined",
+      "ts": 6057,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05066",
+      "route": "declined",
+      "ts": 6066,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05067",
+      "route": "declined",
+      "ts": 6067,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05075",
+      "route": "declined",
+      "ts": 6075,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05091",
+      "route": "declined",
+      "ts": 6091,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05095",
+      "route": "declined",
+      "ts": 6095,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05114",
+      "route": "declined",
+      "ts": 6114,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05123",
+      "route": "declined",
+      "ts": 6123,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05130",
+      "route": "declined",
+      "ts": 6130,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05139",
+      "route": "declined",
+      "ts": 6139,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05163",
+      "route": "declined",
+      "ts": 6163,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05213",
+      "route": "null",
+      "ts": 6213,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05226",
+      "route": "declined",
+      "ts": 6226,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05256",
+      "route": "declined",
+      "ts": 6256,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05271",
+      "route": "declined",
+      "ts": 6271,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05274",
+      "route": "declined",
+      "ts": 6274,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05282",
+      "route": "declined",
+      "ts": 6282,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05283",
+      "route": "declined",
+      "ts": 6283,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05294",
+      "route": "declined",
+      "ts": 6294,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05308",
+      "route": "null",
+      "ts": 6308,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05343",
+      "route": "declined",
+      "ts": 6343,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05344",
+      "route": "declined",
+      "ts": 6344,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05354",
+      "route": "declined",
+      "ts": 6354,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05355",
+      "route": "declined",
+      "ts": 6355,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05359",
+      "route": "declined",
+      "ts": 6359,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05373",
+      "route": "declined",
+      "ts": 6373,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05381",
+      "route": "declined",
+      "ts": 6381,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05421",
+      "route": "declined",
+      "ts": 6421,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05430",
+      "route": "null",
+      "ts": 6430,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05457",
+      "route": "declined",
+      "ts": 6457,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05470",
+      "route": "declined",
+      "ts": 6470,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05479",
+      "route": "declined",
+      "ts": 6479,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05483",
+      "route": "declined",
+      "ts": 6483,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05487",
+      "route": "declined",
+      "ts": 6487,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05500",
+      "route": "null",
+      "ts": 6500,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05507",
+      "route": "declined",
+      "ts": 6507,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05555",
+      "route": "declined",
+      "ts": 6555,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05567",
+      "route": "declined",
+      "ts": 6567,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05569",
+      "route": "declined",
+      "ts": 6569,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05587",
+      "route": "declined",
+      "ts": 6587,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05606",
+      "route": "declined",
+      "ts": 6606,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05608",
+      "route": "declined",
+      "ts": 6608,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05629",
+      "route": "declined",
+      "ts": 6629,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05633",
+      "route": "declined",
+      "ts": 6633,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05642",
+      "route": "declined",
+      "ts": 6642,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05643",
+      "route": "declined",
+      "ts": 6643,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05689",
+      "route": "declined",
+      "ts": 6689,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05713",
+      "route": "declined",
+      "ts": 6713,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05721",
+      "route": "declined",
+      "ts": 6721,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05733",
+      "route": "declined",
+      "ts": 6733,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05748",
+      "route": "declined",
+      "ts": 6748,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05750",
+      "route": "declined",
+      "ts": 6750,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05753",
+      "route": "declined",
+      "ts": 6753,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05760",
+      "route": "declined",
+      "ts": 6760,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05768",
+      "route": "declined",
+      "ts": 6768,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05802",
+      "route": "null",
+      "ts": 6802,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05822",
+      "route": "declined",
+      "ts": 6822,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05834",
+      "route": "declined",
+      "ts": 6834,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05849",
+      "route": "declined",
+      "ts": 6849,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05853",
+      "route": "declined",
+      "ts": 6853,
+      "rules": [
+        "DV-393"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05854",
+      "route": "declined",
+      "ts": 6854,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05856",
+      "route": "declined",
+      "ts": 6856,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05863",
+      "route": "declined",
+      "ts": 6863,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05865",
+      "route": "null",
+      "ts": 6865,
+      "rules": [],
+      "rating": null,
+      "tau": null,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05867",
+      "route": "declined",
+      "ts": 6867,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05879",
+      "route": "declined",
+      "ts": 6879,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05884",
+      "route": "declined",
+      "ts": 6884,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05892",
+      "route": "declined",
+      "ts": 6892,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05901",
+      "route": "declined",
+      "ts": 6901,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05903",
+      "route": "declined",
+      "ts": 6903,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05908",
+      "route": "declined",
+      "ts": 6908,
+      "rules": [
+        "DV-395"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05912",
+      "route": "declined",
+      "ts": 6912,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05919",
+      "route": "declined",
+      "ts": 6919,
+      "rules": [
+        "DV-391"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05925",
+      "route": "declined",
+      "ts": 6925,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05937",
+      "route": "declined",
+      "ts": 6937,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05938",
+      "route": "declined",
+      "ts": 6938,
+      "rules": [
+        "DV-392"
+      ],
+      "rating": 20,
+      "tau": 30,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-Q-05989",
+      "route": "declined",
+      "ts": 6989,
+      "rules": [
+        "DV-394"
+      ],
+      "rating": 20,
+      "tau": 35,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    },
+    {
+      "case": "DV-T-05999",
+      "route": "declined",
+      "ts": 6999,
+      "rules": [
+        "DV-397"
+      ],
+      "rating": 20,
+      "tau": 22,
+      "consulted": [],
+      "rulebook_version": "dcvigil-rb-000001"
+    }
+  ]
+}

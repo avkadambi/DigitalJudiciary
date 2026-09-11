@@ -1,0 +1,2813 @@
+{
+  "DV-301": {
+    "comply": [
+      "binary_and_container_image_signed",
+      "build_hermetic_and_reproducible",
+      "dependency_licence_on_approved_list",
+      "dv_301_control_evidenced",
+      "provenance_attestation_present_on_agent_build",
+      "sbom_generated_for_instrumentation_libraries",
+      "sca_scan_clean_for_high_and_critical",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "agpl_dependency_in_customer_deployed_collector",
+      "dependency_carries_high_or_critical_cve",
+      "dv_301_control_absent",
+      "provenance_attestation_absent_on_agent_build",
+      "unsigned_binary_shipped_to_customer_infrastructure",
+      "vendor_security_review_pending_on_customer_data_path"
+    ]
+  },
+  "DV-302": {
+    "comply": [
+      "action_scope_bounded_to_single_tenant",
+      "action_target_uniquely_identified_before_execution",
+      "availability_budget_consulted_before_eviction",
+      "consecutive_error_limit_configured",
+      "customer_side_confirmation_required_per_action",
+      "dv_302_control_evidenced",
+      "halt_after_declared_action_threshold",
+      "kill_switch_present_and_tested",
+      "remediation_action_reversible"
+    ],
+    "violate": [
+      "action_scope_unbounded_by_tenant",
+      "actuation_batch_mode_without_per_action_confirmation",
+      "actuation_without_customer_confirmation",
+      "dv_302_control_absent",
+      "no_consecutive_error_limit",
+      "no_halt_after_n_actions"
+    ]
+  },
+  "DV-303": {
+    "comply": [
+      "build_hermetic_and_reproducible",
+      "dependency_licence_on_approved_list",
+      "dv_303_control_evidenced",
+      "provenance_attestation_present_on_agent_build",
+      "sbom_generated_for_instrumentation_libraries",
+      "sca_scan_clean_for_high_and_critical",
+      "secret_scanner_clean_on_diff",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "dv_303_control_absent",
+      "provenance_attestation_absent_on_agent_build",
+      "secret_present_in_source_or_ci_log",
+      "unsigned_binary_shipped_to_customer_infrastructure",
+      "vendor_security_review_pending_on_customer_data_path"
+    ]
+  },
+  "DV-304": {
+    "comply": [
+      "benchmark_service_anonymisation_verified",
+      "cross_tenant_correlation_isolation_verified",
+      "cross_tenant_join_blocked_by_schema_constraint",
+      "dv_304_control_evidenced",
+      "shared_model_training_uses_anonymised_benchmark_only",
+      "support_tooling_scoped_to_single_tenant",
+      "tenant_attribution_derived_from_server_side_identity",
+      "tenant_scope_enforced_at_query_layer"
+    ],
+    "violate": [
+      "benchmark_anonymisation_bypassed",
+      "cross_tenant_pooled_model_training",
+      "cross_tenant_read_enabled",
+      "dv_304_control_absent",
+      "support_tool_granted_cross_tenant_access",
+      "tenant_attribution_derived_from_client_supplied_field"
+    ]
+  },
+  "DV-305": {
+    "comply": [
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "dv_305_control_evidenced",
+      "human_reviewer_signoff_on_authorization_code",
+      "imported_package_verified_against_registry",
+      "link_to_originating_human_requirement_present",
+      "monitoring_integration_endpoint_verified_to_exist",
+      "multiparty_review_on_kernel_level_component"
+    ],
+    "violate": [
+      "agent_change_alters_kernel_level_component_without_multiparty_review",
+      "agent_change_alters_security_policy_or_rbac",
+      "agent_change_missing_provenance_attestation",
+      "dv_305_control_absent",
+      "hallucinated_monitoring_integration_referenced",
+      "imported_package_absent_from_registry"
+    ]
+  },
+  "DV-306": {
+    "comply": [
+      "alerting_rule_change_behind_feature_flag",
+      "backup_restore_run_verified_in_staging",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "dv_306_control_evidenced",
+      "p95_latency_regression_within_budget",
+      "promtool_rule_unit_test_added_for_new_alert",
+      "reversible_down_migration_present",
+      "rollback_path_verified"
+    ],
+    "violate": [
+      "alerting_rule_change_without_feature_flag",
+      "changed_line_coverage_below_floor",
+      "dv_306_control_absent",
+      "irreversible_migration_without_backup_proof",
+      "no_rule_unit_test_for_new_alert",
+      "p95_latency_regression_above_budget"
+    ]
+  },
+  "DV-307": {
+    "comply": [
+      "alerting_rule_change_behind_feature_flag",
+      "backup_restore_run_verified_in_staging",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "dv_307_control_evidenced",
+      "p95_latency_regression_within_budget",
+      "promtool_rule_unit_test_added_for_new_alert",
+      "reversible_down_migration_present",
+      "rollback_path_verified"
+    ],
+    "violate": [
+      "alerting_rule_change_without_feature_flag",
+      "changed_line_coverage_below_floor",
+      "dv_307_control_absent",
+      "no_rule_unit_test_for_new_alert",
+      "p95_latency_regression_above_budget",
+      "rollback_path_absent"
+    ]
+  },
+  "DV-308": {
+    "comply": [
+      "binary_and_container_image_signed",
+      "build_hermetic_and_reproducible",
+      "dependency_licence_on_approved_list",
+      "dv_308_control_evidenced",
+      "provenance_attestation_present_on_agent_build",
+      "sbom_generated_for_instrumentation_libraries",
+      "secret_scanner_clean_on_diff",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "agpl_dependency_in_customer_deployed_collector",
+      "build_not_reproducible_across_runners",
+      "dependency_carries_high_or_critical_cve",
+      "dv_308_control_absent",
+      "secret_present_in_source_or_ci_log",
+      "vendor_security_review_pending_on_customer_data_path"
+    ]
+  },
+  "DV-309": {
+    "comply": [
+      "binary_and_container_image_signed",
+      "build_hermetic_and_reproducible",
+      "dependency_licence_on_approved_list",
+      "dv_309_control_evidenced",
+      "provenance_attestation_present_on_agent_build",
+      "sbom_generated_for_instrumentation_libraries",
+      "sca_scan_clean_for_high_and_critical",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "agpl_dependency_in_customer_deployed_collector",
+      "build_not_reproducible_across_runners",
+      "dependency_carries_high_or_critical_cve",
+      "dv_309_control_absent",
+      "provenance_attestation_absent_on_agent_build",
+      "unsigned_binary_shipped_to_customer_infrastructure"
+    ]
+  },
+  "DV-310": {
+    "comply": [
+      "build_hermetic_and_reproducible",
+      "dependency_licence_on_approved_list",
+      "dv_310_control_evidenced",
+      "provenance_attestation_present_on_agent_build",
+      "sbom_generated_for_instrumentation_libraries",
+      "sca_scan_clean_for_high_and_critical",
+      "secret_scanner_clean_on_diff",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "agpl_dependency_in_customer_deployed_collector",
+      "dv_310_control_absent",
+      "provenance_attestation_absent_on_agent_build",
+      "secret_present_in_source_or_ci_log",
+      "unsigned_binary_shipped_to_customer_infrastructure",
+      "vendor_security_review_pending_on_customer_data_path"
+    ]
+  },
+  "DV-311": {
+    "comply": [
+      "deploy_outside_customer_blackout_window",
+      "dv_311_control_evidenced",
+      "emergency_protocol_invoked_and_recorded",
+      "escalation_format_change_reviewed",
+      "on_call_handover_notified_of_change",
+      "rate_limit_configured_on_alert_webhook",
+      "retry_backoff_includes_jitter",
+      "retry_budget_declared",
+      "sre_lead_domain_review_completed"
+    ],
+    "violate": [
+      "alert_webhook_rate_limit_absent",
+      "deploy_inside_customer_blackout_window",
+      "dv_311_control_absent",
+      "emergency_protocol_claimed_without_record",
+      "retry_backoff_lacks_jitter",
+      "sre_lead_review_pending_at_merge"
+    ]
+  },
+  "DV-312": {
+    "comply": [
+      "alerting_rule_change_behind_feature_flag",
+      "backup_restore_run_verified_in_staging",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "dv_312_control_evidenced",
+      "p95_latency_regression_within_budget",
+      "promtool_rule_unit_test_added_for_new_alert",
+      "reversible_down_migration_present",
+      "rollback_path_verified"
+    ],
+    "violate": [
+      "alerting_rule_change_without_feature_flag",
+      "changed_line_coverage_below_floor",
+      "dv_312_control_absent",
+      "irreversible_migration_without_backup_proof",
+      "no_rule_unit_test_for_new_alert",
+      "rollback_path_absent"
+    ]
+  },
+  "DV-313": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_313_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented"
+    ],
+    "violate": [
+      "dv_313_control_absent",
+      "eu_badge_logs_cached_outside_region",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "external_analytics_added_without_dpia",
+      "raw_query_text_ingested_without_masking",
+      "redaction_processor_bypassed_on_new_path"
+    ]
+  },
+  "DV-315": {
+    "comply": [
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_315_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_315_control_absent",
+      "external_analytics_added_without_dpia",
+      "notification_template_bypasses_consent_check",
+      "raw_query_text_ingested_without_masking",
+      "redaction_processor_bypassed_on_new_path"
+    ]
+  },
+  "DV-316": {
+    "comply": [
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "dv_316_control_evidenced",
+      "human_reviewer_signoff_on_authorization_code",
+      "imported_package_verified_against_registry",
+      "link_to_originating_human_requirement_present",
+      "monitoring_integration_endpoint_verified_to_exist",
+      "multiparty_review_on_kernel_level_component"
+    ],
+    "violate": [
+      "agent_change_alters_kernel_level_component_without_multiparty_review",
+      "agent_change_lacks_human_signoff_on_tenant_access_code",
+      "agent_change_missing_provenance_attestation",
+      "dv_316_control_absent",
+      "hallucinated_monitoring_integration_referenced",
+      "imported_package_absent_from_registry"
+    ]
+  },
+  "DV-317": {
+    "comply": [
+      "alerting_rule_change_behind_feature_flag",
+      "backup_restore_run_verified_in_staging",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "dv_317_control_evidenced",
+      "p95_latency_regression_within_budget",
+      "promtool_rule_unit_test_added_for_new_alert",
+      "reversible_down_migration_present",
+      "rollback_path_verified"
+    ],
+    "violate": [
+      "alerting_rule_change_without_feature_flag",
+      "changed_line_coverage_below_floor",
+      "dv_317_control_absent",
+      "irreversible_migration_without_backup_proof",
+      "no_rule_unit_test_for_new_alert",
+      "p95_latency_regression_above_budget"
+    ]
+  },
+  "DV-318": {
+    "comply": [
+      "alerting_rule_change_behind_feature_flag",
+      "backup_restore_run_verified_in_staging",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "dv_318_control_evidenced",
+      "p95_latency_regression_within_budget",
+      "promtool_rule_unit_test_added_for_new_alert",
+      "reversible_down_migration_present",
+      "rollback_path_verified"
+    ],
+    "violate": [
+      "alerting_rule_change_without_feature_flag",
+      "changed_line_coverage_below_floor",
+      "dv_318_control_absent",
+      "no_rule_unit_test_for_new_alert",
+      "p95_latency_regression_above_budget",
+      "rollback_path_absent"
+    ]
+  },
+  "DV-319": {
+    "comply": [
+      "deploy_outside_customer_blackout_window",
+      "dv_319_control_evidenced",
+      "emergency_protocol_invoked_and_recorded",
+      "escalation_format_change_reviewed",
+      "on_call_handover_notified_of_change",
+      "rate_limit_configured_on_alert_webhook",
+      "retry_backoff_includes_jitter",
+      "retry_budget_declared",
+      "sre_lead_domain_review_completed"
+    ],
+    "violate": [
+      "alert_webhook_rate_limit_absent",
+      "dv_319_control_absent",
+      "reconnect_storm_possible_on_server_restart",
+      "retry_backoff_lacks_jitter",
+      "sre_lead_review_pending_at_merge",
+      "webhook_amplification_factor_unbounded"
+    ]
+  },
+  "DV-320": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dv_320_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_320_control_absent",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "external_analytics_added_without_dpia",
+      "notification_template_bypasses_consent_check",
+      "special_category_data_enters_new_path_without_gate"
+    ]
+  },
+  "DV-321": {
+    "comply": [
+      "audit_log_append_only",
+      "audit_log_retention_meets_contracted_term",
+      "audit_log_tamper_alerting_enabled",
+      "audit_record_backed_up_to_separate_component",
+      "dv_321_control_evidenced",
+      "evidence_export_reproducible_by_auditor",
+      "nis2_early_warning_path_meets_transposed_deadline",
+      "processor_notification_to_controller_without_undue_delay",
+      "supervisory_notification_path_unmodified"
+    ],
+    "violate": [
+      "audit_log_mutation_path_added",
+      "audit_log_retention_shortened",
+      "audit_log_tamper_alerting_disabled",
+      "dv_321_control_absent",
+      "notification_batching_moves_deadline",
+      "supervisory_notification_path_delayed_or_removed"
+    ]
+  },
+  "DV-322": {
+    "comply": [
+      "dv_322_control_evidenced",
+      "model_run_in_shadow_before_live_scoring",
+      "per_entity_results_reported_not_only_aggregate",
+      "promotion_criteria_declared_before_shadow_started",
+      "regression_evaluated_above_measured_noise_floor",
+      "root_cause_indicator_identified_not_only_service",
+      "shadow_outputs_not_routed_to_paging_or_remediation",
+      "shadow_vs_incumbent_disagreement_rate_recorded",
+      "threshold_free_metric_reported"
+    ],
+    "violate": [
+      "aggregate_only_results_reported",
+      "alert_suppression_change_without_coverage_review",
+      "dv_322_control_absent",
+      "model_promoted_to_live_scoring_without_shadow_evaluation",
+      "point_adjusted_f1_used_as_primary_metric",
+      "regression_claimed_below_measured_noise_floor"
+    ]
+  },
+  "DV-330": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_330_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_330_control_absent",
+      "eu_badge_logs_cached_outside_region",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "raw_query_text_ingested_without_masking",
+      "special_category_data_enters_new_path_without_gate"
+    ]
+  },
+  "DV-331": {
+    "comply": [
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_331_control_evidenced",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "dv_331_control_absent",
+      "eu_badge_logs_cached_outside_region",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "external_analytics_added_without_dpia",
+      "raw_query_text_ingested_without_masking",
+      "redaction_processor_bypassed_on_new_path"
+    ]
+  },
+  "DV-332": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_332_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_332_control_absent",
+      "external_analytics_added_without_dpia",
+      "notification_template_bypasses_consent_check",
+      "raw_query_text_ingested_without_masking",
+      "redaction_processor_bypassed_on_new_path"
+    ]
+  },
+  "DV-333": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "dpia_completed_before_new_external_analytics",
+      "dv_333_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_333_control_absent",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "external_analytics_added_without_dpia",
+      "notification_template_bypasses_consent_check",
+      "special_category_data_enters_new_path_without_gate"
+    ]
+  },
+  "DV-334": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_334_control_evidenced",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented",
+      "sub_processor_region_declared"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_334_control_absent",
+      "eu_badge_logs_cached_outside_region",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "raw_query_text_ingested_without_masking",
+      "special_category_data_enters_new_path_without_gate"
+    ]
+  },
+  "DV-335": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_335_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "dv_335_control_absent",
+      "eu_badge_logs_cached_outside_region",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "external_analytics_added_without_dpia",
+      "raw_query_text_ingested_without_masking",
+      "redaction_processor_bypassed_on_new_path"
+    ]
+  },
+  "DV-336": {
+    "comply": [
+      "audit_log_append_only",
+      "audit_log_tamper_alerting_enabled",
+      "audit_record_backed_up_to_separate_component",
+      "clock_source_trusted_and_monotonic",
+      "dv_336_control_evidenced",
+      "evidence_export_reproducible_by_auditor",
+      "nis2_early_warning_path_meets_transposed_deadline",
+      "processor_notification_to_controller_without_undue_delay",
+      "supervisory_notification_path_unmodified"
+    ],
+    "violate": [
+      "audit_log_retention_shortened",
+      "audit_log_tamper_alerting_disabled",
+      "dv_336_control_absent",
+      "evidence_export_not_reproducible",
+      "notification_batching_moves_deadline",
+      "supervisory_notification_path_delayed_or_removed"
+    ]
+  },
+  "DV-337": {
+    "comply": [
+      "agent_identity_attested_by_workload_identity",
+      "certificate_rotation_automated",
+      "client_certificate_presented_and_verified",
+      "credential_unique_per_node",
+      "dv_337_control_evidenced",
+      "mutual_tls_enforced_on_agent_channel",
+      "payload_replay_detectable",
+      "sequence_gap_detectable",
+      "telemetry_payload_signed"
+    ],
+    "violate": [
+      "client_certificate_not_presented",
+      "credential_shared_across_nodes",
+      "dv_337_control_absent",
+      "payload_origin_unauthenticated",
+      "telemetry_payload_unsigned",
+      "trust_on_first_use_without_pinning"
+    ]
+  },
+  "DV-338": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "dv_338_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_338_control_absent",
+      "external_analytics_added_without_dpia",
+      "notification_template_bypasses_consent_check",
+      "raw_query_text_ingested_without_masking",
+      "redaction_processor_bypassed_on_new_path"
+    ]
+  },
+  "DV-339": {
+    "comply": [
+      "audit_log_append_only",
+      "audit_log_retention_meets_contracted_term",
+      "audit_log_tamper_alerting_enabled",
+      "audit_record_backed_up_to_separate_component",
+      "clock_source_trusted_and_monotonic",
+      "dv_339_control_evidenced",
+      "evidence_export_reproducible_by_auditor",
+      "nis2_early_warning_path_meets_transposed_deadline",
+      "supervisory_notification_path_unmodified"
+    ],
+    "violate": [
+      "audit_log_mutation_path_added",
+      "audit_log_retention_shortened",
+      "audit_log_tamper_alerting_disabled",
+      "dv_339_control_absent",
+      "evidence_export_not_reproducible",
+      "notification_batching_moves_deadline"
+    ]
+  },
+  "DV-340": {
+    "comply": [
+      "action_scope_bounded_to_single_tenant",
+      "action_target_uniquely_identified_before_execution",
+      "availability_budget_consulted_before_eviction",
+      "canary_or_staged_rollout_used",
+      "dv_340_control_evidenced",
+      "kill_switch_present_and_tested",
+      "post_remediation_residual_state_cleaned_up",
+      "remediation_action_reversible",
+      "steady_state_hypothesis_declared"
+    ],
+    "violate": [
+      "action_scope_unbounded_by_tenant",
+      "dv_340_control_absent",
+      "kill_switch_absent",
+      "no_consecutive_error_limit",
+      "no_halt_after_n_actions",
+      "remediation_can_target_the_monitoring_control_plane_itself"
+    ]
+  },
+  "DV-341": {
+    "comply": [
+      "canary_or_staged_rollout_used",
+      "customer_side_confirmation_required_per_action",
+      "dv_341_control_evidenced",
+      "halt_after_declared_action_threshold",
+      "kill_switch_present_and_tested",
+      "lockout_tagout_interaction_documented",
+      "post_remediation_residual_state_cleaned_up",
+      "remediation_action_reversible",
+      "steady_state_hypothesis_declared"
+    ],
+    "violate": [
+      "action_irreversible_and_unreviewed",
+      "action_scope_unbounded_by_tenant",
+      "dv_341_control_absent",
+      "kill_switch_absent",
+      "physical_access_control_actuated_without_confirmation",
+      "remediation_can_target_the_monitoring_control_plane_itself"
+    ]
+  },
+  "DV-342": {
+    "comply": [
+      "action_target_uniquely_identified_before_execution",
+      "availability_budget_consulted_before_eviction",
+      "canary_or_staged_rollout_used",
+      "consecutive_error_limit_configured",
+      "customer_side_confirmation_required_per_action",
+      "dv_342_control_evidenced",
+      "halt_after_declared_action_threshold",
+      "lockout_tagout_interaction_documented",
+      "steady_state_hypothesis_declared"
+    ],
+    "violate": [
+      "action_irreversible_and_unreviewed",
+      "actuation_batch_mode_without_per_action_confirmation",
+      "actuation_without_customer_confirmation",
+      "dv_342_control_absent",
+      "kill_switch_absent",
+      "physical_access_control_actuated_without_confirmation"
+    ]
+  },
+  "DV-343": {
+    "comply": [
+      "agent_identity_attested_by_workload_identity",
+      "certificate_rotation_automated",
+      "credential_unique_per_node",
+      "dv_343_control_evidenced",
+      "mutual_tls_enforced_on_agent_channel",
+      "payload_replay_detectable",
+      "sequence_gap_detectable",
+      "telemetry_payload_signed",
+      "trust_established_without_permanent_tofu"
+    ],
+    "violate": [
+      "credential_shared_across_nodes",
+      "dv_343_control_absent",
+      "payload_origin_unauthenticated",
+      "payload_replay_possible",
+      "plaintext_transport_on_production_path",
+      "trust_on_first_use_without_pinning"
+    ]
+  },
+  "DV-344": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_344_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_344_control_absent",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "external_analytics_added_without_dpia",
+      "notification_template_bypasses_consent_check",
+      "special_category_data_enters_new_path_without_gate"
+    ]
+  },
+  "DV-345": {
+    "comply": [
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_345_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_345_control_absent",
+      "eu_badge_logs_cached_outside_region",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "raw_query_text_ingested_without_masking",
+      "special_category_data_enters_new_path_without_gate"
+    ]
+  },
+  "DV-346": {
+    "comply": [
+      "decompression_ratio_bounded",
+      "dv_346_control_evidenced",
+      "input_length_bounded_before_match",
+      "malformed_payload_rejected_without_partial_write",
+      "match_execution_deadline_present",
+      "otlp_payload_validated_against_pinned_semconv_version",
+      "parser_confined_by_seccomp_profile",
+      "parser_sandbox_network_isolated",
+      "semconv_attribute_stability_recorded_for_new_field"
+    ],
+    "violate": [
+      "decompression_ratio_unbounded",
+      "dv_346_control_absent",
+      "malformed_input_can_crash_agent",
+      "parser_not_seccomp_confined",
+      "regex_engine_is_backtracking_with_unbounded_input",
+      "regex_flagged_superlinear_by_validated_detector"
+    ]
+  },
+  "DV-347": {
+    "comply": [
+      "decompression_ratio_bounded",
+      "dv_347_control_evidenced",
+      "input_length_bounded_before_match",
+      "match_execution_deadline_present",
+      "out_of_order_samples_handled_explicitly",
+      "parser_confined_by_seccomp_profile",
+      "parser_sandbox_network_isolated",
+      "regex_ambiguity_score_below_threshold",
+      "regex_screened_by_validated_superlinear_detector"
+    ],
+    "violate": [
+      "decompression_ratio_unbounded",
+      "dv_347_control_absent",
+      "malformed_input_can_crash_agent",
+      "match_execution_deadline_absent",
+      "parser_not_seccomp_confined",
+      "parser_sandbox_has_network_egress"
+    ]
+  },
+  "DV-348": {
+    "comply": [
+      "dv_348_control_evidenced",
+      "openmetrics_type_declared_for_new_series",
+      "otlp_payload_validated_against_pinned_semconv_version",
+      "out_of_order_samples_handled_explicitly",
+      "parser_confined_by_seccomp_profile",
+      "parser_sandbox_network_isolated",
+      "regex_ambiguity_score_below_threshold",
+      "regex_screened_by_validated_superlinear_detector",
+      "semconv_attribute_stability_recorded_for_new_field"
+    ],
+    "violate": [
+      "dv_348_control_absent",
+      "match_execution_deadline_absent",
+      "parser_not_seccomp_confined",
+      "parser_sandbox_has_network_egress",
+      "regex_flagged_superlinear_by_validated_detector",
+      "semconv_development_attribute_treated_as_stable"
+    ]
+  },
+  "DV-349": {
+    "comply": [
+      "decompression_ratio_bounded",
+      "dv_349_control_evidenced",
+      "input_length_bounded_before_match",
+      "malformed_payload_rejected_without_partial_write",
+      "openmetrics_type_declared_for_new_series",
+      "otlp_payload_validated_against_pinned_semconv_version",
+      "out_of_order_samples_handled_explicitly",
+      "regex_ambiguity_score_below_threshold",
+      "semconv_attribute_stability_recorded_for_new_field"
+    ],
+    "violate": [
+      "decompression_ratio_unbounded",
+      "dv_349_control_absent",
+      "match_execution_deadline_absent",
+      "regex_engine_is_backtracking_with_unbounded_input",
+      "regex_flagged_superlinear_by_validated_detector",
+      "semconv_development_attribute_treated_as_stable"
+    ]
+  },
+  "DV-350": {
+    "comply": [
+      "decompression_ratio_bounded",
+      "dv_350_control_evidenced",
+      "input_length_bounded_before_match",
+      "malformed_payload_rejected_without_partial_write",
+      "match_execution_deadline_present",
+      "otlp_payload_validated_against_pinned_semconv_version",
+      "parser_confined_by_seccomp_profile",
+      "parser_sandbox_network_isolated",
+      "semconv_attribute_stability_recorded_for_new_field"
+    ],
+    "violate": [
+      "decompression_ratio_unbounded",
+      "dv_350_control_absent",
+      "malformed_input_can_crash_agent",
+      "parser_not_seccomp_confined",
+      "regex_engine_is_backtracking_with_unbounded_input",
+      "regex_flagged_superlinear_by_validated_detector"
+    ]
+  },
+  "DV-351": {
+    "comply": [
+      "decompression_ratio_bounded",
+      "dv_351_control_evidenced",
+      "input_length_bounded_before_match",
+      "match_execution_deadline_present",
+      "out_of_order_samples_handled_explicitly",
+      "parser_confined_by_seccomp_profile",
+      "parser_sandbox_network_isolated",
+      "regex_ambiguity_score_below_threshold",
+      "regex_screened_by_validated_superlinear_detector"
+    ],
+    "violate": [
+      "decompression_ratio_unbounded",
+      "dv_351_control_absent",
+      "malformed_input_can_crash_agent",
+      "match_execution_deadline_absent",
+      "parser_not_seccomp_confined",
+      "parser_sandbox_has_network_egress"
+    ]
+  },
+  "DV-352": {
+    "comply": [
+      "dv_352_control_evidenced",
+      "openmetrics_type_declared_for_new_series",
+      "otlp_payload_validated_against_pinned_semconv_version",
+      "out_of_order_samples_handled_explicitly",
+      "parser_confined_by_seccomp_profile",
+      "parser_sandbox_network_isolated",
+      "regex_ambiguity_score_below_threshold",
+      "regex_screened_by_validated_superlinear_detector",
+      "semconv_attribute_stability_recorded_for_new_field"
+    ],
+    "violate": [
+      "dv_352_control_absent",
+      "match_execution_deadline_absent",
+      "parser_not_seccomp_confined",
+      "parser_sandbox_has_network_egress",
+      "regex_flagged_superlinear_by_validated_detector",
+      "semconv_development_attribute_treated_as_stable"
+    ]
+  },
+  "DV-353": {
+    "comply": [
+      "agent_capability_set_minimised",
+      "agent_directory_not_writable_by_unprivileged_user",
+      "agent_drops_privilege_after_bootstrap",
+      "agent_ipc_endpoint_permissions_restricted",
+      "agent_package_signature_verified_before_install",
+      "agent_socket_fuzzed_on_changed_surface",
+      "dv_353_control_evidenced",
+      "helper_executed_without_inherited_privilege",
+      "ipc_peer_identity_verified"
+    ],
+    "violate": [
+      "agent_directory_writable_by_unprivileged_user",
+      "agent_ipc_endpoint_world_writable",
+      "code_from_writable_path_executed_on_upgrade",
+      "dv_353_control_absent",
+      "ipc_peer_identity_unverified",
+      "privileged_action_reachable_from_unprivileged_caller"
+    ]
+  },
+  "DV-354": {
+    "comply": [
+      "agent_capability_set_minimised",
+      "agent_directory_not_writable_by_unprivileged_user",
+      "agent_drops_privilege_after_bootstrap",
+      "agent_ipc_endpoint_permissions_restricted",
+      "agent_package_signature_verified_before_install",
+      "agent_socket_fuzzed_on_changed_surface",
+      "dv_354_control_evidenced",
+      "helper_executed_without_inherited_privilege",
+      "windows_named_pipe_dacl_restricted"
+    ],
+    "violate": [
+      "agent_directory_writable_by_unprivileged_user",
+      "agent_execs_helper_with_inherited_privilege",
+      "code_from_writable_path_executed_on_upgrade",
+      "dv_354_control_absent",
+      "privilege_not_dropped_after_bootstrap",
+      "privileged_action_reachable_from_unprivileged_caller"
+    ]
+  },
+  "DV-355": {
+    "comply": [
+      "agent_directory_not_writable_by_unprivileged_user",
+      "agent_drops_privilege_after_bootstrap",
+      "agent_ipc_endpoint_permissions_restricted",
+      "agent_package_signature_verified_before_install",
+      "agent_socket_fuzzed_on_changed_surface",
+      "dv_355_control_evidenced",
+      "helper_executed_without_inherited_privilege",
+      "ipc_peer_identity_verified",
+      "windows_named_pipe_dacl_restricted"
+    ],
+    "violate": [
+      "agent_execs_helper_with_inherited_privilege",
+      "agent_ipc_endpoint_world_writable",
+      "agent_package_signature_unverified",
+      "code_from_writable_path_executed_on_upgrade",
+      "dv_355_control_absent",
+      "privilege_not_dropped_after_bootstrap"
+    ]
+  },
+  "DV-356": {
+    "comply": [
+      "agent_capability_set_minimised",
+      "agent_directory_not_writable_by_unprivileged_user",
+      "agent_drops_privilege_after_bootstrap",
+      "agent_ipc_endpoint_permissions_restricted",
+      "agent_package_signature_verified_before_install",
+      "agent_socket_fuzzed_on_changed_surface",
+      "dv_356_control_evidenced",
+      "helper_executed_without_inherited_privilege",
+      "ipc_peer_identity_verified"
+    ],
+    "violate": [
+      "agent_ipc_endpoint_world_writable",
+      "agent_package_signature_unverified",
+      "dv_356_control_absent",
+      "ipc_peer_identity_unverified",
+      "privilege_not_dropped_after_bootstrap",
+      "privileged_action_reachable_from_unprivileged_caller"
+    ]
+  },
+  "DV-357": {
+    "comply": [
+      "agent_capability_set_minimised",
+      "agent_directory_not_writable_by_unprivileged_user",
+      "agent_drops_privilege_after_bootstrap",
+      "agent_ipc_endpoint_permissions_restricted",
+      "agent_package_signature_verified_before_install",
+      "agent_socket_fuzzed_on_changed_surface",
+      "dv_357_control_evidenced",
+      "helper_executed_without_inherited_privilege",
+      "windows_named_pipe_dacl_restricted"
+    ],
+    "violate": [
+      "agent_directory_writable_by_unprivileged_user",
+      "agent_ipc_endpoint_world_writable",
+      "code_from_writable_path_executed_on_upgrade",
+      "dv_357_control_absent",
+      "ipc_peer_identity_unverified",
+      "privileged_action_reachable_from_unprivileged_caller"
+    ]
+  },
+  "DV-358": {
+    "comply": [
+      "agent_directory_not_writable_by_unprivileged_user",
+      "agent_drops_privilege_after_bootstrap",
+      "agent_ipc_endpoint_permissions_restricted",
+      "agent_package_signature_verified_before_install",
+      "agent_socket_fuzzed_on_changed_surface",
+      "dv_358_control_evidenced",
+      "helper_executed_without_inherited_privilege",
+      "ipc_peer_identity_verified",
+      "windows_named_pipe_dacl_restricted"
+    ],
+    "violate": [
+      "agent_directory_writable_by_unprivileged_user",
+      "agent_execs_helper_with_inherited_privilege",
+      "code_from_writable_path_executed_on_upgrade",
+      "dv_358_control_absent",
+      "privilege_not_dropped_after_bootstrap",
+      "privileged_action_reachable_from_unprivileged_caller"
+    ]
+  },
+  "DV-359": {
+    "comply": [
+      "agent_capability_set_minimised",
+      "agent_directory_not_writable_by_unprivileged_user",
+      "agent_drops_privilege_after_bootstrap",
+      "agent_ipc_endpoint_permissions_restricted",
+      "agent_package_signature_verified_before_install",
+      "agent_socket_fuzzed_on_changed_surface",
+      "dv_359_control_evidenced",
+      "helper_executed_without_inherited_privilege",
+      "ipc_peer_identity_verified"
+    ],
+    "violate": [
+      "agent_execs_helper_with_inherited_privilege",
+      "agent_ipc_endpoint_world_writable",
+      "agent_package_signature_unverified",
+      "code_from_writable_path_executed_on_upgrade",
+      "dv_359_control_absent",
+      "privilege_not_dropped_after_bootstrap"
+    ]
+  },
+  "DV-360": {
+    "comply": [
+      "bpf_program_bounds_checked",
+      "bpf_program_passes_verifier_on_all_supported_kernels",
+      "bpf_program_profiled_for_run_time",
+      "co_re_relocations_validated_across_kernel_matrix",
+      "dv_360_control_evidenced",
+      "kernel_matrix_covers_declared_support_set",
+      "kernel_module_avoided_in_favour_of_bpf",
+      "panic_regression_suite_run_before_release",
+      "unprivileged_load_path_explicitly_disabled"
+    ],
+    "violate": [
+      "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+      "co_re_relocation_untested_on_target_kernel",
+      "dv_360_control_absent",
+      "kernel_matrix_narrowed_without_amendment",
+      "kernel_module_introduced_without_panic_regression",
+      "unprivileged_bpf_load_path_enabled"
+    ]
+  },
+  "DV-361": {
+    "comply": [
+      "bpf_program_bounds_checked",
+      "bpf_program_passes_verifier_on_all_supported_kernels",
+      "bpf_program_profiled_for_run_time",
+      "co_re_relocations_validated_across_kernel_matrix",
+      "dv_361_control_evidenced",
+      "kernel_matrix_covers_declared_support_set",
+      "kernel_module_avoided_in_favour_of_bpf",
+      "panic_regression_suite_run_before_release",
+      "unprivileged_load_path_explicitly_disabled"
+    ],
+    "violate": [
+      "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+      "co_re_relocation_untested_on_target_kernel",
+      "dv_361_control_absent",
+      "kernel_module_introduced_without_panic_regression",
+      "unprivileged_bpf_load_path_enabled",
+      "verifier_bypass_pattern_present"
+    ]
+  },
+  "DV-362": {
+    "comply": [
+      "bpf_program_bounds_checked",
+      "bpf_program_passes_verifier_on_all_supported_kernels",
+      "bpf_program_profiled_for_run_time",
+      "co_re_relocations_validated_across_kernel_matrix",
+      "dv_362_control_evidenced",
+      "kernel_matrix_covers_declared_support_set",
+      "kernel_module_avoided_in_favour_of_bpf",
+      "panic_regression_suite_run_before_release",
+      "unprivileged_load_path_explicitly_disabled"
+    ],
+    "violate": [
+      "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+      "co_re_relocation_untested_on_target_kernel",
+      "dv_362_control_absent",
+      "kernel_matrix_narrowed_without_amendment",
+      "unprivileged_bpf_load_path_enabled",
+      "verifier_bypass_pattern_present"
+    ]
+  },
+  "DV-363": {
+    "comply": [
+      "bpf_program_bounds_checked",
+      "bpf_program_passes_verifier_on_all_supported_kernels",
+      "bpf_program_profiled_for_run_time",
+      "co_re_relocations_validated_across_kernel_matrix",
+      "dv_363_control_evidenced",
+      "kernel_matrix_covers_declared_support_set",
+      "kernel_module_avoided_in_favour_of_bpf",
+      "panic_regression_suite_run_before_release",
+      "unprivileged_load_path_explicitly_disabled"
+    ],
+    "violate": [
+      "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+      "co_re_relocation_untested_on_target_kernel",
+      "dv_363_control_absent",
+      "kernel_matrix_narrowed_without_amendment",
+      "kernel_module_introduced_without_panic_regression",
+      "unprivileged_bpf_load_path_enabled"
+    ]
+  },
+  "DV-364": {
+    "comply": [
+      "bpf_program_bounds_checked",
+      "bpf_program_passes_verifier_on_all_supported_kernels",
+      "bpf_program_profiled_for_run_time",
+      "co_re_relocations_validated_across_kernel_matrix",
+      "dv_364_control_evidenced",
+      "kernel_matrix_covers_declared_support_set",
+      "kernel_module_avoided_in_favour_of_bpf",
+      "panic_regression_suite_run_before_release",
+      "unprivileged_load_path_explicitly_disabled"
+    ],
+    "violate": [
+      "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+      "co_re_relocation_untested_on_target_kernel",
+      "dv_364_control_absent",
+      "kernel_module_introduced_without_panic_regression",
+      "unprivileged_bpf_load_path_enabled",
+      "verifier_bypass_pattern_present"
+    ]
+  },
+  "DV-365": {
+    "comply": [
+      "agent_identity_attested_by_workload_identity",
+      "certificate_rotation_automated",
+      "client_certificate_presented_and_verified",
+      "credential_unique_per_node",
+      "dv_365_control_evidenced",
+      "mutual_tls_enforced_on_agent_channel",
+      "sequence_gap_detectable",
+      "telemetry_payload_signed",
+      "trust_established_without_permanent_tofu"
+    ],
+    "violate": [
+      "dv_365_control_absent",
+      "payload_origin_unauthenticated",
+      "payload_replay_possible",
+      "plaintext_transport_on_production_path",
+      "telemetry_payload_unsigned",
+      "unauthenticated_debug_endpoint_shipped"
+    ]
+  },
+  "DV-366": {
+    "comply": [
+      "agent_identity_attested_by_workload_identity",
+      "certificate_rotation_automated",
+      "client_certificate_presented_and_verified",
+      "credential_unique_per_node",
+      "dv_366_control_evidenced",
+      "mutual_tls_enforced_on_agent_channel",
+      "payload_replay_detectable",
+      "sequence_gap_detectable",
+      "telemetry_payload_signed"
+    ],
+    "violate": [
+      "client_certificate_not_presented",
+      "credential_shared_across_nodes",
+      "dv_366_control_absent",
+      "plaintext_transport_on_production_path",
+      "telemetry_payload_unsigned",
+      "unauthenticated_debug_endpoint_shipped"
+    ]
+  },
+  "DV-367": {
+    "comply": [
+      "agent_identity_attested_by_workload_identity",
+      "certificate_rotation_automated",
+      "credential_unique_per_node",
+      "dv_367_control_evidenced",
+      "mutual_tls_enforced_on_agent_channel",
+      "payload_replay_detectable",
+      "sequence_gap_detectable",
+      "telemetry_payload_signed",
+      "trust_established_without_permanent_tofu"
+    ],
+    "violate": [
+      "client_certificate_not_presented",
+      "credential_shared_across_nodes",
+      "dv_367_control_absent",
+      "payload_origin_unauthenticated",
+      "telemetry_payload_unsigned",
+      "trust_on_first_use_without_pinning"
+    ]
+  },
+  "DV-368": {
+    "comply": [
+      "agent_identity_attested_by_workload_identity",
+      "certificate_rotation_automated",
+      "client_certificate_presented_and_verified",
+      "credential_unique_per_node",
+      "dv_368_control_evidenced",
+      "mutual_tls_enforced_on_agent_channel",
+      "sequence_gap_detectable",
+      "telemetry_payload_signed",
+      "trust_established_without_permanent_tofu"
+    ],
+    "violate": [
+      "credential_shared_across_nodes",
+      "dv_368_control_absent",
+      "payload_origin_unauthenticated",
+      "payload_replay_possible",
+      "plaintext_transport_on_production_path",
+      "trust_on_first_use_without_pinning"
+    ]
+  },
+  "DV-369": {
+    "comply": [
+      "bpf_program_time_accounted_separately",
+      "cgroup_v2_accounting_used_for_measurement",
+      "cpu_budget_declared_with_denominator_and_window",
+      "dv_369_control_evidenced",
+      "measured_overhead_within_declared_budget",
+      "measurement_window_and_statistic_declared",
+      "memory_footprint_bounded_and_measured",
+      "no_cpu_throttling_observed_on_host",
+      "workload_and_configuration_declared_with_result"
+    ],
+    "violate": [
+      "bpf_program_time_charged_to_traced_process_only",
+      "cpu_throttling_observed_on_monitored_host",
+      "dv_369_control_absent",
+      "measured_overhead_exceeds_declared_budget",
+      "memory_footprint_unbounded_under_cardinality_growth",
+      "overhead_claim_without_denominator"
+    ]
+  },
+  "DV-370": {
+    "comply": [
+      "bpf_program_time_accounted_separately",
+      "cgroup_v2_accounting_used_for_measurement",
+      "cpu_budget_declared_with_denominator_and_window",
+      "dv_370_control_evidenced",
+      "measured_overhead_within_declared_budget",
+      "measurement_window_and_statistic_declared",
+      "memory_footprint_bounded_and_measured",
+      "no_cpu_throttling_observed_on_host",
+      "workload_and_configuration_declared_with_result"
+    ],
+    "violate": [
+      "bpf_program_time_charged_to_traced_process_only",
+      "cpu_throttling_observed_on_monitored_host",
+      "dv_370_control_absent",
+      "measurement_statistic_omitted",
+      "memory_footprint_unbounded_under_cardinality_growth",
+      "overhead_claim_without_denominator"
+    ]
+  },
+  "DV-371": {
+    "comply": [
+      "bpf_program_time_accounted_separately",
+      "cgroup_v2_accounting_used_for_measurement",
+      "cpu_budget_declared_with_denominator_and_window",
+      "dv_371_control_evidenced",
+      "measured_overhead_within_declared_budget",
+      "measurement_window_and_statistic_declared",
+      "memory_footprint_bounded_and_measured",
+      "no_cpu_throttling_observed_on_host",
+      "workload_and_configuration_declared_with_result"
+    ],
+    "violate": [
+      "bpf_program_time_charged_to_traced_process_only",
+      "dv_371_control_absent",
+      "measured_overhead_exceeds_declared_budget",
+      "measurement_statistic_omitted",
+      "memory_footprint_unbounded_under_cardinality_growth",
+      "overhead_claim_without_denominator"
+    ]
+  },
+  "DV-372": {
+    "comply": [
+      "bpf_program_time_accounted_separately",
+      "cgroup_v2_accounting_used_for_measurement",
+      "cpu_budget_declared_with_denominator_and_window",
+      "dv_372_control_evidenced",
+      "measured_overhead_within_declared_budget",
+      "measurement_window_and_statistic_declared",
+      "memory_footprint_bounded_and_measured",
+      "no_cpu_throttling_observed_on_host",
+      "workload_and_configuration_declared_with_result"
+    ],
+    "violate": [
+      "bpf_program_time_charged_to_traced_process_only",
+      "cpu_throttling_observed_on_monitored_host",
+      "dv_372_control_absent",
+      "measured_overhead_exceeds_declared_budget",
+      "memory_footprint_unbounded_under_cardinality_growth",
+      "overhead_claim_without_denominator"
+    ]
+  },
+  "DV-373": {
+    "comply": [
+      "bpf_program_time_accounted_separately",
+      "cgroup_v2_accounting_used_for_measurement",
+      "cpu_budget_declared_with_denominator_and_window",
+      "dv_373_control_evidenced",
+      "measured_overhead_within_declared_budget",
+      "measurement_window_and_statistic_declared",
+      "memory_footprint_bounded_and_measured",
+      "no_cpu_throttling_observed_on_host",
+      "workload_and_configuration_declared_with_result"
+    ],
+    "violate": [
+      "bpf_program_time_charged_to_traced_process_only",
+      "cpu_throttling_observed_on_monitored_host",
+      "dv_373_control_absent",
+      "measurement_statistic_omitted",
+      "memory_footprint_unbounded_under_cardinality_growth",
+      "overhead_claim_without_denominator"
+    ]
+  },
+  "DV-374": {
+    "comply": [
+      "alert_labelling_protocol_preregistered",
+      "dv_374_control_evidenced",
+      "false_positive_cost_weighting_declared_in_advance",
+      "per_entity_results_reported_not_only_aggregate",
+      "regression_evaluated_above_measured_noise_floor",
+      "root_cause_indicator_identified_not_only_service",
+      "shadow_vs_incumbent_disagreement_rate_recorded",
+      "threshold_free_metric_reported",
+      "top1_and_top3_localisation_reported"
+    ],
+    "violate": [
+      "aggregate_only_results_reported",
+      "alert_suppression_change_without_coverage_review",
+      "dv_374_control_absent",
+      "promotion_criteria_set_after_seeing_shadow_results",
+      "regression_claimed_below_measured_noise_floor",
+      "shadow_outputs_routed_to_paging"
+    ]
+  },
+  "DV-375": {
+    "comply": [
+      "alert_labelling_protocol_preregistered",
+      "benchmark_provenance_reviewed_for_known_flaws",
+      "dv_375_control_evidenced",
+      "false_positive_cost_weighting_declared_in_advance",
+      "paging_alerts_separated_from_ticketing_alerts_in_metrics",
+      "per_entity_results_reported_not_only_aggregate",
+      "root_cause_indicator_identified_not_only_service",
+      "top1_and_top3_localisation_reported",
+      "topology_snapshot_version_recorded_with_result"
+    ],
+    "violate": [
+      "aggregate_only_results_reported",
+      "dv_375_control_absent",
+      "model_promoted_to_live_scoring_without_shadow_evaluation",
+      "point_adjusted_f1_used_as_primary_metric",
+      "promotion_criteria_set_after_seeing_shadow_results",
+      "shadow_outputs_routed_to_paging"
+    ]
+  },
+  "DV-376": {
+    "comply": [
+      "alert_labelling_protocol_preregistered",
+      "benchmark_provenance_reviewed_for_known_flaws",
+      "dv_376_control_evidenced",
+      "false_positive_cost_weighting_declared_in_advance",
+      "model_run_in_shadow_before_live_scoring",
+      "paging_alerts_separated_from_ticketing_alerts_in_metrics",
+      "promotion_criteria_declared_before_shadow_started",
+      "shadow_outputs_not_routed_to_paging_or_remediation",
+      "topology_snapshot_version_recorded_with_result"
+    ],
+    "violate": [
+      "alert_suppression_change_without_coverage_review",
+      "dv_376_control_absent",
+      "model_promoted_to_live_scoring_without_shadow_evaluation",
+      "point_adjusted_f1_used_as_primary_metric",
+      "promotion_criteria_set_after_seeing_shadow_results",
+      "regression_claimed_below_measured_noise_floor"
+    ]
+  },
+  "DV-377": {
+    "comply": [
+      "benchmark_provenance_reviewed_for_known_flaws",
+      "dv_377_control_evidenced",
+      "model_run_in_shadow_before_live_scoring",
+      "promotion_criteria_declared_before_shadow_started",
+      "regression_evaluated_above_measured_noise_floor",
+      "shadow_outputs_not_routed_to_paging_or_remediation",
+      "shadow_vs_incumbent_disagreement_rate_recorded",
+      "threshold_free_metric_reported",
+      "topology_snapshot_version_recorded_with_result"
+    ],
+    "violate": [
+      "aggregate_only_results_reported",
+      "alert_suppression_change_without_coverage_review",
+      "dv_377_control_absent",
+      "point_adjusted_f1_used_as_primary_metric",
+      "regression_claimed_below_measured_noise_floor",
+      "shadow_outputs_routed_to_paging"
+    ]
+  },
+  "DV-378": {
+    "comply": [
+      "dv_378_control_evidenced",
+      "per_entity_results_reported_not_only_aggregate",
+      "promotion_criteria_declared_before_shadow_started",
+      "regression_evaluated_above_measured_noise_floor",
+      "root_cause_indicator_identified_not_only_service",
+      "shadow_outputs_not_routed_to_paging_or_remediation",
+      "shadow_vs_incumbent_disagreement_rate_recorded",
+      "threshold_free_metric_reported",
+      "top1_and_top3_localisation_reported"
+    ],
+    "violate": [
+      "aggregate_only_results_reported",
+      "dv_378_control_absent",
+      "model_promoted_to_live_scoring_without_shadow_evaluation",
+      "promotion_criteria_set_after_seeing_shadow_results",
+      "regression_claimed_below_measured_noise_floor",
+      "shadow_outputs_routed_to_paging"
+    ]
+  },
+  "DV-379": {
+    "comply": [
+      "alert_labelling_protocol_preregistered",
+      "dv_379_control_evidenced",
+      "false_positive_cost_weighting_declared_in_advance",
+      "paging_alerts_separated_from_ticketing_alerts_in_metrics",
+      "per_entity_results_reported_not_only_aggregate",
+      "regression_evaluated_above_measured_noise_floor",
+      "root_cause_indicator_identified_not_only_service",
+      "threshold_free_metric_reported",
+      "top1_and_top3_localisation_reported"
+    ],
+    "violate": [
+      "alert_suppression_change_without_coverage_review",
+      "dv_379_control_absent",
+      "model_promoted_to_live_scoring_without_shadow_evaluation",
+      "point_adjusted_f1_used_as_primary_metric",
+      "promotion_criteria_set_after_seeing_shadow_results",
+      "shadow_outputs_routed_to_paging"
+    ]
+  },
+  "DV-380": {
+    "comply": [
+      "alert_labelling_protocol_preregistered",
+      "benchmark_provenance_reviewed_for_known_flaws",
+      "dv_380_control_evidenced",
+      "false_positive_cost_weighting_declared_in_advance",
+      "model_run_in_shadow_before_live_scoring",
+      "paging_alerts_separated_from_ticketing_alerts_in_metrics",
+      "root_cause_indicator_identified_not_only_service",
+      "top1_and_top3_localisation_reported",
+      "topology_snapshot_version_recorded_with_result"
+    ],
+    "violate": [
+      "aggregate_only_results_reported",
+      "alert_suppression_change_without_coverage_review",
+      "dv_380_control_absent",
+      "model_promoted_to_live_scoring_without_shadow_evaluation",
+      "point_adjusted_f1_used_as_primary_metric",
+      "regression_claimed_below_measured_noise_floor"
+    ]
+  },
+  "DV-381": {
+    "comply": [
+      "benchmark_provenance_reviewed_for_known_flaws",
+      "dv_381_control_evidenced",
+      "false_positive_cost_weighting_declared_in_advance",
+      "model_run_in_shadow_before_live_scoring",
+      "paging_alerts_separated_from_ticketing_alerts_in_metrics",
+      "promotion_criteria_declared_before_shadow_started",
+      "shadow_outputs_not_routed_to_paging_or_remediation",
+      "shadow_vs_incumbent_disagreement_rate_recorded",
+      "topology_snapshot_version_recorded_with_result"
+    ],
+    "violate": [
+      "aggregate_only_results_reported",
+      "alert_suppression_change_without_coverage_review",
+      "dv_381_control_absent",
+      "promotion_criteria_set_after_seeing_shadow_results",
+      "regression_claimed_below_measured_noise_floor",
+      "shadow_outputs_routed_to_paging"
+    ]
+  },
+  "DV-382": {
+    "comply": [
+      "benchmark_provenance_reviewed_for_known_flaws",
+      "dv_382_control_evidenced",
+      "model_run_in_shadow_before_live_scoring",
+      "per_entity_results_reported_not_only_aggregate",
+      "promotion_criteria_declared_before_shadow_started",
+      "regression_evaluated_above_measured_noise_floor",
+      "shadow_outputs_not_routed_to_paging_or_remediation",
+      "shadow_vs_incumbent_disagreement_rate_recorded",
+      "threshold_free_metric_reported"
+    ],
+    "violate": [
+      "aggregate_only_results_reported",
+      "dv_382_control_absent",
+      "model_promoted_to_live_scoring_without_shadow_evaluation",
+      "point_adjusted_f1_used_as_primary_metric",
+      "promotion_criteria_set_after_seeing_shadow_results",
+      "shadow_outputs_routed_to_paging"
+    ]
+  },
+  "DV-383": {
+    "comply": [
+      "action_scope_bounded_to_single_tenant",
+      "action_target_uniquely_identified_before_execution",
+      "availability_budget_consulted_before_eviction",
+      "consecutive_error_limit_configured",
+      "customer_side_confirmation_required_per_action",
+      "dv_383_control_evidenced",
+      "halt_after_declared_action_threshold",
+      "kill_switch_present_and_tested",
+      "remediation_action_reversible"
+    ],
+    "violate": [
+      "action_irreversible_and_unreviewed",
+      "actuation_batch_mode_without_per_action_confirmation",
+      "actuation_without_customer_confirmation",
+      "dv_383_control_absent",
+      "no_consecutive_error_limit",
+      "no_halt_after_n_actions"
+    ]
+  },
+  "DV-384": {
+    "comply": [
+      "action_scope_bounded_to_single_tenant",
+      "action_target_uniquely_identified_before_execution",
+      "availability_budget_consulted_before_eviction",
+      "canary_or_staged_rollout_used",
+      "dv_384_control_evidenced",
+      "kill_switch_present_and_tested",
+      "post_remediation_residual_state_cleaned_up",
+      "remediation_action_reversible",
+      "steady_state_hypothesis_declared"
+    ],
+    "violate": [
+      "action_scope_unbounded_by_tenant",
+      "actuation_batch_mode_without_per_action_confirmation",
+      "dv_384_control_absent",
+      "no_consecutive_error_limit",
+      "no_halt_after_n_actions",
+      "remediation_can_target_the_monitoring_control_plane_itself"
+    ]
+  },
+  "DV-385": {
+    "comply": [
+      "canary_or_staged_rollout_used",
+      "customer_side_confirmation_required_per_action",
+      "dv_385_control_evidenced",
+      "halt_after_declared_action_threshold",
+      "kill_switch_present_and_tested",
+      "lockout_tagout_interaction_documented",
+      "post_remediation_residual_state_cleaned_up",
+      "remediation_action_reversible",
+      "steady_state_hypothesis_declared"
+    ],
+    "violate": [
+      "action_scope_unbounded_by_tenant",
+      "dv_385_control_absent",
+      "kill_switch_absent",
+      "no_consecutive_error_limit",
+      "physical_access_control_actuated_without_confirmation",
+      "remediation_can_target_the_monitoring_control_plane_itself"
+    ]
+  },
+  "DV-386": {
+    "comply": [
+      "action_target_uniquely_identified_before_execution",
+      "availability_budget_consulted_before_eviction",
+      "canary_or_staged_rollout_used",
+      "consecutive_error_limit_configured",
+      "customer_side_confirmation_required_per_action",
+      "dv_386_control_evidenced",
+      "halt_after_declared_action_threshold",
+      "lockout_tagout_interaction_documented",
+      "steady_state_hypothesis_declared"
+    ],
+    "violate": [
+      "action_irreversible_and_unreviewed",
+      "actuation_without_customer_confirmation",
+      "dv_386_control_absent",
+      "kill_switch_absent",
+      "physical_access_control_actuated_without_confirmation",
+      "remediation_can_target_the_monitoring_control_plane_itself"
+    ]
+  },
+  "DV-387": {
+    "comply": [
+      "action_scope_bounded_to_single_tenant",
+      "action_target_uniquely_identified_before_execution",
+      "availability_budget_consulted_before_eviction",
+      "consecutive_error_limit_configured",
+      "customer_side_confirmation_required_per_action",
+      "dv_387_control_evidenced",
+      "halt_after_declared_action_threshold",
+      "kill_switch_present_and_tested",
+      "remediation_action_reversible"
+    ],
+    "violate": [
+      "action_irreversible_and_unreviewed",
+      "actuation_batch_mode_without_per_action_confirmation",
+      "actuation_without_customer_confirmation",
+      "dv_387_control_absent",
+      "no_halt_after_n_actions",
+      "physical_access_control_actuated_without_confirmation"
+    ]
+  },
+  "DV-388": {
+    "comply": [
+      "action_scope_bounded_to_single_tenant",
+      "action_target_uniquely_identified_before_execution",
+      "availability_budget_consulted_before_eviction",
+      "canary_or_staged_rollout_used",
+      "dv_388_control_evidenced",
+      "kill_switch_present_and_tested",
+      "post_remediation_residual_state_cleaned_up",
+      "remediation_action_reversible",
+      "steady_state_hypothesis_declared"
+    ],
+    "violate": [
+      "action_scope_unbounded_by_tenant",
+      "actuation_batch_mode_without_per_action_confirmation",
+      "actuation_without_customer_confirmation",
+      "dv_388_control_absent",
+      "no_consecutive_error_limit",
+      "no_halt_after_n_actions"
+    ]
+  },
+  "DV-389": {
+    "comply": [
+      "deploy_outside_customer_blackout_window",
+      "dv_389_control_evidenced",
+      "emergency_protocol_invoked_and_recorded",
+      "escalation_format_change_reviewed",
+      "on_call_handover_notified_of_change",
+      "rate_limit_configured_on_alert_webhook",
+      "retry_backoff_includes_jitter",
+      "retry_budget_declared",
+      "sre_lead_domain_review_completed"
+    ],
+    "violate": [
+      "deploy_inside_customer_blackout_window",
+      "dv_389_control_absent",
+      "emergency_protocol_claimed_without_record",
+      "reconnect_storm_possible_on_server_restart",
+      "retry_backoff_lacks_jitter",
+      "webhook_amplification_factor_unbounded"
+    ]
+  },
+  "DV-390": {
+    "comply": [
+      "deploy_outside_customer_blackout_window",
+      "dv_390_control_evidenced",
+      "emergency_protocol_invoked_and_recorded",
+      "escalation_format_change_reviewed",
+      "on_call_handover_notified_of_change",
+      "rate_limit_configured_on_alert_webhook",
+      "retry_backoff_includes_jitter",
+      "retry_budget_declared",
+      "sre_lead_domain_review_completed"
+    ],
+    "violate": [
+      "alert_webhook_rate_limit_absent",
+      "deploy_inside_customer_blackout_window",
+      "dv_390_control_absent",
+      "emergency_protocol_claimed_without_record",
+      "sre_lead_review_pending_at_merge",
+      "webhook_amplification_factor_unbounded"
+    ]
+  },
+  "DV-391": {
+    "comply": [
+      "deploy_outside_customer_blackout_window",
+      "dv_391_control_evidenced",
+      "emergency_protocol_invoked_and_recorded",
+      "escalation_format_change_reviewed",
+      "on_call_handover_notified_of_change",
+      "rate_limit_configured_on_alert_webhook",
+      "retry_backoff_includes_jitter",
+      "retry_budget_declared",
+      "sre_lead_domain_review_completed"
+    ],
+    "violate": [
+      "alert_webhook_rate_limit_absent",
+      "dv_391_control_absent",
+      "emergency_protocol_claimed_without_record",
+      "reconnect_storm_possible_on_server_restart",
+      "retry_backoff_lacks_jitter",
+      "sre_lead_review_pending_at_merge"
+    ]
+  },
+  "DV-392": {
+    "comply": [
+      "deploy_outside_customer_blackout_window",
+      "dv_392_control_evidenced",
+      "emergency_protocol_invoked_and_recorded",
+      "escalation_format_change_reviewed",
+      "on_call_handover_notified_of_change",
+      "rate_limit_configured_on_alert_webhook",
+      "retry_backoff_includes_jitter",
+      "retry_budget_declared",
+      "sre_lead_domain_review_completed"
+    ],
+    "violate": [
+      "alert_webhook_rate_limit_absent",
+      "deploy_inside_customer_blackout_window",
+      "dv_392_control_absent",
+      "reconnect_storm_possible_on_server_restart",
+      "retry_backoff_lacks_jitter",
+      "webhook_amplification_factor_unbounded"
+    ]
+  },
+  "DV-393": {
+    "comply": [
+      "deploy_outside_customer_blackout_window",
+      "dv_393_control_evidenced",
+      "emergency_protocol_invoked_and_recorded",
+      "escalation_format_change_reviewed",
+      "on_call_handover_notified_of_change",
+      "rate_limit_configured_on_alert_webhook",
+      "retry_backoff_includes_jitter",
+      "retry_budget_declared",
+      "sre_lead_domain_review_completed"
+    ],
+    "violate": [
+      "deploy_inside_customer_blackout_window",
+      "dv_393_control_absent",
+      "emergency_protocol_claimed_without_record",
+      "reconnect_storm_possible_on_server_restart",
+      "sre_lead_review_pending_at_merge",
+      "webhook_amplification_factor_unbounded"
+    ]
+  },
+  "DV-394": {
+    "comply": [
+      "alerting_rule_change_behind_feature_flag",
+      "backup_restore_run_verified_in_staging",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "dv_394_control_evidenced",
+      "p95_latency_regression_within_budget",
+      "promtool_rule_unit_test_added_for_new_alert",
+      "reversible_down_migration_present",
+      "rollback_path_verified"
+    ],
+    "violate": [
+      "alerting_rule_change_without_feature_flag",
+      "changed_line_coverage_below_floor",
+      "dv_394_control_absent",
+      "irreversible_migration_without_backup_proof",
+      "no_rule_unit_test_for_new_alert",
+      "rollback_path_absent"
+    ]
+  },
+  "DV-395": {
+    "comply": [
+      "alerting_rule_change_behind_feature_flag",
+      "backup_restore_run_verified_in_staging",
+      "change_scoped_to_declared_service",
+      "changed_line_coverage_at_or_above_floor",
+      "dv_395_control_evidenced",
+      "p95_latency_regression_within_budget",
+      "promtool_rule_unit_test_added_for_new_alert",
+      "reversible_down_migration_present",
+      "rollback_path_verified"
+    ],
+    "violate": [
+      "alerting_rule_change_without_feature_flag",
+      "changed_line_coverage_below_floor",
+      "dv_395_control_absent",
+      "irreversible_migration_without_backup_proof",
+      "no_rule_unit_test_for_new_alert",
+      "p95_latency_regression_above_budget"
+    ]
+  },
+  "DV-396": {
+    "comply": [
+      "audit_log_append_only",
+      "audit_log_retention_meets_contracted_term",
+      "audit_log_tamper_alerting_enabled",
+      "audit_record_backed_up_to_separate_component",
+      "dv_396_control_evidenced",
+      "evidence_export_reproducible_by_auditor",
+      "nis2_early_warning_path_meets_transposed_deadline",
+      "processor_notification_to_controller_without_undue_delay",
+      "supervisory_notification_path_unmodified"
+    ],
+    "violate": [
+      "audit_log_mutation_path_added",
+      "audit_log_retention_shortened",
+      "audit_log_tamper_alerting_disabled",
+      "dv_396_control_absent",
+      "notification_batching_moves_deadline",
+      "supervisory_notification_path_delayed_or_removed"
+    ]
+  },
+  "DV-397": {
+    "comply": [
+      "audit_log_append_only",
+      "audit_log_tamper_alerting_enabled",
+      "audit_record_backed_up_to_separate_component",
+      "clock_source_trusted_and_monotonic",
+      "dv_397_control_evidenced",
+      "evidence_export_reproducible_by_auditor",
+      "nis2_early_warning_path_meets_transposed_deadline",
+      "processor_notification_to_controller_without_undue_delay",
+      "supervisory_notification_path_unmodified"
+    ],
+    "violate": [
+      "audit_log_retention_shortened",
+      "audit_log_tamper_alerting_disabled",
+      "dv_397_control_absent",
+      "evidence_export_not_reproducible",
+      "notification_batching_moves_deadline",
+      "supervisory_notification_path_delayed_or_removed"
+    ]
+  },
+  "DV-398": {
+    "comply": [
+      "audit_log_append_only",
+      "audit_log_retention_meets_contracted_term",
+      "audit_log_tamper_alerting_enabled",
+      "audit_record_backed_up_to_separate_component",
+      "clock_source_trusted_and_monotonic",
+      "dv_398_control_evidenced",
+      "evidence_export_reproducible_by_auditor",
+      "nis2_early_warning_path_meets_transposed_deadline",
+      "supervisory_notification_path_unmodified"
+    ],
+    "violate": [
+      "audit_log_mutation_path_added",
+      "audit_log_retention_shortened",
+      "audit_log_tamper_alerting_disabled",
+      "dv_398_control_absent",
+      "evidence_export_not_reproducible",
+      "notification_batching_moves_deadline"
+    ]
+  },
+  "DV-399": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dv_399_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "dv_399_control_absent",
+      "eu_badge_logs_cached_outside_region",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "external_analytics_added_without_dpia",
+      "raw_query_text_ingested_without_masking",
+      "redaction_processor_bypassed_on_new_path"
+    ]
+  },
+  "DV-400": {
+    "comply": [
+      "badge_and_access_logs_remain_in_region",
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_400_control_evidenced",
+      "eu_customer_telemetry_remains_in_region",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_400_control_absent",
+      "external_analytics_added_without_dpia",
+      "notification_template_bypasses_consent_check",
+      "raw_query_text_ingested_without_masking",
+      "redaction_processor_bypassed_on_new_path"
+    ]
+  },
+  "DV-401": {
+    "comply": [
+      "benchmark_service_anonymisation_verified",
+      "cross_tenant_correlation_isolation_verified",
+      "cross_tenant_join_blocked_by_schema_constraint",
+      "dv_401_control_evidenced",
+      "shared_model_training_uses_anonymised_benchmark_only",
+      "support_tooling_scoped_to_single_tenant",
+      "tenant_attribution_derived_from_server_side_identity",
+      "tenant_scope_enforced_at_query_layer"
+    ],
+    "violate": [
+      "benchmark_anonymisation_bypassed",
+      "cross_tenant_pooled_model_training",
+      "cross_tenant_read_enabled",
+      "dv_401_control_absent",
+      "support_tool_granted_cross_tenant_access",
+      "tenant_attribution_derived_from_client_supplied_field"
+    ]
+  },
+  "DV-402": {
+    "comply": [
+      "benchmark_service_anonymisation_verified",
+      "cross_tenant_correlation_isolation_verified",
+      "cross_tenant_join_blocked_by_schema_constraint",
+      "dv_402_control_evidenced",
+      "shared_model_training_uses_anonymised_benchmark_only",
+      "support_tooling_scoped_to_single_tenant",
+      "tenant_attribution_derived_from_server_side_identity",
+      "tenant_scope_enforced_at_query_layer"
+    ],
+    "violate": [
+      "benchmark_anonymisation_bypassed",
+      "cross_tenant_pooled_model_training",
+      "cross_tenant_read_enabled",
+      "dv_402_control_absent",
+      "support_tool_granted_cross_tenant_access",
+      "tenant_attribution_derived_from_client_supplied_field"
+    ]
+  },
+  "DV-403": {
+    "comply": [
+      "binary_and_container_image_signed",
+      "build_hermetic_and_reproducible",
+      "dependency_licence_on_approved_list",
+      "dv_403_control_evidenced",
+      "provenance_attestation_present_on_agent_build",
+      "sbom_generated_for_instrumentation_libraries",
+      "secret_scanner_clean_on_diff",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "build_not_reproducible_across_runners",
+      "dependency_carries_high_or_critical_cve",
+      "dv_403_control_absent",
+      "secret_present_in_source_or_ci_log",
+      "unsigned_binary_shipped_to_customer_infrastructure",
+      "vendor_security_review_pending_on_customer_data_path"
+    ]
+  },
+  "DV-404": {
+    "comply": [
+      "binary_and_container_image_signed",
+      "build_hermetic_and_reproducible",
+      "dependency_licence_on_approved_list",
+      "dv_404_control_evidenced",
+      "provenance_attestation_present_on_agent_build",
+      "sbom_generated_for_instrumentation_libraries",
+      "sca_scan_clean_for_high_and_critical",
+      "transitive_dependency_graph_pinned",
+      "vendor_security_review_completed"
+    ],
+    "violate": [
+      "agpl_dependency_in_customer_deployed_collector",
+      "build_not_reproducible_across_runners",
+      "dependency_carries_high_or_critical_cve",
+      "dv_404_control_absent",
+      "provenance_attestation_absent_on_agent_build",
+      "secret_present_in_source_or_ci_log"
+    ]
+  },
+  "DV-405": {
+    "comply": [
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "dv_405_control_evidenced",
+      "human_reviewer_signoff_on_authorization_code",
+      "imported_package_verified_against_registry",
+      "link_to_originating_human_requirement_present",
+      "monitoring_integration_endpoint_verified_to_exist",
+      "multiparty_review_on_kernel_level_component"
+    ],
+    "violate": [
+      "agent_change_alters_kernel_level_component_without_multiparty_review",
+      "agent_change_alters_security_policy_or_rbac",
+      "agent_change_lacks_human_signoff_on_tenant_access_code",
+      "agent_change_missing_provenance_attestation",
+      "dv_405_control_absent",
+      "imported_package_absent_from_registry"
+    ]
+  },
+  "DV-406": {
+    "comply": [
+      "agent_change_carries_provenance_attestation",
+      "agent_change_isolated_for_independent_review",
+      "agent_identity_and_model_version_recorded",
+      "dv_406_control_evidenced",
+      "human_reviewer_signoff_on_authorization_code",
+      "imported_package_verified_against_registry",
+      "link_to_originating_human_requirement_present",
+      "monitoring_integration_endpoint_verified_to_exist",
+      "multiparty_review_on_kernel_level_component"
+    ],
+    "violate": [
+      "agent_change_alters_kernel_level_component_without_multiparty_review",
+      "agent_change_alters_security_policy_or_rbac",
+      "agent_change_missing_provenance_attestation",
+      "dv_406_control_absent",
+      "hallucinated_monitoring_integration_referenced",
+      "imported_package_absent_from_registry"
+    ]
+  },
+  "DV-407": {
+    "comply": [
+      "audit_log_append_only",
+      "audit_log_retention_meets_contracted_term",
+      "audit_log_tamper_alerting_enabled",
+      "audit_record_backed_up_to_separate_component",
+      "dv_407_control_evidenced",
+      "evidence_export_reproducible_by_auditor",
+      "nis2_early_warning_path_meets_transposed_deadline",
+      "processor_notification_to_controller_without_undue_delay",
+      "supervisory_notification_path_unmodified"
+    ],
+    "violate": [
+      "audit_log_mutation_path_added",
+      "audit_log_retention_shortened",
+      "audit_log_tamper_alerting_disabled",
+      "dv_407_control_absent",
+      "notification_batching_moves_deadline",
+      "supervisory_notification_path_delayed_or_removed"
+    ]
+  },
+  "DV-408": {
+    "comply": [
+      "consent_check_passed_on_notification_template",
+      "dpia_completed_before_new_external_analytics",
+      "dv_408_control_evidenced",
+      "payment_and_credential_patterns_stripped_at_collector",
+      "redaction_counters_recorded_as_evidence",
+      "redaction_processor_applied_before_egress",
+      "special_category_gate_documented",
+      "sub_processor_region_declared",
+      "transfer_mechanism_recorded_for_cross_border_flow"
+    ],
+    "violate": [
+      "biometric_template_enrolled_without_written_release",
+      "dv_408_control_absent",
+      "eu_telemetry_replicated_to_non_eu_region",
+      "external_analytics_added_without_dpia",
+      "notification_template_bypasses_consent_check",
+      "special_category_data_enters_new_path_without_gate"
+    ]
+  },
+  "DV-409": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "dv_409_control_evidenced",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "dv_409_control_absent",
+      "gate_threshold_edited_in_place_by_release_bot",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "DV-410": {
+    "comply": [
+      "canary_or_staged_rollout_used",
+      "customer_side_confirmation_required_per_action",
+      "dv_410_control_evidenced",
+      "halt_after_declared_action_threshold",
+      "kill_switch_present_and_tested",
+      "lockout_tagout_interaction_documented",
+      "post_remediation_residual_state_cleaned_up",
+      "remediation_action_reversible",
+      "steady_state_hypothesis_declared"
+    ],
+    "violate": [
+      "action_scope_unbounded_by_tenant",
+      "dv_410_control_absent",
+      "kill_switch_absent",
+      "no_consecutive_error_limit",
+      "no_halt_after_n_actions",
+      "remediation_can_target_the_monitoring_control_plane_itself"
+    ]
+  },
+  "DV-411": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "dv_411_control_evidenced",
+      "gate_config_change_routed_to_amendment",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "automated_decision_final_with_no_human_route",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "dv_411_control_absent",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "DV-412": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "dv_412_control_evidenced",
+      "gate_config_change_routed_to_amendment",
+      "human_intervention_reachable_for_automated_decision",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "audit_finding_read_during_retrieval",
+      "automated_decision_final_with_no_human_route",
+      "dv_412_control_absent",
+      "gate_threshold_edited_in_place_by_release_bot",
+      "reporter_bulletin_injected_into_adjudicator_context"
+    ]
+  },
+  "DV-413": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "contest_path_available_to_affected_party",
+      "dv_413_control_evidenced",
+      "gate_config_change_routed_to_amendment",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "automated_decision_final_with_no_human_route",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "dv_413_control_absent",
+      "gate_threshold_edited_in_place_by_release_bot",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "DV-414": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "dv_414_control_evidenced",
+      "gate_config_change_routed_to_amendment",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "audit_finding_read_during_retrieval",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "dv_414_control_absent",
+      "gate_threshold_edited_in_place_by_release_bot",
+      "reporter_bulletin_injected_into_adjudicator_context",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "DV-415": {
+    "comply": [
+      "audit_register_disjoint_from_precedent_store",
+      "constitutional_parameter_changed_only_by_legislation",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "dv_415_control_evidenced",
+      "gate_config_change_routed_to_amendment",
+      "human_intervention_reachable_for_automated_decision",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "audit_finding_read_during_retrieval",
+      "automated_decision_final_with_no_human_route",
+      "charging_threshold_tuned_by_adjudicating_service",
+      "dv_415_control_absent",
+      "reporter_bulletin_injected_into_adjudicator_context"
+    ]
+  },
+  "DV-416": {
+    "comply": [
+      "adverse_contest_rate_published_as_two_counts",
+      "contest_path_available_to_affected_party",
+      "docket_entry_written_for_every_uncharged_arrival",
+      "dv_416_control_evidenced",
+      "gate_config_change_routed_to_amendment",
+      "human_intervention_reachable_for_automated_decision",
+      "referral_acknowledged_with_recorded_disposition",
+      "reporter_output_kept_off_adjudication_input_path",
+      "standing_declaration_present_and_attributed"
+    ],
+    "violate": [
+      "appeal_path_removed_by_configuration",
+      "audit_finding_read_during_retrieval",
+      "automated_decision_final_with_no_human_route",
+      "dv_416_control_absent",
+      "gate_threshold_edited_in_place_by_release_bot",
+      "standing_declaration_absent_from_export"
+    ]
+  },
+  "DV-417": {
+    "comply": [
+      "conflicting_disclosure_duty_escalated_before_build",
+      "customer_notice_sent_unless_notice_is_prohibited",
+      "disclosure_scope_narrowed_to_the_order_terms",
+      "dv_417_control_evidenced",
+      "foreign_order_routed_through_the_treaty_channel",
+      "hold_release_requires_named_legal_approver",
+      "hold_scope_resolved_before_retention_job_runs",
+      "legal_hold_flag_blocks_every_deletion_path",
+      "legal_process_reviewed_by_counsel_before_disclosure"
+    ],
+    "violate": [
+      "customer_content_disclosed_without_legal_review",
+      "customer_notice_suppressed_where_notice_is_permitted",
+      "dv_417_control_absent",
+      "foreign_order_answered_directly_from_the_export_tool",
+      "legal_hold_flag_ignored_by_the_new_purge_path",
+      "retention_job_deletes_records_under_an_open_hold"
+    ]
+  },
+  "DV-418": {
+    "comply": [
+      "blocking_statute_conflict_recorded_in_design_record",
+      "conflicting_disclosure_duty_escalated_before_build",
+      "customer_notice_sent_unless_notice_is_prohibited",
+      "disclosure_register_append_only_and_exportable",
+      "disclosure_register_entry_written_per_request",
+      "disclosure_scope_narrowed_to_the_order_terms",
+      "dv_418_control_evidenced",
+      "foreign_order_routed_through_the_treaty_channel",
+      "legal_process_reviewed_by_counsel_before_disclosure"
+    ],
+    "violate": [
+      "conflicting_disclosure_duty_left_unresolved_at_design",
+      "customer_content_disclosed_without_legal_review",
+      "customer_notice_suppressed_where_notice_is_permitted",
+      "disclosure_register_entry_omitted_for_urgent_requests",
+      "dv_418_control_absent",
+      "foreign_order_answered_directly_from_the_export_tool"
+    ]
+  },
+  "DV-419": {
+    "comply": [
+      "blocking_statute_conflict_recorded_in_design_record",
+      "conflicting_disclosure_duty_escalated_before_build",
+      "disclosure_register_append_only_and_exportable",
+      "disclosure_register_entry_written_per_request",
+      "dv_419_control_evidenced",
+      "foreign_order_routed_through_the_treaty_channel",
+      "hold_notice_acknowledged_by_the_named_custodian",
+      "preservation_copy_stored_outside_the_expiring_tier",
+      "published_request_counts_derived_from_the_register"
+    ],
+    "violate": [
+      "conflicting_disclosure_duty_left_unresolved_at_design",
+      "disclosure_register_entry_omitted_for_urgent_requests",
+      "disclosure_register_made_editable_by_support_role",
+      "dv_419_control_absent",
+      "foreign_order_answered_directly_from_the_export_tool",
+      "hold_release_automated_without_legal_approval"
+    ]
+  },
+  "DV-420": {
+    "comply": [
+      "disclosure_register_append_only_and_exportable",
+      "disclosure_register_entry_written_per_request",
+      "dv_420_control_evidenced",
+      "emergency_disclosure_reviewed_after_the_fact",
+      "hold_covers_derived_and_aggregated_stores",
+      "hold_notice_acknowledged_by_the_named_custodian",
+      "preservation_copy_stored_outside_the_expiring_tier",
+      "published_request_counts_derived_from_the_register",
+      "requester_identity_and_legal_basis_recorded"
+    ],
+    "violate": [
+      "disclosure_register_entry_omitted_for_urgent_requests",
+      "disclosure_register_made_editable_by_support_role",
+      "dv_420_control_absent",
+      "hold_release_automated_without_legal_approval",
+      "preservation_copy_stored_in_the_expiring_tier",
+      "requester_identity_not_recorded_on_the_request"
+    ]
+  },
+  "DV-421": {
+    "comply": [
+      "dv_421_control_evidenced",
+      "fuel_level_series_sourced_from_the_tank_sensor",
+      "generator_run_record_written_from_the_controller_reading",
+      "life_safety_interlock_integration_is_read_only",
+      "load_bank_test_result_stored_with_its_raw_trace",
+      "physical_incident_classified_against_published_criteria",
+      "physical_incident_report_path_kept_reachable",
+      "suppression_and_epo_circuits_excluded_from_action_planner",
+      "ups_transfer_command_absent_from_the_action_catalogue"
+    ],
+    "violate": [
+      "dv_421_control_absent",
+      "emergency_power_off_wired_into_automated_recovery",
+      "fuel_level_series_synthesised_when_the_sensor_is_silent",
+      "generator_test_result_back_filled_from_the_schedule",
+      "physical_incident_report_path_removed_from_the_runbook",
+      "suppression_release_reachable_from_the_action_planner"
+    ]
+  },
+  "DV-422": {
+    "comply": [
+      "alarm_relay_path_verified_after_every_release",
+      "dv_422_control_evidenced",
+      "fire_panel_integration_is_monitoring_only",
+      "fuel_level_series_sourced_from_the_tank_sensor",
+      "generator_run_record_written_from_the_controller_reading",
+      "load_bank_test_result_stored_with_its_raw_trace",
+      "physical_incident_classified_against_published_criteria",
+      "physical_incident_report_path_kept_reachable",
+      "resilience_measure_evidence_versioned_in_the_repo"
+    ],
+    "violate": [
+      "dv_422_control_absent",
+      "fire_panel_integration_given_a_write_endpoint",
+      "fuel_level_series_synthesised_when_the_sensor_is_silent",
+      "generator_test_result_back_filled_from_the_schedule",
+      "physical_incident_report_path_removed_from_the_runbook",
+      "resilience_evidence_kept_only_in_a_personal_export"
+    ]
+  },
+  "DV-423": {
+    "comply": [
+      "alarm_relay_path_verified_after_every_release",
+      "dv_423_control_evidenced",
+      "emergency_power_test_cadence_encoded_in_the_scheduler",
+      "fire_panel_integration_is_monitoring_only",
+      "life_safety_alarm_never_deduplicated_away",
+      "physical_incident_classified_against_published_criteria",
+      "physical_incident_report_path_kept_reachable",
+      "resilience_measure_evidence_versioned_in_the_repo",
+      "site_walkdown_evidence_linked_to_the_asset_record"
+    ],
+    "violate": [
+      "dv_423_control_absent",
+      "fire_panel_integration_given_a_write_endpoint",
+      "life_safety_alarm_folded_into_the_deduplication_window",
+      "physical_incident_report_path_removed_from_the_runbook",
+      "resilience_evidence_kept_only_in_a_personal_export",
+      "ups_transfer_added_to_the_automated_recovery_plan"
+    ]
+  },
+  "DV-424": {
+    "comply": [
+      "dv_424_control_evidenced",
+      "efficiency_metric_boundary_and_denominator_declared",
+      "esg_metric_lineage_versioned_alongside_the_pipeline",
+      "metric_method_change_restates_the_published_series",
+      "reported_energy_figure_derived_from_metered_series",
+      "statutory_submission_job_runs_on_the_published_cadence",
+      "submission_payload_hashed_and_retained_with_the_filing",
+      "sustainability_datapoint_traceable_to_its_source_system",
+      "waste_heat_recovery_data_recorded_per_site"
+    ],
+    "violate": [
+      "dv_424_control_absent",
+      "efficiency_denominator_changed_without_restating_series",
+      "reported_energy_figure_overridden_by_a_manual_constant",
+      "statutory_energy_submission_disabled_for_a_named_site",
+      "sustainability_datapoint_sourced_from_an_untracked_sheet",
+      "waste_heat_data_dropped_from_the_site_export"
+    ]
+  },
+  "DV-425": {
+    "comply": [
+      "dv_425_control_evidenced",
+      "efficiency_metric_boundary_and_denominator_declared",
+      "esg_metric_lineage_versioned_alongside_the_pipeline",
+      "estimated_values_labelled_as_estimates_in_the_export",
+      "metric_method_change_restates_the_published_series",
+      "renewable_share_evidenced_by_supplier_records",
+      "sustainability_datapoint_traceable_to_its_source_system",
+      "waste_heat_recovery_data_recorded_per_site",
+      "water_usage_series_sourced_from_the_site_meter"
+    ],
+    "violate": [
+      "dv_425_control_absent",
+      "efficiency_denominator_changed_without_restating_series",
+      "estimated_value_published_without_an_estimate_label",
+      "missing_meter_interval_interpolated_into_the_filing",
+      "sustainability_datapoint_sourced_from_an_untracked_sheet",
+      "waste_heat_data_dropped_from_the_site_export"
+    ]
+  },
+  "DV-426": {
+    "comply": [
+      "assurance_export_reproducible_from_the_raw_series",
+      "dv_426_control_evidenced",
+      "esg_metric_lineage_versioned_alongside_the_pipeline",
+      "estimated_values_labelled_as_estimates_in_the_export",
+      "missing_interval_reported_as_a_gap_not_interpolated",
+      "renewable_share_evidenced_by_supplier_records",
+      "reporting_boundary_change_recorded_with_effective_date",
+      "sustainability_datapoint_traceable_to_its_source_system",
+      "water_usage_series_sourced_from_the_site_meter"
+    ],
+    "violate": [
+      "dv_426_control_absent",
+      "estimated_value_published_without_an_estimate_label",
+      "missing_meter_interval_interpolated_into_the_filing",
+      "reporting_boundary_narrowed_without_an_effective_date",
+      "sustainability_datapoint_sourced_from_an_untracked_sheet",
+      "water_usage_series_replaced_by_a_design_figure"
+    ]
+  },
+  "DV-427": {
+    "comply": [
+      "backup_expiry_aligned_with_the_deletion_commitment",
+      "customer_managed_key_reference_resolved_per_request",
+      "deletion_certificate_issued_after_the_final_purge",
+      "dv_427_control_evidenced",
+      "key_revocation_renders_only_that_tenant_unreadable",
+      "objection_window_honoured_before_traffic_cuts_over",
+      "offboarding_export_produced_within_contracted_window",
+      "sub_processor_notice_sent_before_processing_starts",
+      "tenant_key_material_held_in_a_per_tenant_key_ring"
+    ],
+    "violate": [
+      "customer_managed_key_replaced_by_a_platform_default",
+      "deleted_tenant_data_left_in_the_derived_feature_store",
+      "dv_427_control_absent",
+      "offboarding_export_deferred_past_contracted_window",
+      "sub_processor_added_before_any_customer_notice",
+      "tenant_keys_pooled_into_one_platform_key_ring"
+    ]
+  },
+  "DV-428": {
+    "comply": [
+      "backup_expiry_aligned_with_the_deletion_commitment",
+      "deletion_certificate_issued_after_the_final_purge",
+      "dv_428_control_evidenced",
+      "objection_window_honoured_before_traffic_cuts_over",
+      "offboarding_export_produced_within_contracted_window",
+      "per_tenant_evidence_export_available_to_the_customer",
+      "regulated_regime_flag_carried_through_every_pipeline",
+      "sub_processor_notice_sent_before_processing_starts",
+      "sub_processor_register_updated_with_region_and_purpose"
+    ],
+    "violate": [
+      "deleted_tenant_data_left_in_the_derived_feature_store",
+      "dv_428_control_absent",
+      "objection_window_skipped_for_an_urgent_cutover",
+      "offboarding_export_deferred_past_contracted_window",
+      "per_tenant_evidence_export_removed_from_the_portal",
+      "sub_processor_added_before_any_customer_notice"
+    ]
+  },
+  "DV-429": {
+    "comply": [
+      "audit_right_request_tracked_with_a_named_owner",
+      "dv_429_control_evidenced",
+      "key_ring_separation_verified_by_a_restore_drill",
+      "objection_window_honoured_before_traffic_cuts_over",
+      "per_tenant_evidence_export_available_to_the_customer",
+      "regulated_regime_flag_carried_through_every_pipeline",
+      "residual_derived_data_enumerated_before_deletion",
+      "sub_processor_notice_sent_before_processing_starts",
+      "sub_processor_register_updated_with_region_and_purpose"
+    ],
+    "violate": [
+      "backup_retention_outlives_the_deletion_commitment",
+      "dv_429_control_absent",
+      "objection_window_skipped_for_an_urgent_cutover",
+      "per_tenant_evidence_export_removed_from_the_portal",
+      "regulated_regime_flag_dropped_by_the_new_writer",
+      "sub_processor_added_before_any_customer_notice"
+    ]
+  },
+  "DV-430": {
+    "comply": [
+      "audit_right_request_tracked_with_a_named_owner",
+      "dv_430_control_evidenced",
+      "exit_export_format_documented_in_the_agreement",
+      "key_ring_separation_verified_by_a_restore_drill",
+      "per_tenant_evidence_export_available_to_the_customer",
+      "processing_register_updated_with_the_change",
+      "regulated_regime_flag_carried_through_every_pipeline",
+      "residual_derived_data_enumerated_before_deletion",
+      "tenant_retention_term_read_from_the_contract_record"
+    ],
+    "violate": [
+      "backup_retention_outlives_the_deletion_commitment",
+      "dv_430_control_absent",
+      "per_tenant_evidence_export_removed_from_the_portal",
+      "regulated_regime_flag_dropped_by_the_new_writer",
+      "sub_processor_register_left_unchanged_after_the_move",
+      "tenant_retention_term_hardcoded_across_all_customers"
+    ]
+  },
+  "DV-431": {
+    "comply": [
+      "authenticated_snmp_v3_used_on_new_device_paths",
+      "building_management_traffic_confined_to_its_zone",
+      "conduit_allow_list_enumerates_every_permitted_flow",
+      "device_credentials_unique_per_controller",
+      "dv_431_control_evidenced",
+      "firmware_version_and_hash_recorded_per_device",
+      "gateway_firmware_signature_verified_before_flash",
+      "ipmi_endpoints_reachable_only_from_management_zone",
+      "plaintext_device_protocol_wrapped_in_a_tunnel"
+    ],
+    "violate": [
+      "building_management_network_bridged_to_corporate_zone",
+      "conduit_allow_list_replaced_by_a_flat_route",
+      "dv_431_control_absent",
+      "gateway_firmware_flashed_without_signature_check",
+      "ipmi_credentials_shared_across_the_rack_fleet",
+      "snmp_v2c_community_string_used_on_a_new_device_path"
+    ]
+  },
+  "DV-432": {
+    "comply": [
+      "authenticated_snmp_v3_used_on_new_device_paths",
+      "bacnet_write_service_disabled_on_the_collector",
+      "device_credentials_unique_per_controller",
+      "dv_432_control_evidenced",
+      "firmware_rollback_image_retained_for_the_window",
+      "firmware_version_and_hash_recorded_per_device",
+      "gateway_firmware_signature_verified_before_flash",
+      "modbus_write_registers_blocked_on_the_poller_role",
+      "plaintext_device_protocol_wrapped_in_a_tunnel"
+    ],
+    "violate": [
+      "bacnet_write_service_enabled_on_the_polling_service",
+      "dv_432_control_absent",
+      "firmware_version_left_unrecorded_after_the_flash",
+      "gateway_firmware_flashed_without_signature_check",
+      "ipmi_credentials_shared_across_the_rack_fleet",
+      "snmp_v2c_community_string_used_on_a_new_device_path"
+    ]
+  },
+  "DV-433": {
+    "comply": [
+      "bacnet_write_service_disabled_on_the_collector",
+      "device_discovery_confined_to_the_declared_subnets",
+      "dv_433_control_evidenced",
+      "firmware_rollback_image_retained_for_the_window",
+      "firmware_version_and_hash_recorded_per_device",
+      "gateway_firmware_signature_verified_before_flash",
+      "modbus_write_registers_blocked_on_the_poller_role",
+      "vendor_maintenance_path_time_boxed_and_recorded",
+      "zone_boundary_change_reviewed_before_merge"
+    ],
+    "violate": [
+      "bacnet_write_service_enabled_on_the_polling_service",
+      "device_discovery_widened_to_the_whole_site_range",
+      "dv_433_control_absent",
+      "firmware_version_left_unrecorded_after_the_flash",
+      "gateway_firmware_flashed_without_signature_check",
+      "modbus_writes_opened_to_the_shared_collector_role"
+    ]
+  },
+  "DV-434": {
+    "comply": [
+      "disclosure_intake_address_published_and_monitored",
+      "dv_434_control_evidenced",
+      "exploitability_statement_issued_for_each_finding",
+      "exploited_vulnerability_report_path_wired_to_intake",
+      "reporting_owner_named_in_the_release_record",
+      "researcher_report_acknowledged_within_the_window",
+      "sbom_published_with_every_customer_facing_release",
+      "sbom_regenerated_when_a_dependency_changes",
+      "severe_incident_clock_started_at_first_awareness"
+    ],
+    "violate": [
+      "disclosure_intake_address_removed_from_the_site",
+      "dv_434_control_absent",
+      "exploitability_statement_omitted_for_known_finding",
+      "exploited_vulnerability_report_left_without_an_owner",
+      "sbom_generation_dropped_from_the_release_pipeline",
+      "severe_incident_clock_started_at_triage_not_awareness"
+    ]
+  },
+  "DV-435": {
+    "comply": [
+      "developer_security_testing_evidence_on_the_release",
+      "disclosure_intake_address_published_and_monitored",
+      "dv_435_control_evidenced",
+      "exploited_vulnerability_report_path_wired_to_intake",
+      "fix_or_mitigation_shipped_within_severity_deadline",
+      "penetration_test_scheduled_for_each_customer_surface",
+      "reporting_owner_named_in_the_release_record",
+      "researcher_report_acknowledged_within_the_window",
+      "severe_incident_clock_started_at_first_awareness"
+    ],
+    "violate": [
+      "disclosure_intake_address_removed_from_the_site",
+      "dv_435_control_absent",
+      "exploited_vulnerability_report_left_without_an_owner",
+      "patch_deadline_extended_without_a_recorded_decision",
+      "penetration_test_dropped_for_the_portal_release_train",
+      "severe_incident_clock_started_at_triage_not_awareness"
+    ]
+  },
+  "DV-436": {
+    "comply": [
+      "customer_incident_notice_published_on_the_status_page",
+      "developer_security_testing_evidence_on_the_release",
+      "disclosure_intake_address_published_and_monitored",
+      "dv_436_control_evidenced",
+      "fix_or_mitigation_shipped_within_severity_deadline",
+      "flaw_remediation_deadline_tracked_per_severity_band",
+      "penetration_test_scheduled_for_each_customer_surface",
+      "researcher_report_acknowledged_within_the_window",
+      "root_cause_analysis_delivered_within_the_window"
+    ],
+    "violate": [
+      "disclosure_intake_address_removed_from_the_site",
+      "dv_436_control_absent",
+      "patch_deadline_extended_without_a_recorded_decision",
+      "penetration_test_dropped_for_the_portal_release_train",
+      "security_testing_evidence_omitted_from_the_release",
+      "status_page_hosted_on_the_platform_it_reports_on"
+    ]
+  },
+  "DV-437": {
+    "comply": [
+      "advisory_identifier_assigned_before_publication",
+      "component_provenance_recorded_in_the_release_manifest",
+      "customer_incident_notice_published_on_the_status_page",
+      "developer_security_testing_evidence_on_the_release",
+      "dv_437_control_evidenced",
+      "flaw_remediation_deadline_tracked_per_severity_band",
+      "penetration_test_scheduled_for_each_customer_surface",
+      "root_cause_analysis_delivered_within_the_window",
+      "status_page_hosted_independently_of_the_platform"
+    ],
+    "violate": [
+      "advisory_published_without_a_severity_method",
+      "dv_437_control_absent",
+      "penetration_test_dropped_for_the_portal_release_train",
+      "root_cause_analysis_reduced_to_a_one_line_summary",
+      "security_testing_evidence_omitted_from_the_release",
+      "status_page_hosted_on_the_platform_it_reports_on"
+    ]
+  },
+  "DV-438": {
+    "comply": [
+      "advisory_identifier_assigned_before_publication",
+      "component_provenance_recorded_in_the_release_manifest",
+      "customer_incident_notice_published_on_the_status_page",
+      "dv_438_control_evidenced",
+      "incident_timeline_reconstructed_from_recorded_events",
+      "regression_test_added_for_every_fixed_vulnerability",
+      "root_cause_analysis_delivered_within_the_window",
+      "severity_scoring_method_declared_in_the_advisory",
+      "status_page_hosted_independently_of_the_platform"
+    ],
+    "violate": [
+      "advisory_published_without_a_severity_method",
+      "component_provenance_left_out_of_release_manifest",
+      "dv_438_control_absent",
+      "fixed_vulnerability_shipped_without_a_regression_test",
+      "root_cause_analysis_reduced_to_a_one_line_summary",
+      "status_page_hosted_on_the_platform_it_reports_on"
+    ]
+  },
+  "DV-439": {
+    "comply": [
+      "accessibility_gate_runs_on_every_portal_release",
+      "accessible_name_present_on_every_dashboard_control",
+      "alarm_severity_conveyed_by_text_and_shape",
+      "audible_alert_paired_with_a_visible_equivalent",
+      "conformance_failure_blocks_the_portal_release",
+      "contrast_ratio_verified_on_the_operations_dashboard",
+      "dv_439_control_evidenced",
+      "keyboard_path_covers_every_acknowledgement_control",
+      "manual_screen_reader_pass_recorded_for_new_views"
+    ],
+    "violate": [
+      "accessibility_gate_removed_from_the_portal_pipeline",
+      "acknowledgement_control_reachable_only_by_pointer",
+      "alarm_severity_conveyed_by_colour_alone",
+      "audible_alert_shipped_with_no_visible_equivalent",
+      "conformance_failures_downgraded_to_build_warnings",
+      "dv_439_control_absent"
+    ]
+  },
+  "DV-440": {
+    "comply": [
+      "accessibility_statement_versioned_beside_the_code",
+      "accessible_name_present_on_every_dashboard_control",
+      "alarm_severity_conveyed_by_text_and_shape",
+      "audible_alert_paired_with_a_visible_equivalent",
+      "contrast_ratio_verified_on_the_operations_dashboard",
+      "dv_440_control_evidenced",
+      "focus_order_verified_on_the_incident_drawer",
+      "keyboard_path_covers_every_acknowledgement_control",
+      "session_timeout_extendable_by_the_operator"
+    ],
+    "violate": [
+      "acknowledgement_control_reachable_only_by_pointer",
+      "alarm_severity_conveyed_by_colour_alone",
+      "audible_alert_shipped_with_no_visible_equivalent",
+      "dashboard_control_shipped_without_accessible_name",
+      "dv_440_control_absent",
+      "operator_session_expires_with_no_extension_path"
+    ]
+  },
+  "DV-441": {
+    "comply": [
+      "counterparty_screened_against_current_restricted_lists",
+      "dv_441_control_evidenced",
+      "encryption_classification_recorded_before_publication",
+      "licence_exception_basis_recorded_for_the_agent",
+      "ownership_chain_checked_against_the_fifty_percent_rule",
+      "restricted_destination_check_gates_the_download",
+      "screening_hit_routed_to_trade_compliance",
+      "screening_list_refreshed_from_the_published_source",
+      "screening_result_retained_with_the_onboarding_record"
+    ],
+    "violate": [
+      "agent_download_endpoint_opened_to_every_destination",
+      "dv_441_control_absent",
+      "encryption_classification_left_unrecorded_at_release",
+      "ownership_chain_check_skipped_for_a_subsidiary_account",
+      "restricted_party_screening_bypassed_for_fast_onboarding",
+      "screening_list_pinned_to_a_stale_local_copy"
+    ]
+  },
+  "DV-442": {
+    "comply": [
+      "classification_reviewed_when_the_crypto_stack_changes",
+      "deemed_export_check_run_before_support_access",
+      "destination_derived_from_verified_account_data",
+      "dv_442_control_evidenced",
+      "encryption_classification_recorded_before_publication",
+      "licence_exception_basis_recorded_for_the_agent",
+      "restricted_destination_check_gates_the_download",
+      "screening_hit_routed_to_trade_compliance",
+      "screening_result_retained_with_the_onboarding_record"
+    ],
+    "violate": [
+      "agent_download_endpoint_opened_to_every_destination",
+      "dv_442_control_absent",
+      "encryption_classification_left_unrecorded_at_release",
+      "ownership_chain_check_skipped_for_a_subsidiary_account",
+      "screening_hit_auto_cleared_by_the_onboarding_job",
+      "support_access_granted_without_deemed_export_check"
+    ]
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://vetpoc.example/schema/case.schema.json",
+  "title": "VetPOC adjudication case",
+  "description": "A case is Chapter 5 Definition 3's triple (id, rules, facts) plus the procedural, narrative and expectation fields a conformance corpus needs.",
+  "type": "object",
+  "required": ["id", "category", "rulebook_version", "rules", "facts", "ts", "contest_to", "author", "expect", "asserts", "requirements", "polarity"],
+  "additionalProperties": false,
+  "properties": {
+    "id": {"type": "string", "pattern": "^VP-[A-Z]-[0-9]{5}$"},
+    "category": {"type": "string"},
+    "rulebook_version": {"type": "string"},
+    "provision_family": {"type": "string"},
+    "rules": {"type": "array", "items": {"type": "string", "pattern": "^VP-[A-Z]{2}-[0-9]{3}$"},
+              "description": "The provisions the change touches. Empty means the evaluator engaged nothing, which is the docket's null route."},
+    "facts": {"type": "array", "items": {"type": "string"}, "uniqueItems": true,
+              "description": "A factor-style description of the material facts, in the CATO tradition. Every name is drawn from the constitution's factor vocabulary except contextual observations prefixed ctx_."},
+    "ts": {"type": "integer", "description": "Ordinal arrival time. Cases are chronological and the store grows across them."},
+    "contest_to": {"type": "integer", "enum": [0, 2, 3, 4],
+                   "description": "A social input, not a decision of the architecture. 0 uncontested; 2 or 3 resolved at that automated instance; 4 escalation exhausted and the risk owner acted."},
+    "control_plane": {"type": "boolean"},
+    "consolidation_signature": {"type": ["string", "null"]},
+    "author": {
+      "type": "object", "required": ["kind", "id"], "additionalProperties": false,
+      "properties": {"kind": {"enum": ["human", "ai-agent"]}, "id": {"type": "string"}}
+    },
+    "scenario": {"type": "object", "description": "Narrative colour. Not part of the formal model and never read by the engine."},
+    "engine": {"type": "object", "description": "Construction hints the reference engine reads: premise, cites, class role."},
+    "meta": {"type": "object", "description": "Why the case exists, and category-specific expectations a human reader needs."},
+    "expect": {"$ref": "#/$defs/expect"},
+    "asserts": {"type": "array", "items": {"type": "string"},
+                "description": "Axioms (A1-A9) and conformance checks (VC-*) this case exercises."},
+    "requirements": {"type": "array", "items": {"type": "string", "pattern": "^R[1-7]$"}},
+    "polarity": {"enum": ["must_pass", "must_fail"],
+                 "description": "Declared polarity, after sigstore-conformance. must_fail means the case must be denied."}
+  },
+  "$defs": {
+    "expect": {
+      "type": "object",
+      "description": "Computed from an executed trace, never authored. An independent replay must reproduce it exactly (VC-01, VC-02).",
+      "required": ["final_decision", "route", "controlling", "keys_applied", "consulted", "distinguished", "admitted"],
+      "properties": {
+        "final_decision": {"enum": ["permit", "permit_conditional", "deny"]},
+        "route": {"enum": ["absolute_shortcircuit", "bound_by_precedent", "fresh_interpretation", "fresh_interpretation_after_tie", "consolidated_citation", "docketed_declined", "docketed_null"]},
+        "controlling": {"type": ["string", "null"],
+                        "description": "A record id, null where nothing controlled, or the distinct value none_tie where survivors deadlocked. none_tie is not an absence of authority."},
+        "keys_applied": {"type": "array", "items": {"enum": ["auth_class", "ts", "scope", "depth"]}},
+        "consulted": {"type": "array", "items": {"type": "string"}},
+        "distinguished": {"type": "array", "items": {"type": "string"}},
+        "escalated_to": {"type": ["string", "null"]},
+        "admitted": {"type": "boolean"},
+        "admission_ground": {"type": ["string", "null"], "enum": ["clause_i", "clause_ii", null]},
+        "referral_emitted": {"type": "boolean"},
+        "expiry_set": {"type": "boolean"},
+        "rating": {"type": ["integer", "null"]},
+        "tau": {"type": ["integer", "null"]},
+        "docket_route": {"type": ["string", "null"], "enum": ["declined", "null", null]},
+        "record_written": {"type": "string"},
+        "cites_representative": {"type": ["string", "null"]},
+        "absolute_provision": {"type": "string"},
+        "draft_amendment": {"type": "boolean"}
+      }
+    }
+  }
+}
