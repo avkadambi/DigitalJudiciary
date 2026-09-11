@@ -1,0 +1,207 @@
+{
+ "pack": "vetpoc-constitution-corpus",
+ "backend": {
+  "backend": "literal_match",
+  "confidence": 0.95,
+  "note": "keys on the factor's words alone; asserts on every guard style"
+ },
+ "cases_extracted": 5937,
+ "calibration": {
+  "train_styles": [
+   "plain",
+   "formal",
+   "narrative"
+  ],
+  "readings": 101778,
+  "floor": 0.95,
+  "precision_at_floor": 0.650003,
+  "recall_at_floor": 1.0,
+  "target_precision": 0.98,
+  "refused": true,
+  "note": "no floor reaches the target on the training styles; the extractor is refused, and the figures below are reported for diagnosis only"
+ },
+ "roundtrip": {
+  "n_cases": 5937,
+  "n_decisions": 469785,
+  "assertions": 169630,
+  "assertion_precision": 0.650003,
+  "recall_of_carried_factors": 1.0,
+  "by_verdict": {
+   "correct": 110260,
+   "hallucinated": 59370,
+   "missed": 0,
+   "not_rendered": 0,
+   "correct_silence": 300155,
+   "cautious": 0
+  },
+  "by_style": {
+   "elliptical": {
+    "correct": 22052,
+    "hallucinated": 11874,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60031,
+    "cautious": 0
+   },
+   "hedged": {
+    "correct": 22052,
+    "hallucinated": 11874,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60031,
+    "cautious": 0
+   },
+   "negated": {
+    "correct": 22052,
+    "hallucinated": 11874,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60031,
+    "cautious": 0
+   },
+   "tabular": {
+    "correct": 22052,
+    "hallucinated": 11874,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60031,
+    "cautious": 0
+   },
+   "third_party": {
+    "correct": 22052,
+    "hallucinated": 11874,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60031,
+    "cautious": 0
+   }
+  },
+  "guard_assertions": 59370,
+  "guard_examples": [
+   {
+    "case": "VP-X-00001",
+    "factor": "vp_aw_002_control_evidenced",
+    "style": "tabular",
+    "confidence": 0.95,
+    "floor": 0.95
+   },
+   {
+    "case": "VP-X-00001",
+    "factor": "welfare_inspection_finding_left_unremediated",
+    "style": "tabular",
+    "confidence": 0.95,
+    "floor": 0.95
+   },
+   {
+    "case": "VP-X-00001",
+    "factor": "vp_aw_002_control_evidenced",
+    "style": "elliptical",
+    "confidence": 0.95,
+    "floor": 0.95
+   },
+   {
+    "case": "VP-X-00001",
+    "factor": "welfare_inspection_finding_left_unremediated",
+    "style": "elliptical",
+    "confidence": 0.95,
+    "floor": 0.95
+   },
+   {
+    "case": "VP-X-00001",
+    "factor": "vp_aw_002_control_evidenced",
+    "style": "hedged",
+    "confidence": 0.95,
+    "floor": 0.95
+   }
+  ],
+  "styles_evaluated": [
+   "elliptical",
+   "hedged",
+   "negated",
+   "tabular",
+   "third_party"
+  ],
+  "gate": {
+   "verdict": "fail",
+   "why": "59370 guard assertion(s). A guard is a factor written so that the only correct behaviour is silence; one is a failure at any n.",
+   "min_assertions": 300,
+   "target_precision": 0.98,
+   "train_styles": [
+    "formal",
+    "narrative",
+    "plain"
+   ],
+   "style_leak": []
+  },
+  "caveat": "Round-trip figures are an UPPER BOUND, not an estimate. The renderer and the extractor share a vocabulary; a real change description was written by someone who never saw the renderer. Do not report these numbers as extraction accuracy on real records."
+ },
+ "snapshot": {
+  "styles": {
+   "third_party": 1186,
+   "elliptical": 1190,
+   "hedged": 1213,
+   "negated": 1176,
+   "tabular": 1172
+  },
+  "status_counts": {
+   "observed": 33926,
+   "absent": 60031,
+   "carried": 7944
+  }
+ },
+ "replay_against_reference": {
+  "cases": 6000,
+  "reference_binds": 1189,
+  "counts": {
+   "binds_broken_otherwise": 313,
+   "decisions_changed": 3303,
+   "binds_kept": 759,
+   "false_binds": 516,
+   "floors_invented": 65
+  },
+  "bind_retention": 0.638352,
+  "decision_agreement": 0.4495,
+  "examples": {
+   "binds_broken_otherwise": [
+    "VP-X-00001",
+    "VP-D-00048",
+    "VP-D-00095",
+    "VP-X-00109",
+    "VP-D-00195"
+   ],
+   "decisions_changed": [
+    "VP-X-00001",
+    "VP-A-00002",
+    "VP-A-00007",
+    "VP-A-00008",
+    "VP-P-00009"
+   ],
+   "false_binds": [
+    "VP-K-00054",
+    "VP-D-00081",
+    "VP-M-00111",
+    "VP-D-00124",
+    "VP-D-00139"
+   ],
+   "floors_invented": [
+    "VP-A-00814",
+    "VP-A-00815",
+    "VP-A-00823",
+    "VP-A-00842",
+    "VP-A-00851"
+   ]
+  },
+  "records_written_reference": 922,
+  "records_written_extracted": 916
+ },
+ "epsilon": {
+  "definition": "The Evaluator's characterisation fidelity, measured rather than assumed: the share of reference binds the extracted facts still reach (bind_retention), and of the binds that break, the share that break with the cause named (premise_not_established) rather than by a changed disposition.",
+  "bind_retention": 0.638352,
+  "decision_agreement": 0.4495,
+  "broken_binds_named_as_silence": 0.0,
+  "false_binds": 516,
+  "floors_missed": 0,
+  "floors_referred_on_silence": 0
+ },
+ "caveat": "Round-trip figures are an UPPER BOUND, not an estimate. The renderer and the extractor share a vocabulary; a real change description was written by someone who never saw the renderer. Do not report these numbers as extraction accuracy on real records."
+}

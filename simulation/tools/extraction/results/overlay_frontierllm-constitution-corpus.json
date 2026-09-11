@@ -1,0 +1,156 @@
+{
+ "pack": "frontierllm-constitution-corpus",
+ "factors": [
+  "attribution_obligation_propagated_to_release",
+  "content_acquired_without_bypassing_clickthrough",
+  "croissant_metadata_attached_to_dataset",
+  "dataset_licence_permits_commercial_use",
+  "de_identification_verified_by_sampling",
+  "share_alike_obligation_evaluated_before_ingestion",
+  "provenance_chain_recorded_for_derived_corpus",
+  "data_governance_custodian_named"
+ ],
+ "threshold": 80.0,
+ "provenance": "synthetic overlay",
+ "sweep": [
+  {
+   "tolerance": 0.0,
+   "admissions": {
+    "distinguished": 13647,
+    "a_fortiori": 1808,
+    "adverse_unaddressed": 3
+   },
+   "binds": 1066,
+   "kept_vs_boolean": 1053,
+   "lost_vs_boolean": 126,
+   "gained_vs_boolean": 13,
+   "gained_where_boolean_abstained": 4,
+   "binding_gate": {
+    "verdict": "inconclusive",
+    "cause": "0 bind(s) on the independently authored arm against a required 1. The oracle is a second program written from the same rulebook; a shared misreading reads as perfect precision. A pass on a self-authored oracle is not a pass.",
+    "false_binds": 13,
+    "false_bind_upper_bound": 0.019319
+   }
+  },
+  {
+   "tolerance": 2.0,
+   "admissions": {
+    "distinguished": 13605,
+    "a_fortiori": 1808,
+    "tolerant": 42,
+    "adverse_unaddressed": 3
+   },
+   "binds": 1094,
+   "kept_vs_boolean": 1073,
+   "lost_vs_boolean": 99,
+   "gained_vs_boolean": 21,
+   "gained_where_boolean_abstained": 5,
+   "binding_gate": {
+    "verdict": "inconclusive",
+    "cause": "0 bind(s) on the independently authored arm against a required 1. The oracle is a second program written from the same rulebook; a shared misreading reads as perfect precision. A pass on a self-authored oracle is not a pass.",
+    "false_binds": 21,
+    "false_bind_upper_bound": 0.027525
+   }
+  },
+  {
+   "tolerance": 5.0,
+   "admissions": {
+    "distinguished": 13564,
+    "a_fortiori": 1808,
+    "tolerant": 83,
+    "adverse_unaddressed": 3
+   },
+   "binds": 1129,
+   "kept_vs_boolean": 1093,
+   "lost_vs_boolean": 68,
+   "gained_vs_boolean": 36,
+   "gained_where_boolean_abstained": 9,
+   "binding_gate": {
+    "verdict": "inconclusive",
+    "cause": "0 bind(s) on the independently authored arm against a required 1. The oracle is a second program written from the same rulebook; a shared misreading reads as perfect precision. A pass on a self-authored oracle is not a pass.",
+    "false_binds": 36,
+    "false_bind_upper_bound": 0.041893
+   }
+  },
+  {
+   "tolerance": 10.0,
+   "admissions": {
+    "distinguished": 13474,
+    "a_fortiori": 1808,
+    "tolerant": 172,
+    "adverse_unaddressed": 4
+   },
+   "binds": 1179,
+   "kept_vs_boolean": 1138,
+   "lost_vs_boolean": 25,
+   "gained_vs_boolean": 41,
+   "gained_where_boolean_abstained": 16,
+   "binding_gate": {
+    "verdict": "inconclusive",
+    "cause": "0 bind(s) on the independently authored arm against a required 1. The oracle is a second program written from the same rulebook; a shared misreading reads as perfect precision. A pass on a self-authored oracle is not a pass.",
+    "false_binds": 41,
+    "false_bind_upper_bound": 0.044886
+   }
+  },
+  {
+   "tolerance": 20.0,
+   "admissions": {
+    "distinguished": 13357,
+    "a_fortiori": 1808,
+    "tolerant": 287,
+    "adverse_unaddressed": 6
+   },
+   "binds": 1230,
+   "kept_vs_boolean": 1183,
+   "lost_vs_boolean": 0,
+   "gained_vs_boolean": 47,
+   "gained_where_boolean_abstained": 42,
+   "binding_gate": {
+    "verdict": "inconclusive",
+    "cause": "0 bind(s) on the independently authored arm against a required 1. The oracle is a second program written from the same rulebook; a shared misreading reads as perfect precision. A pass on a self-authored oracle is not a pass.",
+    "false_binds": 47,
+    "false_bind_upper_bound": 0.04847
+   }
+  },
+  {
+   "tolerance": 40.0,
+   "admissions": {
+    "distinguished": 13168,
+    "a_fortiori": 1808,
+    "tolerant": 465,
+    "adverse_unaddressed": 17
+   },
+   "binds": 1333,
+   "kept_vs_boolean": 1167,
+   "lost_vs_boolean": 6,
+   "gained_vs_boolean": 166,
+   "gained_where_boolean_abstained": 151,
+   "binding_gate": {
+    "verdict": "inconclusive",
+    "cause": "0 bind(s) on the independently authored arm against a required 1. The oracle is a second program written from the same rulebook; a shared misreading reads as perfect precision. A pass on a self-authored oracle is not a pass.",
+    "false_binds": 166,
+    "false_bind_upper_bound": 0.140399
+   }
+  }
+ ],
+ "margin_at_tolerance_0": {
+  "discards": 13647,
+  "by_factor_count": {
+   "1": 4103,
+   "2": 6339,
+   "3": 1940,
+   "4": 559,
+   "5": 544,
+   "6": 144,
+   "7": 18
+  },
+  "dimension_alone": 281,
+  "dimension_alone_share": 0.0206
+ },
+ "magnitude_roundtrip": {
+  "correct": 1463,
+  "wrong": 0,
+  "unrecorded": 0
+ },
+ "caveat": "Synthetic overlay: values are drawn deterministically from case ids to be consistent with the boolean reading. The sweep shows what the kernel DOES at each tolerance on this corpus's structure; it says nothing about which tolerance a constitution should declare."
+}

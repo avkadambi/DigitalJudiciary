@@ -1,0 +1,397 @@
+{
+ "pack": "vetpoc-constitution-corpus",
+ "adoption_ts": 2501,
+ "reference_binds": 1189,
+ "binds_by_deny_records": 69,
+ "sweep": [
+  {
+   "provision": "VP-SC-001",
+   "records": 19,
+   "binds": 39,
+   "binds_by_deny_records": 3,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1187,
+    "binds_lost": 2,
+    "binds_lost_to_prior_text": 2,
+    "stale_records": 2,
+    "records_written_under_new_text": 8
+   },
+   "factor": {
+    "binds_kept": 1171,
+    "binds_lost": 15,
+    "binds_lost_to_prior_text": 15,
+    "decisions_changed": 13,
+    "rebound_on_other_record": 3,
+    "stale_records": 6,
+    "records_written_under_new_text": 8
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 8
+   }
+  },
+  {
+   "provision": "VP-AW-001",
+   "records": 1,
+   "binds": 37,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   },
+   "factor": {
+    "binds_kept": 1159,
+    "binds_lost": 30,
+    "binds_lost_to_prior_text": 30,
+    "decisions_changed": 30,
+    "stale_records": 1,
+    "records_written_under_new_text": 0
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   }
+  },
+  {
+   "provision": "VP-PD-003",
+   "records": 29,
+   "binds": 36,
+   "binds_by_deny_records": 1,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1188,
+    "binds_lost": 1,
+    "binds_lost_to_prior_text": 1,
+    "stale_records": 1,
+    "records_written_under_new_text": 18
+   },
+   "factor": {
+    "binds_kept": 1180,
+    "binds_lost": 9,
+    "binds_lost_to_prior_text": 9,
+    "decisions_changed": 9,
+    "stale_records": 8,
+    "records_written_under_new_text": 18
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 18
+   }
+  },
+  {
+   "provision": "VP-RB-007",
+   "records": 20,
+   "binds": 32,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 13
+   },
+   "factor": {
+    "binds_kept": 1179,
+    "binds_lost": 10,
+    "binds_lost_to_prior_text": 10,
+    "decisions_changed": 13,
+    "stale_records": 4,
+    "records_written_under_new_text": 13
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 13
+   }
+  },
+  {
+   "provision": "VP-AW-003",
+   "records": 1,
+   "binds": 30,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   },
+   "factor": {
+    "binds_kept": 1168,
+    "binds_lost": 21,
+    "binds_lost_to_prior_text": 21,
+    "decisions_changed": 21,
+    "stale_records": 1,
+    "records_written_under_new_text": 0
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   }
+  },
+  {
+   "provision": "VP-AW-005",
+   "records": 1,
+   "binds": 29,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   },
+   "factor": {
+    "binds_kept": 1167,
+    "binds_lost": 22,
+    "binds_lost_to_prior_text": 22,
+    "stale_records": 1,
+    "records_written_under_new_text": 0
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   }
+  },
+  {
+   "provision": "VP-PH-003",
+   "records": 10,
+   "binds": 13,
+   "binds_by_deny_records": 8,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1187,
+    "binds_lost": 2,
+    "binds_lost_to_prior_text": 2,
+    "stale_records": 3,
+    "records_written_under_new_text": 6
+   },
+   "factor": {
+    "binds_kept": 1188,
+    "rebound_on_other_record": 1,
+    "stale_records": 1,
+    "records_written_under_new_text": 6
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 6
+   }
+  },
+  {
+   "provision": "VP-RR-005",
+   "records": 39,
+   "binds": 16,
+   "binds_by_deny_records": 7,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1184,
+    "binds_lost": 5,
+    "binds_lost_to_prior_text": 5,
+    "stale_records": 2,
+    "records_written_under_new_text": 25
+   },
+   "factor": {
+    "binds_kept": 1181,
+    "rebound_on_other_record": 4,
+    "binds_lost": 4,
+    "binds_lost_to_prior_text": 4,
+    "decisions_changed": 4,
+    "stale_records": 11,
+    "records_written_under_new_text": 25
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 25
+   }
+  },
+  {
+   "provision": "VP-VC-006",
+   "records": 14,
+   "binds": 13,
+   "binds_by_deny_records": 7,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1185,
+    "binds_lost": 4,
+    "binds_lost_to_prior_text": 4,
+    "stale_records": 2,
+    "records_written_under_new_text": 9
+   },
+   "factor": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 9
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 9
+   }
+  },
+  {
+   "provision": "VP-PS-003",
+   "records": 17,
+   "binds": 20,
+   "binds_by_deny_records": 7,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1184,
+    "binds_lost": 5,
+    "binds_lost_to_prior_text": 5,
+    "stale_records": 1,
+    "records_written_under_new_text": 14
+   },
+   "factor": {
+    "binds_kept": 1182,
+    "binds_lost": 7,
+    "binds_lost_to_prior_text": 7,
+    "decisions_changed": 10,
+    "stale_records": 2,
+    "records_written_under_new_text": 14
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 14
+   }
+  },
+  {
+   "provision": "VP-RR-002",
+   "records": 37,
+   "binds": 9,
+   "binds_by_deny_records": 6,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1186,
+    "binds_lost": 3,
+    "binds_lost_to_prior_text": 3,
+    "stale_records": 1,
+    "records_written_under_new_text": 28
+   },
+   "factor": {
+    "binds_kept": 1188,
+    "binds_lost": 1,
+    "binds_lost_to_prior_text": 1,
+    "decisions_changed": 1,
+    "stale_records": 5,
+    "records_written_under_new_text": 28
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 28
+   }
+  },
+  {
+   "provision": "VP-PD-005",
+   "records": 34,
+   "binds": 22,
+   "binds_by_deny_records": 5,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1186,
+    "binds_lost": 3,
+    "binds_lost_to_prior_text": 3,
+    "stale_records": 1,
+    "records_written_under_new_text": 22
+   },
+   "factor": {
+    "binds_kept": 1184,
+    "binds_lost": 5,
+    "binds_lost_to_prior_text": 5,
+    "decisions_changed": 2,
+    "stale_records": 10,
+    "records_written_under_new_text": 22
+   },
+   "citation": {
+    "binds_kept": 1189,
+    "stale_records": 0,
+    "records_written_under_new_text": 22
+   }
+  }
+ ],
+ "filed_amendments": [
+  {
+   "id": "PA-01",
+   "targets": [
+    "VP-CS-005"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1189,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-02",
+   "targets": [
+    "VP-CS-006"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1189,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-03",
+   "targets": [
+    "VP-PD-002"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1189,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-04",
+   "targets": [
+    "VP-RR-001"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1189,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-05",
+   "targets": [
+    "VP-AW-003",
+    "VP-AW-005"
+   ],
+   "read_as": "citation",
+   "records_on_targets": 2,
+   "binds_kept": 1189,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-06",
+   "targets": [
+    "VP-PO-009"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 12,
+   "binds_kept": 1189,
+   "stale_records": 0,
+   "records_written_under_new_text": 6
+  }
+ ],
+ "filed_summary": {
+  "amendments": 6,
+  "read_as_limb": 5,
+  "read_as_citation": 1,
+  "binds_lost_to_prior_text_if_all_adopted_separately": 0,
+  "stale_records_if_all_adopted_separately": 0
+ },
+ "provenance": "synthetic overlay; nothing written to the pack"
+}

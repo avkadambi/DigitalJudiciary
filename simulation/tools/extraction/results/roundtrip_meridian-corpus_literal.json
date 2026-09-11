@@ -1,0 +1,207 @@
+{
+ "pack": "meridian-corpus",
+ "backend": {
+  "backend": "literal_match",
+  "confidence": 0.95,
+  "note": "keys on the factor's words alone; asserts on every guard style"
+ },
+ "cases_extracted": 5904,
+ "calibration": {
+  "train_styles": [
+   "plain",
+   "formal",
+   "narrative"
+  ],
+  "readings": 100455,
+  "floor": 0.95,
+  "precision_at_floor": 0.644229,
+  "recall_at_floor": 1.0,
+  "target_precision": 0.98,
+  "refused": true,
+  "note": "no floor reaches the target on the training styles; the extractor is refused, and the figures below are reported for diagnosis only"
+ },
+ "roundtrip": {
+  "n_cases": 5904,
+  "n_decisions": 467725,
+  "assertions": 167425,
+  "assertion_precision": 0.644229,
+  "recall_of_carried_factors": 1.0,
+  "by_verdict": {
+   "correct": 107860,
+   "hallucinated": 59565,
+   "missed": 0,
+   "not_rendered": 0,
+   "correct_silence": 300300,
+   "cautious": 0
+  },
+  "by_style": {
+   "elliptical": {
+    "correct": 21572,
+    "hallucinated": 11913,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60060,
+    "cautious": 0
+   },
+   "hedged": {
+    "correct": 21572,
+    "hallucinated": 11913,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60060,
+    "cautious": 0
+   },
+   "negated": {
+    "correct": 21572,
+    "hallucinated": 11913,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60060,
+    "cautious": 0
+   },
+   "tabular": {
+    "correct": 21572,
+    "hallucinated": 11913,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60060,
+    "cautious": 0
+   },
+   "third_party": {
+    "correct": 21572,
+    "hallucinated": 11913,
+    "missed": 0,
+    "not_rendered": 0,
+    "correct_silence": 60060,
+    "cautious": 0
+   }
+  },
+  "guard_assertions": 59040,
+  "guard_examples": [
+   {
+    "case": "MF-X-00001",
+    "factor": "bankers_rounding_applied_to_currency_totals",
+    "style": "tabular",
+    "confidence": 0.95,
+    "floor": 0.95
+   },
+   {
+    "case": "MF-X-00001",
+    "factor": "binary_floating_point_used_in_money_path",
+    "style": "tabular",
+    "confidence": 0.95,
+    "floor": 0.95
+   },
+   {
+    "case": "MF-X-00001",
+    "factor": "bankers_rounding_applied_to_currency_totals",
+    "style": "elliptical",
+    "confidence": 0.95,
+    "floor": 0.95
+   },
+   {
+    "case": "MF-X-00001",
+    "factor": "binary_floating_point_used_in_money_path",
+    "style": "elliptical",
+    "confidence": 0.95,
+    "floor": 0.95
+   },
+   {
+    "case": "MF-X-00001",
+    "factor": "bankers_rounding_applied_to_currency_totals",
+    "style": "hedged",
+    "confidence": 0.95,
+    "floor": 0.95
+   }
+  ],
+  "styles_evaluated": [
+   "elliptical",
+   "hedged",
+   "negated",
+   "tabular",
+   "third_party"
+  ],
+  "gate": {
+   "verdict": "fail",
+   "why": "59040 guard assertion(s). A guard is a factor written so that the only correct behaviour is silence; one is a failure at any n.",
+   "min_assertions": 300,
+   "target_precision": 0.98,
+   "train_styles": [
+    "formal",
+    "narrative",
+    "plain"
+   ],
+   "style_leak": []
+  },
+  "caveat": "Round-trip figures are an UPPER BOUND, not an estimate. The renderer and the extractor share a vocabulary; a real change description was written by someone who never saw the renderer. Do not report these numbers as extraction accuracy on real records."
+ },
+ "snapshot": {
+  "styles": {
+   "tabular": 1200,
+   "elliptical": 1139,
+   "negated": 1192,
+   "hedged": 1143,
+   "third_party": 1230
+  },
+  "status_counts": {
+   "observed": 33485,
+   "absent": 60060,
+   "carried": 8124
+  }
+ },
+ "replay_against_reference": {
+  "cases": 6000,
+  "reference_binds": 1201,
+  "counts": {
+   "binds_broken_otherwise": 324,
+   "decisions_changed": 3236,
+   "false_binds": 480,
+   "binds_kept": 750,
+   "floors_invented": 76
+  },
+  "bind_retention": 0.62448,
+  "decision_agreement": 0.460667,
+  "examples": {
+   "binds_broken_otherwise": [
+    "MF-X-00001",
+    "MF-X-00027",
+    "MF-D-00052",
+    "MF-X-00147",
+    "MF-D-00295"
+   ],
+   "decisions_changed": [
+    "MF-X-00001",
+    "MF-U-00002",
+    "MF-K-00004",
+    "MF-Y-00005",
+    "MF-Q-00006"
+   ],
+   "false_binds": [
+    "MF-K-00004",
+    "MF-M-00040",
+    "MF-D-00058",
+    "MF-M-00084",
+    "MF-D-00093"
+   ],
+   "floors_invented": [
+    "MF-A-00952",
+    "MF-A-01007",
+    "MF-A-01023",
+    "MF-A-01112",
+    "MF-A-01129"
+   ]
+  },
+  "records_written_reference": 925,
+  "records_written_extracted": 921
+ },
+ "epsilon": {
+  "definition": "The Evaluator's characterisation fidelity, measured rather than assumed: the share of reference binds the extracted facts still reach (bind_retention), and of the binds that break, the share that break with the cause named (premise_not_established) rather than by a changed disposition.",
+  "bind_retention": 0.62448,
+  "decision_agreement": 0.460667,
+  "broken_binds_named_as_silence": 0.0,
+  "false_binds": 480,
+  "floors_missed": 0,
+  "floors_referred_on_silence": 0
+ },
+ "caveat": "Round-trip figures are an UPPER BOUND, not an estimate. The renderer and the extractor share a vocabulary; a real change description was written by someone who never saw the renderer. Do not report these numbers as extraction accuracy on real records."
+}

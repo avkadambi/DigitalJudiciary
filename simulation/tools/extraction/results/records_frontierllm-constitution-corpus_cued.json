@@ -1,0 +1,56 @@
+{
+ "pack": "frontierllm-constitution-corpus",
+ "reader": {
+  "reader": "cued",
+  "floor": 0.9,
+  "note": "cue-driven; premise inclusion-biased, stance unstated on doubt, scope widest on doubt"
+ },
+ "records_admitted": 933,
+ "novel_phrasing": false,
+ "roundtrip": {
+  "renderings": 1866,
+  "styles": [
+   "tabular",
+   "elliptical"
+  ],
+  "score": {
+   "premise_omitted": 0,
+   "premise_included": 5384,
+   "premise_over": 0,
+   "guard_included": 0,
+   "stance_correct": 186,
+   "stance_unstated": 0,
+   "stance_wrong": 0,
+   "stance_false_supersession": 0,
+   "scope_correct": 1866,
+   "scope_widened": 0,
+   "scope_narrowed": 0,
+   "values_correct": 0,
+   "values_wrong": 0,
+   "values_unrecorded": 0
+  },
+  "gate": {
+   "verdict": "pass",
+   "why": "premise recall 1.0, 0 false supersessions, 0 narrowed scopes",
+   "premise_recall": 1.0,
+   "premise_precision": 1.0,
+   "guard_inclusions": 0,
+   "stance_unstated": 0,
+   "scope_widened": 0,
+   "min_records": 300,
+   "premise_recall_target": 0.995
+  }
+ },
+ "replay": {
+  "records_rebuilt": 933,
+  "records_with_typed_stance": 93,
+  "construction_changes": {},
+  "reference_binds": 1188,
+  "counts": {
+   "binds_kept": 1188
+  },
+  "bind_retention": 1.0,
+  "examples": {}
+ },
+ "caveat": "Upper bound: the rationale renderer and the reader share a vocabulary. What is measured is whether the safe defaults hold \u2014 no over-bind from an omitted premise factor, no displacement from an unread supersession \u2014 not how a real rationale would read."
+}

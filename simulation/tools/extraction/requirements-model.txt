@@ -1,0 +1,5 @@
+torch>=2.3
+transformers>=4.48
+numpy>=1.26
+# optional, for GLiNER2MagnitudeBackend
+gliner2>=1.0

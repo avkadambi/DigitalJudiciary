@@ -1,0 +1,365 @@
+{
+ "pack": "semifab-constitution-corpus",
+ "adoption_ts": 2501,
+ "reference_binds": 1182,
+ "binds_by_deny_records": 96,
+ "sweep": [
+  {
+   "provision": "SF-SS-008",
+   "records": 14,
+   "binds": 37,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 7
+   },
+   "factor": {
+    "binds_kept": 1167,
+    "binds_lost": 14,
+    "binds_lost_to_prior_text": 14,
+    "decisions_changed": 11,
+    "rebound_on_other_record": 1,
+    "stale_records": 3,
+    "records_written_under_new_text": 7
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 7
+   }
+  },
+  {
+   "provision": "SF-WI-003",
+   "records": 25,
+   "binds": 34,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 15
+   },
+   "factor": {
+    "binds_kept": 1162,
+    "binds_lost": 20,
+    "binds_lost_to_prior_text": 20,
+    "decisions_changed": 10,
+    "stale_records": 9,
+    "records_written_under_new_text": 15
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 15
+   }
+  },
+  {
+   "provision": "SF-SG-009",
+   "records": 23,
+   "binds": 33,
+   "binds_by_deny_records": 1,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 15
+   },
+   "factor": {
+    "binds_kept": 1165,
+    "binds_lost": 15,
+    "binds_lost_to_prior_text": 15,
+    "decisions_changed": 5,
+    "rebound_on_other_record": 2,
+    "stale_records": 6,
+    "records_written_under_new_text": 15
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 15
+   }
+  },
+  {
+   "provision": "SF-SS-002",
+   "records": 21,
+   "binds": 33,
+   "binds_by_deny_records": 8,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1178,
+    "binds_lost": 4,
+    "binds_lost_to_prior_text": 4,
+    "stale_records": 3,
+    "records_written_under_new_text": 13
+   },
+   "factor": {
+    "binds_kept": 1167,
+    "binds_lost": 13,
+    "binds_lost_to_prior_text": 13,
+    "decisions_changed": 11,
+    "rebound_on_other_record": 2,
+    "stale_records": 6,
+    "records_written_under_new_text": 13
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 13
+   }
+  },
+  {
+   "provision": "SF-EX-009",
+   "records": 25,
+   "binds": 31,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 15
+   },
+   "factor": {
+    "binds_kept": 1176,
+    "rebound_on_other_record": 6,
+    "rebound_on_post_adoption_record": 2,
+    "decisions_changed": 3,
+    "stale_records": 5,
+    "records_written_under_new_text": 15
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 15
+   }
+  },
+  {
+   "provision": "SF-SG-004",
+   "records": 24,
+   "binds": 30,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1182,
+    "stale_records": 1,
+    "records_written_under_new_text": 16
+   },
+   "factor": {
+    "binds_kept": 1172,
+    "binds_lost": 10,
+    "binds_lost_to_prior_text": 10,
+    "decisions_changed": 4,
+    "stale_records": 5,
+    "records_written_under_new_text": 16
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 16
+   }
+  },
+  {
+   "provision": "SF-RP-003",
+   "records": 18,
+   "binds": 28,
+   "binds_by_deny_records": 15,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1174,
+    "binds_lost": 8,
+    "binds_lost_to_prior_text": 8,
+    "stale_records": 2,
+    "records_written_under_new_text": 11
+   },
+   "factor": {
+    "binds_kept": 1176,
+    "binds_lost": 6,
+    "binds_lost_to_prior_text": 6,
+    "decisions_changed": 6,
+    "stale_records": 3,
+    "records_written_under_new_text": 11
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 11
+   }
+  },
+  {
+   "provision": "SF-AG-003",
+   "records": 8,
+   "binds": 20,
+   "binds_by_deny_records": 11,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1177,
+    "binds_lost": 5,
+    "binds_lost_to_prior_text": 5,
+    "stale_records": 3,
+    "records_written_under_new_text": 1
+   },
+   "factor": {
+    "binds_kept": 1174,
+    "binds_lost": 8,
+    "binds_lost_to_prior_text": 8,
+    "decisions_changed": 3,
+    "stale_records": 4,
+    "records_written_under_new_text": 1
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 1
+   }
+  },
+  {
+   "provision": "SF-SS-004",
+   "records": 18,
+   "binds": 17,
+   "binds_by_deny_records": 11,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1175,
+    "binds_lost": 7,
+    "binds_lost_to_prior_text": 7,
+    "stale_records": 2,
+    "records_written_under_new_text": 10
+   },
+   "factor": {
+    "binds_kept": 1179,
+    "binds_lost": 3,
+    "binds_lost_to_prior_text": 3,
+    "stale_records": 4,
+    "records_written_under_new_text": 10
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 10
+   }
+  },
+  {
+   "provision": "SF-GV-003",
+   "records": 8,
+   "binds": 14,
+   "binds_by_deny_records": 7,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1177,
+    "binds_lost": 5,
+    "binds_lost_to_prior_text": 5,
+    "stale_records": 2,
+    "records_written_under_new_text": 4
+   },
+   "factor": {
+    "binds_kept": 1175,
+    "rebound_on_other_record": 3,
+    "binds_lost": 4,
+    "binds_lost_to_prior_text": 4,
+    "decisions_changed": 4,
+    "stale_records": 3,
+    "records_written_under_new_text": 4
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 4
+   }
+  },
+  {
+   "provision": "SF-SO-003",
+   "records": 11,
+   "binds": 13,
+   "binds_by_deny_records": 7,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1180,
+    "binds_lost": 2,
+    "binds_lost_to_prior_text": 2,
+    "stale_records": 1,
+    "records_written_under_new_text": 8
+   },
+   "factor": {
+    "binds_kept": 1176,
+    "binds_lost": 6,
+    "binds_lost_to_prior_text": 6,
+    "stale_records": 3,
+    "records_written_under_new_text": 8
+   },
+   "citation": {
+    "binds_kept": 1182,
+    "stale_records": 0,
+    "records_written_under_new_text": 8
+   }
+  }
+ ],
+ "filed_amendments": [
+  {
+   "id": "PA-01",
+   "targets": [
+    "SF-EX-004"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1182,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-02",
+   "targets": [
+    "SF-SG-001"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1182,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-03",
+   "targets": [
+    "SF-EX-001",
+    "SF-EX-002"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1182,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-04",
+   "targets": [
+    "SF-WI-001",
+    "SF-WI-002"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1182,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-05",
+   "targets": [
+    "SF-RP-001",
+    "SF-RP-002"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1182,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  }
+ ],
+ "filed_summary": {
+  "amendments": 5,
+  "read_as_limb": 5,
+  "read_as_citation": 0,
+  "binds_lost_to_prior_text_if_all_adopted_separately": 0,
+  "stale_records_if_all_adopted_separately": 0
+ },
+ "provenance": "synthetic overlay; nothing written to the pack"
+}

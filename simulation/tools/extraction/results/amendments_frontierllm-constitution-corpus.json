@@ -1,0 +1,371 @@
+{
+ "pack": "frontierllm-constitution-corpus",
+ "adoption_ts": 2501,
+ "reference_binds": 1188,
+ "binds_by_deny_records": 93,
+ "sweep": [
+  {
+   "provision": "FL-PI-005",
+   "records": 23,
+   "binds": 37,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 15
+   },
+   "factor": {
+    "binds_kept": 1171,
+    "binds_lost": 13,
+    "binds_lost_to_prior_text": 13,
+    "rebound_on_other_record": 4,
+    "decisions_changed": 9,
+    "stale_records": 4,
+    "records_written_under_new_text": 15
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 15
+   }
+  },
+  {
+   "provision": "FL-IP-006",
+   "records": 1,
+   "binds": 35,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   },
+   "factor": {
+    "binds_kept": 1160,
+    "binds_lost": 28,
+    "binds_lost_to_prior_text": 28,
+    "stale_records": 1,
+    "records_written_under_new_text": 0
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   }
+  },
+  {
+   "provision": "FL-IP-003",
+   "records": 1,
+   "binds": 34,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   },
+   "factor": {
+    "binds_kept": 1159,
+    "binds_lost": 29,
+    "binds_lost_to_prior_text": 29,
+    "decisions_changed": 29,
+    "stale_records": 1,
+    "records_written_under_new_text": 0
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   }
+  },
+  {
+   "provision": "FL-IP-002",
+   "records": 1,
+   "binds": 30,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   },
+   "factor": {
+    "binds_kept": 1164,
+    "binds_lost": 24,
+    "binds_lost_to_prior_text": 24,
+    "stale_records": 1,
+    "records_written_under_new_text": 0
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 0
+   }
+  },
+  {
+   "provision": "FL-MB-007",
+   "records": 15,
+   "binds": 30,
+   "binds_by_deny_records": 7,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1187,
+    "binds_lost": 1,
+    "binds_lost_to_prior_text": 1,
+    "stale_records": 1,
+    "records_written_under_new_text": 9
+   },
+   "factor": {
+    "binds_kept": 1175,
+    "binds_lost": 12,
+    "binds_lost_to_prior_text": 12,
+    "decisions_changed": 5,
+    "rebound_on_other_record": 1,
+    "rebound_on_post_adoption_record": 1,
+    "stale_records": 4,
+    "records_written_under_new_text": 9
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 9
+   }
+  },
+  {
+   "provision": "FL-SF-008",
+   "records": 21,
+   "binds": 29,
+   "binds_by_deny_records": 0,
+   "ranked_by": "binds",
+   "limb": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 14
+   },
+   "factor": {
+    "binds_kept": 1184,
+    "rebound_on_other_record": 4,
+    "stale_records": 3,
+    "records_written_under_new_text": 14
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 14
+   }
+  },
+  {
+   "provision": "FL-AG-004",
+   "records": 7,
+   "binds": 20,
+   "binds_by_deny_records": 10,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1182,
+    "binds_lost": 6,
+    "binds_lost_to_prior_text": 6,
+    "stale_records": 2,
+    "records_written_under_new_text": 2
+   },
+   "factor": {
+    "binds_kept": 1182,
+    "binds_lost": 6,
+    "binds_lost_to_prior_text": 6,
+    "decisions_changed": 6,
+    "stale_records": 3,
+    "records_written_under_new_text": 2
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 2
+   }
+  },
+  {
+   "provision": "FL-EV-006",
+   "records": 17,
+   "binds": 23,
+   "binds_by_deny_records": 10,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1183,
+    "binds_lost": 5,
+    "binds_lost_to_prior_text": 5,
+    "stale_records": 3,
+    "records_written_under_new_text": 7
+   },
+   "factor": {
+    "binds_kept": 1180,
+    "binds_lost": 8,
+    "binds_lost_to_prior_text": 8,
+    "decisions_changed": 8,
+    "stale_records": 7,
+    "records_written_under_new_text": 7
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 7
+   }
+  },
+  {
+   "provision": "FL-LS-005",
+   "records": 10,
+   "binds": 25,
+   "binds_by_deny_records": 8,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1182,
+    "binds_lost": 6,
+    "binds_lost_to_prior_text": 6,
+    "stale_records": 2,
+    "records_written_under_new_text": 3
+   },
+   "factor": {
+    "binds_kept": 1174,
+    "binds_lost": 14,
+    "binds_lost_to_prior_text": 14,
+    "decisions_changed": 7,
+    "stale_records": 5,
+    "records_written_under_new_text": 3
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 3
+   }
+  },
+  {
+   "provision": "FL-FG-002",
+   "records": 20,
+   "binds": 14,
+   "binds_by_deny_records": 7,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1183,
+    "binds_lost": 5,
+    "binds_lost_to_prior_text": 5,
+    "stale_records": 2,
+    "records_written_under_new_text": 13
+   },
+   "factor": {
+    "binds_kept": 1182,
+    "binds_lost": 3,
+    "binds_lost_to_prior_text": 3,
+    "rebound_on_other_record": 3,
+    "stale_records": 5,
+    "records_written_under_new_text": 13
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 13
+   }
+  },
+  {
+   "provision": "FL-BS-004",
+   "records": 8,
+   "binds": 9,
+   "binds_by_deny_records": 5,
+   "ranked_by": "deny-side binds",
+   "limb": {
+    "binds_kept": 1186,
+    "binds_lost": 2,
+    "binds_lost_to_prior_text": 2,
+    "stale_records": 2,
+    "records_written_under_new_text": 3
+   },
+   "factor": {
+    "binds_kept": 1184,
+    "binds_lost": 4,
+    "binds_lost_to_prior_text": 4,
+    "decisions_changed": 4,
+    "stale_records": 5,
+    "records_written_under_new_text": 3
+   },
+   "citation": {
+    "binds_kept": 1188,
+    "stale_records": 0,
+    "records_written_under_new_text": 3
+   }
+  }
+ ],
+ "filed_amendments": [
+  {
+   "id": "PA-01",
+   "targets": [
+    "FL-SF-007"
+   ],
+   "read_as": "citation",
+   "records_on_targets": 16,
+   "binds_kept": 1188,
+   "stale_records": 0,
+   "records_written_under_new_text": 10
+  },
+  {
+   "id": "PA-02",
+   "targets": [
+    "FL-SF-002",
+    "FL-SF-003"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1188,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-03",
+   "targets": [
+    "FL-GV-001"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1188,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-04",
+   "targets": [
+    "FL-GV-002"
+   ],
+   "read_as": "citation",
+   "records_on_targets": 0,
+   "binds_kept": 1188,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-05",
+   "targets": [
+    "FL-BS-001"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1188,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  },
+  {
+   "id": "PA-06",
+   "targets": [
+    "FL-TD-001"
+   ],
+   "read_as": "limb",
+   "records_on_targets": 0,
+   "binds_kept": 1188,
+   "stale_records": 0,
+   "records_written_under_new_text": 0
+  }
+ ],
+ "filed_summary": {
+  "amendments": 6,
+  "read_as_limb": 4,
+  "read_as_citation": 2,
+  "binds_lost_to_prior_text_if_all_adopted_separately": 0,
+  "stale_records_if_all_adopted_separately": 0
+ },
+ "provenance": "synthetic overlay; nothing written to the pack"
+}

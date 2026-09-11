@@ -1,0 +1,184 @@
+{
+ "pack": "frontierllm-constitution-corpus",
+ "backend": {
+  "backend": "cued_literal",
+  "confidence": 0.95,
+  "cued_confidence": 0.3,
+  "note": "literal match; negation/hedge/attribution cues in the sentence, or a longer sibling factor matched at the same place, collapse the confidence"
+ },
+ "cases_extracted": 5919,
+ "calibration": {
+  "train_styles": [
+   "plain",
+   "formal",
+   "narrative"
+  ],
+  "readings": 99123,
+  "floor": 0.95,
+  "precision_at_floor": 0.99995,
+  "recall_at_floor": 0.952457,
+  "target_precision": 0.98,
+  "refused": false,
+  "note": ""
+ },
+ "roundtrip": {
+  "n_cases": 5919,
+  "n_decisions": 461295,
+  "assertions": 100975,
+  "assertion_precision": 0.99995,
+  "recall_of_carried_factors": 0.952457,
+  "by_verdict": {
+   "correct": 100970,
+   "hallucinated": 5,
+   "missed": 5040,
+   "not_rendered": 0,
+   "correct_silence": 296090,
+   "cautious": 59190
+  },
+  "by_style": {
+   "elliptical": {
+    "correct": 20194,
+    "hallucinated": 1,
+    "missed": 1008,
+    "not_rendered": 0,
+    "correct_silence": 59218,
+    "cautious": 11838
+   },
+   "hedged": {
+    "correct": 20194,
+    "hallucinated": 1,
+    "missed": 1008,
+    "not_rendered": 0,
+    "correct_silence": 59218,
+    "cautious": 11838
+   },
+   "negated": {
+    "correct": 20194,
+    "hallucinated": 1,
+    "missed": 1008,
+    "not_rendered": 0,
+    "correct_silence": 59218,
+    "cautious": 11838
+   },
+   "tabular": {
+    "correct": 20194,
+    "hallucinated": 1,
+    "missed": 1008,
+    "not_rendered": 0,
+    "correct_silence": 59218,
+    "cautious": 11838
+   },
+   "third_party": {
+    "correct": 20194,
+    "hallucinated": 1,
+    "missed": 1008,
+    "not_rendered": 0,
+    "correct_silence": 59218,
+    "cautious": 11838
+   }
+  },
+  "guard_assertions": 0,
+  "guard_examples": [],
+  "styles_evaluated": [
+   "elliptical",
+   "hedged",
+   "negated",
+   "tabular",
+   "third_party"
+  ],
+  "gate": {
+   "verdict": "pass",
+   "why": "assertion precision 1.0000 >= 0.98",
+   "min_assertions": 300,
+   "target_precision": 0.98,
+   "train_styles": [
+    "formal",
+    "narrative",
+    "plain"
+   ],
+   "style_leak": []
+  },
+  "caveat": "Round-trip figures are an UPPER BOUND, not an estimate. The renderer and the extractor share a vocabulary; a real change description was written by someone who never saw the renderer. Do not report these numbers as extraction accuracy on real records."
+ },
+ "snapshot": {
+  "styles": {
+   "elliptical": 1207,
+   "negated": 1212,
+   "hedged": 1169,
+   "tabular": 1195,
+   "third_party": 1136
+  },
+  "status_counts": {
+   "observed": 20195,
+   "abstained": 12846,
+   "absent": 59218,
+   "carried": 8005
+  }
+ },
+ "replay_against_reference": {
+  "cases": 6000,
+  "reference_binds": 1188,
+  "counts": {
+   "binds_kept": 1036,
+   "premise_not_established": 1201,
+   "records_withheld": 154,
+   "floors_referred_on_silence": 172,
+   "decisions_changed": 249,
+   "binds_broken_by_silence": 87,
+   "floors_referred_where_reference_proceeded": 77,
+   "false_binds": 18,
+   "binds_broken_otherwise": 47
+  },
+  "bind_retention": 0.872054,
+  "decision_agreement": 0.9585,
+  "examples": {
+   "decisions_changed": [
+    "FL-B-00067",
+    "FL-M-00123",
+    "FL-M-00145",
+    "FL-B-00146",
+    "FL-M-00158"
+   ],
+   "binds_broken_by_silence": [
+    "FL-M-00123",
+    "FL-M-00145",
+    "FL-M-00158",
+    "FL-D-00334",
+    "FL-D-00345"
+   ],
+   "floors_referred_where_reference_proceeded": [
+    "FL-A-00986",
+    "FL-A-00993",
+    "FL-A-01007",
+    "FL-A-01019",
+    "FL-A-01077"
+   ],
+   "false_binds": [
+    "FL-C-01080",
+    "FL-C-01472",
+    "FL-C-01658",
+    "FL-C-01673",
+    "FL-C-01751"
+   ],
+   "binds_broken_otherwise": [
+    "FL-C-01122",
+    "FL-C-01201",
+    "FL-C-01300",
+    "FL-C-01322",
+    "FL-C-01326"
+   ]
+  },
+  "records_written_reference": 933,
+  "records_written_extracted": 774
+ },
+ "epsilon": {
+  "definition": "The Evaluator's characterisation fidelity, measured rather than assumed: the share of reference binds the extracted facts still reach (bind_retention), and of the binds that break, the share that break with the cause named (premise_not_established) rather than by a changed disposition.",
+  "bind_retention": 0.872054,
+  "decision_agreement": 0.9585,
+  "broken_binds_named_as_silence": 0.649254,
+  "false_binds": 18,
+  "floors_missed": 0,
+  "floors_referred_on_silence": 172
+ },
+ "caveat": "Round-trip figures are an UPPER BOUND, not an estimate. The renderer and the extractor share a vocabulary; a real change description was written by someone who never saw the renderer. Do not report these numbers as extraction accuracy on real records."
+}

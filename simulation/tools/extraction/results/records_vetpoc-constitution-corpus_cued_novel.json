@@ -1,0 +1,82 @@
+{
+ "pack": "vetpoc-constitution-corpus",
+ "reader": {
+  "reader": "cued",
+  "floor": 0.9,
+  "note": "cue-driven; premise inclusion-biased, stance unstated on doubt, scope widest on doubt"
+ },
+ "records_admitted": 922,
+ "novel_phrasing": true,
+ "roundtrip": {
+  "renderings": 1844,
+  "styles": [
+   "tabular",
+   "elliptical"
+  ],
+  "score": {
+   "premise_omitted": 0,
+   "premise_included": 5262,
+   "premise_over": 3070,
+   "guard_included": 3070,
+   "stance_correct": 0,
+   "stance_unstated": 176,
+   "stance_wrong": 0,
+   "stance_false_supersession": 0,
+   "scope_correct": 372,
+   "scope_widened": 1472,
+   "scope_narrowed": 0,
+   "values_correct": 0,
+   "values_wrong": 0,
+   "values_unrecorded": 0
+  },
+  "gate": {
+   "verdict": "pass",
+   "why": "premise recall 1.0, 0 false supersessions, 0 narrowed scopes",
+   "premise_recall": 1.0,
+   "premise_precision": 0.631541,
+   "guard_inclusions": 3070,
+   "stance_unstated": 176,
+   "scope_widened": 1472,
+   "min_records": 300,
+   "premise_recall_target": 0.995
+  }
+ },
+ "replay": {
+  "records_rebuilt": 922,
+  "records_with_typed_stance": 88,
+  "construction_changes": {
+   "premise_changed": 922,
+   "premise_widened": 922,
+   "scope_changed": 922,
+   "supersession_lost": 88
+  },
+  "reference_binds": 1189,
+  "counts": {
+   "binds_kept": 698,
+   "under_binds": 411,
+   "under_binds:all_distinguished": 411,
+   "decisions_changed": 56,
+   "ordering_keys_changed": 187,
+   "over_binds": 80,
+   "over_binds:other_record": 80
+  },
+  "bind_retention": 0.587048,
+  "examples": {
+   "under_binds": [
+    "VP-C-00939",
+    "VP-C-00941",
+    "VP-C-00943",
+    "VP-C-00947",
+    "VP-C-00955"
+   ],
+   "over_binds": [
+    "VP-C-01096",
+    "VP-C-01122",
+    "VP-C-01257",
+    "VP-Z-01288",
+    "VP-C-01331"
+   ]
+  }
+ },
+ "caveat": "Upper bound: the rationale renderer and the reader share a vocabulary. What is measured is whether the safe defaults hold \u2014 no over-bind from an omitted premise factor, no displacement from an unread supersession \u2014 not how a real rationale would read."
+}
