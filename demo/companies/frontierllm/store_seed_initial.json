@@ -1,0 +1,553 @@
+{
+ "records": [
+  {
+   "seed_id": "FP-001",
+   "provision_id": "FL-401",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "job_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "FL-401 exists to prevent credential exposure; an encrypted, rotating config whose vault onboarding is queued presents the paperwork lag, not the exposure the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-002",
+   "provision_id": "FL-403",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-02-23T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "tenant_data_path",
+    "third_party_lib"
+   ],
+   "premise": [
+    "community_audit_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review within 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used OSS library with a completed community security audit presents materially lower supply-chain risk; vendor review may complete in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-003",
+   "provision_id": "FL-403",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-15T00:00:00.000000+00:00",
+   "facts": [
+    "tenant_data_path",
+    "third_party_lib",
+    "touches_conversation_data",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_conversation_data"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "user-data"
+   },
+   "scope_level": "service",
+   "rationale": "After the February conversation-data ingestion incident, risk appetite narrowed: a pending vendor review is insufficient where the library touches user-conversation streams carrying private data.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-004",
+   "provision_id": "FL-408",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-21T00:00:00.000000+00:00",
+   "facts": [
+    "cve_high",
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "premise": [
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30-day remediation ticket with named owner"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "FL-408 targets exploitable exposure; a build-time-only dependency with no runtime reachability does not present it, provided remediation is tracked.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-005",
+   "provision_id": "FL-406",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-23T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "generated_boilerplate"
+   ],
+   "premise": [
+    "generated_boilerplate"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "coverage measured at module level for generated eval configs"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Line-level coverage on generated eval-config scaffolds measures the generator, not the change; module-level measurement preserves the provision's intent.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-006",
+   "provision_id": "FL-410",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-21T00:00:00.000000+00:00",
+   "facts": [
+    "dummy_marked",
+    "fixture_path",
+    "secret_scanner_hit"
+   ],
+   "premise": [
+    "dummy_marked",
+    "fixture_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fixture must carry DUMMY- prefix and live under /testdata"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Clearly-marked dummy credentials in test fixtures are not secrets; FL-410 targets live credential exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-007",
+   "provision_id": "FL-416",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2025-12-20T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A formal test suite does not substitute for the human sign-off FL-416 requires on agent-authored tenant-access changes; in a multi-tenant API platform the provision allocates accountability, not just verification.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-008",
+   "provision_id": "FL-411",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-09T00:00:00.000000+00:00",
+   "facts": [
+    "emergency_claimed",
+    "freeze_deploy",
+    "serving_outage"
+   ],
+   "premise": [
+    "serving_outage"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single deploy window; senior engineer paired"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A serving-outage alerting bug during a major-run change freeze justified one freeze-window deploy; residual risk accepted for 60 days pending an emergency-protocol amendment.",
+   "is_acceptance": true,
+   "expiry": "2026-03-10T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-009",
+   "provision_id": "FL-415",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-01T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "30-day pilot, anonymized cohort only"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Growth pilot allowed ahead of DPIA once; the Lawmakers subsequently REJECTED the referral: DPIA-first stands.",
+   "is_acceptance": true,
+   "expiry": "2025-10-31T00:00:00.000000+00:00",
+   "organization": "frontierllm",
+   "referral_outcome": "rejected"
+  },
+  {
+   "seed_id": "FP-010",
+   "provision_id": "FL-407",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-20T00:00:00.000000+00:00",
+   "facts": [
+    "experiment_metrics_table",
+    "new_table_only",
+    "no_data_mutation",
+    "schema_migration"
+   ],
+   "premise": [
+    "new_table_only",
+    "no_data_mutation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "table creation scripted; drop script attached"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Reversibility exists to protect existing experiment-metrics history; a pure additive table creation mutates nothing and is trivially reversible by drop.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-011",
+   "provision_id": "FL-417",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "console_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "flagged_off_default"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "flag stays off until regression fixed; perf ticket filed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regression behind a default-off flag imposes no user-facing latency; the budget binds at flag-on.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-015",
+   "provision_id": "FL-417",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "flagged_off_default",
+    "latency_regression",
+    "serving_gateway"
+   ],
+   "premise": [
+    "serving_gateway"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "serving"
+   },
+   "scope_level": "service",
+   "rationale": "Serving-gateway latency is operationally critical during traffic spikes; even flagged-off regressions in the serving tier must be fixed before merge to avoid flag-flip risk.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-012",
+   "provision_id": "FL-401",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-05T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "holds_weights_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_weights_credentials"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "weights-infra"
+   },
+   "scope_level": "service",
+   "rationale": "Where the job runner also holds credentials for the weights store the weights perimeter is implicated; the vault-lag tolerance of FP-001 does not extend there.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-013",
+   "provision_id": "FL-406",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-13T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "follow-up coverage ticket within one sprint"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Legacy tokenizer-pipeline modules predate the coverage mandate; incremental improvement via tracked tickets was held acceptable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-014",
+   "provision_id": "FL-406",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-20T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Q2 quality initiative ended the legacy-module exception: coverage is met before merge, including legacy tokenizer code. This holding supersedes the earlier permit on the same premise and provision; it is cited here so the departure is recorded rather than left to the clock (Sect. 4.6).",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm",
+   "cites": "FP-013"
+  },
+  {
+   "seed_id": "FR-T01",
+   "provision_id": "FL-418",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "tie_probe_eval_a",
+    "tie_probe_eval_b"
+   ],
+   "premise": [
+    "tie_probe_eval_a"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {},
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "FL-418 is satisfied where the change carries tie_probe_eval_a; recorded so the point is citable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FR-T02",
+   "provision_id": "FL-418",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "tie_probe_eval_a",
+    "tie_probe_eval_b"
+   ],
+   "premise": [
+    "tie_probe_eval_b"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": {},
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "FL-418 is not satisfied where the change carries tie_probe_eval_b; recorded so the point is citable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-040",
+   "provision_id": "FL-433",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_complete",
+    "emotion_inference",
+    "medical_safety_justification",
+    "workplace_context"
+   ],
+   "premise": [
+    "dpia_complete",
+    "medical_safety_justification"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "safety-monitoring scope only; DPIA on file; annual re-justification"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 5(1)(f) excepts systems put in place for medical or safety reasons; a documented safety justification with a completed DPIA is precisely the carve-out the corpus records as the reason this clause is statute-tier rather than absolute.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-041",
+   "provision_id": "FL-434",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "obvious_ai_context",
+    "undisclosed_ai_interaction",
+    "ux_review_complete"
+   ],
+   "premise": [
+    "obvious_ai_context",
+    "ux_review_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "obviousness finding documented by UX review; re-test on major redesign"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50(1) applies 'unless this is obvious from the point of view of a reasonably well-informed person'; a documented obviousness finding is the proviso working as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "FP-042",
+   "provision_id": "FL-435",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "explicit_consent_documented",
+    "new_processing_path",
+    "purpose_limited",
+    "special_category_data"
+   ],
+   "premise": [
+    "explicit_consent_documented",
+    "purpose_limited"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "Art. 9(2)(a) gate: explicit consent recorded per purpose; audit annually"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 9(1) is a prohibition with ten derogations; documented explicit consent for a limited purpose satisfies the Art. 9(2)(a) gate.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  }
+ ]
+}

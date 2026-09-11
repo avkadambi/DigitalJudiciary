@@ -1,0 +1,56 @@
+{
+ "organizations": [
+  {
+   "org_id": "fintech",
+   "name": "Meridian Financial",
+   "principals": [
+    {
+     "principal_id": "fintech.risk",
+     "branch": "risk_owner",
+     "key": "devkey-fintech-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "fintech.grc",
+     "branch": "lawmakers",
+     "key": "devkey-fintech-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "fintech.eng",
+     "branch": null,
+     "key": "devkey-fintech-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "fintech.audit",
+     "branch": null,
+     "key": "devkey-fintech-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": null,
+   "name": "Platform",
+   "principals": [
+    {
+     "principal_id": "platform.admin",
+     "branch": null,
+     "key": "devkey-platform-admin",
+     "kind": "human",
+     "role": "platform administrator \u2014 the only account that reads across tenants, and it decides nothing"
+    }
+   ]
+  }
+ ],
+ "founding_scope": "fintech"
+}

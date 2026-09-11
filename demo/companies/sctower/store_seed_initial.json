@@ -1,0 +1,553 @@
+{
+ "records": [
+  {
+   "seed_id": "SP-001",
+   "provision_id": "SC-201",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "connector_credentials",
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "SC-201 exists to prevent credential exposure; an encrypted, rotating config whose vault onboarding is queued presents the paperwork lag, not the exposure the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-002",
+   "provision_id": "SC-203",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-02-23T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "tenant_data_path",
+    "third_party_lib"
+   ],
+   "premise": [
+    "community_audit_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review within 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used OSS library with a completed community security audit presents materially lower supply-chain risk; vendor review may complete in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-003",
+   "provision_id": "SC-203",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-15T00:00:00.000000+00:00",
+   "facts": [
+    "tenant_data_path",
+    "third_party_lib",
+    "touches_telematics",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_telematics"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "telematics"
+   },
+   "scope_level": "service",
+   "rationale": "After the February telematics-feed incident, risk appetite narrowed: a pending vendor review is insufficient where the library touches live telematics streams carrying driver data.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-004",
+   "provision_id": "SC-208",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-21T00:00:00.000000+00:00",
+   "facts": [
+    "cve_high",
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "premise": [
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30-day remediation ticket with named owner"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "SC-208 targets exploitable exposure; a build-time-only dependency with no runtime reachability does not present it, provided remediation is tracked.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-005",
+   "provision_id": "SC-206",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-23T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "generated_boilerplate"
+   ],
+   "premise": [
+    "generated_boilerplate"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "coverage measured at module level for generated EDI mappings"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Line-level coverage on generated EDI-mapping scaffolds measures the generator, not the change; module-level measurement preserves the provision's intent.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-006",
+   "provision_id": "SC-210",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-21T00:00:00.000000+00:00",
+   "facts": [
+    "dummy_marked",
+    "fixture_path",
+    "secret_scanner_hit"
+   ],
+   "premise": [
+    "dummy_marked",
+    "fixture_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fixture must carry DUMMY- prefix and live under /testdata"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Clearly-marked dummy credentials in test fixtures are not secrets; SC-210 targets live credential exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-007",
+   "provision_id": "SC-216",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2025-12-20T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A formal test suite does not substitute for the human sign-off SC-216 requires on agent-authored tenant-access changes; in a multi-tenant platform the provision allocates accountability, not just verification.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-008",
+   "provision_id": "SC-211",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-09T00:00:00.000000+00:00",
+   "facts": [
+    "carrier_outage",
+    "emergency_claimed",
+    "freeze_deploy"
+   ],
+   "premise": [
+    "carrier_outage"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single deploy window; senior engineer paired"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A major-carrier EDI outage during peak justified one freeze-window deploy; residual risk accepted for 60 days pending an emergency-protocol amendment.",
+   "is_acceptance": true,
+   "expiry": "2026-03-10T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-009",
+   "provision_id": "SC-215",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-01T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "30-day pilot, anonymized cohort only"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Growth pilot allowed ahead of DPIA once; the Lawmakers subsequently REJECTED the referral: DPIA-first stands.",
+   "is_acceptance": true,
+   "expiry": "2025-10-31T00:00:00.000000+00:00",
+   "organization": "sctower",
+   "referral_outcome": "rejected"
+  },
+  {
+   "seed_id": "SP-010",
+   "provision_id": "SC-207",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-20T00:00:00.000000+00:00",
+   "facts": [
+    "new_table_only",
+    "no_data_mutation",
+    "schema_migration",
+    "shipment_event_table"
+   ],
+   "premise": [
+    "new_table_only",
+    "no_data_mutation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "table creation scripted; drop script attached"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Reversibility exists to protect existing shipment-event history; a pure additive table creation mutates nothing and is trivially reversible by drop.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-011",
+   "provision_id": "SC-217",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "dispatch_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "flagged_off_default"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "flag stays off until regression fixed; perf ticket filed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regression behind a default-off flag imposes no user-facing latency; the budget binds at flag-on.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-015",
+   "provision_id": "SC-217",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "flagged_off_default",
+    "latency_regression",
+    "tracking_service"
+   ],
+   "premise": [
+    "tracking_service"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "tracking"
+   },
+   "scope_level": "service",
+   "rationale": "Live-tracking latency is operationally critical during peak exception windows; even flagged-off regressions in the tracking API must be fixed before merge to avoid flag-flip risk.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-012",
+   "provision_id": "SC-201",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-05T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "holds_customs_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_customs_credentials"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "carrier-integrations"
+   },
+   "scope_level": "service",
+   "rationale": "Where the connector also holds customs-filing (ACE/ABI) credentials the CBP filing perimeter is implicated; the vault-lag tolerance of SP-001 does not extend there.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-013",
+   "provision_id": "SC-206",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-13T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "follow-up coverage ticket within one sprint"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Legacy EDI modules predate the coverage mandate; incremental improvement via tracked tickets was held acceptable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-014",
+   "provision_id": "SC-206",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-20T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Q2 quality initiative ended the legacy-module exception: coverage is met before merge, including legacy EDI code. This holding supersedes the earlier permit on the same premise and provision; it is cited here so the departure is recorded rather than left to the clock (Sect. 4.6).",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower",
+   "cites": "SP-013"
+  },
+  {
+   "seed_id": "SC-T01",
+   "provision_id": "SC-218",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "tie_probe_route_a",
+    "tie_probe_route_b"
+   ],
+   "premise": [
+    "tie_probe_route_a"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {},
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "SC-218 is satisfied where the change carries tie_probe_route_a; recorded so the point is citable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SC-T02",
+   "provision_id": "SC-218",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "tie_probe_route_a",
+    "tie_probe_route_b"
+   ],
+   "premise": [
+    "tie_probe_route_b"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": {},
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "SC-218 is not satisfied where the change carries tie_probe_route_b; recorded so the point is citable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-040",
+   "provision_id": "SC-233",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_complete",
+    "emotion_inference",
+    "medical_safety_justification",
+    "workplace_context"
+   ],
+   "premise": [
+    "dpia_complete",
+    "medical_safety_justification"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "safety-monitoring scope only; DPIA on file; annual re-justification"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 5(1)(f) excepts systems put in place for medical or safety reasons; a documented safety justification with a completed DPIA is precisely the carve-out the corpus records as the reason this clause is statute-tier rather than absolute.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-041",
+   "provision_id": "SC-234",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "obvious_ai_context",
+    "undisclosed_ai_interaction",
+    "ux_review_complete"
+   ],
+   "premise": [
+    "obvious_ai_context",
+    "ux_review_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "obviousness finding documented by UX review; re-test on major redesign"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50(1) applies 'unless this is obvious from the point of view of a reasonably well-informed person'; a documented obviousness finding is the proviso working as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "SP-042",
+   "provision_id": "SC-235",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "explicit_consent_documented",
+    "new_processing_path",
+    "purpose_limited",
+    "special_category_data"
+   ],
+   "premise": [
+    "explicit_consent_documented",
+    "purpose_limited"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "Art. 9(2)(a) gate: explicit consent recorded per purpose; audit annually"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 9(1) is a prohibition with ten derogations; documented explicit consent for a limited purpose satisfies the Art. 9(2)(a) gate.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  }
+ ]
+}

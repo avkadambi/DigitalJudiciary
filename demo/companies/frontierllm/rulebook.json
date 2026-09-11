@@ -1,0 +1,386 @@
+{
+ "provisions": [
+  {
+   "provision_id": "FL-401",
+   "absolute": false,
+   "text": "Cluster, registry, and external-API credentials live only in the secrets vault; no credentials in job or pipeline configuration.",
+   "policy": {
+    "deny_if_any": [
+     "hotfix",
+     "job_credentials",
+     "new_region"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-402",
+   "absolute": true,
+   "text": "No change may create a path for model weights (checkpoints, shards, optimizer states) to leave the secured weights perimeter or reach non-perimeter storage, endpoints, or devices. (Weights-egress floor.)",
+   "policy": {
+    "deny_if_any": [
+     "cross_region_resume",
+     "debug_tooling",
+     "weights_export_path",
+     "weights_shard_read"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-403",
+   "absolute": false,
+   "text": "No third-party code in training-data or model-code paths without a completed vendor security review.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "llm_copilot",
+     "third_party_lib",
+     "user_data_path",
+     "vendor_review_pending"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-404",
+   "absolute": true,
+   "text": "Dangerous-capability and safety evaluation gates may never be bypassed, stubbed, weakened, or have their scoring altered by pipeline actors; releases gate on passing evals. (Safety-eval floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eval_stub_in_ci",
+     "eval_threshold_cap",
+     "release_unblock",
+     "scorer_change"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-405",
+   "absolute": false,
+   "text": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement.",
+   "policy": {
+    "deny_if_any": [
+     "agent_authored",
+     "missing_attestation"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-406",
+   "absolute": false,
+   "text": "Changed-line test coverage >= 80% on services tagged critical (eval harness, safety filters, serving gateway).",
+   "policy": {
+    "deny_if_any": [
+     "coverage_shortfall",
+     "critical_service",
+     "handwritten_logic",
+     "new_feature"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-407",
+   "absolute": false,
+   "text": "Schema migrations on experiment-metrics tables require a reversible down-migration.",
+   "policy": {
+    "deny_if_any": [
+     "data_mutation",
+     "experiment_metrics_table",
+     "no_down_migration",
+     "schema_migration"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-408",
+   "absolute": false,
+   "text": "No dependency carrying a high/critical CVE may deploy.",
+   "policy": {
+    "deny_if_any": [
+     "cve_critical",
+     "cve_high",
+     "prod_dependency",
+     "runtime_reachable"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-409",
+   "absolute": false,
+   "text": "Third-party licenses restricted to the approved list; no AGPL in shipped inference components.",
+   "policy": {
+    "deny_if_any": [
+     "agpl_license",
+     "inference_component"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-410",
+   "absolute": false,
+   "text": "No secrets in source or CI logs (secret-scanner gate).",
+   "policy": {
+    "deny_if_any": [
+     "live_credential",
+     "secret_scanner_hit",
+     "unmarked_test_key"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-411",
+   "absolute": false,
+   "text": "No production deploys to training infrastructure during a declared major-run change freeze except under the emergency protocol.",
+   "policy": {
+    "deny_if_any": [
+     "freeze_deploy",
+     "non_emergency",
+     "training_run_incident"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-412",
+   "absolute": false,
+   "text": "All changes to safety-filter rule evaluation ship behind a feature flag.",
+   "policy": {
+    "deny_if_any": [
+     "alerting_rules",
+     "no_feature_flag"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-413",
+   "absolute": true,
+   "text": "User conversation data flagged do-not-train is never included in training corpora, and EU user data remains in the EU region. (Data-provenance/privacy floor.)",
+   "policy": {
+    "deny_if_any": [
+     "do_not_train_data",
+     "eu_us_replication",
+     "training_corpus_inclusion"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-415",
+   "absolute": false,
+   "text": "No new analytics or telemetry on user or staff data without a completed privacy review.",
+   "policy": {
+    "deny_if_any": [
+     "computer_vision",
+     "external_analytics",
+     "first_of_kind",
+     "no_dpia",
+     "user_data_path",
+     "worker_images"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-416",
+   "absolute": false,
+   "text": "AI-agent-authored changes to authorization, tenant-access, or safety-filter code require human reviewer sign-off.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "formal_test_suite",
+     "incident_window",
+     "job_scheduler_writeback",
+     "no_reviewer_available"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-417",
+   "absolute": false,
+   "text": "Deploys blocked on >10% p95 latency regression for the serving API tier.",
+   "policy": {
+    "deny_if_any": [
+     "console_service",
+     "flag_on_default",
+     "latency_regression"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-418",
+   "absolute": false,
+   "text": "Storage-touching changes require a verified backup/restore run in staging.",
+   "policy": {
+    "deny_if_any": []
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-419",
+   "absolute": false,
+   "text": "Changes to evaluation-scoring logic require safety-team domain review.",
+   "policy": {
+    "deny_if_any": [
+     "eval_scoring_change",
+     "safety_team_review_pending"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-420",
+   "absolute": false,
+   "text": "User-facing notification templates must pass the opt-in/consent check.",
+   "policy": {
+    "deny_if_any": [
+     "consent_check_pending",
+     "customer_communication",
+     "first_of_kind",
+     "no_consent_check",
+     "notification_template"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-421",
+   "absolute": true,
+   "text": "Safety-incident and evaluation audit logs are immutable and retained 7 years; no change may shorten retention or add mutation paths. (Evidence floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eval_audit_log",
+     "incident_log_retention",
+     "mutation_path",
+     "retention_cut"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-422",
+   "absolute": false,
+   "text": "Model checkpoint promotion to serving requires a shadow-evaluation report before live traffic.",
+   "policy": {
+    "deny_if_any": [
+     "checkpoint_promotion",
+     "ml_model_update",
+     "no_shadow_eval"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-430",
+   "absolute": true,
+   "text": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour. (EU AI Act Art. 5(1)(b) floor \u2014 corpus EU-AIACT-A5.1.b, absolute, strictness 4/4: no derogation exists and no officer holds authority to accept this risk.)",
+   "policy": {
+    "deny_if_any": [
+     "vulnerability_targeting",
+     "behavioral_distortion"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-431",
+   "absolute": true,
+   "text": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage. (EU AI Act Art. 5(1)(e) floor \u2014 corpus EU-AIACT-A5.1.e, absolute, strictness 4/4.)",
+   "policy": {
+    "deny_if_any": [
+     "untargeted_scraping",
+     "facial_db_expansion"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-432",
+   "absolute": true,
+   "text": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one. (GDPR Art. 7(3) floor \u2014 corpus EU-GDPR-A7.3, absolute: outside the Art. 23 restriction list, all four corpus criteria pass.)",
+   "policy": {
+    "deny_if_any": [
+     "withdrawal_friction",
+     "withdrawal_path_removed"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-433",
+   "absolute": false,
+   "text": "No AI inference of emotions of a natural person in workplace contexts; the Art. 5(1)(f) medical/safety exception requires a documented justification and a completed DPIA. (EU AI Act Art. 5(1)(f) \u2014 corpus EU-AIACT-A5.1.f, statute: the medical/safety carve-out fails the derogation-free criterion, so the marginal case is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "emotion_inference",
+     "workplace_context"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-434",
+   "absolute": false,
+   "text": "Natural persons must be informed they are interacting with an AI system unless this is obvious to a reasonably well-informed person. (EU AI Act Art. 50(1) \u2014 corpus EU-AIACT-A50.1, statute: the obviousness proviso and law-enforcement exception fail the derogation-free criterion.)",
+   "policy": {
+    "deny_if_any": [
+     "undisclosed_ai_interaction"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-435",
+   "absolute": false,
+   "text": "Special-category personal data (health, biometric-for-ID, orientation, beliefs) may not enter a new processing path without a documented GDPR Art. 9(2) gate. (GDPR Art. 9(1) \u2014 corpus EU-GDPR-A9.1, statute: ten enumerated derogations in Art. 9(2), so the gate question is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "special_category_data",
+     "new_processing_path"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-436",
+   "absolute": false,
+   "text": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning). (Corpus EU-GDPR-A33.1 and EU-NIS2-A23.4.a, statute: the low-risk dispensation and 'where feasible' hedge fail determinacy; the NIS2 deadline fails transposition-invariance.)",
+   "policy": {
+    "deny_if_any": [
+     "notification_delay_path",
+     "breach_pipeline_removal"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-437",
+   "absolute": false,
+   "text": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport. (NIST SP 800-53 IA-2 / SC-8 \u2014 corpus US-NIST80053-IA-2 and -SC-8, statute: framework guidance binding via contractual attachment, tailorable, so compensating controls are adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "shared_account_path",
+     "unauthenticated_endpoint",
+     "plaintext_transmission"
+    ]
+   },
+   "organization": "frontierllm"
+  }
+ ],
+ "standing_declaration": {
+  "scope": "_global",
+  "adverse_to_grants": false,
+  "holder": null,
+  "note": "No party in this deployment holds contest standing adverse to grants: contest may be invoked by the requesting party only, and the companion chapter's standing extension is not adopted. Recorded per Axiom A9 so that the one-sidedness of the realised base is a disclosed fact of every audit export."
+ }
+}

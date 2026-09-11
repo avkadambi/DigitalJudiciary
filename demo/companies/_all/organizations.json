@@ -1,0 +1,208 @@
+{
+ "organizations": [
+  {
+   "org_id": "sctower",
+   "name": "SC Control Tower",
+   "principals": [
+    {
+     "principal_id": "sctower.risk",
+     "branch": "risk_owner",
+     "key": "devkey-sctower-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "sctower.grc",
+     "branch": "lawmakers",
+     "key": "devkey-sctower-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "sctower.eng",
+     "branch": null,
+     "key": "devkey-sctower-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "sctower.audit",
+     "branch": null,
+     "key": "devkey-sctower-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": "vetpoc",
+   "name": "VetPOC",
+   "principals": [
+    {
+     "principal_id": "vetpoc.risk",
+     "branch": "risk_owner",
+     "key": "devkey-vetpoc-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "vetpoc.grc",
+     "branch": "lawmakers",
+     "key": "devkey-vetpoc-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "vetpoc.eng",
+     "branch": null,
+     "key": "devkey-vetpoc-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "vetpoc.audit",
+     "branch": null,
+     "key": "devkey-vetpoc-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": "dcvigil",
+   "name": "DCVigil",
+   "principals": [
+    {
+     "principal_id": "dcvigil.risk",
+     "branch": "risk_owner",
+     "key": "devkey-dcvigil-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "dcvigil.grc",
+     "branch": "lawmakers",
+     "key": "devkey-dcvigil-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "dcvigil.eng",
+     "branch": null,
+     "key": "devkey-dcvigil-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "dcvigil.audit",
+     "branch": null,
+     "key": "devkey-dcvigil-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": "frontierllm",
+   "name": "FrontierLLM",
+   "principals": [
+    {
+     "principal_id": "frontierllm.risk",
+     "branch": "risk_owner",
+     "key": "devkey-frontierllm-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "frontierllm.grc",
+     "branch": "lawmakers",
+     "key": "devkey-frontierllm-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "frontierllm.eng",
+     "branch": null,
+     "key": "devkey-frontierllm-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "frontierllm.audit",
+     "branch": null,
+     "key": "devkey-frontierllm-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": "fintech",
+   "name": "Meridian Financial",
+   "principals": [
+    {
+     "principal_id": "fintech.risk",
+     "branch": "risk_owner",
+     "key": "devkey-fintech-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "fintech.grc",
+     "branch": "lawmakers",
+     "key": "devkey-fintech-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "fintech.eng",
+     "branch": null,
+     "key": "devkey-fintech-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "fintech.audit",
+     "branch": null,
+     "key": "devkey-fintech-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": null,
+   "name": "Platform",
+   "principals": [
+    {
+     "principal_id": "platform.admin",
+     "branch": null,
+     "key": "devkey-platform-admin",
+     "kind": "human",
+     "role": "platform administrator \u2014 the only account that reads across tenants, and it decides nothing"
+    }
+   ]
+  }
+ ],
+ "founding_scope": "sctower"
+}

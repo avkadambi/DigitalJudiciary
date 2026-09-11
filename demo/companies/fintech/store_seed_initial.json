@@ -1,0 +1,635 @@
+{
+ "records": [
+  {
+   "seed_id": "MP-001",
+   "provision_id": "MF-206",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-12T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "rotation_enabled",
+    "secret_in_source",
+    "vault_migration_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_migration_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "MF-206 targets credential EXPOSURE. An encrypted, rotating configuration whose vault migration is already ticketed presents migration lag, not exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-002",
+   "provision_id": "MF-206",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-01-20T00:00:00.000000+00:00",
+   "facts": [
+    "credential_in_ci_log",
+    "rotation_enabled"
+   ],
+   "premise": [
+    "credential_in_ci_log",
+    "rotation_enabled"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A credential printed into a CI log is already disclosed to everyone who can read the build. Rotation limits the window; it does not undo the disclosure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-003",
+   "provision_id": "MF-211",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-03T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "sbom_provided",
+    "third_party_lib",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "community_audit_complete",
+    "sbom_provided"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review to close within 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used library with a published SBOM and a completed community audit carries materially lower supply-chain risk; the vendor review may close in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-004",
+   "provision_id": "MF-211",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-02-11T00:00:00.000000+00:00",
+   "facts": [
+    "sbom_provided",
+    "third_party_lib",
+    "touches_cardholder_path",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_cardholder_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "After the January cardholder-path incident, an SBOM alone no longer suffices for code inside the cardholder boundary. Reviewed diligence must precede the merge, not follow it.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-005",
+   "provision_id": "MF-202",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-12-08T00:00:00.000000+00:00",
+   "facts": [
+    "ciso_compensating_control",
+    "mfa_exception_requested",
+    "phishing_resistant_fallback",
+    "time_boxed_30d"
+   ],
+   "premise": [
+    "ciso_compensating_control",
+    "phishing_resistant_fallback",
+    "time_boxed_30d"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30 days maximum; CISO control on file; phishing-resistant fallback in place"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Section 500.12(a) contemplates a CISO-approved compensating control. A time-boxed exception with a phishing-resistant fallback is the case the rule describes, not an evasion of it.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-006",
+   "provision_id": "MF-301",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-04T00:00:00.000000+00:00",
+   "facts": [
+    "independent_validation_complete",
+    "model_decision_path",
+    "shadow_mode",
+    "unvalidated_model_deploy"
+   ],
+   "premise": [
+    "shadow_mode"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "shadow mode only; no customer-visible decision until validation closes"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "SR 11-7 scales control to use. A model that only shadows the incumbent takes no decision, so the validation obligation attaches before promotion rather than before deployment.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-007",
+   "provision_id": "MF-301",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-17T00:00:00.000000+00:00",
+   "facts": [
+    "champion_challenger_only",
+    "model_decision_path",
+    "unvalidated_model_deploy"
+   ],
+   "premise": [
+    "champion_challenger_only"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A challenger model whose output is scored against live decisions is already influencing the decision record; validation attaches at that point.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-008",
+   "provision_id": "MF-307",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-29T00:00:00.000000+00:00",
+   "facts": [
+    "attestation_complete",
+    "human_requirement_linked",
+    "missing_attestation"
+   ],
+   "premise": [
+    "attestation_complete",
+    "human_requirement_linked"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "attestation attached before merge; human requirement linked in the ticket"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The provision asks who authored the change and on whose instruction. A complete attestation linked to a human requirement answers exactly that.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-009",
+   "provision_id": "MF-307",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-08T00:00:00.000000+00:00",
+   "facts": [
+    "unbounded_agent_action",
+    "value_cap_set"
+   ],
+   "premise": [
+    "value_cap_set"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A value cap on a single action does not bound an agent that may retry. The bound must hold across the session, not the call.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-010",
+   "provision_id": "MF-210",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-19T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_completed",
+    "new_pii_field",
+    "purpose_documented",
+    "retention_schedule_set"
+   ],
+   "premise": [
+    "dpia_completed",
+    "purpose_documented",
+    "retention_schedule_set"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "retention schedule registered before first write"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Arts. 5(1)(c) and 5(1)(e) ask for purpose and a limit. A completed DPIA with a registered schedule supplies both.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-011",
+   "provision_id": "MF-212",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-12-30T00:00:00.000000+00:00",
+   "facts": [
+    "freeze_deploy",
+    "rollback_verified",
+    "sev1_incident"
+   ],
+   "premise": [
+    "rollback_verified",
+    "sev1_incident"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "incident reference recorded; rollback rehearsed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The freeze exists to protect the peak. A change that restores the peak, with a rehearsed rollback, serves the provision rather than defeating it.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-012",
+   "provision_id": "MF-212",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-06T00:00:00.000000+00:00",
+   "facts": [
+    "freeze_deploy",
+    "regulator_deadline"
+   ],
+   "premise": [
+    "regulator_deadline"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regulatory deadline known months in advance is a planning failure, not an emergency. The freeze holds.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-013",
+   "provision_id": "MF-207",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-02-02T00:00:00.000000+00:00",
+   "facts": [
+    "script_inventory_updated",
+    "sri_hash_pinned",
+    "unauthorized_payment_script"
+   ],
+   "premise": [
+    "script_inventory_updated",
+    "sri_hash_pinned"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "SRI hash pinned; inventory entry updated in the same change"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Req. 6.4.3 asks that scripts be authorized and their integrity assured. A pinned hash plus an inventory entry is that assurance, whatever the approval workflow's state.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-014",
+   "provision_id": "MF-401",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-22T00:00:00.000000+00:00",
+   "facts": [
+    "friction_asymmetry",
+    "ux_research_filed"
+   ],
+   "premise": [
+    "friction_asymmetry",
+    "ux_research_filed"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Research showing that customers tolerate an asymmetric cancellation flow measures tolerance, not fairness. Asymmetry between signing up and leaving is the abuse the provision names.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-015",
+   "provision_id": "MF-401",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-25T00:00:00.000000+00:00",
+   "facts": [
+    "disclosure_reviewed",
+    "symmetric_cancellation",
+    "undisclosed_fee"
+   ],
+   "premise": [
+    "disclosure_reviewed",
+    "symmetric_cancellation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fee surfaced on the confirmation screen"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A fee disclosed on the screen where the customer commits, in a flow they can leave as easily as they entered, is disclosed.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-016",
+   "provision_id": "MF-204",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-14T00:00:00.000000+00:00",
+   "facts": [
+    "non_critical_function",
+    "register_entry_filed",
+    "unregistered_ict_provider"
+   ],
+   "premise": [
+    "non_critical_function",
+    "register_entry_filed"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "register entry filed; function classified non-critical on the record"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 28(3) attaches to critical-or-important functions. A recorded non-critical classification with a register entry meets the obligation as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-017",
+   "provision_id": "MF-303",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-05-06T00:00:00.000000+00:00",
+   "facts": [
+    "disclosure_banner_shipped",
+    "undisclosed_ai_agent"
+   ],
+   "premise": [
+    "disclosure_banner_shipped"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "disclosure visible before the first agent turn"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50 requires that the customer be informed, not that the notice take a particular form. A banner shown before the first turn informs.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-018",
+   "provision_id": "MF-308",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-21T00:00:00.000000+00:00",
+   "facts": [
+    "anonymization_verified",
+    "third_party_model_retention",
+    "zero_retention_agreement"
+   ],
+   "premise": [
+    "anonymization_verified",
+    "zero_retention_agreement"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "zero-retention terms executed; anonymization verified by the privacy office"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Executed zero-retention terms plus verified anonymization remove both the lawful-basis question and the provider retention window the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-019",
+   "provision_id": "MF-205",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-30T00:00:00.000000+00:00",
+   "facts": [
+    "canary_staged",
+    "critical_function_change",
+    "dr_test_passed"
+   ],
+   "premise": [
+    "canary_staged",
+    "dr_test_passed"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "canary held for one full business day"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Arts. 24-26 are proportionate. A passed DR test plus a staged canary is proportionate testing for a change of this size.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-020",
+   "provision_id": "MF-201",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-05-19T00:00:00.000000+00:00",
+   "facts": [
+    "ciso_finding_filed",
+    "compensating_control_documented",
+    "encryption_downgrade",
+    "internal_network_only"
+   ],
+   "premise": [
+    "ciso_finding_filed",
+    "compensating_control_documented",
+    "internal_network_only"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "internal path only; CISO finding on file; revisit at the next architecture review"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "16 CFR 314.4(c)(3) contemplates a CISO finding of an effective alternative control. On a wholly internal path with the finding filed, that is the case the rule describes.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-021",
+   "provision_id": "MF-209",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-02-24T00:00:00.000000+00:00",
+   "facts": [
+    "canary_staged",
+    "latency_regression",
+    "load_test_passed",
+    "off_peak_window"
+   ],
+   "premise": [
+    "canary_staged",
+    "load_test_passed",
+    "off_peak_window"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "off-peak release; canary metrics watched for one hour"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The threshold protects the authorization path at peak. Load-tested, canaried, off-peak, the regression never reaches the traffic the rule protects.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-022",
+   "provision_id": "MF-402",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-10T00:00:00.000000+00:00",
+   "facts": [
+    "furnishing_accuracy_gap",
+    "reconciliation_job_added"
+   ],
+   "premise": [
+    "reconciliation_job_added"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "reconciliation runs before the next furnishing cycle"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "FCRA asks for reasonable procedures. A reconciliation job that closes the gap before the next cycle is a reasonable procedure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "MP-023",
+   "provision_id": "MF-304",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-28T00:00:00.000000+00:00",
+   "facts": [
+    "conformity_dossier_started",
+    "high_risk_ai_gap",
+    "no_conformity_assessment"
+   ],
+   "premise": [
+    "conformity_dossier_started"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "expires 30 June 2026; dossier complete before renewal is sought"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Annex III obligations are not yet live and the conformity dossier is underway, so the risk owner accepted a bounded window rather than a permanent exception. A7 makes the end date part of the act: when it passes, the block returns without anyone deciding again.",
+   "is_acceptance": true,
+   "expiry": "2026-06-30",
+   "organization": "fintech"
+  }
+ ]
+}

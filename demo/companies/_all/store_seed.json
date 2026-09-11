@@ -1,0 +1,5155 @@
+{
+ "records": [
+  {
+   "seed_id": "sctower:SP-001",
+   "provision_id": "SC-201",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "connector_credentials",
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "SC-201 exists to prevent credential exposure; an encrypted, rotating config whose vault onboarding is queued presents the paperwork lag, not the exposure the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-002",
+   "provision_id": "SC-203",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-02-23T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "tenant_data_path",
+    "third_party_lib"
+   ],
+   "premise": [
+    "community_audit_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review within 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used OSS library with a completed community security audit presents materially lower supply-chain risk; vendor review may complete in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-003",
+   "provision_id": "SC-203",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-15T00:00:00.000000+00:00",
+   "facts": [
+    "tenant_data_path",
+    "third_party_lib",
+    "touches_telematics",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_telematics"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "telematics"
+   },
+   "scope_level": "service",
+   "rationale": "After the February telematics-feed incident, risk appetite narrowed: a pending vendor review is insufficient where the library touches live telematics streams carrying driver data.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-004",
+   "provision_id": "SC-208",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-21T00:00:00.000000+00:00",
+   "facts": [
+    "cve_high",
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "premise": [
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30-day remediation ticket with named owner"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "SC-208 targets exploitable exposure; a build-time-only dependency with no runtime reachability does not present it, provided remediation is tracked.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-005",
+   "provision_id": "SC-206",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-23T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "generated_boilerplate"
+   ],
+   "premise": [
+    "generated_boilerplate"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "coverage measured at module level for generated EDI mappings"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Line-level coverage on generated EDI-mapping scaffolds measures the generator, not the change; module-level measurement preserves the provision's intent.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-006",
+   "provision_id": "SC-210",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-21T00:00:00.000000+00:00",
+   "facts": [
+    "dummy_marked",
+    "fixture_path",
+    "secret_scanner_hit"
+   ],
+   "premise": [
+    "dummy_marked",
+    "fixture_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fixture must carry DUMMY- prefix and live under /testdata"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Clearly-marked dummy credentials in test fixtures are not secrets; SC-210 targets live credential exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-007",
+   "provision_id": "SC-216",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2025-12-20T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A formal test suite does not substitute for the human sign-off SC-216 requires on agent-authored tenant-access changes; in a multi-tenant platform the provision allocates accountability, not just verification.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-008",
+   "provision_id": "SC-211",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-09T00:00:00.000000+00:00",
+   "facts": [
+    "carrier_outage",
+    "emergency_claimed",
+    "freeze_deploy"
+   ],
+   "premise": [
+    "carrier_outage"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single deploy window; senior engineer paired"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A major-carrier EDI outage during peak justified one freeze-window deploy; residual risk accepted for 60 days pending an emergency-protocol amendment.",
+   "is_acceptance": true,
+   "expiry": "2026-03-10T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-009",
+   "provision_id": "SC-215",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-01T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "30-day pilot, anonymized cohort only"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Growth pilot allowed ahead of DPIA once; the Lawmakers subsequently REJECTED the referral: DPIA-first stands.",
+   "is_acceptance": true,
+   "expiry": "2025-10-31T00:00:00.000000+00:00",
+   "organization": "sctower",
+   "referral_outcome": "rejected"
+  },
+  {
+   "seed_id": "sctower:SP-010",
+   "provision_id": "SC-207",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-20T00:00:00.000000+00:00",
+   "facts": [
+    "new_table_only",
+    "no_data_mutation",
+    "schema_migration",
+    "shipment_event_table"
+   ],
+   "premise": [
+    "new_table_only",
+    "no_data_mutation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "table creation scripted; drop script attached"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Reversibility exists to protect existing shipment-event history; a pure additive table creation mutates nothing and is trivially reversible by drop.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-011",
+   "provision_id": "SC-217",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "dispatch_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "flagged_off_default"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "flag stays off until regression fixed; perf ticket filed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regression behind a default-off flag imposes no user-facing latency; the budget binds at flag-on.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-015",
+   "provision_id": "SC-217",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "flagged_off_default",
+    "latency_regression",
+    "tracking_service"
+   ],
+   "premise": [
+    "tracking_service"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "tracking"
+   },
+   "scope_level": "service",
+   "rationale": "Live-tracking latency is operationally critical during peak exception windows; even flagged-off regressions in the tracking API must be fixed before merge to avoid flag-flip risk.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-012",
+   "provision_id": "SC-201",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-05T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "holds_customs_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_customs_credentials"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "carrier-integrations"
+   },
+   "scope_level": "service",
+   "rationale": "Where the connector also holds customs-filing (ACE/ABI) credentials the CBP filing perimeter is implicated; the vault-lag tolerance of SP-001 does not extend there.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-013",
+   "provision_id": "SC-206",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-13T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "follow-up coverage ticket within one sprint"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Legacy EDI modules predate the coverage mandate; incremental improvement via tracked tickets was held acceptable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-014",
+   "provision_id": "SC-206",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-20T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Q2 quality initiative ended the legacy-module exception: coverage is met before merge, including legacy EDI code. This holding supersedes the earlier permit on the same premise and provision; it is cited here so the departure is recorded rather than left to the clock (Sect. 4.6).",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower",
+   "cites": "sctower:SP-013"
+  },
+  {
+   "seed_id": "sctower:SP-0101",
+   "provision_id": "SC-201",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "connector_credentials",
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=SP-001",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0102",
+   "provision_id": "SC-216",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=SP-007",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0103",
+   "provision_id": "SC-203",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "tenant_data_path",
+    "third_party_lib",
+    "touches_telematics",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "community_audit_complete",
+    "touches_telematics"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed; vendor review within 30 days"
+   },
+   "scope": {
+    "service": "telematics"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=SP-002",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0104",
+   "provision_id": "SC-201",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "connector_credentials",
+    "encrypted_config",
+    "holds_customs_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_customs_credentials"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "carrier-integrations"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=SP-012",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0105",
+   "provision_id": "SC-217",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "flagged_off_default",
+    "latency_regression",
+    "tracking_service"
+   ],
+   "premise": [
+    "tracking_service"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "tracking"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=SP-015",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0106",
+   "provision_id": "SC-201",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "connector_credentials",
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_rejected"
+   ],
+   "premise": [
+    "vault_onboarding_rejected"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0107",
+   "provision_id": "SC-203",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "tenant_data_path",
+    "third_party_lib",
+    "touches_telematics",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_telematics"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "telematics"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=SP-003",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0108",
+   "provision_id": "SC-211",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "carrier_outage",
+    "emergency_claimed",
+    "freeze_deploy"
+   ],
+   "premise": [
+    "emergency_claimed"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0109",
+   "provision_id": "SC-215",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Tier3: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0110",
+   "provision_id": "SC-219",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "broker_review_pending",
+    "certified_format",
+    "customs_filing_change",
+    "regulatory_deadline"
+   ],
+   "premise": [
+    "certified_format",
+    "regulatory_deadline"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "broker review completes within 60 days; filings dual-validated meanwhile"
+   },
+   "scope": {
+    "service": "customs"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-06-18T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0111",
+   "provision_id": "SC-203",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "carrier_mandated",
+    "tenant_data_path",
+    "third_party_lib",
+    "vendor_review_blocked"
+   ],
+   "premise": [
+    "carrier_mandated",
+    "vendor_review_blocked"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "SDK sandboxed; contract renegotiation opened"
+   },
+   "scope": {
+    "service": "carrier-integrations"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-07-18T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0112",
+   "provision_id": "SC-211",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "carrier_outage",
+    "freeze_deploy",
+    "port_disruption"
+   ],
+   "premise": [
+    "carrier_outage"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single window; paired deploy"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "TierK: renewal permitted while referral pending; new acceptance cites SP-008 (A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-19T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0113",
+   "provision_id": "SC-215",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: renewal of SP-009 BARRED \u2014 Lawmakers rejected its referral (A7); denial stands",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0114",
+   "provision_id": "SC-207",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "corruption_repair",
+    "data_mutation",
+    "schema_migration",
+    "shipment_event_table"
+   ],
+   "premise": [
+    "corruption_repair"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "verified full backup taken; repair scripted and rehearsed in staging"
+   },
+   "scope": {
+    "service": "tracking"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-19T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0115",
+   "provision_id": "SC-216",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "incident_window",
+    "no_reviewer_available"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "TierK: RiskOwner declines to accept residual risk; denial upheld and stored",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0116",
+   "provision_id": "SC-206",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "incident_hotfix"
+   ],
+   "premise": [
+    "incident_hotfix"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "retroactive tests within 14 days"
+   },
+   "scope": {
+    "service": "alerting"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-03T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0117",
+   "provision_id": "SC-209",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agpl_license",
+    "legal_review_open",
+    "no_alternative"
+   ],
+   "premise": [
+    "legal_review_open",
+    "no_alternative"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "process isolation; no static linking; legal review within 90 days"
+   },
+   "scope": {
+    "service": "dispatch"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-07-18T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0118",
+   "provision_id": "SC-212",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "alerting_rules",
+    "flag_infra_down",
+    "no_feature_flag",
+    "safety_fix"
+   ],
+   "premise": [
+    "flag_infra_down",
+    "safety_fix"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "flag added within 7 days of infra restoration"
+   },
+   "scope": {
+    "service": "alerting"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-04-26T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0119",
+   "provision_id": "SC-220",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "consent_check_pending",
+    "disruption_notice",
+    "notification_template"
+   ],
+   "premise": [
+    "disruption_notice"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "counsel review within 14 days; disruption-only scope"
+   },
+   "scope": {
+    "service": "notifications"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-03T00:00:00.000000+00:00",
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0120",
+   "provision_id": "SC-203",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "first_of_kind",
+    "llm_copilot",
+    "sandboxed_runtime",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "sandboxed_runtime"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "tenant-scoped context only; no cross-tenant retrieval; no data egress to the model provider; output labeled"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0121",
+   "provision_id": "SC-216",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "autonomous_action",
+    "customer_writeback",
+    "first_of_kind"
+   ],
+   "premise": [
+    "autonomous_action"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "dispatch"
+   },
+   "scope_level": "service",
+   "rationale": "Tier3: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-0122",
+   "provision_id": "SC-220",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_communication",
+    "first_of_kind",
+    "llm_generated_text"
+   ],
+   "premise": [
+    "llm_generated_text"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "human approves each send; template disclosure line"
+   },
+   "scope": {
+    "service": "notifications"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "vetpoc:PR-001",
+   "provision_id": "VP-101",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "admin_lag_only",
+    "attestation_complete",
+    "pii_write",
+    "store_encrypted"
+   ],
+   "premise": [
+    "admin_lag_only",
+    "attestation_complete",
+    "store_encrypted"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; director authorization; compensating monitoring control"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "VP-101 protects data at rest; a completed-but-queued attestation already establishes encryption; paperwork lag alone is not the risk the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-002",
+   "provision_id": "VP-103",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-02-23T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "community_audit_complete",
+    "third_party_lib"
+   ],
+   "premise": [
+    "community_audit_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review must complete in 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used OSS library with a completed community security audit presents materially lower supply-chain risk; vendor review may complete in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-003",
+   "provision_id": "VP-103",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-15T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "third_party_lib",
+    "touches_telemetry",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_telemetry"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "analytics"
+   },
+   "scope_level": "service",
+   "rationale": "After the March telemetry incident, risk appetite for client-telemetry paths narrowed; a pending vendor review is insufficient where the library touches telemetry.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-004",
+   "provision_id": "VP-108",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-21T00:00:00.000000+00:00",
+   "facts": [
+    "cve_high",
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "premise": [
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30-day remediation ticket with named owner"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "VP-108 targets exploitable exposure; a build-time-only dependency with no runtime reachability does not present it, provided remediation is tracked.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-005",
+   "provision_id": "VP-106",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-23T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "generated_boilerplate"
+   ],
+   "premise": [
+    "generated_boilerplate"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "coverage measured at module level for generated code"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Line-level coverage on ORM/scaffold output measures the generator, not the change; module-level measurement preserves the provision's intent.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-006",
+   "provision_id": "VP-110",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-21T00:00:00.000000+00:00",
+   "facts": [
+    "dummy_marked",
+    "fixture_path",
+    "secret_scanner_hit"
+   ],
+   "premise": [
+    "dummy_marked",
+    "fixture_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fixture must carry DUMMY- prefix and live under /testdata"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Clearly-marked dummy credentials in test fixtures are not secrets; VP-110 targets live credential exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-007",
+   "provision_id": "VP-116",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2025-12-20T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A formal test suite does not substitute for the human sign-off VP-116 requires on agent-authored authz changes; the provision allocates accountability, not just verification.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-008",
+   "provision_id": "VP-111",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-09T00:00:00.000000+00:00",
+   "facts": [
+    "clinic_outage",
+    "emergency_claimed",
+    "weekend_deploy"
+   ],
+   "premise": [
+    "clinic_outage"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single deploy window; senior engineer paired"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Multi-clinic outage justified one weekend deploy; residual risk accepted for 60 days pending a legislative emergency-protocol amendment.",
+   "is_acceptance": true,
+   "expiry": "2026-03-10T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-009",
+   "provision_id": "VP-115",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-01T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "external_analytics",
+    "growth_experiment"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "30-day pilot, anonymized cohort only"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Growth pilot allowed ahead of DPIA once; Lawmakers subsequently REJECTED the referral: DPIA-first stands.",
+   "is_acceptance": true,
+   "expiry": "2025-10-31T00:00:00.000000+00:00",
+   "organization": "vetpoc",
+   "referral_outcome": "rejected"
+  },
+  {
+   "seed_id": "vetpoc:PR-010",
+   "provision_id": "VP-107",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-20T00:00:00.000000+00:00",
+   "facts": [
+    "new_table_only",
+    "no_data_mutation",
+    "patient_table",
+    "schema_migration"
+   ],
+   "premise": [
+    "new_table_only",
+    "no_data_mutation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "table creation scripted; drop script attached"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Reversibility exists to protect existing patient data; a pure additive table creation mutates nothing and is trivially reversible by drop.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-011",
+   "provision_id": "VP-117",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "flagged_off_default",
+    "latency_regression",
+    "scheduling_service"
+   ],
+   "premise": [
+    "flagged_off_default"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "flag stays off until regression fixed; perf ticket filed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regression behind a default-off flag imposes no user-facing latency; the budget binds at flag-on.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-015",
+   "provision_id": "VP-117",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "emr_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "emr_service"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "emr"
+   },
+   "scope_level": "service",
+   "rationale": "EMR chart-load latency is clinically sensitive during exams; even flagged-off regressions in EMR must be fixed before merge to avoid flag-flip risk.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-012",
+   "provision_id": "VP-101",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-05T00:00:00.000000+00:00",
+   "facts": [
+    "admin_lag_only",
+    "attestation_complete",
+    "holds_payment_tokens",
+    "store_encrypted"
+   ],
+   "premise": [
+    "holds_payment_tokens"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "billing"
+   },
+   "scope_level": "service",
+   "rationale": "Where the store also holds payment tokens the PCI perimeter is implicated; the certification-lag tolerance of PR-001 does not extend there.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-013",
+   "provision_id": "VP-106",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-13T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "follow-up coverage ticket within one sprint"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Legacy modules predate the coverage mandate; incremental improvement via tracked tickets was held acceptable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-014",
+   "provision_id": "VP-106",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-20T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Q2 quality initiative ended the legacy-module exception: coverage is met before merge, including legacy code. This holding supersedes the earlier permit on the same premise and provision; it is cited here so the departure is recorded rather than left to the clock (Sect. 4.6).",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc",
+   "cites": "vetpoc:PR-013"
+  },
+  {
+   "seed_id": "vetpoc:PR-0101",
+   "provision_id": "VP-101",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "admin_lag_only",
+    "attestation_complete",
+    "pii_write",
+    "store_encrypted"
+   ],
+   "premise": [
+    "admin_lag_only",
+    "attestation_complete",
+    "store_encrypted"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; director authorization; monitoring control"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=PR-001",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0102",
+   "provision_id": "VP-116",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=PR-007",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0103",
+   "provision_id": "VP-103",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "community_audit_complete",
+    "third_party_lib",
+    "touches_telemetry",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "community_audit_complete",
+    "touches_telemetry"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed; vendor review within 30 days"
+   },
+   "scope": {
+    "service": "analytics"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=PR-002",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0104",
+   "provision_id": "VP-101",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "admin_lag_only",
+    "attestation_complete",
+    "holds_payment_tokens",
+    "pii_write",
+    "store_encrypted"
+   ],
+   "premise": [
+    "holds_payment_tokens"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "billing"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=PR-012",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0105",
+   "provision_id": "VP-117",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "emr_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "emr_service"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "emr"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=PR-015",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0106",
+   "provision_id": "VP-101",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "admin_lag_only",
+    "attestation_denied",
+    "pii_write",
+    "store_encrypted"
+   ],
+   "premise": [
+    "attestation_denied"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0107",
+   "provision_id": "VP-103",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "third_party_lib",
+    "touches_telemetry",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_telemetry"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "analytics"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=PR-003",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0108",
+   "provision_id": "VP-111",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "clinic_outage",
+    "emergency_claimed",
+    "weekend_deploy"
+   ],
+   "premise": [
+    "emergency_claimed"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0109",
+   "provision_id": "VP-115",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "external_analytics",
+    "growth_experiment"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Tier3: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0110",
+   "provision_id": "VP-103",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "certified_module",
+    "regulatory_deadline",
+    "third_party_lib",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "certified_module",
+    "regulatory_deadline"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "review completes within 60 days; module network-isolated meanwhile"
+   },
+   "scope": {
+    "service": "rx"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-06-18T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0111",
+   "provision_id": "VP-103",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "insurer_mandated",
+    "third_party_lib",
+    "vendor_review_blocked"
+   ],
+   "premise": [
+    "insurer_mandated",
+    "vendor_review_blocked"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "SDK sandboxed; contract renegotiation opened"
+   },
+   "scope": {
+    "service": "insurance"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-07-18T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0112",
+   "provision_id": "VP-111",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "clinic_outage",
+    "lab_recall",
+    "weekend_deploy"
+   ],
+   "premise": [
+    "clinic_outage"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single window; paired deploy"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "TierK: renewal permitted while referral pending; new acceptance cites PR-008 (A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-19T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0113",
+   "provision_id": "VP-115",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "external_analytics",
+    "growth_experiment"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: renewal of PR-009 BARRED \u2014 Lawmakers rejected its referral (A7); denial stands",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0114",
+   "provision_id": "VP-107",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "corruption_repair",
+    "data_mutation",
+    "patient_table",
+    "schema_migration"
+   ],
+   "premise": [
+    "corruption_repair"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "verified full backup taken; repair scripted and rehearsed in staging"
+   },
+   "scope": {
+    "service": "emr"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-19T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0115",
+   "provision_id": "VP-116",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "incident_window",
+    "no_reviewer_available"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "TierK: RiskOwner declines to accept residual risk; denial upheld and stored",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0116",
+   "provision_id": "VP-106",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "incident_hotfix"
+   ],
+   "premise": [
+    "incident_hotfix"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "retroactive tests within 14 days"
+   },
+   "scope": {
+    "service": "emr"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-03T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0117",
+   "provision_id": "VP-109",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agpl_license",
+    "legal_review_open",
+    "no_alternative"
+   ],
+   "premise": [
+    "legal_review_open",
+    "no_alternative"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "process isolation; no static linking; legal review within 90 days"
+   },
+   "scope": {
+    "service": "labs"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-07-18T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0118",
+   "provision_id": "VP-112",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "flag_infra_down",
+    "no_feature_flag",
+    "rx_workflow",
+    "safety_fix"
+   ],
+   "premise": [
+    "flag_infra_down",
+    "safety_fix"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "flag added within 7 days of infra restoration"
+   },
+   "scope": {
+    "service": "rx"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-04-26T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0119",
+   "provision_id": "VP-120",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "consent_check_pending",
+    "recall_notice",
+    "sms_template"
+   ],
+   "premise": [
+    "recall_notice"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "counsel review within 14 days; recall-only scope"
+   },
+   "scope": {
+    "service": "comms"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-03T00:00:00.000000+00:00",
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0120",
+   "provision_id": "VP-103",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "client_data_path",
+    "first_of_kind",
+    "sandboxed_runtime",
+    "wasm_plugin"
+   ],
+   "premise": [
+    "sandboxed_runtime"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "capability-restricted sandbox; no network egress; plugin signing"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0121",
+   "provision_id": "VP-107",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "first_of_kind",
+    "lww_conflicts",
+    "offline_sync",
+    "patient_table"
+   ],
+   "premise": [
+    "lww_conflicts"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "emr"
+   },
+   "scope_level": "service",
+   "rationale": "Tier3: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-0122",
+   "provision_id": "VP-120",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "client_communication",
+    "first_of_kind",
+    "llm_generated_text"
+   ],
+   "premise": [
+    "llm_generated_text"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "human approves each send; template disclosure line"
+   },
+   "scope": {
+    "service": "comms"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "dcvigil:DP-001",
+   "provision_id": "DV-301",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "collector_credentials",
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "DV-301 exists to prevent credential exposure; an encrypted, rotating config whose vault onboarding is queued presents the paperwork lag, not the exposure the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-002",
+   "provision_id": "DV-303",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-02-23T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "tenant_data_path",
+    "third_party_lib"
+   ],
+   "premise": [
+    "community_audit_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review within 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used OSS library with a completed community security audit presents materially lower supply-chain risk; vendor review may complete in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-003",
+   "provision_id": "DV-303",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-15T00:00:00.000000+00:00",
+   "facts": [
+    "tenant_data_path",
+    "third_party_lib",
+    "touches_access_logs",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_access_logs"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "security-telemetry"
+   },
+   "scope_level": "service",
+   "rationale": "After the February badge-log ingestion incident, risk appetite narrowed: a pending vendor review is insufficient where the library touches badge/access-log streams carrying facility personnel data.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-004",
+   "provision_id": "DV-308",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-21T00:00:00.000000+00:00",
+   "facts": [
+    "cve_high",
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "premise": [
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30-day remediation ticket with named owner"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "DV-308 targets exploitable exposure; a build-time-only dependency with no runtime reachability does not present it, provided remediation is tracked.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-005",
+   "provision_id": "DV-306",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-23T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "generated_boilerplate"
+   ],
+   "premise": [
+    "generated_boilerplate"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "coverage measured at module level for generated sensor parsers"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Line-level coverage on generated sensor-parser scaffolds measures the generator, not the change; module-level measurement preserves the provision's intent.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-006",
+   "provision_id": "DV-310",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-21T00:00:00.000000+00:00",
+   "facts": [
+    "dummy_marked",
+    "fixture_path",
+    "secret_scanner_hit"
+   ],
+   "premise": [
+    "dummy_marked",
+    "fixture_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fixture must carry DUMMY- prefix and live under /testdata"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Clearly-marked dummy credentials in test fixtures are not secrets; DV-310 targets live credential exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-007",
+   "provision_id": "DV-316",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2025-12-20T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A formal test suite does not substitute for the human sign-off DV-316 requires on agent-authored tenant-access changes; in a multi-tenant monitoring platform the provision allocates accountability, not just verification.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-008",
+   "provision_id": "DV-311",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-09T00:00:00.000000+00:00",
+   "facts": [
+    "blackout_deploy",
+    "cooling_incident",
+    "emergency_claimed"
+   ],
+   "premise": [
+    "cooling_incident"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single deploy window; senior engineer paired"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A cooling-failure alerting bug during a customer blackout window justified one in-window deploy; residual risk accepted for 60 days pending an emergency-protocol amendment.",
+   "is_acceptance": true,
+   "expiry": "2026-03-10T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-009",
+   "provision_id": "DV-315",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-01T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "30-day pilot, anonymized cohort only"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Growth pilot allowed ahead of DPIA once; the Lawmakers subsequently REJECTED the referral: DPIA-first stands.",
+   "is_acceptance": true,
+   "expiry": "2025-10-31T00:00:00.000000+00:00",
+   "organization": "dcvigil",
+   "referral_outcome": "rejected"
+  },
+  {
+   "seed_id": "dcvigil:DP-010",
+   "provision_id": "DV-307",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-20T00:00:00.000000+00:00",
+   "facts": [
+    "new_table_only",
+    "no_data_mutation",
+    "schema_migration",
+    "telemetry_table"
+   ],
+   "premise": [
+    "new_table_only",
+    "no_data_mutation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "table creation scripted; drop script attached"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Reversibility exists to protect existing telemetry history; a pure additive table creation mutates nothing and is trivially reversible by drop.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-011",
+   "provision_id": "DV-317",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "dashboard_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "flagged_off_default"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "flag stays off until regression fixed; perf ticket filed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regression behind a default-off flag imposes no user-facing latency; the budget binds at flag-on.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-015",
+   "provision_id": "DV-317",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "alerting_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "alerting_service"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "alerting"
+   },
+   "scope_level": "service",
+   "rationale": "Alerting-pipeline latency is operationally critical during thermal events; even flagged-off regressions in the alerting tier must be fixed before merge to avoid flag-flip risk.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-012",
+   "provision_id": "DV-301",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-05T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "holds_actuation_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_actuation_credentials"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "remediation"
+   },
+   "scope_level": "service",
+   "rationale": "Where the collector also holds credentials for BMS actuation endpoints the physical-control perimeter is implicated; the vault-lag tolerance of DP-001 does not extend there.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-013",
+   "provision_id": "DV-306",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-13T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "follow-up coverage ticket within one sprint"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Legacy SNMP-parser modules predate the coverage mandate; incremental improvement via tracked tickets was held acceptable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-014",
+   "provision_id": "DV-306",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-20T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Q2 quality initiative ended the legacy-module exception: coverage is met before merge, including legacy parser code. This holding supersedes the earlier permit on the same premise and provision; it is cited here so the departure is recorded rather than left to the clock (Sect. 4.6).",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil",
+   "cites": "dcvigil:DP-013"
+  },
+  {
+   "seed_id": "dcvigil:DP-0101",
+   "provision_id": "DV-301",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "collector_credentials",
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=DP-001",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0102",
+   "provision_id": "DV-316",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=DP-007",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0103",
+   "provision_id": "DV-303",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "customer_data_path",
+    "third_party_lib",
+    "touches_access_logs",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "community_audit_complete",
+    "touches_access_logs"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed; vendor review within 30 days"
+   },
+   "scope": {
+    "service": "security-telemetry"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=DP-002",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0104",
+   "provision_id": "DV-301",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "collector_credentials",
+    "encrypted_config",
+    "holds_actuation_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_actuation_credentials"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "edge"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=DP-0101",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0105",
+   "provision_id": "DV-317",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "alerting_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "alerting_service"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "alerting-pipeline"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=DP-015",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0106",
+   "provision_id": "DV-301",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "collector_credentials",
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_rejected"
+   ],
+   "premise": [
+    "vault_onboarding_rejected"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0107",
+   "provision_id": "DV-303",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_data_path",
+    "third_party_lib",
+    "touches_access_logs",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_access_logs"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "security-telemetry"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=DP-003",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0108",
+   "provision_id": "DV-311",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "blackout_deploy",
+    "cooling_incident",
+    "emergency_claimed"
+   ],
+   "premise": [
+    "emergency_claimed"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0109",
+   "provision_id": "DV-315",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_data_path",
+    "external_analytics",
+    "growth_experiment"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Tier3: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0110",
+   "provision_id": "DV-319",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_mandated_format",
+    "escalation_logic_change",
+    "regulatory_deadline",
+    "sre_lead_review_pending"
+   ],
+   "premise": [
+    "customer_mandated_format",
+    "regulatory_deadline"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "SRE-lead review completes within 60 days; escalations dual-validated meanwhile"
+   },
+   "scope": {
+    "service": "escalation"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-06-18T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0111",
+   "provision_id": "DV-303",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_data_path",
+    "customer_mandated",
+    "third_party_lib",
+    "vendor_review_blocked"
+   ],
+   "premise": [
+    "customer_mandated",
+    "vendor_review_blocked"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "SDK sandboxed; contract renegotiation opened"
+   },
+   "scope": {
+    "service": "edge"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-07-18T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0112",
+   "provision_id": "DV-311",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "blackout_deploy",
+    "cooling_incident",
+    "thermal_runaway_event"
+   ],
+   "premise": [
+    "cooling_incident"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single window; paired deploy"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "TierK: renewal permitted while referral pending; new acceptance cites DP-008 (A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-19T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0113",
+   "provision_id": "DV-315",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_data_path",
+    "external_analytics",
+    "growth_experiment"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: renewal of DP-009 BARRED \u2014 Lawmakers rejected its referral (A7); denial stands",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0114",
+   "provision_id": "DV-307",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "corruption_repair",
+    "data_mutation",
+    "schema_migration",
+    "telemetry_table"
+   ],
+   "premise": [
+    "corruption_repair"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "verified full backup taken; repair scripted and rehearsed in staging"
+   },
+   "scope": {
+    "service": "alerting-pipeline"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-19T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0115",
+   "provision_id": "DV-316",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "incident_window",
+    "no_reviewer_available"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "TierK: RiskOwner declines to accept residual risk; denial upheld and stored",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0116",
+   "provision_id": "DV-306",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "incident_hotfix"
+   ],
+   "premise": [
+    "incident_hotfix"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "retroactive tests within 14 days"
+   },
+   "scope": {
+    "service": "alerting"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-03T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0117",
+   "provision_id": "DV-309",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agpl_license",
+    "legal_review_open",
+    "no_alternative"
+   ],
+   "premise": [
+    "legal_review_open",
+    "no_alternative"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "process isolation; no static linking; legal review within 90 days"
+   },
+   "scope": {
+    "service": "remediation"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-07-18T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0118",
+   "provision_id": "DV-312",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "alerting_rules",
+    "flag_infra_down",
+    "no_feature_flag",
+    "safety_fix"
+   ],
+   "premise": [
+    "flag_infra_down",
+    "safety_fix"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "flag added within 7 days of infra restoration"
+   },
+   "scope": {
+    "service": "alerting"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-04-26T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0119",
+   "provision_id": "DV-320",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "consent_check_pending",
+    "incident_notice",
+    "notification_template"
+   ],
+   "premise": [
+    "incident_notice"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "counsel review within 14 days; incident-only scope"
+   },
+   "scope": {
+    "service": "notifications"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-03T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0120",
+   "provision_id": "DV-303",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_data_path",
+    "first_of_kind",
+    "llm_copilot",
+    "sandboxed_runtime"
+   ],
+   "premise": [
+    "sandboxed_runtime"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "tenant-scoped context only; no cross-tenant retrieval; no data egress to the model provider; output labeled"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0121",
+   "provision_id": "DV-316",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "autonomous_action",
+    "first_of_kind",
+    "ticketing_writeback"
+   ],
+   "premise": [
+    "autonomous_action"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "remediation"
+   },
+   "scope_level": "service",
+   "rationale": "Tier3: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-0122",
+   "provision_id": "DV-320",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_communication",
+    "first_of_kind",
+    "llm_generated_text"
+   ],
+   "premise": [
+    "llm_generated_text"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "human approves each send; template disclosure line"
+   },
+   "scope": {
+    "service": "notifications"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "frontierllm:FP-001",
+   "provision_id": "FL-401",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "job_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "FL-401 exists to prevent credential exposure; an encrypted, rotating config whose vault onboarding is queued presents the paperwork lag, not the exposure the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-002",
+   "provision_id": "FL-403",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-02-23T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "tenant_data_path",
+    "third_party_lib"
+   ],
+   "premise": [
+    "community_audit_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review within 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used OSS library with a completed community security audit presents materially lower supply-chain risk; vendor review may complete in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-003",
+   "provision_id": "FL-403",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-15T00:00:00.000000+00:00",
+   "facts": [
+    "tenant_data_path",
+    "third_party_lib",
+    "touches_conversation_data",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_conversation_data"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "user-data"
+   },
+   "scope_level": "service",
+   "rationale": "After the February conversation-data ingestion incident, risk appetite narrowed: a pending vendor review is insufficient where the library touches user-conversation streams carrying private data.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-004",
+   "provision_id": "FL-408",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-21T00:00:00.000000+00:00",
+   "facts": [
+    "cve_high",
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "premise": [
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30-day remediation ticket with named owner"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "FL-408 targets exploitable exposure; a build-time-only dependency with no runtime reachability does not present it, provided remediation is tracked.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-005",
+   "provision_id": "FL-406",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-23T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "generated_boilerplate"
+   ],
+   "premise": [
+    "generated_boilerplate"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "coverage measured at module level for generated eval configs"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Line-level coverage on generated eval-config scaffolds measures the generator, not the change; module-level measurement preserves the provision's intent.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-006",
+   "provision_id": "FL-410",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-21T00:00:00.000000+00:00",
+   "facts": [
+    "dummy_marked",
+    "fixture_path",
+    "secret_scanner_hit"
+   ],
+   "premise": [
+    "dummy_marked",
+    "fixture_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fixture must carry DUMMY- prefix and live under /testdata"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Clearly-marked dummy credentials in test fixtures are not secrets; FL-410 targets live credential exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-007",
+   "provision_id": "FL-416",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2025-12-20T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A formal test suite does not substitute for the human sign-off FL-416 requires on agent-authored tenant-access changes; in a multi-tenant API platform the provision allocates accountability, not just verification.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-008",
+   "provision_id": "FL-411",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-09T00:00:00.000000+00:00",
+   "facts": [
+    "emergency_claimed",
+    "freeze_deploy",
+    "serving_outage"
+   ],
+   "premise": [
+    "serving_outage"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single deploy window; senior engineer paired"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A serving-outage alerting bug during a major-run change freeze justified one freeze-window deploy; residual risk accepted for 60 days pending an emergency-protocol amendment.",
+   "is_acceptance": true,
+   "expiry": "2026-03-10T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-009",
+   "provision_id": "FL-415",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-01T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "30-day pilot, anonymized cohort only"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Growth pilot allowed ahead of DPIA once; the Lawmakers subsequently REJECTED the referral: DPIA-first stands.",
+   "is_acceptance": true,
+   "expiry": "2025-10-31T00:00:00.000000+00:00",
+   "organization": "frontierllm",
+   "referral_outcome": "rejected"
+  },
+  {
+   "seed_id": "frontierllm:FP-010",
+   "provision_id": "FL-407",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-20T00:00:00.000000+00:00",
+   "facts": [
+    "experiment_metrics_table",
+    "new_table_only",
+    "no_data_mutation",
+    "schema_migration"
+   ],
+   "premise": [
+    "new_table_only",
+    "no_data_mutation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "table creation scripted; drop script attached"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Reversibility exists to protect existing experiment-metrics history; a pure additive table creation mutates nothing and is trivially reversible by drop.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-011",
+   "provision_id": "FL-417",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "console_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "flagged_off_default"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "flag stays off until regression fixed; perf ticket filed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regression behind a default-off flag imposes no user-facing latency; the budget binds at flag-on.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-015",
+   "provision_id": "FL-417",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "flagged_off_default",
+    "latency_regression",
+    "serving_gateway"
+   ],
+   "premise": [
+    "serving_gateway"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "serving"
+   },
+   "scope_level": "service",
+   "rationale": "Serving-gateway latency is operationally critical during traffic spikes; even flagged-off regressions in the serving tier must be fixed before merge to avoid flag-flip risk.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-012",
+   "provision_id": "FL-401",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-05T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "holds_weights_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_weights_credentials"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "weights-infra"
+   },
+   "scope_level": "service",
+   "rationale": "Where the job runner also holds credentials for the weights store the weights perimeter is implicated; the vault-lag tolerance of FP-001 does not extend there.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-013",
+   "provision_id": "FL-406",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-13T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "follow-up coverage ticket within one sprint"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Legacy tokenizer-pipeline modules predate the coverage mandate; incremental improvement via tracked tickets was held acceptable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-014",
+   "provision_id": "FL-406",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-20T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Q2 quality initiative ended the legacy-module exception: coverage is met before merge, including legacy tokenizer code. This holding supersedes the earlier permit on the same premise and provision; it is cited here so the departure is recorded rather than left to the clock (Sect. 4.6).",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm",
+   "cites": "frontierllm:FP-013"
+  },
+  {
+   "seed_id": "frontierllm:FP-0101",
+   "provision_id": "FL-401",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "job_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=FP-001",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0102",
+   "provision_id": "FL-416",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=FP-007",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0103",
+   "provision_id": "FL-403",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "third_party_lib",
+    "touches_conversation_data",
+    "user_data_path",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "community_audit_complete",
+    "touches_conversation_data"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed; vendor review within 30 days"
+   },
+   "scope": {
+    "service": "user-data"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; controlling=FP-002",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0104",
+   "provision_id": "FL-401",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "holds_weights_credentials",
+    "job_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_weights_credentials"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "weights-infra"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=FP-012",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0105",
+   "provision_id": "FL-417",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "flagged_off_default",
+    "latency_regression",
+    "serving_gateway"
+   ],
+   "premise": [
+    "serving_gateway"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "serving"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=FP-015",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0106",
+   "provision_id": "FL-401",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "job_credentials",
+    "rotation_enabled",
+    "vault_onboarding_rejected"
+   ],
+   "premise": [
+    "vault_onboarding_rejected"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0107",
+   "provision_id": "FL-403",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "third_party_lib",
+    "touches_conversation_data",
+    "user_data_path",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_conversation_data"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "user-data"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; controlling=FP-003",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0108",
+   "provision_id": "FL-411",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "emergency_claimed",
+    "freeze_deploy",
+    "serving_outage"
+   ],
+   "premise": [
+    "emergency_claimed"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Tier2: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0109",
+   "provision_id": "FL-415",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "user_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Tier3: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0110",
+   "provision_id": "FL-419",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "eval_scoring_change",
+    "regulator_mandated_format",
+    "regulatory_deadline",
+    "safety_team_review_pending"
+   ],
+   "premise": [
+    "regulator_mandated_format",
+    "regulatory_deadline"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "safety-team review completes within 60 days; scores dual-validated meanwhile"
+   },
+   "scope": {
+    "service": "release"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-06-18T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0111",
+   "provision_id": "FL-403",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "partner_mandated",
+    "third_party_lib",
+    "user_data_path",
+    "vendor_review_blocked"
+   ],
+   "premise": [
+    "partner_mandated",
+    "vendor_review_blocked"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "SDK sandboxed; contract renegotiation opened"
+   },
+   "scope": {
+    "service": "weights-infra"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-07-18T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0112",
+   "provision_id": "FL-411",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "freeze_deploy",
+    "serving_outage",
+    "training_run_incident"
+   ],
+   "premise": [
+    "serving_outage"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single window; paired deploy"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "TierK: renewal permitted while referral pending; new acceptance cites FP-008 (A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-19T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0113",
+   "provision_id": "FL-415",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "user_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: renewal of FP-009 BARRED \u2014 Lawmakers rejected its referral (A7); denial stands",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0114",
+   "provision_id": "FL-407",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "corruption_repair",
+    "data_mutation",
+    "experiment_metrics_table",
+    "schema_migration"
+   ],
+   "premise": [
+    "corruption_repair"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "verified full backup taken; repair scripted and rehearsed in staging"
+   },
+   "scope": {
+    "service": "serving"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-19T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0115",
+   "provision_id": "FL-416",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "incident_window",
+    "no_reviewer_available"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "TierK: RiskOwner declines to accept residual risk; denial upheld and stored",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0116",
+   "provision_id": "FL-406",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "incident_hotfix"
+   ],
+   "premise": [
+    "incident_hotfix"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "retroactive tests within 14 days"
+   },
+   "scope": {
+    "service": "alerting"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-03T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0117",
+   "provision_id": "FL-409",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agpl_license",
+    "legal_review_open",
+    "no_alternative"
+   ],
+   "premise": [
+    "legal_review_open",
+    "no_alternative"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "process isolation; no static linking; legal review within 90 days"
+   },
+   "scope": {
+    "service": "weights-infra"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-07-18T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0118",
+   "provision_id": "FL-412",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "alerting_rules",
+    "flag_infra_down",
+    "no_feature_flag",
+    "safety_fix"
+   ],
+   "premise": [
+    "flag_infra_down",
+    "safety_fix"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "flag added within 7 days of infra restoration"
+   },
+   "scope": {
+    "service": "alerting"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-04-26T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0119",
+   "provision_id": "FL-420",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "consent_check_pending",
+    "incident_notice",
+    "notification_template"
+   ],
+   "premise": [
+    "incident_notice"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "counsel review within 14 days; incident-only scope"
+   },
+   "scope": {
+    "service": "notifications"
+   },
+   "scope_level": "service",
+   "rationale": "TierK: automated tiers exhausted; RiskOwner issues attributed acceptance with mandatory expiry + DraftAmendment referral (A4, A7)",
+   "is_acceptance": true,
+   "expiry": "2026-05-03T00:00:00.000000+00:00",
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0120",
+   "provision_id": "FL-403",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "first_of_kind",
+    "llm_copilot",
+    "sandboxed_runtime",
+    "user_data_path"
+   ],
+   "premise": [
+    "sandboxed_runtime"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "tenant-scoped context only; no cross-tenant retrieval; no data egress to the model provider; output labeled"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0121",
+   "provision_id": "FL-416",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "autonomous_action",
+    "first_of_kind",
+    "job_scheduler_writeback"
+   ],
+   "premise": [
+    "autonomous_action"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "weights-infra"
+   },
+   "scope_level": "service",
+   "rationale": "Tier3: re-adjudicated with full record -> deny; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-0122",
+   "provision_id": "FL-420",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-04-19T00:00:00.000000+00:00",
+   "facts": [
+    "customer_communication",
+    "first_of_kind",
+    "llm_generated_text"
+   ],
+   "premise": [
+    "llm_generated_text"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "human approves each send; template disclosure line"
+   },
+   "scope": {
+    "service": "notifications"
+   },
+   "scope_level": "service",
+   "rationale": "Tier2: re-adjudicated with full record -> permit_conditional; Controlling=none",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "fintech:MP-001",
+   "provision_id": "MF-206",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-12T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "rotation_enabled",
+    "secret_in_source",
+    "vault_migration_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_migration_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "MF-206 targets credential EXPOSURE. An encrypted, rotating configuration whose vault migration is already ticketed presents migration lag, not exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-002",
+   "provision_id": "MF-206",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-01-20T00:00:00.000000+00:00",
+   "facts": [
+    "credential_in_ci_log",
+    "rotation_enabled"
+   ],
+   "premise": [
+    "credential_in_ci_log",
+    "rotation_enabled"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A credential printed into a CI log is already disclosed to everyone who can read the build. Rotation limits the window; it does not undo the disclosure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-003",
+   "provision_id": "MF-211",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-03T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "sbom_provided",
+    "third_party_lib",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "community_audit_complete",
+    "sbom_provided"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review to close within 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used library with a published SBOM and a completed community audit carries materially lower supply-chain risk; the vendor review may close in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-004",
+   "provision_id": "MF-211",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-02-11T00:00:00.000000+00:00",
+   "facts": [
+    "sbom_provided",
+    "third_party_lib",
+    "touches_cardholder_path",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_cardholder_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "After the January cardholder-path incident, an SBOM alone no longer suffices for code inside the cardholder boundary. Reviewed diligence must precede the merge, not follow it.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-005",
+   "provision_id": "MF-202",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-12-08T00:00:00.000000+00:00",
+   "facts": [
+    "ciso_compensating_control",
+    "mfa_exception_requested",
+    "phishing_resistant_fallback",
+    "time_boxed_30d"
+   ],
+   "premise": [
+    "ciso_compensating_control",
+    "phishing_resistant_fallback",
+    "time_boxed_30d"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30 days maximum; CISO control on file; phishing-resistant fallback in place"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Section 500.12(a) contemplates a CISO-approved compensating control. A time-boxed exception with a phishing-resistant fallback is the case the rule describes, not an evasion of it.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-006",
+   "provision_id": "MF-301",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-04T00:00:00.000000+00:00",
+   "facts": [
+    "independent_validation_complete",
+    "model_decision_path",
+    "shadow_mode",
+    "unvalidated_model_deploy"
+   ],
+   "premise": [
+    "shadow_mode"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "shadow mode only; no customer-visible decision until validation closes"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "SR 11-7 scales control to use. A model that only shadows the incumbent takes no decision, so the validation obligation attaches before promotion rather than before deployment.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-007",
+   "provision_id": "MF-301",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-17T00:00:00.000000+00:00",
+   "facts": [
+    "champion_challenger_only",
+    "model_decision_path",
+    "unvalidated_model_deploy"
+   ],
+   "premise": [
+    "champion_challenger_only"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A challenger model whose output is scored against live decisions is already influencing the decision record; validation attaches at that point.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-008",
+   "provision_id": "MF-307",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-29T00:00:00.000000+00:00",
+   "facts": [
+    "attestation_complete",
+    "human_requirement_linked",
+    "missing_attestation"
+   ],
+   "premise": [
+    "attestation_complete",
+    "human_requirement_linked"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "attestation attached before merge; human requirement linked in the ticket"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The provision asks who authored the change and on whose instruction. A complete attestation linked to a human requirement answers exactly that.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-009",
+   "provision_id": "MF-307",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-08T00:00:00.000000+00:00",
+   "facts": [
+    "unbounded_agent_action",
+    "value_cap_set"
+   ],
+   "premise": [
+    "value_cap_set"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A value cap on a single action does not bound an agent that may retry. The bound must hold across the session, not the call.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-010",
+   "provision_id": "MF-210",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-19T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_completed",
+    "new_pii_field",
+    "purpose_documented",
+    "retention_schedule_set"
+   ],
+   "premise": [
+    "dpia_completed",
+    "purpose_documented",
+    "retention_schedule_set"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "retention schedule registered before first write"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Arts. 5(1)(c) and 5(1)(e) ask for purpose and a limit. A completed DPIA with a registered schedule supplies both.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-011",
+   "provision_id": "MF-212",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-12-30T00:00:00.000000+00:00",
+   "facts": [
+    "freeze_deploy",
+    "rollback_verified",
+    "sev1_incident"
+   ],
+   "premise": [
+    "rollback_verified",
+    "sev1_incident"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "incident reference recorded; rollback rehearsed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The freeze exists to protect the peak. A change that restores the peak, with a rehearsed rollback, serves the provision rather than defeating it.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-012",
+   "provision_id": "MF-212",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-06T00:00:00.000000+00:00",
+   "facts": [
+    "freeze_deploy",
+    "regulator_deadline"
+   ],
+   "premise": [
+    "regulator_deadline"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regulatory deadline known months in advance is a planning failure, not an emergency. The freeze holds.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-013",
+   "provision_id": "MF-207",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-02-02T00:00:00.000000+00:00",
+   "facts": [
+    "script_inventory_updated",
+    "sri_hash_pinned",
+    "unauthorized_payment_script"
+   ],
+   "premise": [
+    "script_inventory_updated",
+    "sri_hash_pinned"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "SRI hash pinned; inventory entry updated in the same change"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Req. 6.4.3 asks that scripts be authorized and their integrity assured. A pinned hash plus an inventory entry is that assurance, whatever the approval workflow's state.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-014",
+   "provision_id": "MF-401",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-22T00:00:00.000000+00:00",
+   "facts": [
+    "friction_asymmetry",
+    "ux_research_filed"
+   ],
+   "premise": [
+    "friction_asymmetry",
+    "ux_research_filed"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Research showing that customers tolerate an asymmetric cancellation flow measures tolerance, not fairness. Asymmetry between signing up and leaving is the abuse the provision names.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-015",
+   "provision_id": "MF-401",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-25T00:00:00.000000+00:00",
+   "facts": [
+    "disclosure_reviewed",
+    "symmetric_cancellation",
+    "undisclosed_fee"
+   ],
+   "premise": [
+    "disclosure_reviewed",
+    "symmetric_cancellation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fee surfaced on the confirmation screen"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A fee disclosed on the screen where the customer commits, in a flow they can leave as easily as they entered, is disclosed.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-016",
+   "provision_id": "MF-204",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-14T00:00:00.000000+00:00",
+   "facts": [
+    "non_critical_function",
+    "register_entry_filed",
+    "unregistered_ict_provider"
+   ],
+   "premise": [
+    "non_critical_function",
+    "register_entry_filed"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "register entry filed; function classified non-critical on the record"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 28(3) attaches to critical-or-important functions. A recorded non-critical classification with a register entry meets the obligation as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-017",
+   "provision_id": "MF-303",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-05-06T00:00:00.000000+00:00",
+   "facts": [
+    "disclosure_banner_shipped",
+    "undisclosed_ai_agent"
+   ],
+   "premise": [
+    "disclosure_banner_shipped"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "disclosure visible before the first agent turn"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50 requires that the customer be informed, not that the notice take a particular form. A banner shown before the first turn informs.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-018",
+   "provision_id": "MF-308",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-21T00:00:00.000000+00:00",
+   "facts": [
+    "anonymization_verified",
+    "third_party_model_retention",
+    "zero_retention_agreement"
+   ],
+   "premise": [
+    "anonymization_verified",
+    "zero_retention_agreement"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "zero-retention terms executed; anonymization verified by the privacy office"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Executed zero-retention terms plus verified anonymization remove both the lawful-basis question and the provider retention window the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-019",
+   "provision_id": "MF-205",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-30T00:00:00.000000+00:00",
+   "facts": [
+    "canary_staged",
+    "critical_function_change",
+    "dr_test_passed"
+   ],
+   "premise": [
+    "canary_staged",
+    "dr_test_passed"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "canary held for one full business day"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Arts. 24-26 are proportionate. A passed DR test plus a staged canary is proportionate testing for a change of this size.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-020",
+   "provision_id": "MF-201",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-05-19T00:00:00.000000+00:00",
+   "facts": [
+    "ciso_finding_filed",
+    "compensating_control_documented",
+    "encryption_downgrade",
+    "internal_network_only"
+   ],
+   "premise": [
+    "ciso_finding_filed",
+    "compensating_control_documented",
+    "internal_network_only"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "internal path only; CISO finding on file; revisit at the next architecture review"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "16 CFR 314.4(c)(3) contemplates a CISO finding of an effective alternative control. On a wholly internal path with the finding filed, that is the case the rule describes.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-021",
+   "provision_id": "MF-209",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-02-24T00:00:00.000000+00:00",
+   "facts": [
+    "canary_staged",
+    "latency_regression",
+    "load_test_passed",
+    "off_peak_window"
+   ],
+   "premise": [
+    "canary_staged",
+    "load_test_passed",
+    "off_peak_window"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "off-peak release; canary metrics watched for one hour"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The threshold protects the authorization path at peak. Load-tested, canaried, off-peak, the regression never reaches the traffic the rule protects.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-022",
+   "provision_id": "MF-402",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-10T00:00:00.000000+00:00",
+   "facts": [
+    "furnishing_accuracy_gap",
+    "reconciliation_job_added"
+   ],
+   "premise": [
+    "reconciliation_job_added"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "reconciliation runs before the next furnishing cycle"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "FCRA asks for reasonable procedures. A reconciliation job that closes the gap before the next cycle is a reasonable procedure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "fintech:MP-023",
+   "provision_id": "MF-304",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-28T00:00:00.000000+00:00",
+   "facts": [
+    "conformity_dossier_started",
+    "high_risk_ai_gap",
+    "no_conformity_assessment"
+   ],
+   "premise": [
+    "conformity_dossier_started"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "expires 30 June 2026; dossier complete before renewal is sought"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Annex III obligations are not yet live and the conformity dossier is underway, so the risk owner accepted a bounded window rather than a permanent exception. A7 makes the end date part of the act: when it passes, the block returns without anyone deciding again.",
+   "is_acceptance": true,
+   "expiry": "2026-06-30",
+   "organization": "fintech"
+  },
+  {
+   "seed_id": "sctower:SP-040",
+   "provision_id": "SC-233",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_complete",
+    "emotion_inference",
+    "medical_safety_justification",
+    "workplace_context"
+   ],
+   "premise": [
+    "dpia_complete",
+    "medical_safety_justification"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "safety-monitoring scope only; DPIA on file; annual re-justification"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 5(1)(f) excepts systems put in place for medical or safety reasons; a documented safety justification with a completed DPIA is precisely the carve-out the corpus records as the reason this clause is statute-tier rather than absolute.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-041",
+   "provision_id": "SC-234",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "obvious_ai_context",
+    "undisclosed_ai_interaction",
+    "ux_review_complete"
+   ],
+   "premise": [
+    "obvious_ai_context",
+    "ux_review_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "obviousness finding documented by UX review; re-test on major redesign"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50(1) applies 'unless this is obvious from the point of view of a reasonably well-informed person'; a documented obviousness finding is the proviso working as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "sctower:SP-042",
+   "provision_id": "SC-235",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "explicit_consent_documented",
+    "new_processing_path",
+    "purpose_limited",
+    "special_category_data"
+   ],
+   "premise": [
+    "explicit_consent_documented",
+    "purpose_limited"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "Art. 9(2)(a) gate: explicit consent recorded per purpose; audit annually"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 9(1) is a prohibition with ten derogations; documented explicit consent for a limited purpose satisfies the Art. 9(2)(a) gate.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "sctower"
+  },
+  {
+   "seed_id": "vetpoc:PR-040",
+   "provision_id": "VP-133",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_complete",
+    "emotion_inference",
+    "medical_safety_justification",
+    "workplace_context"
+   ],
+   "premise": [
+    "dpia_complete",
+    "medical_safety_justification"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "safety-monitoring scope only; DPIA on file; annual re-justification"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 5(1)(f) excepts systems put in place for medical or safety reasons; a documented safety justification with a completed DPIA is precisely the carve-out the corpus records as the reason this clause is statute-tier rather than absolute.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-041",
+   "provision_id": "VP-134",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "obvious_ai_context",
+    "undisclosed_ai_interaction",
+    "ux_review_complete"
+   ],
+   "premise": [
+    "obvious_ai_context",
+    "ux_review_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "obviousness finding documented by UX review; re-test on major redesign"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50(1) applies 'unless this is obvious from the point of view of a reasonably well-informed person'; a documented obviousness finding is the proviso working as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "vetpoc:PR-042",
+   "provision_id": "VP-135",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "explicit_consent_documented",
+    "new_processing_path",
+    "purpose_limited",
+    "special_category_data"
+   ],
+   "premise": [
+    "explicit_consent_documented",
+    "purpose_limited"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "Art. 9(2)(a) gate: explicit consent recorded per purpose; audit annually"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 9(1) is a prohibition with ten derogations; documented explicit consent for a limited purpose satisfies the Art. 9(2)(a) gate.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "vetpoc"
+  },
+  {
+   "seed_id": "dcvigil:DP-040",
+   "provision_id": "DV-333",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_complete",
+    "emotion_inference",
+    "medical_safety_justification",
+    "workplace_context"
+   ],
+   "premise": [
+    "dpia_complete",
+    "medical_safety_justification"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "safety-monitoring scope only; DPIA on file; annual re-justification"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 5(1)(f) excepts systems put in place for medical or safety reasons; a documented safety justification with a completed DPIA is precisely the carve-out the corpus records as the reason this clause is statute-tier rather than absolute.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-041",
+   "provision_id": "DV-334",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "obvious_ai_context",
+    "undisclosed_ai_interaction",
+    "ux_review_complete"
+   ],
+   "premise": [
+    "obvious_ai_context",
+    "ux_review_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "obviousness finding documented by UX review; re-test on major redesign"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50(1) applies 'unless this is obvious from the point of view of a reasonably well-informed person'; a documented obviousness finding is the proviso working as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "dcvigil:DP-042",
+   "provision_id": "DV-335",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "explicit_consent_documented",
+    "new_processing_path",
+    "purpose_limited",
+    "special_category_data"
+   ],
+   "premise": [
+    "explicit_consent_documented",
+    "purpose_limited"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "Art. 9(2)(a) gate: explicit consent recorded per purpose; audit annually"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 9(1) is a prohibition with ten derogations; documented explicit consent for a limited purpose satisfies the Art. 9(2)(a) gate.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "frontierllm:FP-040",
+   "provision_id": "FL-433",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_complete",
+    "emotion_inference",
+    "medical_safety_justification",
+    "workplace_context"
+   ],
+   "premise": [
+    "dpia_complete",
+    "medical_safety_justification"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "safety-monitoring scope only; DPIA on file; annual re-justification"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 5(1)(f) excepts systems put in place for medical or safety reasons; a documented safety justification with a completed DPIA is precisely the carve-out the corpus records as the reason this clause is statute-tier rather than absolute.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-041",
+   "provision_id": "FL-434",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "obvious_ai_context",
+    "undisclosed_ai_interaction",
+    "ux_review_complete"
+   ],
+   "premise": [
+    "obvious_ai_context",
+    "ux_review_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "obviousness finding documented by UX review; re-test on major redesign"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50(1) applies 'unless this is obvious from the point of view of a reasonably well-informed person'; a documented obviousness finding is the proviso working as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  },
+  {
+   "seed_id": "frontierllm:FP-042",
+   "provision_id": "FL-435",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "explicit_consent_documented",
+    "new_processing_path",
+    "purpose_limited",
+    "special_category_data"
+   ],
+   "premise": [
+    "explicit_consent_documented",
+    "purpose_limited"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "Art. 9(2)(a) gate: explicit consent recorded per purpose; audit annually"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 9(1) is a prohibition with ten derogations; documented explicit consent for a limited purpose satisfies the Art. 9(2)(a) gate.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "frontierllm"
+  }
+ ]
+}

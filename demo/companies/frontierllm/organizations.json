@@ -1,0 +1,56 @@
+{
+ "organizations": [
+  {
+   "org_id": "frontierllm",
+   "name": "FrontierLLM",
+   "principals": [
+    {
+     "principal_id": "frontierllm.risk",
+     "branch": "risk_owner",
+     "key": "devkey-frontierllm-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "frontierllm.grc",
+     "branch": "lawmakers",
+     "key": "devkey-frontierllm-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "frontierllm.eng",
+     "branch": null,
+     "key": "devkey-frontierllm-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "frontierllm.audit",
+     "branch": null,
+     "key": "devkey-frontierllm-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": null,
+   "name": "Platform",
+   "principals": [
+    {
+     "principal_id": "platform.admin",
+     "branch": null,
+     "key": "devkey-platform-admin",
+     "kind": "human",
+     "role": "platform administrator \u2014 the only account that reads across tenants, and it decides nothing"
+    }
+   ]
+  }
+ ],
+ "founding_scope": "frontierllm"
+}

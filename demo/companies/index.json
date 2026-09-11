@@ -1,0 +1,39 @@
+{
+ "companies": [
+  {
+   "key": "sctower",
+   "display_name": "SC Control Tower",
+   "provisions": 29,
+   "records": 20,
+   "cases": 136
+  },
+  {
+   "key": "vetpoc",
+   "display_name": "VetPOC",
+   "provisions": 28,
+   "records": 20,
+   "cases": 136
+  },
+  {
+   "key": "dcvigil",
+   "display_name": "DCVigil",
+   "provisions": 29,
+   "records": 20,
+   "cases": 136
+  },
+  {
+   "key": "frontierllm",
+   "display_name": "FrontierLLM",
+   "provisions": 29,
+   "records": 20,
+   "cases": 136
+  },
+  {
+   "key": "fintech",
+   "display_name": "Meridian Financial",
+   "provisions": 37,
+   "records": 23,
+   "cases": 68
+  }
+ ]
+}

@@ -1,0 +1,386 @@
+{
+ "provisions": [
+  {
+   "provision_id": "SC-201",
+   "absolute": false,
+   "text": "Carrier/partner credentials live only in the secrets vault; no credentials in connector configuration.",
+   "policy": {
+    "deny_if_any": [
+     "connector_credentials",
+     "hotfix",
+     "new_region"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-202",
+   "absolute": true,
+   "text": "Denied-party/sanctions screening (OFAC, BIS lists) is never bypassed, suppressed, filtered, or cached beyond 24 hours; no change may add a bypass or suppression path. (Sanctions-law floor.)",
+   "policy": {
+    "deny_if_any": [
+     "allowlist_path",
+     "cost_optimization",
+     "screening_bypass",
+     "screening_cache_7d"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-203",
+   "absolute": false,
+   "text": "No third-party code in tenant-data paths without a completed vendor security review.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "llm_copilot",
+     "tenant_data_path",
+     "third_party_lib",
+     "vendor_review_pending"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-204",
+   "absolute": true,
+   "text": "Tenant data isolation: no change may enable cross-tenant reads or joins outside the anonymized benchmarking service. (Contractual/multi-tenant floor.)",
+   "policy": {
+    "deny_if_any": [
+     "cross_tenant_join",
+     "cross_tenant_read",
+     "dashboard_change",
+     "support_tool"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-205",
+   "absolute": false,
+   "text": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement.",
+   "policy": {
+    "deny_if_any": [
+     "agent_authored",
+     "missing_attestation"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-206",
+   "absolute": false,
+   "text": "Changed-line test coverage >= 80% on services tagged critical (screening, alerting, tracking).",
+   "policy": {
+    "deny_if_any": [
+     "coverage_shortfall",
+     "critical_service",
+     "handwritten_logic",
+     "new_feature"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-207",
+   "absolute": false,
+   "text": "Schema migrations on shipment-event tables require a reversible down-migration.",
+   "policy": {
+    "deny_if_any": [
+     "data_mutation",
+     "no_down_migration",
+     "schema_migration",
+     "shipment_event_table"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-208",
+   "absolute": false,
+   "text": "No dependency carrying a high/critical CVE may deploy.",
+   "policy": {
+    "deny_if_any": [
+     "cve_critical",
+     "cve_high",
+     "prod_dependency",
+     "runtime_reachable"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-209",
+   "absolute": false,
+   "text": "Third-party licenses restricted to the approved list; no AGPL in distributed edge agents.",
+   "policy": {
+    "deny_if_any": [
+     "agpl_license",
+     "edge_agent_component"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-210",
+   "absolute": false,
+   "text": "No secrets in source or CI logs (secret-scanner gate).",
+   "policy": {
+    "deny_if_any": [
+     "live_credential",
+     "secret_scanner_hit",
+     "unmarked_test_key"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-211",
+   "absolute": false,
+   "text": "No production deploys during the peak-season change freeze (Nov 15 - Jan 5) except under the emergency protocol.",
+   "policy": {
+    "deny_if_any": [
+     "freeze_deploy",
+     "non_emergency",
+     "port_disruption"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-212",
+   "absolute": false,
+   "text": "All changes to alerting/exception-rule evaluation ship behind a feature flag.",
+   "policy": {
+    "deny_if_any": [
+     "alerting_rules",
+     "no_feature_flag"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-213",
+   "absolute": true,
+   "text": "EU logistics personal data (driver identities, telematics traces) remains in the EU region. (GDPR residency floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eu_data",
+     "us_cache",
+     "us_replication"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-215",
+   "absolute": false,
+   "text": "No new external analytics/telemetry on tenant data without a completed data-protection impact assessment (DPIA).",
+   "policy": {
+    "deny_if_any": [
+     "computer_vision",
+     "external_analytics",
+     "first_of_kind",
+     "no_dpia",
+     "tenant_data_path",
+     "worker_images"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-216",
+   "absolute": false,
+   "text": "AI-agent-authored changes to authorization/tenant-access code require human reviewer sign-off.",
+   "policy": {
+    "deny_if_any": [
+     "customer_writeback",
+     "first_of_kind",
+     "formal_test_suite",
+     "incident_window",
+     "no_reviewer_available"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-217",
+   "absolute": false,
+   "text": "Deploys blocked on >10% p95 latency regression for the live-tracking API tier.",
+   "policy": {
+    "deny_if_any": [
+     "dispatch_service",
+     "flag_on_default",
+     "latency_regression"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-218",
+   "absolute": false,
+   "text": "Storage-touching changes require a verified backup/restore run in staging.",
+   "policy": {
+    "deny_if_any": []
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-219",
+   "absolute": false,
+   "text": "Changes to customs-filing message generation (ISF/entry data) require licensed-customs-broker domain review.",
+   "policy": {
+    "deny_if_any": [
+     "broker_review_pending",
+     "customs_filing_change"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-220",
+   "absolute": false,
+   "text": "Customer-facing notification templates must pass the opt-in/consent check.",
+   "policy": {
+    "deny_if_any": [
+     "consent_check_pending",
+     "customer_communication",
+     "first_of_kind",
+     "no_consent_check",
+     "notification_template"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-221",
+   "absolute": true,
+   "text": "Customs entry records and screening audit logs are immutable and retained 5 years; no change may shorten retention or add mutation paths. (19 CFR 163 floor.)",
+   "policy": {
+    "deny_if_any": [
+     "customs_records",
+     "mutation_path",
+     "retention_cut",
+     "screening_audit_log"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-222",
+   "absolute": false,
+   "text": "Predictive-model updates (ETA, risk scoring) require a shadow-evaluation report before promotion to live scoring.",
+   "policy": {
+    "deny_if_any": [
+     "ml_model_update",
+     "no_shadow_eval",
+     "risk_scoring"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-230",
+   "absolute": true,
+   "text": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour. (EU AI Act Art. 5(1)(b) floor \u2014 corpus EU-AIACT-A5.1.b, absolute, strictness 4/4: no derogation exists and no officer holds authority to accept this risk.)",
+   "policy": {
+    "deny_if_any": [
+     "vulnerability_targeting",
+     "behavioral_distortion"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-231",
+   "absolute": true,
+   "text": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage. (EU AI Act Art. 5(1)(e) floor \u2014 corpus EU-AIACT-A5.1.e, absolute, strictness 4/4.)",
+   "policy": {
+    "deny_if_any": [
+     "untargeted_scraping",
+     "facial_db_expansion"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-232",
+   "absolute": true,
+   "text": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one. (GDPR Art. 7(3) floor \u2014 corpus EU-GDPR-A7.3, absolute: outside the Art. 23 restriction list, all four corpus criteria pass.)",
+   "policy": {
+    "deny_if_any": [
+     "withdrawal_friction",
+     "withdrawal_path_removed"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-233",
+   "absolute": false,
+   "text": "No AI inference of emotions of a natural person in workplace contexts; the Art. 5(1)(f) medical/safety exception requires a documented justification and a completed DPIA. (EU AI Act Art. 5(1)(f) \u2014 corpus EU-AIACT-A5.1.f, statute: the medical/safety carve-out fails the derogation-free criterion, so the marginal case is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "emotion_inference",
+     "workplace_context"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-234",
+   "absolute": false,
+   "text": "Natural persons must be informed they are interacting with an AI system unless this is obvious to a reasonably well-informed person. (EU AI Act Art. 50(1) \u2014 corpus EU-AIACT-A50.1, statute: the obviousness proviso and law-enforcement exception fail the derogation-free criterion.)",
+   "policy": {
+    "deny_if_any": [
+     "undisclosed_ai_interaction"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-235",
+   "absolute": false,
+   "text": "Special-category personal data (health, biometric-for-ID, orientation, beliefs) may not enter a new processing path without a documented GDPR Art. 9(2) gate. (GDPR Art. 9(1) \u2014 corpus EU-GDPR-A9.1, statute: ten enumerated derogations in Art. 9(2), so the gate question is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "special_category_data",
+     "new_processing_path"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-236",
+   "absolute": false,
+   "text": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning). (Corpus EU-GDPR-A33.1 and EU-NIS2-A23.4.a, statute: the low-risk dispensation and 'where feasible' hedge fail determinacy; the NIS2 deadline fails transposition-invariance.)",
+   "policy": {
+    "deny_if_any": [
+     "notification_delay_path",
+     "breach_pipeline_removal"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-237",
+   "absolute": false,
+   "text": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport. (NIST SP 800-53 IA-2 / SC-8 \u2014 corpus US-NIST80053-IA-2 and -SC-8, statute: framework guidance binding via contractual attachment, tailorable, so compensating controls are adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "shared_account_path",
+     "unauthenticated_endpoint",
+     "plaintext_transmission"
+    ]
+   },
+   "organization": "sctower"
+  }
+ ],
+ "standing_declaration": {
+  "scope": "_global",
+  "adverse_to_grants": false,
+  "holder": null,
+  "note": "No party in this deployment holds contest standing adverse to grants: contest may be invoked by the requesting party only, and the companion chapter's standing extension is not adopted. Recorded per Axiom A9 so that the one-sidedness of the realised base is a disclosed fact of every audit export."
+ }
+}

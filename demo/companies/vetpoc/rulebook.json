@@ -1,0 +1,371 @@
+{
+ "provisions": [
+  {
+   "provision_id": "VP-101",
+   "absolute": false,
+   "text": "Client/owner PII may be written only to storage with a current encryption-at-rest attestation.",
+   "policy": {
+    "deny_if_any": [
+     "hotfix",
+     "new_region",
+     "pii_write"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-102",
+   "absolute": true,
+   "text": "Controlled-substance dispensing log records are append-only; no change may introduce update or delete paths. (DEA 21 CFR 1304 recordkeeping floor.)",
+   "policy": {
+    "deny_if_any": [
+     "delete_path",
+     "dispensing_log",
+     "update_path"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-103",
+   "absolute": false,
+   "text": "No third-party code in client-data paths without a completed vendor security review.",
+   "policy": {
+    "deny_if_any": [
+     "client_data_path",
+     "first_of_kind",
+     "third_party_lib",
+     "vendor_review_pending",
+     "wasm_plugin"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-104",
+   "absolute": true,
+   "text": "Payment card primary account numbers are never logged or stored unencrypted. (PCI DSS floor.)",
+   "policy": {
+    "deny_if_any": [
+     "debug_change",
+     "pan_logged",
+     "pan_stored_plaintext",
+     "retry_queue"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-105",
+   "absolute": false,
+   "text": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement.",
+   "policy": {
+    "deny_if_any": [
+     "agent_authored",
+     "missing_attestation"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-106",
+   "absolute": false,
+   "text": "Changed-line test coverage >= 80% on services tagged critical.",
+   "policy": {
+    "deny_if_any": [
+     "coverage_shortfall",
+     "critical_service",
+     "handwritten_logic",
+     "new_feature"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-107",
+   "absolute": false,
+   "text": "Schema migrations on patient-record tables require a reversible down-migration.",
+   "policy": {
+    "deny_if_any": [
+     "data_mutation",
+     "first_of_kind",
+     "no_down_migration",
+     "offline_sync",
+     "patient_table",
+     "schema_migration"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-108",
+   "absolute": false,
+   "text": "No dependency carrying a high/critical CVE may deploy.",
+   "policy": {
+    "deny_if_any": [
+     "cve_critical",
+     "cve_high",
+     "prod_dependency",
+     "runtime_reachable"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-109",
+   "absolute": false,
+   "text": "Third-party licenses restricted to the approved list; no AGPL in distributed components.",
+   "policy": {
+    "deny_if_any": [
+     "agpl_license",
+     "distributed_component"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-110",
+   "absolute": false,
+   "text": "No secrets in source or CI logs (secret-scanner gate).",
+   "policy": {
+    "deny_if_any": [
+     "live_credential",
+     "secret_scanner_hit",
+     "unmarked_test_key"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-111",
+   "absolute": false,
+   "text": "No production deploys during the weekend on-call freeze except under the emergency hotfix protocol.",
+   "policy": {
+    "deny_if_any": [
+     "lab_recall",
+     "non_emergency",
+     "weekend_deploy"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-112",
+   "absolute": false,
+   "text": "All changes to prescription-workflow code ship behind a feature flag.",
+   "policy": {
+    "deny_if_any": [
+     "no_feature_flag",
+     "rx_workflow"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-113",
+   "absolute": true,
+   "text": "EU clinic data remains in the EU region. (GDPR residency floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eu_data",
+     "us_cache",
+     "us_replication"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-115",
+   "absolute": false,
+   "text": "No new external analytics/telemetry in client-data paths without a completed data-protection impact assessment (DPIA).",
+   "policy": {
+    "deny_if_any": [
+     "biometric_data",
+     "client_data_path",
+     "external_analytics",
+     "first_of_kind",
+     "no_dpia"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-116",
+   "absolute": false,
+   "text": "AI-agent-authored changes to authentication/authorization code require human reviewer sign-off.",
+   "policy": {
+    "deny_if_any": [
+     "formal_test_suite",
+     "incident_window",
+     "no_reviewer_available"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-117",
+   "absolute": false,
+   "text": "Deploys blocked on >10% p95 latency regression for the scheduling service tier.",
+   "policy": {
+    "deny_if_any": [
+     "flag_on_default",
+     "latency_regression",
+     "scheduling_service"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-118",
+   "absolute": false,
+   "text": "Storage-touching changes require a verified backup/restore run in staging.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "offline_sync",
+     "patient_table"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-119",
+   "absolute": false,
+   "text": "Changes to the euthanasia-record module require licensed-DVM domain review.",
+   "policy": {
+    "deny_if_any": []
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-120",
+   "absolute": false,
+   "text": "Client SMS/email template changes must pass the TCPA/consent check.",
+   "policy": {
+    "deny_if_any": [
+     "client_communication",
+     "consent_check_pending",
+     "first_of_kind",
+     "no_consent_check",
+     "sms_template"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-121",
+   "absolute": true,
+   "text": "Security audit logs are immutable and retained 7 years; no change may shorten retention or add mutation paths.",
+   "policy": {
+    "deny_if_any": [
+     "audit_log",
+     "mutation_path",
+     "retention_cut"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-130",
+   "absolute": true,
+   "text": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour. (EU AI Act Art. 5(1)(b) floor \u2014 corpus EU-AIACT-A5.1.b, absolute, strictness 4/4: no derogation exists and no officer holds authority to accept this risk.)",
+   "policy": {
+    "deny_if_any": [
+     "vulnerability_targeting",
+     "behavioral_distortion"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-131",
+   "absolute": true,
+   "text": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage. (EU AI Act Art. 5(1)(e) floor \u2014 corpus EU-AIACT-A5.1.e, absolute, strictness 4/4.)",
+   "policy": {
+    "deny_if_any": [
+     "untargeted_scraping",
+     "facial_db_expansion"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-132",
+   "absolute": true,
+   "text": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one. (GDPR Art. 7(3) floor \u2014 corpus EU-GDPR-A7.3, absolute: outside the Art. 23 restriction list, all four corpus criteria pass.)",
+   "policy": {
+    "deny_if_any": [
+     "withdrawal_friction",
+     "withdrawal_path_removed"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-133",
+   "absolute": false,
+   "text": "No AI inference of emotions of a natural person in workplace contexts; the Art. 5(1)(f) medical/safety exception requires a documented justification and a completed DPIA. (EU AI Act Art. 5(1)(f) \u2014 corpus EU-AIACT-A5.1.f, statute: the medical/safety carve-out fails the derogation-free criterion, so the marginal case is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "emotion_inference",
+     "workplace_context"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-134",
+   "absolute": false,
+   "text": "Natural persons must be informed they are interacting with an AI system unless this is obvious to a reasonably well-informed person. (EU AI Act Art. 50(1) \u2014 corpus EU-AIACT-A50.1, statute: the obviousness proviso and law-enforcement exception fail the derogation-free criterion.)",
+   "policy": {
+    "deny_if_any": [
+     "undisclosed_ai_interaction"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-135",
+   "absolute": false,
+   "text": "Special-category personal data (health, biometric-for-ID, orientation, beliefs) may not enter a new processing path without a documented GDPR Art. 9(2) gate. (GDPR Art. 9(1) \u2014 corpus EU-GDPR-A9.1, statute: ten enumerated derogations in Art. 9(2), so the gate question is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "special_category_data",
+     "new_processing_path"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-136",
+   "absolute": false,
+   "text": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning). (Corpus EU-GDPR-A33.1 and EU-NIS2-A23.4.a, statute: the low-risk dispensation and 'where feasible' hedge fail determinacy; the NIS2 deadline fails transposition-invariance.)",
+   "policy": {
+    "deny_if_any": [
+     "notification_delay_path",
+     "breach_pipeline_removal"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-137",
+   "absolute": false,
+   "text": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport. (NIST SP 800-53 IA-2 / SC-8 \u2014 corpus US-NIST80053-IA-2 and -SC-8, statute: framework guidance binding via contractual attachment, tailorable, so compensating controls are adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "shared_account_path",
+     "unauthenticated_endpoint",
+     "plaintext_transmission"
+    ]
+   },
+   "organization": "vetpoc"
+  }
+ ],
+ "standing_declaration": {
+  "scope": "_global",
+  "adverse_to_grants": false,
+  "holder": null,
+  "note": "No party in this deployment holds contest standing adverse to grants: contest may be invoked by the requesting party only, and the companion chapter's standing extension is not adopted. Recorded per Axiom A9 so that the one-sidedness of the realised base is a disclosed fact of every audit export."
+ }
+}

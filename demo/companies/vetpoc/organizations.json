@@ -1,0 +1,56 @@
+{
+ "organizations": [
+  {
+   "org_id": "vetpoc",
+   "name": "VetPOC",
+   "principals": [
+    {
+     "principal_id": "vetpoc.risk",
+     "branch": "risk_owner",
+     "key": "devkey-vetpoc-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "vetpoc.grc",
+     "branch": "lawmakers",
+     "key": "devkey-vetpoc-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "vetpoc.eng",
+     "branch": null,
+     "key": "devkey-vetpoc-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "vetpoc.audit",
+     "branch": null,
+     "key": "devkey-vetpoc-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": null,
+   "name": "Platform",
+   "principals": [
+    {
+     "principal_id": "platform.admin",
+     "branch": null,
+     "key": "devkey-platform-admin",
+     "kind": "human",
+     "role": "platform administrator \u2014 the only account that reads across tenants, and it decides nothing"
+    }
+   ]
+  }
+ ],
+ "founding_scope": "vetpoc"
+}

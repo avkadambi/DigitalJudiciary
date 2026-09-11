@@ -1,0 +1,1946 @@
+{
+ "provisions": [
+  {
+   "provision_id": "DV-301",
+   "absolute": false,
+   "text": "BMS/sensor-gateway credentials live only in the secrets vault; no credentials in collector configuration.",
+   "policy": {
+    "deny_if_any": [
+     "collector_credentials",
+     "hotfix",
+     "new_region"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-302",
+   "absolute": true,
+   "text": "Automated remediation may never actuate customer physical infrastructure (power, cooling, setpoints) without explicit customer-side confirmation; no change may add an unconfirmed actuation path. (Physical-safety floor.)",
+   "policy": {
+    "deny_if_any": [
+     "actuation_batch_mode",
+     "actuation_no_confirm",
+     "automation_push",
+     "self_healing_path"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-303",
+   "absolute": false,
+   "text": "No third-party code in customer-telemetry paths without a completed vendor security review.",
+   "policy": {
+    "deny_if_any": [
+     "customer_data_path",
+     "first_of_kind",
+     "llm_copilot",
+     "third_party_lib",
+     "vendor_review_pending"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-304",
+   "absolute": true,
+   "text": "Tenant isolation: no change may enable cross-tenant reads, joins, or pooled model training outside the anonymized capacity-benchmark service. (Contractual/multi-tenant floor.)",
+   "policy": {
+    "deny_if_any": [
+     "cross_tenant_read",
+     "cross_tenant_training_pool",
+     "model_training_change",
+     "support_tool"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-305",
+   "absolute": false,
+   "text": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement.",
+   "policy": {
+    "deny_if_any": [
+     "agent_authored",
+     "missing_attestation"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-306",
+   "absolute": false,
+   "text": "Changed-line test coverage >= 80% on services tagged critical (ingestion, alerting, remediation-advisor).",
+   "policy": {
+    "deny_if_any": [
+     "coverage_shortfall",
+     "critical_service",
+     "handwritten_logic",
+     "new_feature"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-307",
+   "absolute": false,
+   "text": "Schema migrations on telemetry time-series tables require a reversible down-migration.",
+   "policy": {
+    "deny_if_any": [
+     "data_mutation",
+     "no_down_migration",
+     "schema_migration",
+     "telemetry_table"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-308",
+   "absolute": false,
+   "text": "No dependency carrying a high/critical CVE may deploy.",
+   "policy": {
+    "deny_if_any": [
+     "cve_critical",
+     "cve_high",
+     "prod_dependency",
+     "runtime_reachable"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-309",
+   "absolute": false,
+   "text": "Third-party licenses restricted to the approved list; no AGPL in customer-deployed edge collectors.",
+   "policy": {
+    "deny_if_any": [
+     "agpl_license",
+     "edge_collector_component"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-310",
+   "absolute": false,
+   "text": "No secrets in source or CI logs (secret-scanner gate).",
+   "policy": {
+    "deny_if_any": [
+     "live_credential",
+     "secret_scanner_hit",
+     "unmarked_test_key"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-311",
+   "absolute": false,
+   "text": "No production deploys during customer-declared maintenance blackout windows except under the emergency protocol.",
+   "policy": {
+    "deny_if_any": [
+     "blackout_deploy",
+     "non_emergency",
+     "thermal_runaway_event"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-312",
+   "absolute": false,
+   "text": "All changes to alerting-rule evaluation ship behind a feature flag.",
+   "policy": {
+    "deny_if_any": [
+     "alerting_rules",
+     "no_feature_flag"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-313",
+   "absolute": true,
+   "text": "EU customer telemetry and facility personnel data (badge/access logs) remains in the EU region. (GDPR residency floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eu_data",
+     "us_cache",
+     "us_replication"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-315",
+   "absolute": false,
+   "text": "No new external analytics/telemetry on customer data without a completed data-protection impact assessment (DPIA).",
+   "policy": {
+    "deny_if_any": [
+     "computer_vision",
+     "customer_data_path",
+     "external_analytics",
+     "first_of_kind",
+     "no_dpia",
+     "worker_images"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-316",
+   "absolute": false,
+   "text": "AI-agent-authored changes to authorization/tenant-access code require human reviewer sign-off.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "formal_test_suite",
+     "incident_window",
+     "no_reviewer_available",
+     "ticketing_writeback"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-317",
+   "absolute": false,
+   "text": "Deploys blocked on >10% p95 latency regression for the live alerting pipeline tier.",
+   "policy": {
+    "deny_if_any": [
+     "dashboard_service",
+     "flag_on_default",
+     "latency_regression"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-318",
+   "absolute": false,
+   "text": "Storage-touching changes require a verified backup/restore run in staging.",
+   "policy": {
+    "deny_if_any": []
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-319",
+   "absolute": false,
+   "text": "Changes to emergency-notification/escalation logic require on-call SRE-lead domain review.",
+   "policy": {
+    "deny_if_any": [
+     "escalation_logic_change",
+     "sre_lead_review_pending"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-320",
+   "absolute": false,
+   "text": "Customer-facing notification templates must pass the opt-in/consent check.",
+   "policy": {
+    "deny_if_any": [
+     "consent_check_pending",
+     "customer_communication",
+     "first_of_kind",
+     "no_consent_check",
+     "notification_template"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-321",
+   "absolute": true,
+   "text": "Security audit logs are immutable and retained 7 years (SOC 2 / ISO 27001 evidence); no change may shorten retention or add mutation paths.",
+   "policy": {
+    "deny_if_any": [
+     "audit_log_retention",
+     "mutation_path",
+     "retention_cut",
+     "security_audit_log"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-322",
+   "absolute": false,
+   "text": "Predictive-model updates (failure prediction, anomaly detection) require a shadow-evaluation report before promotion to live scoring.",
+   "policy": {
+    "deny_if_any": [
+     "anomaly_model",
+     "ml_model_update",
+     "no_shadow_eval"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-330",
+   "absolute": true,
+   "text": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour. (EU AI Act Art. 5(1)(b) floor \u2014 corpus EU-AIACT-A5.1.b, absolute, strictness 4/4: no derogation exists and no officer holds authority to accept this risk.)",
+   "policy": {
+    "deny_if_any": [
+     "vulnerability_targeting",
+     "behavioral_distortion"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-331",
+   "absolute": true,
+   "text": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage. (EU AI Act Art. 5(1)(e) floor \u2014 corpus EU-AIACT-A5.1.e, absolute, strictness 4/4.)",
+   "policy": {
+    "deny_if_any": [
+     "untargeted_scraping",
+     "facial_db_expansion"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-332",
+   "absolute": true,
+   "text": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one. (GDPR Art. 7(3) floor \u2014 corpus EU-GDPR-A7.3, absolute: outside the Art. 23 restriction list, all four corpus criteria pass.)",
+   "policy": {
+    "deny_if_any": [
+     "withdrawal_friction",
+     "withdrawal_path_removed"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-333",
+   "absolute": false,
+   "text": "No AI inference of emotions of a natural person in workplace contexts; the Art. 5(1)(f) medical/safety exception requires a documented justification and a completed DPIA. (EU AI Act Art. 5(1)(f) \u2014 corpus EU-AIACT-A5.1.f, statute: the medical/safety carve-out fails the derogation-free criterion, so the marginal case is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "emotion_inference",
+     "workplace_context"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-334",
+   "absolute": false,
+   "text": "Natural persons must be informed they are interacting with an AI system unless this is obvious to a reasonably well-informed person. (EU AI Act Art. 50(1) \u2014 corpus EU-AIACT-A50.1, statute: the obviousness proviso and law-enforcement exception fail the derogation-free criterion.)",
+   "policy": {
+    "deny_if_any": [
+     "undisclosed_ai_interaction"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-335",
+   "absolute": false,
+   "text": "Special-category personal data (health, biometric-for-ID, orientation, beliefs) may not enter a new processing path without a documented GDPR Art. 9(2) gate. (GDPR Art. 9(1) \u2014 corpus EU-GDPR-A9.1, statute: ten enumerated derogations in Art. 9(2), so the gate question is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "special_category_data",
+     "new_processing_path"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-336",
+   "absolute": false,
+   "text": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning). (Corpus EU-GDPR-A33.1 and EU-NIS2-A23.4.a, statute: the low-risk dispensation and 'where feasible' hedge fail determinacy; the NIS2 deadline fails transposition-invariance.)",
+   "policy": {
+    "deny_if_any": [
+     "notification_delay_path",
+     "breach_pipeline_removal"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "DV-337",
+   "absolute": false,
+   "text": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport. (NIST SP 800-53 IA-2 / SC-8 \u2014 corpus US-NIST80053-IA-2 and -SC-8, statute: framework guidance binding via contractual attachment, tailorable, so compensating controls are adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "shared_account_path",
+     "unauthenticated_endpoint",
+     "plaintext_transmission"
+    ]
+   },
+   "organization": "dcvigil"
+  },
+  {
+   "provision_id": "FL-401",
+   "absolute": false,
+   "text": "Cluster, registry, and external-API credentials live only in the secrets vault; no credentials in job or pipeline configuration.",
+   "policy": {
+    "deny_if_any": [
+     "hotfix",
+     "job_credentials",
+     "new_region"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-402",
+   "absolute": true,
+   "text": "No change may create a path for model weights (checkpoints, shards, optimizer states) to leave the secured weights perimeter or reach non-perimeter storage, endpoints, or devices. (Weights-egress floor.)",
+   "policy": {
+    "deny_if_any": [
+     "cross_region_resume",
+     "debug_tooling",
+     "weights_export_path",
+     "weights_shard_read"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-403",
+   "absolute": false,
+   "text": "No third-party code in training-data or model-code paths without a completed vendor security review.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "llm_copilot",
+     "third_party_lib",
+     "user_data_path",
+     "vendor_review_pending"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-404",
+   "absolute": true,
+   "text": "Dangerous-capability and safety evaluation gates may never be bypassed, stubbed, weakened, or have their scoring altered by pipeline actors; releases gate on passing evals. (Safety-eval floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eval_stub_in_ci",
+     "eval_threshold_cap",
+     "release_unblock",
+     "scorer_change"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-405",
+   "absolute": false,
+   "text": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement.",
+   "policy": {
+    "deny_if_any": [
+     "agent_authored",
+     "missing_attestation"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-406",
+   "absolute": false,
+   "text": "Changed-line test coverage >= 80% on services tagged critical (eval harness, safety filters, serving gateway).",
+   "policy": {
+    "deny_if_any": [
+     "coverage_shortfall",
+     "critical_service",
+     "handwritten_logic",
+     "new_feature"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-407",
+   "absolute": false,
+   "text": "Schema migrations on experiment-metrics tables require a reversible down-migration.",
+   "policy": {
+    "deny_if_any": [
+     "data_mutation",
+     "experiment_metrics_table",
+     "no_down_migration",
+     "schema_migration"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-408",
+   "absolute": false,
+   "text": "No dependency carrying a high/critical CVE may deploy.",
+   "policy": {
+    "deny_if_any": [
+     "cve_critical",
+     "cve_high",
+     "prod_dependency",
+     "runtime_reachable"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-409",
+   "absolute": false,
+   "text": "Third-party licenses restricted to the approved list; no AGPL in shipped inference components.",
+   "policy": {
+    "deny_if_any": [
+     "agpl_license",
+     "inference_component"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-410",
+   "absolute": false,
+   "text": "No secrets in source or CI logs (secret-scanner gate).",
+   "policy": {
+    "deny_if_any": [
+     "live_credential",
+     "secret_scanner_hit",
+     "unmarked_test_key"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-411",
+   "absolute": false,
+   "text": "No production deploys to training infrastructure during a declared major-run change freeze except under the emergency protocol.",
+   "policy": {
+    "deny_if_any": [
+     "freeze_deploy",
+     "non_emergency",
+     "training_run_incident"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-412",
+   "absolute": false,
+   "text": "All changes to safety-filter rule evaluation ship behind a feature flag.",
+   "policy": {
+    "deny_if_any": [
+     "alerting_rules",
+     "no_feature_flag"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-413",
+   "absolute": true,
+   "text": "User conversation data flagged do-not-train is never included in training corpora, and EU user data remains in the EU region. (Data-provenance/privacy floor.)",
+   "policy": {
+    "deny_if_any": [
+     "do_not_train_data",
+     "eu_us_replication",
+     "training_corpus_inclusion"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-415",
+   "absolute": false,
+   "text": "No new analytics or telemetry on user or staff data without a completed privacy review.",
+   "policy": {
+    "deny_if_any": [
+     "computer_vision",
+     "external_analytics",
+     "first_of_kind",
+     "no_dpia",
+     "user_data_path",
+     "worker_images"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-416",
+   "absolute": false,
+   "text": "AI-agent-authored changes to authorization, tenant-access, or safety-filter code require human reviewer sign-off.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "formal_test_suite",
+     "incident_window",
+     "job_scheduler_writeback",
+     "no_reviewer_available"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-417",
+   "absolute": false,
+   "text": "Deploys blocked on >10% p95 latency regression for the serving API tier.",
+   "policy": {
+    "deny_if_any": [
+     "console_service",
+     "flag_on_default",
+     "latency_regression"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-418",
+   "absolute": false,
+   "text": "Storage-touching changes require a verified backup/restore run in staging.",
+   "policy": {
+    "deny_if_any": []
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-419",
+   "absolute": false,
+   "text": "Changes to evaluation-scoring logic require safety-team domain review.",
+   "policy": {
+    "deny_if_any": [
+     "eval_scoring_change",
+     "safety_team_review_pending"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-420",
+   "absolute": false,
+   "text": "User-facing notification templates must pass the opt-in/consent check.",
+   "policy": {
+    "deny_if_any": [
+     "consent_check_pending",
+     "customer_communication",
+     "first_of_kind",
+     "no_consent_check",
+     "notification_template"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-421",
+   "absolute": true,
+   "text": "Safety-incident and evaluation audit logs are immutable and retained 7 years; no change may shorten retention or add mutation paths. (Evidence floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eval_audit_log",
+     "incident_log_retention",
+     "mutation_path",
+     "retention_cut"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-422",
+   "absolute": false,
+   "text": "Model checkpoint promotion to serving requires a shadow-evaluation report before live traffic.",
+   "policy": {
+    "deny_if_any": [
+     "checkpoint_promotion",
+     "ml_model_update",
+     "no_shadow_eval"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-430",
+   "absolute": true,
+   "text": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour. (EU AI Act Art. 5(1)(b) floor \u2014 corpus EU-AIACT-A5.1.b, absolute, strictness 4/4: no derogation exists and no officer holds authority to accept this risk.)",
+   "policy": {
+    "deny_if_any": [
+     "vulnerability_targeting",
+     "behavioral_distortion"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-431",
+   "absolute": true,
+   "text": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage. (EU AI Act Art. 5(1)(e) floor \u2014 corpus EU-AIACT-A5.1.e, absolute, strictness 4/4.)",
+   "policy": {
+    "deny_if_any": [
+     "untargeted_scraping",
+     "facial_db_expansion"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-432",
+   "absolute": true,
+   "text": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one. (GDPR Art. 7(3) floor \u2014 corpus EU-GDPR-A7.3, absolute: outside the Art. 23 restriction list, all four corpus criteria pass.)",
+   "policy": {
+    "deny_if_any": [
+     "withdrawal_friction",
+     "withdrawal_path_removed"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-433",
+   "absolute": false,
+   "text": "No AI inference of emotions of a natural person in workplace contexts; the Art. 5(1)(f) medical/safety exception requires a documented justification and a completed DPIA. (EU AI Act Art. 5(1)(f) \u2014 corpus EU-AIACT-A5.1.f, statute: the medical/safety carve-out fails the derogation-free criterion, so the marginal case is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "emotion_inference",
+     "workplace_context"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-434",
+   "absolute": false,
+   "text": "Natural persons must be informed they are interacting with an AI system unless this is obvious to a reasonably well-informed person. (EU AI Act Art. 50(1) \u2014 corpus EU-AIACT-A50.1, statute: the obviousness proviso and law-enforcement exception fail the derogation-free criterion.)",
+   "policy": {
+    "deny_if_any": [
+     "undisclosed_ai_interaction"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-435",
+   "absolute": false,
+   "text": "Special-category personal data (health, biometric-for-ID, orientation, beliefs) may not enter a new processing path without a documented GDPR Art. 9(2) gate. (GDPR Art. 9(1) \u2014 corpus EU-GDPR-A9.1, statute: ten enumerated derogations in Art. 9(2), so the gate question is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "special_category_data",
+     "new_processing_path"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-436",
+   "absolute": false,
+   "text": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning). (Corpus EU-GDPR-A33.1 and EU-NIS2-A23.4.a, statute: the low-risk dispensation and 'where feasible' hedge fail determinacy; the NIS2 deadline fails transposition-invariance.)",
+   "policy": {
+    "deny_if_any": [
+     "notification_delay_path",
+     "breach_pipeline_removal"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "FL-437",
+   "absolute": false,
+   "text": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport. (NIST SP 800-53 IA-2 / SC-8 \u2014 corpus US-NIST80053-IA-2 and -SC-8, statute: framework guidance binding via contractual attachment, tailorable, so compensating controls are adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "shared_account_path",
+     "unauthenticated_endpoint",
+     "plaintext_transmission"
+    ]
+   },
+   "organization": "frontierllm"
+  },
+  {
+   "provision_id": "MF-101",
+   "absolute": true,
+   "text": "Denied-party and sanctions screening is never bypassed, suppressed, allow-listed, or served from a cache older than 24 hours on any payment, onboarding, or beneficiary path. (Sanctions floor \u2014 31 CFR Ch. V; IEEPA, 50 U.S.C. \u00a71701. Liability is strict: there is no risk appetite to spend.)",
+   "policy": {
+    "deny_if_any": [
+     "sanctions_allowlist_path",
+     "sanctions_screening_bypass",
+     "screening_cache_stale"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-102",
+   "absolute": true,
+   "text": "No change may suppress, delay, or silently degrade suspicious-activity detection or filing, and no change may disclose the existence of a SAR to its subject. (BSA floor \u2014 31 U.S.C. \u00a75318(g); 31 CFR \u00a71020.320. Tipping off is a criminal offence.)",
+   "policy": {
+    "deny_if_any": [
+     "aml_alerting_disabled",
+     "sar_pipeline_suppression",
+     "sar_subject_disclosure"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-103",
+   "absolute": true,
+   "text": "No account is opened, funded, or raised in limit before the Customer Identification Program completes. (BSA floor \u2014 31 CFR \u00a71020.220.)",
+   "policy": {
+    "deny_if_any": [
+     "cip_bypass",
+     "funding_before_kyc"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-104",
+   "absolute": true,
+   "text": "Sensitive authentication data \u2014 full track data, card verification codes, PINs and PIN blocks \u2014 is never retained after authorization, and the PAN is never written unmasked to a log. (Card-network floor \u2014 PCI DSS v4.0.1 Req. 3.3.1 and 3.4.1.)",
+   "policy": {
+    "deny_if_any": [
+     "pan_unmasked_log",
+     "sad_retained_post_auth"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-105",
+   "absolute": true,
+   "text": "EU/EEA personal data does not leave the region without an Article 45 adequacy decision or an Article 46 safeguard in force for that destination. (GDPR floor \u2014 Reg. (EU) 2016/679 Arts. 44-49.)",
+   "policy": {
+    "deny_if_any": [
+     "eu_personal_data_egress",
+     "no_transfer_mechanism"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-106",
+   "absolute": true,
+   "text": "No prohibited-basis attribute, and no proxy for one, enters a credit underwriting, pricing, or line-assignment model. (Fair-lending floor \u2014 ECOA, 15 U.S.C. \u00a71691; Reg. B, 12 CFR \u00a71002.6(b)(9).)",
+   "policy": {
+    "deny_if_any": [
+     "prohibited_basis_variable",
+     "protected_class_proxy"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-107",
+   "absolute": true,
+   "text": "No system performs social scoring, deploys subliminal or purposefully manipulative techniques, infers emotion in the workplace, or builds facial-recognition databases by untargeted scraping. (EU AI Act floor \u2014 Reg. (EU) 2024/1689 Art. 5, applicable since 2 February 2025.)",
+   "policy": {
+    "deny_if_any": [
+     "manipulative_pattern",
+     "social_scoring_feature",
+     "workplace_emotion_inference"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-108",
+   "absolute": true,
+   "text": "No change removes segregation of duties or disables the audit trail on a system inside the financial-reporting boundary. (SOX floor \u2014 15 U.S.C. \u00a77262; SEC Rule 13a-15.)",
+   "policy": {
+    "deny_if_any": [
+     "ledger_audit_trail_off",
+     "sod_bypass"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-109",
+   "absolute": true,
+   "text": "Consumer liability caps and error-resolution clocks for electronic fund transfers are not configurable downward or extendable by product decision. (Reg. E floor \u2014 12 CFR \u00a7\u00a71005.6, 1005.11.)",
+   "policy": {
+    "deny_if_any": [
+     "liability_cap_override",
+     "reg_e_clock_extension"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-110",
+   "absolute": true,
+   "text": "No adverse credit action rests on a model output that cannot produce specific principal reasons, and no change removes the human-reviewable path to contest one. (ECOA floor \u2014 12 CFR \u00a71002.9; CFPB Circulars 2022-03 and 2023-03: model complexity is not a defence.)",
+   "policy": {
+    "deny_if_any": [
+     "human_appeal_removed",
+     "reason_codes_removed",
+     "unexplainable_adverse_action"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-111",
+   "absolute": true,
+   "text": "No autonomous agent moves customer funds, changes a credit limit, or closes an account without a bounded mandate and a human-operable stop, and no change removes or degrades that stop. (Oversight floor \u2014 Anthropic, Claude's Constitution (January 2026, CC0), which places not undermining appropriate human oversight above helpfulness; cf. EU AI Act Art. 14, SR 11-7 \u00a7V.)",
+   "policy": {
+    "deny_if_any": [
+     "agent_unbounded_authority",
+     "oversight_stop_removed"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-201",
+   "absolute": false,
+   "text": "Customer information is encrypted in transit and at rest; a change that weakens or removes encryption on a customer-data path requires the CISO's written finding of an effective alternative control. (GLBA Safeguards Rule \u2014 16 CFR \u00a7314.4(c)(3), which contemplates exactly this finding.)",
+   "policy": {
+    "deny_if_any": [
+     "encryption_downgrade",
+     "plaintext_customer_data"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-202",
+   "absolute": false,
+   "text": "Multi-factor authentication protects every individual's access to every information system; any exception requires a written, CISO-approved compensating control reviewed at least annually. (23 NYCRR \u00a7500.12 \u2014 universal MFA in force since 1 November 2025; \u00a7500.12(a) permits CISO-approved compensating controls.)",
+   "policy": {
+    "deny_if_any": [
+     "mfa_exception_requested",
+     "shared_service_account"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-203",
+   "absolute": false,
+   "text": "No change disables or delays the telemetry that feeds regulatory incident reporting. (23 NYCRR \u00a7500.17(a), 72 hours; DORA Art. 19 with RTS (EU) 2025/301 \u2014 initial report 4 hours from classification, intermediate 72 hours, final one month.)",
+   "policy": {
+    "deny_if_any": [
+     "incident_telemetry_disabled",
+     "reporting_hook_removed"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-204",
+   "absolute": false,
+   "text": "No ICT third party enters a critical-or-important function path without a register-of-information entry, a documented exit strategy, and disclosure of subcontracting. (DORA Art. 28(3), Reg. (EU) 2022/2554; register format per ITS (EU) 2024/2956.)",
+   "policy": {
+    "deny_if_any": [
+     "no_exit_strategy",
+     "unregistered_ict_provider"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-205",
+   "absolute": false,
+   "text": "A change to a critical-or-important function is resilience tested before release; designated functions additionally carry threat-led penetration testing every three years. (DORA Arts. 24-26.)",
+   "policy": {
+    "deny_if_any": [
+     "critical_function_change",
+     "resilience_test_skipped"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-206",
+   "absolute": false,
+   "text": "No credential, key, or token appears in source, configuration, or CI logs; secrets live in the vault. (GLBA Safeguards 16 CFR \u00a7314.4(c); PCI DSS v4.0.1 Req. 8.6.2.)",
+   "policy": {
+    "deny_if_any": [
+     "credential_in_ci_log",
+     "secret_in_source"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-207",
+   "absolute": false,
+   "text": "Every script on a payment page is authorized, inventoried, and integrity-checked, and a tamper-detection mechanism watches the page. (PCI DSS v4.0.1 Req. 6.4.3 and 11.6.1 \u2014 mandatory since 31 March 2025.)",
+   "policy": {
+    "deny_if_any": [
+     "no_script_integrity_check",
+     "unauthorized_payment_script"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-208",
+   "absolute": false,
+   "text": "No production change to a cardholder or ledger system without documented approval, a tested rollback, and separation between author and approver. (PCI DSS v4.0.1 Req. 6.5.1; SOC 2 CC8.1.)",
+   "policy": {
+    "deny_if_any": [
+     "emergency_change_unapproved",
+     "no_rollback_plan"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-209",
+   "absolute": false,
+   "text": "Deploys are blocked on a greater-than-10% p95 latency regression, or any availability regression, on the payment-authorization path. (Operational provision; FFIEC Business Continuity Management Handbook.)",
+   "policy": {
+    "deny_if_any": [
+     "availability_regression",
+     "latency_regression"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-210",
+   "absolute": false,
+   "text": "Personal data is collected for a stated purpose and deleted on schedule; no new personal-data field is retained without a recorded retention decision. (GDPR Arts. 5(1)(c) and 5(1)(e); CCPA/CPRA, Cal. Civ. Code \u00a71798.100(c).)",
+   "policy": {
+    "deny_if_any": [
+     "new_pii_field",
+     "retention_extension"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-211",
+   "absolute": false,
+   "text": "No third-party code enters a cardholder-data or personal-data path without a completed vendor security review. (Interagency Guidance on Third-Party Relationships, 88 FR 37920 (2023); DORA Art. 28.)",
+   "policy": {
+    "deny_if_any": [
+     "third_party_lib",
+     "vendor_review_pending"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-212",
+   "absolute": false,
+   "text": "No production deploy during a designated market-close or peak-period change freeze except under the emergency protocol. (Operational provision; FFIEC Architecture, Infrastructure and Operations Handbook.)",
+   "policy": {
+    "deny_if_any": [
+     "freeze_deploy"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-301",
+   "absolute": false,
+   "text": "No model reaches a credit, fraud, or AML decision in production before independent validation covering conceptual soundness, outcomes analysis, and ongoing monitoring. (SR 11-7 / OCC Bulletin 2011-12, Supervisory Guidance on Model Risk Management.)",
+   "policy": {
+    "deny_if_any": [
+     "model_decision_path",
+     "unvalidated_model_deploy"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-302",
+   "absolute": false,
+   "text": "Every model in a decision path carries an inventory entry and current documentation: purpose, training data, known limits, and a named owner. (SR 11-7 \u00a7VII model inventory; NIST AI RMF 1.0, GOVERN-1.)",
+   "policy": {
+    "deny_if_any": [
+     "missing_model_card",
+     "model_inventory_gap"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-303",
+   "absolute": false,
+   "text": "A customer interacting with an AI system is told so, and synthetic content the firm generates is machine-markable. (EU AI Act Art. 50 transparency obligations, applicable from 2 August 2026; reinforced by CFPB UDAAP.)",
+   "policy": {
+    "deny_if_any": [
+     "undisclosed_ai_agent",
+     "unmarked_synthetic_content"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-304",
+   "absolute": false,
+   "text": "Creditworthiness and credit-scoring systems are Annex III high-risk: risk management, data governance, logging, human oversight, and accuracy obligations must be in place before the applicable date. (EU AI Act Arts. 9-15 and Annex III(5)(b). The AI Omnibus, in force 27 July 2026, moved standalone Annex III obligations to 2 December 2027 and Annex I to 2 August 2028; the Art. 5 prohibitions and Art. 50 transparency duties were NOT deferred.)",
+   "policy": {
+    "deny_if_any": [
+     "high_risk_ai_gap",
+     "no_conformity_assessment"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-305",
+   "absolute": false,
+   "text": "A decisioning model is tested for disparate impact across protected classes before deployment and monitored afterwards. (NIST AI RMF 1.0, MEASURE-2.11; Reg. B effects test, 12 CFR \u00a71002.6(a); CFPB Circular 2022-03.)",
+   "policy": {
+    "deny_if_any": [
+     "bias_test_missing",
+     "proxy_feature_untested"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-306",
+   "absolute": false,
+   "text": "An AI-facing surface does not deceive a customer, impersonate a human, manufacture confidence it does not have, or steer a customer against their own interest. (Anthropic, Claude's Constitution (January 2026, CC0), honesty and non-manipulation; enforceable against the firm through UDAAP, 12 U.S.C. \u00a75531.)",
+   "policy": {
+    "deny_if_any": [
+     "agent_impersonates_human",
+     "undisclosed_incentive_steering"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-307",
+   "absolute": false,
+   "text": "Every agent-authored change carries a provenance attestation \u2014 agent identity, model version, and a link to the originating human requirement \u2014 and every agent action in production runs under an explicit value and rate bound. (Firm oversight provision; SR 11-7 \u00a7V on model use controls; NIST AI RMF 1.0, MANAGE-4.)",
+   "policy": {
+    "deny_if_any": [
+     "missing_attestation",
+     "unbounded_agent_action"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-308",
+   "absolute": false,
+   "text": "No customer personal data enters model training, or a third party model provider's retention window, without a lawful basis and a contractual carve-out. (GLBA \u00a7502, 15 U.S.C. \u00a76802; GDPR Art. 6; provider relationship governed by DORA Art. 28.)",
+   "policy": {
+    "deny_if_any": [
+     "customer_data_training",
+     "third_party_model_retention"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-401",
+   "absolute": false,
+   "text": "No dark pattern, no material omission, and no fee or term a reasonable consumer would not expect from the disclosure given. (Dodd-Frank \u00a7\u00a71031 and 1036, 12 U.S.C. \u00a7\u00a75531 and 5536.)",
+   "policy": {
+    "deny_if_any": [
+     "dark_pattern",
+     "friction_asymmetry",
+     "undisclosed_fee"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-402",
+   "absolute": false,
+   "text": "Data furnished to consumer reporting agencies is accurate, disputes are investigated within the statutory window, and adverse action notices name both the reasons and the agency. (FCRA, 15 U.S.C. \u00a7\u00a71681m and 1681s-2; Reg. V, 12 CFR Part 1022.)",
+   "policy": {
+    "deny_if_any": [
+     "dispute_sla_breach",
+     "furnishing_accuracy_gap"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-403",
+   "absolute": false,
+   "text": "Cost-of-credit disclosures are accurate, timely, and in the required form before the consumer becomes bound. (TILA, 15 U.S.C. \u00a71601; Reg. Z, 12 CFR Part 1026.)",
+   "policy": {
+    "deny_if_any": [
+     "apr_calculation_change",
+     "disclosure_timing_change"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-404",
+   "absolute": false,
+   "text": "Opt-out of sale or sharing, and limits on sensitive personal information, are honoured on every surface including newly built ones. (CCPA/CPRA, Cal. Civ. Code \u00a71798.100 et seq., and analogous state statutes.)",
+   "policy": {
+    "deny_if_any": [
+     "new_data_sale_path",
+     "opt_out_not_propagated"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-405",
+   "absolute": false,
+   "text": "Consumer-permissioned data access is built to a documented interface with revocable authorization, whatever shape the rule finally takes. (Dodd-Frank \u00a71033; 12 CFR Part 1033. The October 2024 final rule was enjoined by the Eastern District of Kentucky in October 2025 and is under CFPB reconsideration, so this is a READINESS provision with no live compliance date \u2014 the architecture, not the deadline, is what binds here.)",
+   "policy": {
+    "deny_if_any": [
+     "non_revocable_token",
+     "screen_scraping_dependency"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "MF-406",
+   "absolute": false,
+   "text": "Consumer complaints are logged, routed, and closed within the stated window, and no change removes a complaint path without an equivalent replacement. (CFPB supervisory expectations; UDAAP.)",
+   "policy": {
+    "deny_if_any": [
+     "complaint_path_removed"
+    ]
+   },
+   "organization": "fintech"
+  },
+  {
+   "provision_id": "SC-201",
+   "absolute": false,
+   "text": "Carrier/partner credentials live only in the secrets vault; no credentials in connector configuration.",
+   "policy": {
+    "deny_if_any": [
+     "connector_credentials",
+     "hotfix",
+     "new_region"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-202",
+   "absolute": true,
+   "text": "Denied-party/sanctions screening (OFAC, BIS lists) is never bypassed, suppressed, filtered, or cached beyond 24 hours; no change may add a bypass or suppression path. (Sanctions-law floor.)",
+   "policy": {
+    "deny_if_any": [
+     "allowlist_path",
+     "cost_optimization",
+     "screening_bypass",
+     "screening_cache_7d"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-203",
+   "absolute": false,
+   "text": "No third-party code in tenant-data paths without a completed vendor security review.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "llm_copilot",
+     "tenant_data_path",
+     "third_party_lib",
+     "vendor_review_pending"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-204",
+   "absolute": true,
+   "text": "Tenant data isolation: no change may enable cross-tenant reads or joins outside the anonymized benchmarking service. (Contractual/multi-tenant floor.)",
+   "policy": {
+    "deny_if_any": [
+     "cross_tenant_join",
+     "cross_tenant_read",
+     "dashboard_change",
+     "support_tool"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-205",
+   "absolute": false,
+   "text": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement.",
+   "policy": {
+    "deny_if_any": [
+     "agent_authored",
+     "missing_attestation"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-206",
+   "absolute": false,
+   "text": "Changed-line test coverage >= 80% on services tagged critical (screening, alerting, tracking).",
+   "policy": {
+    "deny_if_any": [
+     "coverage_shortfall",
+     "critical_service",
+     "handwritten_logic",
+     "new_feature"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-207",
+   "absolute": false,
+   "text": "Schema migrations on shipment-event tables require a reversible down-migration.",
+   "policy": {
+    "deny_if_any": [
+     "data_mutation",
+     "no_down_migration",
+     "schema_migration",
+     "shipment_event_table"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-208",
+   "absolute": false,
+   "text": "No dependency carrying a high/critical CVE may deploy.",
+   "policy": {
+    "deny_if_any": [
+     "cve_critical",
+     "cve_high",
+     "prod_dependency",
+     "runtime_reachable"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-209",
+   "absolute": false,
+   "text": "Third-party licenses restricted to the approved list; no AGPL in distributed edge agents.",
+   "policy": {
+    "deny_if_any": [
+     "agpl_license",
+     "edge_agent_component"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-210",
+   "absolute": false,
+   "text": "No secrets in source or CI logs (secret-scanner gate).",
+   "policy": {
+    "deny_if_any": [
+     "live_credential",
+     "secret_scanner_hit",
+     "unmarked_test_key"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-211",
+   "absolute": false,
+   "text": "No production deploys during the peak-season change freeze (Nov 15 - Jan 5) except under the emergency protocol.",
+   "policy": {
+    "deny_if_any": [
+     "freeze_deploy",
+     "non_emergency",
+     "port_disruption"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-212",
+   "absolute": false,
+   "text": "All changes to alerting/exception-rule evaluation ship behind a feature flag.",
+   "policy": {
+    "deny_if_any": [
+     "alerting_rules",
+     "no_feature_flag"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-213",
+   "absolute": true,
+   "text": "EU logistics personal data (driver identities, telematics traces) remains in the EU region. (GDPR residency floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eu_data",
+     "us_cache",
+     "us_replication"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-215",
+   "absolute": false,
+   "text": "No new external analytics/telemetry on tenant data without a completed data-protection impact assessment (DPIA).",
+   "policy": {
+    "deny_if_any": [
+     "computer_vision",
+     "external_analytics",
+     "first_of_kind",
+     "no_dpia",
+     "tenant_data_path",
+     "worker_images"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-216",
+   "absolute": false,
+   "text": "AI-agent-authored changes to authorization/tenant-access code require human reviewer sign-off.",
+   "policy": {
+    "deny_if_any": [
+     "customer_writeback",
+     "first_of_kind",
+     "formal_test_suite",
+     "incident_window",
+     "no_reviewer_available"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-217",
+   "absolute": false,
+   "text": "Deploys blocked on >10% p95 latency regression for the live-tracking API tier.",
+   "policy": {
+    "deny_if_any": [
+     "dispatch_service",
+     "flag_on_default",
+     "latency_regression"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-218",
+   "absolute": false,
+   "text": "Storage-touching changes require a verified backup/restore run in staging.",
+   "policy": {
+    "deny_if_any": []
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-219",
+   "absolute": false,
+   "text": "Changes to customs-filing message generation (ISF/entry data) require licensed-customs-broker domain review.",
+   "policy": {
+    "deny_if_any": [
+     "broker_review_pending",
+     "customs_filing_change"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-220",
+   "absolute": false,
+   "text": "Customer-facing notification templates must pass the opt-in/consent check.",
+   "policy": {
+    "deny_if_any": [
+     "consent_check_pending",
+     "customer_communication",
+     "first_of_kind",
+     "no_consent_check",
+     "notification_template"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-221",
+   "absolute": true,
+   "text": "Customs entry records and screening audit logs are immutable and retained 5 years; no change may shorten retention or add mutation paths. (19 CFR 163 floor.)",
+   "policy": {
+    "deny_if_any": [
+     "customs_records",
+     "mutation_path",
+     "retention_cut",
+     "screening_audit_log"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-222",
+   "absolute": false,
+   "text": "Predictive-model updates (ETA, risk scoring) require a shadow-evaluation report before promotion to live scoring.",
+   "policy": {
+    "deny_if_any": [
+     "ml_model_update",
+     "no_shadow_eval",
+     "risk_scoring"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-230",
+   "absolute": true,
+   "text": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour. (EU AI Act Art. 5(1)(b) floor \u2014 corpus EU-AIACT-A5.1.b, absolute, strictness 4/4: no derogation exists and no officer holds authority to accept this risk.)",
+   "policy": {
+    "deny_if_any": [
+     "vulnerability_targeting",
+     "behavioral_distortion"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-231",
+   "absolute": true,
+   "text": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage. (EU AI Act Art. 5(1)(e) floor \u2014 corpus EU-AIACT-A5.1.e, absolute, strictness 4/4.)",
+   "policy": {
+    "deny_if_any": [
+     "untargeted_scraping",
+     "facial_db_expansion"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-232",
+   "absolute": true,
+   "text": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one. (GDPR Art. 7(3) floor \u2014 corpus EU-GDPR-A7.3, absolute: outside the Art. 23 restriction list, all four corpus criteria pass.)",
+   "policy": {
+    "deny_if_any": [
+     "withdrawal_friction",
+     "withdrawal_path_removed"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-233",
+   "absolute": false,
+   "text": "No AI inference of emotions of a natural person in workplace contexts; the Art. 5(1)(f) medical/safety exception requires a documented justification and a completed DPIA. (EU AI Act Art. 5(1)(f) \u2014 corpus EU-AIACT-A5.1.f, statute: the medical/safety carve-out fails the derogation-free criterion, so the marginal case is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "emotion_inference",
+     "workplace_context"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-234",
+   "absolute": false,
+   "text": "Natural persons must be informed they are interacting with an AI system unless this is obvious to a reasonably well-informed person. (EU AI Act Art. 50(1) \u2014 corpus EU-AIACT-A50.1, statute: the obviousness proviso and law-enforcement exception fail the derogation-free criterion.)",
+   "policy": {
+    "deny_if_any": [
+     "undisclosed_ai_interaction"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-235",
+   "absolute": false,
+   "text": "Special-category personal data (health, biometric-for-ID, orientation, beliefs) may not enter a new processing path without a documented GDPR Art. 9(2) gate. (GDPR Art. 9(1) \u2014 corpus EU-GDPR-A9.1, statute: ten enumerated derogations in Art. 9(2), so the gate question is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "special_category_data",
+     "new_processing_path"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-236",
+   "absolute": false,
+   "text": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning). (Corpus EU-GDPR-A33.1 and EU-NIS2-A23.4.a, statute: the low-risk dispensation and 'where feasible' hedge fail determinacy; the NIS2 deadline fails transposition-invariance.)",
+   "policy": {
+    "deny_if_any": [
+     "notification_delay_path",
+     "breach_pipeline_removal"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "SC-237",
+   "absolute": false,
+   "text": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport. (NIST SP 800-53 IA-2 / SC-8 \u2014 corpus US-NIST80053-IA-2 and -SC-8, statute: framework guidance binding via contractual attachment, tailorable, so compensating controls are adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "shared_account_path",
+     "unauthenticated_endpoint",
+     "plaintext_transmission"
+    ]
+   },
+   "organization": "sctower"
+  },
+  {
+   "provision_id": "VP-101",
+   "absolute": false,
+   "text": "Client/owner PII may be written only to storage with a current encryption-at-rest attestation.",
+   "policy": {
+    "deny_if_any": [
+     "hotfix",
+     "new_region",
+     "pii_write"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-102",
+   "absolute": true,
+   "text": "Controlled-substance dispensing log records are append-only; no change may introduce update or delete paths. (DEA 21 CFR 1304 recordkeeping floor.)",
+   "policy": {
+    "deny_if_any": [
+     "delete_path",
+     "dispensing_log",
+     "update_path"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-103",
+   "absolute": false,
+   "text": "No third-party code in client-data paths without a completed vendor security review.",
+   "policy": {
+    "deny_if_any": [
+     "client_data_path",
+     "first_of_kind",
+     "third_party_lib",
+     "vendor_review_pending",
+     "wasm_plugin"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-104",
+   "absolute": true,
+   "text": "Payment card primary account numbers are never logged or stored unencrypted. (PCI DSS floor.)",
+   "policy": {
+    "deny_if_any": [
+     "debug_change",
+     "pan_logged",
+     "pan_stored_plaintext",
+     "retry_queue"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-105",
+   "absolute": false,
+   "text": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement.",
+   "policy": {
+    "deny_if_any": [
+     "agent_authored",
+     "missing_attestation"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-106",
+   "absolute": false,
+   "text": "Changed-line test coverage >= 80% on services tagged critical.",
+   "policy": {
+    "deny_if_any": [
+     "coverage_shortfall",
+     "critical_service",
+     "handwritten_logic",
+     "new_feature"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-107",
+   "absolute": false,
+   "text": "Schema migrations on patient-record tables require a reversible down-migration.",
+   "policy": {
+    "deny_if_any": [
+     "data_mutation",
+     "first_of_kind",
+     "no_down_migration",
+     "offline_sync",
+     "patient_table",
+     "schema_migration"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-108",
+   "absolute": false,
+   "text": "No dependency carrying a high/critical CVE may deploy.",
+   "policy": {
+    "deny_if_any": [
+     "cve_critical",
+     "cve_high",
+     "prod_dependency",
+     "runtime_reachable"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-109",
+   "absolute": false,
+   "text": "Third-party licenses restricted to the approved list; no AGPL in distributed components.",
+   "policy": {
+    "deny_if_any": [
+     "agpl_license",
+     "distributed_component"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-110",
+   "absolute": false,
+   "text": "No secrets in source or CI logs (secret-scanner gate).",
+   "policy": {
+    "deny_if_any": [
+     "live_credential",
+     "secret_scanner_hit",
+     "unmarked_test_key"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-111",
+   "absolute": false,
+   "text": "No production deploys during the weekend on-call freeze except under the emergency hotfix protocol.",
+   "policy": {
+    "deny_if_any": [
+     "lab_recall",
+     "non_emergency",
+     "weekend_deploy"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-112",
+   "absolute": false,
+   "text": "All changes to prescription-workflow code ship behind a feature flag.",
+   "policy": {
+    "deny_if_any": [
+     "no_feature_flag",
+     "rx_workflow"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-113",
+   "absolute": true,
+   "text": "EU clinic data remains in the EU region. (GDPR residency floor.)",
+   "policy": {
+    "deny_if_any": [
+     "eu_data",
+     "us_cache",
+     "us_replication"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-115",
+   "absolute": false,
+   "text": "No new external analytics/telemetry in client-data paths without a completed data-protection impact assessment (DPIA).",
+   "policy": {
+    "deny_if_any": [
+     "biometric_data",
+     "client_data_path",
+     "external_analytics",
+     "first_of_kind",
+     "no_dpia"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-116",
+   "absolute": false,
+   "text": "AI-agent-authored changes to authentication/authorization code require human reviewer sign-off.",
+   "policy": {
+    "deny_if_any": [
+     "formal_test_suite",
+     "incident_window",
+     "no_reviewer_available"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-117",
+   "absolute": false,
+   "text": "Deploys blocked on >10% p95 latency regression for the scheduling service tier.",
+   "policy": {
+    "deny_if_any": [
+     "flag_on_default",
+     "latency_regression",
+     "scheduling_service"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-118",
+   "absolute": false,
+   "text": "Storage-touching changes require a verified backup/restore run in staging.",
+   "policy": {
+    "deny_if_any": [
+     "first_of_kind",
+     "offline_sync",
+     "patient_table"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-119",
+   "absolute": false,
+   "text": "Changes to the euthanasia-record module require licensed-DVM domain review.",
+   "policy": {
+    "deny_if_any": []
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-120",
+   "absolute": false,
+   "text": "Client SMS/email template changes must pass the TCPA/consent check.",
+   "policy": {
+    "deny_if_any": [
+     "client_communication",
+     "consent_check_pending",
+     "first_of_kind",
+     "no_consent_check",
+     "sms_template"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-121",
+   "absolute": true,
+   "text": "Security audit logs are immutable and retained 7 years; no change may shorten retention or add mutation paths.",
+   "policy": {
+    "deny_if_any": [
+     "audit_log",
+     "mutation_path",
+     "retention_cut"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-130",
+   "absolute": true,
+   "text": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour. (EU AI Act Art. 5(1)(b) floor \u2014 corpus EU-AIACT-A5.1.b, absolute, strictness 4/4: no derogation exists and no officer holds authority to accept this risk.)",
+   "policy": {
+    "deny_if_any": [
+     "vulnerability_targeting",
+     "behavioral_distortion"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-131",
+   "absolute": true,
+   "text": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage. (EU AI Act Art. 5(1)(e) floor \u2014 corpus EU-AIACT-A5.1.e, absolute, strictness 4/4.)",
+   "policy": {
+    "deny_if_any": [
+     "untargeted_scraping",
+     "facial_db_expansion"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-132",
+   "absolute": true,
+   "text": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one. (GDPR Art. 7(3) floor \u2014 corpus EU-GDPR-A7.3, absolute: outside the Art. 23 restriction list, all four corpus criteria pass.)",
+   "policy": {
+    "deny_if_any": [
+     "withdrawal_friction",
+     "withdrawal_path_removed"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-133",
+   "absolute": false,
+   "text": "No AI inference of emotions of a natural person in workplace contexts; the Art. 5(1)(f) medical/safety exception requires a documented justification and a completed DPIA. (EU AI Act Art. 5(1)(f) \u2014 corpus EU-AIACT-A5.1.f, statute: the medical/safety carve-out fails the derogation-free criterion, so the marginal case is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "emotion_inference",
+     "workplace_context"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-134",
+   "absolute": false,
+   "text": "Natural persons must be informed they are interacting with an AI system unless this is obvious to a reasonably well-informed person. (EU AI Act Art. 50(1) \u2014 corpus EU-AIACT-A50.1, statute: the obviousness proviso and law-enforcement exception fail the derogation-free criterion.)",
+   "policy": {
+    "deny_if_any": [
+     "undisclosed_ai_interaction"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-135",
+   "absolute": false,
+   "text": "Special-category personal data (health, biometric-for-ID, orientation, beliefs) may not enter a new processing path without a documented GDPR Art. 9(2) gate. (GDPR Art. 9(1) \u2014 corpus EU-GDPR-A9.1, statute: ten enumerated derogations in Art. 9(2), so the gate question is adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "special_category_data",
+     "new_processing_path"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-136",
+   "absolute": false,
+   "text": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning). (Corpus EU-GDPR-A33.1 and EU-NIS2-A23.4.a, statute: the low-risk dispensation and 'where feasible' hedge fail determinacy; the NIS2 deadline fails transposition-invariance.)",
+   "policy": {
+    "deny_if_any": [
+     "notification_delay_path",
+     "breach_pipeline_removal"
+    ]
+   },
+   "organization": "vetpoc"
+  },
+  {
+   "provision_id": "VP-137",
+   "absolute": false,
+   "text": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport. (NIST SP 800-53 IA-2 / SC-8 \u2014 corpus US-NIST80053-IA-2 and -SC-8, statute: framework guidance binding via contractual attachment, tailorable, so compensating controls are adjudicable.)",
+   "policy": {
+    "deny_if_any": [
+     "shared_account_path",
+     "unauthenticated_endpoint",
+     "plaintext_transmission"
+    ]
+   },
+   "organization": "vetpoc"
+  }
+ ],
+ "standing_declaration": {
+  "scope": "_global",
+  "adverse_to_grants": false,
+  "holder": null,
+  "note": "No party in this deployment holds contest standing adverse to grants: contest may be invoked by the requesting party only, and the companion chapter's standing extension is not adopted. Recorded per Axiom A9 so that the one-sidedness of the realised base is a disclosed fact of every audit export."
+ }
+}

@@ -1,0 +1,56 @@
+{
+ "organizations": [
+  {
+   "org_id": "dcvigil",
+   "name": "DCVigil",
+   "principals": [
+    {
+     "principal_id": "dcvigil.risk",
+     "branch": "risk_owner",
+     "key": "devkey-dcvigil-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "dcvigil.grc",
+     "branch": "lawmakers",
+     "key": "devkey-dcvigil-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "dcvigil.eng",
+     "branch": null,
+     "key": "devkey-dcvigil-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "dcvigil.audit",
+     "branch": null,
+     "key": "devkey-dcvigil-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": null,
+   "name": "Platform",
+   "principals": [
+    {
+     "principal_id": "platform.admin",
+     "branch": null,
+     "key": "devkey-platform-admin",
+     "kind": "human",
+     "role": "platform administrator \u2014 the only account that reads across tenants, and it decides nothing"
+    }
+   ]
+  }
+ ],
+ "founding_scope": "dcvigil"
+}

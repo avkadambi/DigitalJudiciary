@@ -1,0 +1,553 @@
+{
+ "records": [
+  {
+   "seed_id": "DP-001",
+   "provision_id": "DV-301",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "collector_credentials",
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "encrypted_config",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "<=14-day window; encrypted config with rotation; vault ticket linked"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "DV-301 exists to prevent credential exposure; an encrypted, rotating config whose vault onboarding is queued presents the paperwork lag, not the exposure the provision targets.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-002",
+   "provision_id": "DV-303",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-02-23T00:00:00.000000+00:00",
+   "facts": [
+    "community_audit_complete",
+    "tenant_data_path",
+    "third_party_lib"
+   ],
+   "premise": [
+    "community_audit_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "proceed pending vendor review; review within 30 days"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A widely used OSS library with a completed community security audit presents materially lower supply-chain risk; vendor review may complete in parallel.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-003",
+   "provision_id": "DV-303",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-03-15T00:00:00.000000+00:00",
+   "facts": [
+    "tenant_data_path",
+    "third_party_lib",
+    "touches_access_logs",
+    "vendor_review_pending"
+   ],
+   "premise": [
+    "touches_access_logs"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "security-telemetry"
+   },
+   "scope_level": "service",
+   "rationale": "After the February badge-log ingestion incident, risk appetite narrowed: a pending vendor review is insufficient where the library touches badge/access-log streams carrying facility personnel data.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-004",
+   "provision_id": "DV-308",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-10-21T00:00:00.000000+00:00",
+   "facts": [
+    "cve_high",
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "premise": [
+    "dev_only_dependency",
+    "no_runtime_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "30-day remediation ticket with named owner"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "DV-308 targets exploitable exposure; a build-time-only dependency with no runtime reachability does not present it, provided remediation is tracked.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-005",
+   "provision_id": "DV-306",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-23T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "generated_boilerplate"
+   ],
+   "premise": [
+    "generated_boilerplate"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "coverage measured at module level for generated sensor parsers"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Line-level coverage on generated sensor-parser scaffolds measures the generator, not the change; module-level measurement preserves the provision's intent.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-006",
+   "provision_id": "DV-310",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-09-21T00:00:00.000000+00:00",
+   "facts": [
+    "dummy_marked",
+    "fixture_path",
+    "secret_scanner_hit"
+   ],
+   "premise": [
+    "dummy_marked",
+    "fixture_path"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "fixture must carry DUMMY- prefix and live under /testdata"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Clearly-marked dummy credentials in test fixtures are not secrets; DV-310 targets live credential exposure.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-007",
+   "provision_id": "DV-316",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2025-12-20T00:00:00.000000+00:00",
+   "facts": [
+    "agent_authored",
+    "authz_path",
+    "formal_test_suite"
+   ],
+   "premise": [
+    "agent_authored",
+    "authz_path"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A formal test suite does not substitute for the human sign-off DV-316 requires on agent-authored tenant-access changes; in a multi-tenant monitoring platform the provision allocates accountability, not just verification.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-008",
+   "provision_id": "DV-311",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2026-01-09T00:00:00.000000+00:00",
+   "facts": [
+    "blackout_deploy",
+    "cooling_incident",
+    "emergency_claimed"
+   ],
+   "premise": [
+    "cooling_incident"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "single deploy window; senior engineer paired"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A cooling-failure alerting bug during a customer blackout window justified one in-window deploy; residual risk accepted for 60 days pending an emergency-protocol amendment.",
+   "is_acceptance": true,
+   "expiry": "2026-03-10T00:00:00.000000+00:00",
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-009",
+   "provision_id": "DV-315",
+   "tier": 4,
+   "resolving_principal": "coo.pat",
+   "resolved_at": "2025-10-01T00:00:00.000000+00:00",
+   "facts": [
+    "external_analytics",
+    "growth_experiment",
+    "tenant_data_path"
+   ],
+   "premise": [
+    "growth_experiment"
+   ],
+   "interpretation": {
+    "outcome": "accept_risk"
+   },
+   "conditions": {
+    "note": "30-day pilot, anonymized cohort only"
+   },
+   "scope": {
+    "service": "portal"
+   },
+   "scope_level": "service",
+   "rationale": "Growth pilot allowed ahead of DPIA once; the Lawmakers subsequently REJECTED the referral: DPIA-first stands.",
+   "is_acceptance": true,
+   "expiry": "2025-10-31T00:00:00.000000+00:00",
+   "organization": "dcvigil",
+   "referral_outcome": "rejected"
+  },
+  {
+   "seed_id": "DP-010",
+   "provision_id": "DV-307",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-11-20T00:00:00.000000+00:00",
+   "facts": [
+    "new_table_only",
+    "no_data_mutation",
+    "schema_migration",
+    "telemetry_table"
+   ],
+   "premise": [
+    "new_table_only",
+    "no_data_mutation"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "table creation scripted; drop script attached"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Reversibility exists to protect existing telemetry history; a pure additive table creation mutates nothing and is trivially reversible by drop.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-011",
+   "provision_id": "DV-317",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "dashboard_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "flagged_off_default"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "flag stays off until regression fixed; perf ticket filed"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "A regression behind a default-off flag imposes no user-facing latency; the budget binds at flag-on.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-015",
+   "provision_id": "DV-317",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-01-19T00:00:00.000000+00:00",
+   "facts": [
+    "alerting_service",
+    "flagged_off_default",
+    "latency_regression"
+   ],
+   "premise": [
+    "alerting_service"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "alerting"
+   },
+   "scope_level": "service",
+   "rationale": "Alerting-pipeline latency is operationally critical during thermal events; even flagged-off regressions in the alerting tier must be fixed before merge to avoid flag-flip risk.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-012",
+   "provision_id": "DV-301",
+   "tier": 3,
+   "resolving_principal": "svc:tier3",
+   "resolved_at": "2026-04-05T00:00:00.000000+00:00",
+   "facts": [
+    "encrypted_config",
+    "holds_actuation_credentials",
+    "rotation_enabled",
+    "vault_onboarding_queued"
+   ],
+   "premise": [
+    "holds_actuation_credentials"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {
+    "service": "remediation"
+   },
+   "scope_level": "service",
+   "rationale": "Where the collector also holds credentials for BMS actuation endpoints the physical-control perimeter is implicated; the vault-lag tolerance of DP-001 does not extend there.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-013",
+   "provision_id": "DV-306",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-06-13T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "follow-up coverage ticket within one sprint"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Legacy SNMP-parser modules predate the coverage mandate; incremental improvement via tracked tickets was held acceptable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-014",
+   "provision_id": "DV-306",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2026-03-20T00:00:00.000000+00:00",
+   "facts": [
+    "coverage_shortfall",
+    "critical_service",
+    "legacy_module"
+   ],
+   "premise": [
+    "legacy_module"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": null,
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "The Q2 quality initiative ended the legacy-module exception: coverage is met before merge, including legacy parser code. This holding supersedes the earlier permit on the same premise and provision; it is cited here so the departure is recorded rather than left to the clock (Sect. 4.6).",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil",
+   "cites": "DP-013"
+  },
+  {
+   "seed_id": "DC-T01",
+   "provision_id": "DV-318",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "tie_probe_signal_a",
+    "tie_probe_signal_b"
+   ],
+   "premise": [
+    "tie_probe_signal_a"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {},
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "DV-318 is satisfied where the change carries tie_probe_signal_a; recorded so the point is citable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DC-T02",
+   "provision_id": "DV-318",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-08-22T00:00:00.000000+00:00",
+   "facts": [
+    "tie_probe_signal_a",
+    "tie_probe_signal_b"
+   ],
+   "premise": [
+    "tie_probe_signal_b"
+   ],
+   "interpretation": {
+    "outcome": "deny"
+   },
+   "conditions": {},
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "DV-318 is not satisfied where the change carries tie_probe_signal_b; recorded so the point is citable.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-040",
+   "provision_id": "DV-333",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "dpia_complete",
+    "emotion_inference",
+    "medical_safety_justification",
+    "workplace_context"
+   ],
+   "premise": [
+    "dpia_complete",
+    "medical_safety_justification"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "safety-monitoring scope only; DPIA on file; annual re-justification"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 5(1)(f) excepts systems put in place for medical or safety reasons; a documented safety justification with a completed DPIA is precisely the carve-out the corpus records as the reason this clause is statute-tier rather than absolute.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-041",
+   "provision_id": "DV-334",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "obvious_ai_context",
+    "undisclosed_ai_interaction",
+    "ux_review_complete"
+   ],
+   "premise": [
+    "obvious_ai_context",
+    "ux_review_complete"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "obviousness finding documented by UX review; re-test on major redesign"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 50(1) applies 'unless this is obvious from the point of view of a reasonably well-informed person'; a documented obviousness finding is the proviso working as written.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  },
+  {
+   "seed_id": "DP-042",
+   "provision_id": "DV-335",
+   "tier": 2,
+   "resolving_principal": "svc:tier2",
+   "resolved_at": "2025-07-15T00:00:00.000000+00:00",
+   "facts": [
+    "explicit_consent_documented",
+    "new_processing_path",
+    "purpose_limited",
+    "special_category_data"
+   ],
+   "premise": [
+    "explicit_consent_documented",
+    "purpose_limited"
+   ],
+   "interpretation": {
+    "outcome": "permit_conditional"
+   },
+   "conditions": {
+    "note": "Art. 9(2)(a) gate: explicit consent recorded per purpose; audit annually"
+   },
+   "scope": {},
+   "scope_level": "org",
+   "rationale": "Art. 9(1) is a prohibition with ten derogations; documented explicit consent for a limited purpose satisfies the Art. 9(2)(a) gate.",
+   "is_acceptance": false,
+   "expiry": null,
+   "organization": "dcvigil"
+  }
+ ]
+}

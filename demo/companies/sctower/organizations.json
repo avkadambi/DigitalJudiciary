@@ -1,0 +1,56 @@
+{
+ "organizations": [
+  {
+   "org_id": "sctower",
+   "name": "SC Control Tower",
+   "principals": [
+    {
+     "principal_id": "sctower.risk",
+     "branch": "risk_owner",
+     "key": "devkey-sctower-risk",
+     "kind": "human",
+     "role": "risk owner",
+     "desk": "/review"
+    },
+    {
+     "principal_id": "sctower.grc",
+     "branch": "lawmakers",
+     "key": "devkey-sctower-grc",
+     "kind": "human",
+     "role": "GRC council",
+     "desk": "/review/amendments"
+    },
+    {
+     "principal_id": "sctower.eng",
+     "branch": null,
+     "key": "devkey-sctower-eng",
+     "kind": "human",
+     "role": "engineer",
+     "desk": "/review/changes"
+    },
+    {
+     "principal_id": "sctower.audit",
+     "branch": null,
+     "key": "devkey-sctower-audit",
+     "kind": "human",
+     "role": "auditor",
+     "desk": "/review/ledger"
+    }
+   ]
+  },
+  {
+   "org_id": null,
+   "name": "Platform",
+   "principals": [
+    {
+     "principal_id": "platform.admin",
+     "branch": null,
+     "key": "devkey-platform-admin",
+     "kind": "human",
+     "role": "platform administrator \u2014 the only account that reads across tenants, and it decides nothing"
+    }
+   ]
+  }
+ ],
+ "founding_scope": "sctower"
+}
