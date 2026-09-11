@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "digital-judiciary"
+version = "5.15.0"
+description = "Reference implementation and replication package for the Digital Judiciary: binding, contest-gated precedent for automated compliance decisions."
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+authors = [
+  { name = "Arun Kadambi" },
+  { name = "Venkat Kuppuswamy" },
+]
+keywords = ["precedent", "compliance", "AI governance", "case-based reasoning", "benchmark", "replication"]
+classifiers = [
+  "Development Status :: 5 - Production/Stable",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: Apache Software License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+# The reproduction path, the simulation packs and the benchmark's offline mode need
+# nothing beyond CPython and SQLite. Everything below is optional.
+dependencies = []
+
+[project.optional-dependencies]
+postgres = ["psycopg[binary]>=3.1"]
+extraction = ["torch>=2.2", "transformers>=4.48"]   # simulation/tools/extraction model backends only
+dev = ["ruff>=0.6", "pytest>=8"]
+
+[project.urls]
+Homepage = "https://github.com/OWNER/digital-judiciary"
+Documentation = "https://github.com/OWNER/digital-judiciary/blob/main/REPRODUCE.md"
+Changelog = "https://github.com/OWNER/digital-judiciary/blob/main/CHANGELOG.md"
+
+[tool.setuptools]
+# `app` is the only importable package; everything else is run as scripts from the tree
+# (see REPRODUCE.md). Installing the distribution gives you `app` and the console script below.
+packages = ["app", "app.platform"]
+include-package-data = false
+
+[project.scripts]
+dj-serve = "app.__main__:main"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 120
+extend-exclude = ["simulation/*/docs", "simulation/*/corpus", "demo/companies"]
+
+[tool.ruff.lint]
+# Correctness-only: pyflakes (F) and the pycodestyle errors that are always bugs.
+select = ["F", "E9", "E711", "E712", "E721"]
+ignore = ["E731", "E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

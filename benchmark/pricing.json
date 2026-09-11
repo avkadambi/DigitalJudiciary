@@ -1,0 +1,7 @@
+{
+  "snapshot_date": null,
+  "_note": "Cost metrics stay null until this file is filled in at run time. Pin the published per-million-token rates for each model id on the day of the run and set snapshot_date; the paper reports the snapshot date alongside the numbers. Leaving invented prices here would be worse than reporting no cost at all.",
+  "claude-haiku-4-5-20251001": {"input_per_mtok": null, "output_per_mtok": null},
+  "claude-sonnet-4-6": {"input_per_mtok": null, "output_per_mtok": null},
+  "claude-opus-4-5": {"input_per_mtok": null, "output_per_mtok": null}
+}

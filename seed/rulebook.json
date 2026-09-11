@@ -1,0 +1,103 @@
+{
+  "provisions": [
+    {
+      "provision_id": "SC-201",
+      "absolute": false,
+      "text": "Carrier/partner credentials live only in the secrets vault; no credentials in connector configuration.",
+      "policy": {
+        "deny_if_any": [
+          "connector_credentials"
+        ]
+      }
+    },
+    {
+      "provision_id": "SC-202",
+      "absolute": true,
+      "text": "Denied-party/sanctions screening is never bypassed, suppressed, filtered, or cached beyond 24 hours. (Sanctions-law floor.)",
+      "policy": {
+        "deny_if_any": [
+          "screening_bypass",
+          "allowlist_path"
+        ]
+      }
+    },
+    {
+      "provision_id": "SC-203",
+      "absolute": false,
+      "text": "No third-party code in tenant-data paths without a completed vendor security review.",
+      "policy": {
+        "deny_if_any": [
+          "vendor_review_pending"
+        ]
+      }
+    },
+    {
+      "provision_id": "SC-206",
+      "absolute": false,
+      "text": "Changed-line test coverage >= 80% on services tagged critical.",
+      "policy": {
+        "deny_if_any": [
+          "coverage_shortfall",
+          "coverage_waiver_request"
+        ]
+      }
+    },
+    {
+      "provision_id": "SC-210",
+      "absolute": false,
+      "text": "No secrets in source or CI logs (secret-scanner gate).",
+      "policy": {
+        "deny_if_any": [
+          "secret_in_source"
+        ]
+      }
+    },
+    {
+      "provision_id": "SC-211",
+      "absolute": false,
+      "text": "No production deploys during the peak-season change freeze except under the emergency protocol.",
+      "policy": {
+        "deny_if_any": [
+          "freeze_deploy"
+        ]
+      }
+    },
+    {
+      "provision_id": "SC-213",
+      "absolute": true,
+      "text": "EU logistics personal data remains in the EU region. (GDPR residency floor.)",
+      "policy": {
+        "deny_if_any": [
+          "eu_data_egress"
+        ]
+      }
+    },
+    {
+      "provision_id": "SC-215",
+      "absolute": false,
+      "text": "No new external analytics/telemetry on tenant data without a completed DPIA.",
+      "policy": {
+        "deny_if_any": [
+          "growth_experiment"
+        ]
+      }
+    },
+    {
+      "provision_id": "SC-217",
+      "absolute": false,
+      "text": "Deploys blocked on >10% p95 latency regression for the live-tracking API tier.",
+      "policy": {
+        "deny_if_any": [
+          "latency_regression",
+          "flagged_off_default"
+        ]
+      }
+    }
+  ],
+  "standing_declaration": {
+    "scope": "_global",
+    "adverse_to_grants": false,
+    "holder": null,
+    "note": "No party in this deployment holds contest standing adverse to grants: contest may be invoked by the requesting party only, and the companion chapter's standing extension is not adopted. Recorded per Axiom A9 so that the one-sidedness of the realised base is a disclosed fact of every audit export."
+  }
+}

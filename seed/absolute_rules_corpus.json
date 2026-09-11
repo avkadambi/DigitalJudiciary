@@ -1,0 +1,2028 @@
+{
+  "name": "Absolute Rules Corpus",
+  "version": "0.1",
+  "program": "Digital Judiciary Research Program",
+  "built": "2026-08-28",
+  "schema": "SCHEMA.md v0.1 (four-criterion absoluteness test)",
+  "entry_count": 51,
+  "entries": [
+    {
+      "id": "EU-AIACT-A5.1.a",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(a)",
+      "actor": "provider; deployer",
+      "modality": "prohibition",
+      "text": "the placing on the market, the putting into service or the use of an AI system that deploys subliminal techniques beyond a person's consciousness or purposefully manipulative or deceptive techniques, with the objective, or the effect of materially distorting the behaviour of a person or a group of persons by appreciably impairing their ability to make an informed decision, thereby causing them to take a decision that they would not have otherwise taken in a manner that causes or is reasonably likely to cause that person, another person or group of persons significant harm",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No carve-out; 'significant harm' is a definitional threshold, not a derogation (ruling 3.1)"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Prohibits specified conduct outright; no proportionality/balancing by the addressee"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation; directly applicable, no member-state content discretion"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation (Art. 113: applicable from 2 Feb 2025)"
+        }
+      },
+      "strictness": 4,
+      "classification": "absolute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": "Interpretive vagueness in 'subliminal'/'materially distorting' acknowledged; treated as definitional, not conditional."
+    },
+    {
+      "id": "EU-AIACT-A5.1.b",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(b)",
+      "actor": "provider; deployer",
+      "modality": "prohibition",
+      "text": "the placing on the market, the putting into service or the use of an AI system that exploits any of the vulnerabilities of a natural person or a specific group of persons due to their age, disability or a specific social or economic situation, with the objective, or the effect, of materially distorting the behaviour of that person or a person belonging to that group in a manner that causes or is reasonably likely to cause that person or another person significant harm",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No carve-out"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Conduct specified outright"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 4,
+      "classification": "absolute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-AIACT-A5.1.c",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(c)",
+      "actor": "provider; deployer",
+      "modality": "prohibition",
+      "text": "the placing on the market, the putting into service or the use of AI systems for the evaluation or classification of natural persons or groups of persons over a certain period of time based on their social behaviour or known, inferred or predicted personal or personality characteristics, with the social score leading to either or both of the following: (i) detrimental or unfavourable treatment ... in social contexts that are unrelated to the contexts in which the data was originally generated or collected; (ii) detrimental or unfavourable treatment ... that is unjustified or disproportionate to their social behaviour or its gravity",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "Sub-points (i)/(ii) are definitional elements of the prohibited practice, not exceptions (ruling 3.1)"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Conduct specified outright"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 4,
+      "classification": "absolute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": "'Unjustified or disproportionate' in (ii) qualifies the victim-side treatment, not the addressee's compliance duty."
+    },
+    {
+      "id": "EU-AIACT-A5.1.d",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(d)",
+      "actor": "provider; deployer",
+      "modality": "prohibition",
+      "text": "the placing on the market, the putting into service for this specific purpose, or the use of an AI system for making risk assessments of natural persons in order to assess or predict the risk of a natural person committing a criminal offence, based solely on the profiling of a natural person or on assessing their personality traits and characteristics; this prohibition shall not apply to AI systems used to support the human assessment of the involvement of a person in a criminal activity, which is already based on objective and verifiable facts directly linked to a criminal activity",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Explicit carve-out: 'this prohibition shall not apply to AI systems used to support the human assessment...'"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Conduct specified outright"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-AIACT-A5.1.e",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(e)",
+      "actor": "provider; deployer",
+      "modality": "prohibition",
+      "text": "the placing on the market, the putting into service for this specific purpose, or the use of AI systems that create or expand facial recognition databases through the untargeted scraping of facial images from the internet or CCTV footage",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No carve-out"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Conduct specified outright"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 4,
+      "classification": "absolute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-AIACT-A5.1.f",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(f)",
+      "actor": "provider; deployer",
+      "modality": "prohibition",
+      "text": "the placing on the market, the putting into service for this specific purpose, or the use of AI systems to infer emotions of a natural person in the areas of workplace and education institutions, except where the use of the AI system is intended to be put in place or into the market for medical or safety reasons",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "'except where ... for medical or safety reasons'"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Conduct specified outright"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 5(1)(f) in fine: medical or safety reasons"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-AIACT-A5.1.g",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(g)",
+      "actor": "provider; deployer",
+      "modality": "prohibition",
+      "text": "the placing on the market, the putting into service for this specific purpose, or the use of biometric categorisation systems that categorise individually natural persons based on their biometric data to deduce or infer their race, political opinions, trade union membership, religious or philosophical beliefs, sex life or sexual orientation; this prohibition does not cover any labelling or filtering of lawfully acquired biometric datasets ... or categorizing of biometric data in the area of law enforcement",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Carve-outs for labelling/filtering of lawfully acquired datasets and for law enforcement categorisation"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Conduct specified outright"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 5(1)(g) in fine"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-AIACT-A5.1.h",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(h)",
+      "actor": "deployer (law enforcement); member_state",
+      "modality": "prohibition",
+      "text": "the use of 'real-time' remote biometric identification systems in publicly accessible spaces for the purposes of law enforcement, unless and in so far as such use is strictly necessary for one of the following objectives: (i) the targeted search for specific victims ...; (ii) the prevention of a specific, substantial and imminent threat to the life or physical safety ... or a ... threat of a terrorist attack; (iii) the localisation or identification of a person suspected of having committed a criminal offence ... punishable ... by a custodial sentence or a detention order for a maximum period of at least four years",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Enumerated exceptions (i)-(iii) plus authorization regime in Art. 5(2)-(7)"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'strictly necessary' requires a necessity/balancing assessment per deployment"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Member states choose whether to permit the exceptions at all and set national authorization law (Art. 5(5))"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 1,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 5(1)(h)(i)-(iii)",
+          "Art. 5(2)-(7)"
+        ],
+        "qualifiers": [
+          "strictly necessary"
+        ],
+        "bindingness_context": null
+      },
+      "notes": "The most heavily conditioned Art. 5 prohibition; a canonical statute-tier prohibition."
+    },
+    {
+      "id": "EU-AIACT-A50.1",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 50(1)",
+      "actor": "provider",
+      "modality": "obligation",
+      "text": "Providers shall ensure that AI systems intended to interact directly with natural persons are designed and developed in such a way that the natural persons concerned are informed that they are interacting with an AI system, unless this is obvious from the point of view of a natural person who is reasonably well-informed, observant and circumspect, taking into account the circumstances and the context of use. This obligation shall not apply to AI systems authorised by law to detect, prevent, investigate or prosecute criminal offences ...",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "'unless this is obvious...' and law-enforcement exception"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "The duty itself (inform the person) is determinate"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "obviousness proviso",
+          "law-enforcement systems"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-AIACT-A9.1",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 9(1)-(2)",
+      "actor": "provider (high-risk)",
+      "modality": "obligation",
+      "text": "A risk management system shall be established, implemented, documented and maintained in relation to high-risk AI systems. [Per Art. 9(2)-(5) the system runs as a continuous iterative process, targets risks from intended use and reasonably foreseeable misuse, and need only address risks which may be reasonably mitigated or eliminated.]",
+      "text_fidelity": "condensed",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation from the existence obligation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "System content governed by 'reasonably foreseeable', acceptable-residual-risk judgments"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "reasonably foreseeable misuse",
+          "as far as technically feasible"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-AIACT-A10.1",
+      "instrument": "EU AI Act",
+      "reference": "CELEX:32024R1689",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 10(1)-(3)",
+      "actor": "provider (high-risk)",
+      "modality": "obligation",
+      "text": "High-risk AI systems which make use of techniques involving the training of AI models with data shall be developed on the basis of training, validation and testing data sets that meet the quality criteria referred to in paragraphs 2 to 5. [Art. 10(3): data sets shall be relevant, sufficiently representative, and to the best extent possible, free of errors and complete in view of the intended purpose.]",
+      "text_fidelity": "condensed",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'sufficiently representative', 'to the best extent possible' are graded standards"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "sufficiently representative",
+          "to the best extent possible"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A5.1.a",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(a)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "Personal data shall be processed lawfully, fairly and in a transparent manner in relation to the data subject ('lawfulness, fairness and transparency')",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Art. 23 permits Union/member-state law to restrict Art. 5 in so far as its provisions correspond to Arts. 12-22 rights (ruling 3.2)"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'fairly' and 'transparent' are open-textured principles requiring assessment"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 23 restrictions (transparency limb)"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A5.1.b",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(b)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "collected for specified, explicit and legitimate purposes and not further processed in a manner that is incompatible with those purposes; further processing for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes shall, in accordance with Article 89(1), not be considered to be incompatible with the initial purposes ('purpose limitation')",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Built-in compatibility carve-out for archiving/research/statistics via Art. 89(1)"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'incompatible' requires the Art. 6(4) compatibility assessment"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 89(1) further-processing presumption"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A5.1.c",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(c)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "adequate, relevant and limited to what is necessary in relation to the purposes for which they are processed ('data minimisation')",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No direct derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'adequate', 'necessary' require a proportionality assessment against purposes"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "limited to what is necessary"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A5.1.d",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(d)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "accurate and, where necessary, kept up to date; every reasonable step must be taken to ensure that personal data that are inaccurate, having regard to the purposes for which they are processed, are erased or rectified without delay ('accuracy')",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'where necessary', 'every reasonable step' are balancing standards"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "where necessary",
+          "every reasonable step"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A5.1.e",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(e)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the personal data are processed; personal data may be stored for longer periods insofar as the personal data will be processed solely for archiving purposes in the public interest, scientific or historical research purposes or statistical purposes in accordance with Article 89(1) ... ('storage limitation')",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Extended-storage carve-out for archiving/research/statistics"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'no longer than is necessary' is purpose-relative"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 89(1) extended storage"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A5.1.f",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)(f)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "processed in a manner that ensures appropriate security of the personal data, including protection against unauthorised or unlawful processing and against accidental loss, destruction or damage, using appropriate technical or organisational measures ('integrity and confidentiality')",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'appropriate security' / 'appropriate measures' is a risk-proportionate standard (see Art. 32)"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "appropriate"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A5.2",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(2)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "The controller shall be responsible for, and be able to demonstrate compliance with, paragraph 1 ('accountability')",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation attaches to accountability itself"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "What 'demonstrating compliance' demands inherits the balancing standards of Art. 5(1)"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A7.3",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 7(3)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "The data subject shall have the right to withdraw his or her consent at any time. The withdrawal of consent shall not affect the lawfulness of processing based on consent before its withdrawal. Prior to giving consent, the data subject shall be informed thereof. It shall be as easy to withdraw as to give consent.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation; Art. 7 is outside the Art. 23 restriction list (Arts. 12-22)"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Determinate: withdrawal must be possible at any time and as easy as giving consent"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 4,
+      "classification": "absolute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": "A non-obvious absolute: survives all four criteria including the Art. 23 cross-check."
+    },
+    {
+      "id": "EU-GDPR-A8.1",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 8(1)",
+      "actor": "controller; member_state",
+      "modality": "obligation",
+      "text": "Where point (a) of Article 6(1) applies, in relation to the offer of information society services directly to a child, the processing of the personal data of a child shall be lawful where the child is at least 16 years old. ... Member States may provide by law for a lower age for those purposes provided that such lower age is not below 13 years.",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation from the rule structure itself"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Age thresholds are determinate"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Member-state option to set the age anywhere from 13 to 16 - the canonical C3 failure inside a regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": "Shows that even EU regulations can carry member-state content discretion."
+    },
+    {
+      "id": "EU-GDPR-A9.1",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 9(1)",
+      "actor": "controller",
+      "modality": "prohibition",
+      "text": "Processing of personal data revealing racial or ethnic origin, political opinions, religious or philosophical beliefs, or trade union membership, and the processing of genetic data, biometric data for the purpose of uniquely identifying a natural person, data concerning health or data concerning a natural person's sex life or sexual orientation shall be prohibited.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Art. 9(2)(a)-(j) enumerates ten derogations (consent, employment law, vital interests, ...)"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "The prohibition itself is determinate"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Several Art. 9(2) gates ((b),(g),(h),(i),(j)) and Art. 9(4) depend on member-state law"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 9(2)(a)-(j)",
+          "Art. 9(4) member-state conditions"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": "Looks absolute in isolation; the ten-gate derogation list is why a naive extractor overcounts absolutes."
+    },
+    {
+      "id": "EU-GDPR-A17.1",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 17(1)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "The data subject shall have the right to obtain from the controller the erasure of personal data concerning him or her without undue delay and the controller shall have the obligation to erase personal data without undue delay where one of the grounds referred to in points (a) to (f) applies ...",
+      "text_fidelity": "condensed",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Art. 17(3) disapplies the right for expression, legal obligations, public health, archiving, legal claims; Art. 23 also reaches Art. 17"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'without undue delay' invites case-by-case reasonableness"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 17(3)(a)-(e)",
+          "Art. 23"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A22.1",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 22(1)",
+      "actor": "controller",
+      "modality": "prohibition",
+      "text": "The data subject shall have the right not to be subject to a decision based solely on automated processing, including profiling, which produces legal effects concerning him or her or similarly significantly affects him or her.",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Art. 22(2)(a)-(c): contract necessity, Union/member-state law authorisation, explicit consent"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "The rule is determinate once scope conditions are met"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Art. 22(2)(b) delegates authorisation to member-state law"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 22(2)(a)-(c)"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A25.1",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 25(1)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "Taking into account the state of the art, the cost of implementation and the nature, scope, context and purposes of processing as well as the risks of varying likelihood and severity for rights and freedoms of natural persons posed by the processing, the controller shall ... implement appropriate technical and organisational measures ... designed to implement data-protection principles ... ('data protection by design')",
+      "text_fidelity": "condensed",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Explicit multi-factor balancing preamble; 'appropriate measures'"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "state of the art",
+          "cost of implementation",
+          "appropriate"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A32.1",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 32(1)",
+      "actor": "controller; processor",
+      "modality": "obligation",
+      "text": "Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, the controller and the processor shall implement appropriate technical and organisational measures to ensure a level of security appropriate to the risk ...",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Doubly risk-proportionate ('appropriate to the risk')"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "state of the art",
+          "appropriate to the risk"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-GDPR-A33.1",
+      "instrument": "GDPR",
+      "reference": "CELEX:32016R0679",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 33(1)",
+      "actor": "controller",
+      "modality": "obligation",
+      "text": "In the case of a personal data breach, the controller shall without undue delay and, where feasible, not later than 72 hours after having become aware of it, notify the personal data breach to the supervisory authority ... unless the personal data breach is unlikely to result in a risk to the rights and freedoms of natural persons.",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "'unless ... unlikely to result in a risk' - a risk-based dispensation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'without undue delay', 'where feasible' hedge the 72-hour deadline"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "low-risk breach dispensation"
+        ],
+        "qualifiers": [
+          "where feasible",
+          "without undue delay"
+        ],
+        "bindingness_context": null
+      },
+      "notes": "Often cited as a hard 72-hour rule; the text is softer than its reputation."
+    },
+    {
+      "id": "EU-NIS2-A20.1",
+      "instrument": "NIS2",
+      "reference": "CELEX:32022L2555",
+      "jurisdiction": "EU",
+      "legal_nature": "directive",
+      "locus": "Art. 20(1)",
+      "actor": "member_state -> essential/important entity management bodies",
+      "modality": "obligation",
+      "text": "Member States shall ensure that the management bodies of essential and important entities approve the cybersecurity risk-management measures taken by those entities in order to comply with Article 21, oversee its implementation and can be held liable for infringements by the entities of that Article.",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Approval/oversight/liability duties are determinate"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Directive: the entity-facing rule exists only via national transposition, which varies (ruling 3.3)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binding directive obligation on member states"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-NIS2-A21.1",
+      "instrument": "NIS2",
+      "reference": "CELEX:32022L2555",
+      "jurisdiction": "EU",
+      "legal_nature": "directive",
+      "locus": "Art. 21(1)",
+      "actor": "member_state -> essential/important entities",
+      "modality": "obligation",
+      "text": "Member States shall ensure that essential and important entities take appropriate and proportionate technical, operational and organisational measures to manage the risks posed to the security of network and information systems which those entities use for their operations or for the provision of their services, and to prevent or minimise the impact of incidents on recipients of their services and on other services.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'appropriate and proportionate' is the umbrella standard for all Art. 21 measures"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Directive: the entity-facing rule exists only via national transposition, which varies (ruling 3.3)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binding directive obligation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "appropriate and proportionate"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-NIS2-A21.2.b",
+      "instrument": "NIS2",
+      "reference": "CELEX:32022L2555",
+      "jurisdiction": "EU",
+      "legal_nature": "directive",
+      "locus": "Art. 21(2)(b)",
+      "actor": "member_state -> essential/important entities",
+      "modality": "obligation",
+      "text": "The measures referred to in paragraph 1 ... shall include at least the following: ... (b) incident handling",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "Minimum-content item; no derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "What incident handling requires is scoped by the Art. 21(1)/(2) proportionality umbrella"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Directive: the entity-facing rule exists only via national transposition, which varies (ruling 3.3)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binding directive obligation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-NIS2-A21.2.h",
+      "instrument": "NIS2",
+      "reference": "CELEX:32022L2555",
+      "jurisdiction": "EU",
+      "legal_nature": "directive",
+      "locus": "Art. 21(2)(h)",
+      "actor": "member_state -> essential/important entities",
+      "modality": "obligation",
+      "text": "policies and procedures regarding the use of cryptography and, where appropriate, encryption",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'where appropriate' inline; plus the Art. 21 proportionality umbrella"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Directive: the entity-facing rule exists only via national transposition, which varies (ruling 3.3)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binding directive obligation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "where appropriate"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-NIS2-A21.2.j",
+      "instrument": "NIS2",
+      "reference": "CELEX:32022L2555",
+      "jurisdiction": "EU",
+      "legal_nature": "directive",
+      "locus": "Art. 21(2)(j)",
+      "actor": "member_state -> essential/important entities",
+      "modality": "obligation",
+      "text": "the use of multi-factor authentication or continuous authentication solutions, secured voice, video and text communications and secured emergency communication systems within the entity, where appropriate",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'where appropriate' inline"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Directive: the entity-facing rule exists only via national transposition, which varies (ruling 3.3)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binding directive obligation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "where appropriate"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-NIS2-A23.4.a",
+      "instrument": "NIS2",
+      "reference": "CELEX:32022L2555",
+      "jurisdiction": "EU",
+      "legal_nature": "directive",
+      "locus": "Art. 23(4)(a)",
+      "actor": "member_state -> essential/important entities",
+      "modality": "obligation",
+      "text": "[Entities shall submit to the CSIRT or competent authority] without undue delay and in any event within 24 hours of becoming aware of the significant incident, an early warning, which, where applicable, shall indicate whether the significant incident is suspected of being caused by unlawful or malicious acts or could have a cross-border impact",
+      "text_fidelity": "condensed",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation from the deadline"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "24-hour deadline is determinate ('without undue delay' only accelerates it)"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Directive: the entity-facing rule exists only via national transposition, which varies (ruling 3.3)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binding directive obligation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": "Determinate-but-transposed: fails only C3. In national implementing law this becomes near-absolute."
+    },
+    {
+      "id": "EU-NIS2-A23.4.b",
+      "instrument": "NIS2",
+      "reference": "CELEX:32022L2555",
+      "jurisdiction": "EU",
+      "legal_nature": "directive",
+      "locus": "Art. 23(4)(b)",
+      "actor": "member_state -> essential/important entities",
+      "modality": "obligation",
+      "text": "[Entities shall submit] without undue delay and in any event within 72 hours of becoming aware of the significant incident, an incident notification, which, where applicable, shall update the information referred to in point (a) and indicate an initial assessment of the significant incident, including its severity and impact, as well as, where available, the indicators of compromise",
+      "text_fidelity": "condensed",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation from the deadline"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "72-hour deadline is determinate"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Directive: the entity-facing rule exists only via national transposition, which varies (ruling 3.3)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binding directive obligation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-DORA-A5.1",
+      "instrument": "DORA",
+      "reference": "CELEX:32022R2554",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(1)",
+      "actor": "financial_entity",
+      "modality": "obligation",
+      "text": "Financial entities shall have in place an internal governance and control framework that ensures an effective and prudent management of ICT risk, in accordance with Article 6(4), in order to achieve a high level of digital operational resilience.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation (scope exclusions in Art. 2 are scope, not derogation)"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'effective and prudent', plus the Art. 4 proportionality principle for Chapter II"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation, directly applicable"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "effective and prudent",
+          "Art. 4 proportionality"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-DORA-A5.2",
+      "instrument": "DORA",
+      "reference": "CELEX:32022R2554",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 5(2)",
+      "actor": "financial_entity management body",
+      "modality": "obligation",
+      "text": "The management body of the financial entity shall define, approve, oversee and be responsible for the implementation of all arrangements related to the ICT risk management framework referred to in Article 6(1).",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Content of 'all arrangements' is proportionality-scoped via Art. 4"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-DORA-A6.1",
+      "instrument": "DORA",
+      "reference": "CELEX:32022R2554",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 6(1)",
+      "actor": "financial_entity",
+      "modality": "obligation",
+      "text": "Financial entities shall have a sound, comprehensive and well-documented ICT risk management framework as part of their overall risk management system, which enables them to address ICT risk quickly, efficiently and comprehensively and to ensure a high level of digital operational resilience.",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "Art. 16 provides a simplified framework for certain small/exempted entity classes"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'sound, comprehensive', 'quickly, efficiently' are graded standards; Art. 4 proportionality"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [
+          "Art. 16 simplified ICT risk management framework"
+        ],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "EU-DORA-A17.1",
+      "instrument": "DORA",
+      "reference": "CELEX:32022R2554",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 17(1)",
+      "actor": "financial_entity",
+      "modality": "obligation",
+      "text": "Financial entities shall define, establish and implement an ICT-related incident management process to detect, manage and notify ICT-related incidents.",
+      "text_fidelity": "verbatim_unverified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation identified for the existence obligation"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Existence obligation is determinate: have the process, covering detect/manage/notify"
+        },
+        "transposition_invariant": {
+          "pass": true,
+          "note": "Regulation"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 4,
+      "classification": "absolute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": "Borderline absolute: the duty to HAVE the process passes all four criteria; the adequacy of the process is statute-tier (Arts. 17(2)-(3), RTS). Flag for expert review."
+    },
+    {
+      "id": "EU-DORA-A19.1",
+      "instrument": "DORA",
+      "reference": "CELEX:32022R2554",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 19(1)",
+      "actor": "financial_entity",
+      "modality": "obligation",
+      "text": "Financial entities shall report major ICT-related incidents to the relevant competent authority as referred to in Article 46 in accordance with paragraph 4 of this Article.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation from the duty to report"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Duty and addressee determinate; 'major' is defined via Art. 18 classification criteria"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Operative time limits are laid down by RTS under Art. 20 (ruling 3.4)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 3,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": null
+      },
+      "notes": "Fails only C3: essential terms (deadlines) live in delegated legislation."
+    },
+    {
+      "id": "EU-DORA-A19.4",
+      "instrument": "DORA",
+      "reference": "CELEX:32022R2554",
+      "jurisdiction": "EU",
+      "legal_nature": "regulation",
+      "locus": "Art. 19(4)",
+      "actor": "financial_entity",
+      "modality": "obligation",
+      "text": "Financial entities shall, within the time limits to be laid down in accordance with Article 20, first paragraph, point (a), point (ii), submit the following to the relevant competent authority: (a) an initial notification; (b) an intermediate report ... as soon as the status of the original incident has changed significantly ... followed, as appropriate, by updated notifications ...; (c) a final report, when the root cause analysis has been completed ...",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": true,
+          "note": "No derogation"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'as appropriate', 'changed significantly' require judgment"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Time limits deferred to RTS (Art. 20)"
+        },
+        "context_independent_bindingness": {
+          "pass": true,
+          "note": "Binds by force of the Regulation"
+        }
+      },
+      "strictness": 2,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "as appropriate"
+        ],
+        "bindingness_context": null
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-AC-2",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "AC-2 Account Management",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Define and document the types of accounts allowed and specifically prohibited for use within the system; Assign account managers; Require {{ insert: param, ac-02_odp.01 }} for group and role membership; Specify: Authorized users of the system; Group and role membership; and Access authorizations (i.e., privileges) and {{ insert: param, ac-02_odp.02 }} for each account; Require approvals by {{ insert: param, ac-02_odp.03 }} for requests to create accounts; Create, enable, modify, disable, and remove accounts in acco ...",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Contains organization-defined parameters (OSCAL ODPs) - conduct is set by the implementing organization"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "organization-defined parameters"
+        ],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-AC-6",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "AC-6 Least Privilege",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Employ the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) that are necessary to accomplish assigned organizational tasks.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "'necessary to accomplish assigned organizational tasks' is a judgment standard (least privilege is a principle)"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-AU-2",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "AU-2 Event Logging",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Identify the types of events that the system is capable of logging in support of the audit function: {{ insert: param, au-02_odp.01 }}; Coordinate the event logging function with other organizational entities requiring audit-related information to guide and inform the selection criteria for events to be logged; Specify the following event types for logging within the system: {{ insert: param, au-2_prm_2 }}; Provide a rationale for why the event types selected for logging are deemed to be adequate to support after-t ...",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Contains organization-defined parameters (OSCAL ODPs) - conduct is set by the implementing organization"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "organization-defined parameters"
+        ],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-CM-2",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "CM-2 Baseline Configuration",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Develop, document, and maintain under configuration control, a current baseline configuration of the system; and Review and update the baseline configuration of the system: {{ insert: param, cm-02_odp.01 }}; When required due to {{ insert: param, cm-02_odp.02 }} ; and When system components are installed or upgraded.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Contains organization-defined parameters (OSCAL ODPs) - conduct is set by the implementing organization"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "organization-defined parameters"
+        ],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-CP-9",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "CP-9 System Backup",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Conduct backups of user-level information contained in {{ insert: param, cp-09_odp.01 }} {{ insert: param, cp-09_odp.02 }}; Conduct backups of system-level information contained in the system {{ insert: param, cp-09_odp.03 }}; Conduct backups of system documentation, including security- and privacy-related documentation {{ insert: param, cp-09_odp.04 }} ; and Protect the confidentiality, integrity, and availability of backup information.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Contains organization-defined parameters (OSCAL ODPs) - conduct is set by the implementing organization"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "organization-defined parameters"
+        ],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-IA-2",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "IA-2 Identification and Authentication (Organizational Users)",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Uniquely identify and authenticate organizational users and associate that unique identification with processes acting on behalf of those users.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": true,
+          "note": "Base statement is determinate: uniquely identify and authenticate users - no ODP, no balancing language"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 1,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-IA-5",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "IA-5 Authenticator Management",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Manage system authenticators by: Verifying, as part of the initial authenticator distribution, the identity of the individual, group, role, service, or device receiving the authenticator; Establishing initial authenticator content for any authenticators issued by the organization; Ensuring that authenticators have sufficient strength of mechanism for their intended use; Establishing and implementing administrative procedures for initial authenticator distribution, for lost or compromised or damaged authenticators,  ...",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Statement relies on organizational judgment standards"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-IR-6",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "IR-6 Incident Reporting",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Require personnel to report suspected incidents to the organizational incident response capability within {{ insert: param, ir-06_odp.01 }} ; and Report incident information to {{ insert: param, ir-06_odp.02 }}.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Contains organization-defined parameters (OSCAL ODPs) - conduct is set by the implementing organization"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "organization-defined parameters"
+        ],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-PL-8",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "PL-8 Security and Privacy Architectures",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Develop security and privacy architectures for the system that: Describe the requirements and approach to be taken for protecting the confidentiality, integrity, and availability of organizational information; Describe the requirements and approach to be taken for processing personally identifiable information to minimize privacy risk to individuals; Describe how the architectures are integrated into and support the enterprise architecture; and Describe any assumptions about, and dependencies on, external systems a ...",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Statement relies on organizational judgment standards"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-RA-5",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "RA-5 Vulnerability Monitoring and Scanning",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Monitor and scan for vulnerabilities in the system and hosted applications {{ insert: param, ra-5_prm_1 }} and when new vulnerabilities potentially affecting the system are identified and reported; Employ vulnerability monitoring tools and techniques that facilitate interoperability among tools and automate parts of the vulnerability management process by using standards for: Enumerating platforms, software flaws, and improper configurations; Formatting checklists and test procedures; and Measuring vulnerability im ...",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Contains organization-defined parameters (OSCAL ODPs) - conduct is set by the implementing organization"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "organization-defined parameters"
+        ],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-SC-8",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "SC-8 Transmission Confidentiality and Integrity",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Protect the {{ insert: param, sc-08_odp }} of transmitted information.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Contains organization-defined parameters (OSCAL ODPs) - conduct is set by the implementing organization"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "organization-defined parameters"
+        ],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    },
+    {
+      "id": "US-NIST80053-SC-13",
+      "instrument": "NIST SP 800-53r5",
+      "reference": "OSCAL catalog v5.2.0",
+      "jurisdiction": "US",
+      "legal_nature": "framework_guidance",
+      "locus": "SC-13 Cryptographic Protection",
+      "actor": "organization",
+      "modality": "obligation",
+      "text": "Determine the {{ insert: param, sc-13_odp.01 }} ; and Implement the following types of cryptography required for each specified cryptographic use: {{ insert: param, sc-13_odp.02 }}.",
+      "text_fidelity": "verbatim_verified",
+      "criteria": {
+        "derogation_free": {
+          "pass": false,
+          "note": "SP 800-53 permits tailoring, compensating controls, and baseline-driven scoping"
+        },
+        "determinate_conduct": {
+          "pass": false,
+          "note": "Contains organization-defined parameters (OSCAL ODPs) - conduct is set by the implementing organization"
+        },
+        "transposition_invariant": {
+          "pass": false,
+          "note": "Control applicability and parameters vary by baseline selection, overlays, and agency tailoring"
+        },
+        "context_independent_bindingness": {
+          "pass": false,
+          "note": "Framework guidance; binds only through an external attachment mechanism (ruling 3.5)"
+        }
+      },
+      "strictness": 0,
+      "classification": "statute",
+      "conditionality": {
+        "exceptions": [],
+        "qualifiers": [
+          "organization-defined parameters"
+        ],
+        "bindingness_context": "Voluntary framework; binding for U.S. federal information systems via FISMA/OMB A-130, for cloud providers via FedRAMP, for defense contractors via DFARS 252.204-7012 (through SP 800-171), and otherwise by contract."
+      },
+      "notes": ""
+    }
+  ]
+}

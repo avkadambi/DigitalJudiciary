@@ -1,0 +1,260 @@
+{
+  "records": [
+    {
+      "seed_id": "SP-001",
+      "provision_id": "SC-201",
+      "tier": 2,
+      "resolving_principal": "svc:tier2",
+      "resolved_at": "2026-03-10T09:00:00.000000+00:00",
+      "facts": [
+        "connector_credentials",
+        "encrypted_config",
+        "rotation_enabled",
+        "vault_onboarding_queued"
+      ],
+      "premise": [
+        "encrypted_config",
+        "rotation_enabled",
+        "vault_onboarding_queued"
+      ],
+      "interpretation": {
+        "outcome": "permit_conditional"
+      },
+      "conditions": {
+        "window_days": 14,
+        "requires": [
+          "vault_ticket_linked"
+        ]
+      },
+      "scope": {},
+      "scope_level": "org",
+      "rationale": "Encrypted config with rotation while vault onboarding is queued is a paperwork lag, not an exposure; permitted for a bounded window."
+    },
+    {
+      "seed_id": "SP-002",
+      "provision_id": "SC-203",
+      "tier": 4,
+      "resolving_principal": "coo.pat",
+      "resolved_at": "2026-02-01T10:00:00.000000+00:00",
+      "facts": [
+        "third_party_lib",
+        "community_audit_complete",
+        "tenant_data_path",
+        "vendor_review_pending"
+      ],
+      "premise": [
+        "community_audit_complete"
+      ],
+      "interpretation": {
+        "outcome": "permit_conditional"
+      },
+      "conditions": {
+        "pending": "vendor_review"
+      },
+      "scope": {},
+      "scope_level": "org",
+      "rationale": "A widely used open-source library with a completed community security audit may proceed pending vendor review, enterprise-wide."
+    },
+    {
+      "seed_id": "SP-003",
+      "provision_id": "SC-203",
+      "tier": 3,
+      "resolving_principal": "svc:tier3",
+      "resolved_at": "2026-06-15T14:00:00.000000+00:00",
+      "facts": [
+        "third_party_lib",
+        "touches_telematics",
+        "tenant_data_path",
+        "vendor_review_pending"
+      ],
+      "premise": [
+        "touches_telematics"
+      ],
+      "interpretation": {
+        "outcome": "deny"
+      },
+      "scope": {
+        "domain": "telematics"
+      },
+      "scope_level": "domain",
+      "rationale": "After the Q2 incident, a pending vendor review is not enough for libraries touching telemetry; risk appetite narrowed for the telematics domain."
+    },
+    {
+      "seed_id": "SP-013",
+      "provision_id": "SC-206",
+      "tier": 2,
+      "resolving_principal": "svc:tier2",
+      "resolved_at": "2026-04-01T08:00:00.000000+00:00",
+      "facts": [
+        "legacy_module",
+        "coverage_waiver_request"
+      ],
+      "premise": [
+        "legacy_module"
+      ],
+      "interpretation": {
+        "outcome": "permit_conditional"
+      },
+      "conditions": {
+        "remediation_ticket": true
+      },
+      "scope": {},
+      "scope_level": "org",
+      "rationale": "Legacy modules may ship under the coverage floor with a remediation ticket."
+    },
+    {
+      "seed_id": "SP-014",
+      "provision_id": "SC-206",
+      "tier": 2,
+      "resolving_principal": "svc:tier2",
+      "resolved_at": "2026-06-20T08:00:00.000000+00:00",
+      "facts": [
+        "legacy_module",
+        "coverage_waiver_request"
+      ],
+      "premise": [
+        "legacy_module"
+      ],
+      "interpretation": {
+        "outcome": "deny"
+      },
+      "scope": {},
+      "scope_level": "org",
+      "rationale": "The legacy-module allowance was being over-used; coverage now applies to legacy modules too. Displaces the older equal-authority holding by recency. This holding supersedes the earlier permit on the same premise and provision; it is cited here so the departure is recorded rather than left to the clock (Sect. 4.6).",
+      "cites": "SP-013"
+    },
+    {
+      "seed_id": "SP-011",
+      "provision_id": "SC-217",
+      "tier": 2,
+      "resolving_principal": "svc:tier2",
+      "resolved_at": "2026-05-05T12:00:00.000000+00:00",
+      "facts": [
+        "flagged_off_default",
+        "latency_pipeline_change"
+      ],
+      "premise": [
+        "flagged_off_default"
+      ],
+      "interpretation": {
+        "outcome": "permit_conditional"
+      },
+      "conditions": {
+        "flag_must_stay_off": true
+      },
+      "scope": {},
+      "scope_level": "org",
+      "rationale": "A change shipped dark behind a default-off flag may proceed despite the latency gate, org-wide."
+    },
+    {
+      "seed_id": "SP-015",
+      "provision_id": "SC-217",
+      "tier": 2,
+      "resolving_principal": "svc:tier2",
+      "resolved_at": "2026-05-05T12:00:00.000000+00:00",
+      "facts": [
+        "tracking_service",
+        "latency_pipeline_change"
+      ],
+      "premise": [
+        "tracking_service"
+      ],
+      "interpretation": {
+        "outcome": "deny"
+      },
+      "scope": {
+        "service": "tracking"
+      },
+      "scope_level": "service",
+      "rationale": "For the live-tracking service specifically, nothing ships against the latency gate, flagged or not."
+    },
+    {
+      "seed_id": "SP-020A",
+      "provision_id": "SC-210",
+      "tier": 2,
+      "resolving_principal": "svc:tier2",
+      "resolved_at": "2026-05-01T09:00:00.000000+00:00",
+      "facts": [
+        "dummy_marked",
+        "fixture_path"
+      ],
+      "premise": [
+        "dummy_marked"
+      ],
+      "interpretation": {
+        "outcome": "permit_conditional"
+      },
+      "scope": {},
+      "scope_level": "org",
+      "rationale": "Clearly-marked dummy secrets in fixture paths pass the scanner gate."
+    },
+    {
+      "seed_id": "SP-020B",
+      "provision_id": "SC-210",
+      "tier": 2,
+      "resolving_principal": "svc:tier2",
+      "resolved_at": "2026-05-01T09:00:00.000000+00:00",
+      "facts": [
+        "dummy_marked",
+        "fixture_path"
+      ],
+      "premise": [
+        "dummy_marked"
+      ],
+      "interpretation": {
+        "outcome": "deny"
+      },
+      "scope": {},
+      "scope_level": "org",
+      "rationale": "Even marked dummy secrets normalise the pattern; deny. (Deliberate seed conflict: identical authority, time, and scope — an unbroken tie.)"
+    },
+    {
+      "seed_id": "SP-008",
+      "provision_id": "SC-211",
+      "tier": 4,
+      "resolving_principal": "coo.pat",
+      "resolved_at": "2026-03-06T16:00:00.000000+00:00",
+      "facts": [
+        "freeze_deploy",
+        "carrier_outage"
+      ],
+      "premise": [
+        "carrier_outage"
+      ],
+      "interpretation": {
+        "outcome": "accept_risk"
+      },
+      "is_acceptance": true,
+      "expiry": "2026-06-06T00:00:00.000000+00:00",
+      "referral_outcome": "pending",
+      "scope": {},
+      "scope_level": "org",
+      "rationale": "Freeze-window deploy accepted for the carrier-outage remediation; ninety-day window; referred to the Council."
+    },
+    {
+      "seed_id": "SP-009",
+      "provision_id": "SC-215",
+      "tier": 4,
+      "resolving_principal": "coo.pat",
+      "resolved_at": "2025-10-29T11:00:00.000000+00:00",
+      "facts": [
+        "growth_experiment",
+        "portal_feature"
+      ],
+      "premise": [
+        "growth_experiment"
+      ],
+      "interpretation": {
+        "outcome": "accept_risk"
+      },
+      "is_acceptance": true,
+      "expiry": "2026-01-27T00:00:00.000000+00:00",
+      "referral_outcome": "rejected",
+      "scope": {
+        "service": "portal"
+      },
+      "scope_level": "service",
+      "rationale": "Growth-experiment analytics accepted for the portal pending DPIA; referred to the Council."
+    }
+  ]
+}

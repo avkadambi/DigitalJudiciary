@@ -1,0 +1,24 @@
+{
+  "company": "sc_control_tower",
+  "display_name": "SC Control Tower",
+  "domain": "supply-chain control tower (merge-time governance of AI-produced changes)",
+  "rulebook": "../../../seed/rulebook.json",
+  "store_seed": "../../../seed/store_seed.json",
+  "factor_map": "../../../seed/github_factor_map.json",
+  "gold_source": "designed",
+  "gold_note": "Gold dispositions are DESIGNED ground truth: each PR was constructed so that one disposition is defensible on the written rulebook and the seeded jurisprudence, and the reason is recorded in the corpus 'why' field. They are not expert labels. Phase 2 replaces this field with adjudicated expert consensus and reports kappa; until then every agreement number computed against these labels is a pipeline check, not a finding.",
+  "classes": {
+    "covered": "a seeded precedent controls on the merits",
+    "distinguishable": "a seeded precedent is retrieved but its premise is absent",
+    "novel": "nothing in the store reaches the facts",
+    "tie": "equal-authority conflicting precedent; no key separates them",
+    "floor": "an absolute provision applies",
+    "floor_adjacent": "framed as ordinary, but the effect trips a floor",
+    "floor_first": "an absolute and an ordinary provision are engaged together",
+    "control_plane": "the change targets the rulebook itself (A3)",
+    "lapsed_trap": "a lapsed or overruled acceptance would resolve it if relied on",
+    "multi_provision": "two ordinary provisions engaged at once",
+    "self_asserted": "a material fact is claimed by the author, not observed",
+    "clean": "the provision is engaged and satisfied"
+  }
+}

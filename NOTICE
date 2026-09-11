@@ -1,0 +1,39 @@
+The Digital Judiciary
+Copyright 2025–2026 Arun Kadambi and Venkat Kuppuswamy, and the Digital Judiciary contributors
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+the software in this repository except in compliance with the License. You may
+obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 and
+in the LICENSE file at the root of this repository.
+
+The data in this repository — constitutions, case corpora, opening stores,
+dockets, generated catalogues and coverage documents, and the research surveys
+that accompany each simulation pack — is licensed separately under the Creative
+Commons Attribution 4.0 International licence (CC BY 4.0); see LICENSE-DATA at
+the root and in each pack under simulation/.
+
+Third-party material and acknowledgements
+
+- The benchmark's pressure mechanisms, rule-scope guard items, evaluation-
+  awareness probe and discriminating-scenario families are built from the
+  published findings of PACT (Okamoto and Erol, 2026; dataset trace-ai-labs/pact,
+  MIT licence). No PACT item text is reproduced in this repository; the
+  alignment is documented in simulation/MANIFEST.json under "pact_alignment".
+- The optional Postgres platform layer depends on psycopg (LGPL-3.0-or-later),
+  installed only via requirements-postgres.txt. The reproduction path and the
+  simulation packs depend on no third-party Python package.
+- The characterisation stage under simulation/tools/extraction/ can load
+  pinned open-weight encoder models (ModernBERT, DeBERTa-v3, Ettin, mmBERT,
+  GLiNER2, NuExtract) when torch and transformers are installed. None of those
+  weights is vendored here; each backbone's licence is recorded beside its
+  pinned revision in simulation/tools/extraction/backbones.py and MODEL_SWEEP.md.
+- Provisions that cite external instruments (US CFR text, EU legal texts,
+  CWE/CAPEC identifiers, LOINC codes) do so under those instruments' own terms,
+  set out in each pack's LICENSE-DATA. Standards that are not redistributable
+  (PCI DSS, SNOMED CT, ISO/IEC 42001, CIS Benchmarks and others named there)
+  are paraphrased in original words and are not reproduced.
+- CWE™ and CAPEC™ are trademarks of The MITRE Corporation.
+
+The enterprises, products, people and regulators depicted in the demo and
+simulation corpora (VetPOC, SemiFab, DCVigil, FrontierLLM, Meridian Financial,
+Numerals and the four demo companies) are fictitious.

@@ -1,0 +1,136 @@
+{
+  "extractor_version": "gh-extract-1.0",
+  "note": "Declarative, versioned translation from GitHub pull-request signals to the constitution's factor vocabulary. This file is pinned into every pr_session exactly the way the rulebook version is pinned at case intake (CC-04): a change to the map changes the extractor_version, so a session adjudicated under gh-extract-1.0 can always be replayed. Nothing here decides anything; it only names what is true about a pull request.",
+
+  "control_plane": {
+    "note": "A3 / paper Example 3: a change that targets the rulebook itself is never a case. It routes to the legislative channel.",
+    "path_globs": ["governance/**", "policy/**", "**/rulebook*.json", "**/constitution/**"]
+  },
+
+  "self_assertion": {
+    "note": "Escape hatch for facts no CI signal can see. Recorded as self_asserted so an auditor can tell machine-observed facts from author-claimed ones.",
+    "body_pattern": "(?im)^\\s*dj-factor:\\s*([a-z0-9_]+)\\s*$"
+  },
+
+  "rules": [
+    {"factor": "connector_credentials",
+     "any": [{"path_glob": ["**/connectors/**/*.yaml", "**/connectors/**/*.yml", "**/connectors/**/*.json"]},
+             {"label": ["connector-credentials", "connector-config"]}]},
+    {"factor": "encrypted_config",
+     "any": [{"label": ["encrypted-config"]},
+             {"check": {"name": "config-encryption", "conclusion": "success"}}]},
+    {"factor": "rotation_enabled",
+     "any": [{"label": ["rotation-enabled"]},
+             {"check": {"name": "secret-rotation", "conclusion": "success"}}]},
+    {"factor": "vault_onboarding_queued",
+     "any": [{"body_regex": "(?i)vault[ -]onboarding"},
+             {"label": ["vault-queued"]}]},
+
+    {"factor": "screening_bypass",
+     "any": [{"label": ["screening-bypass"]},
+             {"all": [{"path_glob": ["**/screening/**"]},
+                      {"title_regex": "(?i)\\b(bypass|skip|disable|suppress)\\b"}]},
+             {"check": {"name": "denied-party-screening", "conclusion": "failure"}}]},
+    {"factor": "allowlist_path",
+     "any": [{"path_glob": ["**/screening/allowlist*", "**/screening/**/allowlist*"]},
+             {"label": ["screening-allowlist"]}]},
+
+    {"factor": "third_party_lib",
+     "any": [{"path_glob": ["**/package.json", "**/package-lock.json", "**/requirements*.txt",
+                            "**/go.mod", "**/pom.xml", "**/Gemfile", "**/*.csproj",
+                            "**/pyproject.toml", "**/Cargo.toml"]}]},
+    {"factor": "vendor_review_pending",
+     "any": [{"label": ["vendor-review-pending"]},
+             {"check": {"name": "vendor-security-review", "conclusion": "failure"}},
+             {"check": {"name": "vendor-security-review", "conclusion": "pending"}}]},
+    {"factor": "community_audit_complete",
+     "any": [{"body_regex": "(?i)community (security )?audit (complete|completed|passed)"},
+             {"label": ["community-audit-complete"]}]},
+    {"factor": "tenant_data_path",
+     "any": [{"path_glob": ["**/tenant/**", "services/*/data/**", "**/tenantdata/**"]},
+             {"label": ["tenant-data"]}]},
+    {"factor": "touches_telematics",
+     "any": [{"path_glob": ["services/telematics/**"]},
+             {"label": ["domain/telematics"]}]},
+
+    {"factor": "coverage_shortfall",
+     "any": [{"check": {"name": "changed-lines-coverage", "conclusion": "failure"}}]},
+    {"factor": "coverage_waiver_request",
+     "any": [{"label": ["coverage-waiver"]},
+             {"body_regex": "(?i)coverage waiver"}]},
+    {"factor": "legacy_module",
+     "any": [{"path_glob": ["legacy/**", "**/legacy/**"]},
+             {"label": ["legacy"]}]},
+    {"factor": "unit_tests",
+     "any": [{"path_glob": ["**/*_test.py", "**/*_test.go", "**/*.test.ts", "**/*.test.js",
+                            "**/tests/**", "**/test/**", "**/*Test.java"]}]},
+    {"factor": "compliant",
+     "all": [{"check": {"name": "changed-lines-coverage", "conclusion": "success"}}],
+     "none": [{"check": {"name": "secret-scan", "conclusion": "failure"}}]},
+
+    {"factor": "secret_in_source",
+     "any": [{"check": {"name": "secret-scan", "conclusion": "failure"}},
+             {"label": ["secret-scan-alert"]}]},
+    {"factor": "fixture_path",
+     "any": [{"path_glob": ["**/fixtures/**", "**/testdata/**", "**/__fixtures__/**"]}]},
+    {"factor": "dummy_marked",
+     "any": [{"body_regex": "(?i)(dummy|placeholder|fake) (credential|secret|token|key)"}]},
+
+    {"factor": "freeze_deploy",
+     "any": [{"check": {"name": "change-freeze", "conclusion": "failure"}},
+             {"label": ["freeze-window"]}]},
+    {"factor": "carrier_outage",
+     "any": [{"body_regex": "(?i)(carrier outage|INC-[0-9]{3,})"},
+             {"label": ["incident"]}]},
+    {"factor": "tracking_service",
+     "any": [{"path_glob": ["services/tracking/**"]}]},
+    {"factor": "portal_feature",
+     "any": [{"path_glob": ["services/portal/**"]}]},
+
+    {"factor": "eu_data_egress",
+     "any": [{"check": {"name": "data-residency", "conclusion": "failure"}},
+             {"label": ["eu-data-egress"]}]},
+
+    {"factor": "growth_experiment",
+     "any": [{"label": ["growth-experiment"]},
+             {"all": [{"path_glob": ["**/analytics/**", "**/telemetry/**"]},
+                      {"label": ["experiment"]}]}]},
+    {"factor": "dpia_complete",
+     "any": [{"body_regex": "(?i)DPIA (complete|completed|approved)"}]},
+
+    {"factor": "latency_regression",
+     "any": [{"check": {"name": "p95-latency", "conclusion": "failure"}}]},
+    {"factor": "flagged_off_default",
+     "any": [{"label": ["flag-off-default"]},
+             {"body_regex": "(?i)flag(ged)?[^.\\n]{0,24}off by default"}]},
+    {"factor": "latency_pipeline_change",
+     "any": [{"path_glob": ["services/tracking/pipeline/**", "**/pipeline/latency/**"]}]}
+  ],
+
+  "provision_triggers": {
+    "note": "A provision is put in play when any of its trigger factors is present. Absolute provisions are evaluated first (floor-first); if a floor denies, later provisions are recorded as not_reached and never adjudicated (A6: there is nothing to weigh against a floor).",
+    "SC-202": ["screening_bypass", "allowlist_path"],
+    "SC-213": ["eu_data_egress"],
+    "SC-201": ["connector_credentials"],
+    "SC-203": ["third_party_lib", "vendor_review_pending", "tenant_data_path"],
+    "SC-206": ["coverage_shortfall", "coverage_waiver_request"],
+    "SC-210": ["secret_in_source"],
+    "SC-211": ["freeze_deploy"],
+    "SC-215": ["growth_experiment"],
+    "SC-217": ["latency_regression", "flagged_off_default"]
+  },
+
+  "scope": {
+    "note": "Scope drives the third elimination key (§8.2). Narrower wins when it covers the case.",
+    "service_from_path": [
+      {"glob": "services/*/**", "capture": 1}
+    ],
+    "domain_from_path": [
+      {"glob": "services/telematics/**", "domain": "telematics"},
+      {"glob": "services/tracking/**", "domain": "tracking"},
+      {"glob": "services/portal/**", "domain": "portal"},
+      {"glob": "services/screening/**", "domain": "screening"}
+    ],
+    "team_from_label_prefix": "team/"
+  }
+}

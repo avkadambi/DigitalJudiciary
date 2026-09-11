@@ -1,0 +1,101 @@
+# Digital Judiciary — deployment config
+# Copy to config/dj.toml (or set DJ_CONFIG=/path/to/dj.toml).
+# Demo path works with no file at all (oracle judges, seed rulebook).
+
+[project]
+name = "digital-judiciary"
+# demo | selfhost | enterprise | gcp
+profile = "demo"
+
+# ---------------------------------------------------------------------------
+# Constitution / rulebook
+# On first boot, if this file exists it is enacted instead of seed/rulebook.json.
+# You can also upload later: POST /v1/admin/constitution
+# ---------------------------------------------------------------------------
+[constitution]
+path = "seed/rulebook.json"
+# Optional seed jurisprudence (omit for empty ledger after constitution only)
+# store_path = "seed/store_seed.json"
+
+# ---------------------------------------------------------------------------
+# Judges — one block per automated tier (1–3). Tier 4 is the human risk owner.
+# mode = "oracle"  → deterministic (no API keys, conformance default)
+# mode = "llm"     → call the configured provider/model per tier
+# ---------------------------------------------------------------------------
+[judges]
+mode = "oracle"          # change to "llm" when keys + models are set
+
+[judges.tier1]
+provider = "anthropic"                 # anthropic | openai
+model = "claude-haiku-4-5-20251001"
+# Prefer env var name (GCP Secret Manager can inject the env).
+# For local-only demos you may set api_key = "sk-..." (not recommended).
+api_key_env = "DJ_JUDGE_KEY_T1"
+# Optional fallback env (e.g. shared Anthropic key for all tiers)
+# api_key_env_fallback = "ANTHROPIC_API_KEY"
+quorum = 1
+
+[judges.tier2]
+provider = "anthropic"
+model = "claude-sonnet-4-6"
+api_key_env = "DJ_JUDGE_KEY_T2"
+quorum = 3
+
+[judges.tier3]
+provider = "anthropic"
+model = "claude-opus-4-6"
+api_key_env = "DJ_JUDGE_KEY_T3"
+quorum = 5
+
+# ---------------------------------------------------------------------------
+# Connectors — enable and configure only what you need.
+# New connectors register under app/platform/connectors/ and appear by type.
+# ---------------------------------------------------------------------------
+[[connectors]]
+type = "github"
+enabled = true
+webhook_path = "/v1/inbound/github"
+check_name = "digital-judiciary"
+# webhook_secret_env = "DJ_GITHUB_WEBHOOK_SECRET"
+# token_env = "DJ_GITHUB_TOKEN"
+
+# Example future connector (disabled):
+# [[connectors]]
+# type = "gitlab"
+# enabled = false
+# webhook_path = "/v1/inbound/gitlab"
+
+# ---------------------------------------------------------------------------
+# Tenancy (optional)
+# ---------------------------------------------------------------------------
+[tenancy]
+# default_org = "acme"
+# repo_org_map = { "acme/api" = "acme", "acme/*" = "acme" }
+
+# ---------------------------------------------------------------------------
+# Runtime
+# ---------------------------------------------------------------------------
+[runtime]
+async_inbound = false
+worker_threads = 1
+inbound_rate_per_s = 20
+host = "0.0.0.0"
+port = 8080
+
+# ---------------------------------------------------------------------------
+# Google Cloud (used by deploy/gcp; ignored locally)
+# ---------------------------------------------------------------------------
+[gcp]
+# project_id = "my-gcp-project"
+# region = "us-central1"
+# service_name = "digital-judiciary"
+# cloud_run_memory = "1Gi"
+# cloud_run_cpu = "1"
+# min_instances = 0
+# max_instances = 10
+# Use Secret Manager names for judge keys when deploying:
+# secret_judge_t1 = "dj-judge-key-t1"
+# secret_judge_t2 = "dj-judge-key-t2"
+# secret_judge_t3 = "dj-judge-key-t3"
+# secret_github_webhook = "dj-github-webhook"
+# volume for SQLite on Cloud Run: use GCS fuse or migrate to Cloud SQL later

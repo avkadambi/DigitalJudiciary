@@ -1,0 +1,41 @@
+# Digital Judiciary — single-container deploy (self-host / enterprise profile).
+# Demo path: python3 serve.py  OR  DJ_PROFILE=demo docker compose up --build
+#
+#   docker compose up --build
+#   open http://localhost:8080/review
+
+services:
+  judiciary:
+    build: .
+    ports:
+      - "${DJ_PORT:-8080}:8080"
+    volumes:
+      - dj-data:/data
+    environment:
+      DJ_DB: /data/judiciary.db
+      DJ_PROFILE: ${DJ_PROFILE:-selfhost}
+      DJ_DEV_KEYS: ${DJ_DEV_KEYS:-1}
+      DJ_JUDGE_MODE: ${DJ_JUDGE_MODE:-oracle}
+      DJ_CHECK_NAME: ${DJ_CHECK_NAME:-digital-judiciary}
+      DJ_ASYNC_INBOUND: ${DJ_ASYNC_INBOUND:-1}
+      DJ_WORKER_THREADS: ${DJ_WORKER_THREADS:-2}
+      DJ_GITHUB_WEBHOOK_SECRET: ${DJ_GITHUB_WEBHOOK_SECRET:-}
+      DJ_GITHUB_TOKEN: ${DJ_GITHUB_TOKEN:-}
+      DJ_GITHUB_APP_ID: ${DJ_GITHUB_APP_ID:-}
+      DJ_GITHUB_APP_INSTALLATION_ID: ${DJ_GITHUB_APP_INSTALLATION_ID:-}
+      DJ_GITHUB_APP_KEY_PATH: ${DJ_GITHUB_APP_KEY_PATH:-}
+      DJ_REPO_ORG_MAP: ${DJ_REPO_ORG_MAP:-}
+      DJ_DEFAULT_ORG: ${DJ_DEFAULT_ORG:-}
+      DJ_INBOUND_RATE_PER_S: ${DJ_INBOUND_RATE_PER_S:-20}
+      DJ_DEMO: ${DJ_DEMO:-}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY:-}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python3", "-c",
+             "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8080/v1/healthz',timeout=2)"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  dj-data:

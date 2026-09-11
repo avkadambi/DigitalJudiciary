@@ -1,0 +1,37 @@
+# Optional: durable job queue on Postgres (Kernel ledger remains SQLite in this phase).
+#
+#   docker compose -f docker-compose.yml -f docker-compose.postgres.yml up --build
+#
+# Requires image with psycopg: build with Dockerfile.postgres or:
+#   pip install -r requirements-postgres.txt  (local)
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: dj
+      POSTGRES_PASSWORD: dj
+      POSTGRES_DB: judiciary
+    ports:
+      - "5432:5432"
+    volumes:
+      - dj-pg:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dj -d judiciary"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  judiciary:
+    environment:
+      DJ_DATABASE_URL: postgres://dj:dj@postgres:5432/judiciary
+      DJ_ASYNC_INBOUND: "1"
+      DJ_WORKER_THREADS: "4"
+      DJ_JOB_VISIBILITY_S: "300"
+      DJ_PROFILE: selfhost
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  dj-pg:

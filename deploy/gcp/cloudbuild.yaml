@@ -1,0 +1,63 @@
+# Build and deploy Digital Judiciary to Cloud Run.
+# Prerequisites: gcloud auth, APIs enabled (run, cloudbuild, secretmanager, artifactregistry)
+#
+#   gcloud builds submit --config deploy/gcp/cloudbuild.yaml \
+#     --substitutions=_REGION=us-central1,_SERVICE=digital-judiciary
+#
+# Secrets (create once):
+#   gcloud secrets create dj-judge-key-t1 --data-file=-
+#   gcloud secrets create dj-judge-key-t2 --data-file=-
+#   gcloud secrets create dj-judge-key-t3 --data-file=-
+#   gcloud secrets create dj-github-webhook --data-file=-
+
+substitutions:
+  _REGION: us-central1
+  _SERVICE: digital-judiciary
+  _MEMORY: 1Gi
+  _CPU: "1"
+  _MAX_INSTANCES: "10"
+
+steps:
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - build
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/dj/${_SERVICE}:$SHORT_SHA
+      - -t
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/dj/${_SERVICE}:latest
+      - .
+
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/dj/${_SERVICE}:$SHORT_SHA
+
+  - name: gcr.io/cloud-builders/docker
+    args:
+      - push
+      - ${_REGION}-docker.pkg.dev/$PROJECT_ID/dj/${_SERVICE}:latest
+
+  - name: gcr.io/google.com/cloudsdktool/cloud-sdk
+    entrypoint: gcloud
+    args:
+      - run
+      - deploy
+      - ${_SERVICE}
+      - --image=${_REGION}-docker.pkg.dev/$PROJECT_ID/dj/${_SERVICE}:$SHORT_SHA
+      - --region=${_REGION}
+      - --platform=managed
+      - --allow-unauthenticated
+      - --memory=${_MEMORY}
+      - --cpu=${_CPU}
+      - --max-instances=${_MAX_INSTANCES}
+      - --min-instances=0
+      - --port=8080
+      - --set-env-vars=DJ_PROFILE=gcp,DJ_JUDGE_MODE=llm,DJ_ASYNC_INBOUND=1,DJ_WORKER_THREADS=2,DJ_DEMO=off,DJ_DEV_KEYS=1
+      - --update-secrets=DJ_JUDGE_KEY_T1=dj-judge-key-t1:latest,DJ_JUDGE_KEY_T2=dj-judge-key-t2:latest,DJ_JUDGE_KEY_T3=dj-judge-key-t3:latest,DJ_GITHUB_WEBHOOK_SECRET=dj-github-webhook:latest
+
+images:
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/dj/${_SERVICE}:$SHORT_SHA
+  - ${_REGION}-docker.pkg.dev/$PROJECT_ID/dj/${_SERVICE}:latest
+
+options:
+  logging: CLOUD_LOGGING_ONLY

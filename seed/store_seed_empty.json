@@ -1,0 +1,4 @@
+{
+ "records": [],
+ "note": "An empty opening store. Used by reproduce/axiom_probes.py for the A7 counter-model: the seed import reads back the referral A7 emits, so an unseeded store is the only way to observe an acceptance with no referral rather than a bootstrap that cannot finish."
+}

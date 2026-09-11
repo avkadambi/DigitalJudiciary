@@ -1,0 +1,32 @@
+# Enterprise image: base DJ + psycopg for Postgres SKIP LOCKED job queue.
+FROM python:3.12-slim
+
+RUN apt-get update && apt-get install -y --no-install-recommends openssl \
+    && rm -rf /var/lib/apt/lists/*
+
+WORKDIR /app
+COPY requirements-postgres.txt .
+RUN pip install --no-cache-dir -r requirements-postgres.txt
+
+COPY app/ app/
+COPY seed/ seed/
+COPY config/ config/
+COPY deploy/ deploy/
+COPY ARCHITECTURE.md ./
+COPY serve.py run_conformance.py ./
+
+RUN useradd -r -u 10001 judiciary && mkdir -p /data && chown judiciary /data
+USER judiciary
+
+ENV DJ_DB=/data/judiciary.db \
+    DJ_JUDGE_MODE=oracle \
+    DJ_PORT=8080 \
+    PYTHONUNBUFFERED=1
+
+VOLUME /data
+EXPOSE 8080
+
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 CMD \
+  python3 -c "import urllib.request;urllib.request.urlopen('http://127.0.0.1:8080/v1/healthz',timeout=2)"
+
+CMD ["python3", "serve.py"]
