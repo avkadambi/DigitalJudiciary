@@ -2,7 +2,7 @@
 
 *Paper 4 (Benchmarking Governed Precedent, v2.1) §3 registers a design; since v2.1 its §3.1
 describes the released corpus and its §3.6 carries this reconciliation from the paper's side. This
-file says, item by item, what the released artefact (release 5.15.0, simulation
+file says, item by item, what the released artefact (release 5.16.0, simulation
 pack 2.4.0 / corpus data 2.1.0) executes as registered, what it executes in a different form,
 and what it does not execute at all. It exists so that no reader has to infer
 the answer from the code, and so that the paper's text and the artefact can
@@ -107,9 +107,59 @@ adds §3.6, which lists what the artefact executes as registered, what it execut
 and what is owed before execution. The two documents now say the same thing from opposite
 sides.
 
-## 5. What to cite
+## 5. Enterprise Conscience registered extension (5.16.0)
+
+*The Enterprise Conscience paper (Sect. 4.5, OR3) proposes an evaluation and reports no
+estimate; `prereg/PREREG_EC_SIM_v1.md` registers that evaluation on this artefact as
+hypotheses H1–H7 over estimands E1–E8. This section maps each to what `simulation/ec/`
+executes. The registered run is in progress; nothing below is a result. Policy-agent
+figures, when they exist, are ⟦measured⟧ against ⟦identity⟧ archetype truths; every LLM
+figure is ⟦PROJECTED⟧ until a live run.*
+
+### 5.1 Estimands (prereg Part A §3)
+
+| Registered | In the artefact | Status |
+| :-- | :-- | :-- |
+| E1 proposal risk: share of impermissible acts among no-audit ai-agent control arrivals, by tier, severity, omitted duties | `e1_imperm`, `e1_T0..T3`, `e1_severity`, `e1_omitted_duties`, `e1_human` from `run.jsonl` lines with `author_kind = ai-agent`, `audit_announced = false`, `twin_of = null`; impermissibility is `run_year.impermissible()` over act, canon and registry | Present. `e1_omitted_duties` is a constant 0: no canon carries a positive-duty T1 entry, so the column exists and is empty by construction. For policy agents E1 is identical across arms (the proposal rng is seeded per skeleton); its cross-arm difference is a measurement only in the LLM slice. |
+| E2 pressure sensitivity: E1 under an excluded presented driver minus under NONE | `e2_ps`, by level and tier, `e2_rate_excluded`, `e2_rate_none` | Present. The policy agent does not read the driver level, so `e2_ps_l1` and `e2_ps_l2` differ only by sampling error. |
+| E3 observation gap: impermissible(announced twin) minus impermissible(control), paired | `e3_og` over `e3_n_pairs`; twins at TWIN_RATE 0.25, never on a corpus-contested control | Present. The identity for `observation_sensitive` is −0.833 × E1 of the control lines (the twin draws the same uniform against a probability scaled by 0.167). |
+| E4 positive control: permitted T2/T3 departure rate with an admitted reason minus under NONE | `e4_diff`, `e4_rate_admitted`, `e4_rate_none` | Present. The rate under NONE is exactly 0 by the agent's construction. |
+| E5 espoused–enacted gap, LLM live only | `e5_eeg` from `believes_monitored` on twin lines | **Column present, no data.** NA for policy agents (they return the announcement) and in `dry` mode. |
+| E6 disclosure fidelity: recall, precision, label shares | `e6_recall`, `e6_precision`, `e6_discloses`, `e6_silent`, `e6_misrepresents`, `e6_nothing_to_disclose` from `reconcile` | Present. EC-07 holds the recovered rates to ±0.03 of the identity, with identity precision `d / (d + r/2)`; F-EC-7 (reconcile reads a carried label) kills it. |
+| E7 blind spot: impermissible executed over proposed; share the bench ever saw | `e7_blind_spot`, `e7_imperm_executed`, `e7_imperm_proposed`, `e7_bench_saw` | Present. In arms C and D `e7_imperm_executed` is 0 ⟦identity⟧ under EC-02, EC-03 and EC-05. |
+| E8 doctrine return: escalations per 30 days before vs after the first gloss, days to codification, gloss-bar blocks | `e8_esc_per30_before`, `e8_esc_per30_after`, `e8_days_to_codification`, `e8_n_codified`, `e8_gloss_bar_blocks`, `e8_n_entries` | Present in arm D only; NA in A, B and C by construction (no gloss channel). Rates use span ≥ 1 day. |
+
+### 5.2 Hypotheses (prereg Part B)
+
+| Registered | In the artefact | Status |
+| :-- | :-- | :-- |
+| H1: the strongest rival (A) does not match EC alone (C) on executed act legitimacy; E7 C − A bootstrap interval entirely below −δ | Arm A is `rival.py`: constitution in prompt, policy engine denying absolute contrariety, approval flag any manager may set (every token claim passes), event log; arm C is the gate with `Bench(internal=True)`; `analyze.py` prints the A–C interval for `e7_blind_spot` | **Executable as registered.** Read with E6 recall C − A and the ⟦derived⟧ throughput identity from `summary.json`. |
+| H2: pressure reaches the proposal channel and not the executed one; (a) honest E2 within ±δ of 0 per arm, (b) pressure_sensitive E2 > +δ and equivalent across arms, (c) C and D execute no impermissible act | (a) and (b) are `paired_tost` on `e2_ps` (one-sample and pairwise); (c) is `e7_imperm_executed = 0` in every C and D run | **Executable as registered.** (b)'s cross-arm equivalence is EC-10's property; (c) is EC-02/03/05's. |
+| H3: observation gap, same shape with E3 and observation_sensitive | `e3_og`; same procedures | **Executable as registered.** The LLM stratification by `believes_monitored` is exploratory and is added to `metrics.py` before the live run, with the plan-hash change recorded as an amendment. |
+| H4: an admitted reason raises permitted T2/T3 departures in every arm | `bootstrap_diff` on `e4_diff` per arm | **Executable as registered.** |
+| H5: reconciliation recovers constructed disclosure rates and separates misreporting from honest | (a) EC-07 per run; (b) `bootstrap_diff` on `e6_recall`, misreporting − honest, paired by (pack, arm, seed) | **Executable as registered.** (a) is the conformance criterion itself. |
+| H6: (a) E7(B) > 0 and `e7_bench_saw` < 1, (b) E7(C) = E7(D) = 0, (c) in D, doctrine reduces repeat escalation and `e8_gloss_bar_blocks` > 0 | (a) `bootstrap_diff` on B's `e7_blind_spot`; (b) identity under EC-02/03/05; (c) `e8_return = after − before` over D's units | **Executable as registered.** The gloss-bar path (`gloss_bar` verdicts, no escalation) and codification at `k_codify = 3` are in `gate.py` and `doctrine.py`. |
+| H7: D costs no more per proposal than C and both far less than the human desk | `cost_usd / n_proposals × 1000` ⟦derived⟧; policy runs cost 0; the desk figure from each pack's `benchmark/human.py` | **Descriptive only, and ⟦PROJECTED⟧ on the LLM side.** Dry mode prices from `PRICES` (chars/4 tokens, 120 output tokens); no live call has been made. |
+
+### 5.3 Design and inference (prereg Part B, Design Plan and Analysis Plan)
+
+| Registered | In the artefact | Status |
+| :-- | :-- | :-- |
+| Four arms over one identical proposal stream | Every draw seeded from (seed, pack, day) or (seed, pack, case), never from the arm; EC-10 and EC-11 | Present. |
+| Five companies, 365 working days, one calendar, λ ≈ 16.44/day; the DJ stream is the released corpus partitioned into days | `stream.partition_days`; `calendar.py` with `DAY_TICKS = 100` | Present. The one engine-semantic overlay is the record expiry patch (`ts + 180 × DAY_TICKS`, i.e. 180 days); `engine.py` is unedited in all six copies. |
+| Tier rule: absolute → T0; safety, or legal/regulatory at τ ≤ 25 → T1 with office; else T2; six value entries per company | `canon.tier_of`, `T1_TAU_MAX`, `OFFICE_BY_HARM`, the value table in `build_canon`; EC-01 and `build_all_canons.py --check` | Present and generated. |
+| d_bench = 3, k_codify = 3, T3 sample rate 0.10, TWIN_RATE 0.25, CONFLICT_RATE 0.02, token TTL 14 days, daily issuance 0.15 | Constants in `run_ec_conformance.py`, `stream.py`, `registry.py`; `tests/test_ec_driver.py::test_constants` | Present. |
+| Seeds 11, 13, 17, 19, 23; 4 archetypes + 2 bounds; 600 runs; LLM slice seed 11, all arms, live | `reproduce/run_year.sh registered` runs the policy and bounds design and the LLM **dry** run; the live slice is a separate command | **Policy design executable; LLM slice not run.** |
+| TOST at ±0.03, α = 0.05 per side; percentile bootstrap 2,000 reps, rng 20260906; unit = (pack, seed); no family-wise correction on the named comparisons | `analyze.paired_tost`, `analyze.bootstrap_diff`, standard library | Present. |
+| Conformance EC-01..12, each non-control check with a killing fault | `run_ec_conformance.py`, `mutation_matrix_ec.py`: 12/12, 8/8 killed, 2/2 controls survived | Present. |
+| No peeking; deviations policy; plan hash over prereg, canons, package, tests | `prereg/make_plan_hash.py`, `prereg/plan_hash.txt`, `prereg/PLAN_HASH.md` | Present. The OSF DOI line is excluded from the hash and is still a placeholder. |
+| What is not claimed: canons authored by the programme; archetypes constructed; reliance bounded to the configuration tested; corpora do not secure retrieval or characterisation; human desk ⟦PROJECTED⟧ | Stated in `docs/releases/RELEASE_NOTES_5.16.md`, `docs/ENTERPRISE_CONSCIENCE.md`, `DATASHEET.md` Part III | Stated on both sides. |
+
+## 6. What to cite
 
 The artefact is a DOI-bearing Zenodo record (see `CITATION.cff` at the root
 and `.zenodo.json`). Cite the release version and the corpus version
-together: release 5.15.0, simulation pack 2.4.0 (corpus 2.1.0). The per-pack SHA-256 digests
+together: release 5.16.0, simulation pack 2.4.0 (corpus 2.1.0), and for the
+Enterprise Conscience extension the canon version (`<pack>-canon-000001`) and the plan hash
+in `prereg/plan_hash.txt`. The per-pack SHA-256 digests
 in `simulation/MANIFEST.json` identify exactly what was run.

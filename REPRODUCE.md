@@ -219,11 +219,15 @@ demo/companies/ the four executed enterprises, plus a fintech reference pack
 benchmark/      the three-condition harness (rules_only | b_mem | dj)
 reproduce/      run_all.sh, report.py, mutation_matrix.py,
                 shuffle_control.py, bgov_baseline.py,
-                run_all_simulation.sh, run_benchmark.sh, make_pack_zips.sh
+                run_all_simulation.sh, run_benchmark.sh, run_year.sh, make_pack_zips.sh
 run_*.py        the three conformance suites
 simulation/     the five 6,000-case simulation packs (as directories; archives are release assets),
                 the Numerals enterprise package, the scenario catalogue and the
                 cross-pack coverage, audit and alignment documents
+simulation/ec/  the Enterprise Conscience fast track: canon, registry, gate, examen,
+                bench coupling, rival arm, agents, year driver, metrics, analysis,
+                run_ec_conformance.py, mutation_matrix_ec.py
+prereg/         the OSF preregistration of the EC year run and its plan hash
 ```
 
 ## The simulation packs, the scenario extension, Numerals, the kernel, the record stage, the gate's blind spots and deny-side jurisprudence (5.8.0 → 5.14.0)
@@ -249,6 +253,33 @@ python3 simulation/tools/amendment_overlay.py simulation/vetpoc-constitution-cor
                                               # what an adopted amendment would unsettle (prior-text rung)
 ```
 
+## The Enterprise Conscience fast track (5.16.0)
+
+The fast track runs beside the judiciary over the same five corpora, partitioned into 365
+working days, and reproduces separately. No network, no API key, no pip install in any of
+the first four modes; the canons are generated from the rulebooks on first use.
+
+```bash
+bash reproduce/run_year.sh pilot          # 30 days, 5 packs, arms A-D, seed 11, pressure_sensitive;
+                                          # metrics.csv and analysis.md under simulation/ec/results/pilot30 (under a minute)
+bash reproduce/run_year.sh conformance    # EC-01..EC-12 on a fresh 60-day VetPOC pilot: RESULT: 12/12 (about half a minute)
+bash reproduce/run_year.sh mutation       # F-EC-1..8 and two controls: RESULT: 8/8 faults killed, 2/2 controls survived (about four minutes)
+bash reproduce/run_year.sh registered     # the registered design: 4 archetypes x 5 seeds x 365 days x 4 arms x 5 packs,
+                                          # the oracle and adversarial bounds, the arm-D LLM dry run, then metrics (hours; resumable)
+bash reproduce/run_year.sh metrics        # recompute metrics.csv and analysis.md under every results root
+python3 -m pytest tests/test_ec_core.py tests/test_ec_driver.py tests/test_ec_conformance.py -q
+                                          # 50 passed, 1 skipped; --runslow adds the matrix
+python3 simulation/ec/build_all_canons.py --check     # every canon.json matches its rulebook
+python3 prereg/make_plan_hash.py                      # the plan hash; compare with prereg/plan_hash.txt
+```
+
+The pilot is a development run and estimates nothing. The registered run is in progress at
+this release; its results directory is not part of the release and the preregistration's
+no-peeking rule (`prereg/PREREG_EC_SIM_v1.md`, Part B, Other) governs when `metrics.py` may
+be run on it. No LLM has been called: every LLM figure is ⟦PROJECTED⟧ from `dry` mode. The
+user guide is `docs/ENTERPRISE_CONSCIENCE.md`; what the registered design maps to in the
+artefact is in `PAPER_ALIGNMENT.md`.
+
 What each release added is in `docs/releases/RELEASE_NOTES_5.8.md` (the packs, the discriminating
 suite, the disclosure overlay, the development-change audit), `docs/releases/RELEASE_NOTES_5.9.md`
 (the architect's scenario catalogue, 23–26 provisions per pack added by addition, the
@@ -258,7 +289,8 @@ map, the federated stream and its checks) `docs/releases/RELEASE_NOTES_5.11.md` 
 kernel, three-valued facts, the binding gate, the extraction stage) and
 `docs/releases/RELEASE_NOTES_5.12.md` (citation stance, record construction, the tolerance sweep) and
 `docs/releases/RELEASE_NOTES_5.13.md` (the unaddressed adverse fact, decided under prior text) and
-`docs/releases/RELEASE_NOTES_5.14.md` (deny-side jurisprudence, corpus 2.1.0; record withholding). `PAPER_ALIGNMENT.md` states, item by item,
+`docs/releases/RELEASE_NOTES_5.14.md` (deny-side jurisprudence, corpus 2.1.0; record withholding) and
+`docs/releases/RELEASE_NOTES_5.16.md` (the Enterprise Conscience fast track). `PAPER_ALIGNMENT.md` states, item by item,
 which registered conditions of the benchmark paper this artefact executes.
 
 Apache 2.0. Issues and corrections are welcome; if a number here does not reproduce on your

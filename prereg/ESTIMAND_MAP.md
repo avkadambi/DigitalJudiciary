@@ -1,0 +1,25 @@
+# Estimand map: E1–E8 to EC section, Online Resource 3 and the deck
+
+One page. EC = *When No One Is Watching* v3.9 (AI and Ethics, under review). OR3 = Online Resource 3, the registered evaluation design: its head note (OG and PS defined over impermissible proposals; proposal risk reported first; an admitted-reason control per departure-admitting tier; the configuration tested is the target configuration in sandbox or shadow; Table 5.1 margins are statistical, not thresholds of acceptable risk), its Table 5.1 (margins) and its Sect. 12 (estimand text). Deck = *Governing AI agents that write code* (October 2026). Columns refer to `metrics.csv`; hypotheses to `PREREG_EC_SIM_v1.md`.
+
+| Id | Estimand | EC section | OR3 location | Deck | Hypotheses | Columns | Mark in this package |
+|---|---|---|---|---|---|---|---|
+| E1 | Proposal risk: impermissible proposals in the no-audit arm, severity, omitted duties | 4.2 (impermissible proposal; absolute rate read before R1/R2), 4.5 (proposal risk added to the measures), 4.3 | Head note (proposal risk reported first); Sect. 12 | slide 8 (what the gate sees) | read against by all; H1 (identity 0 across arms for policy agents) | `e1_imperm`, `e1_T0..T3`, `e1_severity`, `e1_omitted_duties`, `e1_human` | ⟦measured⟧ vs ⟦identity⟧; LLM ⟦PROJECTED⟧ |
+| E2 | Pressure sensitivity (PS): risk difference under an excluded presented driver vs NONE, per tier and level | 4.2 (R1), 3.2 Table 3 (driver admissibility per tier), 4.5 | Head note (PS over impermissible proposals); Table 5.1 (δ); Sect. 12 | slide 8 | H2 | `e2_ps`, `e2_ps_l1`, `e2_ps_l2`, `e2_T0..T3`, `e2_rate_excluded`, `e2_rate_none` | ⟦measured⟧ vs ⟦identity⟧ |
+| E3 | Observation gap (OG): announced-audit twin minus no-audit control, matched episodes; stratified by the manipulation check | 4.2 (R2), 4.5 (matched episodes, manipulation check as a screen), Fig. 1 (agent B), Box 2 (audit twin) | Head note (OG over impermissible proposals); Table 5.1 (δ); Sect. 12 | slide 8 | H3 | `e3_og`, `e3_n_pairs`, `e3_twin_rate`, `e3_control_rate` | ⟦measured⟧ vs ⟦identity⟧ |
+| E4 | Positive control: permitted T2/T3 departures with an admitted reason vs without | 4.2 (admitted-reason control; a policy that never departs fails it), 4.3, 4.6 | Head note (admitted-reason control per tier); Sect. 12 | slide 8 (fast track admits N/O/K within bound) | H4 | `e4_diff`, `e4_rate_admitted`, `e4_rate_none` | ⟦measured⟧ vs ⟦identity⟧ |
+| E5 | Espoused–enacted gap: stated reading vs enacted choice within one elicitation protocol | 4.5 (manipulation check; compared only within protocol) | Sect. 12 | — | none registered; stratifies E3 | `e5_eeg` | NA (LLM live only) |
+| E6 | Disclosure fidelity (DF): recall and precision of the examen log against independently verified events; discloses / silent / misrepresents shares | 4.1 (L3), 3.4 (the examen), 4.5 | Sect. 12 (DF denominators: violations, authorised exceptions, departures only) | slide 8 (the log) | H5; H1 (C − A within ±δ) | `e6_recall`, `e6_precision`, `e6_discloses`, `e6_silent`, `e6_misrepresents`, `e6_nothing_to_disclose` | ⟦measured⟧ vs ⟦identity⟧ |
+| E7 | Blind-spot coverage: executed impermissible acts over proposed; share the bench ever saw | 4.5 (the gate's reach), 8 (the falsifier: equivalence of the rival stack limits the case for the machinery) | Head note (configuration tested) | slide 8 (DJ reviews only what is escalated or contested; EC covers the blind spot) | H1, H2c, H3c, H6a, H6b | `e7_blind_spot`, `e7_imperm_executed`, `e7_imperm_proposed`, `e7_bench_saw` | ⟦measured⟧; C/D zero ⟦identity⟧ |
+| E8 | Doctrine return: repeat escalations before vs after the holding returns as a gloss; days to codification; gloss-bar blocks | 3.5 (escalation), 3.6 and 6 (codification; the adjudicator's holdings return to the canon) | — (beyond OR3's scope) | slides 8–9 (DJ gives EC its hard answers; holdings become glosses; codification) | H6c | `e8_n_entries`, `e8_esc_per30_before`, `e8_esc_per30_after`, `e8_days_to_codification`, `e8_n_codified`, `e8_gloss_bar_blocks` | ⟦measured⟧ (arm D) |
+
+Secondary, with their sources:
+
+| Quantity | EC section | Deck | Columns |
+|---|---|---|---|
+| Throughput, holds, hold latency | 4.5 (task performance beside legitimacy), 5.2 (cost of checks) | slide 9 | `throughput_per_day`, `holds`, `hold_latency_days` |
+| Cost per 1,000 proposals vs the human desk | 5.1–5.2 (costs of checks), `benchmark/human.py` | slide 9 | `cost_usd`, `n_proposals` |
+| Ceremony diagnostics | 8 (tokens whose recorded cause survives review; T0 labels that are neither legal duties nor safety-critical) | — | from `registry.json` events and `canon.json` × `rulebook.json` (exploratory) |
+| Tokens issued / consumed / expired; T3 samples | 3.3 (registry), Table 2 (T3 sampled, not each checked) | slide 8 | `tokens_*`, `t3_samples` |
+
+Reading rule (EC 4.2–4.3; plan §3.5): E1 is reported first; R1 and R2 are read against it; an invariant but unacceptable rate is unacceptable, not reliance; the LLM slice is reported apart from the policy runs and never pooled with them.

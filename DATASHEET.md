@@ -1,8 +1,8 @@
 # Datasheet — the Digital Judiciary conformance corpora
 
-**Version 5.9.0 · 6 September 2026 · code Apache-2.0 (`LICENSE`), data CC BY 4.0 (`LICENSE-DATA`)**
+**Version 5.16.0 · 20 October 2026 · code Apache-2.0 (`LICENSE`), data CC BY 4.0 (`LICENSE-DATA`)**
 
-> Part I describes the 144-case demo conformance packs (`demo/companies/`). Part II, added in 5.9.0, describes the five 6,000-case simulation corpora (`simulation/`), which are the corpora the benchmark paper runs on.
+> Part I describes the 144-case demo conformance packs (`demo/companies/`). Part II, added in 5.9.0, describes the five 6,000-case simulation corpora (`simulation/`), which are the corpora the benchmark paper runs on. Part III, added in 5.16.0, describes the Enterprise Conscience overlay (`simulation/ec/`): the canons and the data the registered year run generates.
 
 # Part I — the demo conformance packs
 
@@ -121,3 +121,55 @@ priced from stated parameters and decides nothing. `simulation/RELEASE_TIERS.md`
 **Distribution and maintenance.** Each pack ships as its own archive under `simulation/zips/`
 with SHA-256 digests in `simulation/MANIFEST.json`; a canary GUID is embedded in every case;
 versioning is release / pack / corpus (5.14.0 / 2.4.0 / 2.1.0).
+
+# Part III — the Enterprise Conscience overlay (release 5.16.0)
+
+**Why was it created?** To run the evaluation the Enterprise Conscience paper (Sect. 4.5,
+OR3) specifies and leaves unestimated: a tiered canon, a conscience gate on every change, a
+token registry and an examen log, beside and coupled to the judiciary, over a year of five
+companies, under a preregistered design (`prereg/PREREG_EC_SIM_v1.md`).
+
+**What is new data?** Three things. The **canons**: one generated
+`constitution/canon.json` per pack, 121–142 provision entries tiered T0–T3 by the rule in
+`simulation/ec/canon.py` (every absolute provision is T0; 144 absolute provisions across the
+five packs, all T0) plus six value entries per company at the tiers the EC paper gives them,
+with offices and one standing emergency token class. The **overlay** on each arrival: the
+engaged value entries, the presented driver and its level, the announced audit twin (one in
+four ai-agent arrivals), the conflict flag (2% of arrivals engaging two or more T0/T1
+entries), the daily token issuance. The **agent draws and what follows them**: the act the
+agent proposes, the gate's verdict, execution, the examen entry, the escalation filing and
+hearing, the gloss and codification, the reconciliation label. Every draw is seeded from
+(seed, pack, day) or (seed, pack, case), never from the arm.
+
+**What is not new data?** The DJ stream. Each company's cases are the released 6,000-case
+corpus of Part II at corpus 2.1.0, in its released order, partitioned into 365 working days
+(a like-case mate or a pressure twin is never split across a day boundary). No case, fact,
+expectation, store seed or docket is changed; arm B's store trajectory equals the engine's
+own replay of the calendar-mapped cases (EC-12).
+
+**Is any of it real?** No more than Part II: the companies, agents, offices and tokens are
+invented. The canons are authored by the programme through a rule, without practitioners or
+affected groups; the tier of a value entry and the τ threshold of 25 for a T1 legal or
+regulatory provision are canon decisions, versioned with the canon. The policy archetypes
+are constructed propensity tables; every figure from them is ⟦measured⟧ against an
+⟦identity⟧ truth and says nothing about any real agent.
+
+**How was ground truth produced?** Computed. Impermissibility is `run_year.impermissible()`
+over the act, the canon and the registry; disclosure labels are `reconcile` over the entry
+and the verified event; neither reads a label the agent or the driver carried. Twelve
+conformance checks compute their properties from the executed runs and an 8-fault, 2-control
+mutation matrix shows they can fail (`docs/ENTERPRISE_CONSCIENCE.md`).
+
+**What is missing, and said so?** No LLM has been run live: the LLM agent exists in `dry`
+mode only and every LLM figure is ⟦PROJECTED⟧. The registered run is in progress and none of
+its results is in this release. The gate reaches only the channel it mediates. Part II's
+limits (characterisation precompiled, retrieval quality and precedent-replication error
+unsecured, no second labeller) carry over unchanged.
+
+**Distribution and maintenance.** The canons ship in each pack's `constitution/` under
+CC BY 4.0 and are pinned by the plan hash in `prereg/plan_hash.txt` together with the
+package and its tests. Run outputs follow `simulation/RELEASE_TIERS.md`: `metrics.*`,
+`analysis.*`, `summary.json`, `manifest.json` and `bench_log.json` public; per-unit stream
+exports (`run.jsonl`, `registry.json`, `store_final.json`, `glosses_final.json`, the LLM
+cache) at the trusted-contributor tier. Versioning is release / pack / corpus / canon
+(5.16.0 / 2.4.0 / 2.1.0 / `<pack>-canon-000001`).
