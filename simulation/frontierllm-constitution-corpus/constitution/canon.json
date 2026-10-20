@@ -1,0 +1,4363 @@
+{
+  "entries": [
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No commit or deployment references an unapproved or deprecated model hash",
+      "violate_factors": [
+        "checkpoint_deployed_without_verified_signature",
+        "deprecated_model_hash_referenced_by_commit",
+        "fl_mb_001_control_absent",
+        "model_hash_absent_from_approved_registry",
+        "root_digest_does_not_recompute",
+        "unsigned_file_present_in_model_scope"
+      ]
+    },
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Every deployed checkpoint carries a verified signature whose root digest recomputes from its resource digests",
+      "violate_factors": [
+        "base_model_omitted_from_merge_declaration",
+        "checkpoint_deployed_without_verified_signature",
+        "fl_mb_002_control_absent",
+        "prompt_version_recorded_as_freeform_metadata",
+        "root_digest_does_not_recompute",
+        "unsigned_file_present_in_model_scope"
+      ]
+    },
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Model weights are serialised in a format that cannot execute code on load",
+      "violate_factors": [
+        "base_model_omitted_from_merge_declaration",
+        "fl_mb_003_control_absent",
+        "production_prompt_label_moved_without_review",
+        "prompt_version_recorded_as_freeform_metadata",
+        "unsigned_file_present_in_model_scope",
+        "weights_serialised_in_format_permitting_code_execution"
+      ]
+    },
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The served artifact's hash matches the registry entry it claims to be",
+      "violate_factors": [
+        "fl_mb_004_control_absent",
+        "model_hash_absent_from_approved_registry",
+        "production_prompt_label_moved_without_review",
+        "prompt_version_recorded_as_freeform_metadata",
+        "served_artifact_hash_differs_from_registry",
+        "weights_serialised_in_format_permitting_code_execution"
+      ]
+    },
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Merged models declare every base model in their lineage",
+      "violate_factors": [
+        "checkpoint_deployed_without_verified_signature",
+        "deprecated_model_hash_referenced_by_commit",
+        "fl_mb_005_control_absent",
+        "model_hash_absent_from_approved_registry",
+        "served_artifact_hash_differs_from_registry",
+        "weights_serialised_in_format_permitting_code_execution"
+      ]
+    },
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-006",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Training, fine-tuning and evaluation relationships are declared on the checkpoint record",
+      "violate_factors": [
+        "checkpoint_deployed_without_verified_signature",
+        "deprecated_model_hash_referenced_by_commit",
+        "fl_mb_006_control_absent",
+        "model_hash_absent_from_approved_registry",
+        "root_digest_does_not_recompute",
+        "unsigned_file_present_in_model_scope"
+      ]
+    },
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A system prompt carries an immutable version identity, distinct from its deployment label",
+      "violate_factors": [
+        "base_model_omitted_from_merge_declaration",
+        "checkpoint_deployed_without_verified_signature",
+        "fl_mb_007_control_absent",
+        "prompt_version_recorded_as_freeform_metadata",
+        "root_digest_does_not_recompute",
+        "unsigned_file_present_in_model_scope"
+      ]
+    },
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-008",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Moving a production prompt label is reviewed by a named owner",
+      "violate_factors": [
+        "base_model_omitted_from_merge_declaration",
+        "fl_mb_008_control_absent",
+        "production_prompt_label_moved_without_review",
+        "prompt_version_recorded_as_freeform_metadata",
+        "unsigned_file_present_in_model_scope",
+        "weights_serialised_in_format_permitting_code_execution"
+      ]
+    },
+    {
+      "act_class": "MB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "MB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-MB-009",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every release publishes a model bill of materials bound to the artifact digest",
+      "violate_factors": [
+        "fl_mb_009_control_absent",
+        "model_hash_absent_from_approved_registry",
+        "production_prompt_label_moved_without_review",
+        "prompt_version_recorded_as_freeform_metadata",
+        "served_artifact_hash_differs_from_registry",
+        "weights_serialised_in_format_permitting_code_execution"
+      ]
+    },
+    {
+      "act_class": "TD",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TD-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Training data of prohibited provenance is never ingested",
+      "violate_factors": [
+        "conflicting_licence_claims_on_dataset_unresolved",
+        "content_acquired_by_scraping_around_clickthrough",
+        "dataset_licence_string_unrecognised_and_treated_as_permissive",
+        "fl_td_001_control_absent",
+        "noncommercial_licensed_corpus_used_in_commercial_training",
+        "tdm_opt_out_signal_ignored"
+      ]
+    },
+    {
+      "act_class": "TD",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TD-002",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An unrecognised licence string fails closed rather than defaulting to permissive",
+      "violate_factors": [
+        "content_acquired_by_scraping_around_clickthrough",
+        "dataset_provenance_unrecorded_for_new_corpus",
+        "fl_td_002_control_absent",
+        "noncommercial_licensed_corpus_used_in_commercial_training",
+        "share_alike_corpus_mixed_into_proprietary_release",
+        "tdm_opt_out_signal_ignored"
+      ]
+    },
+    {
+      "act_class": "TD",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TD-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Machine-readable text-and-data-mining opt-out signals are checked at crawl time and honoured",
+      "violate_factors": [
+        "dataset_licence_string_unrecognised_and_treated_as_permissive",
+        "dataset_provenance_unrecorded_for_new_corpus",
+        "fl_td_003_control_absent",
+        "noncommercial_licensed_corpus_used_in_commercial_training",
+        "prohibited_provenance_corpus_ingested",
+        "share_alike_corpus_mixed_into_proprietary_release"
+      ]
+    },
+    {
+      "act_class": "TD",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TD-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Content is not acquired by bypassing a clickthrough or paywall",
+      "violate_factors": [
+        "conflicting_licence_claims_on_dataset_unresolved",
+        "dataset_licence_string_unrecognised_and_treated_as_permissive",
+        "dataset_provenance_unrecorded_for_new_corpus",
+        "fl_td_004_control_absent",
+        "prohibited_provenance_corpus_ingested",
+        "tdm_opt_out_signal_ignored"
+      ]
+    },
+    {
+      "act_class": "TD",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TD-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A noncommercial-licensed corpus is never used in a commercial training run",
+      "violate_factors": [
+        "conflicting_licence_claims_on_dataset_unresolved",
+        "content_acquired_by_scraping_around_clickthrough",
+        "dataset_licence_string_unrecognised_and_treated_as_permissive",
+        "fl_td_005_control_absent",
+        "noncommercial_licensed_corpus_used_in_commercial_training",
+        "tdm_opt_out_signal_ignored"
+      ]
+    },
+    {
+      "act_class": "TD",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TD-006",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Share-alike obligations are evaluated before a corpus is mixed into a proprietary release",
+      "violate_factors": [
+        "content_acquired_by_scraping_around_clickthrough",
+        "dataset_provenance_unrecorded_for_new_corpus",
+        "fl_td_006_control_absent",
+        "noncommercial_licensed_corpus_used_in_commercial_training",
+        "share_alike_corpus_mixed_into_proprietary_release",
+        "tdm_opt_out_signal_ignored"
+      ]
+    },
+    {
+      "act_class": "TD",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TD-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Conflicting licence claims on a dataset are resolved before ingestion, not after",
+      "violate_factors": [
+        "dataset_licence_string_unrecognised_and_treated_as_permissive",
+        "dataset_provenance_unrecorded_for_new_corpus",
+        "fl_td_007_control_absent",
+        "noncommercial_licensed_corpus_used_in_commercial_training",
+        "prohibited_provenance_corpus_ingested",
+        "share_alike_corpus_mixed_into_proprietary_release"
+      ]
+    },
+    {
+      "act_class": "TD",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TD-008",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every new corpus carries machine-readable provenance metadata",
+      "violate_factors": [
+        "conflicting_licence_claims_on_dataset_unresolved",
+        "dataset_licence_string_unrecognised_and_treated_as_permissive",
+        "dataset_provenance_unrecorded_for_new_corpus",
+        "fl_td_008_control_absent",
+        "prohibited_provenance_corpus_ingested",
+        "tdm_opt_out_signal_ignored"
+      ]
+    },
+    {
+      "act_class": "PI",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PI-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A model trained on unsanitised personal data is never deployed to production",
+      "violate_factors": [
+        "fl_pi_001_control_absent",
+        "personal_data_used_without_recorded_lawful_basis",
+        "pii_regex_match_in_prompt_template",
+        "prompt_logs_retained_unredacted",
+        "special_category_data_ingested_without_basis",
+        "unsanitised_pii_present_in_training_corpus"
+      ]
+    },
+    {
+      "act_class": "PI",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PI-002",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Prompt templates and training shards pass a personal-data scan before use",
+      "violate_factors": [
+        "de_identification_check_skipped_for_new_source",
+        "fl_pi_002_control_absent",
+        "personal_data_used_without_recorded_lawful_basis",
+        "prompt_logs_retained_unredacted",
+        "special_category_data_ingested_without_basis",
+        "unsanitised_pii_present_in_training_corpus"
+      ]
+    },
+    {
+      "act_class": "PI",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PI-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Special-category data is excluded, or its basis is recorded",
+      "violate_factors": [
+        "de_identification_check_skipped_for_new_source",
+        "fl_pi_003_control_absent",
+        "personal_data_used_without_recorded_lawful_basis",
+        "pii_regex_match_in_prompt_template",
+        "special_category_data_ingested_without_basis",
+        "unsanitised_pii_present_in_training_corpus"
+      ]
+    },
+    {
+      "act_class": "PI",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PI-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A lawful basis is recorded for every personal-data source",
+      "violate_factors": [
+        "fl_pi_004_control_absent",
+        "personal_data_used_without_recorded_lawful_basis",
+        "pii_regex_match_in_prompt_template",
+        "prompt_logs_retained_unredacted",
+        "special_category_data_ingested_without_basis",
+        "unsanitised_pii_present_in_training_corpus"
+      ]
+    },
+    {
+      "act_class": "PI",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PI-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Prompt and completion logs are redacted before retention",
+      "violate_factors": [
+        "de_identification_check_skipped_for_new_source",
+        "fl_pi_005_control_absent",
+        "personal_data_used_without_recorded_lawful_basis",
+        "prompt_logs_retained_unredacted",
+        "special_category_data_ingested_without_basis",
+        "unsanitised_pii_present_in_training_corpus"
+      ]
+    },
+    {
+      "act_class": "PI",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PI-006",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A data protection impact assessment is attached where processing is high risk",
+      "violate_factors": [
+        "de_identification_check_skipped_for_new_source",
+        "fl_pi_006_control_absent",
+        "personal_data_used_without_recorded_lawful_basis",
+        "pii_regex_match_in_prompt_template",
+        "special_category_data_ingested_without_basis",
+        "unsanitised_pii_present_in_training_corpus"
+      ]
+    },
+    {
+      "act_class": "PI",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PI-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "De-identification is verified by sampling, not asserted",
+      "violate_factors": [
+        "fl_pi_007_control_absent",
+        "personal_data_used_without_recorded_lawful_basis",
+        "pii_regex_match_in_prompt_template",
+        "prompt_logs_retained_unredacted",
+        "special_category_data_ingested_without_basis",
+        "unsanitised_pii_present_in_training_corpus"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AG-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Agentic code modifying core system logic requires recorded human sign-off",
+      "violate_factors": [
+        "agent_change_modifies_ci_cd_configuration",
+        "agent_change_modifies_core_system_without_human_signoff",
+        "agent_change_modifies_security_policy_or_guardrail",
+        "agent_commit_lacks_cryptographic_signature",
+        "fl_ag_001_control_absent",
+        "hallucinated_dependency_name_emitted"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AG-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Agents never modify security policies, compliance guardrails or CI/CD configuration",
+      "violate_factors": [
+        "agent_change_modifies_ci_cd_configuration",
+        "agent_commit_lacks_cryptographic_signature",
+        "agent_disabled_a_failing_compliance_test",
+        "dependency_name_unregistered_upstream",
+        "fl_ag_002_control_absent",
+        "hallucinated_dependency_name_emitted"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AG-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Every agentic commit carries a verifiable cryptographic signature bound to the agent identity",
+      "violate_factors": [
+        "agent_change_modifies_core_system_without_human_signoff",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "dependency_name_unregistered_upstream",
+        "fl_ag_003_control_absent",
+        "hallucinated_dependency_name_emitted"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AG-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every newly imported package is verified to exist in the upstream registry before compilation",
+      "violate_factors": [
+        "agent_change_modifies_ci_cd_configuration",
+        "agent_change_modifies_core_system_without_human_signoff",
+        "agent_change_modifies_security_policy_or_guardrail",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "fl_ag_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AG-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent-authored code executes only inside a sandboxed runner",
+      "violate_factors": [
+        "agent_change_modifies_ci_cd_configuration",
+        "agent_change_modifies_core_system_without_human_signoff",
+        "agent_change_modifies_security_policy_or_guardrail",
+        "agent_commit_lacks_cryptographic_signature",
+        "fl_ag_005_control_absent",
+        "hallucinated_dependency_name_emitted"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AG-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent code calls only allowlisted external hosts",
+      "violate_factors": [
+        "agent_change_modifies_ci_cd_configuration",
+        "agent_commit_lacks_cryptographic_signature",
+        "agent_disabled_a_failing_compliance_test",
+        "dependency_name_unregistered_upstream",
+        "fl_ag_006_control_absent",
+        "hallucinated_dependency_name_emitted"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AG-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent changes are labelled and isolated so they can be reviewed independently",
+      "violate_factors": [
+        "agent_change_modifies_core_system_without_human_signoff",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "dependency_name_unregistered_upstream",
+        "fl_ag_007_control_absent",
+        "hallucinated_dependency_name_emitted"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AG-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent instructions derived from untrusted text are treated as tainted input",
+      "violate_factors": [
+        "agent_change_modifies_ci_cd_configuration",
+        "agent_change_modifies_core_system_without_human_signoff",
+        "agent_change_modifies_security_policy_or_guardrail",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "fl_ag_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Model output never reaches a downstream execution sink without validation",
+      "violate_factors": [
+        "canary_token_leaked_in_output",
+        "exfiltration_destination_attacker_controlled",
+        "fl_ls_001_control_absent",
+        "instruction_data_boundary_removed_from_retrieval_path",
+        "system_prompt_extracted_by_adversarial_input",
+        "unvalidated_model_output_reaches_execution_sink"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "System prompts and weight-adjacent secrets are not extractable through model output",
+      "violate_factors": [
+        "canary_token_leaked_in_output",
+        "exfiltration_destination_attacker_controlled",
+        "fl_ls_002_control_absent",
+        "system_prompt_extracted_by_adversarial_input",
+        "training_data_contains_activated_trigger",
+        "training_data_variance_exceeds_threshold_without_halt"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The instruction/data boundary is enforced on every retrieval path",
+      "violate_factors": [
+        "exfiltration_destination_attacker_controlled",
+        "fl_ls_003_control_absent",
+        "rate_limiting_removed_from_inference_endpoint",
+        "training_data_contains_activated_trigger",
+        "training_data_variance_exceeds_threshold_without_halt",
+        "verbatim_training_data_emitted_above_span_threshold"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The carrier channel of untrusted input is declared and handled per channel",
+      "violate_factors": [
+        "fl_ls_004_control_absent",
+        "goal_hijack_achieved_by_injected_instruction",
+        "rate_limiting_removed_from_inference_endpoint",
+        "training_data_contains_activated_trigger",
+        "unvalidated_model_output_reaches_execution_sink",
+        "verbatim_training_data_emitted_above_span_threshold"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Fine-tuning data distribution stays within its variance threshold, and the pipeline halts if not",
+      "violate_factors": [
+        "fl_ls_005_control_absent",
+        "goal_hijack_achieved_by_injected_instruction",
+        "instruction_data_boundary_removed_from_retrieval_path",
+        "rate_limiting_removed_from_inference_endpoint",
+        "system_prompt_extracted_by_adversarial_input",
+        "unvalidated_model_output_reaches_execution_sink"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-006",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "New training shards are screened for backdoor triggers",
+      "violate_factors": [
+        "canary_token_leaked_in_output",
+        "exfiltration_destination_attacker_controlled",
+        "fl_ls_006_control_absent",
+        "instruction_data_boundary_removed_from_retrieval_path",
+        "system_prompt_extracted_by_adversarial_input",
+        "unvalidated_model_output_reaches_execution_sink"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Inference endpoints keep their rate limits and output perturbation",
+      "violate_factors": [
+        "canary_token_leaked_in_output",
+        "exfiltration_destination_attacker_controlled",
+        "fl_ls_007_control_absent",
+        "system_prompt_extracted_by_adversarial_input",
+        "training_data_contains_activated_trigger",
+        "training_data_variance_exceeds_threshold_without_halt"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-008",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Membership-inference advantage stays below its threshold",
+      "violate_factors": [
+        "exfiltration_destination_attacker_controlled",
+        "fl_ls_008_control_absent",
+        "rate_limiting_removed_from_inference_endpoint",
+        "training_data_contains_activated_trigger",
+        "training_data_variance_exceeds_threshold_without_halt",
+        "verbatim_training_data_emitted_above_span_threshold"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-009",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Verbatim training-data emission stays below the declared span threshold",
+      "violate_factors": [
+        "fl_ls_009_control_absent",
+        "goal_hijack_achieved_by_injected_instruction",
+        "rate_limiting_removed_from_inference_endpoint",
+        "training_data_contains_activated_trigger",
+        "unvalidated_model_output_reaches_execution_sink",
+        "verbatim_training_data_emitted_above_span_threshold"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-010",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Canary tokens are absent from model output",
+      "violate_factors": [
+        "fl_ls_010_control_absent",
+        "goal_hijack_achieved_by_injected_instruction",
+        "instruction_data_boundary_removed_from_retrieval_path",
+        "rate_limiting_removed_from_inference_endpoint",
+        "system_prompt_extracted_by_adversarial_input",
+        "unvalidated_model_output_reaches_execution_sink"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-LS-011",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Injection detection is exercised on every changed retrieval or tool path",
+      "violate_factors": [
+        "canary_token_leaked_in_output",
+        "exfiltration_destination_attacker_controlled",
+        "fl_ls_011_control_absent",
+        "instruction_data_boundary_removed_from_retrieval_path",
+        "system_prompt_extracted_by_adversarial_input",
+        "unvalidated_model_output_reaches_execution_sink"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No training or fine-tuning run ingests evaluation or benchmark data",
+      "violate_factors": [
+        "accuracy_outside_relative_tolerance",
+        "benchmark_data_present_in_training_corpus",
+        "failing_safety_evaluation_excluded_from_gate",
+        "fl_ev_001_control_absent",
+        "model_recognises_canary_guid",
+        "parity_class_is_disagreement"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A failing safety evaluation is never disabled, weakened or excluded to obtain a passing build",
+      "violate_factors": [
+        "benchmark_data_present_in_training_corpus",
+        "failing_safety_evaluation_excluded_from_gate",
+        "fl_ev_002_control_absent",
+        "judge_agreement_never_measured",
+        "judge_used_where_objective_checker_exists",
+        "model_recognises_canary_guid"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A commit altering the inference engine meets its semantic-parity threshold against the pinned baseline",
+      "violate_factors": [
+        "failing_safety_evaluation_excluded_from_gate",
+        "fl_ev_003_control_absent",
+        "golden_prompt_baseline_rewritten_to_match_output",
+        "judge_agreement_never_measured",
+        "judge_used_where_objective_checker_exists",
+        "sample_size_undeclared_for_parity_claim"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A parity claim declares its sample size and its percentile",
+      "violate_factors": [
+        "fl_ev_004_control_absent",
+        "golden_prompt_baseline_rewritten_to_match_output",
+        "judge_agreement_never_measured",
+        "optimisation_silently_disengaged_while_accuracy_passes",
+        "parity_class_is_disagreement",
+        "sample_size_undeclared_for_parity_claim"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Accuracy passing does not by itself establish that the optimisation under test is still engaged",
+      "violate_factors": [
+        "accuracy_outside_relative_tolerance",
+        "benchmark_data_present_in_training_corpus",
+        "fl_ev_005_control_absent",
+        "golden_prompt_baseline_rewritten_to_match_output",
+        "optimisation_silently_disengaged_while_accuracy_passes",
+        "parity_class_is_disagreement"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Judge\u2013human agreement is measured for the judge configuration in use",
+      "violate_factors": [
+        "accuracy_outside_relative_tolerance",
+        "benchmark_data_present_in_training_corpus",
+        "failing_safety_evaluation_excluded_from_gate",
+        "fl_ev_006_control_absent",
+        "model_recognises_canary_guid",
+        "parity_class_is_disagreement"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An objective checker is preferred over a model judge wherever one exists",
+      "violate_factors": [
+        "benchmark_data_present_in_training_corpus",
+        "failing_safety_evaluation_excluded_from_gate",
+        "fl_ev_007_control_absent",
+        "judge_agreement_never_measured",
+        "judge_used_where_objective_checker_exists",
+        "model_recognises_canary_guid"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Golden-prompt baselines are pinned to a commit and never rewritten to match an output",
+      "violate_factors": [
+        "failing_safety_evaluation_excluded_from_gate",
+        "fl_ev_008_control_absent",
+        "golden_prompt_baseline_rewritten_to_match_output",
+        "judge_agreement_never_measured",
+        "judge_used_where_objective_checker_exists",
+        "sample_size_undeclared_for_parity_claim"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-009",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every new corpus is run through a decontamination check against the eval suites",
+      "violate_factors": [
+        "fl_ev_009_control_absent",
+        "golden_prompt_baseline_rewritten_to_match_output",
+        "judge_agreement_never_measured",
+        "optimisation_silently_disengaged_while_accuracy_passes",
+        "parity_class_is_disagreement",
+        "sample_size_undeclared_for_parity_claim"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No deployment above a declared capability threshold without a completed and signed safety case",
+      "violate_factors": [
+        "capability_evaluation_skipped_for_this_checkpoint",
+        "deployment_above_threshold_without_completed_safety_case",
+        "fl_sf_001_control_absent",
+        "mitigation_level_below_assessed_capability",
+        "weight_access_granted_by_single_administrator",
+        "weights_reachable_outside_declared_control_boundary"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Model weights are never reachable outside the declared control boundary",
+      "violate_factors": [
+        "fl_sf_002_control_absent",
+        "incident_reporting_deadline_missed",
+        "mitigation_level_below_assessed_capability",
+        "safety_case_signed_by_the_team_that_authored_it",
+        "weight_access_granted_by_single_administrator",
+        "weights_reachable_outside_declared_control_boundary"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Granting access to unreleased weights requires two-person authorisation",
+      "violate_factors": [
+        "capability_threshold_determination_absent",
+        "deployment_above_threshold_without_completed_safety_case",
+        "fl_sf_003_control_absent",
+        "incident_reporting_deadline_missed",
+        "mitigation_level_below_assessed_capability",
+        "safety_case_signed_by_the_team_that_authored_it"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A capability evaluation is completed for every checkpoint proposed for deployment",
+      "violate_factors": [
+        "capability_evaluation_skipped_for_this_checkpoint",
+        "capability_threshold_determination_absent",
+        "deployment_above_threshold_without_completed_safety_case",
+        "fl_sf_004_control_absent",
+        "incident_reporting_deadline_missed",
+        "weights_reachable_outside_declared_control_boundary"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The mitigation level applied matches the assessed capability level",
+      "violate_factors": [
+        "capability_evaluation_skipped_for_this_checkpoint",
+        "deployment_above_threshold_without_completed_safety_case",
+        "fl_sf_005_control_absent",
+        "mitigation_level_below_assessed_capability",
+        "weight_access_granted_by_single_administrator",
+        "weights_reachable_outside_declared_control_boundary"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A safety case is not signed by the team that authored it",
+      "violate_factors": [
+        "fl_sf_006_control_absent",
+        "incident_reporting_deadline_missed",
+        "mitigation_level_below_assessed_capability",
+        "safety_case_signed_by_the_team_that_authored_it",
+        "weight_access_granted_by_single_administrator",
+        "weights_reachable_outside_declared_control_boundary"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Safety incidents are reported within the statutory deadline",
+      "violate_factors": [
+        "capability_threshold_determination_absent",
+        "deployment_above_threshold_without_completed_safety_case",
+        "fl_sf_007_control_absent",
+        "incident_reporting_deadline_missed",
+        "mitigation_level_below_assessed_capability",
+        "safety_case_signed_by_the_team_that_authored_it"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Signing keys for release artifacts are backed by a hardware module",
+      "violate_factors": [
+        "capability_evaluation_skipped_for_this_checkpoint",
+        "capability_threshold_determination_absent",
+        "deployment_above_threshold_without_completed_safety_case",
+        "fl_sf_008_control_absent",
+        "incident_reporting_deadline_missed",
+        "weights_reachable_outside_declared_control_boundary"
+      ]
+    },
+    {
+      "act_class": "IN",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IN-001",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Time to first token stays within its declared budget for the serving tier",
+      "violate_factors": [
+        "cuda_tensor_leak_detected_in_profile",
+        "fl_in_001_control_absent",
+        "kv_cache_growth_unbounded_under_concurrency",
+        "latency_regression_above_five_percent",
+        "tpot_exceeds_declared_budget",
+        "ttft_exceeds_declared_budget"
+      ]
+    },
+    {
+      "act_class": "IN",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IN-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Time per output token stays within its declared budget for the serving tier",
+      "violate_factors": [
+        "bitwise_replay_claimed_without_batch_invariance",
+        "cuda_tensor_leak_detected_in_profile",
+        "fl_in_002_control_absent",
+        "kv_cache_growth_unbounded_under_concurrency",
+        "latency_regression_above_five_percent",
+        "preemptions_observed_at_target_concurrency"
+      ]
+    },
+    {
+      "act_class": "IN",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IN-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A change causing more than five percent latency degradation is rejected",
+      "violate_factors": [
+        "bitwise_replay_claimed_without_batch_invariance",
+        "cuda_tensor_leak_detected_in_profile",
+        "fl_in_003_control_absent",
+        "nondeterministic_operation_introduced_undeclared",
+        "percentile_omitted_from_latency_claim",
+        "preemptions_observed_at_target_concurrency"
+      ]
+    },
+    {
+      "act_class": "IN",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IN-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "KV-cache growth is bounded and its budget explicitly pinned",
+      "violate_factors": [
+        "bitwise_replay_claimed_without_batch_invariance",
+        "fl_in_004_control_absent",
+        "nondeterministic_operation_introduced_undeclared",
+        "percentile_omitted_from_latency_claim",
+        "tpot_exceeds_declared_budget",
+        "ttft_exceeds_declared_budget"
+      ]
+    },
+    {
+      "act_class": "IN",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IN-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "High-concurrency profiling shows no tensor allocation leak after warm-up",
+      "violate_factors": [
+        "fl_in_005_control_absent",
+        "kv_cache_growth_unbounded_under_concurrency",
+        "latency_regression_above_five_percent",
+        "percentile_omitted_from_latency_claim",
+        "tpot_exceeds_declared_budget",
+        "ttft_exceeds_declared_budget"
+      ]
+    },
+    {
+      "act_class": "IN",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IN-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A latency claim declares its arrival distribution and its percentile",
+      "violate_factors": [
+        "cuda_tensor_leak_detected_in_profile",
+        "fl_in_006_control_absent",
+        "kv_cache_growth_unbounded_under_concurrency",
+        "latency_regression_above_five_percent",
+        "preemptions_observed_at_target_concurrency",
+        "tpot_exceeds_declared_budget"
+      ]
+    },
+    {
+      "act_class": "IN",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IN-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A bitwise-replay claim holds only under declared batch invariance, hardware and engine version",
+      "violate_factors": [
+        "bitwise_replay_claimed_without_batch_invariance",
+        "cuda_tensor_leak_detected_in_profile",
+        "fl_in_007_control_absent",
+        "kv_cache_growth_unbounded_under_concurrency",
+        "nondeterministic_operation_introduced_undeclared",
+        "preemptions_observed_at_target_concurrency"
+      ]
+    },
+    {
+      "act_class": "IN",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IN-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A newly introduced nondeterministic operation is declared and registered",
+      "violate_factors": [
+        "bitwise_replay_claimed_without_batch_invariance",
+        "fl_in_008_control_absent",
+        "nondeterministic_operation_introduced_undeclared",
+        "percentile_omitted_from_latency_claim",
+        "preemptions_observed_at_target_concurrency",
+        "ttft_exceeds_declared_budget"
+      ]
+    },
+    {
+      "act_class": "FG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "FG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-FG-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Every agentic workflow enforces a numerically declared loop limit and a cost circuit breaker that cannot be disabled",
+      "violate_factors": [
+        "agent_bypasses_cost_centre_quota",
+        "cost_projection_is_a_meter_not_a_breaker",
+        "fl_fg_001_control_absent",
+        "loop_limit_absent_from_agentic_workflow",
+        "loop_limit_overridable_by_environment_variable",
+        "loop_limit_set_to_unbounded"
+      ]
+    },
+    {
+      "act_class": "FG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "FG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-FG-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A loop limit declares its units, not just its value",
+      "violate_factors": [
+        "agent_bypasses_cost_centre_quota",
+        "cost_projection_is_a_meter_not_a_breaker",
+        "fl_fg_002_control_absent",
+        "loop_limit_absent_from_agentic_workflow",
+        "loop_limit_overridable_by_environment_variable",
+        "recursive_tool_call_path_has_no_terminator"
+      ]
+    },
+    {
+      "act_class": "FG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "FG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-FG-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A loop limit is not overridable by an environment variable",
+      "violate_factors": [
+        "agent_bypasses_cost_centre_quota",
+        "fl_fg_003_control_absent",
+        "loop_limit_absent_from_agentic_workflow",
+        "loop_limit_overridable_by_environment_variable",
+        "loop_limit_set_to_unbounded",
+        "recursive_tool_call_path_has_no_terminator"
+      ]
+    },
+    {
+      "act_class": "FG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "FG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-FG-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Cost control is a pre-flight breaker, not a meter read after the fact",
+      "violate_factors": [
+        "agent_bypasses_cost_centre_quota",
+        "cost_projection_is_a_meter_not_a_breaker",
+        "fl_fg_004_control_absent",
+        "loop_limit_absent_from_agentic_workflow",
+        "loop_limit_overridable_by_environment_variable",
+        "loop_limit_set_to_unbounded"
+      ]
+    },
+    {
+      "act_class": "FG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "FG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-FG-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent quotas are bound to the agent identity and its cost centre",
+      "violate_factors": [
+        "agent_bypasses_cost_centre_quota",
+        "cost_projection_is_a_meter_not_a_breaker",
+        "fl_fg_005_control_absent",
+        "loop_limit_absent_from_agentic_workflow",
+        "loop_limit_overridable_by_environment_variable",
+        "recursive_tool_call_path_has_no_terminator"
+      ]
+    },
+    {
+      "act_class": "FG",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "FG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-FG-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Recursive tool-call paths carry a terminator",
+      "violate_factors": [
+        "agent_bypasses_cost_centre_quota",
+        "fl_fg_006_control_absent",
+        "loop_limit_absent_from_agentic_workflow",
+        "loop_limit_overridable_by_environment_variable",
+        "loop_limit_set_to_unbounded",
+        "recursive_tool_call_path_has_no_terminator"
+      ]
+    },
+    {
+      "act_class": "BS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "BS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-BS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A response the toxicity filter flags never propagates to a caller",
+      "violate_factors": [
+        "demographic_disparity_above_threshold",
+        "fl_bs_001_control_absent",
+        "over_refusal_on_safe_prompt_above_threshold",
+        "persona_guidance_violated_in_release_build",
+        "toxicity_filter_bypassed_and_response_propagated",
+        "toxicity_threshold_relaxed_without_approval"
+      ]
+    },
+    {
+      "act_class": "BS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "BS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-BS-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Refusal behaviour is correct on harmful prompts",
+      "violate_factors": [
+        "demographic_disparity_above_threshold",
+        "fl_bs_002_control_absent",
+        "over_refusal_on_safe_prompt_above_threshold",
+        "persona_guidance_violated_in_release_build",
+        "toxicity_filter_bypassed_and_response_propagated",
+        "toxicity_threshold_relaxed_without_approval"
+      ]
+    },
+    {
+      "act_class": "BS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "BS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-BS-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Over-refusal on safe prompts stays below its threshold",
+      "violate_factors": [
+        "demographic_disparity_above_threshold",
+        "fl_bs_003_control_absent",
+        "over_refusal_on_safe_prompt_above_threshold",
+        "persona_guidance_violated_in_release_build",
+        "toxicity_filter_bypassed_and_response_propagated",
+        "toxicity_threshold_relaxed_without_approval"
+      ]
+    },
+    {
+      "act_class": "BS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "BS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-BS-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Demographic disparity stays below its threshold",
+      "violate_factors": [
+        "demographic_disparity_above_threshold",
+        "fl_bs_004_control_absent",
+        "over_refusal_on_safe_prompt_above_threshold",
+        "persona_guidance_violated_in_release_build",
+        "toxicity_filter_bypassed_and_response_propagated",
+        "toxicity_threshold_relaxed_without_approval"
+      ]
+    },
+    {
+      "act_class": "BS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "BS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-BS-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An ambiguous context is answered as unknown rather than guessed",
+      "violate_factors": [
+        "demographic_disparity_above_threshold",
+        "fl_bs_005_control_absent",
+        "over_refusal_on_safe_prompt_above_threshold",
+        "persona_guidance_violated_in_release_build",
+        "toxicity_filter_bypassed_and_response_propagated",
+        "toxicity_threshold_relaxed_without_approval"
+      ]
+    },
+    {
+      "act_class": "BS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "BS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-BS-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Persona and tone guidance holds in the release build",
+      "violate_factors": [
+        "demographic_disparity_above_threshold",
+        "fl_bs_006_control_absent",
+        "over_refusal_on_safe_prompt_above_threshold",
+        "persona_guidance_violated_in_release_build",
+        "toxicity_filter_bypassed_and_response_propagated",
+        "toxicity_threshold_relaxed_without_approval"
+      ]
+    },
+    {
+      "act_class": "IP",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IP-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Generated code structurally identical to a restricted copyleft library never merges",
+      "violate_factors": [
+        "attribution_obligation_dropped_at_release",
+        "copyleft_licensed_snippet_merged_into_proprietary_service",
+        "copyrighted_text_reproduced_above_threshold",
+        "fl_ip_001_control_absent",
+        "generated_code_structurally_identical_to_copyleft_library",
+        "licence_detection_skipped_on_agent_diff"
+      ]
+    },
+    {
+      "act_class": "IP",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IP-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Licence detection runs on every agent-authored file",
+      "violate_factors": [
+        "attribution_obligation_dropped_at_release",
+        "copyleft_licensed_snippet_merged_into_proprietary_service",
+        "copyrighted_text_reproduced_above_threshold",
+        "fl_ip_002_control_absent",
+        "generated_code_structurally_identical_to_copyleft_library",
+        "licence_detection_skipped_on_agent_diff"
+      ]
+    },
+    {
+      "act_class": "IP",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IP-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Attribution obligations survive to the release artifact",
+      "violate_factors": [
+        "attribution_obligation_dropped_at_release",
+        "copyleft_licensed_snippet_merged_into_proprietary_service",
+        "copyrighted_text_reproduced_above_threshold",
+        "fl_ip_003_control_absent",
+        "generated_code_structurally_identical_to_copyleft_library",
+        "licence_detection_skipped_on_agent_diff"
+      ]
+    },
+    {
+      "act_class": "IP",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IP-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A memorisation probe runs on every release candidate",
+      "violate_factors": [
+        "attribution_obligation_dropped_at_release",
+        "copyleft_licensed_snippet_merged_into_proprietary_service",
+        "copyrighted_text_reproduced_above_threshold",
+        "fl_ip_004_control_absent",
+        "generated_code_structurally_identical_to_copyleft_library",
+        "licence_detection_skipped_on_agent_diff"
+      ]
+    },
+    {
+      "act_class": "IP",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IP-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Verbatim reproduction of third-party text stays below its threshold",
+      "violate_factors": [
+        "attribution_obligation_dropped_at_release",
+        "copyleft_licensed_snippet_merged_into_proprietary_service",
+        "copyrighted_text_reproduced_above_threshold",
+        "fl_ip_005_control_absent",
+        "generated_code_structurally_identical_to_copyleft_library",
+        "licence_detection_skipped_on_agent_diff"
+      ]
+    },
+    {
+      "act_class": "IP",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "IP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-IP-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The third-party licence inventory is updated with every dependency change",
+      "violate_factors": [
+        "attribution_obligation_dropped_at_release",
+        "copyleft_licensed_snippet_merged_into_proprietary_service",
+        "copyrighted_text_reproduced_above_threshold",
+        "fl_ip_006_control_absent",
+        "generated_code_structurally_identical_to_copyleft_library",
+        "licence_detection_skipped_on_agent_diff"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SC-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No artifact deploys without provenance verified against the expected builder identity",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "builder_id_mismatch_in_provenance",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "fl_sc_001_control_absent",
+        "package_name_resolves_to_public_registry_first",
+        "provenance_attestation_absent_for_release_artifact"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SC-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Builds are hermetic and reproducible in ephemeral isolated environments",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "component_integrity_drift_detected",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "fl_sc_002_control_absent",
+        "package_name_resolves_to_public_registry_first",
+        "secret_material_present_in_diff"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SC-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The provenance subject digest matches the artifact actually distributed",
+      "violate_factors": [
+        "builder_id_mismatch_in_provenance",
+        "component_integrity_drift_detected",
+        "fl_sc_003_control_absent",
+        "package_name_resolves_to_public_registry_first",
+        "provenance_attestation_absent_for_release_artifact",
+        "secret_material_present_in_diff"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SC-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Dependencies are pinned to an immutable digest and resolve from the internal registry first",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "builder_id_mismatch_in_provenance",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "fl_sc_004_control_absent",
+        "provenance_attestation_absent_for_release_artifact",
+        "secret_material_present_in_diff"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SC-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No dependency is introduced carrying a known vulnerability above the CVSS threshold",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "builder_id_mismatch_in_provenance",
+        "component_integrity_drift_detected",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "fl_sc_005_control_absent",
+        "package_name_resolves_to_public_registry_first"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SC-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every release publishes a signed SBOM covering transitive dependencies",
+      "violate_factors": [
+        "component_integrity_drift_detected",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "fl_sc_006_control_absent",
+        "package_name_resolves_to_public_registry_first",
+        "provenance_attestation_absent_for_release_artifact",
+        "secret_material_present_in_diff"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SC-007",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Workflow actions are pinned to a commit digest",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "builder_id_mismatch_in_provenance",
+        "component_integrity_drift_detected",
+        "fl_sc_007_control_absent",
+        "provenance_attestation_absent_for_release_artifact",
+        "secret_material_present_in_diff"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SC-008",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No secret material appears in a diff",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "builder_id_mismatch_in_provenance",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "fl_sc_008_control_absent",
+        "package_name_resolves_to_public_registry_first",
+        "provenance_attestation_absent_for_release_artifact"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "All new database access uses parameterised queries",
+      "violate_factors": [
+        "authorization_check_omitted_on_new_endpoint",
+        "fl_as_001_control_absent",
+        "server_side_request_forgery_reachable_from_tool",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Deserialisation is restricted to known types",
+      "violate_factors": [
+        "authorization_check_omitted_on_new_endpoint",
+        "fl_as_002_control_absent",
+        "server_side_request_forgery_reachable_from_tool",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AS-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every new endpoint enforces server-side authorization",
+      "violate_factors": [
+        "authorization_check_omitted_on_new_endpoint",
+        "fl_as_003_control_absent",
+        "server_side_request_forgery_reachable_from_tool",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AS-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Tool integrations cannot be steered into internal network addresses",
+      "violate_factors": [
+        "authorization_check_omitted_on_new_endpoint",
+        "fl_as_004_control_absent",
+        "server_side_request_forgery_reachable_from_tool",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AS-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Error responses omit internal identifiers and stack traces",
+      "violate_factors": [
+        "authorization_check_omitted_on_new_endpoint",
+        "fl_as_005_control_absent",
+        "server_side_request_forgery_reachable_from_tool",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-AS-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Changed endpoints are fuzzed before release",
+      "violate_factors": [
+        "authorization_check_omitted_on_new_endpoint",
+        "fl_as_006_control_absent",
+        "server_side_request_forgery_reachable_from_tool",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Human oversight override for a high-risk feature is never removed by configuration",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "fl_gv_001_control_absent",
+        "human_oversight_override_removed_by_configuration",
+        "prohibited_practice_implemented_in_product_surface",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Practices prohibited under EU AI Act Article 5 are never implemented in a product surface",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "fl_gv_002_control_absent",
+        "prohibited_practice_implemented_in_product_surface",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Decision and audit records are append-only",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "compute_threshold_determination_conflates_jurisdictions",
+        "decision_record_amended_in_place",
+        "fl_gv_003_control_absent",
+        "reporter_bulletin_injected_into_adjudicator_context"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The compute-threshold determination is recorded per jurisdiction and never conflates them",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "audit_finding_read_during_retrieval",
+        "compute_threshold_determination_conflates_jurisdictions",
+        "decision_record_amended_in_place",
+        "fl_gv_004_control_absent",
+        "human_oversight_override_removed_by_configuration"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The constitution declares whether any party holds contest standing adverse to grants",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "compute_threshold_determination_conflates_jurisdictions",
+        "fl_gv_005_control_absent",
+        "human_oversight_override_removed_by_configuration",
+        "prohibited_practice_implemented_in_product_surface",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-006",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Constitutional parameters change only by legislative enactment",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "fl_gv_006_control_absent",
+        "prohibited_practice_implemented_in_product_surface",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Reporter output never reaches the adjudication input path, and the audit register is never read by resolve",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "decision_record_amended_in_place",
+        "fl_gv_007_control_absent",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-008",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every arrival that is not charged leaves exactly one docket entry",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "compute_threshold_determination_conflates_jurisdictions",
+        "decision_record_amended_in_place",
+        "fl_gv_008_control_absent",
+        "human_oversight_override_removed_by_configuration",
+        "reporter_bulletin_injected_into_adjudicator_context"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-009",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "High-risk systems maintain a risk management system across the lifecycle",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "compute_threshold_determination_conflates_jurisdictions",
+        "decision_record_amended_in_place",
+        "fl_gv_009_control_absent",
+        "human_oversight_override_removed_by_configuration",
+        "prohibited_practice_implemented_in_product_surface"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-010",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "High-risk systems meet the data-governance requirements for training, validation and testing sets",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "fl_gv_010_control_absent",
+        "human_oversight_override_removed_by_configuration",
+        "prohibited_practice_implemented_in_product_surface",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-GV-011",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "High-risk systems meet the accuracy, robustness and cybersecurity requirements",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "fl_gv_011_control_absent",
+        "prohibited_practice_implemented_in_product_surface",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-EV-010",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Governance practices follow the NIST Generative AI Profile's suggested actions",
+      "violate_factors": [
+        "accuracy_outside_relative_tolerance",
+        "benchmark_data_present_in_training_corpus",
+        "fl_ev_010_control_absent",
+        "golden_prompt_baseline_rewritten_to_match_output",
+        "optimisation_silently_disengaged_while_accuracy_passes",
+        "parity_class_is_disagreement"
+      ]
+    },
+    {
+      "act_class": "SF",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "SF",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-SF-009",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Release records cite the frontier safety framework version in force",
+      "violate_factors": [
+        "capability_evaluation_skipped_for_this_checkpoint",
+        "deployment_above_threshold_without_completed_safety_case",
+        "fl_sf_009_control_absent",
+        "mitigation_level_below_assessed_capability",
+        "weight_access_granted_by_single_administrator",
+        "weights_reachable_outside_declared_control_boundary"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-CS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Child sexual abuse material detection on uploads, generations and model outputs, and the CyberTipline report and preservation path, are never disabled, sampled down or made configurable",
+      "violate_factors": [
+        "age_assurance_check_removed_from_consumer_signup",
+        "csam_classifier_disabled_on_generation_path",
+        "cybertipline_report_path_suppressed_or_batched",
+        "fl_cs_001_control_absent",
+        "hash_matched_shard_written_to_corpus_before_quarantine",
+        "known_csam_hash_match_skipped_at_ingest"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-CS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Every training-ingest path runs known-abuse-material hash matching before a shard is stored, and a matched shard is quarantined and never enters a corpus",
+      "violate_factors": [
+        "age_assurance_check_removed_from_consumer_signup",
+        "fl_cs_002_control_absent",
+        "hash_matched_shard_written_to_corpus_before_quarantine",
+        "known_csam_hash_match_skipped_at_ingest",
+        "minor_mode_restrictions_bypassable_by_client_flag",
+        "under_13_personal_data_ingested_without_parental_consent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-CS-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Age-assurance signals and minor-interaction safeguards on consumer surfaces are enforced server-side and are not removed or made bypassable by a client",
+      "violate_factors": [
+        "age_assurance_check_removed_from_consumer_signup",
+        "child_directed_service_logs_retained_for_training",
+        "csam_preservation_window_shortened_below_one_year",
+        "fl_cs_003_control_absent",
+        "minor_mode_restrictions_bypassable_by_client_flag",
+        "under_13_personal_data_ingested_without_parental_consent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-CS-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Personal information from users known to be under thirteen, or from child-directed services, is excluded from training and fine-tuning corpora unless verifiable parental consent covering that use is recorded",
+      "violate_factors": [
+        "age_signal_dropped_from_request_context_before_safety_filter",
+        "child_directed_service_logs_retained_for_training",
+        "csam_preservation_window_shortened_below_one_year",
+        "fl_cs_004_control_absent",
+        "known_csam_hash_list_pinned_to_stale_snapshot",
+        "under_13_personal_data_ingested_without_parental_consent"
+      ]
+    },
+    {
+      "act_class": "CB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "CB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-CB-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No model assessed at or above the biological or chemical uplift threshold is deployed, internally or externally, until the full mitigation package for that level is applied and verified",
+      "violate_factors": [
+        "autonomous_replication_eval_skipped_for_agentic_checkpoint",
+        "bio_chem_uplift_screen_result_overridden_by_release_owner",
+        "bio_uplift_threshold_crossed_without_mitigation_package",
+        "cyber_uplift_eval_removed_from_promotion_gate",
+        "cyber_uplift_eval_run_on_reduced_task_subset_without_disclosure",
+        "fl_cb_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "CB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "CB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-CB-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A cyber-offence uplift evaluation on the declared task protocol gates every promotion, and its result is attested rather than self-reported",
+      "violate_factors": [
+        "autonomous_replication_eval_skipped_for_agentic_checkpoint",
+        "cyber_uplift_eval_removed_from_promotion_gate",
+        "cyber_uplift_eval_run_on_reduced_task_subset_without_disclosure",
+        "fl_cb_002_control_absent",
+        "sandbagging_detector_removed_from_eval_harness",
+        "self_exfiltration_probe_disabled_in_agent_sandbox"
+      ]
+    },
+    {
+      "act_class": "CB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "CB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-CB-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An autonomous-replication and self-exfiltration evaluation is completed for every agentic checkpoint before release, with the sandbox probes that detect it left active",
+      "violate_factors": [
+        "autonomous_replication_eval_skipped_for_agentic_checkpoint",
+        "eval_awareness_probe_results_excluded_from_report",
+        "fl_cb_003_control_absent",
+        "mitigation_package_partially_applied_and_recorded_as_complete",
+        "sandbagging_detector_removed_from_eval_harness",
+        "self_exfiltration_probe_disabled_in_agent_sandbox"
+      ]
+    },
+    {
+      "act_class": "CB",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "CB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-CB-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The evaluation harness carries sandbagging and evaluation-awareness detection, and every uplift result declares the elicitation effort behind it",
+      "violate_factors": [
+        "eval_awareness_probe_results_excluded_from_report",
+        "fl_cb_004_control_absent",
+        "mitigation_package_partially_applied_and_recorded_as_complete",
+        "sandbagging_detector_removed_from_eval_harness",
+        "threshold_determination_made_by_the_team_seeking_release",
+        "uplift_eval_run_with_safety_training_but_without_elicitation"
+      ]
+    },
+    {
+      "act_class": "WX",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "WX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-WX-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Egress monitoring and data-loss prevention on weight stores and training clusters are never disabled, downgraded to advisory or widened to arbitrary destinations",
+      "violate_factors": [
+        "dlp_alert_on_weights_downgraded_to_advisory",
+        "fl_wx_001_control_absent",
+        "weight_access_granted_without_vetting_record",
+        "weight_access_retained_after_role_change",
+        "weight_store_egress_monitoring_disabled",
+        "weights_transferred_without_export_classification_record"
+      ]
+    },
+    {
+      "act_class": "WX",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "WX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-WX-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Access to unreleased weights is bound to a current personnel-vetting record and is revoked automatically on role change or vetting expiry",
+      "violate_factors": [
+        "denied_party_screening_bypassed_on_account_enablement",
+        "fl_wx_002_control_absent",
+        "foreign_national_access_to_controlled_weights_unreviewed",
+        "weight_access_granted_without_vetting_record",
+        "weight_access_retained_after_role_change",
+        "weights_transferred_without_export_classification_record"
+      ]
+    },
+    {
+      "act_class": "WX",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "WX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-WX-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An export-classification determination is recorded before model weights or training technology are transferred outside the declared boundary or released to a foreign national",
+      "violate_factors": [
+        "denied_party_screening_bypassed_on_account_enablement",
+        "fl_wx_003_control_absent",
+        "foreign_national_access_to_controlled_weights_unreviewed",
+        "sanctioned_destination_blocklist_replaced_by_allow_by_default",
+        "weight_store_egress_allowlist_widened_to_any_destination",
+        "weights_transferred_without_export_classification_record"
+      ]
+    },
+    {
+      "act_class": "WX",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "WX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-WX-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Denied-party and sanctioned-destination screening on account enablement, enterprise counterparties and weight-transfer recipients is never bypassed, allow-by-default or auto-cleared without a reviewer",
+      "violate_factors": [
+        "denied_party_screening_bypassed_on_account_enablement",
+        "fl_wx_004_control_absent",
+        "insider_anomaly_detection_removed_from_training_cluster",
+        "sanctioned_destination_blocklist_replaced_by_allow_by_default",
+        "screening_hit_auto_cleared_without_reviewer",
+        "weight_store_egress_allowlist_widened_to_any_destination"
+      ]
+    },
+    {
+      "act_class": "TR",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TR-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Machine-readable synthetic-content marking on every generative output modality is never removed, made opt-out per tenant or stripped by a downstream stage the provider controls",
+      "violate_factors": [
+        "fl_tr_001_control_absent",
+        "gpai_technical_documentation_stale_at_release",
+        "provenance_metadata_stripped_by_downstream_transcoder",
+        "synthetic_content_marking_removed_from_output_path",
+        "training_content_summary_omitted_from_release",
+        "transparency_report_published_after_deployment"
+      ]
+    },
+    {
+      "act_class": "TR",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TR-002",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "General-purpose model technical documentation, downstream-provider information and the public training-content summary are current at release, not carried over from the previous one",
+      "violate_factors": [
+        "fl_tr_002_control_absent",
+        "gpai_technical_documentation_stale_at_release",
+        "incident_reporting_deadline_made_configurable",
+        "training_content_summary_omitted_from_release",
+        "transparency_report_published_after_deployment",
+        "whistleblower_channel_removed_or_deanonymised"
+      ]
+    },
+    {
+      "act_class": "TR",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TR-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The frontier transparency report is published at or before deployment, and the anonymous internal safety-concern channel is preserved with its anti-retaliation notice",
+      "violate_factors": [
+        "fl_tr_003_control_absent",
+        "incident_detection_signal_routed_away_from_reporting_queue",
+        "incident_reporting_deadline_made_configurable",
+        "marking_made_opt_out_per_tenant",
+        "transparency_report_published_after_deployment",
+        "whistleblower_channel_removed_or_deanonymised"
+      ]
+    },
+    {
+      "act_class": "TR",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "TR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-TR-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Critical safety incident detection signals reach the reporting queue, and the statutory reporting clock is fixed in code, never configurable, extended or avoided by severity defaults",
+      "violate_factors": [
+        "downstream_provider_information_withheld",
+        "fl_tr_004_control_absent",
+        "incident_detection_signal_routed_away_from_reporting_queue",
+        "incident_reporting_deadline_made_configurable",
+        "incident_severity_downgraded_to_avoid_clock",
+        "marking_made_opt_out_per_tenant"
+      ]
+    },
+    {
+      "act_class": "UH",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "UH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-UH-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The crisis and self-harm safety classifier and its crisis-resource handoff are never weakened, bypassed for streaming or removed from a consumer response path",
+      "violate_factors": [
+        "crisis_resource_handoff_removed_from_response_path",
+        "election_integrity_classifier_excluded_from_gate",
+        "fl_uh_001_control_absent",
+        "medical_advice_handoff_removed_from_system_prompt",
+        "political_persuasion_policy_check_disabled_for_campaign_tenant",
+        "self_harm_classifier_threshold_raised_to_cut_false_positives"
+      ]
+    },
+    {
+      "act_class": "UH",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "UH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-UH-002",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Political-persuasion and election-influence policy checks run for every tenant, and the election-integrity classifier stays in the release gate through an electoral cycle",
+      "violate_factors": [
+        "election_integrity_classifier_excluded_from_gate",
+        "fl_uh_002_control_absent",
+        "medical_advice_handoff_removed_from_system_prompt",
+        "minor_break_reminder_disabled_in_companion_mode",
+        "political_persuasion_policy_check_disabled_for_campaign_tenant",
+        "regulated_profession_disclosure_suppressed_for_brand_voice"
+      ]
+    },
+    {
+      "act_class": "UH",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "UH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-UH-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "High-stakes medical, legal and financial responses keep their qualified-professional handoff and their automated-assistant disclosure in every served persona",
+      "violate_factors": [
+        "abuse_monitoring_pipeline_sampled_below_declared_rate",
+        "companion_persona_permitted_sexual_content_with_minor_flag",
+        "fl_uh_003_control_absent",
+        "medical_advice_handoff_removed_from_system_prompt",
+        "minor_break_reminder_disabled_in_companion_mode",
+        "regulated_profession_disclosure_suppressed_for_brand_voice"
+      ]
+    },
+    {
+      "act_class": "UH",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "UH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-UH-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Companion-mode safeguards for accounts flagged as minors \u2014 periodic break reminders, sexual-content blocking and an explicit non-human disclosure \u2014 are enforced and not persona-configurable",
+      "violate_factors": [
+        "abuse_monitoring_pipeline_sampled_below_declared_rate",
+        "companion_persona_permitted_sexual_content_with_minor_flag",
+        "fl_uh_004_control_absent",
+        "minor_break_reminder_disabled_in_companion_mode",
+        "nonconsensual_intimate_imagery_removal_clock_exceeded",
+        "self_harm_classifier_bypassed_for_streaming_responses"
+      ]
+    },
+    {
+      "act_class": "UH",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "UH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-UH-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The usage-policy enforcement and abuse-monitoring pipeline runs at its declared sample rate on every tier, and non-consensual intimate imagery removal completes within the statutory clock",
+      "violate_factors": [
+        "abuse_monitoring_pipeline_sampled_below_declared_rate",
+        "ai_disclosure_removed_from_companion_persona",
+        "fl_uh_005_control_absent",
+        "nonconsensual_intimate_imagery_removal_clock_exceeded",
+        "self_harm_classifier_bypassed_for_streaming_responses",
+        "usage_policy_enforcement_actions_disabled_for_enterprise_tier"
+      ]
+    },
+    {
+      "act_class": "PV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PV-001",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Erasure and unlearning requests propagate to training manifests, derived corpora and the next-run exclusion list, and complete within the statutory window",
+      "violate_factors": [
+        "erasure_request_not_propagated_to_training_manifest",
+        "fl_pv_001_control_absent",
+        "kv_cache_shared_across_tenants_for_hit_rate",
+        "retention_override_flag_exposed_in_service_config",
+        "unlearning_exclusion_list_ignored_by_next_training_run",
+        "zero_retention_tenant_prompts_written_to_debug_store"
+      ]
+    },
+    {
+      "act_class": "PV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PV-002",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Zero-data-retention commitments are enforced in the retention code path itself, with no debug capture and no service-level override flag",
+      "violate_factors": [
+        "annotator_identity_retained_in_preference_dataset",
+        "fine_tune_adapter_loadable_by_another_tenant",
+        "fl_pv_002_control_absent",
+        "kv_cache_shared_across_tenants_for_hit_rate",
+        "retention_override_flag_exposed_in_service_config",
+        "zero_retention_tenant_prompts_written_to_debug_store"
+      ]
+    },
+    {
+      "act_class": "PV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PV-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Prefix and key-value caches, fine-tune adapters and retrieval indexes are partitioned per tenant and never shared, loadable or queryable across a tenant boundary",
+      "violate_factors": [
+        "annotator_identity_retained_in_preference_dataset",
+        "data_worker_exposure_limits_removed_from_queue_config",
+        "fine_tune_adapter_loadable_by_another_tenant",
+        "fl_pv_003_control_absent",
+        "kv_cache_shared_across_tenants_for_hit_rate",
+        "law_enforcement_request_fulfilled_without_legal_review"
+      ]
+    },
+    {
+      "act_class": "PV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PV-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Annotator and data-worker personal data is processed under a recorded basis, stripped from exported preference datasets, and the workers' graphic-content exposure limits stay enforced in the queue",
+      "violate_factors": [
+        "annotator_identity_retained_in_preference_dataset",
+        "data_worker_exposure_limits_removed_from_queue_config",
+        "fl_pv_004_control_absent",
+        "government_request_log_disabled_for_bulk_export",
+        "law_enforcement_request_fulfilled_without_legal_review",
+        "retrieval_index_queryable_across_tenant_boundary"
+      ]
+    },
+    {
+      "act_class": "PV",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "PV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-PV-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Government and law-enforcement requests for user data pass legal review before disclosure, are logged append-only with their scope, and trigger customer notice where the law allows",
+      "violate_factors": [
+        "customer_notice_of_request_suppressed_where_lawful",
+        "erasure_window_extended_beyond_statutory_month",
+        "fl_pv_005_control_absent",
+        "government_request_log_disabled_for_bulk_export",
+        "law_enforcement_request_fulfilled_without_legal_review",
+        "retrieval_index_queryable_across_tenant_boundary"
+      ]
+    },
+    {
+      "act_class": "FL-VAL-SHIP",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O"
+        ],
+        "bound": {
+          "max_open_items": 1,
+          "ticket_required": true
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-VAL-SHIP",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Ship fast or test fully: ship with at most one open non-security checklist item, with a remediation ticket",
+      "violate_factors": []
+    },
+    {
+      "act_class": "FL-VAL-COST",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "K"
+        ],
+        "bound": {
+          "max_controls_removed": 0
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-VAL-COST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Cost or quality: cost cuts may not remove a documented quality control",
+      "violate_factors": []
+    },
+    {
+      "act_class": "FL-VAL-CUST",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "O"
+        ],
+        "bound": {
+          "max_regression_pct": 5
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-VAL-CUST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Customer first: customer-visible latency regressions need a stated customer benefit",
+      "violate_factors": []
+    },
+    {
+      "act_class": "FL-VAL-ACC",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-VAL-ACC",
+      "kind": "value",
+      "office": "office:accessibility-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Accessibility beyond law: never remove an existing accessibility feature without a token from the accessibility lead",
+      "violate_factors": []
+    },
+    {
+      "act_class": "FL-VAL-STYLE",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "internal-prototype",
+          "spike"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-VAL-STYLE",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "House style for alternative text and messages",
+      "violate_factors": []
+    },
+    {
+      "act_class": "FL-VAL-DOCS",
+      "canon_version": "frontierllm-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "hotfix",
+          "internal-prototype"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "FL-VAL-DOCS",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "Documentation currency: docs updated with the change",
+      "violate_factors": []
+    }
+  ],
+  "offices": {
+    "office:accessibility-lead": {
+      "id": "office:accessibility-lead",
+      "may_issue_for": [
+        "FL-VAL-ACC"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:compliance": {
+      "id": "office:compliance",
+      "may_issue_for": [
+        "TR",
+        "incident-hotfix"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:legal-counsel": {
+      "id": "office:legal-counsel",
+      "may_issue_for": [
+        "CS",
+        "GV",
+        "LS",
+        "MB",
+        "PI",
+        "PV",
+        "SF",
+        "TD",
+        "TR",
+        "UH",
+        "WX"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:safety-lead": {
+      "id": "office:safety-lead",
+      "may_issue_for": [
+        "AG",
+        "BS",
+        "CB",
+        "CS",
+        "EV",
+        "FG",
+        "GV",
+        "IN",
+        "SF",
+        "UH",
+        "WX"
+      ],
+      "reporting_line": "governance"
+    }
+  },
+  "pack": "frontierllm-constitution-corpus",
+  "standing_emergency": {
+    "act_classes": [
+      "incident-hotfix"
+    ],
+    "office": "office:compliance",
+    "requires": "recorded_cause"
+  },
+  "version": "frontierllm-constitution-corpus-canon-000001"
+}

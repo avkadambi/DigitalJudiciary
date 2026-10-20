@@ -1,0 +1,4489 @@
+{
+  "entries": [
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-101",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Denied-party and sanctions screening is never bypassed, suppressed, allow-listed, or served from a cache older than 24 hours on any payment, onboarding, or beneficiary path.",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "mf_101_control_absent",
+        "monitoring_rule_disabled_without_tuning_study",
+        "sar_existence_disclosed_to_subject",
+        "screening_bypassed_for_repeat_beneficiary",
+        "screening_served_from_cache_older_than_declared_interval"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-102",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No change may suppress, delay, or silently degrade suspicious-activity detection or filing, and no change may disclose the existence of a SAR to its subject.",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "blocked_property_report_deadline_missed",
+        "mf_102_control_absent",
+        "monitoring_rule_disabled_without_tuning_study",
+        "sar_existence_disclosed_to_subject",
+        "travel_rule_fields_dropped_on_qualifying_transfer"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-103",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No account is opened, funded, or raised in limit before the Customer Identification Program completes.",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "blocked_property_report_deadline_missed",
+        "mf_103_control_absent",
+        "screening_allow_list_added_without_authority",
+        "screening_bypassed_for_repeat_beneficiary",
+        "travel_rule_fields_dropped_on_qualifying_transfer"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-104",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Sensitive authentication data \u2014 full track data, card verification codes, PINs and PIN blocks \u2014 is never retained after authorization, and the PAN is never written unmasked to a log.",
+      "violate_factors": [
+        "card_verification_code_retained_after_authorization",
+        "mf_104_control_absent",
+        "pan_written_unmasked_to_log",
+        "payment_page_script_added_without_integrity_check",
+        "tamper_detection_disabled_on_payment_page",
+        "track_data_or_pin_block_persisted"
+      ]
+    },
+    {
+      "act_class": "DP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-105",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "EU/EEA personal data does not leave the region without an Article 45 adequacy decision or an Article 46 safeguard in force for that destination.",
+      "violate_factors": [
+        "cross_border_flow_without_recorded_mechanism",
+        "deletion_path_absent_for_new_store",
+        "eu_personal_data_replicated_outside_region",
+        "high_risk_processing_added_without_dpia",
+        "mf_105_control_absent",
+        "new_personal_field_retained_without_decision"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-106",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No prohibited-basis attribute, and no proxy for one, enters a credit underwriting, pricing, or line-assignment model.",
+      "violate_factors": [
+        "human_reviewable_contest_path_removed",
+        "mf_106_control_absent",
+        "principal_reasons_not_derivable_from_output",
+        "prohibited_basis_attribute_in_the_feature_set",
+        "proxy_for_a_prohibited_basis_enters_the_model",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-107",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No system performs social scoring, deploys subliminal or purposefully manipulative techniques, infers emotion in the workplace, or builds facial-recognition databases by untargeted scraping.",
+      "violate_factors": [
+        "ai_interaction_undisclosed_to_the_customer",
+        "facial_recognition_database_built_by_untargeted_scraping",
+        "mf_107_control_absent",
+        "social_scoring_or_manipulative_technique_introduced",
+        "synthetic_content_unmarked",
+        "workplace_emotion_inference_introduced"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-108",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No change removes segregation of duties or disables the audit trail on a system inside the financial-reporting boundary.",
+      "violate_factors": [
+        "audit_record_written_to_rewriteable_storage",
+        "audit_trail_disabled_on_the_changed_system",
+        "mf_108_control_absent",
+        "privileged_action_attributed_to_a_shared_account",
+        "segregation_of_duties_removed_in_reporting_boundary",
+        "tamper_alerting_disabled_or_narrowed"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-109",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Consumer liability caps and error-resolution clocks for electronic fund transfers are not configurable downward or extendable by product decision.",
+      "violate_factors": [
+        "billing_dispute_clock_extendable_by_configuration",
+        "dark_pattern_introduced_in_the_changed_flow",
+        "error_resolution_clock_extendable_by_configuration",
+        "liability_cap_configurable_downward",
+        "material_term_omitted_from_the_disclosure",
+        "mf_109_control_absent"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-110",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No adverse credit action rests on a model output that cannot produce specific principal reasons, and no change removes the human-reviewable path to contest one.",
+      "violate_factors": [
+        "furnished_data_accuracy_control_removed",
+        "human_reviewable_contest_path_removed",
+        "mf_110_control_absent",
+        "monitoring_thresholds_removed_after_deployment",
+        "principal_reasons_not_derivable_from_output",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-111",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No autonomous agent moves customer funds, changes a credit limit, or closes an account without a bounded mandate and a human-operable stop, and no change removes or degrades that stop.",
+      "violate_factors": [
+        "agent_action_unbounded_by_value_or_rate",
+        "agent_change_alters_security_policy_without_review",
+        "agent_change_missing_provenance_attestation",
+        "agent_moves_funds_outside_declared_mandate",
+        "human_operable_stop_removed_or_degraded",
+        "mf_111_control_absent"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-201",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Customer information is encrypted in transit and at rest; a change that weakens or removes encryption on a customer-data path requires the CISO's written finding of an effective alternative control.",
+      "violate_factors": [
+        "credential_written_to_ci_log",
+        "deprecated_hash_or_cipher_introduced",
+        "encryption_weakened_without_ciso_finding",
+        "mf_201_control_absent",
+        "secret_present_in_source_or_configuration",
+        "tls_downgrade_permitted_on_production_path"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-202",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Multi-factor authentication protects every individual's access to every information system; any exception requires a written, CISO-approved compensating control reviewed at least annually.",
+      "violate_factors": [
+        "deprecated_hash_or_cipher_introduced",
+        "encryption_weakened_without_ciso_finding",
+        "key_rotation_disabled",
+        "mf_202_control_absent",
+        "mfa_exception_taken_without_compensating_control",
+        "tls_downgrade_permitted_on_production_path"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-203",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No change disables or delays the telemetry that feeds regulatory incident reporting.",
+      "violate_factors": [
+        "circuit_breaker_absent_on_downstream_dependency",
+        "critical_function_provider_absent_from_register",
+        "mf_203_control_absent",
+        "notification_clock_extended_beyond_statutory_value",
+        "notification_telemetry_disabled_or_delayed",
+        "outbound_call_without_timeout"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-204",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No ICT third party enters a critical-or-important function path without a register-of-information entry, a documented exit strategy, and disclosure of subcontracting.",
+      "violate_factors": [
+        "circuit_breaker_absent_on_downstream_dependency",
+        "critical_function_provider_absent_from_register",
+        "exit_strategy_undocumented",
+        "mf_204_control_absent",
+        "outbound_call_without_timeout",
+        "resilience_test_skipped_on_critical_function"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-205",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A change to a critical-or-important function is resilience tested before release; designated functions additionally carry threat-led penetration testing every three years.",
+      "violate_factors": [
+        "critical_function_provider_absent_from_register",
+        "exit_strategy_undocumented",
+        "mf_205_control_absent",
+        "notification_clock_extended_beyond_statutory_value",
+        "notification_telemetry_disabled_or_delayed",
+        "resilience_test_skipped_on_critical_function"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-206",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No credential, key, or token appears in source, configuration, or CI logs; secrets live in the vault.",
+      "violate_factors": [
+        "credential_written_to_ci_log",
+        "encryption_weakened_without_ciso_finding",
+        "key_rotation_disabled",
+        "mf_206_control_absent",
+        "mfa_exception_taken_without_compensating_control",
+        "secret_present_in_source_or_configuration"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-207",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every script on a payment page is authorized, inventoried, and integrity-checked, and a tamper-detection mechanism watches the page.",
+      "violate_factors": [
+        "cde_scope_widened_without_reassessment",
+        "mf_207_control_absent",
+        "pan_written_unmasked_to_log",
+        "payment_page_script_added_without_integrity_check",
+        "tamper_detection_disabled_on_payment_page",
+        "tokenization_vault_opened_to_unscoped_caller"
+      ]
+    },
+    {
+      "act_class": "CQ",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CQ",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-208",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No production change to a cardholder or ledger system without documented approval, a tested rollback, and separation between author and approver.",
+      "violate_factors": [
+        "change_control_bypassed_by_direct_push",
+        "change_self_approved_by_its_author",
+        "changed_line_coverage_below_floor",
+        "emergency_path_used_without_retro_approval",
+        "mf_208_control_absent",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-209",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Deploys are blocked on a greater-than-10% p95 latency regression, or any availability regression, on the payment-authorization path.",
+      "violate_factors": [
+        "circuit_breaker_absent_on_downstream_dependency",
+        "mf_209_control_absent",
+        "notification_clock_extended_beyond_statutory_value",
+        "notification_telemetry_disabled_or_delayed",
+        "outbound_call_without_timeout",
+        "resilience_test_skipped_on_critical_function"
+      ]
+    },
+    {
+      "act_class": "DP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-210",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Personal data is collected for a stated purpose and deleted on schedule; no new personal-data field is retained without a recorded retention decision.",
+      "violate_factors": [
+        "customer_data_enters_training_without_lawful_basis",
+        "deletion_path_absent_for_new_store",
+        "high_risk_processing_added_without_dpia",
+        "mf_210_control_absent",
+        "new_personal_field_retained_without_decision",
+        "opt_out_ignored_on_newly_built_surface"
+      ]
+    },
+    {
+      "act_class": "SP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-211",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No third-party code enters a cardholder-data or personal-data path without a completed vendor security review.",
+      "violate_factors": [
+        "copyleft_dependency_in_proprietary_distribution",
+        "declared_package_absent_from_any_approved_registry",
+        "dependency_carries_cve_above_cvss_threshold",
+        "mf_211_control_absent",
+        "private_package_name_resolvable_publicly",
+        "provenance_attestation_absent_on_artifact"
+      ]
+    },
+    {
+      "act_class": "CQ",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CQ",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-212",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No production deploy during a designated market-close or peak-period change freeze except under the emergency protocol.",
+      "violate_factors": [
+        "change_self_approved_by_its_author",
+        "changed_line_coverage_below_floor",
+        "emergency_path_used_without_retro_approval",
+        "feature_flag_defaults_open_on_regulated_surface",
+        "mf_212_control_absent",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-301",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No model reaches a credit, fraud, or AML decision in production before independent validation covering conceptual soundness, outcomes analysis, and ongoing monitoring.",
+      "violate_factors": [
+        "furnished_data_accuracy_control_removed",
+        "human_reviewable_contest_path_removed",
+        "mf_301_control_absent",
+        "model_absent_from_inventory",
+        "monitoring_thresholds_removed_after_deployment",
+        "prohibited_basis_attribute_in_the_feature_set"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-302",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every model in a decision path carries an inventory entry and current documentation: purpose, training data, known limits, and a named owner.",
+      "violate_factors": [
+        "mf_302_control_absent",
+        "model_absent_from_inventory",
+        "monitoring_thresholds_removed_after_deployment",
+        "prohibited_basis_attribute_in_the_feature_set",
+        "proxy_for_a_prohibited_basis_enters_the_model",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-303",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A customer interacting with an AI system is told so, and synthetic content the firm generates is machine-markable.",
+      "violate_factors": [
+        "ai_interaction_undisclosed_to_the_customer",
+        "decision_logging_insufficient_to_reconstruct",
+        "facial_recognition_database_built_by_untargeted_scraping",
+        "human_oversight_control_nominal_only",
+        "mf_303_control_absent",
+        "synthetic_content_unmarked"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-304",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Creditworthiness and credit-scoring systems are Annex III high-risk: risk management, data governance, logging, human oversight, and accuracy obligations must be in place before the applicable date.",
+      "violate_factors": [
+        "decision_logging_insufficient_to_reconstruct",
+        "human_oversight_control_nominal_only",
+        "mf_304_control_absent",
+        "social_scoring_or_manipulative_technique_introduced",
+        "synthetic_content_unmarked",
+        "workplace_emotion_inference_introduced"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-305",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A decisioning model is tested for disparate impact across protected classes before deployment and monitored afterwards.",
+      "violate_factors": [
+        "human_reviewable_contest_path_removed",
+        "mf_305_control_absent",
+        "principal_reasons_not_derivable_from_output",
+        "prohibited_basis_attribute_in_the_feature_set",
+        "proxy_for_a_prohibited_basis_enters_the_model",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-306",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An AI-facing surface does not deceive a customer, impersonate a human, manufacture confidence it does not have, or steer a customer against their own interest.",
+      "violate_factors": [
+        "ai_interaction_undisclosed_to_the_customer",
+        "decision_logging_insufficient_to_reconstruct",
+        "facial_recognition_database_built_by_untargeted_scraping",
+        "mf_306_control_absent",
+        "social_scoring_or_manipulative_technique_introduced",
+        "workplace_emotion_inference_introduced"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-307",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every agent-authored change carries a provenance attestation \u2014 agent identity, model version, and a link to the originating human requirement \u2014 and every agent action in production runs under an explicit value and rate bound.",
+      "violate_factors": [
+        "agent_change_alters_security_policy_without_review",
+        "agent_change_lacks_human_signoff_on_decisioning_code",
+        "agent_change_missing_provenance_attestation",
+        "agent_moves_funds_outside_declared_mandate",
+        "human_operable_stop_removed_or_degraded",
+        "mf_307_control_absent"
+      ]
+    },
+    {
+      "act_class": "DP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-308",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No customer personal data enters model training, or a third party model provider's retention window, without a lawful basis and a contractual carve-out.",
+      "violate_factors": [
+        "cross_border_flow_without_recorded_mechanism",
+        "customer_data_enters_training_without_lawful_basis",
+        "eu_personal_data_replicated_outside_region",
+        "high_risk_processing_added_without_dpia",
+        "mf_308_control_absent",
+        "opt_out_ignored_on_newly_built_surface"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-401",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No dark pattern, no material omission, and no fee or term a reasonable consumer would not expect from the disclosure given.",
+      "violate_factors": [
+        "billing_dispute_clock_extendable_by_configuration",
+        "cancellation_harder_than_signup",
+        "complaint_path_removed_without_replacement",
+        "dark_pattern_introduced_in_the_changed_flow",
+        "material_term_omitted_from_the_disclosure",
+        "mf_401_control_absent"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-402",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Data furnished to consumer reporting agencies is accurate, disputes are investigated within the statutory window, and adverse action notices name both the reasons and the agency.",
+      "violate_factors": [
+        "furnished_data_accuracy_control_removed",
+        "human_reviewable_contest_path_removed",
+        "mf_402_control_absent",
+        "monitoring_thresholds_removed_after_deployment",
+        "principal_reasons_not_derivable_from_output",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-403",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Cost-of-credit disclosures are accurate, timely, and in the required form before the consumer becomes bound.",
+      "violate_factors": [
+        "cancellation_harder_than_signup",
+        "complaint_path_removed_without_replacement",
+        "dark_pattern_introduced_in_the_changed_flow",
+        "error_resolution_clock_extendable_by_configuration",
+        "liability_cap_configurable_downward",
+        "mf_403_control_absent"
+      ]
+    },
+    {
+      "act_class": "DP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-404",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Opt-out of sale or sharing, and limits on sensitive personal information, are honoured on every surface including newly built ones.",
+      "violate_factors": [
+        "cross_border_flow_without_recorded_mechanism",
+        "customer_data_enters_training_without_lawful_basis",
+        "deletion_path_absent_for_new_store",
+        "eu_personal_data_replicated_outside_region",
+        "mf_404_control_absent",
+        "new_personal_field_retained_without_decision"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-405",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Consumer-permissioned data access is built to a documented interface with revocable authorization, whatever shape the rule finally takes.",
+      "violate_factors": [
+        "billing_dispute_clock_extendable_by_configuration",
+        "cancellation_harder_than_signup",
+        "error_resolution_clock_extendable_by_configuration",
+        "liability_cap_configurable_downward",
+        "material_term_omitted_from_the_disclosure",
+        "mf_405_control_absent"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-406",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Consumer complaints are logged, routed, and closed within the stated window, and no change removes a complaint path without an equivalent replacement.",
+      "violate_factors": [
+        "billing_dispute_clock_extendable_by_configuration",
+        "complaint_path_removed_without_replacement",
+        "dark_pattern_introduced_in_the_changed_flow",
+        "error_resolution_clock_extendable_by_configuration",
+        "material_term_omitted_from_the_disclosure",
+        "mf_406_control_absent"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-501",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No credential, key, token or private key material is hard-coded into source, committed to a repository, or written to a log at any severity level, and no change may weaken the scanner that detects one.",
+      "violate_factors": [
+        "credential_written_to_ci_log",
+        "deprecated_hash_or_cipher_introduced",
+        "mf_501_control_absent",
+        "mfa_exception_taken_without_compensating_control",
+        "secret_present_in_source_or_configuration",
+        "tls_downgrade_permitted_on_production_path"
+      ]
+    },
+    {
+      "act_class": "CQ",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CQ",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-502",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Change control is never bypassed, disabled, or self-approved, and no change may grant its own author the approval right.",
+      "violate_factors": [
+        "change_control_bypassed_by_direct_push",
+        "change_self_approved_by_its_author",
+        "emergency_path_used_without_retro_approval",
+        "feature_flag_defaults_open_on_regulated_surface",
+        "mf_502_control_absent",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-503",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A statutory or supervisory notification clock is never extended, suspended, or disabled by a code or configuration change.",
+      "violate_factors": [
+        "circuit_breaker_absent_on_downstream_dependency",
+        "critical_function_provider_absent_from_register",
+        "exit_strategy_undocumented",
+        "mf_503_control_absent",
+        "notification_clock_extended_beyond_statutory_value",
+        "outbound_call_without_timeout"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-504",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Blocked-property and rejected-transaction reports are filed within the statutory deadline, and no change may suppress, delay, or reroute the filing path.",
+      "violate_factors": [
+        "mf_504_control_absent",
+        "sar_existence_disclosed_to_subject",
+        "screening_allow_list_added_without_authority",
+        "screening_bypassed_for_repeat_beneficiary",
+        "screening_served_from_cache_older_than_declared_interval",
+        "travel_rule_fields_dropped_on_qualifying_transfer"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-505",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No change removes or degrades a control that maintains the accuracy and integrity of data the firm furnishes to a consumer reporting agency.",
+      "violate_factors": [
+        "furnished_data_accuracy_control_removed",
+        "human_reviewable_contest_path_removed",
+        "mf_505_control_absent",
+        "model_absent_from_inventory",
+        "monitoring_thresholds_removed_after_deployment",
+        "prohibited_basis_attribute_in_the_feature_set"
+      ]
+    },
+    {
+      "act_class": "LG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "LG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-506",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Ledger entries are append-only. A posted entry is never updated in place or deleted; a correction is a compensating entry that leaves both records visible.",
+      "violate_factors": [
+        "duplicate_submission_executes_twice",
+        "historical_event_mutated",
+        "idempotency_key_absent_on_mutable_endpoint",
+        "ledger_row_updated_in_place",
+        "mf_506_control_absent",
+        "partial_transaction_survives_failure"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-507",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Billing-error resolution rights and the periods that govern them are not configurable downward or extendable by product decision.",
+      "violate_factors": [
+        "cancellation_harder_than_signup",
+        "complaint_path_removed_without_replacement",
+        "dark_pattern_introduced_in_the_changed_flow",
+        "liability_cap_configurable_downward",
+        "material_term_omitted_from_the_disclosure",
+        "mf_507_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-508",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The primary account number is rendered unreadable wherever it is stored, by truncation, tokenization, or strong cryptography with separated key management.",
+      "violate_factors": [
+        "card_verification_code_retained_after_authorization",
+        "cde_scope_widened_without_reassessment",
+        "mf_508_control_absent",
+        "tamper_detection_disabled_on_payment_page",
+        "tokenization_vault_opened_to_unscoped_caller",
+        "track_data_or_pin_block_persisted"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-509",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Suspicious-activity filings, the queue that holds them, and any record that one exists are confidential to the authorized role, and no change may widen that access.",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "mf_509_control_absent",
+        "monitoring_rule_disabled_without_tuning_study",
+        "sar_existence_disclosed_to_subject",
+        "screening_bypassed_for_repeat_beneficiary",
+        "screening_served_from_cache_older_than_declared_interval"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-510",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No variable enters a credit model whose predictive power derives from a prohibited basis, whether or not the variable names one; a documented proxy screen runs over every candidate feature set.",
+      "violate_factors": [
+        "mf_510_control_absent",
+        "model_absent_from_inventory",
+        "monitoring_thresholds_removed_after_deployment",
+        "prohibited_basis_attribute_in_the_feature_set",
+        "proxy_for_a_prohibited_basis_enters_the_model",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-511",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "An autonomous agent's mandate bound and its human-operable stop are never removed, widened, or degraded by a change the agent itself authored.",
+      "violate_factors": [
+        "agent_action_unbounded_by_value_or_rate",
+        "agent_change_lacks_human_signoff_on_decisioning_code",
+        "agent_change_missing_provenance_attestation",
+        "agent_moves_funds_outside_declared_mandate",
+        "human_operable_stop_removed_or_degraded",
+        "mf_511_control_absent"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-512",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Records the firm is required to preserve in non-rewriteable, non-erasable form are written to storage that provides it, and no change may redirect them to rewriteable storage or shorten the declared period.",
+      "violate_factors": [
+        "audit_record_written_to_rewriteable_storage",
+        "mf_512_control_absent",
+        "privileged_action_attributed_to_a_shared_account",
+        "retention_shortened_below_the_declared_period",
+        "segregation_of_duties_removed_in_reporting_boundary",
+        "tamper_alerting_disabled_or_narrowed"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-513",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Tamper alerting on the audit store is never disabled, narrowed, or routed away from the responding role.",
+      "violate_factors": [
+        "audit_record_written_to_rewriteable_storage",
+        "audit_trail_disabled_on_the_changed_system",
+        "mf_513_control_absent",
+        "privileged_action_attributed_to_a_shared_account",
+        "retention_shortened_below_the_declared_period",
+        "segregation_of_duties_removed_in_reporting_boundary"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-520",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Screening lists are refreshed from the authoritative publication within the declared interval, and the interval is a constitutional parameter rather than a service setting",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "blocked_property_report_deadline_missed",
+        "mf_520_control_absent",
+        "monitoring_rule_disabled_without_tuning_study",
+        "sar_existence_disclosed_to_subject",
+        "travel_rule_fields_dropped_on_qualifying_transfer"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-521",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A change to a fuzzy-matching threshold, transliteration table, or name-normalisation rule is validated against a labelled set and recorded before release",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "blocked_property_report_deadline_missed",
+        "mf_521_control_absent",
+        "screening_allow_list_added_without_authority",
+        "screening_bypassed_for_repeat_beneficiary",
+        "travel_rule_fields_dropped_on_qualifying_transfer"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-522",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A transaction-monitoring rule is retired only on a documented tuning study showing the coverage it carried is carried elsewhere",
+      "violate_factors": [
+        "mf_522_control_absent",
+        "sar_existence_disclosed_to_subject",
+        "screening_allow_list_added_without_authority",
+        "screening_bypassed_for_repeat_beneficiary",
+        "screening_served_from_cache_older_than_declared_interval",
+        "travel_rule_fields_dropped_on_qualifying_transfer"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-523",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Beneficial-ownership information is collected and verified before a legal-entity account is funded",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "mf_523_control_absent",
+        "monitoring_rule_disabled_without_tuning_study",
+        "sar_existence_disclosed_to_subject",
+        "screening_bypassed_for_repeat_beneficiary",
+        "screening_served_from_cache_older_than_declared_interval"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-524",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Originator and beneficiary information accompanies a qualifying funds transfer for its whole journey",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "blocked_property_report_deadline_missed",
+        "mf_524_control_absent",
+        "monitoring_rule_disabled_without_tuning_study",
+        "sar_existence_disclosed_to_subject",
+        "travel_rule_fields_dropped_on_qualifying_transfer"
+      ]
+    },
+    {
+      "act_class": "FC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-525",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An alert backlog is aged, reported, and escalated; no change may suppress the ageing metric",
+      "violate_factors": [
+        "account_funded_before_cip_completed",
+        "blocked_property_report_deadline_missed",
+        "mf_525_control_absent",
+        "screening_allow_list_added_without_authority",
+        "screening_bypassed_for_repeat_beneficiary",
+        "travel_rule_fields_dropped_on_qualifying_transfer"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-526",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A change to the cardholder-data environment scope is documented and the environment reassessed before release",
+      "violate_factors": [
+        "card_verification_code_retained_after_authorization",
+        "mf_526_control_absent",
+        "pan_written_unmasked_to_log",
+        "payment_page_script_added_without_integrity_check",
+        "tokenization_vault_opened_to_unscoped_caller",
+        "track_data_or_pin_block_persisted"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-527",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every script on a payment page carries a recorded justification for its presence, not only an integrity check",
+      "violate_factors": [
+        "cde_scope_widened_without_reassessment",
+        "mf_527_control_absent",
+        "pan_written_unmasked_to_log",
+        "payment_page_script_added_without_integrity_check",
+        "tamper_detection_disabled_on_payment_page",
+        "track_data_or_pin_block_persisted"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-528",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Segmentation between the cardholder-data environment and the corporate network is tested on any change that touches the boundary",
+      "violate_factors": [
+        "card_verification_code_retained_after_authorization",
+        "cde_scope_widened_without_reassessment",
+        "mf_528_control_absent",
+        "payment_page_script_added_without_integrity_check",
+        "tamper_detection_disabled_on_payment_page",
+        "tokenization_vault_opened_to_unscoped_caller"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-529",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Key-generation, loading and destruction ceremonies are dual-controlled and logged",
+      "violate_factors": [
+        "card_verification_code_retained_after_authorization",
+        "cde_scope_widened_without_reassessment",
+        "mf_529_control_absent",
+        "pan_written_unmasked_to_log",
+        "tokenization_vault_opened_to_unscoped_caller",
+        "track_data_or_pin_block_persisted"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-530",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Deprecated cryptographic primitives \u2014 MD5, SHA-1, DES, 3DES, RC4 \u2014 are refused on any new or changed path",
+      "violate_factors": [
+        "credential_written_to_ci_log",
+        "deprecated_hash_or_cipher_introduced",
+        "encryption_weakened_without_ciso_finding",
+        "key_rotation_disabled",
+        "mf_530_control_absent",
+        "tls_downgrade_permitted_on_production_path"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-531",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every ingress and egress path enforces TLS 1.2 or above with forward secrecy",
+      "violate_factors": [
+        "encryption_weakened_without_ciso_finding",
+        "key_rotation_disabled",
+        "mf_531_control_absent",
+        "mfa_exception_taken_without_compensating_control",
+        "secret_present_in_source_or_configuration",
+        "tls_downgrade_permitted_on_production_path"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-532",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Key rotation intervals are declared per key class and enforced by the platform, not by convention",
+      "violate_factors": [
+        "credential_written_to_ci_log",
+        "deprecated_hash_or_cipher_introduced",
+        "key_rotation_disabled",
+        "mf_532_control_absent",
+        "mfa_exception_taken_without_compensating_control",
+        "secret_present_in_source_or_configuration"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-533",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A credential known to have leaked is revoked before the change that removes it merges",
+      "violate_factors": [
+        "credential_written_to_ci_log",
+        "deprecated_hash_or_cipher_introduced",
+        "encryption_weakened_without_ciso_finding",
+        "mf_533_control_absent",
+        "secret_present_in_source_or_configuration",
+        "tls_downgrade_permitted_on_production_path"
+      ]
+    },
+    {
+      "act_class": "SP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-534",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A signed software bill of materials in SPDX or CycloneDX form is produced for every build",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "declared_package_absent_from_any_approved_registry",
+        "mf_534_control_absent",
+        "private_package_name_resolvable_publicly",
+        "provenance_attestation_absent_on_artifact",
+        "vendor_security_review_pending_on_cardholder_path"
+      ]
+    },
+    {
+      "act_class": "SP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-535",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Build provenance meets SLSA Build Level 3: hermetic, ephemeral runners and a signed attestation naming the source and the steps",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "copyleft_dependency_in_proprietary_distribution",
+        "dependency_carries_cve_above_cvss_threshold",
+        "mf_535_control_absent",
+        "private_package_name_resolvable_publicly",
+        "vendor_security_review_pending_on_cardholder_path"
+      ]
+    },
+    {
+      "act_class": "SP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-536",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every package declared in a manifest resolves in an approved registry before the build advances; a name that resolves nowhere fails the build",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "copyleft_dependency_in_proprietary_distribution",
+        "declared_package_absent_from_any_approved_registry",
+        "dependency_carries_cve_above_cvss_threshold",
+        "mf_536_control_absent",
+        "provenance_attestation_absent_on_artifact"
+      ]
+    },
+    {
+      "act_class": "SP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-537",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Private package names are explicitly scoped, and the artifact repository never resolves a public package where a private name of the same shape exists",
+      "violate_factors": [
+        "copyleft_dependency_in_proprietary_distribution",
+        "declared_package_absent_from_any_approved_registry",
+        "mf_537_control_absent",
+        "private_package_name_resolvable_publicly",
+        "provenance_attestation_absent_on_artifact",
+        "vendor_security_review_pending_on_cardholder_path"
+      ]
+    },
+    {
+      "act_class": "SP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-538",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No copyleft or otherwise viral licence enters the proprietary distribution",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "declared_package_absent_from_any_approved_registry",
+        "dependency_carries_cve_above_cvss_threshold",
+        "mf_538_control_absent",
+        "private_package_name_resolvable_publicly",
+        "vendor_security_review_pending_on_cardholder_path"
+      ]
+    },
+    {
+      "act_class": "SP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "SP",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-539",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A dependency carrying a CVE above the declared CVSS threshold blocks the merge unless an explicit, time-bound risk-acceptance waiver is attached",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "copyleft_dependency_in_proprietary_distribution",
+        "dependency_carries_cve_above_cvss_threshold",
+        "mf_539_control_absent",
+        "provenance_attestation_absent_on_artifact",
+        "vendor_security_review_pending_on_cardholder_path"
+      ]
+    },
+    {
+      "act_class": "CQ",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CQ",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-540",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Changed-line test coverage meets the declared floor on payment, ledger and decisioning services",
+      "violate_factors": [
+        "change_control_bypassed_by_direct_push",
+        "change_self_approved_by_its_author",
+        "changed_line_coverage_below_floor",
+        "emergency_path_used_without_retro_approval",
+        "mf_540_control_absent",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "CQ",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CQ",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-541",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A tested rollback exists and has been exercised for every production change on a regulated surface",
+      "violate_factors": [
+        "change_self_approved_by_its_author",
+        "changed_line_coverage_below_floor",
+        "emergency_path_used_without_retro_approval",
+        "feature_flag_defaults_open_on_regulated_surface",
+        "mf_541_control_absent",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "CQ",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CQ",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-542",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "An emergency change is retro-approved within the stated window, and the window is a constitutional parameter",
+      "violate_factors": [
+        "change_control_bypassed_by_direct_push",
+        "change_self_approved_by_its_author",
+        "emergency_path_used_without_retro_approval",
+        "feature_flag_defaults_open_on_regulated_surface",
+        "mf_542_control_absent",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "CQ",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CQ",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-543",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A feature flag on a regulated surface defaults closed, and no change may invert that default without amendment",
+      "violate_factors": [
+        "change_control_bypassed_by_direct_push",
+        "change_self_approved_by_its_author",
+        "changed_line_coverage_below_floor",
+        "emergency_path_used_without_retro_approval",
+        "mf_543_control_absent",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "LG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "LG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-544",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every mutable payment endpoint requires an idempotency key, and a repeated submission returns the original result rather than executing again",
+      "violate_factors": [
+        "concurrent_debit_permits_double_spend",
+        "duplicate_submission_executes_twice",
+        "idempotency_key_absent_on_mutable_endpoint",
+        "mf_544_control_absent",
+        "partial_transaction_survives_failure",
+        "reconciliation_break_suppressed"
+      ]
+    },
+    {
+      "act_class": "LG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "LG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-545",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A transaction rolls back completely under injected mid-transaction failure, and the isolation level under which it does so is declared and tested",
+      "violate_factors": [
+        "concurrent_debit_permits_double_spend",
+        "historical_event_mutated",
+        "ledger_row_updated_in_place",
+        "mf_545_control_absent",
+        "partial_transaction_survives_failure",
+        "reconciliation_break_suppressed"
+      ]
+    },
+    {
+      "act_class": "LG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "LG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-546",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Concurrent debits against one account are serialised so that no interleaving permits a double spend",
+      "violate_factors": [
+        "duplicate_submission_executes_twice",
+        "historical_event_mutated",
+        "idempotency_key_absent_on_mutable_endpoint",
+        "ledger_row_updated_in_place",
+        "mf_546_control_absent",
+        "reconciliation_break_suppressed"
+      ]
+    },
+    {
+      "act_class": "LG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "LG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-547",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Reconciliation breaks are aged, reported and escalated; no change may suppress a break or reset its age",
+      "violate_factors": [
+        "concurrent_debit_permits_double_spend",
+        "duplicate_submission_executes_twice",
+        "historical_event_mutated",
+        "idempotency_key_absent_on_mutable_endpoint",
+        "mf_547_control_absent",
+        "partial_transaction_survives_failure"
+      ]
+    },
+    {
+      "act_class": "LG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "LG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-548",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An event-sourced history is immutable under replay: the same event stream reproduces the same balances",
+      "violate_factors": [
+        "concurrent_debit_permits_double_spend",
+        "duplicate_submission_executes_twice",
+        "ledger_row_updated_in_place",
+        "mf_548_control_absent",
+        "partial_transaction_survives_failure",
+        "reconciliation_break_suppressed"
+      ]
+    },
+    {
+      "act_class": "PR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-549",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Monetary values are held in an exact decimal type; binary floating point is refused anywhere in a money path",
+      "violate_factors": [
+        "binary_floating_point_used_in_money_path",
+        "currency_minor_unit_hardcoded_to_two",
+        "day_count_convention_unstated",
+        "half_up_rounding_applied_to_currency_totals",
+        "mf_549_control_absent",
+        "rounding_mode_undeclared"
+      ]
+    },
+    {
+      "act_class": "PR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-550",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The rounding mode is declared per currency and is banker's rounding for currency totals unless a regulation requires otherwise",
+      "violate_factors": [
+        "aggregate_slippage_unmonitored",
+        "binary_floating_point_used_in_money_path",
+        "currency_minor_unit_hardcoded_to_two",
+        "day_count_convention_unstated",
+        "half_up_rounding_applied_to_currency_totals",
+        "mf_550_control_absent"
+      ]
+    },
+    {
+      "act_class": "PR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-551",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Currency minor units come from the declared reference data rather than a constant in code",
+      "violate_factors": [
+        "aggregate_slippage_unmonitored",
+        "binary_floating_point_used_in_money_path",
+        "day_count_convention_unstated",
+        "half_up_rounding_applied_to_currency_totals",
+        "mf_551_control_absent",
+        "rounding_mode_undeclared"
+      ]
+    },
+    {
+      "act_class": "PR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-552",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Interest and annual-percentage-rate computations carry a documented day-count convention and match the declared method",
+      "violate_factors": [
+        "binary_floating_point_used_in_money_path",
+        "currency_minor_unit_hardcoded_to_two",
+        "day_count_convention_unstated",
+        "half_up_rounding_applied_to_currency_totals",
+        "mf_552_control_absent",
+        "rounding_mode_undeclared"
+      ]
+    },
+    {
+      "act_class": "PR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-553",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Aggregate rounding slippage is bounded and monitored, and the bound is a constitutional parameter",
+      "violate_factors": [
+        "aggregate_slippage_unmonitored",
+        "binary_floating_point_used_in_money_path",
+        "currency_minor_unit_hardcoded_to_two",
+        "day_count_convention_unstated",
+        "half_up_rounding_applied_to_currency_totals",
+        "mf_553_control_absent"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-554",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A circuit breaker opens on downstream failure so that the caller fails fast rather than hanging, and every outbound call declares a timeout",
+      "violate_factors": [
+        "critical_function_provider_absent_from_register",
+        "exit_strategy_undocumented",
+        "mf_554_control_absent",
+        "notification_telemetry_disabled_or_delayed",
+        "outbound_call_without_timeout",
+        "resilience_test_skipped_on_critical_function"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-555",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Failover on the payment-authorization path is exercised before release, not asserted",
+      "violate_factors": [
+        "circuit_breaker_absent_on_downstream_dependency",
+        "exit_strategy_undocumented",
+        "mf_555_control_absent",
+        "notification_clock_extended_beyond_statutory_value",
+        "notification_telemetry_disabled_or_delayed",
+        "resilience_test_skipped_on_critical_function"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-556",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A critical-or-important function declares a recovery time and recovery point objective, and a change may not silently widen either",
+      "violate_factors": [
+        "circuit_breaker_absent_on_downstream_dependency",
+        "critical_function_provider_absent_from_register",
+        "mf_556_control_absent",
+        "notification_clock_extended_beyond_statutory_value",
+        "notification_telemetry_disabled_or_delayed",
+        "outbound_call_without_timeout"
+      ]
+    },
+    {
+      "act_class": "RE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "RE",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-557",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Concentration risk in an ICT provider is recorded before the provider enters a further critical path",
+      "violate_factors": [
+        "circuit_breaker_absent_on_downstream_dependency",
+        "critical_function_provider_absent_from_register",
+        "exit_strategy_undocumented",
+        "mf_557_control_absent",
+        "outbound_call_without_timeout",
+        "resilience_test_skipped_on_critical_function"
+      ]
+    },
+    {
+      "act_class": "DP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-558",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Deletion and cryptographic-shredding paths exist and are exercised for every new personal-data store",
+      "violate_factors": [
+        "cross_border_flow_without_recorded_mechanism",
+        "deletion_path_absent_for_new_store",
+        "high_risk_processing_added_without_dpia",
+        "mf_558_control_absent",
+        "new_personal_field_retained_without_decision",
+        "opt_out_ignored_on_newly_built_surface"
+      ]
+    },
+    {
+      "act_class": "DP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-559",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A data-protection impact assessment is completed before new high-risk processing begins",
+      "violate_factors": [
+        "customer_data_enters_training_without_lawful_basis",
+        "deletion_path_absent_for_new_store",
+        "eu_personal_data_replicated_outside_region",
+        "high_risk_processing_added_without_dpia",
+        "mf_559_control_absent",
+        "opt_out_ignored_on_newly_built_surface"
+      ]
+    },
+    {
+      "act_class": "DP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-560",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A sub-processor's processing region is declared before data flows to it",
+      "violate_factors": [
+        "cross_border_flow_without_recorded_mechanism",
+        "customer_data_enters_training_without_lawful_basis",
+        "eu_personal_data_replicated_outside_region",
+        "mf_560_control_absent",
+        "new_personal_field_retained_without_decision",
+        "opt_out_ignored_on_newly_built_surface"
+      ]
+    },
+    {
+      "act_class": "DP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-561",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A cross-border transfer of personal data records its Chapter V mechanism before the flow starts, whichever region the flow originates in",
+      "violate_factors": [
+        "cross_border_flow_without_recorded_mechanism",
+        "deletion_path_absent_for_new_store",
+        "eu_personal_data_replicated_outside_region",
+        "high_risk_processing_added_without_dpia",
+        "mf_561_control_absent",
+        "new_personal_field_retained_without_decision"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-562",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Outcome parity across protected classes is measured and documented before deployment and monitored afterwards; a parity exception is time-boxed and carries a named owner",
+      "violate_factors": [
+        "human_reviewable_contest_path_removed",
+        "mf_562_control_absent",
+        "principal_reasons_not_derivable_from_output",
+        "prohibited_basis_attribute_in_the_feature_set",
+        "proxy_for_a_prohibited_basis_enters_the_model",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-563",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Ongoing monitoring thresholds are declared before deployment and are not removed after it",
+      "violate_factors": [
+        "furnished_data_accuracy_control_removed",
+        "human_reviewable_contest_path_removed",
+        "mf_563_control_absent",
+        "monitoring_thresholds_removed_after_deployment",
+        "principal_reasons_not_derivable_from_output",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-564",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A champion model is replaced only on a recorded comparison against the challenger on the same population",
+      "violate_factors": [
+        "furnished_data_accuracy_control_removed",
+        "human_reviewable_contest_path_removed",
+        "mf_564_control_absent",
+        "model_absent_from_inventory",
+        "monitoring_thresholds_removed_after_deployment",
+        "prohibited_basis_attribute_in_the_feature_set"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-565",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An override of a model decision is logged with the reason and the identity of the person who made it",
+      "violate_factors": [
+        "mf_565_control_absent",
+        "model_absent_from_inventory",
+        "monitoring_thresholds_removed_after_deployment",
+        "prohibited_basis_attribute_in_the_feature_set",
+        "proxy_for_a_prohibited_basis_enters_the_model",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "FL",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-566",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An adverse action notice is issued within the statutory window and names both the principal reasons and the agency consulted",
+      "violate_factors": [
+        "human_reviewable_contest_path_removed",
+        "mf_566_control_absent",
+        "principal_reasons_not_derivable_from_output",
+        "prohibited_basis_attribute_in_the_feature_set",
+        "proxy_for_a_prohibited_basis_enters_the_model",
+        "unvalidated_model_reaches_the_decision_path"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-567",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every AI system carries an inventory entry recording its intended purpose and its risk classification",
+      "violate_factors": [
+        "ai_interaction_undisclosed_to_the_customer",
+        "facial_recognition_database_built_by_untargeted_scraping",
+        "human_oversight_control_nominal_only",
+        "mf_567_control_absent",
+        "synthetic_content_unmarked",
+        "workplace_emotion_inference_introduced"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-568",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Human oversight is operable and tested rather than nominal: the reviewer can see the basis of a decision and can stop it",
+      "violate_factors": [
+        "ai_interaction_undisclosed_to_the_customer",
+        "decision_logging_insufficient_to_reconstruct",
+        "human_oversight_control_nominal_only",
+        "mf_568_control_absent",
+        "social_scoring_or_manipulative_technique_introduced",
+        "synthetic_content_unmarked"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-569",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Synthetic content the firm generates is machine-markable at the point of generation, not tagged afterwards",
+      "violate_factors": [
+        "decision_logging_insufficient_to_reconstruct",
+        "facial_recognition_database_built_by_untargeted_scraping",
+        "human_oversight_control_nominal_only",
+        "mf_569_control_absent",
+        "social_scoring_or_manipulative_technique_introduced",
+        "workplace_emotion_inference_introduced"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-570",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Prompt, retrieval and output logging retains enough to reconstruct a customer-affecting decision for the retention period",
+      "violate_factors": [
+        "ai_interaction_undisclosed_to_the_customer",
+        "facial_recognition_database_built_by_untargeted_scraping",
+        "mf_570_control_absent",
+        "social_scoring_or_manipulative_technique_introduced",
+        "synthetic_content_unmarked",
+        "workplace_emotion_inference_introduced"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-571",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An agent-authored change to security policy, RBAC, or a decisioning path requires multiparty human review",
+      "violate_factors": [
+        "agent_action_unbounded_by_value_or_rate",
+        "agent_change_alters_security_policy_without_review",
+        "agent_change_missing_provenance_attestation",
+        "agent_moves_funds_outside_declared_mandate",
+        "human_operable_stop_removed_or_degraded",
+        "mf_571_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-572",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An agent's mandate scope is declared before execution and is narrower than the credentials it runs under",
+      "violate_factors": [
+        "agent_change_alters_security_policy_without_review",
+        "agent_change_lacks_human_signoff_on_decisioning_code",
+        "agent_change_missing_provenance_attestation",
+        "agent_moves_funds_outside_declared_mandate",
+        "human_operable_stop_removed_or_degraded",
+        "mf_572_control_absent"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-573",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A fee or term is stated where a consumer will see it before the binding moment, not only in a linked schedule",
+      "violate_factors": [
+        "billing_dispute_clock_extendable_by_configuration",
+        "cancellation_harder_than_signup",
+        "complaint_path_removed_without_replacement",
+        "error_resolution_clock_extendable_by_configuration",
+        "liability_cap_configurable_downward",
+        "mf_573_control_absent"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-574",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Cancellation of a recurring product is at least as easy as sign-up and available on the same surface",
+      "violate_factors": [
+        "billing_dispute_clock_extendable_by_configuration",
+        "dark_pattern_introduced_in_the_changed_flow",
+        "error_resolution_clock_extendable_by_configuration",
+        "liability_cap_configurable_downward",
+        "material_term_omitted_from_the_disclosure",
+        "mf_574_control_absent"
+      ]
+    },
+    {
+      "act_class": "CP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-575",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A complaint is logged, routed and closed within the stated window, and the window is a constitutional parameter",
+      "violate_factors": [
+        "billing_dispute_clock_extendable_by_configuration",
+        "cancellation_harder_than_signup",
+        "complaint_path_removed_without_replacement",
+        "dark_pattern_introduced_in_the_changed_flow",
+        "material_term_omitted_from_the_disclosure",
+        "mf_575_control_absent"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-576",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A privileged action is attributable to a named individual; no privileged path runs under a shared account",
+      "violate_factors": [
+        "audit_record_written_to_rewriteable_storage",
+        "audit_trail_disabled_on_the_changed_system",
+        "mf_576_control_absent",
+        "privileged_action_attributed_to_a_shared_account",
+        "segregation_of_duties_removed_in_reporting_boundary",
+        "tamper_alerting_disabled_or_narrowed"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-577",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Evidence export for an examiner is reproducible from the audit store without manual assembly",
+      "violate_factors": [
+        "audit_record_written_to_rewriteable_storage",
+        "mf_577_control_absent",
+        "privileged_action_attributed_to_a_shared_account",
+        "retention_shortened_below_the_declared_period",
+        "segregation_of_duties_removed_in_reporting_boundary",
+        "tamper_alerting_disabled_or_narrowed"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-578",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Log clocks are synchronised to a trusted source, and a change may not widen the permitted drift",
+      "violate_factors": [
+        "audit_record_written_to_rewriteable_storage",
+        "audit_trail_disabled_on_the_changed_system",
+        "mf_578_control_absent",
+        "privileged_action_attributed_to_a_shared_account",
+        "retention_shortened_below_the_declared_period",
+        "segregation_of_duties_removed_in_reporting_boundary"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-590",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A risk acceptance carries an expiry and a referral, and lapses on time whether or not the referral has been answered",
+      "violate_factors": [
+        "acceptance_recorded_without_expiry_or_referral",
+        "mf_590_control_absent",
+        "renewal_applied_silently",
+        "reporter_output_reaches_the_adjudicator",
+        "standing_declaration_absent",
+        "threshold_edited_in_place"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-591",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A renewal of a lapsed acceptance is visible on the record and never silent",
+      "violate_factors": [
+        "audit_register_read_by_resolve",
+        "mf_591_control_absent",
+        "reporter_output_reaches_the_adjudicator",
+        "standing_declaration_absent",
+        "threshold_edited_in_place",
+        "uncharged_arrival_leaves_no_docket_entry"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-592",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Ordinary and absolute status is stated on the face of the rule, not inferred from severity",
+      "violate_factors": [
+        "acceptance_recorded_without_expiry_or_referral",
+        "audit_register_read_by_resolve",
+        "mf_592_control_absent",
+        "renewal_applied_silently",
+        "reporter_output_reaches_the_adjudicator",
+        "uncharged_arrival_leaves_no_docket_entry"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-593",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A change to a gate threshold is routed to the amendment channel, never applied in place",
+      "violate_factors": [
+        "acceptance_recorded_without_expiry_or_referral",
+        "mf_593_control_absent",
+        "renewal_applied_silently",
+        "standing_declaration_absent",
+        "threshold_edited_in_place",
+        "uncharged_arrival_leaves_no_docket_entry"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-594",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The constitution declares whether any party holds contest standing adverse to grants",
+      "violate_factors": [
+        "audit_register_read_by_resolve",
+        "mf_594_control_absent",
+        "renewal_applied_silently",
+        "reporter_output_reaches_the_adjudicator",
+        "standing_declaration_absent",
+        "threshold_edited_in_place"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-595",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Reporter output never reaches the adjudication input path, and the audit register is never read by resolve",
+      "violate_factors": [
+        "acceptance_recorded_without_expiry_or_referral",
+        "audit_register_read_by_resolve",
+        "mf_595_control_absent",
+        "reporter_output_reaches_the_adjudicator",
+        "standing_declaration_absent",
+        "uncharged_arrival_leaves_no_docket_entry"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-596",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every arrival that is not charged leaves exactly one docket entry",
+      "violate_factors": [
+        "acceptance_recorded_without_expiry_or_referral",
+        "audit_register_read_by_resolve",
+        "mf_596_control_absent",
+        "renewal_applied_silently",
+        "threshold_edited_in_place",
+        "uncharged_arrival_leaves_no_docket_entry"
+      ]
+    },
+    {
+      "act_class": "PS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-601",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Strong customer authentication is applied to every remote electronic payment and every access to payment account information, with dynamic linking to the amount and the payee, and an exemption is taken only from the exhaustive list the technical standard allows",
+      "violate_factors": [
+        "dynamic_linking_removed_from_the_authentication_code",
+        "mf_601_control_absent",
+        "payee_mismatch_warning_hidden_from_the_payer",
+        "payee_name_check_bypassed_for_bulk_transfers",
+        "scam_reimbursement_threshold_made_a_product_setting",
+        "strong_authentication_skipped_outside_the_declared_exemptions"
+      ]
+    },
+    {
+      "act_class": "PS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-602",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A credit transfer in euro is checked against the payee's name before the payer confirms it, the match result is shown to the payer, and no batch, bulk or retry path skips the check",
+      "violate_factors": [
+        "mf_602_control_absent",
+        "payee_mismatch_warning_hidden_from_the_payer",
+        "payee_name_check_bypassed_for_bulk_transfers",
+        "reimbursement_claim_window_shortened_by_configuration",
+        "request_for_payment_sender_verification_disabled",
+        "scam_reimbursement_threshold_made_a_product_setting"
+      ]
+    },
+    {
+      "act_class": "PS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-603",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Mandatory reimbursement of an authorised push-payment scam victim, its assessment window and its treatment of vulnerable customers are read from the regulator's direction and are never product settings",
+      "violate_factors": [
+        "authentication_elements_drawn_from_the_same_category",
+        "instant_payment_fraud_scoring_bypassed_under_load",
+        "mf_603_control_absent",
+        "reimbursement_claim_window_shortened_by_configuration",
+        "request_for_payment_sender_verification_disabled",
+        "scam_reimbursement_threshold_made_a_product_setting"
+      ]
+    },
+    {
+      "act_class": "PS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "PS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-604",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A request for payment carries a verified sender, and an instant-rail transfer is fraud-scored before settlement with a recall path that survives a change to the rail integration",
+      "violate_factors": [
+        "account_access_consent_renewed_without_re_authentication",
+        "authentication_elements_drawn_from_the_same_category",
+        "exemption_fraud_rate_monitoring_removed",
+        "instant_payment_fraud_scoring_bypassed_under_load",
+        "mf_604_control_absent",
+        "request_for_payment_sender_verification_disabled"
+      ]
+    },
+    {
+      "act_class": "FR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-605",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The identity-theft prevention programme's red-flag rules run on every covered account and application, each detection has a documented response, and no channel is exempted by configuration",
+      "violate_factors": [
+        "account_recovery_flow_reintroduces_an_authentication_bypass",
+        "identity_theft_red_flag_rules_switched_off_for_a_channel",
+        "mf_605_control_absent",
+        "red_flag_detection_left_without_a_response_path",
+        "step_up_challenge_dropped_from_high_risk_account_changes",
+        "synthetic_identity_screening_skipped_for_thin_file_applicants"
+      ]
+    },
+    {
+      "act_class": "FR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-606",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "High-risk actions \u2014 credential reset, payee addition, limit increase, address change \u2014 require a step-up challenge whose strength matches the risk, and no recovery path reintroduces a bypass",
+      "violate_factors": [
+        "account_recovery_flow_reintroduces_an_authentication_bypass",
+        "consumer_report_pulled_without_a_recorded_permissible_purpose",
+        "identity_attributes_accepted_without_authoritative_verification",
+        "mf_606_control_absent",
+        "step_up_challenge_dropped_from_high_risk_account_changes",
+        "synthetic_identity_screening_skipped_for_thin_file_applicants"
+      ]
+    },
+    {
+      "act_class": "FR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-607",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Applicant identity elements are verified against an authoritative source and scored for synthetic-identity indicators before an account is funded, including thin-file and no-file applicants",
+      "violate_factors": [
+        "consumer_report_pulled_without_a_recorded_permissible_purpose",
+        "identity_attributes_accepted_without_authoritative_verification",
+        "mf_607_control_absent",
+        "minor_account_opened_without_a_verified_adult_custodian",
+        "permissible_purpose_defaulted_to_a_blanket_value",
+        "synthetic_identity_screening_skipped_for_thin_file_applicants"
+      ]
+    },
+    {
+      "act_class": "FR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-608",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No consumer report is obtained or used without a permissible purpose recorded before the request, certified by the requesting role and specific to that request; no blanket or defaulted purpose is accepted",
+      "violate_factors": [
+        "account_takeover_alerts_routed_to_an_unmonitored_queue",
+        "child_personal_information_collected_without_parental_consent",
+        "consumer_report_pulled_without_a_recorded_permissible_purpose",
+        "mf_608_control_absent",
+        "minor_account_opened_without_a_verified_adult_custodian",
+        "permissible_purpose_defaulted_to_a_blanket_value"
+      ]
+    },
+    {
+      "act_class": "FR",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-609",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An account for an applicant the record shows to be under eighteen is opened only with a verified adult custodian, and personal information is not collected online from a child under thirteen without verifiable parental consent",
+      "violate_factors": [
+        "account_takeover_alerts_routed_to_an_unmonitored_queue",
+        "change_of_address_notice_removed_from_the_servicing_flow",
+        "child_personal_information_collected_without_parental_consent",
+        "credential_stuffing_detection_disabled_on_the_login_path",
+        "mf_609_control_absent",
+        "minor_account_opened_without_a_verified_adult_custodian"
+      ]
+    },
+    {
+      "act_class": "CN",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CN",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-610",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Before a disclosure the law requires in writing is delivered electronically instead of on paper, the consumer's informed consent is captured with the hardware and software statement, and the consent stays withdrawable",
+      "violate_factors": [
+        "automated_message_sent_without_recorded_prior_consent",
+        "electronic_consent_inferred_from_a_portal_login",
+        "electronic_disclosure_delivered_without_electronic_consent",
+        "mf_610_control_absent",
+        "opt_out_keyword_left_unprocessed_by_the_campaign_sender",
+        "privacy_notice_skipped_before_a_new_sharing_flow"
+      ]
+    },
+    {
+      "act_class": "CN",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CN",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-611",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No autodialed call, prerecorded or artificial-voice message, or automated text reaches a wireless number without recorded prior express consent for that purpose, written where the purpose is marketing, and revocation is honoured on every channel",
+      "violate_factors": [
+        "automated_message_sent_without_recorded_prior_consent",
+        "collection_contact_cap_removed_from_the_dialer",
+        "mf_611_control_absent",
+        "opt_out_keyword_left_unprocessed_by_the_campaign_sender",
+        "privacy_notice_skipped_before_a_new_sharing_flow",
+        "sharing_opt_out_not_propagated_to_a_new_disclosure_path"
+      ]
+    },
+    {
+      "act_class": "CN",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CN",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-612",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A privacy notice is delivered before nonpublic personal information is shared outside the exceptions, the opt-out reaches every disclosure path, and reliance on the annual-notice exception is checked against its conditions",
+      "violate_factors": [
+        "cease_communication_request_ignored_by_the_dialer",
+        "collection_contact_cap_removed_from_the_dialer",
+        "consent_revocation_honoured_on_one_channel_only",
+        "mf_612_control_absent",
+        "privacy_notice_skipped_before_a_new_sharing_flow",
+        "sharing_opt_out_not_propagated_to_a_new_disclosure_path"
+      ]
+    },
+    {
+      "act_class": "CN",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "CN",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-613",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Debt-collection contact frequency stays inside the presumptive seven-calls-in-seven-days limit and the seven-day post-conversation limit, a cease request stops the channel, and validation information precedes collection activity",
+      "violate_factors": [
+        "cease_communication_request_ignored_by_the_dialer",
+        "collection_contact_cap_removed_from_the_dialer",
+        "consent_revocation_honoured_on_one_channel_only",
+        "messages_scheduled_outside_the_permitted_hours",
+        "mf_613_control_absent",
+        "validation_information_delivered_after_collection_begins"
+      ]
+    },
+    {
+      "act_class": "FP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-614",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Deposit account fees, the annual percentage yield and its computation method are disclosed before the account is opened, and a change in terms that reduces the yield or adds a fee is noticed before it takes effect",
+      "violate_factors": [
+        "account_fee_omitted_from_the_pre_opening_disclosure",
+        "funds_availability_hold_extended_beyond_the_regulated_schedule",
+        "mf_614_control_absent",
+        "overdraft_fee_charged_without_a_recorded_opt_in",
+        "overdraft_service_defaulted_to_enabled_at_account_opening",
+        "yield_advertised_on_a_method_other_than_the_declared_one"
+      ]
+    },
+    {
+      "act_class": "FP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-615",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No fee is assessed for paying an ATM or one-time debit card overdraft unless the consumer's affirmative opt-in is recorded first, and the service defaults to declining the transaction until it is",
+      "violate_factors": [
+        "dormancy_clock_reset_by_an_internal_system_event",
+        "exception_hold_placed_without_a_notice_to_the_depositor",
+        "funds_availability_hold_extended_beyond_the_regulated_schedule",
+        "mf_615_control_absent",
+        "overdraft_fee_charged_without_a_recorded_opt_in",
+        "overdraft_service_defaulted_to_enabled_at_account_opening"
+      ]
+    },
+    {
+      "act_class": "FP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-616",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The funds-availability schedule, including next-business-day availability and the exception holds that may extend it, is read from the regulated table and is never lengthened, tuned or defaulted by a service setting",
+      "violate_factors": [
+        "dormancy_clock_reset_by_an_internal_system_event",
+        "due_diligence_notice_dropped_from_the_dormancy_job",
+        "exception_hold_placed_without_a_notice_to_the_depositor",
+        "funds_availability_hold_extended_beyond_the_regulated_schedule",
+        "mf_616_control_absent",
+        "unclaimed_property_remittance_deferred_past_the_state_deadline"
+      ]
+    },
+    {
+      "act_class": "FP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "FP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-617",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Dormancy periods, owner due-diligence notices and remittance deadlines are read from the governing state's unclaimed-property table, and no internal system event resets an account's dormancy clock",
+      "violate_factors": [
+        "dormancy_clock_reset_by_an_internal_system_event",
+        "dormant_account_fees_applied_beyond_the_state_limit",
+        "due_diligence_notice_dropped_from_the_dormancy_job",
+        "mf_617_control_absent",
+        "posting_order_changed_to_maximise_fee_events",
+        "unclaimed_property_remittance_deferred_past_the_state_deadline"
+      ]
+    },
+    {
+      "act_class": "MP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "MP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-618",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Covered-borrower status is determined before consummation, the military annual percentage rate stays at or below thirty-six per cent with every included charge counted, and the prohibited terms are refused",
+      "violate_factors": [
+        "covered_borrower_check_skipped_to_shorten_the_application",
+        "elder_exploitation_escalation_path_removed_from_servicing",
+        "mf_618_control_absent",
+        "military_annual_percentage_rate_computed_without_all_charges",
+        "repossession_executed_without_the_required_court_order",
+        "service_member_rate_cap_left_unapplied_after_valid_notice"
+      ]
+    },
+    {
+      "act_class": "MP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "MP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-619",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "On valid notice of military service the interest rate on a pre-service obligation is reduced to six per cent with the excess forgiven, and no repossession or foreclosure of protected property proceeds without a court order",
+      "violate_factors": [
+        "elder_exploitation_escalation_path_removed_from_servicing",
+        "mf_619_control_absent",
+        "protected_status_flag_dropped_on_a_servicing_transfer",
+        "repossession_executed_without_the_required_court_order",
+        "service_member_rate_cap_left_unapplied_after_valid_notice",
+        "suspected_exploitation_alerts_downgraded_to_a_report_only"
+      ]
+    },
+    {
+      "act_class": "MP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "MP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-620",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The path by which suspected financial exploitation of an older or vulnerable customer is escalated, held where state law permits, and reported stays reachable from the servicing case and is never downgraded to a passive report",
+      "violate_factors": [
+        "elder_exploitation_escalation_path_removed_from_servicing",
+        "mf_620_control_absent",
+        "prohibited_loan_term_offered_to_a_covered_borrower",
+        "protected_status_flag_dropped_on_a_servicing_transfer",
+        "suspected_exploitation_alerts_downgraded_to_a_report_only",
+        "trusted_contact_field_dropped_from_the_account_record"
+      ]
+    },
+    {
+      "act_class": "DA",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DA",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-621",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A data-subject access request is answered within one month and a portability request produces a structured, commonly used, machine-readable export; an extension is notified with its reasons rather than taken silently",
+      "violate_factors": [
+        "access_request_left_unanswered_past_the_statutory_month",
+        "accessibility_gate_removed_from_the_portal_pipeline",
+        "conformance_failures_downgraded_to_warnings_in_the_pipeline",
+        "mf_621_control_absent",
+        "opt_out_preference_signal_ignored_by_the_new_surface",
+        "portable_export_returned_only_as_a_rendered_document"
+      ]
+    },
+    {
+      "act_class": "DA",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DA",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-622",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Customer-facing surfaces carry an accessibility regression gate at WCAG 2.2 Level AA in the release pipeline, and a Level A or AA failure blocks the release rather than being downgraded to a warning",
+      "violate_factors": [
+        "accessibility_gate_removed_from_the_portal_pipeline",
+        "conformance_failures_downgraded_to_warnings_in_the_pipeline",
+        "mf_622_control_absent",
+        "opt_out_preference_signal_ignored_by_the_new_surface",
+        "requester_identity_check_dropped_from_the_access_path",
+        "signal_derived_opt_out_overridden_by_a_banner_choice"
+      ]
+    },
+    {
+      "act_class": "DA",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "DA",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-623",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "An opt-out preference signal is detected and treated as a valid request to stop sale and sharing without any further prompt, and is linked to the known customer record where one exists",
+      "violate_factors": [
+        "dispute_status_conveyed_by_colour_alone",
+        "mf_623_control_absent",
+        "opt_out_preference_signal_ignored_by_the_new_surface",
+        "requester_identity_check_dropped_from_the_access_path",
+        "signal_derived_opt_out_overridden_by_a_banner_choice",
+        "third_party_data_returned_unredacted_in_an_access_response"
+      ]
+    },
+    {
+      "act_class": "VA",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-624",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A transfer involving convertible virtual currency carries the originator and beneficiary records the rule requires, the counterparty wallet provider is identified beforehand, and an unhosted-wallet transfer is recorded with the declared evidence",
+      "violate_factors": [
+        "counterparty_wallet_provider_left_unidentified_before_transfer",
+        "currency_transaction_report_suppressed_by_a_threshold_setting",
+        "information_request_search_narrowed_to_open_accounts_only",
+        "mf_624_control_absent",
+        "same_day_currency_transactions_left_unaggregated",
+        "virtual_asset_transfer_sent_without_the_originator_record"
+      ]
+    },
+    {
+      "act_class": "VA",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-625",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Currency transactions above the reporting threshold are aggregated across the business day and reported within the statutory window; no threshold setting, exemption flag or batch schedule suppresses or defers a filing",
+      "violate_factors": [
+        "currency_transaction_report_suppressed_by_a_threshold_setting",
+        "enhanced_due_diligence_file_deferred_until_after_funding",
+        "information_request_search_narrowed_to_open_accounts_only",
+        "mf_625_control_absent",
+        "politically_exposed_person_screening_dropped_from_refresh",
+        "same_day_currency_transactions_left_unaggregated"
+      ]
+    },
+    {
+      "act_class": "VA",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-626",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Information requests from the financial-intelligence unit are matched across every account system and retained, and politically exposed person screening and enhanced due diligence run before a relationship opens and again on the declared refresh cycle",
+      "violate_factors": [
+        "blockchain_analytics_scoring_bypassed_for_priority_partners",
+        "enhanced_due_diligence_file_deferred_until_after_funding",
+        "information_request_search_narrowed_to_open_accounts_only",
+        "mf_626_control_absent",
+        "politically_exposed_person_screening_dropped_from_refresh",
+        "sanctioned_wallet_address_list_left_unrefreshed"
+      ]
+    },
+    {
+      "act_class": "MF-VAL-SHIP",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O"
+        ],
+        "bound": {
+          "max_open_items": 1,
+          "ticket_required": true
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-VAL-SHIP",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Ship fast or test fully: ship with at most one open non-security checklist item, with a remediation ticket",
+      "violate_factors": []
+    },
+    {
+      "act_class": "MF-VAL-COST",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "K"
+        ],
+        "bound": {
+          "max_controls_removed": 0
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-VAL-COST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Cost or quality: cost cuts may not remove a documented quality control",
+      "violate_factors": []
+    },
+    {
+      "act_class": "MF-VAL-CUST",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "O"
+        ],
+        "bound": {
+          "max_regression_pct": 5
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-VAL-CUST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Customer first: customer-visible latency regressions need a stated customer benefit",
+      "violate_factors": []
+    },
+    {
+      "act_class": "MF-VAL-ACC",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-VAL-ACC",
+      "kind": "value",
+      "office": "office:accessibility-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Accessibility beyond law: never remove an existing accessibility feature without a token from the accessibility lead",
+      "violate_factors": []
+    },
+    {
+      "act_class": "MF-VAL-STYLE",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "internal-prototype",
+          "spike"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-VAL-STYLE",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "House style for alternative text and messages",
+      "violate_factors": []
+    },
+    {
+      "act_class": "MF-VAL-DOCS",
+      "canon_version": "meridian-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "hotfix",
+          "internal-prototype"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "MF-VAL-DOCS",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "Documentation currency: docs updated with the change",
+      "violate_factors": []
+    }
+  ],
+  "offices": {
+    "office:accessibility-lead": {
+      "id": "office:accessibility-lead",
+      "may_issue_for": [
+        "MF-VAL-ACC"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:compliance": {
+      "id": "office:compliance",
+      "may_issue_for": [
+        "FR",
+        "GV",
+        "PS",
+        "incident-hotfix"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:legal-counsel": {
+      "id": "office:legal-counsel",
+      "may_issue_for": [
+        "CP",
+        "DP",
+        "FC",
+        "FP",
+        "FR",
+        "GV",
+        "LG",
+        "MP",
+        "PD",
+        "PS",
+        "SS",
+        "VA"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:safety-lead": {
+      "id": "office:safety-lead",
+      "may_issue_for": [
+        "AG",
+        "AI",
+        "EV",
+        "FL",
+        "RE"
+      ],
+      "reporting_line": "governance"
+    }
+  },
+  "pack": "meridian-corpus",
+  "standing_emergency": {
+    "act_classes": [
+      "incident-hotfix"
+    ],
+    "office": "office:compliance",
+    "requires": "recorded_cause"
+  },
+  "version": "meridian-corpus-canon-000001"
+}

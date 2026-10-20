@@ -1,0 +1,4198 @@
+{
+  "entries": [
+    {
+      "act_class": "SC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-301",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "BMS/sensor-gateway credentials live only in the secrets vault; no credentials in collector configuration.",
+      "violate_factors": [
+        "agpl_dependency_in_customer_deployed_collector",
+        "dependency_carries_high_or_critical_cve",
+        "dv_301_control_absent",
+        "provenance_attestation_absent_on_agent_build",
+        "unsigned_binary_shipped_to_customer_infrastructure",
+        "vendor_security_review_pending_on_customer_data_path"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-302",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Automated remediation may never actuate customer physical infrastructure (power, cooling, setpoints) without explicit customer-side confirmation; no change may add an unconfirmed actuation path. (Physical-safety floor.)",
+      "violate_factors": [
+        "action_scope_unbounded_by_tenant",
+        "actuation_batch_mode_without_per_action_confirmation",
+        "actuation_without_customer_confirmation",
+        "dv_302_control_absent",
+        "no_consecutive_error_limit",
+        "no_halt_after_n_actions"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-303",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No third-party code in customer-telemetry paths without a completed vendor security review.",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "dv_303_control_absent",
+        "provenance_attestation_absent_on_agent_build",
+        "secret_present_in_source_or_ci_log",
+        "unsigned_binary_shipped_to_customer_infrastructure",
+        "vendor_security_review_pending_on_customer_data_path"
+      ]
+    },
+    {
+      "act_class": "TI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-304",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Tenant isolation: no change may enable cross-tenant reads, joins, or pooled model training outside the anonymized capacity-benchmark service. (Contractual/multi-tenant floor.)",
+      "violate_factors": [
+        "benchmark_anonymisation_bypassed",
+        "cross_tenant_pooled_model_training",
+        "cross_tenant_read_enabled",
+        "dv_304_control_absent",
+        "support_tool_granted_cross_tenant_access",
+        "tenant_attribution_derived_from_client_supplied_field"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-305",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every AI-agent-authored change carries a provenance attestation: agent identity, model version, and link to the originating human requirement.",
+      "violate_factors": [
+        "agent_change_alters_kernel_level_component_without_multiparty_review",
+        "agent_change_alters_security_policy_or_rbac",
+        "agent_change_missing_provenance_attestation",
+        "dv_305_control_absent",
+        "hallucinated_monitoring_integration_referenced",
+        "imported_package_absent_from_registry"
+      ]
+    },
+    {
+      "act_class": "QA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "QA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-306",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Changed-line test coverage >= 80% on services tagged critical (ingestion, alerting, remediation-advisor).",
+      "violate_factors": [
+        "alerting_rule_change_without_feature_flag",
+        "changed_line_coverage_below_floor",
+        "dv_306_control_absent",
+        "irreversible_migration_without_backup_proof",
+        "no_rule_unit_test_for_new_alert",
+        "p95_latency_regression_above_budget"
+      ]
+    },
+    {
+      "act_class": "QA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "QA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-307",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Schema migrations on telemetry time-series tables require a reversible down-migration.",
+      "violate_factors": [
+        "alerting_rule_change_without_feature_flag",
+        "changed_line_coverage_below_floor",
+        "dv_307_control_absent",
+        "no_rule_unit_test_for_new_alert",
+        "p95_latency_regression_above_budget",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-308",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No dependency carrying a high/critical CVE may deploy.",
+      "violate_factors": [
+        "agpl_dependency_in_customer_deployed_collector",
+        "build_not_reproducible_across_runners",
+        "dependency_carries_high_or_critical_cve",
+        "dv_308_control_absent",
+        "secret_present_in_source_or_ci_log",
+        "vendor_security_review_pending_on_customer_data_path"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-309",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Third-party licenses restricted to the approved list; no AGPL in customer-deployed edge collectors.",
+      "violate_factors": [
+        "agpl_dependency_in_customer_deployed_collector",
+        "build_not_reproducible_across_runners",
+        "dependency_carries_high_or_critical_cve",
+        "dv_309_control_absent",
+        "provenance_attestation_absent_on_agent_build",
+        "unsigned_binary_shipped_to_customer_infrastructure"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-310",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No secrets in source or CI logs (secret-scanner gate).",
+      "violate_factors": [
+        "agpl_dependency_in_customer_deployed_collector",
+        "dv_310_control_absent",
+        "provenance_attestation_absent_on_agent_build",
+        "secret_present_in_source_or_ci_log",
+        "unsigned_binary_shipped_to_customer_infrastructure",
+        "vendor_security_review_pending_on_customer_data_path"
+      ]
+    },
+    {
+      "act_class": "OP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-311",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No production deploys during customer-declared maintenance blackout windows except under the emergency protocol.",
+      "violate_factors": [
+        "alert_webhook_rate_limit_absent",
+        "deploy_inside_customer_blackout_window",
+        "dv_311_control_absent",
+        "emergency_protocol_claimed_without_record",
+        "retry_backoff_lacks_jitter",
+        "sre_lead_review_pending_at_merge"
+      ]
+    },
+    {
+      "act_class": "QA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "QA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-312",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "All changes to alerting-rule evaluation ship behind a feature flag.",
+      "violate_factors": [
+        "alerting_rule_change_without_feature_flag",
+        "changed_line_coverage_below_floor",
+        "dv_312_control_absent",
+        "irreversible_migration_without_backup_proof",
+        "no_rule_unit_test_for_new_alert",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-313",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "EU customer telemetry and facility personnel data (badge/access logs) remains in the EU region. (GDPR residency floor.)",
+      "violate_factors": [
+        "dv_313_control_absent",
+        "eu_badge_logs_cached_outside_region",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "external_analytics_added_without_dpia",
+        "raw_query_text_ingested_without_masking",
+        "redaction_processor_bypassed_on_new_path"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-315",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No new external analytics/telemetry on customer data without a completed data-protection impact assessment (DPIA).",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_315_control_absent",
+        "external_analytics_added_without_dpia",
+        "notification_template_bypasses_consent_check",
+        "raw_query_text_ingested_without_masking",
+        "redaction_processor_bypassed_on_new_path"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-316",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "AI-agent-authored changes to authorization/tenant-access code require human reviewer sign-off.",
+      "violate_factors": [
+        "agent_change_alters_kernel_level_component_without_multiparty_review",
+        "agent_change_lacks_human_signoff_on_tenant_access_code",
+        "agent_change_missing_provenance_attestation",
+        "dv_316_control_absent",
+        "hallucinated_monitoring_integration_referenced",
+        "imported_package_absent_from_registry"
+      ]
+    },
+    {
+      "act_class": "QA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "QA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-317",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Deploys blocked on >10% p95 latency regression for the live alerting pipeline tier.",
+      "violate_factors": [
+        "alerting_rule_change_without_feature_flag",
+        "changed_line_coverage_below_floor",
+        "dv_317_control_absent",
+        "irreversible_migration_without_backup_proof",
+        "no_rule_unit_test_for_new_alert",
+        "p95_latency_regression_above_budget"
+      ]
+    },
+    {
+      "act_class": "QA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "QA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-318",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Storage-touching changes require a verified backup/restore run in staging.",
+      "violate_factors": [
+        "alerting_rule_change_without_feature_flag",
+        "changed_line_coverage_below_floor",
+        "dv_318_control_absent",
+        "no_rule_unit_test_for_new_alert",
+        "p95_latency_regression_above_budget",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "OP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-319",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Changes to emergency-notification/escalation logic require on-call SRE-lead domain review.",
+      "violate_factors": [
+        "alert_webhook_rate_limit_absent",
+        "dv_319_control_absent",
+        "reconnect_storm_possible_on_server_restart",
+        "retry_backoff_lacks_jitter",
+        "sre_lead_review_pending_at_merge",
+        "webhook_amplification_factor_unbounded"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-320",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Customer-facing notification templates must pass the opt-in/consent check.",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_320_control_absent",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "external_analytics_added_without_dpia",
+        "notification_template_bypasses_consent_check",
+        "special_category_data_enters_new_path_without_gate"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-321",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Security audit logs are immutable and retained 7 years (SOC 2 / ISO 27001 evidence); no change may shorten retention or add mutation paths.",
+      "violate_factors": [
+        "audit_log_mutation_path_added",
+        "audit_log_retention_shortened",
+        "audit_log_tamper_alerting_disabled",
+        "dv_321_control_absent",
+        "notification_batching_moves_deadline",
+        "supervisory_notification_path_delayed_or_removed"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-322",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Predictive-model updates (failure prediction, anomaly detection) require a shadow-evaluation report before promotion to live scoring.",
+      "violate_factors": [
+        "aggregate_only_results_reported",
+        "alert_suppression_change_without_coverage_review",
+        "dv_322_control_absent",
+        "model_promoted_to_live_scoring_without_shadow_evaluation",
+        "point_adjusted_f1_used_as_primary_metric",
+        "regression_claimed_below_measured_noise_floor"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-330",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No change may ship, tune, or enable an AI feature that exploits vulnerabilities of age, disability, or a specific social or economic situation to materially distort a person's behaviour.",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_330_control_absent",
+        "eu_badge_logs_cached_outside_region",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "raw_query_text_ingested_without_masking",
+        "special_category_data_enters_new_path_without_gate"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-331",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No change may create or expand a facial-recognition database through untargeted scraping of facial images from the internet or CCTV footage.",
+      "violate_factors": [
+        "dv_331_control_absent",
+        "eu_badge_logs_cached_outside_region",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "external_analytics_added_without_dpia",
+        "raw_query_text_ingested_without_masking",
+        "redaction_processor_bypassed_on_new_path"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-332",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Consent withdrawal must remain available at any time and as easy as giving consent; no change may add friction, delay, approval steps, or dark patterns to a withdrawal path, or remove one.",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_332_control_absent",
+        "external_analytics_added_without_dpia",
+        "notification_template_bypasses_consent_check",
+        "raw_query_text_ingested_without_masking",
+        "redaction_processor_bypassed_on_new_path"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-333",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No AI inference of emotions of a natural person in workplace contexts; the Art. 5(1)(f) medical/safety exception requires a documented justification and a completed DPIA.",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_333_control_absent",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "external_analytics_added_without_dpia",
+        "notification_template_bypasses_consent_check",
+        "special_category_data_enters_new_path_without_gate"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-334",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Natural persons must be informed they are interacting with an AI system unless this is obvious to a reasonably well-informed person.",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_334_control_absent",
+        "eu_badge_logs_cached_outside_region",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "raw_query_text_ingested_without_masking",
+        "special_category_data_enters_new_path_without_gate"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-335",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Special-category personal data (health, biometric-for-ID, orientation, beliefs) may not enter a new processing path without a documented GDPR Art. 9(2) gate.",
+      "violate_factors": [
+        "dv_335_control_absent",
+        "eu_badge_logs_cached_outside_region",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "external_analytics_added_without_dpia",
+        "raw_query_text_ingested_without_masking",
+        "redaction_processor_bypassed_on_new_path"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-336",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No change may remove, disable, or add delay to the supervisory-notification path (GDPR Art. 33(1) 72h; NIS2 Art. 23(4) 24h early warning).",
+      "violate_factors": [
+        "audit_log_retention_shortened",
+        "audit_log_tamper_alerting_disabled",
+        "dv_336_control_absent",
+        "evidence_export_not_reproducible",
+        "notification_batching_moves_deadline",
+        "supervisory_notification_path_delayed_or_removed"
+      ]
+    },
+    {
+      "act_class": "TG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-337",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every service and operator access path must uniquely identify and authenticate its principal, and protect transmission confidentiality; no shared accounts, unauthenticated endpoints, or plaintext transport.",
+      "violate_factors": [
+        "client_certificate_not_presented",
+        "credential_shared_across_nodes",
+        "dv_337_control_absent",
+        "payload_origin_unauthenticated",
+        "telemetry_payload_unsigned",
+        "trust_on_first_use_without_pinning"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-338",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Biometric identifiers or templates are never collected or enrolled without prior written notice of the specific purpose and term, and a written release from the subject, under a published retention and destruction schedule",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_338_control_absent",
+        "external_analytics_added_without_dpia",
+        "notification_template_bypasses_consent_check",
+        "raw_query_text_ingested_without_masking",
+        "redaction_processor_bypassed_on_new_path"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-339",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Audit-log tamper alerting is never disabled, narrowed or routed away from the responding role",
+      "violate_factors": [
+        "audit_log_mutation_path_added",
+        "audit_log_retention_shortened",
+        "audit_log_tamper_alerting_disabled",
+        "dv_339_control_absent",
+        "evidence_export_not_reproducible",
+        "notification_batching_moves_deadline"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-340",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Physical access control \u2014 door release, mantrap override, cage unlock \u2014 is actuation, and is never triggered by automated remediation without explicit customer-side confirmation",
+      "violate_factors": [
+        "action_scope_unbounded_by_tenant",
+        "dv_340_control_absent",
+        "kill_switch_absent",
+        "no_consecutive_error_limit",
+        "no_halt_after_n_actions",
+        "remediation_can_target_the_monitoring_control_plane_itself"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-341",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Remediation halts after its declared action threshold, and no change removes or raises the kill switch without amendment",
+      "violate_factors": [
+        "action_irreversible_and_unreviewed",
+        "action_scope_unbounded_by_tenant",
+        "dv_341_control_absent",
+        "kill_switch_absent",
+        "physical_access_control_actuated_without_confirmation",
+        "remediation_can_target_the_monitoring_control_plane_itself"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-342",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The monitoring control plane is never a target of automated remediation",
+      "violate_factors": [
+        "action_irreversible_and_unreviewed",
+        "actuation_batch_mode_without_per_action_confirmation",
+        "actuation_without_customer_confirmation",
+        "dv_342_control_absent",
+        "kill_switch_absent",
+        "physical_access_control_actuated_without_confirmation"
+      ]
+    },
+    {
+      "act_class": "TG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-343",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No production telemetry or control path ships unauthenticated or in plaintext",
+      "violate_factors": [
+        "credential_shared_across_nodes",
+        "dv_343_control_absent",
+        "payload_origin_unauthenticated",
+        "payload_replay_possible",
+        "plaintext_transport_on_production_path",
+        "trust_on_first_use_without_pinning"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-344",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Raw query text, credential material and payment data are never ingested without active masking at the collector",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_344_control_absent",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "external_analytics_added_without_dpia",
+        "notification_template_bypasses_consent_check",
+        "special_category_data_enters_new_path_without_gate"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-345",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Emotion inference on facility personnel with no documented Article 5(1)(f) medical or safety justification and no completed assessment is refused outright",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_345_control_absent",
+        "eu_badge_logs_cached_outside_region",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "raw_query_text_ingested_without_masking",
+        "special_category_data_enters_new_path_without_gate"
+      ]
+    },
+    {
+      "act_class": "TL",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-346",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "OTLP payloads are validated against a pinned semantic-convention version",
+      "violate_factors": [
+        "decompression_ratio_unbounded",
+        "dv_346_control_absent",
+        "malformed_input_can_crash_agent",
+        "parser_not_seccomp_confined",
+        "regex_engine_is_backtracking_with_unbounded_input",
+        "regex_flagged_superlinear_by_validated_detector"
+      ]
+    },
+    {
+      "act_class": "TL",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-347",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A new attribute records the stability level of the convention it comes from",
+      "violate_factors": [
+        "decompression_ratio_unbounded",
+        "dv_347_control_absent",
+        "malformed_input_can_crash_agent",
+        "match_execution_deadline_absent",
+        "parser_not_seccomp_confined",
+        "parser_sandbox_has_network_egress"
+      ]
+    },
+    {
+      "act_class": "TL",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-348",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A malformed payload never produces a partial write",
+      "violate_factors": [
+        "dv_348_control_absent",
+        "match_execution_deadline_absent",
+        "parser_not_seccomp_confined",
+        "parser_sandbox_has_network_egress",
+        "regex_flagged_superlinear_by_validated_detector",
+        "semconv_development_attribute_treated_as_stable"
+      ]
+    },
+    {
+      "act_class": "TL",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-349",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Decompression ratios are bounded on every ingest path",
+      "violate_factors": [
+        "decompression_ratio_unbounded",
+        "dv_349_control_absent",
+        "match_execution_deadline_absent",
+        "regex_engine_is_backtracking_with_unbounded_input",
+        "regex_flagged_superlinear_by_validated_detector",
+        "semconv_development_attribute_treated_as_stable"
+      ]
+    },
+    {
+      "act_class": "TL",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-350",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Custom log-parsing regexes are screened by a validated superlinear detector and carry an ambiguity score below the threshold",
+      "violate_factors": [
+        "decompression_ratio_unbounded",
+        "dv_350_control_absent",
+        "malformed_input_can_crash_agent",
+        "parser_not_seccomp_confined",
+        "regex_engine_is_backtracking_with_unbounded_input",
+        "regex_flagged_superlinear_by_validated_detector"
+      ]
+    },
+    {
+      "act_class": "TL",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-351",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Parser sandboxes are seccomp-confined with no network egress and a match deadline",
+      "violate_factors": [
+        "decompression_ratio_unbounded",
+        "dv_351_control_absent",
+        "malformed_input_can_crash_agent",
+        "match_execution_deadline_absent",
+        "parser_not_seccomp_confined",
+        "parser_sandbox_has_network_egress"
+      ]
+    },
+    {
+      "act_class": "TL",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-352",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Out-of-order and late samples are handled explicitly rather than silently dropped",
+      "violate_factors": [
+        "dv_352_control_absent",
+        "match_execution_deadline_absent",
+        "parser_not_seccomp_confined",
+        "parser_sandbox_has_network_egress",
+        "regex_flagged_superlinear_by_validated_detector",
+        "semconv_development_attribute_treated_as_stable"
+      ]
+    },
+    {
+      "act_class": "AP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-353",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Monitoring agents drop privilege after bootstrap",
+      "violate_factors": [
+        "agent_directory_writable_by_unprivileged_user",
+        "agent_ipc_endpoint_world_writable",
+        "code_from_writable_path_executed_on_upgrade",
+        "dv_353_control_absent",
+        "ipc_peer_identity_unverified",
+        "privileged_action_reachable_from_unprivileged_caller"
+      ]
+    },
+    {
+      "act_class": "AP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-354",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent IPC endpoints restrict permissions and verify the peer's identity",
+      "violate_factors": [
+        "agent_directory_writable_by_unprivileged_user",
+        "agent_execs_helper_with_inherited_privilege",
+        "code_from_writable_path_executed_on_upgrade",
+        "dv_354_control_absent",
+        "privilege_not_dropped_after_bootstrap",
+        "privileged_action_reachable_from_unprivileged_caller"
+      ]
+    },
+    {
+      "act_class": "AP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-355",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No directory from which the agent executes code is writable by an unprivileged user",
+      "violate_factors": [
+        "agent_execs_helper_with_inherited_privilege",
+        "agent_ipc_endpoint_world_writable",
+        "agent_package_signature_unverified",
+        "code_from_writable_path_executed_on_upgrade",
+        "dv_355_control_absent",
+        "privilege_not_dropped_after_bootstrap"
+      ]
+    },
+    {
+      "act_class": "AP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-356",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Helpers are executed without inheriting the agent's privilege",
+      "violate_factors": [
+        "agent_ipc_endpoint_world_writable",
+        "agent_package_signature_unverified",
+        "dv_356_control_absent",
+        "ipc_peer_identity_unverified",
+        "privilege_not_dropped_after_bootstrap",
+        "privileged_action_reachable_from_unprivileged_caller"
+      ]
+    },
+    {
+      "act_class": "AP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-357",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The agent's capability set is minimised and reviewed on change",
+      "violate_factors": [
+        "agent_directory_writable_by_unprivileged_user",
+        "agent_ipc_endpoint_world_writable",
+        "code_from_writable_path_executed_on_upgrade",
+        "dv_357_control_absent",
+        "ipc_peer_identity_unverified",
+        "privileged_action_reachable_from_unprivileged_caller"
+      ]
+    },
+    {
+      "act_class": "AP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-358",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A changed agent socket surface is fuzzed before release",
+      "violate_factors": [
+        "agent_directory_writable_by_unprivileged_user",
+        "agent_execs_helper_with_inherited_privilege",
+        "code_from_writable_path_executed_on_upgrade",
+        "dv_358_control_absent",
+        "privilege_not_dropped_after_bootstrap",
+        "privileged_action_reachable_from_unprivileged_caller"
+      ]
+    },
+    {
+      "act_class": "AP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-359",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent packages are signature-verified before install on customer infrastructure",
+      "violate_factors": [
+        "agent_execs_helper_with_inherited_privilege",
+        "agent_ipc_endpoint_world_writable",
+        "agent_package_signature_unverified",
+        "code_from_writable_path_executed_on_upgrade",
+        "dv_359_control_absent",
+        "privilege_not_dropped_after_bootstrap"
+      ]
+    },
+    {
+      "act_class": "KS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "KS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-360",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every eBPF program passes the verifier on every kernel in the declared support matrix",
+      "violate_factors": [
+        "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+        "co_re_relocation_untested_on_target_kernel",
+        "dv_360_control_absent",
+        "kernel_matrix_narrowed_without_amendment",
+        "kernel_module_introduced_without_panic_regression",
+        "unprivileged_bpf_load_path_enabled"
+      ]
+    },
+    {
+      "act_class": "KS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "KS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-361",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "CO-RE relocations are validated across the kernel matrix",
+      "violate_factors": [
+        "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+        "co_re_relocation_untested_on_target_kernel",
+        "dv_361_control_absent",
+        "kernel_module_introduced_without_panic_regression",
+        "unprivileged_bpf_load_path_enabled",
+        "verifier_bypass_pattern_present"
+      ]
+    },
+    {
+      "act_class": "KS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "KS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-362",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Narrowing the declared kernel support matrix requires an amendment",
+      "violate_factors": [
+        "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+        "co_re_relocation_untested_on_target_kernel",
+        "dv_362_control_absent",
+        "kernel_matrix_narrowed_without_amendment",
+        "unprivileged_bpf_load_path_enabled",
+        "verifier_bypass_pattern_present"
+      ]
+    },
+    {
+      "act_class": "KS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "KS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-363",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A kernel module is introduced only where eBPF cannot serve, and only with a panic-regression run",
+      "violate_factors": [
+        "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+        "co_re_relocation_untested_on_target_kernel",
+        "dv_363_control_absent",
+        "kernel_matrix_narrowed_without_amendment",
+        "kernel_module_introduced_without_panic_regression",
+        "unprivileged_bpf_load_path_enabled"
+      ]
+    },
+    {
+      "act_class": "KS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "KS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-364",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Unprivileged eBPF load paths stay disabled",
+      "violate_factors": [
+        "bpf_program_rejected_by_verifier_on_a_supported_kernel",
+        "co_re_relocation_untested_on_target_kernel",
+        "dv_364_control_absent",
+        "kernel_module_introduced_without_panic_regression",
+        "unprivileged_bpf_load_path_enabled",
+        "verifier_bypass_pattern_present"
+      ]
+    },
+    {
+      "act_class": "TG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-365",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent-to-server channels enforce mutual TLS with a per-node credential",
+      "violate_factors": [
+        "dv_365_control_absent",
+        "payload_origin_unauthenticated",
+        "payload_replay_possible",
+        "plaintext_transport_on_production_path",
+        "telemetry_payload_unsigned",
+        "unauthenticated_debug_endpoint_shipped"
+      ]
+    },
+    {
+      "act_class": "TG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-366",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent identity is attested by a workload identity, not a shared secret",
+      "violate_factors": [
+        "client_certificate_not_presented",
+        "credential_shared_across_nodes",
+        "dv_366_control_absent",
+        "plaintext_transport_on_production_path",
+        "telemetry_payload_unsigned",
+        "unauthenticated_debug_endpoint_shipped"
+      ]
+    },
+    {
+      "act_class": "TG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-367",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Telemetry payloads carry origin authentication, replay resistance and gap detection",
+      "violate_factors": [
+        "client_certificate_not_presented",
+        "credential_shared_across_nodes",
+        "dv_367_control_absent",
+        "payload_origin_unauthenticated",
+        "telemetry_payload_unsigned",
+        "trust_on_first_use_without_pinning"
+      ]
+    },
+    {
+      "act_class": "TG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-368",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Certificate rotation is automated and exercised",
+      "violate_factors": [
+        "credential_shared_across_nodes",
+        "dv_368_control_absent",
+        "payload_origin_unauthenticated",
+        "payload_replay_possible",
+        "plaintext_transport_on_production_path",
+        "trust_on_first_use_without_pinning"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-369",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An overhead claim declares its denominator, workload, configuration, window and statistic",
+      "violate_factors": [
+        "bpf_program_time_charged_to_traced_process_only",
+        "cpu_throttling_observed_on_monitored_host",
+        "dv_369_control_absent",
+        "measured_overhead_exceeds_declared_budget",
+        "memory_footprint_unbounded_under_cardinality_growth",
+        "overhead_claim_without_denominator"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-370",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Overhead is measured with cgroup v2 accounting, and eBPF program time is accounted separately",
+      "violate_factors": [
+        "bpf_program_time_charged_to_traced_process_only",
+        "cpu_throttling_observed_on_monitored_host",
+        "dv_370_control_absent",
+        "measurement_statistic_omitted",
+        "memory_footprint_unbounded_under_cardinality_growth",
+        "overhead_claim_without_denominator"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-371",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No CPU throttling is observed on the monitored host under the declared profile",
+      "violate_factors": [
+        "bpf_program_time_charged_to_traced_process_only",
+        "dv_371_control_absent",
+        "measured_overhead_exceeds_declared_budget",
+        "measurement_statistic_omitted",
+        "memory_footprint_unbounded_under_cardinality_growth",
+        "overhead_claim_without_denominator"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-372",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The agent's memory footprint stays bounded under label-cardinality growth",
+      "violate_factors": [
+        "bpf_program_time_charged_to_traced_process_only",
+        "cpu_throttling_observed_on_monitored_host",
+        "dv_372_control_absent",
+        "measured_overhead_exceeds_declared_budget",
+        "memory_footprint_unbounded_under_cardinality_growth",
+        "overhead_claim_without_denominator"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-373",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Measured overhead stays within the declared budget or the change is rejected",
+      "violate_factors": [
+        "bpf_program_time_charged_to_traced_process_only",
+        "cpu_throttling_observed_on_monitored_host",
+        "dv_373_control_absent",
+        "measurement_statistic_omitted",
+        "memory_footprint_unbounded_under_cardinality_growth",
+        "overhead_claim_without_denominator"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-374",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Shadow outputs are never routed to paging or to remediation",
+      "violate_factors": [
+        "aggregate_only_results_reported",
+        "alert_suppression_change_without_coverage_review",
+        "dv_374_control_absent",
+        "promotion_criteria_set_after_seeing_shadow_results",
+        "regression_claimed_below_measured_noise_floor",
+        "shadow_outputs_routed_to_paging"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-375",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Promotion criteria are declared before the shadow evaluation starts",
+      "violate_factors": [
+        "aggregate_only_results_reported",
+        "dv_375_control_absent",
+        "model_promoted_to_live_scoring_without_shadow_evaluation",
+        "point_adjusted_f1_used_as_primary_metric",
+        "promotion_criteria_set_after_seeing_shadow_results",
+        "shadow_outputs_routed_to_paging"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-376",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Anomaly-detection regression is reported with a threshold-free metric and per-entity results",
+      "violate_factors": [
+        "alert_suppression_change_without_coverage_review",
+        "dv_376_control_absent",
+        "model_promoted_to_live_scoring_without_shadow_evaluation",
+        "point_adjusted_f1_used_as_primary_metric",
+        "promotion_criteria_set_after_seeing_shadow_results",
+        "regression_claimed_below_measured_noise_floor"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-377",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Point-adjusted F1 is not used as a primary metric",
+      "violate_factors": [
+        "aggregate_only_results_reported",
+        "alert_suppression_change_without_coverage_review",
+        "dv_377_control_absent",
+        "point_adjusted_f1_used_as_primary_metric",
+        "regression_claimed_below_measured_noise_floor",
+        "shadow_outputs_routed_to_paging"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-378",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A regression claim is evaluated above the measured noise floor",
+      "violate_factors": [
+        "aggregate_only_results_reported",
+        "dv_378_control_absent",
+        "model_promoted_to_live_scoring_without_shadow_evaluation",
+        "promotion_criteria_set_after_seeing_shadow_results",
+        "regression_claimed_below_measured_noise_floor",
+        "shadow_outputs_routed_to_paging"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-379",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Root-cause evaluation identifies the causing indicator, not only the service",
+      "violate_factors": [
+        "alert_suppression_change_without_coverage_review",
+        "dv_379_control_absent",
+        "model_promoted_to_live_scoring_without_shadow_evaluation",
+        "point_adjusted_f1_used_as_primary_metric",
+        "promotion_criteria_set_after_seeing_shadow_results",
+        "shadow_outputs_routed_to_paging"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-380",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Alert-quality claims rest on a labelling protocol registered before the change",
+      "violate_factors": [
+        "aggregate_only_results_reported",
+        "alert_suppression_change_without_coverage_review",
+        "dv_380_control_absent",
+        "model_promoted_to_live_scoring_without_shadow_evaluation",
+        "point_adjusted_f1_used_as_primary_metric",
+        "regression_claimed_below_measured_noise_floor"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-381",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "False-positive cost weighting is declared in advance, and paging alerts are measured separately from ticketing alerts",
+      "violate_factors": [
+        "aggregate_only_results_reported",
+        "alert_suppression_change_without_coverage_review",
+        "dv_381_control_absent",
+        "promotion_criteria_set_after_seeing_shadow_results",
+        "regression_claimed_below_measured_noise_floor",
+        "shadow_outputs_routed_to_paging"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-382",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An alert-suppression change is reviewed for silent coverage loss",
+      "violate_factors": [
+        "aggregate_only_results_reported",
+        "dv_382_control_absent",
+        "model_promoted_to_live_scoring_without_shadow_evaluation",
+        "point_adjusted_f1_used_as_primary_metric",
+        "promotion_criteria_set_after_seeing_shadow_results",
+        "shadow_outputs_routed_to_paging"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-383",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A consecutive-error limit is configured on every automated remediation loop",
+      "violate_factors": [
+        "action_irreversible_and_unreviewed",
+        "actuation_batch_mode_without_per_action_confirmation",
+        "actuation_without_customer_confirmation",
+        "dv_383_control_absent",
+        "no_consecutive_error_limit",
+        "no_halt_after_n_actions"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-384",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An availability budget is consulted before any eviction or restart action",
+      "violate_factors": [
+        "action_scope_unbounded_by_tenant",
+        "actuation_batch_mode_without_per_action_confirmation",
+        "dv_384_control_absent",
+        "no_consecutive_error_limit",
+        "no_halt_after_n_actions",
+        "remediation_can_target_the_monitoring_control_plane_itself"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-385",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An action's target is uniquely identified before execution",
+      "violate_factors": [
+        "action_scope_unbounded_by_tenant",
+        "dv_385_control_absent",
+        "kill_switch_absent",
+        "no_consecutive_error_limit",
+        "physical_access_control_actuated_without_confirmation",
+        "remediation_can_target_the_monitoring_control_plane_itself"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-386",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Residual state is cleaned up after a remediation action",
+      "violate_factors": [
+        "action_irreversible_and_unreviewed",
+        "actuation_without_customer_confirmation",
+        "dv_386_control_absent",
+        "kill_switch_absent",
+        "physical_access_control_actuated_without_confirmation",
+        "remediation_can_target_the_monitoring_control_plane_itself"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-387",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A steady-state hypothesis is declared before an automated action sequence",
+      "violate_factors": [
+        "action_irreversible_and_unreviewed",
+        "actuation_batch_mode_without_per_action_confirmation",
+        "actuation_without_customer_confirmation",
+        "dv_387_control_absent",
+        "no_halt_after_n_actions",
+        "physical_access_control_actuated_without_confirmation"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-388",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Remediation reaches production through a canary or staged rollout",
+      "violate_factors": [
+        "action_scope_unbounded_by_tenant",
+        "actuation_batch_mode_without_per_action_confirmation",
+        "actuation_without_customer_confirmation",
+        "dv_388_control_absent",
+        "no_consecutive_error_limit",
+        "no_halt_after_n_actions"
+      ]
+    },
+    {
+      "act_class": "OP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-389",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Alert webhooks and auto-scaling triggers carry rate limits",
+      "violate_factors": [
+        "deploy_inside_customer_blackout_window",
+        "dv_389_control_absent",
+        "emergency_protocol_claimed_without_record",
+        "reconnect_storm_possible_on_server_restart",
+        "retry_backoff_lacks_jitter",
+        "webhook_amplification_factor_unbounded"
+      ]
+    },
+    {
+      "act_class": "OP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-390",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Retry backoff includes jitter and a declared retry budget",
+      "violate_factors": [
+        "alert_webhook_rate_limit_absent",
+        "deploy_inside_customer_blackout_window",
+        "dv_390_control_absent",
+        "emergency_protocol_claimed_without_record",
+        "sre_lead_review_pending_at_merge",
+        "webhook_amplification_factor_unbounded"
+      ]
+    },
+    {
+      "act_class": "OP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-391",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A server restart cannot produce a reconnect storm from the agent fleet",
+      "violate_factors": [
+        "alert_webhook_rate_limit_absent",
+        "dv_391_control_absent",
+        "emergency_protocol_claimed_without_record",
+        "reconnect_storm_possible_on_server_restart",
+        "retry_backoff_lacks_jitter",
+        "sre_lead_review_pending_at_merge"
+      ]
+    },
+    {
+      "act_class": "OP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-392",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent traffic and customer traffic do not share a quota",
+      "violate_factors": [
+        "alert_webhook_rate_limit_absent",
+        "deploy_inside_customer_blackout_window",
+        "dv_392_control_absent",
+        "reconnect_storm_possible_on_server_restart",
+        "retry_backoff_lacks_jitter",
+        "webhook_amplification_factor_unbounded"
+      ]
+    },
+    {
+      "act_class": "OP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-393",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "On-call handover is notified of a change to escalation behaviour",
+      "violate_factors": [
+        "deploy_inside_customer_blackout_window",
+        "dv_393_control_absent",
+        "emergency_protocol_claimed_without_record",
+        "reconnect_storm_possible_on_server_restart",
+        "sre_lead_review_pending_at_merge",
+        "webhook_amplification_factor_unbounded"
+      ]
+    },
+    {
+      "act_class": "QA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "QA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-394",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A new or changed alerting rule ships with a promtool rule unit test",
+      "violate_factors": [
+        "alerting_rule_change_without_feature_flag",
+        "changed_line_coverage_below_floor",
+        "dv_394_control_absent",
+        "irreversible_migration_without_backup_proof",
+        "no_rule_unit_test_for_new_alert",
+        "rollback_path_absent"
+      ]
+    },
+    {
+      "act_class": "QA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "QA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-395",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A rollback path is verified for every change to a customer-deployed component",
+      "violate_factors": [
+        "alerting_rule_change_without_feature_flag",
+        "changed_line_coverage_below_floor",
+        "dv_395_control_absent",
+        "irreversible_migration_without_backup_proof",
+        "no_rule_unit_test_for_new_alert",
+        "p95_latency_regression_above_budget"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-396",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Audit records are backed up to a component separate from the system audited",
+      "violate_factors": [
+        "audit_log_mutation_path_added",
+        "audit_log_retention_shortened",
+        "audit_log_tamper_alerting_disabled",
+        "dv_396_control_absent",
+        "notification_batching_moves_deadline",
+        "supervisory_notification_path_delayed_or_removed"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-397",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An evidence export is reproducible by an auditor from the recorded inputs",
+      "violate_factors": [
+        "audit_log_retention_shortened",
+        "audit_log_tamper_alerting_disabled",
+        "dv_397_control_absent",
+        "evidence_export_not_reproducible",
+        "notification_batching_moves_deadline",
+        "supervisory_notification_path_delayed_or_removed"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-398",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "As a processor, notification to the controller is made without undue delay on becoming aware",
+      "violate_factors": [
+        "audit_log_mutation_path_added",
+        "audit_log_retention_shortened",
+        "audit_log_tamper_alerting_disabled",
+        "dv_398_control_absent",
+        "evidence_export_not_reproducible",
+        "notification_batching_moves_deadline"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-399",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Redaction counters are recorded as evidence that masking ran",
+      "violate_factors": [
+        "dv_399_control_absent",
+        "eu_badge_logs_cached_outside_region",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "external_analytics_added_without_dpia",
+        "raw_query_text_ingested_without_masking",
+        "redaction_processor_bypassed_on_new_path"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-400",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A cross-border flow records its transfer mechanism",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_400_control_absent",
+        "external_analytics_added_without_dpia",
+        "notification_template_bypasses_consent_check",
+        "raw_query_text_ingested_without_masking",
+        "redaction_processor_bypassed_on_new_path"
+      ]
+    },
+    {
+      "act_class": "TI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-401",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Tenant attribution is derived from server-side identity, never from a client-supplied field",
+      "violate_factors": [
+        "benchmark_anonymisation_bypassed",
+        "cross_tenant_pooled_model_training",
+        "cross_tenant_read_enabled",
+        "dv_401_control_absent",
+        "support_tool_granted_cross_tenant_access",
+        "tenant_attribution_derived_from_client_supplied_field"
+      ]
+    },
+    {
+      "act_class": "TI",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-402",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Cross-tenant correlation isolation is verified when topology inference changes",
+      "violate_factors": [
+        "benchmark_anonymisation_bypassed",
+        "cross_tenant_pooled_model_training",
+        "cross_tenant_read_enabled",
+        "dv_402_control_absent",
+        "support_tool_granted_cross_tenant_access",
+        "tenant_attribution_derived_from_client_supplied_field"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-403",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Agent builds are hermetic and reproducible across runners",
+      "violate_factors": [
+        "build_not_reproducible_across_runners",
+        "dependency_carries_high_or_critical_cve",
+        "dv_403_control_absent",
+        "secret_present_in_source_or_ci_log",
+        "unsigned_binary_shipped_to_customer_infrastructure",
+        "vendor_security_review_pending_on_customer_data_path"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-404",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every binary, container image and dynamic library shipped to customer infrastructure is signed",
+      "violate_factors": [
+        "agpl_dependency_in_customer_deployed_collector",
+        "build_not_reproducible_across_runners",
+        "dependency_carries_high_or_critical_cve",
+        "dv_404_control_absent",
+        "provenance_attestation_absent_on_agent_build",
+        "secret_present_in_source_or_ci_log"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-405",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A hallucinated monitoring integration or endpoint is rejected before the build stage",
+      "violate_factors": [
+        "agent_change_alters_kernel_level_component_without_multiparty_review",
+        "agent_change_alters_security_policy_or_rbac",
+        "agent_change_lacks_human_signoff_on_tenant_access_code",
+        "agent_change_missing_provenance_attestation",
+        "dv_405_control_absent",
+        "imported_package_absent_from_registry"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-406",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent-authored changes to kernel-level monitoring components require multiparty human review",
+      "violate_factors": [
+        "agent_change_alters_kernel_level_component_without_multiparty_review",
+        "agent_change_alters_security_policy_or_rbac",
+        "agent_change_missing_provenance_attestation",
+        "dv_406_control_absent",
+        "hallucinated_monitoring_integration_referenced",
+        "imported_package_absent_from_registry"
+      ]
+    },
+    {
+      "act_class": "EV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-407",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The NIS2 early-warning path meets the deadline of the applicable national transposition",
+      "violate_factors": [
+        "audit_log_mutation_path_added",
+        "audit_log_retention_shortened",
+        "audit_log_tamper_alerting_disabled",
+        "dv_407_control_absent",
+        "notification_batching_moves_deadline",
+        "supervisory_notification_path_delayed_or_removed"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-408",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Cloud switching charges are not levied on customer telemetry egress",
+      "violate_factors": [
+        "biometric_template_enrolled_without_written_release",
+        "dv_408_control_absent",
+        "eu_telemetry_replicated_to_non_eu_region",
+        "external_analytics_added_without_dpia",
+        "notification_template_bypasses_consent_check",
+        "special_category_data_enters_new_path_without_gate"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-409",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Controls are traceable to the Trust Services Criteria and to ISO/IEC 27001 Annex A identifiers",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "dv_409_control_absent",
+        "gate_threshold_edited_in_place_by_release_bot",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "AC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-410",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Thermal setpoint envelopes follow the published industry guidance for the class of equipment",
+      "violate_factors": [
+        "action_scope_unbounded_by_tenant",
+        "dv_410_control_absent",
+        "kill_switch_absent",
+        "no_consecutive_error_limit",
+        "no_halt_after_n_actions",
+        "remediation_can_target_the_monitoring_control_plane_itself"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-411",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No configuration removes the affected party's path to contest an automated decision",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "automated_decision_final_with_no_human_route",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "dv_411_control_absent",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-412",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Decision and audit records are append-only",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "audit_finding_read_during_retrieval",
+        "automated_decision_final_with_no_human_route",
+        "dv_412_control_absent",
+        "gate_threshold_edited_in_place_by_release_bot",
+        "reporter_bulletin_injected_into_adjudicator_context"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-413",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A change to a gate threshold is routed to the amendment channel, never applied in place",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "automated_decision_final_with_no_human_route",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "dv_413_control_absent",
+        "gate_threshold_edited_in_place_by_release_bot",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-414",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The constitution declares whether any party holds contest standing adverse to grants",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "dv_414_control_absent",
+        "gate_threshold_edited_in_place_by_release_bot",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-415",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Reporter output never reaches the adjudication input path, and the audit register is never read by resolve",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "audit_finding_read_during_retrieval",
+        "automated_decision_final_with_no_human_route",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "dv_415_control_absent",
+        "reporter_bulletin_injected_into_adjudicator_context"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-416",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every arrival that is not charged leaves exactly one docket entry",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "audit_finding_read_during_retrieval",
+        "automated_decision_final_with_no_human_route",
+        "dv_416_control_absent",
+        "gate_threshold_edited_in_place_by_release_bot",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "LA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "LA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-417",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A preservation hold overrides every deletion, expiry, purge and anonymisation path, including derived and aggregated stores, and is released only by a named legal approver",
+      "violate_factors": [
+        "customer_content_disclosed_without_legal_review",
+        "customer_notice_suppressed_where_notice_is_permitted",
+        "dv_417_control_absent",
+        "foreign_order_answered_directly_from_the_export_tool",
+        "legal_hold_flag_ignored_by_the_new_purge_path",
+        "retention_job_deletes_records_under_an_open_hold"
+      ]
+    },
+    {
+      "act_class": "LA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "LA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-418",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No path discloses customer content to a government or law-enforcement requester without recorded legal review of the process served, disclosure narrowed to its terms, and notice to the customer unless notice is prohibited",
+      "violate_factors": [
+        "conflicting_disclosure_duty_left_unresolved_at_design",
+        "customer_content_disclosed_without_legal_review",
+        "customer_notice_suppressed_where_notice_is_permitted",
+        "disclosure_register_entry_omitted_for_urgent_requests",
+        "dv_418_control_absent",
+        "foreign_order_answered_directly_from_the_export_tool"
+      ]
+    },
+    {
+      "act_class": "LA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "LA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-419",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Where a disclosure duty in one jurisdiction conflicts with a prohibition in another, the conflict is resolved before the pipeline is built, and no code path answers a foreign order directly out of the export tooling",
+      "violate_factors": [
+        "conflicting_disclosure_duty_left_unresolved_at_design",
+        "disclosure_register_entry_omitted_for_urgent_requests",
+        "disclosure_register_made_editable_by_support_role",
+        "dv_419_control_absent",
+        "foreign_order_answered_directly_from_the_export_tool",
+        "hold_release_automated_without_legal_approval"
+      ]
+    },
+    {
+      "act_class": "LA",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "LA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-420",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every request for customer data and every disclosure made in answer to one is written to an append-only register carrying the requester, the legal basis and the scope, from which the published request counts are derived",
+      "violate_factors": [
+        "disclosure_register_entry_omitted_for_urgent_requests",
+        "disclosure_register_made_editable_by_support_role",
+        "dv_420_control_absent",
+        "hold_release_automated_without_legal_approval",
+        "preservation_copy_stored_in_the_expiring_tier",
+        "requester_identity_not_recorded_on_the_request"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-421",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Fire detection and suppression, emergency power off, and UPS or transfer-switch operation are never actuated, inhibited or silenced by monitoring or remediation software; the integration to these systems is monitoring-only",
+      "violate_factors": [
+        "dv_421_control_absent",
+        "emergency_power_off_wired_into_automated_recovery",
+        "fuel_level_series_synthesised_when_the_sensor_is_silent",
+        "generator_test_result_back_filled_from_the_schedule",
+        "physical_incident_report_path_removed_from_the_runbook",
+        "suppression_release_reachable_from_the_action_planner"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-422",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Generator run records, transfer-switch events, fuel-level series and load-bank test results are written from the controller or sensor reading, never back-filled from a schedule, interpolated across a silent sensor or reconstructed after the fact",
+      "violate_factors": [
+        "dv_422_control_absent",
+        "fire_panel_integration_given_a_write_endpoint",
+        "fuel_level_series_synthesised_when_the_sensor_is_silent",
+        "generator_test_result_back_filled_from_the_schedule",
+        "physical_incident_report_path_removed_from_the_runbook",
+        "resilience_evidence_kept_only_in_a_personal_export"
+      ]
+    },
+    {
+      "act_class": "LS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "LS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-423",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The path by which a physical-resilience incident at a customer site is classified and reported to the designated authority stays reachable, and the evidence of the resilience measures it rests on is versioned in the repository",
+      "violate_factors": [
+        "dv_423_control_absent",
+        "fire_panel_integration_given_a_write_endpoint",
+        "life_safety_alarm_folded_into_the_deduplication_window",
+        "physical_incident_report_path_removed_from_the_runbook",
+        "resilience_evidence_kept_only_in_a_personal_export",
+        "ups_transfer_added_to_the_automated_recovery_plan"
+      ]
+    },
+    {
+      "act_class": "EN",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-424",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A figure submitted under a statutory energy or facility-reporting scheme is derived from the metered series, is never overridden by a manual constant or a design value, and no change disables, delays or narrows the submission job for a named site",
+      "violate_factors": [
+        "dv_424_control_absent",
+        "efficiency_denominator_changed_without_restating_series",
+        "reported_energy_figure_overridden_by_a_manual_constant",
+        "statutory_energy_submission_disabled_for_a_named_site",
+        "sustainability_datapoint_sourced_from_an_untracked_sheet",
+        "waste_heat_data_dropped_from_the_site_export"
+      ]
+    },
+    {
+      "act_class": "EN",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EN",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-425",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Efficiency and water metrics declare their boundary, denominator and measurement interval; a change to the method restates the published series rather than creating a silent discontinuity, and waste-heat data is recorded per site",
+      "violate_factors": [
+        "dv_425_control_absent",
+        "efficiency_denominator_changed_without_restating_series",
+        "estimated_value_published_without_an_estimate_label",
+        "missing_meter_interval_interpolated_into_the_filing",
+        "sustainability_datapoint_sourced_from_an_untracked_sheet",
+        "waste_heat_data_dropped_from_the_site_export"
+      ]
+    },
+    {
+      "act_class": "EN",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "EN",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-426",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every sustainability datapoint the platform produces for a customer's disclosure is traceable to its source system, its lineage is versioned with the pipeline, and estimated values are labelled as estimates in the export",
+      "violate_factors": [
+        "dv_426_control_absent",
+        "estimated_value_published_without_an_estimate_label",
+        "missing_meter_interval_interpolated_into_the_filing",
+        "reporting_boundary_narrowed_without_an_effective_date",
+        "sustainability_datapoint_sourced_from_an_untracked_sheet",
+        "water_usage_series_replaced_by_a_design_figure"
+      ]
+    },
+    {
+      "act_class": "CT",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "CT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-427",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Tenant key material lives in a per-tenant key ring and is never pooled into a platform key ring; where a customer supplies its own key, the platform reads nothing for that tenant when the key is revoked or unreachable",
+      "violate_factors": [
+        "customer_managed_key_replaced_by_a_platform_default",
+        "deleted_tenant_data_left_in_the_derived_feature_store",
+        "dv_427_control_absent",
+        "offboarding_export_deferred_past_contracted_window",
+        "sub_processor_added_before_any_customer_notice",
+        "tenant_keys_pooled_into_one_platform_key_ring"
+      ]
+    },
+    {
+      "act_class": "CT",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "CT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-428",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "At the end of a customer relationship the tenant's data is returned in the documented format and then deleted within the contracted window, including derived features, caches and backups, and a deletion certificate is issued",
+      "violate_factors": [
+        "deleted_tenant_data_left_in_the_derived_feature_store",
+        "dv_428_control_absent",
+        "objection_window_skipped_for_an_urgent_cutover",
+        "offboarding_export_deferred_past_contracted_window",
+        "per_tenant_evidence_export_removed_from_the_portal",
+        "sub_processor_added_before_any_customer_notice"
+      ]
+    },
+    {
+      "act_class": "CT",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "CT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-429",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A sub-processor is engaged only after the customer has been given notice of the intended change and the contracted objection window has run; no cutover, however urgent, starts processing ahead of that notice",
+      "violate_factors": [
+        "backup_retention_outlives_the_deletion_commitment",
+        "dv_429_control_absent",
+        "objection_window_skipped_for_an_urgent_cutover",
+        "per_tenant_evidence_export_removed_from_the_portal",
+        "regulated_regime_flag_dropped_by_the_new_writer",
+        "sub_processor_added_before_any_customer_notice"
+      ]
+    },
+    {
+      "act_class": "CT",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "CT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-430",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The per-tenant evidence export that serves a customer's audit and inspection rights stays available, and a customer's declared regulatory regime travels with its data through every pipeline that touches it",
+      "violate_factors": [
+        "backup_retention_outlives_the_deletion_commitment",
+        "dv_430_control_absent",
+        "per_tenant_evidence_export_removed_from_the_portal",
+        "regulated_regime_flag_dropped_by_the_new_writer",
+        "sub_processor_register_left_unchanged_after_the_move",
+        "tenant_retention_term_hardcoded_across_all_customers"
+      ]
+    },
+    {
+      "act_class": "OT",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-431",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Flows between the facility network and the monitoring platform are enumerated in a conduit allow-list with the zone boundary each crosses; building-management and baseboard-management endpoints are never reachable outside their zone",
+      "violate_factors": [
+        "building_management_network_bridged_to_corporate_zone",
+        "conduit_allow_list_replaced_by_a_flat_route",
+        "dv_431_control_absent",
+        "gateway_firmware_flashed_without_signature_check",
+        "ipmi_credentials_shared_across_the_rack_fleet",
+        "snmp_v2c_community_string_used_on_a_new_device_path"
+      ]
+    },
+    {
+      "act_class": "OT",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-432",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "New device paths use authenticated protocols with a credential unique to the controller; SNMPv1 and SNMPv2c community strings, unauthenticated BACnet writes and plaintext IPMI are not introduced on any path a change creates",
+      "violate_factors": [
+        "bacnet_write_service_enabled_on_the_polling_service",
+        "dv_432_control_absent",
+        "firmware_version_left_unrecorded_after_the_flash",
+        "gateway_firmware_flashed_without_signature_check",
+        "ipmi_credentials_shared_across_the_rack_fleet",
+        "snmp_v2c_community_string_used_on_a_new_device_path"
+      ]
+    },
+    {
+      "act_class": "OT",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "OT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-433",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Gateway and edge-device firmware is signature-verified before it is flashed, its version and hash are recorded against the device, and a rollback image is retained for the supported window",
+      "violate_factors": [
+        "bacnet_write_service_enabled_on_the_polling_service",
+        "device_discovery_widened_to_the_whole_site_range",
+        "dv_433_control_absent",
+        "firmware_version_left_unrecorded_after_the_flash",
+        "gateway_firmware_flashed_without_signature_check",
+        "modbus_writes_opened_to_the_shared_collector_role"
+      ]
+    },
+    {
+      "act_class": "SV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SV",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-434",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every customer-facing release publishes a software bill of materials covering at least the top-level dependencies, regenerated when a dependency changes, with an exploitability statement for each reported component finding",
+      "violate_factors": [
+        "disclosure_intake_address_removed_from_the_site",
+        "dv_434_control_absent",
+        "exploitability_statement_omitted_for_known_finding",
+        "exploited_vulnerability_report_left_without_an_owner",
+        "sbom_generation_dropped_from_the_release_pipeline",
+        "severe_incident_clock_started_at_triage_not_awareness"
+      ]
+    },
+    {
+      "act_class": "SV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SV",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-435",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The path that reports an actively exploited vulnerability or a severe incident to the designated authority stays wired to the single reporting entry point, its clock starts at first awareness, and a named owner is recorded on the release",
+      "violate_factors": [
+        "disclosure_intake_address_removed_from_the_site",
+        "dv_435_control_absent",
+        "exploited_vulnerability_report_left_without_an_owner",
+        "patch_deadline_extended_without_a_recorded_decision",
+        "penetration_test_dropped_for_the_portal_release_train",
+        "severe_incident_clock_started_at_triage_not_awareness"
+      ]
+    },
+    {
+      "act_class": "SV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SV",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-436",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A published disclosure intake address is monitored, a researcher's report is acknowledged within the published window, and a fix or mitigation ships inside the deadline for its severity band or the extension is recorded with its approver",
+      "violate_factors": [
+        "disclosure_intake_address_removed_from_the_site",
+        "dv_436_control_absent",
+        "patch_deadline_extended_without_a_recorded_decision",
+        "penetration_test_dropped_for_the_portal_release_train",
+        "security_testing_evidence_omitted_from_the_release",
+        "status_page_hosted_on_the_platform_it_reports_on"
+      ]
+    },
+    {
+      "act_class": "SV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SV",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-437",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Each customer-facing surface carries a scheduled independent security test, developer security testing evidence is attached to the release record, and the remediation deadline for each finding is tracked against its severity band",
+      "violate_factors": [
+        "advisory_published_without_a_severity_method",
+        "dv_437_control_absent",
+        "penetration_test_dropped_for_the_portal_release_train",
+        "root_cause_analysis_reduced_to_a_one_line_summary",
+        "security_testing_evidence_omitted_from_the_release",
+        "status_page_hosted_on_the_platform_it_reports_on"
+      ]
+    },
+    {
+      "act_class": "SV",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "SV",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-438",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Customer incident communication is served from infrastructure independent of the platform it reports on, and the root-cause document promised in the service agreement is delivered in full within its window rather than reduced to a summary line",
+      "violate_factors": [
+        "advisory_published_without_a_severity_method",
+        "component_provenance_left_out_of_release_manifest",
+        "dv_438_control_absent",
+        "fixed_vulnerability_shipped_without_a_regression_test",
+        "root_cause_analysis_reduced_to_a_one_line_summary",
+        "status_page_hosted_on_the_platform_it_reports_on"
+      ]
+    },
+    {
+      "act_class": "AX",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AX",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-439",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The customer portal carries an accessibility regression gate at WCAG 2.2 Level AA in its release pipeline, and a Level A or AA conformance failure blocks the release rather than being downgraded to a build warning",
+      "violate_factors": [
+        "accessibility_gate_removed_from_the_portal_pipeline",
+        "acknowledgement_control_reachable_only_by_pointer",
+        "alarm_severity_conveyed_by_colour_alone",
+        "audible_alert_shipped_with_no_visible_equivalent",
+        "conformance_failures_downgraded_to_build_warnings",
+        "dv_439_control_absent"
+      ]
+    },
+    {
+      "act_class": "AX",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "AX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-440",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Alarm state, severity and acknowledgement on the operator console and the customer portal are conveyed in text or shape as well as colour, every control carries an accessible name and a keyboard path, and the session timeout can be extended",
+      "violate_factors": [
+        "acknowledgement_control_reachable_only_by_pointer",
+        "alarm_severity_conveyed_by_colour_alone",
+        "audible_alert_shipped_with_no_visible_equivalent",
+        "dashboard_control_shipped_without_accessible_name",
+        "dv_440_control_absent",
+        "operator_session_expires_with_no_extension_path"
+      ]
+    },
+    {
+      "act_class": "TC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-441",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A customer, reseller or sub-processor is screened against the current restricted-party lists before an account, licence or telemetry endpoint is enabled, the ownership chain is tested, and no path clears its own screening hit",
+      "violate_factors": [
+        "agent_download_endpoint_opened_to_every_destination",
+        "dv_441_control_absent",
+        "encryption_classification_left_unrecorded_at_release",
+        "ownership_chain_check_skipped_for_a_subsidiary_account",
+        "restricted_party_screening_bypassed_for_fast_onboarding",
+        "screening_list_pinned_to_a_stale_local_copy"
+      ]
+    },
+    {
+      "act_class": "TC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "TC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-442",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The agent's cryptographic functionality carries a recorded export classification before a build is published, the download and licence paths are gated on the destination derived from verified account data, and support access to controlled build material runs a deemed-export check",
+      "violate_factors": [
+        "agent_download_endpoint_opened_to_every_destination",
+        "dv_442_control_absent",
+        "encryption_classification_left_unrecorded_at_release",
+        "ownership_chain_check_skipped_for_a_subsidiary_account",
+        "screening_hit_auto_cleared_by_the_onboarding_job",
+        "support_access_granted_without_deemed_export_check"
+      ]
+    },
+    {
+      "act_class": "DV-VAL-SHIP",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O"
+        ],
+        "bound": {
+          "max_open_items": 1,
+          "ticket_required": true
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-VAL-SHIP",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Ship fast or test fully: ship with at most one open non-security checklist item, with a remediation ticket",
+      "violate_factors": []
+    },
+    {
+      "act_class": "DV-VAL-COST",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "K"
+        ],
+        "bound": {
+          "max_controls_removed": 0
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-VAL-COST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Cost or quality: cost cuts may not remove a documented quality control",
+      "violate_factors": []
+    },
+    {
+      "act_class": "DV-VAL-CUST",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "O"
+        ],
+        "bound": {
+          "max_regression_pct": 5
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-VAL-CUST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Customer first: customer-visible latency regressions need a stated customer benefit",
+      "violate_factors": []
+    },
+    {
+      "act_class": "DV-VAL-ACC",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-VAL-ACC",
+      "kind": "value",
+      "office": "office:accessibility-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Accessibility beyond law: never remove an existing accessibility feature without a token from the accessibility lead",
+      "violate_factors": []
+    },
+    {
+      "act_class": "DV-VAL-STYLE",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "internal-prototype",
+          "spike"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-VAL-STYLE",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "House style for alternative text and messages",
+      "violate_factors": []
+    },
+    {
+      "act_class": "DV-VAL-DOCS",
+      "canon_version": "dcvigil-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "hotfix",
+          "internal-prototype"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "DV-VAL-DOCS",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "Documentation currency: docs updated with the change",
+      "violate_factors": []
+    }
+  ],
+  "offices": {
+    "office:accessibility-lead": {
+      "id": "office:accessibility-lead",
+      "may_issue_for": [
+        "DV-VAL-ACC"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:compliance": {
+      "id": "office:compliance",
+      "may_issue_for": [
+        "GV",
+        "incident-hotfix"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:legal-counsel": {
+      "id": "office:legal-counsel",
+      "may_issue_for": [
+        "AP",
+        "CT",
+        "DR",
+        "EV",
+        "GV",
+        "LA",
+        "TI"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:safety-lead": {
+      "id": "office:safety-lead",
+      "may_issue_for": [
+        "AC",
+        "AG",
+        "AI",
+        "AX",
+        "EV",
+        "KS",
+        "LS",
+        "OP",
+        "OT",
+        "QA",
+        "RS",
+        "TG",
+        "TL"
+      ],
+      "reporting_line": "governance"
+    }
+  },
+  "pack": "dcvigil-constitution-corpus",
+  "standing_emergency": {
+    "act_classes": [
+      "incident-hotfix"
+    ],
+    "office": "office:compliance",
+    "requires": "recorded_cause"
+  },
+  "version": "dcvigil-constitution-corpus-canon-000001"
+}

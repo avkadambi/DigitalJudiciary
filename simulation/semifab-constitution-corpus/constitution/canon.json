@@ -1,0 +1,4027 @@
+{
+  "entries": [
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No controlled technical data is released to a foreign person without a licence or a cited exception, and the check binds at role grant rather than at read",
+      "violate_factors": [
+        "controlled_technical_data_released_to_foreign_person_without_licence",
+        "deemed_export_check_skipped_at_role_grant",
+        "geofence_bypassed_by_configuration_flag",
+        "replica_created_in_restricted_destination",
+        "screening_hit_auto_cleared_without_human_review",
+        "sf_ex_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Controlled technical data never appears in logs, telemetry, support bundles or model context",
+      "violate_factors": [
+        "eccn_classification_absent_for_controlled_artifact",
+        "geofence_bypassed_by_configuration_flag",
+        "licence_exception_asserted_without_paragraph_citation",
+        "replica_created_in_restricted_destination",
+        "screening_hit_auto_cleared_without_human_review",
+        "sf_ex_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Export records are append-only: the initial image is preserved and every change records who made it and when",
+      "violate_factors": [
+        "circumvention_path_introduced_around_export_check",
+        "eccn_classification_absent_for_controlled_artifact",
+        "export_record_altered_after_the_fact",
+        "licence_exception_asserted_without_paragraph_citation",
+        "replica_created_in_restricted_destination",
+        "sf_ex_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A screening hit is never auto-cleared; screening-service failure is treated as a hit, never as a pass",
+      "violate_factors": [
+        "circumvention_path_introduced_around_export_check",
+        "decryption_key_escrowed_with_third_party_provider",
+        "export_record_altered_after_the_fact",
+        "foreign_direct_product_rule_not_evaluated",
+        "licence_exception_asserted_without_paragraph_citation",
+        "sf_ex_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No change introduces a path that circumvents an export control, whatever its stated purpose",
+      "violate_factors": [
+        "circumvention_path_introduced_around_export_check",
+        "controlled_technical_data_released_to_foreign_person_without_licence",
+        "decryption_key_escrowed_with_third_party_provider",
+        "foreign_direct_product_rule_not_evaluated",
+        "screening_service_failure_treated_as_pass",
+        "sf_ex_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The encryption carve-out holds only when every precondition holds, including that the means of decryption are withheld from any third party",
+      "violate_factors": [
+        "controlled_technical_data_released_to_foreign_person_without_licence",
+        "deemed_export_check_skipped_at_role_grant",
+        "foreign_direct_product_rule_not_evaluated",
+        "screening_hit_auto_cleared_without_human_review",
+        "screening_service_failure_treated_as_pass",
+        "sf_ex_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every controlled artifact carries a recorded ECCN classification",
+      "violate_factors": [
+        "controlled_technical_data_released_to_foreign_person_without_licence",
+        "deemed_export_check_skipped_at_role_grant",
+        "geofence_bypassed_by_configuration_flag",
+        "replica_created_in_restricted_destination",
+        "screening_hit_auto_cleared_without_human_review",
+        "sf_ex_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-008",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A licence exception is cited by paragraph, never asserted in the abstract",
+      "violate_factors": [
+        "eccn_classification_absent_for_controlled_artifact",
+        "geofence_bypassed_by_configuration_flag",
+        "licence_exception_asserted_without_paragraph_citation",
+        "replica_created_in_restricted_destination",
+        "screening_hit_auto_cleared_without_human_review",
+        "sf_ex_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-009",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The foreign direct product determination is recorded for covered items",
+      "violate_factors": [
+        "circumvention_path_introduced_around_export_check",
+        "eccn_classification_absent_for_controlled_artifact",
+        "export_record_altered_after_the_fact",
+        "licence_exception_asserted_without_paragraph_citation",
+        "replica_created_in_restricted_destination",
+        "sf_ex_009_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-010",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "End-use and end-user knowledge checks are documented for covered end uses",
+      "violate_factors": [
+        "circumvention_path_introduced_around_export_check",
+        "decryption_key_escrowed_with_third_party_provider",
+        "export_record_altered_after_the_fact",
+        "foreign_direct_product_rule_not_evaluated",
+        "licence_exception_asserted_without_paragraph_citation",
+        "sf_ex_010_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-011",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Geofencing is enforced at the authorisation layer, not in the client",
+      "violate_factors": [
+        "circumvention_path_introduced_around_export_check",
+        "controlled_technical_data_released_to_foreign_person_without_licence",
+        "decryption_key_escrowed_with_third_party_provider",
+        "foreign_direct_product_rule_not_evaluated",
+        "screening_service_failure_treated_as_pass",
+        "sf_ex_011_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-012",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Entity List footnote chains are evaluated, not just the direct party",
+      "violate_factors": [
+        "controlled_technical_data_released_to_foreign_person_without_licence",
+        "deemed_export_check_skipped_at_role_grant",
+        "foreign_direct_product_rule_not_evaluated",
+        "screening_hit_auto_cleared_without_human_review",
+        "screening_service_failure_treated_as_pass",
+        "sf_ex_012_control_absent"
+      ]
+    },
+    {
+      "act_class": "EX",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EX",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EX-013",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Export records are retained for five years and are not disposed of while an agency request stands",
+      "violate_factors": [
+        "controlled_technical_data_released_to_foreign_person_without_licence",
+        "deemed_export_check_skipped_at_role_grant",
+        "geofence_bypassed_by_configuration_flag",
+        "replica_created_in_restricted_destination",
+        "screening_hit_auto_cleared_without_human_review",
+        "sf_ex_013_control_absent"
+      ]
+    },
+    {
+      "act_class": "DS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "DS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-DS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The architecture resolves conflicting cross-border government-access obligations at design time, because no runtime resolution exists",
+      "violate_factors": [
+        "cross_border_transfer_without_lawful_basis",
+        "foreign_government_access_path_left_unresolved_at_runtime",
+        "important_data_exported_without_security_assessment",
+        "regulated_records_replicated_outside_declared_jurisdiction",
+        "sf_ds_001_control_absent",
+        "sub_processor_region_undeclared"
+      ]
+    },
+    {
+      "act_class": "DS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "DS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-DS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A regulatory or litigation hold overrides every deletion path, including erasure requests",
+      "violate_factors": [
+        "foreign_government_access_path_left_unresolved_at_runtime",
+        "important_data_exported_without_security_assessment",
+        "log_shipping_crosses_jurisdiction_boundary_silently",
+        "retention_deletion_conflicts_with_regulatory_hold",
+        "sf_ds_002_control_absent",
+        "sub_processor_region_undeclared"
+      ]
+    },
+    {
+      "act_class": "DS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "DS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-DS-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Regulated records are stored in the declared jurisdiction",
+      "violate_factors": [
+        "cross_border_transfer_without_lawful_basis",
+        "log_shipping_crosses_jurisdiction_boundary_silently",
+        "regulated_records_replicated_outside_declared_jurisdiction",
+        "retention_deletion_conflicts_with_regulatory_hold",
+        "sf_ds_003_control_absent",
+        "sub_processor_region_undeclared"
+      ]
+    },
+    {
+      "act_class": "DS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "DS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-DS-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Cross-border transfer carries a recorded lawful basis",
+      "violate_factors": [
+        "cross_border_transfer_without_lawful_basis",
+        "foreign_government_access_path_left_unresolved_at_runtime",
+        "important_data_exported_without_security_assessment",
+        "log_shipping_crosses_jurisdiction_boundary_silently",
+        "regulated_records_replicated_outside_declared_jurisdiction",
+        "sf_ds_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "DS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "DS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-DS-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Important-data classification is applied before export assessment",
+      "violate_factors": [
+        "cross_border_transfer_without_lawful_basis",
+        "foreign_government_access_path_left_unresolved_at_runtime",
+        "important_data_exported_without_security_assessment",
+        "retention_deletion_conflicts_with_regulatory_hold",
+        "sf_ds_005_control_absent",
+        "sub_processor_region_undeclared"
+      ]
+    },
+    {
+      "act_class": "DS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "DS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-DS-006",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Data lineage records the funding provenance of the technology it describes",
+      "violate_factors": [
+        "important_data_exported_without_security_assessment",
+        "log_shipping_crosses_jurisdiction_boundary_silently",
+        "regulated_records_replicated_outside_declared_jurisdiction",
+        "retention_deletion_conflicts_with_regulatory_hold",
+        "sf_ds_006_control_absent",
+        "sub_processor_region_undeclared"
+      ]
+    },
+    {
+      "act_class": "DS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "DS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-DS-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Sub-processor regions are declared and verified",
+      "violate_factors": [
+        "cross_border_transfer_without_lawful_basis",
+        "foreign_government_access_path_left_unresolved_at_runtime",
+        "log_shipping_crosses_jurisdiction_boundary_silently",
+        "regulated_records_replicated_outside_declared_jurisdiction",
+        "retention_deletion_conflicts_with_regulatory_hold",
+        "sf_ds_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No change suppresses or delays an equipment safety interlock signal",
+      "violate_factors": [
+        "alarm_report_delivery_delayed_past_budget",
+        "gem_control_state_forced_to_offline_by_change",
+        "hsms_reply_timeout_extended_beyond_bound",
+        "recipe_transfer_message_accepted_without_authentication",
+        "s6f11_event_report_routing_altered_by_change",
+        "sf_sg_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Recipe transfer messages are authenticated and logged before the equipment acts on them",
+      "violate_factors": [
+        "alarm_report_delivery_delayed_past_budget",
+        "gem_control_state_forced_to_offline_by_change",
+        "message_ordering_not_preserved_under_load",
+        "recipe_transfer_message_accepted_without_authentication",
+        "sf_sg_002_control_absent",
+        "unparsed_equipment_reply_silently_discarded"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Event report routing is preserved across a release",
+      "violate_factors": [
+        "collection_event_identifier_renumbered_without_amendment",
+        "equipment_safety_interlock_signal_suppressed",
+        "message_ordering_not_preserved_under_load",
+        "recipe_transfer_message_accepted_without_authentication",
+        "sf_sg_003_control_absent",
+        "unparsed_equipment_reply_silently_discarded"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Reply timers stay within their configured bounds",
+      "violate_factors": [
+        "collection_event_identifier_renumbered_without_amendment",
+        "equipment_safety_interlock_signal_suppressed",
+        "hsms_reply_timeout_extended_beyond_bound",
+        "s6f11_event_report_routing_altered_by_change",
+        "sf_sg_004_control_absent",
+        "unparsed_equipment_reply_silently_discarded"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Alarm reports are delivered within their declared budget",
+      "violate_factors": [
+        "alarm_report_delivery_delayed_past_budget",
+        "equipment_safety_interlock_signal_suppressed",
+        "gem_control_state_forced_to_offline_by_change",
+        "hsms_reply_timeout_extended_beyond_bound",
+        "s6f11_event_report_routing_altered_by_change",
+        "sf_sg_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Control-state transitions are exercised by test before release",
+      "violate_factors": [
+        "alarm_report_delivery_delayed_past_budget",
+        "gem_control_state_forced_to_offline_by_change",
+        "hsms_reply_timeout_extended_beyond_bound",
+        "message_ordering_not_preserved_under_load",
+        "recipe_transfer_message_accepted_without_authentication",
+        "sf_sg_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Message ordering is preserved under load",
+      "violate_factors": [
+        "collection_event_identifier_renumbered_without_amendment",
+        "gem_control_state_forced_to_offline_by_change",
+        "message_ordering_not_preserved_under_load",
+        "recipe_transfer_message_accepted_without_authentication",
+        "sf_sg_007_control_absent",
+        "unparsed_equipment_reply_silently_discarded"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Unparsed equipment replies are quarantined, never silently discarded",
+      "violate_factors": [
+        "collection_event_identifier_renumbered_without_amendment",
+        "equipment_safety_interlock_signal_suppressed",
+        "message_ordering_not_preserved_under_load",
+        "s6f11_event_report_routing_altered_by_change",
+        "sf_sg_008_control_absent",
+        "unparsed_equipment_reply_silently_discarded"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-009",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Collection-event identifiers are stable across a release unless amended",
+      "violate_factors": [
+        "alarm_report_delivery_delayed_past_budget",
+        "collection_event_identifier_renumbered_without_amendment",
+        "equipment_safety_interlock_signal_suppressed",
+        "hsms_reply_timeout_extended_beyond_bound",
+        "s6f11_event_report_routing_altered_by_change",
+        "sf_sg_009_control_absent"
+      ]
+    },
+    {
+      "act_class": "SG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SG-010",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Spooling is enabled so that offline periods do not lose event reports",
+      "violate_factors": [
+        "alarm_report_delivery_delayed_past_budget",
+        "gem_control_state_forced_to_offline_by_change",
+        "hsms_reply_timeout_extended_beyond_bound",
+        "recipe_transfer_message_accepted_without_authentication",
+        "s6f11_event_report_routing_altered_by_change",
+        "sf_sg_010_control_absent"
+      ]
+    },
+    {
+      "act_class": "RT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RT-001",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every changed monitoring path declares a latency budget and its context",
+      "violate_factors": [
+        "blocking_operation_introduced_on_monitoring_hot_path",
+        "latency_budget_not_declared_for_changed_path",
+        "latency_measured_without_coordinated_omission_correction",
+        "measured_p100_exceeds_declared_budget",
+        "measured_p999_exceeds_declared_budget",
+        "sf_rt_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "RT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RT-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Measured p99.9 latency stays within the declared budget",
+      "violate_factors": [
+        "blocking_operation_introduced_on_monitoring_hot_path",
+        "garbage_collection_pause_unbounded_on_ingest_path",
+        "latency_budget_not_declared_for_changed_path",
+        "latency_measured_without_coordinated_omission_correction",
+        "load_conditions_omitted_from_measurement",
+        "sf_rt_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "RT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RT-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Latency measurement corrects for coordinated omission",
+      "violate_factors": [
+        "garbage_collection_pause_unbounded_on_ingest_path",
+        "latency_budget_not_declared_for_changed_path",
+        "load_conditions_omitted_from_measurement",
+        "measured_p100_exceeds_declared_budget",
+        "measured_p999_exceeds_declared_budget",
+        "sf_rt_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "RT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RT-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No blocking operation is introduced on a monitoring hot path",
+      "violate_factors": [
+        "blocking_operation_introduced_on_monitoring_hot_path",
+        "latency_measured_without_coordinated_omission_correction",
+        "load_conditions_omitted_from_measurement",
+        "measured_p100_exceeds_declared_budget",
+        "measured_p999_exceeds_declared_budget",
+        "sf_rt_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "RT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RT-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Load conditions are declared alongside every latency result",
+      "violate_factors": [
+        "blocking_operation_introduced_on_monitoring_hot_path",
+        "garbage_collection_pause_unbounded_on_ingest_path",
+        "latency_budget_not_declared_for_changed_path",
+        "latency_measured_without_coordinated_omission_correction",
+        "measured_p100_exceeds_declared_budget",
+        "sf_rt_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "RT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RT-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Histogram evidence is retained with the result, not just a summary statistic",
+      "violate_factors": [
+        "blocking_operation_introduced_on_monitoring_hot_path",
+        "garbage_collection_pause_unbounded_on_ingest_path",
+        "latency_budget_not_declared_for_changed_path",
+        "load_conditions_omitted_from_measurement",
+        "measured_p999_exceeds_declared_budget",
+        "sf_rt_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "RT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RT-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Priority-inversion protection is present where a real-time path shares a lock",
+      "violate_factors": [
+        "garbage_collection_pause_unbounded_on_ingest_path",
+        "latency_measured_without_coordinated_omission_correction",
+        "load_conditions_omitted_from_measurement",
+        "measured_p100_exceeds_declared_budget",
+        "measured_p999_exceeds_declared_budget",
+        "sf_rt_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "WI",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "WI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-WI-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Work-in-progress status is never altered retroactively",
+      "violate_factors": [
+        "hash_chain_broken_by_migration",
+        "metrology_record_overwritten_in_place",
+        "recipe_execution_record_deleted_before_retention_expiry",
+        "record_amendment_lacks_attribution",
+        "sf_wi_001_control_absent",
+        "wip_status_altered_retroactively"
+      ]
+    },
+    {
+      "act_class": "WI",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "WI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-WI-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Metrology and recipe-execution records are never overwritten in place",
+      "violate_factors": [
+        "audit_logging_disabled_for_throughput",
+        "hash_chain_broken_by_migration",
+        "recipe_execution_record_deleted_before_retention_expiry",
+        "record_amendment_lacks_attribution",
+        "record_destroyed_while_under_regulatory_hold",
+        "sf_wi_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "WI",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "WI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-WI-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A correction is recorded as a new entry carrying its own attribution",
+      "violate_factors": [
+        "audit_logging_disabled_for_throughput",
+        "hash_chain_broken_by_migration",
+        "metrology_record_overwritten_in_place",
+        "record_destroyed_while_under_regulatory_hold",
+        "sf_wi_003_control_absent",
+        "wip_status_altered_retroactively"
+      ]
+    },
+    {
+      "act_class": "WI",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "WI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-WI-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Metrology results are bound to lot and wafer identity in one transaction",
+      "violate_factors": [
+        "metrology_record_overwritten_in_place",
+        "recipe_execution_record_deleted_before_retention_expiry",
+        "record_amendment_lacks_attribution",
+        "record_destroyed_while_under_regulatory_hold",
+        "sf_wi_004_control_absent",
+        "wip_status_altered_retroactively"
+      ]
+    },
+    {
+      "act_class": "WI",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "WI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-WI-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The record hash chain survives a migration",
+      "violate_factors": [
+        "audit_logging_disabled_for_throughput",
+        "hash_chain_broken_by_migration",
+        "metrology_record_overwritten_in_place",
+        "recipe_execution_record_deleted_before_retention_expiry",
+        "record_amendment_lacks_attribution",
+        "sf_wi_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "WI",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "WI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-WI-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Lot genealogy is reconstructable from the records alone",
+      "violate_factors": [
+        "audit_logging_disabled_for_throughput",
+        "hash_chain_broken_by_migration",
+        "record_amendment_lacks_attribution",
+        "record_destroyed_while_under_regulatory_hold",
+        "sf_wi_006_control_absent",
+        "wip_status_altered_retroactively"
+      ]
+    },
+    {
+      "act_class": "WI",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "WI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-WI-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Record timestamps come from a trusted monotonic source",
+      "violate_factors": [
+        "audit_logging_disabled_for_throughput",
+        "metrology_record_overwritten_in_place",
+        "recipe_execution_record_deleted_before_retention_expiry",
+        "record_destroyed_while_under_regulatory_hold",
+        "sf_wi_007_control_absent",
+        "wip_status_altered_retroactively"
+      ]
+    },
+    {
+      "act_class": "RP",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RP-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Recipe parameters are never written to logs, caches, telemetry labels or support bundles in plaintext",
+      "violate_factors": [
+        "debug_endpoint_returns_full_recipe_body",
+        "recipe_parameters_included_in_model_prompt_context",
+        "recipe_parameters_written_to_application_log",
+        "recipe_payload_cached_in_plaintext",
+        "recipe_transmitted_over_unencrypted_channel",
+        "sf_rp_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "RP",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RP-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Recipe parameters never enter a model prompt or fine-tuning context",
+      "violate_factors": [
+        "debug_endpoint_returns_full_recipe_body",
+        "process_parameters_emitted_in_telemetry_metric_labels",
+        "recipe_exported_to_vendor_support_bundle",
+        "recipe_parameters_included_in_model_prompt_context",
+        "recipe_transmitted_over_unencrypted_channel",
+        "sf_rp_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "RP",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RP-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Recipes are encrypted at rest and in transit",
+      "violate_factors": [
+        "process_parameters_emitted_in_telemetry_metric_labels",
+        "recipe_exported_to_vendor_support_bundle",
+        "recipe_parameters_written_to_application_log",
+        "recipe_payload_cached_in_plaintext",
+        "recipe_transmitted_over_unencrypted_channel",
+        "sf_rp_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "RP",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RP-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Debug and support modes redact process parameters",
+      "violate_factors": [
+        "debug_endpoint_returns_full_recipe_body",
+        "recipe_exported_to_vendor_support_bundle",
+        "recipe_parameters_included_in_model_prompt_context",
+        "recipe_parameters_written_to_application_log",
+        "recipe_payload_cached_in_plaintext",
+        "sf_rp_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "RP",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RP-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Recipe access is scoped to the named process owner",
+      "violate_factors": [
+        "debug_endpoint_returns_full_recipe_body",
+        "process_parameters_emitted_in_telemetry_metric_labels",
+        "recipe_parameters_included_in_model_prompt_context",
+        "recipe_payload_cached_in_plaintext",
+        "recipe_transmitted_over_unencrypted_channel",
+        "sf_rp_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "RP",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RP-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A recipe diff is reviewed by two named engineers",
+      "violate_factors": [
+        "debug_endpoint_returns_full_recipe_body",
+        "process_parameters_emitted_in_telemetry_metric_labels",
+        "recipe_exported_to_vendor_support_bundle",
+        "recipe_parameters_written_to_application_log",
+        "recipe_transmitted_over_unencrypted_channel",
+        "sf_rp_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "RP",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RP",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RP-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Recipe payload caches are bounded and encrypted",
+      "violate_factors": [
+        "process_parameters_emitted_in_telemetry_metric_labels",
+        "recipe_exported_to_vendor_support_bundle",
+        "recipe_parameters_included_in_model_prompt_context",
+        "recipe_parameters_written_to_application_log",
+        "recipe_payload_cached_in_plaintext",
+        "sf_rp_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No release artifact is deployed to a fab network without a provenance attestation verified against the expected builder identity",
+      "violate_factors": [
+        "builder_id_mismatch_in_provenance",
+        "component_integrity_drift_detected",
+        "component_version_downgrade_detected",
+        "provenance_attestation_absent_for_release_artifact",
+        "sf_ss_001_control_absent",
+        "undeclared_transitive_dependency_introduced"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The provenance subject digest matches the artifact actually distributed",
+      "violate_factors": [
+        "builder_id_mismatch_in_provenance",
+        "dependency_is_direct_url_dependency",
+        "package_name_resolves_to_public_registry_first",
+        "provenance_attestation_absent_for_release_artifact",
+        "sf_ss_002_control_absent",
+        "undeclared_transitive_dependency_introduced"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Signing certificates come from a trusted OIDC issuer set",
+      "violate_factors": [
+        "builder_id_mismatch_in_provenance",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "dependency_is_direct_url_dependency",
+        "package_name_resolves_to_public_registry_first",
+        "sf_ss_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Reusable workflows and actions are pinned to a commit digest and drawn from a trusted set",
+      "violate_factors": [
+        "build_runner_reused_across_jobs",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "dependency_is_direct_url_dependency",
+        "sbom_omits_transitive_components",
+        "sf_ss_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Dependencies resolve from the declared internal registry first",
+      "violate_factors": [
+        "build_runner_reused_across_jobs",
+        "component_integrity_drift_detected",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "sbom_omits_transitive_components",
+        "secret_material_present_in_diff",
+        "sf_ss_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Dependencies are pinned to an immutable digest, never a floating range",
+      "violate_factors": [
+        "build_runner_reused_across_jobs",
+        "component_integrity_drift_detected",
+        "component_version_downgrade_detected",
+        "secret_material_present_in_diff",
+        "sf_ss_006_control_absent",
+        "undeclared_transitive_dependency_introduced"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-007",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every release publishes a signed SBOM that matches the approved baseline",
+      "violate_factors": [
+        "builder_id_mismatch_in_provenance",
+        "component_integrity_drift_detected",
+        "component_version_downgrade_detected",
+        "provenance_attestation_absent_for_release_artifact",
+        "sf_ss_007_control_absent",
+        "undeclared_transitive_dependency_introduced"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-008",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Component integrity drift \u2014 a changed hash under an unchanged version \u2014 blocks the merge",
+      "violate_factors": [
+        "builder_id_mismatch_in_provenance",
+        "dependency_is_direct_url_dependency",
+        "package_name_resolves_to_public_registry_first",
+        "provenance_attestation_absent_for_release_artifact",
+        "sf_ss_008_control_absent",
+        "undeclared_transitive_dependency_introduced"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-009",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No dependency is introduced carrying a known vulnerability above the CVSS threshold",
+      "violate_factors": [
+        "builder_id_mismatch_in_provenance",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "dependency_is_direct_url_dependency",
+        "package_name_resolves_to_public_registry_first",
+        "sf_ss_009_control_absent"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-010",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Dependency licences stay on the allowlist",
+      "violate_factors": [
+        "build_runner_reused_across_jobs",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "dependency_introduces_cve_above_cvss_threshold",
+        "dependency_is_direct_url_dependency",
+        "sbom_omits_transitive_components",
+        "sf_ss_010_control_absent"
+      ]
+    },
+    {
+      "act_class": "SS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SS-011",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The pipeline denies privileged credentials to untrusted code and sanitises untrusted metadata before use",
+      "violate_factors": [
+        "build_runner_reused_across_jobs",
+        "component_integrity_drift_detected",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "sbom_omits_transitive_components",
+        "secret_material_present_in_diff",
+        "sf_ss_011_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AG-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "AI agents never modify equipment-control or interlock code paths",
+      "violate_factors": [
+        "agent_change_modifies_equipment_control_path",
+        "agent_change_modifies_export_control_enforcement_logic",
+        "agent_code_calls_non_allowlisted_external_host",
+        "api_contract_broken_on_path_axis",
+        "imported_package_absent_from_registry",
+        "sf_ag_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AG-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "AI agents never modify export-control enforcement logic",
+      "violate_factors": [
+        "agent_code_calls_non_allowlisted_external_host",
+        "agent_disabled_a_failing_compliance_test",
+        "api_contract_broken_on_body_axis",
+        "api_contract_broken_on_path_axis",
+        "imported_package_absent_from_registry",
+        "sf_ag_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AG-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every imported package is verified to exist in the registry before merge",
+      "violate_factors": [
+        "agent_change_lacks_any_human_reviewer",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "api_contract_broken_on_body_axis",
+        "api_contract_broken_on_path_axis",
+        "sf_ag_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AG-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent-authored code executes only inside a sandboxed runner",
+      "violate_factors": [
+        "agent_change_lacks_any_human_reviewer",
+        "agent_change_modifies_equipment_control_path",
+        "agent_change_modifies_export_control_enforcement_logic",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "sf_ag_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AG-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent code calls only allowlisted external hosts",
+      "violate_factors": [
+        "agent_change_lacks_any_human_reviewer",
+        "agent_change_modifies_equipment_control_path",
+        "agent_change_modifies_export_control_enforcement_logic",
+        "agent_code_calls_non_allowlisted_external_host",
+        "imported_package_absent_from_registry",
+        "sf_ag_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AG-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "API contract tests pass against the pinned specification on every changed interface",
+      "violate_factors": [
+        "agent_change_modifies_export_control_enforcement_logic",
+        "agent_code_calls_non_allowlisted_external_host",
+        "api_contract_broken_on_body_axis",
+        "api_contract_broken_on_path_axis",
+        "imported_package_absent_from_registry",
+        "sf_ag_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AG-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent instructions derived from untrusted text are treated as tainted input",
+      "violate_factors": [
+        "agent_code_calls_non_allowlisted_external_host",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "api_contract_broken_on_body_axis",
+        "api_contract_broken_on_path_axis",
+        "sf_ag_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "AG",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AG",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AG-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An agent may not disable or weaken a failing compliance test",
+      "violate_factors": [
+        "agent_change_lacks_any_human_reviewer",
+        "agent_change_modifies_equipment_control_path",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "api_contract_broken_on_body_axis",
+        "sf_ag_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "TQ",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "TQ",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-TQ-001",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Shared state introduced on the ingest path declares its synchronisation",
+      "violate_factors": [
+        "defect_class_is_atomicity_violation",
+        "defect_class_is_data_race",
+        "defect_class_is_resource_deadlock",
+        "defect_class_is_toctou",
+        "sf_tq_001_control_absent",
+        "synchronisation_primitive_removed"
+      ]
+    },
+    {
+      "act_class": "TQ",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "TQ",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-TQ-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Removing or weakening a synchronisation primitive requires an enumerated expected-outcome set",
+      "violate_factors": [
+        "defect_class_is_resource_deadlock",
+        "defect_class_is_toctou",
+        "memory_ordering_annotation_weakened",
+        "sf_tq_002_control_absent",
+        "synchronisation_primitive_removed",
+        "unbounded_buffer_growth_on_telemetry_ingest"
+      ]
+    },
+    {
+      "act_class": "TQ",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "TQ",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-TQ-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Telemetry buffers are bounded",
+      "violate_factors": [
+        "defect_class_is_data_race",
+        "forbidden_outcome_observed_under_stress",
+        "memory_ordering_annotation_weakened",
+        "sf_tq_003_control_absent",
+        "synchronisation_primitive_removed",
+        "unbounded_buffer_growth_on_telemetry_ingest"
+      ]
+    },
+    {
+      "act_class": "TQ",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "TQ",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-TQ-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every exit path releases its resources",
+      "violate_factors": [
+        "defect_class_is_atomicity_violation",
+        "defect_class_is_data_race",
+        "defect_class_is_resource_deadlock",
+        "forbidden_outcome_observed_under_stress",
+        "sf_tq_004_control_absent",
+        "unbounded_buffer_growth_on_telemetry_ingest"
+      ]
+    },
+    {
+      "act_class": "TQ",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "TQ",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-TQ-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Changed translation units are clean under a race detector",
+      "violate_factors": [
+        "defect_class_is_atomicity_violation",
+        "defect_class_is_data_race",
+        "defect_class_is_resource_deadlock",
+        "defect_class_is_toctou",
+        "sf_tq_005_control_absent",
+        "synchronisation_primitive_removed"
+      ]
+    },
+    {
+      "act_class": "TQ",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "TQ",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-TQ-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A concurrency defect is classified before it is dispositioned",
+      "violate_factors": [
+        "defect_class_is_resource_deadlock",
+        "defect_class_is_toctou",
+        "memory_ordering_annotation_weakened",
+        "sf_tq_006_control_absent",
+        "synchronisation_primitive_removed",
+        "unbounded_buffer_growth_on_telemetry_ingest"
+      ]
+    },
+    {
+      "act_class": "TQ",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "TQ",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-TQ-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Where an analysis tool is known to be unsound for the property, that unsoundness is declared",
+      "violate_factors": [
+        "defect_class_is_data_race",
+        "forbidden_outcome_observed_under_stress",
+        "memory_ordering_annotation_weakened",
+        "sf_tq_007_control_absent",
+        "synchronisation_primitive_removed",
+        "unbounded_buffer_growth_on_telemetry_ingest"
+      ]
+    },
+    {
+      "act_class": "CR",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "CR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-CR-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Controlled technical data in transit never uses a deprecated protocol version or cipher",
+      "violate_factors": [
+        "deprecated_cipher_offered",
+        "invalid_signature_accepted_by_verifier",
+        "nonce_reuse_possible_under_concurrency",
+        "sf_cr_001_control_absent",
+        "tls_version_below_declared_floor",
+        "triple_des_or_cbc_mode_offered"
+      ]
+    },
+    {
+      "act_class": "CR",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "CR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-CR-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Cipher suites stay on the current allowlist",
+      "violate_factors": [
+        "certificate_key_type_outside_permitted_set",
+        "cryptographic_primitive_hand_rolled",
+        "invalid_signature_accepted_by_verifier",
+        "nonce_reuse_possible_under_concurrency",
+        "sf_cr_002_control_absent",
+        "triple_des_or_cbc_mode_offered"
+      ]
+    },
+    {
+      "act_class": "CR",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "CR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-CR-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A configuration level is declared with its compatibility justification",
+      "violate_factors": [
+        "certificate_key_type_outside_permitted_set",
+        "cryptographic_primitive_hand_rolled",
+        "deprecated_cipher_offered",
+        "nonce_reuse_possible_under_concurrency",
+        "sf_cr_003_control_absent",
+        "tls_version_below_declared_floor"
+      ]
+    },
+    {
+      "act_class": "CR",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "CR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-CR-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Primitives pass their known-answer tests, which is not the same as holding a validation certificate",
+      "violate_factors": [
+        "certificate_key_type_outside_permitted_set",
+        "deprecated_cipher_offered",
+        "invalid_signature_accepted_by_verifier",
+        "sf_cr_004_control_absent",
+        "tls_version_below_declared_floor",
+        "triple_des_or_cbc_mode_offered"
+      ]
+    },
+    {
+      "act_class": "CR",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "CR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-CR-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Verifiers reject invalid signatures, invalid curve points and malformed ciphertexts",
+      "violate_factors": [
+        "cryptographic_primitive_hand_rolled",
+        "invalid_signature_accepted_by_verifier",
+        "nonce_reuse_possible_under_concurrency",
+        "sf_cr_005_control_absent",
+        "tls_version_below_declared_floor",
+        "triple_des_or_cbc_mode_offered"
+      ]
+    },
+    {
+      "act_class": "CR",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "CR",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-CR-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Nonce construction is safe under concurrency",
+      "violate_factors": [
+        "certificate_key_type_outside_permitted_set",
+        "cryptographic_primitive_hand_rolled",
+        "deprecated_cipher_offered",
+        "invalid_signature_accepted_by_verifier",
+        "nonce_reuse_possible_under_concurrency",
+        "sf_cr_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AS-001",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "All new database access uses parameterised queries",
+      "violate_factors": [
+        "command_injection_reachable_from_endpoint",
+        "path_traversal_reachable_from_upload_handler",
+        "server_side_request_forgery_reachable_from_webhook",
+        "sf_as_001_control_absent",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AS-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Lot and wafer identifiers are validated against an allowlist",
+      "violate_factors": [
+        "path_traversal_reachable_from_upload_handler",
+        "server_side_request_forgery_reachable_from_webhook",
+        "sf_as_002_control_absent",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AS-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Operator notes are output-encoded before render",
+      "violate_factors": [
+        "command_injection_reachable_from_endpoint",
+        "server_side_request_forgery_reachable_from_webhook",
+        "sf_as_003_control_absent",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AS-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "No endpoint reaches command execution on a user-supplied path",
+      "violate_factors": [
+        "command_injection_reachable_from_endpoint",
+        "path_traversal_reachable_from_upload_handler",
+        "server_side_request_forgery_reachable_from_webhook",
+        "sf_as_004_control_absent",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AS-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Deserialisation is restricted to known types",
+      "violate_factors": [
+        "path_traversal_reachable_from_upload_handler",
+        "server_side_request_forgery_reachable_from_webhook",
+        "sf_as_005_control_absent",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AS-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Changed endpoints are fuzzed before release",
+      "violate_factors": [
+        "command_injection_reachable_from_endpoint",
+        "server_side_request_forgery_reachable_from_webhook",
+        "sf_as_006_control_absent",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-AS-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Error responses omit internal identifiers and stack traces",
+      "violate_factors": [
+        "command_injection_reachable_from_endpoint",
+        "path_traversal_reachable_from_upload_handler",
+        "server_side_request_forgery_reachable_from_webhook",
+        "sf_as_007_control_absent",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload"
+      ]
+    },
+    {
+      "act_class": "NC",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "NC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-NC-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A claimed control names the NIST control identifier it maps to",
+      "violate_factors": [
+        "assessment_evidence_absent_for_claimed_control",
+        "chips_notification_omitted_for_covered_transaction",
+        "control_claimed_without_mapped_identifier",
+        "cui_boundary_undocumented_for_changed_component",
+        "sf_nc_001_control_absent",
+        "supply_chain_risk_plan_not_updated_after_change"
+      ]
+    },
+    {
+      "act_class": "NC",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "NC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-NC-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The supply-chain risk management plan is updated after a covered change",
+      "violate_factors": [
+        "assessment_evidence_absent_for_claimed_control",
+        "chips_notification_omitted_for_covered_transaction",
+        "control_claimed_without_mapped_identifier",
+        "cui_boundary_undocumented_for_changed_component",
+        "sf_nc_002_control_absent",
+        "supply_chain_risk_plan_not_updated_after_change"
+      ]
+    },
+    {
+      "act_class": "NC",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "NC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-NC-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The CUI handling boundary is documented for every changed component",
+      "violate_factors": [
+        "assessment_evidence_absent_for_claimed_control",
+        "chips_notification_omitted_for_covered_transaction",
+        "control_claimed_without_mapped_identifier",
+        "cui_boundary_undocumented_for_changed_component",
+        "sf_nc_003_control_absent",
+        "supply_chain_risk_plan_not_updated_after_change"
+      ]
+    },
+    {
+      "act_class": "NC",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "NC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-NC-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Covered expansion transactions are notified regardless of any claimed exception",
+      "violate_factors": [
+        "assessment_evidence_absent_for_claimed_control",
+        "chips_notification_omitted_for_covered_transaction",
+        "control_claimed_without_mapped_identifier",
+        "cui_boundary_undocumented_for_changed_component",
+        "sf_nc_004_control_absent",
+        "supply_chain_risk_plan_not_updated_after_change"
+      ]
+    },
+    {
+      "act_class": "NC",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "NC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-NC-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A secure software development practice is cited for each control claim",
+      "violate_factors": [
+        "assessment_evidence_absent_for_claimed_control",
+        "chips_notification_omitted_for_covered_transaction",
+        "control_claimed_without_mapped_identifier",
+        "cui_boundary_undocumented_for_changed_component",
+        "sf_nc_005_control_absent",
+        "supply_chain_risk_plan_not_updated_after_change"
+      ]
+    },
+    {
+      "act_class": "NC",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "NC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-NC-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Assessment evidence is attached to every claimed control",
+      "violate_factors": [
+        "assessment_evidence_absent_for_claimed_control",
+        "chips_notification_omitted_for_covered_transaction",
+        "control_claimed_without_mapped_identifier",
+        "cui_boundary_undocumented_for_changed_component",
+        "sf_nc_006_control_absent",
+        "supply_chain_risk_plan_not_updated_after_change"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-GV-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No configuration removes the affected party's path to contest an automated decision",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "automated_decision_final_with_no_human_route",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "sf_gv_001_control_absent",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-GV-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No system exploits vulnerabilities of a person, and no untargeted biometric scraping is enabled",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "sf_gv_002_control_absent",
+        "standing_declaration_absent_from_export",
+        "vulnerability_of_person_exploited_by_scoring_logic"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-GV-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The constitution declares whether any party holds contest standing adverse to grants",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "audit_finding_read_during_retrieval",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "sf_gv_003_control_absent",
+        "untargeted_biometric_scraping_enabled",
+        "vulnerability_of_person_exploited_by_scoring_logic"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-GV-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Constitutional parameters change only by legislative enactment",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "automated_decision_final_with_no_human_route",
+        "sf_gv_004_control_absent",
+        "standing_declaration_absent_from_export",
+        "untargeted_biometric_scraping_enabled",
+        "vulnerability_of_person_exploited_by_scoring_logic"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-GV-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Reporter output never reaches the adjudication input path",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "automated_decision_final_with_no_human_route",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "sf_gv_005_control_absent",
+        "standing_declaration_absent_from_export"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-GV-006",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The audit register is disjoint from the precedent store and is never read by resolve",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "sf_gv_006_control_absent",
+        "standing_declaration_absent_from_export",
+        "vulnerability_of_person_exploited_by_scoring_logic"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-GV-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every arrival that is not charged leaves exactly one docket entry",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "audit_finding_read_during_retrieval",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "sf_gv_007_control_absent",
+        "untargeted_biometric_scraping_enabled",
+        "vulnerability_of_person_exploited_by_scoring_logic"
+      ]
+    },
+    {
+      "act_class": "IT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "IT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-IT-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "ITAR technical data is never released to a foreign person and lives only inside the segregated defence enclave; there is no de minimis threshold, no group-A carve-out and no risk acceptance",
+      "violate_factors": [
+        "ddtc_registration_lapse_not_blocking_transfer",
+        "defence_enclave_boundary_merged_with_commercial_tenant",
+        "itar_data_stored_in_cloud_region_outside_authorised_boundary",
+        "itar_technical_data_released_to_foreign_person",
+        "itar_transfer_proceeds_without_licence_or_cited_exemption",
+        "sf_it_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "IT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "IT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-IT-002",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Access to or transfer of a defence article or ITAR technical data proceeds only while DDTC registration is current and a licence or a section-cited exemption is bound into the grant",
+      "violate_factors": [
+        "ddtc_registration_lapse_not_blocking_transfer",
+        "defence_article_data_ingested_without_jurisdiction_determination",
+        "itar_data_stored_in_cloud_region_outside_authorised_boundary",
+        "itar_decryption_key_available_to_cloud_provider",
+        "itar_transfer_proceeds_without_licence_or_cited_exemption",
+        "sf_it_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "IT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "IT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-IT-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "ITAR technical data is never stored or transmitted outside the authorised boundary unless every condition of the encryption carve-out holds: end-to-end encryption with a validated module, no storage in a proscribed country or Russia, and no decryption means held by a third party",
+      "violate_factors": [
+        "defence_article_data_ingested_without_jurisdiction_determination",
+        "foreign_person_attribute_defaulted_to_us_person",
+        "itar_data_stored_in_cloud_region_outside_authorised_boundary",
+        "itar_decryption_key_available_to_cloud_provider",
+        "sf_it_003_control_absent",
+        "usml_item_classified_under_ear_by_default"
+      ]
+    },
+    {
+      "act_class": "IT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "IT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-IT-004",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A jurisdiction determination \u2014 USML category or CCL classification \u2014 is recorded for every defence-adjacent artifact before ingest, and an unresolved item is treated as ITAR until a determination says otherwise",
+      "violate_factors": [
+        "defence_article_data_ingested_without_jurisdiction_determination",
+        "foreign_person_attribute_defaulted_to_us_person",
+        "itar_export_record_omits_recipient_identity",
+        "public_domain_asserted_without_ddtc_approval",
+        "sf_it_004_control_absent",
+        "usml_item_classified_under_ear_by_default"
+      ]
+    },
+    {
+      "act_class": "SO",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SO-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Counterparty screening against the SDN and consolidated sanctions lists, with fifty-percent ownership aggregation, is never bypassed for any counterparty class, and blocked-property handling is not configurable",
+      "violate_factors": [
+        "boycott_compliance_clause_accepted_by_contract_parser",
+        "boycott_request_dropped_without_report",
+        "jv_data_share_opened_without_outbound_investment_determination",
+        "ownership_aggregation_disabled_in_screening_rule",
+        "sanctions_screening_bypassed_for_counterparty_class",
+        "sf_so_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "SO",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SO-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A request to take a boycott-related action is never acted on and never dropped from the quarterly report, whether it arrives in a purchase order, a letter of credit or a portal form",
+      "violate_factors": [
+        "blocked_property_released_by_configuration",
+        "boycott_compliance_clause_accepted_by_contract_parser",
+        "boycott_request_dropped_without_report",
+        "covered_transaction_closed_without_cfius_analysis",
+        "jv_data_share_opened_without_outbound_investment_determination",
+        "sf_so_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "SO",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "SO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-SO-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Before covered technology or data is shared with a joint-venture or investee party, the outbound-investment and CFIUS determinations are recorded against the counterparty and the transaction",
+      "violate_factors": [
+        "blocked_property_released_by_configuration",
+        "covered_transaction_closed_without_cfius_analysis",
+        "jv_data_share_opened_without_outbound_investment_determination",
+        "sanctions_list_snapshot_stale_beyond_declared_interval",
+        "sanctions_screening_record_purged_before_retention_expiry",
+        "sf_so_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Conflict-minerals inquiry data \u2014 smelter and refiner identity and country of origin \u2014 is collected from suppliers, retained and carried on the component record that feeds the annual Form SD",
+      "violate_factors": [
+        "conflict_minerals_inquiry_marked_complete_without_response",
+        "counterfeit_inspection_step_skipped_for_expedited_lot",
+        "forced_labour_match_downgraded_to_advisory",
+        "forced_labour_screening_disabled_for_supplier_tier",
+        "sf_rs_001_control_absent",
+        "smelter_data_dropped_from_supplier_onboarding"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Forced-labour screening of suppliers and their upstream sources is never disabled or downgraded, and a match against the UFLPA Entity List blocks receipt until the presumption is rebutted",
+      "violate_factors": [
+        "broker_sourced_lot_released_without_provenance",
+        "counterfeit_inspection_step_skipped_for_expedited_lot",
+        "forced_labour_match_downgraded_to_advisory",
+        "forced_labour_screening_disabled_for_supplier_tier",
+        "sf_rs_002_control_absent",
+        "suspect_counterfeit_part_released_without_disposition"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RS-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Counterfeit-part avoidance records \u2014 inspection result, distributor authorisation status and suspect-part disposition \u2014 are recorded per lot and never skipped for expedite",
+      "violate_factors": [
+        "broker_sourced_lot_released_without_provenance",
+        "counterfeit_inspection_step_skipped_for_expedited_lot",
+        "grey_market_flag_cleared_by_configuration",
+        "sf_rs_003_control_absent",
+        "supplier_attestation_expiry_ignored_at_receipt",
+        "suspect_counterfeit_part_released_without_disposition"
+      ]
+    },
+    {
+      "act_class": "RS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "RS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-RS-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A broker-sourced or grey-market lot is quarantined until its provenance chain is verified, and the grey-market flag on the genealogy record is cleared only by a recorded disposition",
+      "violate_factors": [
+        "broker_sourced_lot_released_without_provenance",
+        "grey_market_flag_cleared_by_configuration",
+        "sf_rs_004_control_absent",
+        "sourcing_screen_snapshot_date_not_recorded",
+        "supplier_attestation_expiry_ignored_at_receipt",
+        "supplier_declaration_overwritten_without_version"
+      ]
+    },
+    {
+      "act_class": "EH",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EH-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Hazardous-gas monitoring alarms are never suppressed, filtered, rate-limited or re-thresholded by software, and reach the life-safety panel before any analytics path",
+      "violate_factors": [
+        "effluent_monitoring_result_dropped_before_report",
+        "emergency_stop_state_masked_in_equipment_status_feed",
+        "gas_alarm_rate_limited_below_detection_cadence",
+        "hazardous_gas_alarm_suppressed_by_software_filter",
+        "lockout_tagout_state_overridable_from_host_command",
+        "sf_eh_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "EH",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EH-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Lockout/tagout, emergency-off and interlock states are read-only to software: no host command, status transformation or configuration can override, mask or reset them",
+      "violate_factors": [
+        "effluent_monitoring_result_dropped_before_report",
+        "emergency_stop_state_masked_in_equipment_status_feed",
+        "emissions_report_value_rounded_below_permit_limit",
+        "esd_monitor_telemetry_retention_shortened_below_declared",
+        "lockout_tagout_state_overridable_from_host_command",
+        "sf_eh_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "EH",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EH-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Effluent, emissions and chemical-reporting pipelines never drop, round or alter a monitoring result between measurement and the reported value, and a reporting job is never disabled by configuration",
+      "violate_factors": [
+        "cleanroom_telemetry_downsampled_without_record",
+        "effluent_monitoring_result_dropped_before_report",
+        "emissions_report_value_rounded_below_permit_limit",
+        "esd_monitor_telemetry_retention_shortened_below_declared",
+        "gas_alarm_threshold_raised_without_ehs_signoff",
+        "sf_eh_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "EH",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "EH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-EH-004",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "ESD-monitor and cleanroom environmental telemetry is retained at native resolution for the declared period, and any change to sampling or aggregation is recorded with an effective date",
+      "violate_factors": [
+        "cleanroom_telemetry_downsampled_without_record",
+        "esd_monitor_telemetry_retention_shortened_below_declared",
+        "gas_alarm_threshold_raised_without_ehs_signoff",
+        "life_safety_signal_routed_through_analytics_queue",
+        "pfas_reporting_job_disabled_by_configuration",
+        "sf_eh_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "QS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "QS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-QS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A process, recipe or material change is classified and a customer change notice issued before the first affected lot is exposed, and the release gate enforces the customer's notice period",
+      "violate_factors": [
+        "change_notice_gate_bypassed_for_minor_classification",
+        "controller_model_promoted_without_held_out_validation",
+        "corrective_action_verification_step_removed",
+        "nonconformance_closed_without_corrective_action_record",
+        "process_change_reaches_customer_lots_before_notice",
+        "sf_qs_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "QS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "QS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-QS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every nonconformance opens a corrective-action record; root cause and verification of effectiveness are recorded, and closure carries a named owner",
+      "violate_factors": [
+        "controller_model_promoted_without_held_out_validation",
+        "controller_model_promoted_without_rollback_path",
+        "corrective_action_verification_step_removed",
+        "mask_revision_unbound_from_lot_record",
+        "nonconformance_closed_without_corrective_action_record",
+        "sf_qs_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "QS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "QS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-QS-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An advanced-process-control or run-to-run controller model is promoted to production only after validation on held-out lots, with a recorded version on lot history and a tested rollback path",
+      "violate_factors": [
+        "controller_model_promoted_without_held_out_validation",
+        "controller_model_promoted_without_rollback_path",
+        "mask_revision_unbound_from_lot_record",
+        "process_change_classification_defaulted_to_minor",
+        "retired_mask_revision_dispatchable_to_tool",
+        "sf_qs_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "QS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "QS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-QS-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Reticle and photomask revisions are bound to the lot and recipe record, traceable to an approved engineering change, and a retired revision cannot be dispatched to a tool",
+      "violate_factors": [
+        "customer_specific_requirement_check_disabled",
+        "mask_revision_unbound_from_lot_record",
+        "process_change_classification_defaulted_to_minor",
+        "quality_record_retention_shortened_below_customer_term",
+        "retired_mask_revision_dispatchable_to_tool",
+        "sf_qs_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "OT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "OT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-OT-001",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The fab-floor tool network is a distinct security zone: traffic to enterprise or cloud crosses only a declared conduit, and no change bridges the zones or opens a boundary rule to any source",
+      "violate_factors": [
+        "sf_ot_001_control_absent",
+        "tool_firmware_installed_without_signature_verification",
+        "tool_network_bridged_to_enterprise_network",
+        "vendor_remote_access_persistent_and_unbrokered",
+        "vendor_remote_session_recording_disabled",
+        "zone_boundary_rule_opened_to_any_source"
+      ]
+    },
+    {
+      "act_class": "OT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "OT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-OT-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Vendor remote access to equipment is brokered through a jump host, approved per session by a named owner, recorded, time-boxed and scoped to the named tool",
+      "violate_factors": [
+        "firmware_pulled_from_unverified_vendor_mirror",
+        "sf_ot_002_control_absent",
+        "tool_firmware_installed_without_signature_verification",
+        "unauthenticated_time_server_added_to_tool_network",
+        "vendor_remote_access_persistent_and_unbrokered",
+        "vendor_remote_session_recording_disabled"
+      ]
+    },
+    {
+      "act_class": "OT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "OT",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-OT-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Tool firmware and equipment software updates carry vendor-signed provenance verified before install, are staged on a non-production tool first, and are recorded on the equipment record",
+      "violate_factors": [
+        "clock_drift_alarm_disabled_on_equipment_path",
+        "firmware_pulled_from_unverified_vendor_mirror",
+        "sf_ot_003_control_absent",
+        "tool_firmware_installed_without_signature_verification",
+        "unauthenticated_time_server_added_to_tool_network",
+        "vendor_account_left_enabled_after_session_end"
+      ]
+    },
+    {
+      "act_class": "OT",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "OT",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-OT-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Equipment time comes from an authenticated source; clock drift on the tool network is monitored and alarmed, and no unauthenticated time server is added to an equipment path",
+      "violate_factors": [
+        "clock_drift_alarm_disabled_on_equipment_path",
+        "firmware_staging_step_skipped_for_production_fleet",
+        "ot_protocol_allowlist_removed_at_zone_boundary",
+        "sf_ot_004_control_absent",
+        "unauthenticated_time_server_added_to_tool_network",
+        "vendor_account_left_enabled_after_session_end"
+      ]
+    },
+    {
+      "act_class": "SF-VAL-SHIP",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O"
+        ],
+        "bound": {
+          "max_open_items": 1,
+          "ticket_required": true
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-VAL-SHIP",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Ship fast or test fully: ship with at most one open non-security checklist item, with a remediation ticket",
+      "violate_factors": []
+    },
+    {
+      "act_class": "SF-VAL-COST",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "K"
+        ],
+        "bound": {
+          "max_controls_removed": 0
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-VAL-COST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Cost or quality: cost cuts may not remove a documented quality control",
+      "violate_factors": []
+    },
+    {
+      "act_class": "SF-VAL-CUST",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "O"
+        ],
+        "bound": {
+          "max_regression_pct": 5
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-VAL-CUST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Customer first: customer-visible latency regressions need a stated customer benefit",
+      "violate_factors": []
+    },
+    {
+      "act_class": "SF-VAL-ACC",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-VAL-ACC",
+      "kind": "value",
+      "office": "office:accessibility-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Accessibility beyond law: never remove an existing accessibility feature without a token from the accessibility lead",
+      "violate_factors": []
+    },
+    {
+      "act_class": "SF-VAL-STYLE",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "internal-prototype",
+          "spike"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-VAL-STYLE",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "House style for alternative text and messages",
+      "violate_factors": []
+    },
+    {
+      "act_class": "SF-VAL-DOCS",
+      "canon_version": "semifab-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "hotfix",
+          "internal-prototype"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "SF-VAL-DOCS",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "Documentation currency: docs updated with the change",
+      "violate_factors": []
+    }
+  ],
+  "offices": {
+    "office:accessibility-lead": {
+      "id": "office:accessibility-lead",
+      "may_issue_for": [
+        "SF-VAL-ACC"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:compliance": {
+      "id": "office:compliance",
+      "may_issue_for": [
+        "EH",
+        "incident-hotfix"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:legal-counsel": {
+      "id": "office:legal-counsel",
+      "may_issue_for": [
+        "DS",
+        "EX",
+        "GV",
+        "IT",
+        "SO"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:safety-lead": {
+      "id": "office:safety-lead",
+      "may_issue_for": [
+        "AG",
+        "AS",
+        "OT",
+        "QS",
+        "RP",
+        "RS",
+        "RT",
+        "SG",
+        "TQ",
+        "WI"
+      ],
+      "reporting_line": "governance"
+    }
+  },
+  "pack": "semifab-constitution-corpus",
+  "standing_emergency": {
+    "act_classes": [
+      "incident-hotfix"
+    ],
+    "office": "office:compliance",
+    "requires": "recorded_cause"
+  },
+  "version": "semifab-constitution-corpus-canon-000001"
+}

@@ -1,0 +1,3964 @@
+{
+  "entries": [
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Schedule II prescriptions carry no refills",
+      "violate_factors": [
+        "controlled_inventory_discrepancy_unexplained",
+        "epcs_signature_completed_with_single_factor",
+        "prescription_reissued_beyond_six_month_window",
+        "refill_count_exceeds_five_for_schedule_iii_iv",
+        "schedule_ii_prescription_carries_refills",
+        "vp_cs_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Every controlled-substance prescription is issued for a legitimate medical purpose by a practitioner acting in the usual course of professional practice",
+      "violate_factors": [
+        "asap_payload_omits_species_code",
+        "controlled_inventory_discrepancy_unexplained",
+        "dea_registration_expired_at_time_of_issue",
+        "prescription_reissued_beyond_six_month_window",
+        "refill_count_exceeds_five_for_schedule_iii_iv",
+        "vp_cs_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Electronic prescribing of controlled substances is signed with two-factor authentication by a credentialed veterinarian",
+      "violate_factors": [
+        "asap_payload_omits_species_code",
+        "controlled_inventory_discrepancy_unexplained",
+        "dea_registration_expired_at_time_of_issue",
+        "euthanasia_solution_dispensed_without_witness",
+        "pdmp_submission_silently_dropped_on_error",
+        "vp_cs_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Granting or revoking EPCS signing privileges requires two-person authorization",
+      "violate_factors": [
+        "asap_payload_omits_species_code",
+        "euthanasia_solution_dispensed_without_witness",
+        "pdmp_submission_silently_dropped_on_error",
+        "prescriber_identity_inferred_not_authenticated",
+        "signing_credential_granted_by_single_administrator",
+        "vp_cs_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Controlled-substance records are retained for two years and are never destroyed before that term",
+      "violate_factors": [
+        "controlled_substance_record_deleted_before_retention_expiry",
+        "euthanasia_solution_dispensed_without_witness",
+        "prescriber_identity_inferred_not_authenticated",
+        "prescription_lacks_legitimate_medical_purpose",
+        "signing_credential_granted_by_single_administrator",
+        "vp_cs_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Euthanasia-solution dispensing is recorded against a named licensee and witnessed",
+      "violate_factors": [
+        "controlled_substance_record_deleted_before_retention_expiry",
+        "dispensing_logic_bypassed_by_feature_flag",
+        "epcs_signature_completed_with_single_factor",
+        "prescription_lacks_legitimate_medical_purpose",
+        "signing_credential_granted_by_single_administrator",
+        "vp_cs_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Schedule III\u2013V refills do not exceed five within six months",
+      "violate_factors": [
+        "dispensing_logic_bypassed_by_feature_flag",
+        "epcs_signature_completed_with_single_factor",
+        "prescription_lacks_legitimate_medical_purpose",
+        "refill_count_exceeds_five_for_schedule_iii_iv",
+        "schedule_ii_prescription_carries_refills",
+        "vp_cs_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Controlled-substance inventory reconciles to the millilitre with an immutable audit entry on discrepancy",
+      "violate_factors": [
+        "controlled_inventory_discrepancy_unexplained",
+        "epcs_signature_completed_with_single_factor",
+        "prescription_reissued_beyond_six_month_window",
+        "refill_count_exceeds_five_for_schedule_iii_iv",
+        "schedule_ii_prescription_carries_refills",
+        "vp_cs_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-009",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "PDMP submissions conform to the state's ASAP field layout, including the veterinary species code",
+      "violate_factors": [
+        "asap_payload_omits_species_code",
+        "controlled_inventory_discrepancy_unexplained",
+        "dea_registration_expired_at_time_of_issue",
+        "prescription_reissued_beyond_six_month_window",
+        "refill_count_exceeds_five_for_schedule_iii_iv",
+        "vp_cs_009_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-010",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A dispensing event names an authenticated prescriber, never an inferred one",
+      "violate_factors": [
+        "asap_payload_omits_species_code",
+        "controlled_inventory_discrepancy_unexplained",
+        "dea_registration_expired_at_time_of_issue",
+        "euthanasia_solution_dispensed_without_witness",
+        "pdmp_submission_silently_dropped_on_error",
+        "vp_cs_010_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-011",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Diversion alerts are triaged within one business day",
+      "violate_factors": [
+        "asap_payload_omits_species_code",
+        "euthanasia_solution_dispensed_without_witness",
+        "pdmp_submission_silently_dropped_on_error",
+        "prescriber_identity_inferred_not_authenticated",
+        "signing_credential_granted_by_single_administrator",
+        "vp_cs_011_control_absent"
+      ]
+    },
+    {
+      "act_class": "CS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CS-012",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "DEA registration is verified as current at the time of issue",
+      "violate_factors": [
+        "controlled_substance_record_deleted_before_retention_expiry",
+        "euthanasia_solution_dispensed_without_witness",
+        "prescriber_identity_inferred_not_authenticated",
+        "prescription_lacks_legitimate_medical_purpose",
+        "signing_credential_granted_by_single_administrator",
+        "vp_cs_012_control_absent"
+      ]
+    },
+    {
+      "act_class": "VC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VC-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No extralabel drug use without a valid veterinarian-client-patient relationship",
+      "violate_factors": [
+        "compounding_from_bulk_without_necessity_record",
+        "eldu_ordered_by_unlicensed_staff_member",
+        "extralabel_use_without_valid_vcpr",
+        "prohibited_eldu_substance_in_food_animal",
+        "vp_vc_001_control_absent",
+        "withdrawal_interval_absent_for_food_animal"
+      ]
+    },
+    {
+      "act_class": "VC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VC-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Substances on the prohibited extralabel list are never used in food-producing animals",
+      "violate_factors": [
+        "compounding_from_bulk_without_necessity_record",
+        "dose_exceeds_species_maximum_by_more_than_20_percent",
+        "eldu_ordered_by_unlicensed_staff_member",
+        "vfd_expiry_date_missing",
+        "vp_vc_002_control_absent",
+        "withdrawal_interval_absent_for_food_animal"
+      ]
+    },
+    {
+      "act_class": "VC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VC-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No extralabel use that risks a violative residue in the human food supply",
+      "violate_factors": [
+        "compounding_from_bulk_without_necessity_record",
+        "dose_exceeds_species_maximum_by_more_than_20_percent",
+        "telehealth_only_vcpr_where_jurisdiction_requires_in_person",
+        "vfd_expiry_date_missing",
+        "violative_residue_risk_accepted_without_assessment",
+        "vp_vc_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "VC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VC-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Extended withdrawal intervals are calculated and recorded for food-animal extralabel use",
+      "violate_factors": [
+        "dose_exceeds_species_maximum_by_more_than_20_percent",
+        "extralabel_use_without_valid_vcpr",
+        "prohibited_eldu_substance_in_food_animal",
+        "telehealth_only_vcpr_where_jurisdiction_requires_in_person",
+        "violative_residue_risk_accepted_without_assessment",
+        "vp_vc_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "VC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VC-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Compounding from bulk substances is justified by a recorded clinical necessity",
+      "violate_factors": [
+        "eldu_ordered_by_unlicensed_staff_member",
+        "extralabel_use_without_valid_vcpr",
+        "prohibited_eldu_substance_in_food_animal",
+        "violative_residue_risk_accepted_without_assessment",
+        "vp_vc_005_control_absent",
+        "withdrawal_interval_absent_for_food_animal"
+      ]
+    },
+    {
+      "act_class": "VC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VC-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Veterinary feed directives carry every mandatory field including expiry",
+      "violate_factors": [
+        "compounding_from_bulk_without_necessity_record",
+        "eldu_ordered_by_unlicensed_staff_member",
+        "prohibited_eldu_substance_in_food_animal",
+        "vfd_expiry_date_missing",
+        "vp_vc_006_control_absent",
+        "withdrawal_interval_absent_for_food_animal"
+      ]
+    },
+    {
+      "act_class": "VC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VC-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Dosing stays within the labelled species range unless an extralabel rationale is recorded",
+      "violate_factors": [
+        "compounding_from_bulk_without_necessity_record",
+        "dose_exceeds_species_maximum_by_more_than_20_percent",
+        "eldu_ordered_by_unlicensed_staff_member",
+        "telehealth_only_vcpr_where_jurisdiction_requires_in_person",
+        "vfd_expiry_date_missing",
+        "vp_vc_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "VC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VC-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Telehealth-established VCPR is honoured only where the governing jurisdiction permits it",
+      "violate_factors": [
+        "dose_exceeds_species_maximum_by_more_than_20_percent",
+        "extralabel_use_without_valid_vcpr",
+        "telehealth_only_vcpr_where_jurisdiction_requires_in_person",
+        "vfd_expiry_date_missing",
+        "violative_residue_risk_accepted_without_assessment",
+        "vp_vc_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A diagnostic result is irreversibly bound to the correct patient identity",
+      "violate_factors": [
+        "diagnostic_result_attached_to_wrong_patient_id",
+        "dicom_tag_trusted_without_validation",
+        "hl7_parser_accepts_unbounded_segment_length",
+        "malformed_hl7_message_causes_partial_patient_write",
+        "result_patient_binding_performed_outside_transaction",
+        "vp_po_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "HL7 v2 messages are parsed against a pinned profile with bounded segment lengths",
+      "violate_factors": [
+        "device_retry_loop_has_no_ceiling",
+        "diagnostic_result_attached_to_wrong_patient_id",
+        "dicom_tag_trusted_without_validation",
+        "poc_device_reachable_from_public_network_segment",
+        "result_patient_binding_performed_outside_transaction",
+        "vp_po_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A malformed device message never produces a partial patient write",
+      "violate_factors": [
+        "analyzer_result_discarded_on_parse_error_without_alert",
+        "critical_result_delivered_only_by_email",
+        "device_retry_loop_has_no_ceiling",
+        "dicom_tag_trusted_without_validation",
+        "poc_device_reachable_from_public_network_segment",
+        "vp_po_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Patient identity is matched on two independent keys before a study is filed",
+      "violate_factors": [
+        "analyzer_result_discarded_on_parse_error_without_alert",
+        "critical_result_delivered_only_by_email",
+        "hl7_parser_accepts_unbounded_segment_length",
+        "patient_identity_reassigned_without_reverification",
+        "poc_device_reachable_from_public_network_segment",
+        "vp_po_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Analyzer results carry a mapped LOINC code or are quarantined",
+      "violate_factors": [
+        "analyzer_result_discarded_on_parse_error_without_alert",
+        "diagnostic_result_attached_to_wrong_patient_id",
+        "hl7_parser_accepts_unbounded_segment_length",
+        "malformed_hl7_message_causes_partial_patient_write",
+        "patient_identity_reassigned_without_reverification",
+        "vp_po_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Device integrations enforce timeout and retry ceilings",
+      "violate_factors": [
+        "diagnostic_result_attached_to_wrong_patient_id",
+        "dicom_tag_trusted_without_validation",
+        "hl7_parser_accepts_unbounded_segment_length",
+        "malformed_hl7_message_causes_partial_patient_write",
+        "result_patient_binding_performed_outside_transaction",
+        "vp_po_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Point-of-care devices sit on an isolated network segment",
+      "violate_factors": [
+        "device_retry_loop_has_no_ceiling",
+        "diagnostic_result_attached_to_wrong_patient_id",
+        "dicom_tag_trusted_without_validation",
+        "poc_device_reachable_from_public_network_segment",
+        "result_patient_binding_performed_outside_transaction",
+        "vp_po_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Unmatched results are quarantined for human review, never discarded",
+      "violate_factors": [
+        "analyzer_result_discarded_on_parse_error_without_alert",
+        "critical_result_delivered_only_by_email",
+        "device_retry_loop_has_no_ceiling",
+        "dicom_tag_trusted_without_validation",
+        "poc_device_reachable_from_public_network_segment",
+        "vp_po_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-009",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Critical values are surfaced to the attending veterinarian through an acknowledged channel",
+      "violate_factors": [
+        "analyzer_result_discarded_on_parse_error_without_alert",
+        "critical_result_delivered_only_by_email",
+        "hl7_parser_accepts_unbounded_segment_length",
+        "patient_identity_reassigned_without_reverification",
+        "poc_device_reachable_from_public_network_segment",
+        "vp_po_009_control_absent"
+      ]
+    },
+    {
+      "act_class": "PO",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PO",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PO-010",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Modality worklist queries are scoped to the requesting practice",
+      "violate_factors": [
+        "analyzer_result_discarded_on_parse_error_without_alert",
+        "diagnostic_result_attached_to_wrong_patient_id",
+        "hl7_parser_accepts_unbounded_segment_length",
+        "malformed_hl7_message_causes_partial_patient_write",
+        "patient_identity_reassigned_without_reverification",
+        "vp_po_010_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Payment card data is never written to logs or non-validated stores",
+      "violate_factors": [
+        "consent_withdrawal_requires_phone_call_only",
+        "marketing_export_includes_opted_out_owners",
+        "owner_government_identifier_captured_in_free_text",
+        "owner_pii_transferred_without_lawful_basis",
+        "primary_account_number_written_to_application_log",
+        "vp_pd_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Withdrawing consent is no harder than granting it",
+      "violate_factors": [
+        "consent_withdrawal_requires_phone_call_only",
+        "debug_endpoint_returns_unredacted_owner_record",
+        "marketing_export_includes_opted_out_owners",
+        "owner_pii_transferred_without_lawful_basis",
+        "payment_card_stored_in_plaintext_column",
+        "vp_pd_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Owner personal data is encrypted at rest and redacted in logs",
+      "violate_factors": [
+        "consent_currency_not_checked_before_use",
+        "data_subject_request_queue_unbounded",
+        "debug_endpoint_returns_unredacted_owner_record",
+        "owner_pii_transferred_without_lawful_basis",
+        "payment_card_stored_in_plaintext_column",
+        "vp_pd_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Consent currency is checked before any secondary use",
+      "violate_factors": [
+        "consent_currency_not_checked_before_use",
+        "data_subject_request_queue_unbounded",
+        "owner_government_identifier_captured_in_free_text",
+        "payment_card_stored_in_plaintext_column",
+        "primary_account_number_written_to_application_log",
+        "vp_pd_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Data subject export completes within the statutory window",
+      "violate_factors": [
+        "consent_currency_not_checked_before_use",
+        "consent_withdrawal_requires_phone_call_only",
+        "marketing_export_includes_opted_out_owners",
+        "owner_government_identifier_captured_in_free_text",
+        "primary_account_number_written_to_application_log",
+        "vp_pd_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Cross-border transfer of owner data has a recorded lawful basis",
+      "violate_factors": [
+        "consent_withdrawal_requires_phone_call_only",
+        "debug_endpoint_returns_unredacted_owner_record",
+        "marketing_export_includes_opted_out_owners",
+        "owner_government_identifier_captured_in_free_text",
+        "owner_pii_transferred_without_lawful_basis",
+        "vp_pd_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-007",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Marketing exports honour opt-out state at export time",
+      "violate_factors": [
+        "data_subject_request_queue_unbounded",
+        "debug_endpoint_returns_unredacted_owner_record",
+        "marketing_export_includes_opted_out_owners",
+        "owner_pii_transferred_without_lawful_basis",
+        "payment_card_stored_in_plaintext_column",
+        "vp_pd_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-008",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Owner records follow the jurisdiction's retention schedule",
+      "violate_factors": [
+        "consent_currency_not_checked_before_use",
+        "data_subject_request_queue_unbounded",
+        "debug_endpoint_returns_unredacted_owner_record",
+        "payment_card_stored_in_plaintext_column",
+        "primary_account_number_written_to_application_log",
+        "vp_pd_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "PD",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PD",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PD-009",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Debug and support endpoints never return unredacted owner records",
+      "violate_factors": [
+        "consent_currency_not_checked_before_use",
+        "consent_withdrawal_requires_phone_call_only",
+        "data_subject_request_queue_unbounded",
+        "owner_government_identifier_captured_in_free_text",
+        "primary_account_number_written_to_application_log",
+        "vp_pd_009_control_absent"
+      ]
+    },
+    {
+      "act_class": "RB",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RB",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RB-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No user of one practice may reach the records of another",
+      "violate_factors": [
+        "break_glass_access_never_expires",
+        "cross_tenant_record_returned_by_endpoint",
+        "patient_id_parameter_trusted_from_client",
+        "receptionist_granted_controlled_dispensing_right",
+        "role_check_omitted_on_new_endpoint",
+        "vp_rb_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "RB",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RB",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RB-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Object ownership is checked server-side before any read",
+      "violate_factors": [
+        "authorization_decision_made_in_frontend_only",
+        "break_glass_access_never_expires",
+        "receptionist_granted_controlled_dispensing_right",
+        "role_check_omitted_on_new_endpoint",
+        "service_account_shared_across_practices",
+        "vp_rb_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "RB",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RB",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RB-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every new endpoint carries an explicit role check covered by test",
+      "violate_factors": [
+        "authorization_decision_made_in_frontend_only",
+        "break_glass_access_never_expires",
+        "patient_id_parameter_trusted_from_client",
+        "service_account_shared_across_practices",
+        "tenant_id_derived_from_user_supplied_header",
+        "vp_rb_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "RB",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RB",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RB-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The role-permission matrix is exercised by permutation tests",
+      "violate_factors": [
+        "authorization_decision_made_in_frontend_only",
+        "cross_tenant_record_returned_by_endpoint",
+        "patient_id_parameter_trusted_from_client",
+        "role_check_omitted_on_new_endpoint",
+        "tenant_id_derived_from_user_supplied_header",
+        "vp_rb_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "RB",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RB",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RB-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Break-glass access is time-boxed, logged and reviewed",
+      "violate_factors": [
+        "break_glass_access_never_expires",
+        "cross_tenant_record_returned_by_endpoint",
+        "patient_id_parameter_trusted_from_client",
+        "receptionist_granted_controlled_dispensing_right",
+        "role_check_omitted_on_new_endpoint",
+        "vp_rb_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "RB",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RB",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RB-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Clinical write rights are withheld from non-clinical roles",
+      "violate_factors": [
+        "authorization_decision_made_in_frontend_only",
+        "break_glass_access_never_expires",
+        "receptionist_granted_controlled_dispensing_right",
+        "role_check_omitted_on_new_endpoint",
+        "service_account_shared_across_practices",
+        "vp_rb_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "RB",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RB",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RB-007",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Service accounts are scoped to a single practice",
+      "violate_factors": [
+        "authorization_decision_made_in_frontend_only",
+        "break_glass_access_never_expires",
+        "patient_id_parameter_trusted_from_client",
+        "service_account_shared_across_practices",
+        "tenant_id_derived_from_user_supplied_header",
+        "vp_rb_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "RB",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RB",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RB-008",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Privilege changes revalidate the active session",
+      "violate_factors": [
+        "authorization_decision_made_in_frontend_only",
+        "cross_tenant_record_returned_by_endpoint",
+        "patient_id_parameter_trusted_from_client",
+        "role_check_omitted_on_new_endpoint",
+        "tenant_id_derived_from_user_supplied_header",
+        "vp_rb_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Commits merged to a protected branch carry a verified signature",
+      "violate_factors": [
+        "build_runner_reused_across_jobs",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "dependency_introduces_cve_above_cvss_seven",
+        "package_name_resolves_to_public_registry_first",
+        "unsigned_commit_merged_to_protected_branch",
+        "vp_sc_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Release artefacts carry verified SLSA provenance",
+      "violate_factors": [
+        "api_key_committed_in_diff",
+        "build_runner_reused_across_jobs",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "package_name_resolves_to_public_registry_first",
+        "provenance_attestation_absent_for_release_artifact",
+        "vp_sc_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Build runners are ephemeral and start from pinned images",
+      "violate_factors": [
+        "api_key_committed_in_diff",
+        "build_runner_reused_across_jobs",
+        "lockfile_bypassed_by_direct_install_step",
+        "provenance_attestation_absent_for_release_artifact",
+        "transitive_dependency_from_unverified_maintainer",
+        "vp_sc_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Dependency resolution prefers the private registry",
+      "violate_factors": [
+        "api_key_committed_in_diff",
+        "dependency_introduces_cve_above_cvss_seven",
+        "lockfile_bypassed_by_direct_install_step",
+        "transitive_dependency_from_unverified_maintainer",
+        "unsigned_commit_merged_to_protected_branch",
+        "vp_sc_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No dependency is introduced carrying a known CVE above CVSS 7.0",
+      "violate_factors": [
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "dependency_introduces_cve_above_cvss_seven",
+        "package_name_resolves_to_public_registry_first",
+        "transitive_dependency_from_unverified_maintainer",
+        "unsigned_commit_merged_to_protected_branch",
+        "vp_sc_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Dependency licences stay on the allowlist; copyleft is refused in proprietary services",
+      "violate_factors": [
+        "build_runner_reused_across_jobs",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "dependency_introduces_cve_above_cvss_seven",
+        "package_name_resolves_to_public_registry_first",
+        "provenance_attestation_absent_for_release_artifact",
+        "vp_sc_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-007",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Every release publishes an SBOM bound to the artefact digest",
+      "violate_factors": [
+        "api_key_committed_in_diff",
+        "build_runner_reused_across_jobs",
+        "copyleft_licensed_dependency_added_to_proprietary_service",
+        "lockfile_bypassed_by_direct_install_step",
+        "provenance_attestation_absent_for_release_artifact",
+        "vp_sc_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-008",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "No secret material appears in a diff",
+      "violate_factors": [
+        "api_key_committed_in_diff",
+        "lockfile_bypassed_by_direct_install_step",
+        "provenance_attestation_absent_for_release_artifact",
+        "transitive_dependency_from_unverified_maintainer",
+        "unsigned_commit_merged_to_protected_branch",
+        "vp_sc_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "SC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "SC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-SC-009",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Manifest and lockfile change atomically",
+      "violate_factors": [
+        "dependency_introduces_cve_above_cvss_seven",
+        "lockfile_bypassed_by_direct_install_step",
+        "package_name_resolves_to_public_registry_first",
+        "transitive_dependency_from_unverified_maintainer",
+        "unsigned_commit_merged_to_protected_branch",
+        "vp_sc_009_control_absent"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AI-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "AI agents never modify authentication or authorisation middleware",
+      "violate_factors": [
+        "agent_code_calls_non_allowlisted_external_host",
+        "agent_pr_modifies_authentication_middleware",
+        "agent_pr_modifies_controlled_dispensing_logic",
+        "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+        "hallucinated_dependency_not_present_in_registry",
+        "vp_ai_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AI-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "AI agents never modify controlled-substance dispensing logic without a licensed veterinarian's recorded sign-off",
+      "violate_factors": [
+        "agent_code_calls_non_allowlisted_external_host",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+        "hallucinated_dependency_not_present_in_registry",
+        "prompt_injection_marker_present_in_issue_body",
+        "vp_ai_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AI-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent-authored code executes only inside a sandboxed runner",
+      "violate_factors": [
+        "agent_change_lacks_any_human_reviewer",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+        "prompt_injection_marker_present_in_issue_body",
+        "vp_ai_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AI-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent code calls only allowlisted external hosts",
+      "violate_factors": [
+        "agent_change_lacks_any_human_reviewer",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_pr_modifies_authentication_middleware",
+        "agent_pr_modifies_controlled_dispensing_logic",
+        "prompt_injection_marker_present_in_issue_body",
+        "vp_ai_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AI-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Changed functions authored by an agent stay below cyclomatic complexity ten",
+      "violate_factors": [
+        "agent_change_lacks_any_human_reviewer",
+        "agent_code_calls_non_allowlisted_external_host",
+        "agent_pr_modifies_authentication_middleware",
+        "agent_pr_modifies_controlled_dispensing_logic",
+        "hallucinated_dependency_not_present_in_registry",
+        "vp_ai_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AI-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every imported package is verified to exist before merge",
+      "violate_factors": [
+        "agent_code_calls_non_allowlisted_external_host",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "agent_pr_modifies_controlled_dispensing_logic",
+        "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+        "hallucinated_dependency_not_present_in_registry",
+        "vp_ai_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AI-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Agent instructions derived from untrusted text are treated as tainted input",
+      "violate_factors": [
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "cyclomatic_complexity_exceeds_threshold_on_agent_diff",
+        "hallucinated_dependency_not_present_in_registry",
+        "prompt_injection_marker_present_in_issue_body",
+        "vp_ai_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "AI",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AI",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AI-008",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An agent may not disable or weaken a failing compliance test",
+      "violate_factors": [
+        "agent_change_lacks_any_human_reviewer",
+        "agent_disabled_a_failing_compliance_test",
+        "agent_instruction_sourced_from_untrusted_ticket_text",
+        "agent_pr_modifies_authentication_middleware",
+        "prompt_injection_marker_present_in_issue_body",
+        "vp_ai_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "All new database access uses parameterised queries",
+      "violate_factors": [
+        "content_security_policy_relaxed_to_unsafe_inline",
+        "path_traversal_reachable_from_upload_handler",
+        "raw_html_rendered_from_owner_supplied_note",
+        "server_side_request_forgery_reachable_from_webhook",
+        "string_concatenated_sql_introduced",
+        "vp_as_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Clinical free text is output-encoded before render",
+      "violate_factors": [
+        "content_security_policy_relaxed_to_unsafe_inline",
+        "path_traversal_reachable_from_upload_handler",
+        "server_side_request_forgery_reachable_from_webhook",
+        "stack_trace_returned_to_client",
+        "unsafe_deserialisation_of_client_payload",
+        "vp_as_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Content Security Policy is tightened, never relaxed",
+      "violate_factors": [
+        "cryptographic_primitive_hand_rolled",
+        "server_side_request_forgery_reachable_from_webhook",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload",
+        "vp_as_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "File upload handlers constrain type, size and path",
+      "violate_factors": [
+        "content_security_policy_relaxed_to_unsafe_inline",
+        "cryptographic_primitive_hand_rolled",
+        "raw_html_rendered_from_owner_supplied_note",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "vp_as_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Outbound fetches from webhooks are restricted",
+      "violate_factors": [
+        "content_security_policy_relaxed_to_unsafe_inline",
+        "path_traversal_reachable_from_upload_handler",
+        "raw_html_rendered_from_owner_supplied_note",
+        "server_side_request_forgery_reachable_from_webhook",
+        "string_concatenated_sql_introduced",
+        "vp_as_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Deserialisation is restricted to known types",
+      "violate_factors": [
+        "content_security_policy_relaxed_to_unsafe_inline",
+        "path_traversal_reachable_from_upload_handler",
+        "server_side_request_forgery_reachable_from_webhook",
+        "stack_trace_returned_to_client",
+        "unsafe_deserialisation_of_client_payload",
+        "vp_as_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-007",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Error responses omit stack traces and internal identifiers",
+      "violate_factors": [
+        "cryptographic_primitive_hand_rolled",
+        "server_side_request_forgery_reachable_from_webhook",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "unsafe_deserialisation_of_client_payload",
+        "vp_as_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-008",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Cryptographic primitives are not hand-rolled",
+      "violate_factors": [
+        "content_security_policy_relaxed_to_unsafe_inline",
+        "cryptographic_primitive_hand_rolled",
+        "raw_html_rendered_from_owner_supplied_note",
+        "stack_trace_returned_to_client",
+        "string_concatenated_sql_introduced",
+        "vp_as_008_control_absent"
+      ]
+    },
+    {
+      "act_class": "AS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AS",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AS-009",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Input validation uses allowlists on clinical identifiers",
+      "violate_factors": [
+        "content_security_policy_relaxed_to_unsafe_inline",
+        "path_traversal_reachable_from_upload_handler",
+        "raw_html_rendered_from_owner_supplied_note",
+        "server_side_request_forgery_reachable_from_webhook",
+        "string_concatenated_sql_introduced",
+        "vp_as_009_control_absent"
+      ]
+    },
+    {
+      "act_class": "HA",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "HA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-HA-001",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Concurrent clinical note writes never silently discard a clinician's text",
+      "violate_factors": [
+        "deploy_freeze_window_overridden_without_approval",
+        "inventory_decrement_race_reachable_under_load",
+        "irreversible_migration_shipped_without_backup_proof",
+        "read_modify_write_without_locking_on_shared_row",
+        "unbounded_retry_amplifies_outage",
+        "vp_ha_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "HA",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "HA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-HA-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Inventory decrements are serialised against the stock row",
+      "violate_factors": [
+        "clinical_note_last_write_wins_silently",
+        "deploy_freeze_window_overridden_without_approval",
+        "irreversible_migration_shipped_without_backup_proof",
+        "read_modify_write_without_locking_on_shared_row",
+        "unbounded_retry_amplifies_outage",
+        "vp_ha_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "HA",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "HA",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-HA-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Deploy freeze windows for emergency hours are honoured",
+      "violate_factors": [
+        "clinical_note_last_write_wins_silently",
+        "deploy_freeze_window_overridden_without_approval",
+        "inventory_decrement_race_reachable_under_load",
+        "read_modify_write_without_locking_on_shared_row",
+        "unbounded_retry_amplifies_outage",
+        "vp_ha_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "HA",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "HA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-HA-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Migrations are reversible or ship with proven backups",
+      "violate_factors": [
+        "deploy_freeze_window_overridden_without_approval",
+        "inventory_decrement_race_reachable_under_load",
+        "irreversible_migration_shipped_without_backup_proof",
+        "read_modify_write_without_locking_on_shared_row",
+        "unbounded_retry_amplifies_outage",
+        "vp_ha_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "HA",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "HA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-HA-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Retries are bounded and circuit-broken against external labs",
+      "violate_factors": [
+        "clinical_note_last_write_wins_silently",
+        "deploy_freeze_window_overridden_without_approval",
+        "irreversible_migration_shipped_without_backup_proof",
+        "read_modify_write_without_locking_on_shared_row",
+        "unbounded_retry_amplifies_outage",
+        "vp_ha_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "HA",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "HA",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-HA-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Load tests cover the emergency-hospital concurrency profile",
+      "violate_factors": [
+        "clinical_note_last_write_wins_silently",
+        "deploy_freeze_window_overridden_without_approval",
+        "inventory_decrement_race_reachable_under_load",
+        "read_modify_write_without_locking_on_shared_row",
+        "unbounded_retry_amplifies_outage",
+        "vp_ha_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "RR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RR-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The audit trail is append-only and never updated in place",
+      "violate_factors": [
+        "audit_logging_disabled_for_performance",
+        "audit_row_updated_in_place",
+        "export_omits_realised_adverse_contest_rate",
+        "medical_record_amendment_overwrites_original",
+        "retention_clock_reset_by_record_edit",
+        "vp_rr_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "RR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RR-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A medical record amendment preserves the original entry",
+      "violate_factors": [
+        "audit_logging_disabled_for_performance",
+        "clock_source_client_supplied",
+        "export_omits_realised_adverse_contest_rate",
+        "rationale_summarised_after_the_fact",
+        "retention_clock_reset_by_record_edit",
+        "vp_rr_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "RR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RR-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Decision rationale is written at resolution time, not summarised afterwards",
+      "violate_factors": [
+        "audit_row_updated_in_place",
+        "clock_source_client_supplied",
+        "export_omits_realised_adverse_contest_rate",
+        "medical_record_amendment_overwrites_original",
+        "rationale_summarised_after_the_fact",
+        "vp_rr_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "RR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RR-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Audit exports carry the standing declaration in force",
+      "violate_factors": [
+        "audit_logging_disabled_for_performance",
+        "audit_row_updated_in_place",
+        "clock_source_client_supplied",
+        "medical_record_amendment_overwrites_original",
+        "retention_clock_reset_by_record_edit",
+        "vp_rr_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "RR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RR-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Audit exports carry the realised adverse-contest rate as two counts",
+      "violate_factors": [
+        "audit_logging_disabled_for_performance",
+        "export_omits_realised_adverse_contest_rate",
+        "medical_record_amendment_overwrites_original",
+        "rationale_summarised_after_the_fact",
+        "retention_clock_reset_by_record_edit",
+        "vp_rr_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "RR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RR-006",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Retention periods are configured per jurisdiction and never reset by an edit",
+      "violate_factors": [
+        "audit_row_updated_in_place",
+        "clock_source_client_supplied",
+        "export_omits_realised_adverse_contest_rate",
+        "rationale_summarised_after_the_fact",
+        "retention_clock_reset_by_record_edit",
+        "vp_rr_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "RR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "RR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-RR-007",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Record timestamps come from a trusted monotonic source",
+      "violate_factors": [
+        "audit_logging_disabled_for_performance",
+        "audit_row_updated_in_place",
+        "clock_source_client_supplied",
+        "medical_record_amendment_overwrites_original",
+        "rationale_summarised_after_the_fact",
+        "vp_rr_007_control_absent"
+      ]
+    },
+    {
+      "act_class": "AW",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AW",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AW-001",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Procedures stay within the delegated scope of practice for the performing role",
+      "violate_factors": [
+        "anaesthesia_monitoring_gap_exceeds_protocol",
+        "controlled_analgesia_omitted_without_rationale",
+        "procedure_performed_outside_licensed_scope",
+        "surgical_task_delegated_to_unqualified_staff",
+        "vp_aw_001_control_absent",
+        "welfare_inspection_finding_left_unremediated"
+      ]
+    },
+    {
+      "act_class": "AW",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AW",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AW-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Anaesthesia monitoring records are complete for the procedure duration",
+      "violate_factors": [
+        "anaesthesia_monitoring_gap_exceeds_protocol",
+        "controlled_analgesia_omitted_without_rationale",
+        "procedure_performed_outside_licensed_scope",
+        "surgical_task_delegated_to_unqualified_staff",
+        "vp_aw_002_control_absent",
+        "welfare_inspection_finding_left_unremediated"
+      ]
+    },
+    {
+      "act_class": "AW",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AW",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AW-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An adequate veterinary care plan is on file for regulated facilities",
+      "violate_factors": [
+        "anaesthesia_monitoring_gap_exceeds_protocol",
+        "controlled_analgesia_omitted_without_rationale",
+        "procedure_performed_outside_licensed_scope",
+        "surgical_task_delegated_to_unqualified_staff",
+        "vp_aw_003_control_absent",
+        "welfare_inspection_finding_left_unremediated"
+      ]
+    },
+    {
+      "act_class": "AW",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AW",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AW-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Analgesia decisions are documented with a rationale",
+      "violate_factors": [
+        "anaesthesia_monitoring_gap_exceeds_protocol",
+        "controlled_analgesia_omitted_without_rationale",
+        "procedure_performed_outside_licensed_scope",
+        "surgical_task_delegated_to_unqualified_staff",
+        "vp_aw_004_control_absent",
+        "welfare_inspection_finding_left_unremediated"
+      ]
+    },
+    {
+      "act_class": "AW",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AW",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AW-005",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Welfare inspection findings are remediated within the stated window",
+      "violate_factors": [
+        "anaesthesia_monitoring_gap_exceeds_protocol",
+        "controlled_analgesia_omitted_without_rationale",
+        "procedure_performed_outside_licensed_scope",
+        "surgical_task_delegated_to_unqualified_staff",
+        "vp_aw_005_control_absent",
+        "welfare_inspection_finding_left_unremediated"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-GV-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No configuration removes the affected party's path to contest an automated decision",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "automated_decision_final_with_no_human_route",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export",
+        "vp_gv_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-GV-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No system exploits vulnerabilities of age, disability or socio-economic situation, and no untargeted biometric scraping is enabled",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export",
+        "vp_gv_002_control_absent",
+        "vulnerability_of_owner_exploited_by_pricing_logic"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-GV-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The constitution declares whether any party holds contest standing adverse to grants",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "audit_finding_read_during_retrieval",
+        "biometric_scraping_of_untargeted_images_enabled",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "vp_gv_003_control_absent",
+        "vulnerability_of_owner_exploited_by_pricing_logic"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-GV-004",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Constitutional parameters change only by legislative enactment",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "automated_decision_final_with_no_human_route",
+        "biometric_scraping_of_untargeted_images_enabled",
+        "standing_declaration_absent_from_export",
+        "vp_gv_004_control_absent",
+        "vulnerability_of_owner_exploited_by_pricing_logic"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-GV-005",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Reporter output never reaches the adjudication input path",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "automated_decision_final_with_no_human_route",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export",
+        "vp_gv_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-GV-006",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The audit register is disjoint from the precedent store and is never read by resolve",
+      "violate_factors": [
+        "audit_finding_read_during_retrieval",
+        "charging_threshold_tuned_by_adjudicating_service",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "standing_declaration_absent_from_export",
+        "vp_gv_006_control_absent",
+        "vulnerability_of_owner_exploited_by_pricing_logic"
+      ]
+    },
+    {
+      "act_class": "GV",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "GV",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-GV-007",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every arrival that is not charged leaves exactly one docket entry",
+      "violate_factors": [
+        "appeal_path_removed_by_configuration",
+        "audit_finding_read_during_retrieval",
+        "biometric_scraping_of_untargeted_images_enabled",
+        "reporter_bulletin_injected_into_adjudicator_context",
+        "vp_gv_007_control_absent",
+        "vulnerability_of_owner_exploited_by_pricing_logic"
+      ]
+    },
+    {
+      "act_class": "BN",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "BN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-BN-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The breach-notification clock for each jurisdiction is a legislated constant that no configuration, feature flag or tenant setting can extend, pause or disable",
+      "violate_factors": [
+        "breach_notification_deadline_exposed_as_tenant_setting",
+        "bulk_export_anomaly_alert_disabled_to_cut_noise",
+        "incident_runbook_reference_removed_from_alert_payload",
+        "notification_clock_started_at_confirmation_not_discovery",
+        "vendor_contract_template_drops_breach_notice_clause",
+        "vp_bn_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "BN",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "BN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-BN-002",
+      "kind": "provision",
+      "office": "office:compliance",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Breach-detection telemetry on owner-data stores stays wired to the on-call path and every detection alert carries a reference to the incident runbook",
+      "violate_factors": [
+        "access_log_retention_shorter_than_notification_lookback",
+        "bulk_export_anomaly_alert_disabled_to_cut_noise",
+        "incident_runbook_reference_removed_from_alert_payload",
+        "vendor_contract_template_drops_breach_notice_clause",
+        "vendor_incident_notices_routed_to_unmonitored_mailbox",
+        "vp_bn_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "BN",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "BN",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-BN-003",
+      "kind": "provision",
+      "office": "office:legal-counsel",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Every processor and integration vendor that holds owner data is bound to notify the practice of a breach without undue delay, and vendor incident notices land in a monitored incident queue",
+      "violate_factors": [
+        "access_log_retention_shorter_than_notification_lookback",
+        "breach_scope_computed_from_sampled_logs_only",
+        "owner_notice_omits_statutory_content_elements",
+        "vendor_contract_template_drops_breach_notice_clause",
+        "vendor_incident_notices_routed_to_unmonitored_mailbox",
+        "vp_bn_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-DR-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "A theft or significant loss of a controlled substance is notified to the DEA within one business day of discovery and followed by an electronic Form 106 within forty-five days; no threshold, flag or workflow setting suppresses either filing",
+      "violate_factors": [
+        "biennial_inventory_job_disabled_or_skipped",
+        "form_106_filing_left_as_manual_optional_step",
+        "order_form_records_purged_before_two_years",
+        "schedule_ii_order_submitted_outside_csos_or_form_222",
+        "theft_or_loss_report_suppressed_below_configured_threshold",
+        "vp_dr_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-DR-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Schedule II orders are placed only through CSOS with a DEA-issued digital certificate or on an official Form 222, and the order records are retained for two years at the registered location",
+      "violate_factors": [
+        "biennial_inventory_job_disabled_or_skipped",
+        "diversion_analytics_disabled_for_named_practice",
+        "inventory_count_auto_filled_from_ledger_balance",
+        "order_form_records_purged_before_two_years",
+        "schedule_ii_order_submitted_outside_csos_or_form_222",
+        "vp_dr_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-DR-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "The biennial controlled-substance inventory is taken at least every two years by an actual count, signed by a named licensee, and is never skipped, auto-filled from the ledger balance or left unsigned",
+      "violate_factors": [
+        "anomalous_dispensing_alerts_routed_to_null_sink",
+        "biennial_inventory_job_disabled_or_skipped",
+        "csos_signature_replaced_by_shared_practice_credential",
+        "diversion_analytics_disabled_for_named_practice",
+        "inventory_count_auto_filled_from_ledger_balance",
+        "vp_dr_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "DR",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "DR",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-DR-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Diversion analytics over dispensing and inventory events run for every practice and route their findings to the medical director; they are never disabled, sampled or pointed at a null sink for a named tenant",
+      "violate_factors": [
+        "anomalous_dispensing_alerts_routed_to_null_sink",
+        "csos_signature_replaced_by_shared_practice_credential",
+        "diversion_analytics_disabled_for_named_practice",
+        "loss_discovery_timestamp_editable_after_the_fact",
+        "order_form_line_items_accepted_without_receipt_match",
+        "vp_dr_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "CC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CC",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CC-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "No autodialed, prerecorded or artificial-voice call and no automated text is sent to a wireless number without recorded prior express consent for that purpose, written where the purpose is marketing, and no campaign path bypasses the consent check",
+      "violate_factors": [
+        "auto_renewal_enrolled_by_prechecked_box",
+        "automated_text_sent_without_recorded_prior_consent",
+        "cancellation_requires_phone_call_while_signup_is_online",
+        "consent_check_bypassed_for_reactivation_campaign",
+        "electronic_records_delivered_without_esign_consent",
+        "vp_cc_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "CC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CC-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Wellness-plan and subscription enrolment discloses the automatic-renewal terms before the charge, takes affirmative consent, sends a renewal reminder, and offers cancellation through the same channel and in no more steps than enrolment",
+      "violate_factors": [
+        "auto_renewal_enrolled_by_prechecked_box",
+        "cancellation_requires_phone_call_while_signup_is_online",
+        "electronic_records_delivered_without_esign_consent",
+        "esign_consent_inferred_from_portal_login",
+        "vp_cc_002_control_absent",
+        "written_prescription_option_hidden_from_client"
+      ]
+    },
+    {
+      "act_class": "CC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CC-003",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Before any record, invoice or notice that the law requires in writing is delivered electronically in place of paper, the client's informed E-SIGN consent is captured with the required disclosures and can be withdrawn",
+      "violate_factors": [
+        "electronic_records_delivered_without_esign_consent",
+        "esign_consent_inferred_from_portal_login",
+        "prescription_copy_conditioned_on_in_house_purchase",
+        "records_release_delayed_beyond_state_deadline",
+        "vp_cc_003_control_absent",
+        "written_prescription_option_hidden_from_client"
+      ]
+    },
+    {
+      "act_class": "CC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CC-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Where the governing state so requires, the client is offered a written prescription in place of in-house dispensing and the offer is never hidden, fee-gated or conditioned on a purchase",
+      "violate_factors": [
+        "minor_account_created_without_guardian_consent",
+        "prescription_copy_conditioned_on_in_house_purchase",
+        "records_release_blocked_until_balance_paid",
+        "records_release_delayed_beyond_state_deadline",
+        "vp_cc_004_control_absent",
+        "written_prescription_option_hidden_from_client"
+      ]
+    },
+    {
+      "act_class": "CC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CC-005",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A client's request for a copy or transfer of the patient's medical record is fulfilled within the state board's deadline and is not conditioned on payment of an outstanding balance",
+      "violate_factors": [
+        "minor_account_created_without_guardian_consent",
+        "payment_plan_signed_by_under_eighteen_account",
+        "records_release_blocked_until_balance_paid",
+        "records_release_delayed_beyond_state_deadline",
+        "stop_reply_ignored_by_reminder_engine",
+        "vp_cc_005_control_absent"
+      ]
+    },
+    {
+      "act_class": "CC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "CC",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-CC-006",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "A client account whose holder is under eighteen is created only with a parent or guardian's recorded consent and cannot enter a payment plan, wellness subscription or records-release authorisation on its own",
+      "violate_factors": [
+        "marketing_texts_scheduled_outside_permitted_hours",
+        "minor_account_created_without_guardian_consent",
+        "payment_plan_signed_by_under_eighteen_account",
+        "renewal_reminder_removed_before_annual_charge",
+        "stop_reply_ignored_by_reminder_engine",
+        "vp_cc_006_control_absent"
+      ]
+    },
+    {
+      "act_class": "PS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PS-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Every weight-based dose is computed from a current recorded weight in a declared unit, and a unit mismatch or a dose outside the species range is a hard stop, never a dismissable warning or an override button",
+      "violate_factors": [
+        "critical_value_alert_suppressed_by_quiet_hours_setting",
+        "dose_computed_from_stale_or_absent_weight",
+        "triage_assistant_issues_treatment_without_handoff",
+        "triage_assistant_presents_as_licensed_veterinarian",
+        "vp_ps_001_control_absent",
+        "weight_unit_mismatch_downgraded_to_dismissable_warning"
+      ]
+    },
+    {
+      "act_class": "PS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PS-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "An AI triage or advice tool discloses on every turn that it is automated, never presents itself as a licensed veterinarian, never issues a diagnosis or treatment instruction, and hands off to licensed staff on any red-flag presentation",
+      "violate_factors": [
+        "critical_value_alert_downgraded_to_passive_notification",
+        "critical_value_alert_suppressed_by_quiet_hours_setting",
+        "euthanasia_performed_without_recorded_owner_consent",
+        "triage_assistant_issues_treatment_without_handoff",
+        "triage_assistant_presents_as_licensed_veterinarian",
+        "vp_ps_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "PS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PS-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Critical-value alerting to the attending veterinarian is never suppressed, quiet-houred, auto-acknowledged or downgraded to a passive notification, and any change to an alert route is reviewed by the medical director",
+      "violate_factors": [
+        "critical_value_alert_downgraded_to_passive_notification",
+        "critical_value_alert_suppressed_by_quiet_hours_setting",
+        "dose_range_hard_stop_replaced_by_override_button",
+        "euthanasia_performed_without_recorded_owner_consent",
+        "remains_custody_transfer_recorded_without_tag_scan",
+        "vp_ps_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "PS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PS",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PS-004",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Euthanasia is recorded only against a consent signed by a verified owner or authorised agent with the remains disposition chosen beforehand, and every transfer of remains is recorded against a scanned tag through to return or disposal",
+      "violate_factors": [
+        "alert_acknowledgement_auto_completed_by_timer",
+        "dose_range_hard_stop_replaced_by_override_button",
+        "euthanasia_performed_without_recorded_owner_consent",
+        "remains_custody_transfer_recorded_without_tag_scan",
+        "triage_assistant_disclosure_shown_once_per_session_only",
+        "vp_ps_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "PH",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PH-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T0",
+      "title": "Reporting of a reportable or zoonotic disease to the state animal-health official and, where required, USDA APHIS is never gated behind a practice toggle, filtered by a pruned condition list or batched past the statutory window",
+      "violate_factors": [
+        "rabies_certificate_issued_under_technician_signature",
+        "rabies_certificate_signature_auto_applied_from_template",
+        "reportable_condition_list_pruned_to_reduce_alerts",
+        "reportable_disease_report_gated_behind_practice_toggle",
+        "suspected_abuse_report_option_removed_from_chart",
+        "vp_ph_001_control_absent"
+      ]
+    },
+    {
+      "act_class": "PH",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PH-002",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "A rabies vaccination certificate is issued only under the signature of a currently licensed veterinarian, never a technician's, an expired licence or a signature applied automatically from a template",
+      "violate_factors": [
+        "abuse_report_visible_to_client_on_portal",
+        "microchip_number_accepted_without_format_validation",
+        "rabies_certificate_issued_under_technician_signature",
+        "rabies_certificate_signature_auto_applied_from_template",
+        "suspected_abuse_report_option_removed_from_chart",
+        "vp_ph_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "PH",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PH-003",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "The path for a clinician to record and file a suspected animal-abuse report stays reachable from the chart, is visible only to authorised roles and is never exposed on the client portal",
+      "violate_factors": [
+        "abuse_report_visible_to_client_on_portal",
+        "microchip_number_accepted_without_format_validation",
+        "microchip_registry_submission_failures_silently_dropped",
+        "report_dispatch_batched_past_statutory_window",
+        "suspected_abuse_report_option_removed_from_chart",
+        "vp_ph_003_control_absent"
+      ]
+    },
+    {
+      "act_class": "PH",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "PH",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-PH-004",
+      "kind": "provision",
+      "office": "office:safety-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Microchip identifiers are validated against the ISO format, registry submissions are confirmed or surfaced on failure, and ownership on a chip record changes only after verified ownership, never by client self-service",
+      "violate_factors": [
+        "microchip_number_accepted_without_format_validation",
+        "microchip_owner_reassigned_from_client_self_service",
+        "microchip_registry_submission_failures_silently_dropped",
+        "rabies_certificate_issuable_with_expired_licence",
+        "report_dispatch_batched_past_statutory_window",
+        "vp_ph_004_control_absent"
+      ]
+    },
+    {
+      "act_class": "AX",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AX",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AX-001",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "The client portal and mobile check-in app carry an accessibility regression gate at WCAG 2.2 Level AA in the release pipeline, and a Level A or AA failure blocks release rather than being downgraded to a warning",
+      "violate_factors": [
+        "accessibility_gate_removed_from_portal_pipeline",
+        "checkin_session_expires_with_no_extension",
+        "consent_signature_requires_mouse_drag_only",
+        "required_field_error_shown_by_colour_only",
+        "vp_ax_001_control_absent",
+        "wcag_failures_downgraded_to_warnings_in_ci"
+      ]
+    },
+    {
+      "act_class": "AX",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "AX",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-AX-002",
+      "kind": "provision",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Consent, e-signature and check-in flows are operable with assistive technology: keyboard-only completion, accessible names on every control, errors and status conveyed in text not colour alone, and session timeouts the client can extend",
+      "violate_factors": [
+        "checkin_session_expires_with_no_extension",
+        "consent_signature_requires_mouse_drag_only",
+        "custom_control_shipped_without_accessible_name",
+        "focus_trapped_in_consent_modal",
+        "required_field_error_shown_by_colour_only",
+        "vp_ax_002_control_absent"
+      ]
+    },
+    {
+      "act_class": "VP-VAL-SHIP",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O"
+        ],
+        "bound": {
+          "max_open_items": 1,
+          "ticket_required": true
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VAL-SHIP",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Ship fast or test fully: ship with at most one open non-security checklist item, with a remediation ticket",
+      "violate_factors": []
+    },
+    {
+      "act_class": "VP-VAL-COST",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "K"
+        ],
+        "bound": {
+          "max_controls_removed": 0
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VAL-COST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Cost or quality: cost cuts may not remove a documented quality control",
+      "violate_factors": []
+    },
+    {
+      "act_class": "VP-VAL-CUST",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "O"
+        ],
+        "bound": {
+          "max_regression_pct": 5
+        },
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VAL-CUST",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T2",
+      "title": "Customer first: customer-visible latency regressions need a stated customer benefit",
+      "violate_factors": []
+    },
+    {
+      "act_class": "VP-VAL-ACC",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [],
+        "bound": {},
+        "codified": false,
+        "contexts": [],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VAL-ACC",
+      "kind": "value",
+      "office": "office:accessibility-lead",
+      "role": "coding-agent",
+      "tier": "T1",
+      "title": "Accessibility beyond law: never remove an existing accessibility feature without a token from the accessibility lead",
+      "violate_factors": []
+    },
+    {
+      "act_class": "VP-VAL-STYLE",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "internal-prototype",
+          "spike"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VAL-STYLE",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "House style for alternative text and messages",
+      "violate_factors": []
+    },
+    {
+      "act_class": "VP-VAL-DOCS",
+      "canon_version": "vetpoc-constitution-corpus-canon-000001",
+      "family": "VAL",
+      "gloss": {
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {},
+        "codified": false,
+        "contexts": [
+          "hotfix",
+          "internal-prototype"
+        ],
+        "holdings": [],
+        "no_waiver_classes": [],
+        "priorities": [],
+        "version": 1
+      },
+      "id": "VP-VAL-DOCS",
+      "kind": "value",
+      "office": null,
+      "role": "coding-agent",
+      "tier": "T3",
+      "title": "Documentation currency: docs updated with the change",
+      "violate_factors": []
+    }
+  ],
+  "offices": {
+    "office:accessibility-lead": {
+      "id": "office:accessibility-lead",
+      "may_issue_for": [
+        "VP-VAL-ACC"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:compliance": {
+      "id": "office:compliance",
+      "may_issue_for": [
+        "BN",
+        "GV",
+        "incident-hotfix"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:legal-counsel": {
+      "id": "office:legal-counsel",
+      "may_issue_for": [
+        "BN",
+        "GV"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:safety-lead": {
+      "id": "office:safety-lead",
+      "may_issue_for": [
+        "AI",
+        "AW",
+        "CS",
+        "DR",
+        "HA",
+        "PH",
+        "PO",
+        "PS",
+        "RR",
+        "VC"
+      ],
+      "reporting_line": "governance"
+    }
+  },
+  "pack": "vetpoc-constitution-corpus",
+  "standing_emergency": {
+    "act_classes": [
+      "incident-hotfix"
+    ],
+    "office": "office:compliance",
+    "requires": "recorded_cause"
+  },
+  "version": "vetpoc-constitution-corpus-canon-000001"
+}
