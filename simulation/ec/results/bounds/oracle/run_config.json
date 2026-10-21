@@ -1,0 +1,13 @@
+{
+ "packs": "all",
+ "arms": "A,B,C,D",
+ "seeds": "11",
+ "days": 365,
+ "agent": "policy:oracle",
+ "mode": "oracle",
+ "out": "simulation/ec/results/bounds/oracle",
+ "checkpoint_every": 0,
+ "resume": false,
+ "progress_every": 30,
+ "quiet": false
+}

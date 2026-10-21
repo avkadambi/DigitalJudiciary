@@ -1,0 +1,165 @@
+{
+ "elapsed_s": 45.20508408546448,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.3255436420440674,
+   "proposals": 6672,
+   "out": "simulation/ec/results/bounds/adversarial/vetpoc/A/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.1467480659484863,
+   "proposals": 6672,
+   "out": "simulation/ec/results/bounds/adversarial/vetpoc/B/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.4062438011169434,
+   "proposals": 6672,
+   "out": "simulation/ec/results/bounds/adversarial/vetpoc/C/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 1.5523755550384521,
+   "proposals": 6672,
+   "out": "simulation/ec/results/bounds/adversarial/vetpoc/D/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.681180477142334,
+   "proposals": 6727,
+   "out": "simulation/ec/results/bounds/adversarial/semifab/A/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.393810987472534,
+   "proposals": 6727,
+   "out": "simulation/ec/results/bounds/adversarial/semifab/B/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.7692594528198242,
+   "proposals": 6727,
+   "out": "simulation/ec/results/bounds/adversarial/semifab/C/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 1.9426674842834473,
+   "proposals": 6727,
+   "out": "simulation/ec/results/bounds/adversarial/semifab/D/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.9298160076141357,
+   "proposals": 6686,
+   "out": "simulation/ec/results/bounds/adversarial/frontierllm/A/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.732541799545288,
+   "proposals": 6686,
+   "out": "simulation/ec/results/bounds/adversarial/frontierllm/B/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.913377046585083,
+   "proposals": 6686,
+   "out": "simulation/ec/results/bounds/adversarial/frontierllm/C/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 2.2171473503112793,
+   "proposals": 6686,
+   "out": "simulation/ec/results/bounds/adversarial/frontierllm/D/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 2.056129217147827,
+   "proposals": 6674,
+   "out": "simulation/ec/results/bounds/adversarial/dcvigil/A/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.800332546234131,
+   "proposals": 6674,
+   "out": "simulation/ec/results/bounds/adversarial/dcvigil/B/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 2.0656776428222656,
+   "proposals": 6674,
+   "out": "simulation/ec/results/bounds/adversarial/dcvigil/C/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 2.1962311267852783,
+   "proposals": 6674,
+   "out": "simulation/ec/results/bounds/adversarial/dcvigil/D/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.9524719715118408,
+   "proposals": 6667,
+   "out": "simulation/ec/results/bounds/adversarial/meridian/A/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.683995246887207,
+   "proposals": 6667,
+   "out": "simulation/ec/results/bounds/adversarial/meridian/B/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.9594345092773438,
+   "proposals": 6667,
+   "out": "simulation/ec/results/bounds/adversarial/meridian/C/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 2.0212979316711426,
+   "proposals": 6667,
+   "out": "simulation/ec/results/bounds/adversarial/meridian/D/seed-11"
+  }
+ ]
+}

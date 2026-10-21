@@ -1,0 +1,805 @@
+{
+ "elapsed_s": 478.09478282928467,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 2.8477299213409424,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/A/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 2.8815207481384277,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/A/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 2.7926743030548096,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/A/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 2.812584400177002,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/A/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 3.087082862854004,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/A/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 4.39813756942749,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/B/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 4.413188934326172,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/B/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 4.272560358047485,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/B/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 4.088453769683838,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/B/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 4.074398756027222,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/B/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 3.2148120403289795,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/C/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 3.1025426387786865,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/C/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 2.9773755073547363,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/C/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 2.9748034477233887,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/C/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 3.0920534133911133,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/C/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 3.6703109741210938,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/D/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 4.184554100036621,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/D/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 3.558156728744507,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/D/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 3.597311496734619,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/D/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 3.87597393989563,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/pressure_sensitive/vetpoc/D/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 3.4118800163269043,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/A/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 3.554082155227661,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/A/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 3.9199366569519043,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/A/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 4.000875234603882,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/A/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 3.932631015777588,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/A/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 4.908148288726807,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/B/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 5.378252744674683,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/B/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 4.726507186889648,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/B/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 4.855795860290527,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/B/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 5.186317205429077,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/B/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 3.728160858154297,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/C/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 3.491649627685547,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/C/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 3.6952714920043945,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/C/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 3.5984292030334473,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/C/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 3.527148723602295,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/C/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 4.432987451553345,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/D/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 4.253050088882446,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/D/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 4.832996845245361,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/D/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 4.09467077255249,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/D/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 4.222423315048218,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/pressure_sensitive/semifab/D/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 4.162995338439941,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/A/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 4.074798822402954,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/A/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 4.36243462562561,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/A/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 4.188540697097778,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/A/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 4.2204883098602295,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/A/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 5.395241737365723,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/B/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 5.385245084762573,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/B/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 5.540948152542114,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/B/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 5.448910713195801,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/B/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 6.170358180999756,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/B/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 4.523199796676636,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/C/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 4.771271467208862,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/C/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 4.692893981933594,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/C/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 4.690047025680542,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/C/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 4.646054983139038,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/C/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 5.113036394119263,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/D/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 5.016949892044067,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/D/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 5.16231632232666,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/D/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 5.225331783294678,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/D/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 5.453698635101318,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/pressure_sensitive/frontierllm/D/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 4.5889739990234375,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/A/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 4.379887104034424,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/A/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 4.788792371749878,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/A/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 4.377257585525513,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/A/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 5.072887659072876,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/A/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 6.748933792114258,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/B/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 6.556622505187988,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/B/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 5.92665433883667,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/B/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 5.418082237243652,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/B/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 5.723029851913452,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/B/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 4.291084289550781,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/C/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 4.673362493515015,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/C/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 4.366188287734985,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/C/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 4.58978009223938,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/C/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 4.508947372436523,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/C/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 5.471268653869629,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/D/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 5.92625880241394,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/D/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 5.730270147323608,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/D/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 5.454240798950195,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/D/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 5.509215593338013,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/pressure_sensitive/dcvigil/D/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 4.641771554946899,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/A/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 4.2473437786102295,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/A/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 4.133327960968018,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/A/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 5.419803142547607,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/A/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 4.825603246688843,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/A/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 5.334279537200928,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/B/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 5.638982057571411,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/B/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 5.390120267868042,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/B/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 6.077589511871338,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/B/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 5.273260831832886,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/B/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 3.9699387550354004,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/C/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 4.285629034042358,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/C/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 4.261014699935913,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/C/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 4.310427665710449,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/C/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 4.3677990436553955,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/C/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 5.0680224895477295,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/D/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 4.998013973236084,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/D/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 4.924467325210571,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/D/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 5.075271129608154,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/D/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 4.921093463897705,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/pressure_sensitive/meridian/D/seed-23"
+  }
+ ]
+}

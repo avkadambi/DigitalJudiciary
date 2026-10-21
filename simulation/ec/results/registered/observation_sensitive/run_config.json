@@ -1,0 +1,13 @@
+{
+ "packs": "all",
+ "arms": "A,B,C,D",
+ "seeds": "11,13,17,19,23",
+ "days": 365,
+ "agent": "policy:observation_sensitive",
+ "mode": "oracle",
+ "out": "simulation/ec/results/registered/observation_sensitive",
+ "checkpoint_every": 30,
+ "resume": true,
+ "progress_every": 30,
+ "quiet": true
+}

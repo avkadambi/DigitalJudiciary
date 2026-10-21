@@ -1,0 +1,13 @@
+{
+ "packs": "all",
+ "arms": "D",
+ "seeds": "11",
+ "days": 365,
+ "agent": "llm:anthropic:sonnet",
+ "mode": "dry",
+ "out": "simulation/ec/results/llm_dry",
+ "checkpoint_every": 0,
+ "resume": false,
+ "progress_every": 30,
+ "quiet": false
+}

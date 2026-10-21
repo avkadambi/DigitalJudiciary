@@ -1,0 +1,805 @@
+{
+ "elapsed_s": 370.0918343067169,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 2.2909674644470215,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/A/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 2.3234024047851562,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/A/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 2.0858993530273438,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/A/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 2.192922592163086,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/A/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 2.21797776222229,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/A/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 3.3228418827056885,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/B/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 3.6075496673583984,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/B/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 3.2628183364868164,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/B/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 3.7186033725738525,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/B/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 3.6444013118743896,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/B/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 2.8290486335754395,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/C/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 2.524712324142456,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/C/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 2.9462921619415283,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/C/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 2.6382176876068115,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/C/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 2.504066228866577,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/C/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 3.3084940910339355,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/D/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 3.224057197570801,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/D/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 2.9361233711242676,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/D/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 3.0376434326171875,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/D/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 3.1754343509674072,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/misreporting/vetpoc/D/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 3.371591567993164,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/misreporting/semifab/A/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 3.0173499584198,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/misreporting/semifab/A/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 2.8938238620758057,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/misreporting/semifab/A/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 3.0415074825286865,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/misreporting/semifab/A/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 2.902029514312744,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/misreporting/semifab/A/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 3.7137794494628906,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/misreporting/semifab/B/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 3.6779253482818604,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/misreporting/semifab/B/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 3.7381153106689453,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/misreporting/semifab/B/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 3.58431339263916,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/misreporting/semifab/B/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 3.7993688583374023,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/misreporting/semifab/B/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 3.053135633468628,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/misreporting/semifab/C/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 3.0778040885925293,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/misreporting/semifab/C/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 3.021927833557129,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/misreporting/semifab/C/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 3.1281120777130127,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/misreporting/semifab/C/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 2.8508105278015137,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/misreporting/semifab/C/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 3.6413323879241943,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/misreporting/semifab/D/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 4.012939691543579,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/misreporting/semifab/D/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 3.6583521366119385,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/misreporting/semifab/D/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 3.48244047164917,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/misreporting/semifab/D/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 4.159250736236572,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/misreporting/semifab/D/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 3.280198097229004,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/A/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 3.264394998550415,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/A/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 3.2412209510803223,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/A/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 3.2643661499023438,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/A/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 3.4605934619903564,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/A/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 4.361965894699097,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/B/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 4.265692949295044,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/B/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 4.251993179321289,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/B/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 4.2090582847595215,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/B/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 4.350724220275879,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/B/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 3.332519292831421,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/C/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 3.3343923091888428,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/C/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 3.3682138919830322,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/C/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 3.4957408905029297,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/C/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 3.3011441230773926,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/C/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 3.768026828765869,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/D/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 3.8768391609191895,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/D/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 3.8531932830810547,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/D/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 3.962125301361084,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/D/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 3.8525586128234863,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/misreporting/frontierllm/D/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 3.425166130065918,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/A/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 3.3617613315582275,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/A/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 3.2983219623565674,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/A/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 3.2624497413635254,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/A/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 3.2369742393493652,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/A/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 4.160236597061157,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/B/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 4.132893800735474,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/B/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 4.355860471725464,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/B/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 4.230406284332275,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/B/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 4.13355016708374,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/B/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 3.3194518089294434,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/C/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 3.663480520248413,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/C/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 3.4131064414978027,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/C/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 3.3855273723602295,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/C/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 3.347996711730957,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/C/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 3.8267600536346436,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/D/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 3.8543169498443604,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/D/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 3.8832147121429443,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/D/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 3.929466724395752,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/D/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 3.878666400909424,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/misreporting/dcvigil/D/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 3.049220323562622,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/misreporting/meridian/A/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 3.2496109008789062,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/misreporting/meridian/A/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 2.880906105041504,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/misreporting/meridian/A/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 3.0368244647979736,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/misreporting/meridian/A/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 3.0779294967651367,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/misreporting/meridian/A/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 3.9990310668945312,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/misreporting/meridian/B/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 4.068287134170532,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/misreporting/meridian/B/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 4.007394313812256,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/misreporting/meridian/B/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 4.091484308242798,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/misreporting/meridian/B/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 4.083068132400513,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/misreporting/meridian/B/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 2.998215675354004,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/misreporting/meridian/C/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 3.3542449474334717,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/misreporting/meridian/C/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 3.0755343437194824,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/misreporting/meridian/C/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 3.23000168800354,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/misreporting/meridian/C/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 3.2421908378601074,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/misreporting/meridian/C/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 3.7438597679138184,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/misreporting/meridian/D/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 3.7584645748138428,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/misreporting/meridian/D/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 3.7726850509643555,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/misreporting/meridian/D/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 3.80796480178833,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/misreporting/meridian/D/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 3.7597861289978027,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/misreporting/meridian/D/seed-23"
+  }
+ ]
+}

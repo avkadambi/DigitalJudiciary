@@ -1,0 +1,165 @@
+{
+ "elapsed_s": 43.84316802024841,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.4170615673065186,
+   "proposals": 6672,
+   "out": "simulation/ec/results/bounds/oracle/vetpoc/A/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.1191720962524414,
+   "proposals": 6672,
+   "out": "simulation/ec/results/bounds/oracle/vetpoc/B/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.3279592990875244,
+   "proposals": 6672,
+   "out": "simulation/ec/results/bounds/oracle/vetpoc/C/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 1.553419589996338,
+   "proposals": 6672,
+   "out": "simulation/ec/results/bounds/oracle/vetpoc/D/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.7129909992218018,
+   "proposals": 6727,
+   "out": "simulation/ec/results/bounds/oracle/semifab/A/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.4342880249023438,
+   "proposals": 6727,
+   "out": "simulation/ec/results/bounds/oracle/semifab/B/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.6370174884796143,
+   "proposals": 6727,
+   "out": "simulation/ec/results/bounds/oracle/semifab/C/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 1.8576409816741943,
+   "proposals": 6727,
+   "out": "simulation/ec/results/bounds/oracle/semifab/D/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.9241979122161865,
+   "proposals": 6686,
+   "out": "simulation/ec/results/bounds/oracle/frontierllm/A/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.6734559535980225,
+   "proposals": 6686,
+   "out": "simulation/ec/results/bounds/oracle/frontierllm/B/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.9417085647583008,
+   "proposals": 6686,
+   "out": "simulation/ec/results/bounds/oracle/frontierllm/C/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 2.1103572845458984,
+   "proposals": 6686,
+   "out": "simulation/ec/results/bounds/oracle/frontierllm/D/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.9886529445648193,
+   "proposals": 6674,
+   "out": "simulation/ec/results/bounds/oracle/dcvigil/A/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.77634334564209,
+   "proposals": 6674,
+   "out": "simulation/ec/results/bounds/oracle/dcvigil/B/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.9687721729278564,
+   "proposals": 6674,
+   "out": "simulation/ec/results/bounds/oracle/dcvigil/C/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 2.0893027782440186,
+   "proposals": 6674,
+   "out": "simulation/ec/results/bounds/oracle/dcvigil/D/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 1.8275146484375,
+   "proposals": 6667,
+   "out": "simulation/ec/results/bounds/oracle/meridian/A/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 2.5315191745758057,
+   "proposals": 6667,
+   "out": "simulation/ec/results/bounds/oracle/meridian/B/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 1.81939697265625,
+   "proposals": 6667,
+   "out": "simulation/ec/results/bounds/oracle/meridian/C/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 2.0387978553771973,
+   "proposals": 6667,
+   "out": "simulation/ec/results/bounds/oracle/meridian/D/seed-11"
+  }
+ ]
+}

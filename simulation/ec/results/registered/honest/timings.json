@@ -1,0 +1,805 @@
+{
+ "elapsed_s": 460.9373803138733,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 2.735427141189575,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/honest/vetpoc/A/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 2.9270753860473633,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/honest/vetpoc/A/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 2.8544113636016846,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/honest/vetpoc/A/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 2.9588351249694824,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/honest/vetpoc/A/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 2.822176933288574,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/honest/vetpoc/A/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 4.215298414230347,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/honest/vetpoc/B/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 4.164644956588745,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/honest/vetpoc/B/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 4.207487344741821,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/honest/vetpoc/B/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 3.948788642883301,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/honest/vetpoc/B/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 4.400815725326538,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/honest/vetpoc/B/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 3.0745277404785156,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/honest/vetpoc/C/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 3.1793742179870605,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/honest/vetpoc/C/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 3.0831432342529297,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/honest/vetpoc/C/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 2.866426467895508,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/honest/vetpoc/C/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 2.969332456588745,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/honest/vetpoc/C/seed-23"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 3.7386672496795654,
+   "proposals": 6672,
+   "out": "simulation/ec/results/registered/honest/vetpoc/D/seed-11"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 3.955998420715332,
+   "proposals": 6690,
+   "out": "simulation/ec/results/registered/honest/vetpoc/D/seed-13"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 3.6337718963623047,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/honest/vetpoc/D/seed-17"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 3.594552993774414,
+   "proposals": 6708,
+   "out": "simulation/ec/results/registered/honest/vetpoc/D/seed-19"
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 3.751600503921509,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/honest/vetpoc/D/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 3.432439088821411,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/honest/semifab/A/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 3.4154717922210693,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/honest/semifab/A/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 3.310020923614502,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/honest/semifab/A/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 3.407231569290161,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/honest/semifab/A/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 3.4160385131835938,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/honest/semifab/A/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 4.716560125350952,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/honest/semifab/B/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 4.701937913894653,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/honest/semifab/B/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 5.020114898681641,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/honest/semifab/B/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 4.81429386138916,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/honest/semifab/B/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 4.90104603767395,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/honest/semifab/B/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 3.6495885848999023,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/honest/semifab/C/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 3.5483601093292236,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/honest/semifab/C/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 3.5584073066711426,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/honest/semifab/C/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 4.209245681762695,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/honest/semifab/C/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 3.6100330352783203,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/honest/semifab/C/seed-23"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 4.296003818511963,
+   "proposals": 6727,
+   "out": "simulation/ec/results/registered/honest/semifab/D/seed-11"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 4.246473789215088,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/honest/semifab/D/seed-13"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 4.290391445159912,
+   "proposals": 6677,
+   "out": "simulation/ec/results/registered/honest/semifab/D/seed-17"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 4.268900156021118,
+   "proposals": 6721,
+   "out": "simulation/ec/results/registered/honest/semifab/D/seed-19"
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 4.431949138641357,
+   "proposals": 6687,
+   "out": "simulation/ec/results/registered/honest/semifab/D/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 4.680316686630249,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/honest/frontierllm/A/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 4.365803003311157,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/honest/frontierllm/A/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 4.207917928695679,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/honest/frontierllm/A/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 3.938601493835449,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/honest/frontierllm/A/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 4.117315053939819,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/honest/frontierllm/A/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 5.424587965011597,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/honest/frontierllm/B/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 5.53107213973999,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/honest/frontierllm/B/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 5.506364583969116,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/honest/frontierllm/B/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 5.562973737716675,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/honest/frontierllm/B/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 5.3694844245910645,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/honest/frontierllm/B/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 4.349468469619751,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/honest/frontierllm/C/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 4.215491056442261,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/honest/frontierllm/C/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 4.355595350265503,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/honest/frontierllm/C/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 4.0577826499938965,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/honest/frontierllm/C/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 4.309279441833496,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/honest/frontierllm/C/seed-23"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 4.781315803527832,
+   "proposals": 6686,
+   "out": "simulation/ec/results/registered/honest/frontierllm/D/seed-11"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 4.697985649108887,
+   "proposals": 6700,
+   "out": "simulation/ec/results/registered/honest/frontierllm/D/seed-13"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 4.722626686096191,
+   "proposals": 6683,
+   "out": "simulation/ec/results/registered/honest/frontierllm/D/seed-17"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 5.055796384811401,
+   "proposals": 6684,
+   "out": "simulation/ec/results/registered/honest/frontierllm/D/seed-19"
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 5.323633909225464,
+   "proposals": 6673,
+   "out": "simulation/ec/results/registered/honest/frontierllm/D/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 4.375906229019165,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/honest/dcvigil/A/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 4.144285440444946,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/honest/dcvigil/A/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 4.252403020858765,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/honest/dcvigil/A/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 3.963331460952759,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/honest/dcvigil/A/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 4.0467305183410645,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/honest/dcvigil/A/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 5.268838167190552,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/honest/dcvigil/B/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 5.819704294204712,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/honest/dcvigil/B/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 5.257072925567627,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/honest/dcvigil/B/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 5.370392560958862,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/honest/dcvigil/B/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 5.6500725746154785,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/honest/dcvigil/B/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 4.506594657897949,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/honest/dcvigil/C/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 4.48249888420105,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/honest/dcvigil/C/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 4.448089122772217,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/honest/dcvigil/C/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 4.778721570968628,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/honest/dcvigil/C/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 4.832354784011841,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/honest/dcvigil/C/seed-23"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 5.129035234451294,
+   "proposals": 6674,
+   "out": "simulation/ec/results/registered/honest/dcvigil/D/seed-11"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 5.254828691482544,
+   "proposals": 6707,
+   "out": "simulation/ec/results/registered/honest/dcvigil/D/seed-13"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 5.271599531173706,
+   "proposals": 6642,
+   "out": "simulation/ec/results/registered/honest/dcvigil/D/seed-17"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 4.906205415725708,
+   "proposals": 6681,
+   "out": "simulation/ec/results/registered/honest/dcvigil/D/seed-19"
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 4.864931106567383,
+   "proposals": 6691,
+   "out": "simulation/ec/results/registered/honest/dcvigil/D/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 4.056609869003296,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/honest/meridian/A/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 4.305976390838623,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/honest/meridian/A/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 4.47987961769104,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/honest/meridian/A/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 4.191572904586792,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/honest/meridian/A/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 4.361527919769287,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/honest/meridian/A/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 5.18798828125,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/honest/meridian/B/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 5.719370603561401,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/honest/meridian/B/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 4.896834850311279,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/honest/meridian/B/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 5.841054677963257,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/honest/meridian/B/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 5.395898342132568,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/honest/meridian/B/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 4.200246334075928,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/honest/meridian/C/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 4.228011131286621,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/honest/meridian/C/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 4.201697111129761,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/honest/meridian/C/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 4.399885177612305,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/honest/meridian/C/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 4.6794915199279785,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/honest/meridian/C/seed-23"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 4.83183479309082,
+   "proposals": 6667,
+   "out": "simulation/ec/results/registered/honest/meridian/D/seed-11"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 5.142526388168335,
+   "proposals": 6670,
+   "out": "simulation/ec/results/registered/honest/meridian/D/seed-13"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 4.93516993522644,
+   "proposals": 6693,
+   "out": "simulation/ec/results/registered/honest/meridian/D/seed-17"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 5.076935052871704,
+   "proposals": 6698,
+   "out": "simulation/ec/results/registered/honest/meridian/D/seed-19"
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 5.059060096740723,
+   "proposals": 6656,
+   "out": "simulation/ec/results/registered/honest/meridian/D/seed-23"
+  }
+ ]
+}

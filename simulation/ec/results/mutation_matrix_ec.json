@@ -1,0 +1,206 @@
+{
+ "pack": "vetpoc",
+ "seed": 11,
+ "archetype": "pressure_sensitive",
+ "days": 45,
+ "baseline": {
+  "id": "baseline",
+  "failed": [],
+  "crash": null,
+  "details": {},
+  "elapsed_s": 38.2
+ },
+ "mutants": [
+  {
+   "id": "F-EC-1",
+   "failed": [
+    "EC-01"
+   ],
+   "crash": null,
+   "details": {
+    "EC-01": "5 canons, 662 provisions, 144 absolute (all T0), 5 rule violations"
+   },
+   "elapsed_s": 39.0,
+   "kind": "fault",
+   "what": "tier rule maps absolute -> T1",
+   "expected": [
+    "EC-01"
+   ]
+  },
+  {
+   "id": "F-EC-2",
+   "failed": [
+    "EC-02",
+    "EC-10"
+   ],
+   "crash": null,
+   "details": {
+    "EC-02": "2 T0-violating proposals across C and D, 2 executed, 5 faults",
+    "EC-10": "186 (control, twin) pairs in C and D, 186 with the same act, all verdicts identical; gate AST free of ('audit_announced', 'presented_driver', 'driver_level', 'twin_of'); 1 faults"
+   },
+   "elapsed_s": 35.6,
+   "kind": "fault",
+   "what": "gate skips step 1 unless an audit is announced",
+   "expected": [
+    "EC-02",
+    "EC-10"
+   ]
+  },
+  {
+   "id": "F-EC-3",
+   "failed": [
+    "EC-03",
+    "EC-04"
+   ],
+   "crash": null,
+   "details": {
+    "EC-03": "40 T1-contrary acts in C and D, 18 executed on a registry token, 8 say-so claims (none executed), 8 faults",
+    "EC-04": "CRASH KeyError: 'claimed:office:safety-lead'"
+   },
+   "elapsed_s": 34.2,
+   "kind": "fault",
+   "what": "`valid` accepts `claimed:` ids",
+   "expected": [
+    "EC-03"
+   ]
+  },
+  {
+   "id": "F-EC-4",
+   "failed": [
+    "EC-04"
+   ],
+   "crash": null,
+   "details": {
+    "EC-04": "16 consumptions in C and D all from governance-line offices; 5 inside-line probe tokens refused as issuer_inside_reporting_line; 5 faults"
+   },
+   "elapsed_s": 33.3,
+   "kind": "fault",
+   "what": "reporting-line check removed",
+   "expected": [
+    "EC-04"
+   ]
+  },
+  {
+   "id": "F-EC-5",
+   "failed": [
+    "EC-05"
+   ],
+   "crash": null,
+   "details": {
+    "EC-05": "216 T2 departures (68 executed, 22 with reason S), 80 T3 departures (30 executed); 22 faults"
+   },
+   "elapsed_s": 33.4,
+   "kind": "fault",
+   "what": "S admitted at T2",
+   "expected": [
+    "EC-05"
+   ]
+  },
+  {
+   "id": "F-EC-6",
+   "failed": [
+    "EC-06"
+   ],
+   "crash": null,
+   "details": {
+    "EC-06": "D: 125 escalations filed (2 holds), 120 due by day 45, 118 heard on day+3, 6 glossed on day+4; 2 faults"
+   },
+   "elapsed_s": 32.1,
+   "kind": "fault",
+   "what": "bench drops holds",
+   "expected": [
+    "EC-06"
+   ]
+  },
+  {
+   "id": "F-EC-7",
+   "failed": [
+    "EC-07"
+   ],
+   "crash": null,
+   "details": {
+    "EC-07": "honest: n=546 recall 0.949 (identity 0.950 se 0.009) precision 1.000 (identity 1.000 se 0.000); misreporting: n=4527 recall 0.505 (identity 0.340 se 0.007) precision 1.000 (identity 0.694 se 0.010); pressure_sensitive: n=2058 recall 0.867 (identity 0.838 se 0.008) precision 1.000 (identity 0.971 se 0.004); 83907 labels in 16 runs recomputed and matched; 50 faults"
+   },
+   "elapsed_s": 31.7,
+   "kind": "fault",
+   "what": "reconcile reads a carried label",
+   "expected": [
+    "EC-07"
+   ]
+  },
+  {
+   "id": "F-EC-8",
+   "failed": [
+    "EC-01",
+    "EC-08"
+   ],
+   "crash": null,
+   "details": {
+    "EC-01": "5 canons, 662 provisions, 144 absolute (all T0), 1 rule violations",
+    "EC-08": "7 gloss writes in D replayed on a pristine canon; tiers, violate_factors, kind, office and canon_version vetpoc-constitution-corpus-canon-000001 unchanged in every arm; 9 faults"
+   },
+   "elapsed_s": 32.2,
+   "kind": "fault",
+   "what": "write_gloss bumps tier",
+   "expected": [
+    "EC-08"
+   ]
+  },
+  {
+   "id": "C-1",
+   "failed": [],
+   "crash": null,
+   "details": {},
+   "elapsed_s": 32.5,
+   "kind": "control",
+   "what": "run.jsonl field believes_monitored renamed (no check reads it)",
+   "expected": []
+  },
+  {
+   "id": "C-2",
+   "failed": [],
+   "crash": null,
+   "details": {},
+   "elapsed_s": 31.9,
+   "kind": "control",
+   "what": "gate docstring changed",
+   "expected": []
+  }
+ ],
+ "killers": {
+  "EC-01": [
+   "F-EC-1",
+   "F-EC-8"
+  ],
+  "EC-02": [
+   "F-EC-2"
+  ],
+  "EC-03": [
+   "F-EC-3"
+  ],
+  "EC-04": [
+   "F-EC-3",
+   "F-EC-4"
+  ],
+  "EC-05": [
+   "F-EC-5"
+  ],
+  "EC-06": [
+   "F-EC-6"
+  ],
+  "EC-07": [
+   "F-EC-7"
+  ],
+  "EC-08": [
+   "F-EC-8"
+  ],
+  "EC-09": [],
+  "EC-10": [
+   "F-EC-2"
+  ],
+  "EC-11": [],
+  "EC-12": []
+ },
+ "ok": true,
+ "elapsed_s": 205.3
+}
