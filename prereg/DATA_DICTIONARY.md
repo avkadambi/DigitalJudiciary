@@ -2,7 +2,7 @@
 
 Derived from the code on branch `ec-fast-track` (`simulation/ec/run_year.py`, `gate.py`, `registry.py`, `examen.py`, `escalate.py`, `doctrine.py`, `canon.py`, `agents/`, `metrics.py`, `analyze.py`) and checked against the files a run writes. Types are JSON types; `int|null` means the field may be null. Value sets are closed unless marked "free".
 
-Per run directory `<out>/<pack>/<arm>/seed-<seed>/`: `run.jsonl`, `registry.json`, `glosses_final.json`, `store_final.json`, `bench_log.json`, `summary.json`, `manifest.json`; `checkpoint.json` exists only between a checkpoint and completion and is deleted by `finish()`. Per results root: `run_config.json`, `timings.json`, and after `metrics.py` / `analyze.py`: `metrics.csv`, `metrics.json`, `analysis.md`, `analysis.json`. LLM runs add `<out>/llm_cache/<hh>/<sha256>.json`.
+Per run directory `<out>/<pack>/<arm>/seed-<seed>/`: `run.jsonl`, `registry.json`, `glosses_final.json`, `store_final.json`, `bench_log.json`, `summary.json`, `manifest.json`; `checkpoint.json` exists only between a checkpoint and completion and is deleted by `finish()`. Per results root: `run_config.json`, `timings.json`, and after `metrics.py` / `analyze.py`: `metrics.csv`, `metrics.json`, `analysis.md`, `analysis.json`. LLM runs add `<out>/llm_cache/<hh>/<sha256>.json` (`{model, text, input_tokens, output_tokens, stop_reason, usage}`), and in live mode `llm_errors.jsonl` per run directory (one JSON object per HTTP error, retry, transport error, truncated or empty reply, corrupt cache file and parse failure, with `t`, `event`, `model` and the detail) and, when `--budget-usd` stops a run at a day boundary, `BUDGET_STOP.json` (`day_done`, `spend_usd_run`, `spend_usd_total`, `budget_usd`) beside its `checkpoint.json`. `timings.json` carries `spend_usd` (provider spend of the invocation) and `budget_stop` (the stop message, else null); a run skipped by `--resume` because its `manifest.json` already reports the requested days is listed with `skipped: true`.
 
 Shared value sets:
 
@@ -53,6 +53,7 @@ Shared value sets:
 | `t3_sampled` | bool | an executed `t3_in_context` departure drawn for review at rate 0.10 |
 | `cost` | object\|null | §1.6; LLM runs only, null for policy agents |
 | `believes_monitored` | bool | the manipulation check: policy agents return `proposal.audit_announced`; LLM live returns the parsed `believes_monitored`, falling back to the announcement on a parse failure |
+| `parse_failed` | bool | LLM live lines only (absent on policy and dry lines, whose layout is unchanged): the model's reply did not parse as a JSON object with a valid `act`; the line then carries `act.kind = as_submitted`, `stated_reason = NONE`, no examen, and `believes_monitored = audit_announced` |
 
 ### 1.1 `proposal`
 
@@ -142,7 +143,7 @@ Shared value sets:
 | Field | Type | Values / definition |
 |---|---|---|
 | `cost_usd` | float | `PRICES[model]` applied to the token counts; × 0.1 when served from cache |
-| `input_tokens`, `output_tokens` | int | provider usage in live mode; `len(prompt)/4` and 120 in dry mode |
+| `input_tokens`, `output_tokens` | int | provider usage in live mode (`input_tokens` sums the provider's uncached, cache-read and cache-write input counts; chars/4 only when the provider reports no usage); `len(prompt)/4` and 120 in dry mode |
 | `cached` | bool | served from `llm_cache` |
 | `model` | string | resolved model id |
 | `mode` | string | `dry`, `live` |
@@ -161,7 +162,7 @@ Shared value sets:
 | `elapsed_s` | float | wall time |
 | `totals` | object | §2.1 |
 | `by_day` | array | one object per day, §2.2 |
-| `agent_state` | object | `{}` for policy agents; `{usage: {calls, cached, input_tokens, output_tokens, cost_usd}, parse_failures: [{act_id, text}]}` for the LLM agent |
+| `agent_state` | object | `{}` for policy agents; `{usage: {calls, cached, input_tokens, output_tokens, cost_usd, spend_usd, cache_read_tokens, cache_write_tokens, http_calls, retries, parse_failures}, parse_failures: [{act_id, text}]}` for the LLM agent. `cost_usd` is the accounted cost (cache hits at 0.1x); `spend_usd` is the money sent to the provider (disk-cache hits 0; provider cache reads at 0.1x input, cache writes at 1.25x); `cache_read_tokens`/`cache_write_tokens` are the provider's prompt-cache counts (included in `input_tokens`); `http_calls` and `retries` count requests; `parse_failures` counts replies that did not parse |
 
 ### 2.1 `totals` (sums over `by_day` plus end-of-run counts)
 

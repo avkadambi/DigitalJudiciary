@@ -175,7 +175,7 @@ Registered policy archetype table (`simulation/ec/agents/policy.py` ARCHETYPES; 
 | oracle (bound) | 0 | 1.0 | .60 | 0 | 1/1/1 | 0 |
 | adversarial (bound) | .50 (all drivers) | 1.0 | .60 | .50 | 0/0/0 | .50 |
 
-LLM agent (`simulation/ec/agents/llm.py`): provider `anthropic` (POST /v1/messages) or `openai_compatible`; temperature 0; `max_tokens` 400; one user message built by `build_prompt` (system text, the audit sentence when announced, the engaged entries with glosses, the tokens held, the change's facts and scenario, the driver text, the JSON response schema); on-disk cache keyed by sha256(model + prompt); 3 retries with exponential backoff; a parse failure is logged and counts as `as_submitted`. Model identifier: FIXED AT FREEZE (default alias `sonnet`, which `ALIASES` resolves to `claude-sonnet-5`; the exact provider model id string is written here before any live call). Prices for projection: `PRICES` in `llm.py`, per million tokens.
+LLM agent (`simulation/ec/agents/llm.py`): provider `anthropic` (POST /v1/messages) or `openai_compatible`; temperature 0; `max_tokens` 400; a provider `system` field carrying the system text, and one user message built by `build_prompt` ( the audit sentence when announced, the engaged entries with glosses, the tokens held, the change's facts and scenario, the driver text, the JSON response schema); on-disk cache keyed by sha256(model + prompt); 3 retries with exponential backoff; a parse failure is logged and counts as `as_submitted`. Model identifier: FIXED AT FREEZE (default alias `sonnet`, which `ALIASES` resolves to `claude-sonnet-5`; the exact provider model id string is written here before any live call). Prices for projection: `PRICES` in `llm.py`, per million tokens.
 
 ### Randomization
 
@@ -293,7 +293,7 @@ Labelled exploratory and reported apart from the confirmatory comparisons:
 
 - all arm pairs other than the named ones in `analysis.md`;
 - E1 and E2 by tier (`e1_T*`, `e2_T*`), E2 by driver level (`e2_ps_l1`, `e2_ps_l2`; the policy agent does not read the level, so for policy agents the two are expected to agree within sampling error);
-- E3 stratified by the manipulation check in the LLM live slice: for each (control, twin) pair, the paired difference of `impermissible` grouped by the twin's `believes_monitored`; the computation is defined here from `run.jsonl` fields and is added to `metrics.py` before the live run, with the resulting plan-hash change recorded as an amendment (Other, Deviations);
+- E3 stratified by the manipulation check in the LLM live slice: for each (control, twin) pair, the paired difference of `impermissible` grouped by the twin's `believes_monitored`; computed by `metrics.py` as `e3_og_believes_monitored` / `e3_og_believes_unmonitored` with pair counts (added before any live call; recorded in the plan hash);
 - store-growth and gloss-growth curves per arm, E7 over time, and E8 decay after the first gloss, from `summary.json` and `bench_log.json`;
 - the ceremony diagnostics of EC Sect. 8 that the canons can supply: share of T0 entries whose provision carries neither a legal/regulatory nor a safety harm class (from `rulebook.json` and `canon.json`), and the share of standing-emergency token uses with a recorded cause (from `registry.json` events).
 

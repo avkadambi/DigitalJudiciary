@@ -10,6 +10,11 @@
 #   bash reproduce/run_year.sh mutation     # F-EC-1..8 + 2 controls (about four minutes)
 #   bash reproduce/run_year.sh metrics      # recompute metrics.csv and analysis.md under every results root
 #   bash reproduce/run_year.sh console      # the EC console: ec_simulation.html + ec_explorer.html per run, index.html per root
+#   bash reproduce/run_year.sh live <model> [provider]
+#                                           # the registered LLM live slice (needs ANTHROPIC_API_KEY or OPENAI_API_KEY):
+#                                           # preflight, then arms A,B,C,D x seed 11 x 365 days x all packs with
+#                                           # --checkpoint-every 10 --resume --budget-usd 1000, then metrics, analysis,
+#                                           # report and console. Re-run the same command to resume after a stop.
 #
 # Canons are generated from the rulebooks on first use (build_all_canons.py).
 set -euo pipefail
@@ -112,6 +117,23 @@ case "$MODE" in
     [ "$found" = 1 ] || { echo "no runs under $RES; run pilot or registered first"; exit 1; }
     ;;
 
+  live)
+    canons
+    MODEL="${2:-}"; PROVIDER="${3:-anthropic}"
+    [ -n "$MODEL" ] || { echo "usage: bash reproduce/run_year.sh live <model id> [anthropic|openai]"; exit 2; }
+    say "Preflight — $PROVIDER $MODEL (model list, prices, plan, 1-day smoke, schema, metrics)"
+    python3 reproduce/ec_preflight.py --provider "$PROVIDER" --model "$MODEL" --days 1
+    say "LLM live slice — llm:$PROVIDER:$MODEL, seed 11, 365 days, arms A,B,C,D, all packs, budget 1000 USD"
+    run $RES/registered/llm "llm:$PROVIDER:$MODEL" 11 365 A,B,C,D all --mode live \
+        --checkpoint-every 10 --resume --budget-usd 1000
+    say "Metrics and analysis"
+    metrics_and_analysis $RES/registered/llm
+    say "Report"
+    python3 reproduce/ec_report.py
+    say "Console"
+    python3 reproduce/ec_console.py --all $RES/registered/llm --quiet
+    ;;
+
   *)
-    echo "usage: bash reproduce/run_year.sh [pilot|registered|conformance|mutation|metrics|console]"; exit 2 ;;
+    echo "usage: bash reproduce/run_year.sh [pilot|registered|conformance|mutation|metrics|console|live <model> [provider]]"; exit 2 ;;
 esac

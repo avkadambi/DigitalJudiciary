@@ -214,8 +214,11 @@ class Run:
         self.store = data.fresh_store()
         self.bench = Bench(internal=(arm == "C"), d_bench=cal.D_BENCH)
         self.agent = make_agent(args.agent, self.pack, mode=args.mode,
-                                cache_dir=os.path.join(args.out, "llm_cache"))
+                                cache_dir=os.path.join(args.out, "llm_cache"),
+                                log_path=os.path.join(out_dir, "llm_errors.jsonl"),
+                                rate_limit_s=float(getattr(args, "rate_limit", 0.0) or 0.0))
         self.archetype = self.agent.archetype
+        self.llm_live = args.agent.startswith("llm:") and args.mode == "live"
         self.partition = streammod.partition_days(
             data.cases, data.like_pairs, random.Random(f"{seed}|{self.pack}|partition"), days=cal.DAYS, lam=cal.LAMBDA)
         # state
@@ -425,6 +428,9 @@ class Run:
             "dj": dj, "escalation": esc.to_dict() if esc is not None else None,
             "t3_sampled": False, "cost": cost, "believes_monitored": believes,
         }
+        if self.llm_live:
+            # Live LLM lines only, so dry and policy lines keep their registered byte layout.
+            line["parse_failed"] = bool(getattr(self.agent, "last_parse_failed", False))
         self.totals["proposals"] += 1
         return line, rec
 
@@ -540,6 +546,11 @@ class Run:
         return counts
 
     # -- outputs -----------------------------------------------------------------
+    def spend_usd(self) -> float:
+        """Money sent to the provider in this run (disk-cache hits cost nothing)."""
+        u = (self.agent.state() or {}).get("usage") or {}
+        return float(u.get("spend_usd", 0.0) or 0.0)
+
     def finish(self, elapsed: float) -> None:
         o = self.out
         with open(os.path.join(o, "registry.json"), "w") as fh:
@@ -582,9 +593,34 @@ class Run:
             json.dump(manifest, fh, indent=1, sort_keys=True)
 
 
-def run_one(data: PackData, arm: str, seed: int, args, quiet: bool = False) -> dict:
+class BudgetExceeded(RuntimeError):
+    """`--budget-usd` reached; the run was checkpointed at the end of a day."""
+
+
+def run_complete(out_dir: str, days: int) -> bool:
+    """A finished run: manifest.json says `days` and run.jsonl is there."""
+    mp = os.path.join(out_dir, "manifest.json")
+    if not os.path.exists(mp) or not os.path.exists(os.path.join(out_dir, "run.jsonl")):
+        return False
+    try:
+        with open(mp) as fh:
+            return int(json.load(fh).get("days") or 0) >= days
+    except (OSError, ValueError):
+        return False
+
+
+def run_one(data: PackData, arm: str, seed: int, args, quiet: bool = False, spent_before: float = 0.0) -> dict:
     out_dir = os.path.join(args.out, data.pack, arm, f"seed-{seed}")
+    if args.resume and run_complete(out_dir, args.days):
+        if not quiet:
+            print(f"[{data.pack} {arm} seed {seed}] complete, skipped (--resume)", flush=True)
+        with open(os.path.join(out_dir, "summary.json")) as fh:
+            summ = json.load(fh)
+        return {"pack": data.pack, "arm": arm, "seed": seed, "elapsed_s": 0.0,
+                "proposals": int(summ.get("totals", {}).get("proposals", 0)), "out": out_dir, "skipped": True,
+                "spend_usd": 0.0}
     r = Run(data, arm, seed, args, out_dir)
+    budget = float(getattr(args, "budget_usd", 0.0) or 0.0)
     resumed = args.resume and r.resume()
     if not resumed:
         for f in ("run.jsonl", "checkpoint.json"):
@@ -593,6 +629,9 @@ def run_one(data: PackData, arm: str, seed: int, args, quiet: bool = False) -> d
                 os.remove(p)
     t0 = time.time()
     start = r.day_done + 1
+    if budget > 0 and spent_before >= budget and start <= args.days:
+        raise BudgetExceeded(f"[{data.pack} {arm} seed {seed}] budget {budget:.2f} USD already spent "
+                             f"({spent_before:.2f} USD) before day {start}; nothing run")
     if not quiet:
         print(f"[{data.pack} {arm} seed {seed}] days {start}..{args.days}"
               + (" (resumed)" if resumed else ""), flush=True)
@@ -603,6 +642,16 @@ def run_one(data: PackData, arm: str, seed: int, args, quiet: bool = False) -> d
         if not quiet and args.progress_every and day % args.progress_every == 0:
             print(f"    day {day:>3}  proposals {r.totals['proposals']:>6}  executed {r.totals['executed']:>6}"
                   f"  {time.time() - t0:7.1f}s", flush=True)
+        if budget > 0 and day < args.days and spent_before + r.spend_usd() >= budget:
+            # Stop at a day boundary, where the state is consistent, and leave a checkpoint
+            # so --resume continues from here; the disk cache replays nothing twice.
+            r.checkpoint()
+            with open(os.path.join(out_dir, "BUDGET_STOP.json"), "w") as fh:
+                json.dump({"day_done": r.day_done, "spend_usd_run": r.spend_usd(),
+                           "spend_usd_total": spent_before + r.spend_usd(), "budget_usd": budget}, fh, indent=1)
+            raise BudgetExceeded(f"[{data.pack} {arm} seed {seed}] budget {budget:.2f} USD reached after day "
+                                 f"{r.day_done} (spent {spent_before + r.spend_usd():.2f} USD); checkpointed, "
+                                 f"resume with --resume and a higher --budget-usd")
     elapsed = time.time() - t0
     r.finish(elapsed)
     ck = os.path.join(out_dir, "checkpoint.json")
@@ -612,7 +661,7 @@ def run_one(data: PackData, arm: str, seed: int, args, quiet: bool = False) -> d
         print(f"[{data.pack} {arm} seed {seed}] done: {r.totals['proposals']} proposals, "
               f"{r.totals['executed']} executed in {elapsed:.1f}s", flush=True)
     return {"pack": data.pack, "arm": arm, "seed": seed, "elapsed_s": elapsed, "proposals": r.totals["proposals"],
-            "out": out_dir}
+            "out": out_dir, "spend_usd": r.spend_usd()}
 
 
 def parse_args(argv=None):
@@ -628,6 +677,10 @@ def parse_args(argv=None):
     ap.add_argument("--resume", action="store_true")
     ap.add_argument("--progress-every", type=int, default=30)
     ap.add_argument("--quiet", action="store_true")
+    ap.add_argument("--budget-usd", type=float, default=0.0,
+                    help="live LLM runs: stop cleanly (checkpoint, exit 3) once provider spend reaches this; 0 = no cap")
+    ap.add_argument("--rate-limit", type=float, default=0.0,
+                    help="live LLM runs: minimum seconds between HTTP calls (cache hits are free)")
     a = ap.parse_args(argv)
     if a.days < 1 or a.days > cal.DAYS:
         raise SystemExit(f"--days must be 1..{cal.DAYS}")
@@ -651,13 +704,24 @@ def main(argv=None) -> int:
         json.dump({k: v for k, v in vars(a).items()}, fh, indent=1)
     t0 = time.time()
     timings = []
-    for pack in packs:
-        data = PackData(pack)
-        for arm in arms:
-            for seed in seeds:
-                timings.append(run_one(data, arm, seed, a, quiet=a.quiet))
+    spent = 0.0
+    stopped = None
+    try:
+        for pack in packs:
+            data = PackData(pack)
+            for arm in arms:
+                for seed in seeds:
+                    t = run_one(data, arm, seed, a, quiet=a.quiet, spent_before=spent)
+                    spent += float(t.get("spend_usd", 0.0) or 0.0)
+                    timings.append(t)
+    except BudgetExceeded as e:
+        stopped = str(e)
     with open(os.path.join(a.out, "timings.json"), "w") as fh:
-        json.dump({"elapsed_s": time.time() - t0, "runs": timings}, fh, indent=1)
+        json.dump({"elapsed_s": time.time() - t0, "runs": timings, "spend_usd": spent, "budget_stop": stopped},
+                  fh, indent=1)
+    if stopped:
+        print(stopped, file=sys.stderr, flush=True)
+        return 3
     if not a.quiet:
         print(f"total {time.time() - t0:.1f}s for {len(timings)} runs; results in {a.out}")
     return 0

@@ -65,8 +65,10 @@ class Agent(ABC):
         return None
 
 
-def make_agent(spec: str, company: str, mode: str = "oracle", cache_dir: str | None = None):
-    """`policy:<archetype>` | `llm:anthropic:<model>` | `llm:openai:<model>`."""
+def make_agent(spec: str, company: str, mode: str = "oracle", cache_dir: str | None = None,
+               log_path: str | None = None, rate_limit_s: float = 0.0):
+    """`policy:<archetype>` | `llm:anthropic:<model>` | `llm:openai:<model>`.
+    `log_path` and `rate_limit_s` reach the LLM agent only."""
     parts = spec.split(":")
     if parts[0] == "policy":
         from .policy import PolicyAgent, OracleAgent, AdversarialAgent
@@ -83,7 +85,7 @@ def make_agent(spec: str, company: str, mode: str = "oracle", cache_dir: str | N
         model = parts[2] if len(parts) > 2 else ""
         provider = {"openai": "openai_compatible"}.get(provider, provider)
         return LLMAgent(f"agent:{company}-conscience-01", provider=provider, model=model, mode=mode,
-                        cache_dir=cache_dir)
+                        cache_dir=cache_dir, log_path=log_path, rate_limit_s=rate_limit_s)
     raise ValueError(f"unknown agent spec {spec!r}")
 
 
