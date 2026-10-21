@@ -9,6 +9,7 @@
 #   bash reproduce/run_year.sh conformance  # EC-01..EC-12 on a fresh 60-day vetpoc pilot (about half a minute)
 #   bash reproduce/run_year.sh mutation     # F-EC-1..8 + 2 controls (about four minutes)
 #   bash reproduce/run_year.sh metrics      # recompute metrics.csv and analysis.md under every results root
+#   bash reproduce/run_year.sh console      # the EC console: ec_simulation.html + ec_explorer.html per run, index.html per root
 #
 # Canons are generated from the rulebooks on first use (build_all_canons.py).
 set -euo pipefail
@@ -99,6 +100,18 @@ case "$MODE" in
     [ "$found" = 1 ] || { echo "no runs under $RES; run pilot or registered first"; exit 1; }
     ;;
 
+  console)
+    say "EC console — pages under every results root that holds runs"
+    found=0
+    for root in $RES/pilot30 $RES/registered $RES/bounds $RES/llm_dry; do
+      [ -d "$root" ] || continue
+      ls "$root"/*/*/seed-*/run.jsonl "$root"/*/*/*/seed-*/run.jsonl >/dev/null 2>&1 || continue
+      found=1
+      python3 reproduce/ec_console.py --all "$root" --quiet
+    done
+    [ "$found" = 1 ] || { echo "no runs under $RES; run pilot or registered first"; exit 1; }
+    ;;
+
   *)
-    echo "usage: bash reproduce/run_year.sh [pilot|registered|conformance|mutation|metrics]"; exit 2 ;;
+    echo "usage: bash reproduce/run_year.sh [pilot|registered|conformance|mutation|metrics|console]"; exit 2 ;;
 esac

@@ -297,6 +297,38 @@ bash reproduce/run_year.sh metrics
 Recomputes `metrics.csv` and `analysis.md` under every results root that
 holds runs.
 
+### The EC console
+
+```bash
+python3 reproduce/ec_console.py simulation/ec/results/registered/pressure_sensitive/vetpoc/D/seed-11
+python3 reproduce/ec_console.py --all simulation/ec/results/registered     # or: bash reproduce/run_year.sh console
+```
+
+The slow track ships each simulation pack with a browsable run
+(`docs/simulation.html`) and a case explorer (`docs/explorer.html`). The EC
+console is the same two pages for a fast-track run, written under the run's
+own `docs/` directory from its files alone. `ec_simulation.html` is the
+year: the title block (pack, arm, seed, archetype, canon version, days, plan
+hash, run digest), the daily series (proposals, allowed, blocked, holds,
+escalations filed; tokens live, glosses, the DJ store), the decision and
+reason-code mix, what happened at each tier, and the ledger of every change
+request in day order with its act, verdict, token, execution, examen label,
+escalation, doctrine and DJ trace, searchable and filterable.
+`ec_explorer.html` is the change explorer: facets by decision, reason code,
+tier, act, driver, audit twin, examen label, escalation, execution, ground
+truth, DJ route and corpus category; full-text search over ids, titles,
+entries, facts and narratives; and a per-change panel that tells the story
+in order (the change, the canon it engaged and the holdings on it that day,
+what the agent proposed, what the gate decided with L1 and L2, what
+executed, the examen entry and its recomputed label, the bench, the
+doctrine, the DJ trace) with the announced twin beside its control. Tabs
+hold the token registry, the canon with its glosses, and the bench docket.
+Ledger rows link to the explorer by case id. `--all` writes every run and
+an `index.html` at the results root (pack × arm × seed × archetype). Each
+page is one file with no script or font fetched, about 0.4 MB (year) and
+0.7 MB (explorer) for a 365-day run; the 400 registered runs take about
+three minutes and 430 MB.
+
 ## Read the outputs
 
 Each run directory `<out>/<pack>/<arm>/seed-<n>/` holds `run.jsonl`,

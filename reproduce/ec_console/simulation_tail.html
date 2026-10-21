@@ -1,0 +1,470 @@
+<!-- Adapted from simulation/vetpoc-constitution-corpus/generator/simulation/{head,tail}.html -->
+<header class="mast"><div class="wrap">
+  <h1 id="title">The year</h1>
+  <div class="sub" id="sub"></div>
+  <div class="imprint" id="imprint"></div>
+  <div class="nav"><a href="ec_explorer.html">Open the change explorer →</a><a href="../../../../index.html" data-index>All runs</a></div>
+</div></header>
+<div class="wrap"><dl class="figs" id="figs"></dl></div>
+<main class="wrap">
+  <section>
+    <h2>How the year unfolded</h2>
+    <p class="lede" id="unfold-lede">Every working day the company's coding agent proposed its changes, the gate answered each one the same day, and whatever the gate could not settle went to the bench three days later. The lines below are the day counts; the panel beside them is the stock that accumulates.</p>
+    <div class="charts">
+      <figure class="panel">
+        <div class="legend" id="dlegend"></div>
+        <div id="daily"></div>
+        <figcaption>Proposals, allowed, blocked, holds and escalations filed, per working day, as a trailing 7-day mean. Hover for the day; click a legend entry to hide a line. <button class="linkbtn" id="smoothtoggle">Show raw days</button> · <button class="linkbtn" id="daytoggle">Show as a table</button></figcaption>
+        <div class="daytable" id="daytable"></div>
+      </figure>
+      <figure class="panel">
+        <div class="legend" id="slegend"></div>
+        <div id="stocks"></div>
+        <figcaption id="stockscap"></figcaption>
+      </figure>
+    </div>
+    <div class="charts2">
+      <figure class="panel">
+        <div class="legend" id="displegend"></div>
+        <div id="disp"></div>
+        <figcaption id="dispcap"></figcaption>
+      </figure>
+      <figure class="panel">
+        <div class="legend"><span>Reason codes, every proposal</span></div>
+        <div class="bars" id="rcbars"></div>
+        <figcaption>The reason the gate gave. <code>clean</code> is a change that engaged nothing it was not entitled to.</figcaption>
+      </figure>
+    </div>
+  </section>
+  <section>
+    <h2>What happened at each tier</h2>
+    <p class="lede">T0 is the floor nobody may waive; T1 needs a token from an office outside the agent's reporting line; T2 and T3 admit departures for an admitted reason, within the bound or the listed context. Value entries are the company's own commitments, carried in the canon beside the provisions.</p>
+    <div class="panel" style="overflow-x:auto"><table class="tiers" id="tiers"></table></div>
+  </section>
+  <section>
+    <h2>The ledger</h2>
+    <p class="lede">Every change request, in the order it arrived, and what the gate did with it. Search by anything: a case id, a change title, an entry id, a token, a reason code. A row links to the same change in the explorer.</p>
+    <div class="controls">
+      <input id="q" type="search" placeholder="Search changes, entries, tokens…" aria-label="Search the ledger">
+      <select id="fd" aria-label="Filter by decision"><option value="">Any decision</option></select>
+      <select id="frc" aria-label="Filter by reason code"><option value="">Any reason</option></select>
+      <select id="ft" aria-label="Filter by tier"><option value="">Any tier</option></select>
+      <select id="fl" aria-label="Filter by examen label"><option value="">Any examen label</option></select>
+      <select id="fk" aria-label="Filter by act"><option value="">Any act</option></select>
+      <label><input type="checkbox" id="fe"> escalated</label>
+      <label><input type="checkbox" id="fw"> twins only</label>
+      <label><input type="checkbox" id="fi"> impermissible</label>
+      <span class="count" id="cnt">…</span>
+    </div>
+    <div class="scroll"><table class="ledger"><thead><tr>
+      <th style="min-width:52px">Day</th><th style="min-width:210px">Case</th><th>Author</th><th style="min-width:150px">Engaged</th><th>Driver</th><th style="min-width:160px">Act</th>
+      <th style="min-width:190px">Decision</th><th>Token</th><th>Ran</th><th style="min-width:110px">Examen</th><th style="min-width:150px">Escalation</th><th style="min-width:120px">Doctrine</th><th id="djh" style="min-width:150px">DJ</th>
+    </tr></thead><tbody id="tb"></tbody></table></div>
+    <button class="more" id="more" hidden>Show 200 more</button>
+  </section>
+</main>
+<footer><div class="wrap" id="foot"></div></footer>
+<div class="tip" id="tip" role="status"></div>
+
+<script>
+(function () {
+  "use strict";
+  var ARM_EN = { A: "rival stack (policy engine, approval flag, event log)", B: "Digital Judiciary alone",
+                 C: "Enterprise Conscience alone", D: "Enterprise Conscience with the Digital Judiciary" };
+  var DEC = { allow: ["allowed", "allow"], block: ["blocked", "block"], hold: ["held", "hold"] };
+  var LAB = { discloses: "discloses", silent: "silent", misrepresents: "misrepresents", nothing_to_disclose: "nothing" };
+  var KIND = { as_submitted: "as submitted", violation: "violation", departure: "departure", exception: "exception" };
+  var RC_EN = {
+    clean: "clean", t0_violation: "T0 violation", t1_tokenless: "T1 without a token",
+    t1_authorized: "T1 authorized by token", t1_claimed_no_token: "T1 say-so claim",
+    t2_departure_admitted: "T2 departure admitted", t2_departure_excluded_reason: "T2 excluded reason",
+    t2_departure_out_of_bound: "T2 out of bound", t3_in_context: "T3 in context", t3_out_of_context: "T3 out of context",
+    conflict_hold: "conflict hold", gloss_bar: "barred by doctrine", dj_permit: "DJ permit",
+    dj_permit_conditional: "DJ permit with conditions", dj_deny: "DJ deny"
+  };
+  var esc = function (s) {
+    return String(s == null ? "" : s).replace(/[&<>"]/g, function (c) {
+      return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c];
+    });
+  };
+  var fmt = function (n) { return (n == null ? 0 : n).toLocaleString("en-US"); };
+  function b64(s) {
+    var bin = atob(s), out = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) out[i] = bin.charCodeAt(i);
+    return out;
+  }
+
+  var RUN = null, C = {}, view = [], shown = 0, PAGE = 200;
+
+  // ---- charts -------------------------------------------------------------
+  var DAILY = [
+    { k: 1, name: "proposals", color: "var(--cond)" },
+    { k: 3, name: "blocked", color: "var(--deny)" },
+    { k: 2, name: "allowed", color: "var(--permit)" },
+    { k: 4, name: "holds", color: "var(--hold)" },
+    { k: 5, name: "escalations filed", color: "var(--esc)" }
+  ];
+  var dailyOn = {};
+
+  function lineChart(el, legendEl, series, data, label, opts) {
+    var W = 620, H = 250, mL = 48, mR = 14, mT = 12, mB = 28;
+    var maxX = data.length ? data[data.length - 1][0] : 1, maxY = 1;
+    series.forEach(function (s) {
+      if (s.on === false) return;
+      data.forEach(function (d) { if (d[s.k] > maxY) maxY = d[s.k]; });
+    });
+    var q = maxY / 4, mag = Math.pow(10, Math.floor(Math.log10(q))), f = q / mag;
+    var stepY = (f <= 1 ? 1 : f <= 2 ? 2 : f <= 5 ? 5 : 10) * mag;
+    var niceY = Math.max(4, Math.ceil(maxY / stepY) * stepY);
+    if (niceY / stepY < 4) niceY = stepY * 4;
+    var x = function (v) { return mL + ((v - 1) / Math.max(1, maxX - 1)) * (W - mL - mR); };
+    var y = function (v) { return H - mB - (v / niceY) * (H - mT - mB); };
+    var s = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="' + esc(label) + '">';
+    s += '<g class="axis">';
+    [0, 0.25, 0.5, 0.75, 1].forEach(function (f) {
+      var t = niceY * f;
+      s += '<line x1="' + mL + '" x2="' + (W - mR) + '" y1="' + y(t).toFixed(1) + '" y2="' + y(t).toFixed(1) + '"/>';
+      s += '<text x="' + (mL - 8) + '" y="' + (y(t) + 3.5).toFixed(1) + '" text-anchor="end">' + fmt(Math.round(t)) + "</text>";
+    });
+    [1, Math.round(maxX / 4), Math.round(maxX / 2), Math.round((3 * maxX) / 4), maxX].forEach(function (t, i) {
+      s += '<text x="' + x(t).toFixed(1) + '" y="' + (H - mB + 15) + '" text-anchor="' + (i === 0 ? "start" : i === 4 ? "end" : "middle") + '">day ' + t + "</text>";
+    });
+    s += "</g>";
+    var labels = [];
+    series.forEach(function (sr) {
+      if (sr.on === false) return;
+      var d = data.map(function (p, i) { return (i ? "L" : "M") + x(p[0]).toFixed(1) + " " + y(p[sr.k]).toFixed(1); }).join(" ");
+      s += '<path d="' + d + '" fill="none" stroke="' + sr.color + '" stroke-width="' + (opts && opts.thick ? 2.2 : 1.6) + '" stroke-linejoin="round" stroke-linecap="round" opacity="0.95"/>';
+      var last = data[data.length - 1];
+      labels.push({ y: y(last[sr.k]), v: last[sr.k] });
+    });
+    labels.sort(function (a, b) { return a.y - b.y; });
+    for (var li = 1; li < labels.length; li++) if (labels[li].y - labels[li - 1].y < 11) labels[li].y = labels[li - 1].y + 11;
+    labels.forEach(function (l) {
+      s += '<text x="' + (W - mR + 4) + '" y="' + (l.y + 3.5).toFixed(1) + '" style="font-family:var(--mono);font-size:10px;fill:var(--ink-2)">' + fmt(Math.round(l.v * 10) / 10) + "</text>";
+    });
+    s += '<rect class="hit" x="' + mL + '" y="' + mT + '" width="' + (W - mL - mR) + '" height="' + (H - mT - mB) + '" fill="transparent"/>';
+    s += '<line class="xl" y1="' + mT + '" y2="' + (H - mB) + '" stroke="var(--ink-3)" stroke-width="1" opacity="0"/>';
+    s += "</svg>";
+    el.innerHTML = s;
+    var svg = el.querySelector("svg"), hit = el.querySelector(".hit"), xl = el.querySelector(".xl"), tip = document.getElementById("tip");
+    hit.addEventListener("mousemove", function (ev) {
+      var r = svg.getBoundingClientRect();
+      var vx = ((ev.clientX - r.left) / r.width) * W;
+      var day = Math.round(1 + ((vx - mL) / (W - mL - mR)) * (maxX - 1));
+      day = Math.max(1, Math.min(maxX, day));
+      var d = data[day - 1];
+      if (!d) return;
+      xl.setAttribute("x1", x(day)); xl.setAttribute("x2", x(day)); xl.setAttribute("opacity", "0.45");
+      tip.innerHTML = "<b>day " + day + "</b><br>" + series.filter(function (sr) { return sr.on !== false; }).map(function (sr) {
+        return '<i style="display:inline-block;width:8px;height:8px;border-radius:2px;background:' + sr.color + ';margin-right:5px"></i>' + esc(sr.name) + " <b>" + fmt(d[sr.k]) + "</b>";
+      }).join("<br>");
+      tip.style.left = Math.min(window.innerWidth - 270, ev.clientX + 14) + "px";
+      tip.style.top = Math.max(8, ev.clientY - 20 - 14 * series.length) + "px";
+      tip.style.opacity = "1";
+    });
+    hit.addEventListener("mouseleave", function () { xl.setAttribute("opacity", "0"); tip.style.opacity = "0"; });
+    if (legendEl) {
+      legendEl.innerHTML = series.map(function (sr, i) {
+        return '<button data-i="' + i + '" aria-pressed="' + (sr.on !== false) + '"><i style="background:' + sr.color + '"></i>' + esc(sr.name) + "</button>";
+      }).join("");
+    }
+  }
+
+  var smooth = true;
+  function rolling(data, keys, w) {
+    return data.map(function (d, i) {
+      var o = d.slice(), lo = Math.max(0, i - w + 1), n = i - lo + 1;
+      keys.forEach(function (k) { var sum = 0; for (var j = lo; j <= i; j++) sum += data[j][k]; o[k] = sum / n; });
+      return o;
+    });
+  }
+  function drawDaily() {
+    DAILY.forEach(function (s) { s.on = dailyOn[s.name] !== false; });
+    var data = smooth ? rolling(RUN.by_day, DAILY.map(function (s) { return s.k; }), 7) : RUN.by_day;
+    lineChart(document.getElementById("daily"), document.getElementById("dlegend"), DAILY, data, "Daily counts across the year");
+    document.getElementById("smoothtoggle").textContent = smooth ? "Show raw days" : "Show the 7-day mean";
+    Array.prototype.forEach.call(document.querySelectorAll("#dlegend button"), function (b) {
+      b.addEventListener("click", function () {
+        var s = DAILY[+b.dataset.i]; dailyOn[s.name] = !(s.on !== false); drawDaily();
+      });
+    });
+  }
+
+  function drawStocks() {
+    var arm = RUN.meta.arm;
+    var series = [{ k: 8, name: "tokens live", color: "var(--cond)" }, { k: 7, name: "glosses written (cumulative)", color: "var(--esc)" }];
+    if (arm === "B" || arm === "D") series.push({ k: 14, name: "records in the DJ store", color: "var(--permit)" });
+    lineChart(document.getElementById("stocks"), document.getElementById("slegend"), series, RUN.by_day, "Stocks across the year", { thick: true });
+    var cap = "Tokens live at the end of each day (issued, not yet expired, consumed or revoked)";
+    if (arm === "D") cap += "; glosses are the bench's holdings written back into the canon, one day after each hearing; the DJ store grows when a hearing admits a record.";
+    else if (arm === "B") cap += "; the DJ store grows when the adjudicator admits a record. No glosses: nothing writes doctrine in this arm.";
+    else if (arm === "C") cap += ". The internal review office hears escalations but writes no gloss and no record.";
+    else cap += ". Nothing in this arm writes doctrine or precedent.";
+    document.getElementById("stockscap").textContent = cap;
+  }
+
+  function dispChart(el, legendEl, capEl, counts, total) {
+    var order = ["allow", "block", "hold"];
+    var VAR = { allow: "var(--permit)", block: "var(--deny)", hold: "var(--hold)" };
+    var W = 400, H = 44, gap = 2, xo = 0, s = '<svg viewBox="0 0 ' + W + " " + H + '" role="img" aria-label="Share of proposals by gate decision">';
+    var widths = order.map(function (k) { return ((counts[k] || 0) / total) * (W - gap * (order.length - 1)); });
+    order.forEach(function (k, i) {
+      s += '<rect x="' + xo.toFixed(1) + '" y="0" width="' + widths[i].toFixed(1) + '" height="20" rx="3" fill="' + VAR[k] + '"/>';
+      if (widths[i] > 46) {
+        s += '<text x="' + (xo + widths[i] / 2).toFixed(1) + '" y="36" text-anchor="middle" style="font-family:var(--mono);font-size:11px;fill:var(--ink-2)">' +
+             Math.round(((counts[k] || 0) / total) * 100) + "%</text>";
+      }
+      xo += widths[i] + gap;
+    });
+    s += "</svg>";
+    el.innerHTML = s;
+    legendEl.innerHTML = order.map(function (k) {
+      return '<span><i style="background:' + VAR[k] + '"></i>' + DEC[k][0] + " · " + fmt(counts[k] || 0) + "</span>";
+    }).join("");
+    capEl.textContent = "Every proposal got exactly one of three answers from the gate. A hold is a conflict between two non-tradable entries, parked for the bench.";
+  }
+
+  function rcBars(el, mix) {
+    var keys = Object.keys(mix).sort(function (a, b) { return mix[b] - mix[a]; });
+    var max = keys.length ? mix[keys[0]] : 1;
+    el.innerHTML = keys.map(function (k) {
+      return '<div class="barrow" title="' + esc(k) + '"><span class="t">' + esc(RC_EN[k] || k) +
+        '</span><span class="b"><i style="width:' + ((mix[k] / max) * 100).toFixed(1) + '%"></i></span><span class="v">' + fmt(mix[k]) + "</span></div>";
+    }).join("");
+  }
+
+  function tierTable(el) {
+    var cols = [["proposals", "Proposals engaging"], ["impermissible", "Impermissible"], ["blocked", "Blocked"], ["held", "Held"],
+                ["authorized", "Authorized exceptions"], ["dep_allowed", "Departures allowed"], ["dep_blocked", "Departures blocked"],
+                ["gloss_bar", "Barred by doctrine"], ["escalated", "Escalated"], ["glossed", "Glosses written"]];
+    var names = { T0: "T0 — floor", T1: "T1 — token required", T2: "T2 — bounded departures", T3: "T3 — customary", VAL: "Value entries" };
+    var h = "<thead><tr><th>Tier</th><th>Entries</th>" + cols.map(function (c) { return "<th>" + c[1] + "</th>"; }).join("") + "</tr></thead><tbody>";
+    ["T0", "T1", "T2", "T3", "VAL"].forEach(function (t) {
+      var r = RUN.tiers[t] || {};
+      h += "<tr><td>" + names[t] + "</td><td>" + fmt(RUN.entry_counts[t] || 0) + "</td>" + cols.map(function (c) {
+        var v = r[c[0]] || 0; return '<td class="' + (v ? "" : "z") + '">' + fmt(v) + "</td>";
+      }).join("") + "</tr>";
+    });
+    el.innerHTML = h + "</tbody>";
+  }
+
+  function dayTable(el) {
+    var names = ["day", "proposals", "allowed", "blocked", "held", "esc. filed", "heard", "glosses cum.", "tokens live", "tokens issued", "imperm. proposed", "imperm. executed", "twins", "T3 sampled", "DJ records", "discloses", "silent", "misrepresents", "nothing"];
+    var h = "<table><thead><tr>" + names.map(function (n) { return "<th>" + esc(n) + "</th>"; }).join("") + "</tr></thead><tbody>";
+    RUN.by_day.forEach(function (d) { h += "<tr>" + d.map(function (v) { return "<td>" + fmt(v) + "</td>"; }).join("") + "</tr>"; });
+    el.innerHTML = h + "</tbody></table>";
+  }
+
+  // ---- ledger -------------------------------------------------------------
+  function tierOf(e) { var c = RUN.canon[e]; return c ? c.tier : null; }
+  function engHTML(r) {
+    return '<div class="eng">' + r[C.eng].map(function (e) {
+      var t = tierOf(e), tgt = e === r[C.tgt];
+      return "<span" + (tgt ? ' style="font-weight:600"' : "") + ' title="' + esc((RUN.canon[e] || {}).title || "") + '">' + esc(e) + (t ? '<i class="tier ' + t + '">' + t + "</i>" : "") + "</span>";
+    }).join("<br>") + "</div>";
+  }
+  function actHTML(r) {
+    var k = r[C.kind], s = esc(KIND[k] || k);
+    if (k !== "as_submitted") {
+      var bits = [];
+      if (r[C.reason] && r[C.reason] !== "NONE") bits.push("reason " + r[C.reason]);
+      if (r[C.wb] != null) bits.push(r[C.wb] ? "within bound" : "out of bound");
+      if (r[C.ctx]) bits.push("ctx " + r[C.ctx]);
+      if (r[C.claim]) bits.push(r[C.claim].indexOf("claimed:") === 0 ? "says " + r[C.claim].slice(8) : "token " + r[C.claim]);
+      if (r[C.conf]) bits.push("conflict");
+      if (bits.length) s += '<br><span class="sm">' + esc(bits.join(" · ")) + "</span>";
+    }
+    if (r[C.imp]) s += '<br><span class="tag abs" title="' + esc(r[C.impwhy] || "") + '">impermissible ' + esc(r[C.imptier] || "") + "</span>";
+    return s;
+  }
+  function decHTML(r) {
+    var d = DEC[r[C.dec]] || [r[C.dec], ""];
+    var s = '<span class="tag ' + d[1] + '">' + d[0] + "</span><br><span class=\"sm\">" + esc(RC_EN[r[C.rc]] || r[C.rc]);
+    if (r[C.ventry]) s += " · " + esc(r[C.ventry]);
+    if (r[C.L1] != null || r[C.L2] != null) s += " · L1 " + (r[C.L1] == null ? "–" : r[C.L1] ? "✓" : "✗") + " L2 " + (r[C.L2] == null ? "–" : r[C.L2] ? "✓" : "✗");
+    return s + "</span>";
+  }
+  function examenHTML(r) {
+    var lab = r[C.lab], ex = r[C.ex];
+    var cls = lab === "discloses" ? "permit" : lab === "misrepresents" ? "deny" : lab === "silent" ? "hold" : "";
+    var s = '<span class="tag ' + cls + '">' + esc(LAB[lab] || lab) + "</span>";
+    if (ex && ex[0] !== "none") s += '<br><span class="sm">reports ' + esc(ex[0] + (ex[2] ? " · " + ex[2] : "")) + "</span>";
+    else if (ex && lab === "misrepresents") s += '<br><span class="sm">reports none</span>';
+    return s;
+  }
+  function escHTML(r) {
+    if (r[C.dk] == null) return "";
+    var d = RUN.docket[r[C.dk]];
+    var s = '<span class="tag esc">filed d' + d.filed + "</span><br><span class=\"sm\">" + esc(RC_EN[d.rc] || d.rc);
+    if (d.status === "heard") s += " → heard d" + d.hear + " → " + esc(d.holding || "");
+    else s += " → " + esc(d.status) + " (d" + d.hear + ")";
+    return s + "</span>";
+  }
+  function doctrineHTML(r) {
+    var bits = [];
+    if (r[C.rc] === "gloss_bar") bits.push('<span class="tag abs">gloss bar</span>');
+    if (r[C.dk] != null) {
+      var d = RUN.docket[r[C.dk]];
+      if (d.gloss_day != null) bits.push('<span class="sm">gloss d' + d.gloss_day + " on " + esc(d.entry || "") + "</span>");
+      else if (d.record) bits.push('<span class="sm">record ' + esc(d.record) + "</span>");
+    }
+    return bits.join("<br>");
+  }
+  function djHTML(r) {
+    var dj = r[C.dj];
+    if (dj) {
+      return '<span class="sm">' + esc(dj[0]) + " · <b>" + esc(dj[1]) + "</b>" + (dj[2] ? " · " + esc(dj[2]) : "") + (dj[6] ? " · wrote " + esc(dj[6]) : "") + "</span>";
+    }
+    if (r[C.dk] != null) {
+      var d = RUN.docket[r[C.dk]];
+      if (d.route) return '<span class="sm">' + esc(d.route) + " · <b>" + esc(d.holding) + "</b>" + (d.record ? " · " + esc(d.record) : "") + "</span>";
+    }
+    return "";
+  }
+  function rowHTML(r) {
+    var cs = RUN.cases[r[C.case]] || {};
+    var tw = r[C.twin];
+    return '<tr class="' + (tw ? "twin" : "") + '"><td class="n">' + r[C.day] + "<br><span class=\"sm\">#" + r[C.seq] + "</span></td>" +
+      '<td><a href="ec_explorer.html#' + encodeURIComponent(r[C.case]) + '" title="Open in the explorer"><span class="p">' + esc(r[C.case]) + "</span></a>" +
+      (tw ? ' <span class="tag cond" title="Announced-audit twin of the control just above">twin</span>' : "") +
+      '<span class="ttl" title="' + esc(cs.t || "") + '">' + esc(cs.t || "") + "</span>" +
+      '<span class="sm">' + esc(r[C.cat] || "") + "</span></td>" +
+      "<td>" + (r[C.au] === "a" ? "agent" : "human") + "</td>" +
+      "<td>" + engHTML(r) + "</td>" +
+      '<td class="p">' + esc(r[C.drv] || "") + (r[C.lvl] ? '<span class="sm"> L' + r[C.lvl] + "</span>" : "") + "</td>" +
+      "<td>" + actHTML(r) + "</td>" +
+      "<td>" + decHTML(r) + "</td>" +
+      '<td class="p">' + esc(r[C.tok] || "") + "</td>" +
+      '<td style="text-align:center">' + (r[C.exe] ? '<span class="dot">●</span>' : "") + "</td>" +
+      "<td>" + examenHTML(r) + "</td>" +
+      "<td>" + escHTML(r) + "</td>" +
+      "<td>" + doctrineHTML(r) + "</td>" +
+      "<td>" + djHTML(r) + "</td></tr>";
+  }
+
+  function render(reset) {
+    var tb = document.getElementById("tb");
+    if (reset) { tb.innerHTML = ""; shown = 0; }
+    var next = view.slice(shown, shown + PAGE);
+    var frag = document.createElement("tbody");
+    frag.innerHTML = next.map(rowHTML).join("");
+    while (frag.firstChild) tb.appendChild(frag.firstChild);
+    shown += next.length;
+    document.getElementById("more").hidden = shown >= view.length;
+    document.getElementById("cnt").textContent = fmt(view.length) + " of " + fmt(RUN.rows.length) + " proposals";
+  }
+
+  function hay(r) {
+    var cs = RUN.cases[r[C.case]] || {};
+    var ex = r[C.ex];
+    return [r[C.case], cs.t, r[C.cat], r[C.eng].join(" "), r[C.drv], r[C.kind], r[C.tgt], r[C.reason], r[C.claim], r[C.ctx],
+            r[C.dec], r[C.rc], RC_EN[r[C.rc]], r[C.ventry], r[C.tok], r[C.ev], r[C.lab], r[C.impwhy],
+            ex ? ex[3] : "", r[C.dj] ? r[C.dj].join(" ") : "", r[C.twin] ? "twin" : "", r[C.au] === "a" ? "agent" : "human"].join(" ").toLowerCase();
+  }
+
+  function apply() {
+    var q = document.getElementById("q").value.trim().toLowerCase();
+    var fd = document.getElementById("fd").value, frc = document.getElementById("frc").value, ft = document.getElementById("ft").value;
+    var fl = document.getElementById("fl").value, fk = document.getElementById("fk").value;
+    var fe = document.getElementById("fe").checked, fw = document.getElementById("fw").checked, fi = document.getElementById("fi").checked;
+    view = RUN.rows.filter(function (r) {
+      if (fd && r[C.dec] !== fd) return false;
+      if (frc && r[C.rc] !== frc) return false;
+      if (ft && !(r[C.vtier] === ft || (ft === "VAL" ? r[C.eng].some(function (e) { return (RUN.canon[e] || {}).kind === "value"; }) : r[C.eng].some(function (e) { return tierOf(e) === ft; })))) return false;
+      if (fl && r[C.lab] !== fl) return false;
+      if (fk && r[C.kind] !== fk) return false;
+      if (fe && r[C.dk] == null) return false;
+      if (fw && r[C.pair] == null) return false;
+      if (fi && !r[C.imp]) return false;
+      if (q && hay(r).indexOf(q) < 0) return false;
+      return true;
+    });
+    render(true);
+  }
+
+  function fill(id, keys, label) {
+    var el = document.getElementById(id);
+    keys.forEach(function (k) { var o = document.createElement("option"); o.value = k; o.textContent = label ? (label[k] || k) : k; el.appendChild(o); });
+  }
+
+  function boot(data) {
+    RUN = data;
+    data.cols.forEach(function (c, i) { C[c] = i; });
+    var m = data.meta, t = data.totals;
+    var title = m.pack_display.split(" — ")[0] + " · arm " + m.arm + " · seed " + m.seed + " · " + m.archetype;
+    document.title = "EC year — " + title;
+    document.getElementById("title").textContent = title + " — the year";
+    document.getElementById("sub").textContent =
+      fmt(data.rows.length) + " proposals over " + m.days + " working days (" + fmt(t.arrivals) + " arrivals, " + fmt(t.twins) +
+      " announced-audit twins) from " + m.pack_display + ", under arm " + m.arm + ": " + (ARM_EN[m.arm] || "") +
+      ". The agent is the " + m.archetype + " policy archetype" + (m.mode !== "oracle" ? " (" + m.mode + " mode)" : "") +
+      ". Every row below is what the executed run did, read from its own log.";
+    document.getElementById("imprint").innerHTML =
+      "<span>Pack " + esc(m.pack) + "</span><span>Arm " + esc(m.arm) + "</span><span>Seed " + esc(m.seed) + "</span>" +
+      "<span>Archetype " + esc(m.archetype) + "</span><span>Canon " + esc(m.canon_version) + "</span><span>Days " + esc(m.days) + "</span>" +
+      '<span class="hash" title="prereg/plan_hash.txt">Plan ' + esc((m.plan_hash || "").slice(0, 12)) + "…</span>" +
+      '<span class="hash" title="manifest.json run_jsonl_sha256">Digest ' + esc((m.digest || "").slice(0, 12)) + "…</span>" +
+      "<span>Generated " + esc(m.generated) + "</span><span>CC BY 4.0</span>";
+    var figs = [
+      ["Proposals", fmt(data.rows.length), fmt(t.twins) + " twins"],
+      ["Allowed", fmt(t.executed), ""],
+      ["Blocked", fmt(t.blocked), fmt(t.held) + " held"],
+      ["Impermissible proposed", fmt(t.impermissible_proposed), fmt(t.impermissible_executed) + " executed"],
+      ["Escalations", fmt(t.escalations_filed), fmt(t.heard) + " heard"],
+      ["Glosses", fmt(t.glosses_written), fmt(t.codifications) + " codified"],
+      ["Tokens issued", fmt(t.tokens_issued), fmt(t.tokens_consumed) + " consumed"],
+      ["DJ store", fmt(t.records_in_store), "+" + fmt(Math.max(0, (t.records_in_store || 0) - (m.seed_records || 0))) + " in run"]
+    ];
+    document.getElementById("figs").innerHTML = figs.map(function (f) {
+      return "<div class=\"fig\"><dt>" + esc(f[0]) + "</dt><dd>" + f[1] + (f[2] ? " <small>" + esc(f[2]) + "</small>" : "") + "</dd></div>";
+    }).join("");
+
+    drawDaily();
+    drawStocks();
+    dispChart(document.getElementById("disp"), document.getElementById("displegend"), document.getElementById("dispcap"), data.dec_mix, data.rows.length);
+    rcBars(document.getElementById("rcbars"), data.rc_mix);
+    tierTable(document.getElementById("tiers"));
+    document.getElementById("smoothtoggle").addEventListener("click", function () { smooth = !smooth; drawDaily(); });
+    document.getElementById("daytoggle").addEventListener("click", function () {
+      var el = document.getElementById("daytable");
+      if (!el.innerHTML) dayTable(el);
+      el.classList.toggle("on");
+      this.textContent = el.classList.contains("on") ? "Hide the table" : "Show as a table";
+    });
+
+    fill("fd", Object.keys(data.dec_mix), { allow: "allowed", block: "blocked", hold: "held" });
+    fill("frc", Object.keys(data.rc_mix).sort(function (a, b) { return data.rc_mix[b] - data.rc_mix[a]; }), RC_EN);
+    fill("ft", ["T0", "T1", "T2", "T3", "VAL"], { VAL: "value entries" });
+    fill("fl", ["discloses", "silent", "misrepresents", "nothing_to_disclose"], LAB);
+    fill("fk", Object.keys(data.kind_mix), KIND);
+    ["q", "fd", "frc", "ft", "fl", "fk", "fe", "fw", "fi"].forEach(function (id) {
+      document.getElementById(id).addEventListener("input", apply);
+    });
+    document.getElementById("more").addEventListener("click", function () { render(false); });
+    if (m.arm === "A") document.getElementById("djh").textContent = "";
+    if (m.index_href) Array.prototype.forEach.call(document.querySelectorAll("a[data-index]"), function (a) { a.href = m.index_href; });
+    document.getElementById("foot").innerHTML =
+      "Every row is read from <code>" + esc(m.run_dir) + "/run.jsonl</code>, <code>bench_log.json</code>, <code>registry.json</code> and <code>summary.json</code>; " +
+      "examen labels are recomputed from (reported event, token reference, verified event) and never read from the log. " +
+      "Engine " + esc((m.engine_sha256 || "").slice(0, 12)) + "… · constants " + esc(JSON.stringify(m.constants)) + ". Code Apache-2.0; data and this page CC BY 4.0.";
+    apply();
+  }
+
+  function fail() {
+    document.getElementById("cnt").textContent = "Unavailable";
+    document.getElementById("tb").innerHTML =
+      '<tr><td colspan="13" style="padding:20px;color:var(--ink-2)">This browser cannot decompress the run payload. ' +
+      "The same ledger is the run's <code>run.jsonl</code>.</td></tr>";
+  }
+
+  try {
+    var bytes = b64(window.__EC__);
+    window.__EC__ = null;
+    if (typeof DecompressionStream === "function") {
+      new Response(new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip")))
+        .json().then(boot).catch(function (e) { console.error(e); fail(); });
+    } else { fail(); }
+  } catch (e) { console.error(e); fail(); }
+})();
+</script>
