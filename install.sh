@@ -168,36 +168,60 @@ fi
 
 # --- 2. no pip dependencies, stated rather than assumed ------------------
 if [ -n "$PY" ]; then
-  DEPS="$($PY - <<'EOF' 2>/dev/null
-import ast, pathlib, sys
+  SCAN="$($PY - "$ROOT" <<'EOF' 2>/dev/null
+import ast, pathlib, re, sys
 # Parsed, not pattern-matched: a regex over source lines also matches prose
 # in a docstring ("...from a previous version...") and reports a dependency
 # that does not exist. The parser only sees real import statements.
+#
+# REQUIRED is a third-party import at module level, outside any try block.
+# Everything else that is not standard library is OPTIONAL: imported inside a
+# try (the caller falls back without it), inside a function (needed only when
+# that tool runs), or declared under [project.optional-dependencies].
+root = pathlib.Path(sys.argv[1])
 std = set(sys.stdlib_module_names)
-local = {"app", "benchmark", "bench", "demo", "models", "scoring", "harness",
-         "report", "tier_benchmark"}
-ext = set()
-for f in pathlib.Path(".").rglob("*.py"):
+files = [f for f in root.rglob("*.py")
+         if not {".git", "research"} & set(f.relative_to(root).parts)]  # research/ holds third-party reference source, never run
+# Sibling imports: the harness and benchmark scripts of each pack put their own
+# directory on sys.path, so any module or package in the tree is local.
+local = {f.stem for f in files} | {p.name for f in files for p in f.relative_to(root).parents if p.name}
+extras = set()
+pyproject = (root / "pyproject.toml").read_text(errors="ignore")
+section = re.search(r"^\[project\.optional-dependencies\]\n(.*?)(?=^\[|\Z)", pyproject, re.S | re.M)
+for spec in re.findall(r'"([A-Za-z0-9_.-]+)', section.group(1) if section else ""):
+    extras.add(spec.lower().replace("-", "_"))
+required, optional = set(), set()
+for f in files:
     try:
         tree = ast.parse(f.read_text(errors="ignore"))
     except SyntaxError:
         continue
-    for node in ast.walk(tree):
-        if isinstance(node, ast.Import):
-            names = [a.name for a in node.names]
-        elif isinstance(node, ast.ImportFrom):
-            names = [node.module] if node.module and node.level == 0 else []
-        else:
-            continue
-        for n in names:
-            top = n.split(".")[0]
-            if top not in std and top not in local:
-                ext.add(top)
-print(" ".join(sorted(ext)))
+    def visit(node, lazy):
+        for child in ast.iter_child_nodes(node):
+            if isinstance(child, ast.Import):
+                names = [a.name for a in child.names]
+            elif isinstance(child, ast.ImportFrom):
+                names = [child.module] if child.module and child.level == 0 else []
+            else:
+                visit(child, lazy or isinstance(child, (ast.Try, ast.FunctionDef, ast.AsyncFunctionDef)))
+                continue
+            for n in names:
+                top = n.split(".")[0]
+                if top in std or top in local:
+                    continue
+                (optional if lazy or top.lower() in extras else required).add(top)
+    visit(tree, False)
+print("REQUIRED " + " ".join(sorted(required)))
+print("OPTIONAL " + " ".join(sorted(optional - required)))
 EOF
 )"
-  if [ -z "$DEPS" ]; then
+  DEPS="$(printf '%s\n' "$SCAN" | sed -n 's/^REQUIRED //p')"
+  OPT="$(printf '%s\n' "$SCAN" | sed -n 's/^OPTIONAL //p')"
+  if [ -z "$SCAN" ]; then
+    warn "dependency scan did not run"
+  elif [ -z "$DEPS" ]; then
     ok "no third-party packages required (standard library only)"
+    [ -n "$OPT" ] && note "optional, used only by specific tools: $OPT"
   else
     warn "third-party imports found: $DEPS"
     note "this build expected none; install them before running"
