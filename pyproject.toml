@@ -35,9 +35,9 @@ extraction = ["torch>=2.2", "transformers>=4.48"]   # simulation/tools/extractio
 dev = ["ruff>=0.6", "pytest>=8"]
 
 [project.urls]
-Homepage = "https://github.com/OWNER/digital-judiciary"
-Documentation = "https://github.com/OWNER/digital-judiciary/blob/main/REPRODUCE.md"
-Changelog = "https://github.com/OWNER/digital-judiciary/blob/main/CHANGELOG.md"
+Homepage = "https://github.com/avkadambi/DigitalJudiciary"
+Documentation = "https://github.com/avkadambi/DigitalJudiciary/blob/main/REPRODUCE.md"
+Changelog = "https://github.com/avkadambi/DigitalJudiciary/blob/main/CHANGELOG.md"
 
 [tool.setuptools]
 # `app` is the only importable package; everything else is run as scripts from the tree

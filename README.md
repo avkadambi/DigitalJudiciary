@@ -3,7 +3,7 @@
 **Binding, contest-gated precedent for automated compliance decisions — the reference
 implementation, five executed simulation corpora, and the benchmark harness.**
 
-[![ci](https://github.com/OWNER/digital-judiciary/actions/workflows/ci.yml/badge.svg)](https://github.com/OWNER/digital-judiciary/actions/workflows/ci.yml)
+[![ci](https://github.com/avkadambi/DigitalJudiciary/actions/workflows/ci.yml/badge.svg)](https://github.com/avkadambi/DigitalJudiciary/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/code-Apache--2.0-blue.svg)](LICENSE)
 [![Data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-lightgrey.svg)](LICENSE-DATA)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](pyproject.toml)
@@ -26,7 +26,7 @@ no third-party dependency.
 ## Quick start
 
 ```bash
-git clone https://github.com/OWNER/digital-judiciary && cd digital-judiciary
+git clone https://github.com/avkadambi/DigitalJudiciary && cd DigitalJudiciary
 
 # 1. Every demo-pack figure the architecture and case-base papers report (~2 min)
 DJ_JUDGE_MODE=oracle DJ_DEV_KEYS=1 DJ_GITHUB_ALLOW_UNSIGNED=1 bash reproduce/run_all.sh

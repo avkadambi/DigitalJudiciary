@@ -7,13 +7,15 @@ type: software
 version: 5.16.0
 date-released: "2026-10-20"
 license: Apache-2.0
-repository-code: "https://github.com/OWNER/digital-judiciary"
-url: "https://github.com/OWNER/digital-judiciary"
+repository-code: "https://github.com/avkadambi/DigitalJudiciary"
+url: "https://github.com/avkadambi/DigitalJudiciary"
 authors:
   - family-names: Kadambi
     given-names: Arun
+    affiliation: University of North Texas
   - family-names: Kuppuswamy
     given-names: Venkat
+    affiliation: Northeastern University
 keywords:
   - precedential constraint
   - governed precedent

@@ -155,10 +155,10 @@ estimates of anything.
 - **The human review desk figure** quoted for H7 is ⟦PROJECTED⟧ from stated
   parameters in each pack's `benchmark/human.py`; it decides nothing.
 
-## Two placeholders for the maintainers
+## Placeholders resolved
 
-Unchanged from 5.15.0: `OWNER/digital-judiciary` in `README.md`,
-`pyproject.toml`, `CITATION.cff`, `.zenodo.json` and the CI badge, and
-`SECURITY-CONTACT@example.org` in `SECURITY.md`. The OSF registration DOI
+The two placeholders carried since 5.15.0 are filled: the repository URL is
+`avkadambi/DigitalJudiciary` in `README.md`, `pyproject.toml`, `CITATION.cff`
+and the CI badge, and `SECURITY.md` names the maintainer's address. The OSF registration DOI
 line in `prereg/PREREG_EC_SIM_v1.md` is filled after OSF mints it and is
 excluded from the plan hash.

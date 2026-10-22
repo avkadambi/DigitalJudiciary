@@ -11,7 +11,7 @@
 
 Please **do not** open a public GitHub issue for security reports.
 
-Email: **SECURITY-CONTACT@example.org** — replace with the maintainers’ address before the first public release (this placeholder is intentional; `tests/test_release_hygiene.py` warns while it remains).
+Email: **avkadambi@gmail.com**
 
 Include:
 
