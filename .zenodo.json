@@ -1,0 +1,30 @@
+{
+  "title": "The Digital Judiciary — reference implementation, simulation corpora and benchmark",
+  "version": "5.16.0",
+  "upload_type": "software",
+  "publication_date": "2026-10-20",
+  "description": "Reference implementation of the Digital Judiciary architecture for governed precedent in software-change adjudication; five executed 6,000-case simulation corpora (simulation pack 2.4.0, corpus data 2.1.0) with constitutions, reference adjudicator, conformance suites and mutation matrices; the benchmark harness comparing governed precedent against monolithic per-case reasoning and a priced human review desk; and, since 5.16.0, the Enterprise Conscience fast track (tiered canon, dispensation-token registry, conscience gate, examen log) coupled to the judiciary through a bench, with its 365-day five-company driver, conformance suite, mutation matrix and preregistration. Code Apache-2.0; corpora, constitutions, canons and documents CC BY 4.0.",
+  "creators": [
+    { "name": "Kadambi, Arun" },
+    { "name": "Sha" },
+    { "name": "Kuppuswamy, Venkat" }
+  ],
+  "license": "Apache-2.0",
+  "notes": "Code is licensed Apache-2.0 (LICENSE). Corpora, constitutions, canons and documents are licensed CC BY 4.0 (LICENSE-DATA).",
+  "keywords": [
+    "precedential constraint",
+    "governed precedent",
+    "software governance",
+    "compliance",
+    "LLM benchmark",
+    "synthetic corpus",
+    "Enterprise Conscience"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/avkadambi/DigitalJudiciary",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
