@@ -33,19 +33,15 @@ ROLE = "coding-agent"
 GOVERNANCE_LINE = "governance"
 ENGINEERING_LINE = "engineering"
 
-# T1 office by harm class, first match in this order (DESIGN §2.1).
-T1_TAU_MAX = 25   # charging threshold at or below which a legal/regulatory entry is T1 (canon decision)
+# The tier rule and the office set live in `authority.py` (Realism revision R2: authority
+# follows policy ownership and a binding-citation test, not harm tags).
+from . import authority as _auth  # noqa: E402
 
-OFFICE_BY_HARM = (
-    ("safety", "office:safety-lead"),
-    ("legal", "office:legal-counsel"),
-    ("regulatory", "office:compliance"),
-)
-T1_HARMS = frozenset(h for h, _ in OFFICE_BY_HARM)
-
-OFFICE_ACCESSIBILITY = "office:accessibility-lead"
-OFFICE_COMPLIANCE = "office:compliance"
-OFFICES = ("office:safety-lead", "office:legal-counsel", OFFICE_COMPLIANCE, OFFICE_ACCESSIBILITY)
+OFFICE_ACCESSIBILITY = _auth.OFFICE_ACCESSIBILITY
+OFFICE_COMPLIANCE = _auth.OFFICE_COMPLIANCE
+OFFICE_SECURITY = _auth.OFFICE_SECURITY
+OFFICES = (_auth.OFFICE_SECURITY, _auth.OFFICE_SAFETY, _auth.OFFICE_LEGAL, OFFICE_COMPLIANCE, OFFICE_ACCESSIBILITY)
+T3_PROVISION_CONTEXTS = ["internal-prototype", "spike"]   # advisory provisions (R2)
 
 STANDING_EMERGENCY_CLASS = "incident-hotfix"
 
@@ -270,26 +266,16 @@ class Canon:
 
 
 def tier_of(prov: dict) -> tuple[str, str | None]:
-    """The tier rule (DESIGN §2.1). Returns (tier, office)."""
-    if prov.get("absolute"):
-        return "T0", None
-    harms = set(prov.get("harm_classes") or [])
-    # T1 (EC Table 2, "Core"): a prohibition only a named office may lift. The
-    # rule reads the rulebook's own signals of who may decide: a safety harm
-    # class, or a legal/regulatory harm class on an entry the constitution
-    # charges at a low threshold (tau <= T1_TAU_MAX). Every other ordinary
-    # provision is T2: the agent may depart for an admitted reason within the
-    # gloss's bound. The threshold is a canon decision, versioned with it.
-    tau = int(prov.get("tau", 0) or 0)
-    for harm, office in OFFICE_BY_HARM:
-        if harm in harms and (harm == "safety" or tau <= T1_TAU_MAX):
-            return "T1", office
-    return "T2", None
+    """The tier rule (DESIGN §2.1; authority.py). Returns (tier, office)."""
+    tier, office, _why = _auth.tier_of(prov)
+    return tier, office
 
 
 def _provision_gloss(tier: str) -> Gloss:
     if tier == "T2":
         return Gloss(admitted_reasons=["N", "O", "K"], bound={"max_departure_units": 1})
+    if tier == "T3":
+        return Gloss(admitted_reasons=["N", "O", "K"], contexts=list(T3_PROVISION_CONTEXTS))
     return Gloss()
 
 
@@ -304,7 +290,7 @@ def canon_version_for(pack: str) -> str:
 
 def build_canon(pack_dir: str) -> Canon:
     """Read `<pack_dir>/constitution/rulebook.json` and tier every provision,
-    then add the six value entries and the four offices."""
+    then add the six value entries and the five offices."""
     pack = os.path.basename(os.path.normpath(pack_dir))
     with open(os.path.join(pack_dir, "constitution", "rulebook.json")) as fh:
         rulebook = json.load(fh)

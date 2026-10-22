@@ -2,7 +2,7 @@
 EC mutation matrix: evidence that EC-01..EC-12 can fail (DESIGN §7).
 
     python3 simulation/ec/mutation_matrix_ec.py [--pack vetpoc] [--days 45] [--seed 11]
-        [--archetype pressure_sensitive] [--jobs N] [--keep]
+        [--archetype laundering] [--jobs N] [--keep]
 
 Eight faults, F-EC-1..F-EC-8, and two controls that must survive. Every one is
 a `unittest.mock.patch` of a function or constant in the ec package, applied
@@ -21,7 +21,7 @@ and reports which checks the fault killed.
             (and consume tolerates it, else the run dies on a KeyError
             before any check can name the fault)
     F-EC-4  Registry.valid drops the reporting-line check                  -> EC-04
-    F-EC-5  gate admits reason S at T2                                     -> EC-05
+    F-EC-5  gate skips the T2 evidence check (R2)                        -> EC-05
     F-EC-6  Bench.file drops holds (conflict holds and agent escalations)  -> EC-06
     F-EC-7  reconcile labels from the entry's own claim                    -> EC-07
     F-EC-8  write_gloss moves the entry's tier                             -> EC-08
@@ -186,8 +186,10 @@ def patches_for(fid: str, tmp_dir: str) -> list:
     if fid == "F-EC-4":
         return [mock.patch.object(registry_mod.Registry, "valid", valid_no_line_check)]
     if fid == "F-EC-5":
-        g = gate_mutant("            if act.stated_reason not in e.gloss.admitted_reasons:",
-                        "            if act.stated_reason not in e.gloss.admitted_reasons and act.stated_reason != \"S\":",
+        # R2: with the evidence check behind it, admitting S alone is an equivalent
+        # mutant (S never has evidence of an admitted kind); the R2 fault removes the check.
+        g = gate_mutant("            elif not evidence_supports(act.evidence_ref, act.stated_reason, p.evidence):",
+                        "            elif False:",
                         tmp_dir, "f5")
         return [mock.patch("simulation.ec.gate.gate", g), mock.patch("simulation.ec.run_year.gate", g)]
     if fid == "F-EC-6":
@@ -213,7 +215,7 @@ MUTANTS = [
     ("F-EC-2", "fault", "gate skips step 1 unless an audit is announced", ("EC-02", "EC-10")),
     ("F-EC-3", "fault", "`valid` accepts `claimed:` ids", ("EC-03",)),
     ("F-EC-4", "fault", "reporting-line check removed", ("EC-04",)),
-    ("F-EC-5", "fault", "S admitted at T2", ("EC-05",)),
+    ("F-EC-5", "fault", "T2 evidence check skipped", ("EC-05",)),
     ("F-EC-6", "fault", "bench drops holds", ("EC-06",)),
     ("F-EC-7", "fault", "reconcile reads a carried label", ("EC-07",)),
     ("F-EC-8", "fault", "write_gloss bumps tier", ("EC-08",)),
@@ -271,7 +273,7 @@ def parse_args(argv=None):
     ap.add_argument("--pack", default="vetpoc")
     ap.add_argument("--days", type=int, default=45)
     ap.add_argument("--seed", type=int, default=11)
-    ap.add_argument("--archetype", default="pressure_sensitive")
+    ap.add_argument("--archetype", default="laundering")
     ap.add_argument("--ec07-days", type=int, default=cal.DAYS)
     ap.add_argument("--jobs", type=int, default=max(1, os.cpu_count() or 1))
     ap.add_argument("--keep", action="store_true", help="keep every worker's run directory")

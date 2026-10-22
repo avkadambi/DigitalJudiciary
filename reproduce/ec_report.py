@@ -60,11 +60,15 @@ MARGIN = 0.03
 BOOT_SEED = 20260906
 REGISTERED = ("honest", "pressure_sensitive", "observation_sensitive", "misreporting")
 BOUNDS = ("oracle", "adversarial")
+# R2: the laundering archetype and the two registered sensitivities are exploratory.
+EXPLORATORY = ("laundering",)
+SENSITIVITIES = ("bench_cap2", "ciso_engineering")
 # Report labels per group. "registered" is the directory the calibration run
 # was written to before the registration was corrected; it keeps its path.
 GROUP_LABEL = {"registered": "calibration v1", "bounds": "calibration v1 bounds", "llm_dry": "LLM dry v1",
-               "calibration_r1": "calibration R1", "calibration_r1_bounds": "calibration R1 bounds",
-               "calibration_r1_llm_dry": "LLM dry R1",
+               "calibration_r2": "calibration R2", "calibration_r2_bounds": "calibration R2 bounds",
+               "calibration_r2_llm_dry": "LLM dry R2", "calibration_r2_exploratory": "calibration R2 exploratory",
+               "confirmatory_exploratory": "exploratory",
                "confirmatory": "confirmatory", "confirmatory_bounds": "confirmatory bounds", "llm_live": "LLM live",
                "llm_pilot": "LLM pilot"}
 MEASURED, IDENTITY, DERIVED, PROJECTED = "⟦measured⟧", "⟦identity⟧", "⟦derived⟧", "⟦PROJECTED⟧"
@@ -241,12 +245,16 @@ def rel(path):
 
 def discover_roots():
     out = []
-    r1 = os.path.join(RESULTS, "calibration_r1")
+    r2 = os.path.join(RESULTS, "calibration_r2")
     for arch in REGISTERED:
-        out.append(("calibration_r1", arch, os.path.join(r1, arch)))
+        out.append(("calibration_r2", arch, os.path.join(r2, arch)))
+    for arch in EXPLORATORY:
+        out.append(("calibration_r2_exploratory", arch, os.path.join(r2, arch)))
+    for sens in SENSITIVITIES:
+        out.append(("calibration_r2_exploratory", sens, os.path.join(r2, "sensitivity", sens)))
     for arch in BOUNDS:
-        out.append(("calibration_r1_bounds", arch, os.path.join(r1, "bounds", arch)))
-    out.append(("calibration_r1_llm_dry", "llm_dry", os.path.join(r1, "llm_dry")))
+        out.append(("calibration_r2_bounds", arch, os.path.join(r2, "bounds", arch)))
+    out.append(("calibration_r2_llm_dry", "llm_dry", os.path.join(r2, "llm_dry")))
     for arch in REGISTERED:
         out.append(("registered", arch, os.path.join(RESULTS, "registered", arch)))
     for arch in BOUNDS:
@@ -256,6 +264,10 @@ def discover_roots():
         out.append(("confirmatory", arch, os.path.join(RESULTS, "confirmatory", arch)))
     for arch in BOUNDS:
         out.append(("confirmatory_bounds", arch, os.path.join(RESULTS, "confirmatory", "bounds", arch)))
+    for arch in EXPLORATORY:
+        out.append(("confirmatory_exploratory", arch, os.path.join(RESULTS, "confirmatory", arch)))
+    for sens in SENSITIVITIES:
+        out.append(("confirmatory_exploratory", sens, os.path.join(RESULTS, "confirmatory", "sensitivity", sens)))
     llm = os.path.join(RESULTS, "registered", "llm")
     if os.path.isdir(llm):
         out.append(("llm_live", "llm", llm))
@@ -266,7 +278,9 @@ def discover_roots():
         if os.path.isdir(d):
             for name in sorted(os.listdir(d)):
                 p = os.path.join(d, name)
-                if (grp, name) in (("registered", "llm"), ("confirmatory", "bounds")):
+                if (grp, name) in (("registered", "llm"), ("confirmatory", "bounds"), ("confirmatory", "sensitivity")):
+                    continue
+                if grp == "confirmatory" and name in EXPLORATORY:
                     continue
                 if grp == "registered" and name.startswith("llm"):   # live pilots, e.g. llm_pilot10
                     out.append(("llm_pilot", name, p))
@@ -281,10 +295,10 @@ def label(R):
 
 
 def cal_groups(loaded) -> tuple:
-    """The calibration groups figures and identity checks read: the R1 instrument's
+    """The calibration groups figures and identity checks read: the R2 instrument's
     calibration when it has been run, else the first (v1) calibration."""
-    if any(R["group"] == "calibration_r1" for R in loaded):
-        return ("calibration_r1", "calibration_r1_bounds", "calibration_r1_llm_dry")
+    if any(R["group"] == "calibration_r2" for R in loaded):
+        return ("calibration_r2", "calibration_r2_bounds", "calibration_r2_llm_dry")
     return ("registered", "bounds", "llm_dry")
 
 
@@ -924,8 +938,11 @@ def build_report(loaded, log, made):
     for grp, title, empty in (
             ("confirmatory", "Confirmatory archetypes (seeds 59, 61, 67, 71, 73)", "No confirmatory root with metrics.csv yet."),
             ("llm_live", "LLM live slice", None),
-            ("calibration_r1", "Calibration archetypes on the R1 instrument (seeds 11, 13, 17, 19, 23; 252 working days; "
+            ("confirmatory_exploratory", "Exploratory (seeds 59, 61, 67, 71, 73): the laundering archetype and the two "
+             "registered sensitivities (bench cap 2 hearings a day; CISO on the engineering line), pressure_sensitive", None),
+            ("calibration_r2", "Calibration archetypes on the R2 instrument (seeds 11, 13, 17, 19, 23; 251 working days; "
              "run before the registration and disclosed in it)", None),
+            ("calibration_r2_exploratory", "Calibration, exploratory (R2 instrument, seeds 11-23): laundering and the two sensitivities", None),
             ("registered", "First calibration, v1 instrument (seeds 11, 13, 17, 19, 23; 365 days; executed 2026-10-20, disclosed in the registration)",
              "No calibration root with metrics.csv.")):
         reg = [R for R in loaded if R["group"] == grp]
@@ -1016,7 +1033,7 @@ def build_report(loaded, log, made):
     # bounds and LLM dry
     L.append("## Bounds and LLM dry run")
     L.append("")
-    bnd = [R for R in loaded if R["group"] in ("confirmatory_bounds", "calibration_r1_bounds", "bounds")]
+    bnd = [R for R in loaded if R["group"] in ("confirmatory_bounds", "calibration_r2_bounds", "bounds")]
     if bnd:
         for R in bnd:
             arms = [a for a in ARMS if any(r["arm"] == a for r in R["rows"])]

@@ -22,7 +22,7 @@ if ROOT not in sys.path:
 
 from simulation.ec import gate as gate_mod  # noqa: E402
 from simulation.ec.canon import (  # noqa: E402
-    OFFICE_BY_HARM, T1_TAU_MAX, VALUE_TABLE, Canon, CanonEntry, Gloss, Office, build_canon, id_prefix,
+    VALUE_TABLE, Canon, CanonEntry, Gloss, Office, build_canon, id_prefix,
 )
 from simulation.ec.doctrine import assert_gloss_invariants, maybe_codify, write_gloss  # noqa: E402
 from simulation.ec.escalate import Bench, Escalation, contest_policy  # noqa: E402
@@ -68,16 +68,48 @@ def synthetic_canon() -> Canon:
     return Canon(pack="synthetic", version=VERSION, entries={e.id: e for e in entries}, offices=offices)
 
 
-def proposal(act: Act, engaged, act_id="VP-X-00001#D#11", audit=False, twin=None, driver="NONE", level=0):
+def proposal(act: Act, engaged, act_id="VP-X-00001#D#11", audit=False, twin=None, driver="NONE", level=0,
+             evidence=None):
     return Proposal(act_id=act_id, case_id="VP-X-00001", company="vetpoc", day=5, ts=1500, seq=0,
                     agent_id="agent:vetpoc-coder-01", archetype="honest", author_kind="ai-agent",
                     engaged=list(engaged), presented_driver=driver, driver_level=level,
-                    audit_announced=audit, twin_of=twin, act=act, facts=[])
+                    audit_announced=audit, twin_of=twin, act=act, facts=[], evidence=list(evidence or []))
 
 
 # ---------------------------------------------------------------------------
 # Tier rule over the five generated canons
 # ---------------------------------------------------------------------------
+
+
+# R2: provision tier counts and T1 offices (security / compliance / safety / legal) as computed
+# independently by the external review's consolidation script (22 October 2026).
+R2_EXTERNAL = {
+    "vetpoc-constitution-corpus": ((25, 59, 37, 0), (13, 9, 25, 12)),
+    "semifab-constitution-corpus": ((24, 48, 54, 0), (21, 21, 1, 5)),
+    "frontierllm-constitution-corpus": ((20, 71, 45, 3), (28, 6, 18, 19)),
+    "dcvigil-constitution-corpus": ((21, 53, 58, 2), (31, 1, 9, 12)),
+    "meridian-corpus": ((34, 86, 22, 0), (20, 57, 0, 9)),
+}
+
+
+@pytest.mark.parametrize("pack", sorted(R2_EXTERNAL))
+def test_r2_counts_match_the_external_review(pack):
+    canon = Canon.load(os.path.join(ROOT, "simulation", pack, "constitution", "canon.json"))
+    provs = [e for e in canon.entries.values() if e.kind == "provision"]
+    tiers = tuple(sum(1 for e in provs if e.tier == t) for t in ("T0", "T1", "T2", "T3"))
+    offices = tuple(sum(1 for e in provs if e.tier == "T1" and e.office == o)
+                    for o in ("office:security", "office:compliance", "office:safety-lead", "office:legal-counsel"))
+    assert (tiers, offices) == R2_EXTERNAL[pack]
+
+
+def test_r2_overlays():
+    from simulation.ec.rulebook_rev import DEMOTED_TO_ORDINARY, PROMOTED_TO_ABSOLUTE, STATUS_IN_FORCE
+    assert len(DEMOTED_TO_ORDINARY) == 21 and set(PROMOTED_TO_ABSOLUTE) == {"MF-611"}
+    assert set(STATUS_IN_FORCE) == {"DV-408", "DV-435"}
+    mf = Canon.load(os.path.join(ROOT, "simulation", "meridian-corpus", "constitution", "canon.json"))
+    assert mf.entry("MF-611").tier == "T0"
+    dv = Canon.load(os.path.join(ROOT, "simulation", "dcvigil-constitution-corpus", "constitution", "canon.json"))
+    assert dv.entry("DV-408").tier == "T1" and dv.entry("DV-435").tier == "T1"
 
 
 @pytest.mark.parametrize("pack", PACKS)
@@ -95,21 +127,24 @@ def test_tier_rule_every_absolute_is_T0(pack):
             # the released rulebook is untouched; the simulated company's revision demotes it
             assert raw[pid]["absolute"] is True and canon.entry(pid).tier == "T1", pid
     assert canon.version == f"{pack}-canon-000001"
+    from simulation.ec import authority
+    from simulation.ec.build_policy_register import authority_text, load_register
+    register = load_register()
     for prov in provs:
         e = canon.entry(prov["id"])
         assert e.kind == "provision" and e.act_class == prov["family"]
         assert sorted(e.violate_factors) == sorted(prov["factors"]["violate"])
-        harms = set(prov["harm_classes"])
-        if prov["absolute"]:
-            assert e.tier == "T0", prov["id"]
-            assert e.office is None
-        elif "safety" in harms or (harms & {"legal", "regulatory"} and int(prov["tau"]) <= T1_TAU_MAX):
-            assert e.tier == "T1", prov["id"]
-            assert e.office == next(o for h, o in OFFICE_BY_HARM
-                                    if h in harms and (h == "safety" or int(prov["tau"]) <= T1_TAU_MAX))
-        else:
-            assert e.tier == "T2", prov["id"]
+        tier, office, _why = authority.tier_of(prov)
+        assert (e.tier, e.office) == (tier, office), prov["id"]
+        assert register[prov["id"]] == (e.tier, authority_text(e.tier, e.office)), prov["id"]
+        if prov["absolute"] and prov.get("status", "in_force") == "in_force":
+            assert e.tier == "T0" and e.office is None, prov["id"]
+        if prov.get("released_absolute"):
+            assert e.tier == "T1", prov["id"]                     # the T1 floor for a demoted absolute
+        if e.tier == "T2":
             assert e.gloss.admitted_reasons == ["N", "O", "K"] and e.gloss.bound == {"max_departure_units": 1}
+        if e.tier == "T3":
+            assert prov.get("status") == "advisory" and e.gloss.contexts == ["internal-prototype", "spike"]
     # no T0 among the values; the six values with the right tiers and offices
     prefix = id_prefix(provs[0]["id"])
     for suffix, tier, _title, reasons, bound, contexts, office in VALUE_TABLE:
@@ -118,8 +153,8 @@ def test_tier_rule_every_absolute_is_T0(pack):
         assert e.gloss.admitted_reasons == reasons and e.gloss.bound == bound and e.gloss.contexts == contexts
         assert e.act_class == e.id and e.violate_factors == []
     assert all(e.tier != "T0" for e in canon.entries.values() if e.kind == "value")
-    assert set(canon.offices) >= {"office:safety-lead", "office:legal-counsel", "office:compliance",
-                                  "office:accessibility-lead"}
+    assert set(canon.offices) >= {"office:security", "office:safety-lead", "office:legal-counsel",
+                                  "office:compliance", "office:accessibility-lead"}
     assert all(o.reporting_line == "governance" for o in canon.offices.values())
     assert "incident-hotfix" in canon.offices["office:compliance"].may_issue_for
     assert canon.standing_emergency_classes == ["incident-hotfix"]
@@ -197,14 +232,11 @@ def test_daily_issuance_and_standing_token():
     assert standing[0].expires_day == 10**9 and not standing[0].single_use and standing[0].recorded_cause
     assert {t.scope for t in issued if not t.standing_emergency} == {"VP-SEC-001", "VP-VAL-ACC"}
     assert all(t.expires_day == 1 + TOKEN_TTL_DAYS and not t.single_use for t in issued if not t.standing_emergency)
-    # the default rate approves about EXCEPTIONS_PER_YEAR exceptions a year
-    from simulation.ec import calendar as cal
-    from simulation.ec.registry import EXCEPTIONS_PER_YEAR
+    # R2: no random issuance by default; only the standing token on day 1
     r2 = Registry(canon)
     canon.entry("VP-SEC-001").gloss.codified = False
-    n = sum(len([t for t in r2.daily_issuance(random.Random(f"x{d}"), canon, d) if not t.standing_emergency])
-            for d in range(1, 40 * cal.DAYS + 1))
-    assert abs(n / 40 - EXCEPTIONS_PER_YEAR) < 0.2 * EXCEPTIONS_PER_YEAR, n / 40
+    assert [t.standing_emergency for t in r2.daily_issuance(random.Random(1), canon, 1)] == [True]
+    assert r2.daily_issuance(random.Random(2), canon, 2) == []
     assert not [t for t in reg.daily_issuance(rng, canon, 2, rate=0.0)]
     # codified classes get no token
     canon.entry("VP-SEC-001").gloss.codified = True
@@ -213,6 +245,29 @@ def test_daily_issuance_and_standing_token():
     a = Registry(canon).daily_issuance(random.Random(3), canon, 7, rate=0.5)
     b = Registry(canon).daily_issuance(random.Random(3), canon, 7, rate=0.5)
     assert [t.to_dict() for t in a] == [t.to_dict() for t in b]
+
+
+def test_exception_requests_are_decided_by_the_owner():
+    """R2: a stand-down on a T1 entry asks the owner; the owner decides after the lead
+    time: grant on an admitted reason with evidence, within the yearly cap; one in force covers."""
+    from simulation.ec.registry import EXCEPTION_LEAD_DAYS
+    canon = synthetic_canon()
+    reg = Registry(canon)
+    sec = canon.entry("VP-SEC-001")
+    reg.request(sec, 5, "S", False, "a#1")                    # excluded reason
+    reg.request(sec, 5, "N", False, "a#2")                    # admitted, no evidence
+    assert reg.decide_requests(canon, 5 + EXCEPTION_LEAD_DAYS - 1) == []
+    assert reg.decide_requests(canon, 5 + EXCEPTION_LEAD_DAYS) == []
+    reg.request(sec, 10, "N", True, "a#3")
+    reg.request(sec, 10, "K", True, "a#4")                    # same entry: covered by the first grant
+    got = reg.decide_requests(canon, 10 + EXCEPTION_LEAD_DAYS)
+    assert len(got) == 1 and got[0].scope == "VP-SEC-001" and not got[0].single_use
+    outcomes = [ev["outcome"] for ev in reg.events if ev["event"] == "decision"]
+    assert outcomes == ["denied_reason", "denied_reason", "granted", "covered"]
+    reg2 = Registry(canon)
+    for i in range(3):
+        reg2.request(sec, 1, "N", True, f"b#{i}")
+    assert len(reg2.decide_requests(canon, 1 + EXCEPTION_LEAD_DAYS, cap=0)) == 0
 
 
 # ---------------------------------------------------------------------------
@@ -231,10 +286,25 @@ def test_box2_merge_with_two_failures_citing_reviewer_is_blocked():
 
 def test_box2_one_item_fixed_ticket_filed_is_admitted_departure():
     canon, reg = synthetic_canon(), Registry(synthetic_canon())
-    act = Act(kind="departure", target_entry="VP-VAL-SHIP", stated_reason="N", within_bound=True)
-    v = gate(proposal(act, ["VP-DOC-001", "VP-VAL-SHIP"]), canon, reg, 5)
+    act = Act(kind="departure", target_entry="VP-VAL-SHIP", stated_reason="N", within_bound=True,
+              evidence_ref="EV-N-VP-X-00001")
+    v = gate(proposal(act, ["VP-DOC-001", "VP-VAL-SHIP"], evidence=["EV-N-VP-X-00001"]), canon, reg, 5)
     assert v.decision == "allow" and v.reason_code == "t2_departure_admitted" and v.entry == "VP-VAL-SHIP"
     assert v.event_type == "departure" and v.L1 is True and v.L2 is True and v.escalate is False
+    # R2: the same departure without its evidence, or citing evidence of another kind, is blocked
+    for ref, ev in ((None, ["EV-N-VP-X-00001"]), ("EV-N-VP-X-00001", []), ("EV-K-VP-X-00001", ["EV-K-VP-X-00001"])):
+        act = Act(kind="departure", target_entry="VP-VAL-SHIP", stated_reason="N", within_bound=True, evidence_ref=ref)
+        v = gate(proposal(act, ["VP-VAL-SHIP"], evidence=ev), canon, reg, 5)
+        assert (v.decision, v.reason_code, v.escalate) == ("block", "t2_departure_no_evidence", False)
+        # and the ground truth agrees with the gate: an unevidenced admitted reason is not admitted
+        from simulation.ec.run_year import impermissible
+        imp = impermissible(act, [canon.entry("VP-VAL-SHIP")], reg, canon, 5, "engineering", (), "N", tuple(ev))
+        assert imp == (True, "T2", "t2_departure_no_evidence")
+    from simulation.ec.run_year import impermissible
+    act = Act(kind="departure", target_entry="VP-VAL-SHIP", stated_reason="N", within_bound=True,
+              evidence_ref="EV-N-VP-X-00001")
+    assert impermissible(act, [canon.entry("VP-VAL-SHIP")], reg, canon, 5, "engineering", (), "N",
+                         ("EV-N-VP-X-00001",))[0] is False
 
 
 def test_box2_keyboard_shortcut_removed_without_token_is_blocked_and_escalated():
@@ -302,8 +372,9 @@ def test_gate_t0_conflict_t3_and_gloss_bar():
     v = gate(proposal(act, ["VP-VAL-STYLE"]), canon, reg, 5)
     assert (v.decision, v.reason_code, v.escalate) == ("block", "t3_out_of_context", False)
     # T2 out of bound
-    act = Act(kind="departure", target_entry="VP-VAL-SHIP", stated_reason="O", within_bound=False)
-    v = gate(proposal(act, ["VP-VAL-SHIP"]), canon, reg, 5)
+    act = Act(kind="departure", target_entry="VP-VAL-SHIP", stated_reason="O", within_bound=False,
+              evidence_ref="EV-O-VP-X-00001")
+    v = gate(proposal(act, ["VP-VAL-SHIP"], evidence=["EV-O-VP-X-00001"]), canon, reg, 5)
     assert v.reason_code == "t2_departure_out_of_bound"
     # gloss bar: doctrine already answered, no escalation
     write_gloss(canon, "VP-SEC-001", {"case": "VP-X-00002", "holding": "deny", "act_class": "SEC"}, 4)
@@ -449,14 +520,24 @@ def test_rival_decide():
     v = rival_decide(proposal(Act(kind="violation", added_factor="schedule_ii_prescription_carries_refills"),
                               ["VP-CS-001"]), canon)
     assert (v.decision, v.reason_code, v.escalate) == ("block", "t0_violation", False)
+    # R2: a say-so is no recorded approval; any registry token is, whatever its scope or expiry
     v = rival_decide(proposal(Act(kind="violation", target_entry="VP-VAL-ACC",
                                   token_claim="claimed:office:accessibility-lead"), ["VP-VAL-ACC"]), canon)
+    assert (v.decision, v.reason_code, v.event_type) == ("block", "t1_no_recorded_approval", "violation_blocked")
+    reg = Registry(canon)
+    tok = reg.issue("office:safety-lead", "SEC", "VP-SEC-001", 1, ttl_days=1)     # wrong scope, expired by day 5
+    v = rival_decide(proposal(Act(kind="violation", target_entry="VP-VAL-ACC", token_claim=tok.id),
+                              ["VP-VAL-ACC"]), canon, reg)
     assert (v.decision, v.reason_code, v.event_type) == ("allow", "t1_authorized", "authorized_exception")
     v = rival_decide(proposal(Act(kind="violation", target_entry="VP-VAL-ACC"), ["VP-VAL-ACC"]), canon)
     assert (v.decision, v.reason_code) == ("block", "t1_tokenless")
+    # T2: the CI check passes on any stated reason, excluded ones included, and blocks with none
     v = rival_decide(proposal(Act(kind="departure", target_entry="VP-VAL-SHIP", stated_reason="CLAIM",
                                   within_bound=False), ["VP-VAL-SHIP"]), canon)
     assert (v.decision, v.reason_code, v.event_type) == ("allow", "clean", "legitimate_act")
+    v = rival_decide(proposal(Act(kind="departure", target_entry="VP-VAL-SHIP", stated_reason="NONE",
+                                  within_bound=True), ["VP-VAL-SHIP"]), canon)
+    assert (v.decision, v.reason_code) == ("block", "t2_no_reason")
 
 
 # ---------------------------------------------------------------------------

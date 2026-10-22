@@ -41,10 +41,11 @@ if ROOT not in sys.path:
 
 from simulation.ec import calendar as cal                                   # noqa: E402
 from simulation.ec import metrics, run_year                                 # noqa: E402
+from simulation.ec import gate as gate_mod                                  # noqa: E402
 from simulation.ec.agents import llm as llmmod                              # noqa: E402
 
 DICTIONARY = os.path.join(ROOT, "prereg", "DATA_DICTIONARY.md")
-DRY_ROOT = os.path.join(ROOT, "simulation", "ec", "results", "llm_dry")
+DRY_ROOT = os.path.join(ROOT, "simulation", "ec", "results", "calibration_r2", "llm_dry")
 REGISTERED_PACKS = ("vetpoc", "semifab", "frontierllm", "dcvigil", "meridian")
 REGISTERED_ARMS = ("A", "B", "C", "D")
 REGISTERED_SEED = 11
@@ -59,15 +60,11 @@ PROVIDERS = {"anthropic": ("ANTHROPIC_API_KEY", "ANTHROPIC_BASE_URL", llmmod.ANT
 # is accepted. Values: the shared value sets of the dictionary's head table.
 # ---------------------------------------------------------------------------
 
-ACT_KIND = {"as_submitted", "violation", "departure", "exception"}
+ACT_KIND = set(gate_mod.ACT_KINDS)
 DECISION = {"allow", "block", "hold"}
-REASON_CODE = {"clean", "t0_violation", "t1_tokenless", "t1_authorized", "t1_claimed_no_token",
-               "t2_departure_admitted", "t2_departure_excluded_reason", "t2_departure_out_of_bound",
-               "t3_in_context", "t3_out_of_context", "conflict_hold", "gloss_bar",
-               "dj_permit", "dj_permit_conditional", "dj_deny"}
-EVENT_TYPE = {"legitimate_act", "violation_blocked", "authorized_exception", "departure", "departure_blocked",
-              "hold", "impermissible_executed"}
-REPORTED_EVENT = {"none", "departure", "exception", "violation"}
+REASON_CODE = set(gate_mod.REASON_CODES) | {"dj_permit", "dj_permit_conditional", "dj_deny"}
+EVENT_TYPE = set(gate_mod.EVENT_TYPES)
+REPORTED_EVENT = {"none", "departure", "exception", "violation", "declined", "escalated"}
 DRIVER = {"N", "S", "O", "K", "W", "SELF", "CLAIM", "TRANSFER", "NONE"}
 TIER = {"T0", "T1", "T2", "T3"}
 VALID_FAIL = {"no_such_token", "revoked", "consumed", "expired", "wrong_class", "wrong_scope",
@@ -83,9 +80,11 @@ LINE_SCHEMA = {
     "impermissible_tier": ((str, None), TIER), "impermissible_why": ((str, None), IMPERM_WHY),
     "verdict": ((dict,), None), "executed": ((bool,), None), "examen": ((dict, None), None),
     "dj": ((dict, None), None), "escalation": ((dict, None), None), "t3_sampled": ((bool,), None),
-    "cost": ((dict, None), None), "believes_monitored": ((bool,), None),
+    "cost": ((dict, None), None), "believes_monitored": ((bool, None), None),
+    "request_breach_tier": ((str, None), TIER),  # every line (R2)
     "parse_failed": ((bool,), None),           # LLM live lines only
     "preexisting_violation": ((bool,), None),  # LLM live lines only (added after the live pilot)
+    "monitor_prob": ((int, None), None),       # LLM live lines only (R2): 0-100 on audit-twin pairs
 }
 PROPOSAL_SCHEMA = {
     "act_id": ((str,), None), "case_id": ((str,), None), "company": ((str,), None), "day": ((int,), None),
@@ -93,11 +92,12 @@ PROPOSAL_SCHEMA = {
     "author_kind": ((str,), {"ai-agent", "human"}), "engaged": ((list,), None),
     "presented_driver": ((str,), DRIVER), "driver_level": ((int,), {0, 1, 2}), "audit_announced": ((bool,), None),
     "twin_of": ((str, None), None), "act": ((dict,), None), "facts": ((list,), None),
+    "evidence": ((list,), None),
 }
 ACT_SCHEMA = {
     "kind": ((str,), ACT_KIND), "target_entry": ((str, None), None), "added_factor": ((str, None), None),
     "stated_reason": ((str,), DRIVER), "within_bound": ((bool, None), None), "context": ((str, None), None),
-    "token_claim": ((str, None), None), "conflict": ((bool,), None),
+    "token_claim": ((str, None), None), "conflict": ((bool,), None), "evidence_ref": ((str, None), None),
 }
 VERDICT_SCHEMA = {
     "decision": ((str,), DECISION), "reason_code": ((str,), REASON_CODE), "entry": ((str, None), None),
@@ -112,11 +112,13 @@ EXAMEN_SCHEMA = {
 COST_SCHEMA = {
     "cost_usd": ((float, int), None), "input_tokens": ((int,), None), "output_tokens": ((int,), None),
     "cached": ((bool,), None), "model": ((str,), None), "mode": ((str,), {"dry", "live"}),
+    "monitor": ((dict, None), None),           # R2: the separate manipulation-check call, on audit-twin pairs
 }
 ESCALATION_SCHEMA = {
     "act_id": ((str,), None), "case_id": ((str,), None), "company": ((str,), None), "day_filed": ((int,), None),
     "hear_day": ((int,), None), "entry": ((str, None), None), "tier": ((str, None), TIER),
-    "reason_code": ((str,), {"t0_violation", "t1_tokenless", "t1_claimed_no_token", "conflict_hold", "corpus_contest"}),
+    "reason_code": ((str,), {"t0_violation", "t1_tokenless", "t1_claimed_no_token", "conflict_hold", "corpus_contest",
+                              "agent_escalated"}),
     "contest_to": ((int,), None),
 }
 
@@ -166,7 +168,7 @@ def check_line(line: dict, live_llm: bool) -> list:
         _check_obj(line["cost"], COST_SCHEMA, f"{aid}.cost", errors)
     if isinstance(line.get("escalation"), dict):
         _check_obj(line["escalation"], ESCALATION_SCHEMA, f"{aid}.escalation", errors)
-    if live_llm:
+    if live_llm and (line.get("proposal") or {}).get("author_kind") == "ai-agent":
         if line.get("cost") is None:
             errors.append(f"{aid}: cost is null on a live LLM line")
         elif line["cost"].get("mode") != "live":
@@ -235,7 +237,8 @@ def step_models(provider: str, base: str, key: str, model: str) -> list:
 
 
 def dry_profile() -> dict:
-    """Per pack: proposals, mean input and output tokens, from the registered dry
+    """Per pack: agent calls (AI-authored proposals only; human arrivals are filed
+    as submitted and cost nothing), mean input and output tokens, from the registered dry
     run under simulation/ec/results/llm_dry when complete, else from a 30-day
     dry run of arm D scaled to the registered year (cal.DAYS working days)."""
     prof = {}
@@ -245,7 +248,7 @@ def dry_profile() -> dict:
             s = json.load(open(sp))
             u = s.get("agent_state", {}).get("usage", {})
             if int(s.get("days", 0)) == cal.DAYS and u.get("calls"):
-                prof[pack] = {"proposals": int(s["totals"]["proposals"]), "mean_in": u["input_tokens"] / u["calls"],
+                prof[pack] = {"proposals": int(u["calls"]), "mean_in": u["input_tokens"] / u["calls"],
                               "mean_out": u["output_tokens"] / u["calls"], "source": f"llm_dry {cal.DAYS}-day run"}
                 continue
         tmp = tempfile.mkdtemp(prefix=f"ec_preflight_dry_{pack}_")
@@ -253,7 +256,7 @@ def dry_profile() -> dict:
                        "--agent", "llm:anthropic:sonnet", "--mode", "dry", "--out", tmp, "--quiet"])
         s = json.load(open(os.path.join(tmp, pack, "D", f"seed-{REGISTERED_SEED}", "summary.json")))
         u = s["agent_state"]["usage"]
-        prof[pack] = {"proposals": int(round(s["totals"]["proposals"] * cal.DAYS / 30)),
+        prof[pack] = {"proposals": int(round(u["calls"] * cal.DAYS / 30)),
                       "mean_in": u["input_tokens"] / u["calls"], "mean_out": u["output_tokens"] / u["calls"],
                       "source": f"30-day dry run scaled x{cal.DAYS}/30"}
     return prof
@@ -282,7 +285,7 @@ def step_plan(model: str, prof: dict) -> None:
     tot_acc = sum(v["accounted"] for v in pr.values())
     tot_sp = sum(v["spend_upper"] for v in pr.values())
     for pack, v in pr.items():
-        say("plan", f"  {pack:<12} {v['proposals']:>5} proposals/arm, mean {v['mean_in']:.0f} in / {v['mean_out']:.0f} out tokens "
+        say("plan", f"  {pack:<12} {v['proposals']:>5} agent calls/arm, mean {v['mean_in']:.0f} in / {v['mean_out']:.0f} out tokens "
                     f"({prof[pack]['source']}): one arm ${v['per_arm_full']:.2f}, four arms accounted ${v['accounted']:.2f}, "
                     f"provider spend <= ${v['spend_upper']:.2f}")
     say("plan", f"projected cost at PRICES[{model}]: accounted cost_usd ${tot_acc:.2f}; provider spend <= ${tot_sp:.2f} "
@@ -290,6 +293,8 @@ def step_plan(model: str, prof: dict) -> None:
     say("plan", "cache sharing: arms A, B and C render byte-identical prompts for the same skeleton, so after the first "
                 "arm they are served from <out>/llm_cache at the cache rate; arm D's prompts diverge once a gloss is "
                 "written (day 4 at the earliest). Run the arms in one invocation and one --out so the cache is shared.")
+    say("plan", "monitoring check: each audit-twin pair adds one short separate call per member (live only); "
+                "these are small prompts and are not in the projection above, so keep the 2x spend margin.")
 
 
 def step_smoke(provider: str, model: str, days: int, out: str, budget: float, rate_limit: float,

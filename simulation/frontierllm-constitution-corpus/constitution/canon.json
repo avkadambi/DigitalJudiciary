@@ -16,9 +16,9 @@
       },
       "id": "FL-MB-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "No commit or deployment references an unapproved or deprecated model hash",
       "violate_factors": [
         "checkpoint_deployed_without_verified_signature",
@@ -45,9 +45,9 @@
       },
       "id": "FL-MB-002",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "Every deployed checkpoint carries a verified signature whose root digest recomputes from its resource digests",
       "violate_factors": [
         "base_model_omitted_from_merge_declaration",
@@ -74,9 +74,9 @@
       },
       "id": "FL-MB-003",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "Model weights are serialised in a format that cannot execute code on load",
       "violate_factors": [
         "base_model_omitted_from_merge_declaration",
@@ -103,7 +103,7 @@
       },
       "id": "FL-MB-004",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "The served artifact's hash matches the registry entry it claims to be",
@@ -132,7 +132,7 @@
       },
       "id": "FL-MB-005",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Merged models declare every base model in their lineage",
@@ -161,7 +161,7 @@
       },
       "id": "FL-MB-006",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Training, fine-tuning and evaluation relationships are declared on the checkpoint record",
@@ -190,7 +190,7 @@
       },
       "id": "FL-MB-007",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A system prompt carries an immutable version identity, distinct from its deployment label",
@@ -219,7 +219,7 @@
       },
       "id": "FL-MB-008",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Moving a production prompt label is reviewed by a named owner",
@@ -248,7 +248,7 @@
       },
       "id": "FL-MB-009",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every release publishes a model bill of materials bound to the artifact digest",
@@ -509,9 +509,9 @@
       },
       "id": "FL-PI-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "A model trained on unsanitised personal data is never deployed to production",
       "violate_factors": [
         "fl_pi_001_control_absent",
@@ -799,7 +799,7 @@
       },
       "id": "FL-AG-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every newly imported package is verified to exist in the upstream registry before compilation",
@@ -828,7 +828,7 @@
       },
       "id": "FL-AG-005",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Agent-authored code executes only inside a sandboxed runner",
@@ -857,7 +857,7 @@
       },
       "id": "FL-AG-006",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Agent code calls only allowlisted external hosts",
@@ -886,7 +886,7 @@
       },
       "id": "FL-AG-007",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Agent changes are labelled and isolated so they can be reviewed independently",
@@ -915,7 +915,7 @@
       },
       "id": "FL-AG-008",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Agent instructions derived from untrusted text are treated as tainted input",
@@ -944,9 +944,9 @@
       },
       "id": "FL-LS-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "Model output never reaches a downstream execution sink without validation",
       "violate_factors": [
         "canary_token_leaked_in_output",
@@ -973,9 +973,9 @@
       },
       "id": "FL-LS-002",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "System prompts and weight-adjacent secrets are not extractable through model output",
       "violate_factors": [
         "canary_token_leaked_in_output",
@@ -1002,7 +1002,7 @@
       },
       "id": "FL-LS-003",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "The instruction/data boundary is enforced on every retrieval path",
@@ -1031,7 +1031,7 @@
       },
       "id": "FL-LS-004",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "The carrier channel of untrusted input is declared and handled per channel",
@@ -1060,7 +1060,7 @@
       },
       "id": "FL-LS-005",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Fine-tuning data distribution stays within its variance threshold, and the pipeline halts if not",
@@ -1089,7 +1089,7 @@
       },
       "id": "FL-LS-006",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "New training shards are screened for backdoor triggers",
@@ -1118,7 +1118,7 @@
       },
       "id": "FL-LS-007",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Inference endpoints keep their rate limits and output perturbation",
@@ -1147,7 +1147,7 @@
       },
       "id": "FL-LS-008",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Membership-inference advantage stays below its threshold",
@@ -1176,7 +1176,7 @@
       },
       "id": "FL-LS-009",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Verbatim training-data emission stays below the declared span threshold",
@@ -1205,7 +1205,7 @@
       },
       "id": "FL-LS-010",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Canary tokens are absent from model output",
@@ -1234,7 +1234,7 @@
       },
       "id": "FL-LS-011",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Injection detection is exercised on every changed retrieval or tool path",
@@ -1263,9 +1263,9 @@
       },
       "id": "FL-EV-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:safety-lead",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "No training or fine-tuning run ingests evaluation or benchmark data",
       "violate_factors": [
         "accuracy_outside_relative_tolerance",
@@ -1310,8 +1310,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "EV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1321,9 +1327,9 @@
       },
       "id": "FL-EV-003",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A commit altering the inference engine meets its semantic-parity threshold against the pinned baseline",
       "violate_factors": [
         "failing_safety_evaluation_excluded_from_gate",
@@ -1339,8 +1345,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "EV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1350,9 +1362,9 @@
       },
       "id": "FL-EV-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A parity claim declares its sample size and its percentile",
       "violate_factors": [
         "fl_ev_004_control_absent",
@@ -1368,8 +1380,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "EV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1379,9 +1397,9 @@
       },
       "id": "FL-EV-005",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Accuracy passing does not by itself establish that the optimisation under test is still engaged",
       "violate_factors": [
         "accuracy_outside_relative_tolerance",
@@ -1397,8 +1415,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "EV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1408,9 +1432,9 @@
       },
       "id": "FL-EV-006",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Judge\u2013human agreement is measured for the judge configuration in use",
       "violate_factors": [
         "accuracy_outside_relative_tolerance",
@@ -1426,8 +1450,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "EV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1437,9 +1467,9 @@
       },
       "id": "FL-EV-007",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "An objective checker is preferred over a model judge wherever one exists",
       "violate_factors": [
         "benchmark_data_present_in_training_corpus",
@@ -1455,8 +1485,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "EV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1466,9 +1502,9 @@
       },
       "id": "FL-EV-008",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Golden-prompt baselines are pinned to a commit and never rewritten to match an output",
       "violate_factors": [
         "failing_safety_evaluation_excluded_from_gate",
@@ -1484,8 +1520,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "EV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1495,9 +1537,9 @@
       },
       "id": "FL-EV-009",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Every new corpus is run through a decontamination check against the eval suites",
       "violate_factors": [
         "fl_ev_009_control_absent",
@@ -1698,7 +1740,7 @@
       },
       "id": "FL-SF-007",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Safety incidents are reported within the statutory deadline",
@@ -1745,8 +1787,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "IN",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1756,9 +1804,9 @@
       },
       "id": "FL-IN-001",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Time to first token stays within its declared budget for the serving tier",
       "violate_factors": [
         "cuda_tensor_leak_detected_in_profile",
@@ -1774,8 +1822,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "IN",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1785,9 +1839,9 @@
       },
       "id": "FL-IN-002",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Time per output token stays within its declared budget for the serving tier",
       "violate_factors": [
         "bitwise_replay_claimed_without_batch_invariance",
@@ -1803,8 +1857,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "IN",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1814,9 +1874,9 @@
       },
       "id": "FL-IN-003",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A change causing more than five percent latency degradation is rejected",
       "violate_factors": [
         "bitwise_replay_claimed_without_batch_invariance",
@@ -1832,8 +1892,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "IN",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1843,9 +1909,9 @@
       },
       "id": "FL-IN-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "KV-cache growth is bounded and its budget explicitly pinned",
       "violate_factors": [
         "bitwise_replay_claimed_without_batch_invariance",
@@ -1861,8 +1927,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "IN",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1872,9 +1944,9 @@
       },
       "id": "FL-IN-005",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "High-concurrency profiling shows no tensor allocation leak after warm-up",
       "violate_factors": [
         "fl_in_005_control_absent",
@@ -1890,8 +1962,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "IN",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1901,9 +1979,9 @@
       },
       "id": "FL-IN-006",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A latency claim declares its arrival distribution and its percentile",
       "violate_factors": [
         "cuda_tensor_leak_detected_in_profile",
@@ -1919,8 +1997,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "IN",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1930,9 +2014,9 @@
       },
       "id": "FL-IN-007",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A bitwise-replay claim holds only under declared batch invariance, hardware and engine version",
       "violate_factors": [
         "bitwise_replay_claimed_without_batch_invariance",
@@ -1948,8 +2032,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "IN",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1959,9 +2049,9 @@
       },
       "id": "FL-IN-008",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A newly introduced nondeterministic operation is declared and registered",
       "violate_factors": [
         "bitwise_replay_claimed_without_batch_invariance",
@@ -1988,9 +2078,9 @@
       },
       "id": "FL-FG-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:safety-lead",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "Every agentic workflow enforces a numerically declared loop limit and a cost circuit breaker that cannot be disabled",
       "violate_factors": [
         "agent_bypasses_cost_centre_quota",
@@ -2006,8 +2096,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "FG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2017,9 +2113,9 @@
       },
       "id": "FL-FG-002",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A loop limit declares its units, not just its value",
       "violate_factors": [
         "agent_bypasses_cost_centre_quota",
@@ -2035,8 +2131,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "FG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2046,9 +2148,9 @@
       },
       "id": "FL-FG-003",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A loop limit is not overridable by an environment variable",
       "violate_factors": [
         "agent_bypasses_cost_centre_quota",
@@ -2064,8 +2166,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "FG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2075,9 +2183,9 @@
       },
       "id": "FL-FG-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Cost control is a pre-flight breaker, not a meter read after the fact",
       "violate_factors": [
         "agent_bypasses_cost_centre_quota",
@@ -2093,8 +2201,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "FG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2104,9 +2218,9 @@
       },
       "id": "FL-FG-005",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Agent quotas are bound to the agent identity and its cost centre",
       "violate_factors": [
         "agent_bypasses_cost_centre_quota",
@@ -2122,8 +2236,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "FG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2133,9 +2253,9 @@
       },
       "id": "FL-FG-006",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Recursive tool-call paths carry a terminator",
       "violate_factors": [
         "agent_bypasses_cost_centre_quota",
@@ -2336,9 +2456,9 @@
       },
       "id": "FL-IP-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "Generated code structurally identical to a restricted copyleft library never merges",
       "violate_factors": [
         "attribution_obligation_dropped_at_release",
@@ -2540,9 +2660,9 @@
       },
       "id": "FL-SC-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "No artifact deploys without provenance verified against the expected builder identity",
       "violate_factors": [
         "build_not_reproducible_across_runners",
@@ -3111,7 +3231,7 @@
       },
       "id": "FL-GV-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "The compute-threshold determination is recorded per jurisdiction and never conflates them",
@@ -3129,8 +3249,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3140,9 +3266,9 @@
       },
       "id": "FL-GV-005",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "The constitution declares whether any party holds contest standing adverse to grants",
       "violate_factors": [
         "appeal_path_removed_by_configuration",
@@ -3158,8 +3284,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3169,9 +3301,9 @@
       },
       "id": "FL-GV-006",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Constitutional parameters change only by legislative enactment",
       "violate_factors": [
         "appeal_path_removed_by_configuration",
@@ -3187,8 +3319,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3198,9 +3336,9 @@
       },
       "id": "FL-GV-007",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Reporter output never reaches the adjudication input path, and the audit register is never read by resolve",
       "violate_factors": [
         "audit_finding_read_during_retrieval",
@@ -3216,8 +3354,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3227,9 +3371,9 @@
       },
       "id": "FL-GV-008",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Every arrival that is not charged leaves exactly one docket entry",
       "violate_factors": [
         "audit_finding_read_during_retrieval",
@@ -3245,8 +3389,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3256,9 +3406,9 @@
       },
       "id": "FL-GV-009",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "High-risk systems maintain a risk management system across the lifecycle",
       "violate_factors": [
         "appeal_path_removed_by_configuration",
@@ -3274,8 +3424,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3285,9 +3441,9 @@
       },
       "id": "FL-GV-010",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "High-risk systems meet the data-governance requirements for training, validation and testing sets",
       "violate_factors": [
         "appeal_path_removed_by_configuration",
@@ -3303,8 +3459,14 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3314,9 +3476,9 @@
       },
       "id": "FL-GV-011",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "High-risk systems meet the accuracy, robustness and cybersecurity requirements",
       "violate_factors": [
         "audit_finding_read_during_retrieval",
@@ -3332,10 +3494,17 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "EV",
       "gloss": {
-        "admitted_reasons": [],
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
         "bound": {},
         "codified": false,
-        "contexts": [],
+        "contexts": [
+          "internal-prototype",
+          "spike"
+        ],
         "holdings": [],
         "no_waiver_classes": [],
         "priorities": [],
@@ -3343,9 +3512,9 @@
       },
       "id": "FL-EV-010",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T3",
       "title": "Governance practices follow the NIST Generative AI Profile's suggested actions",
       "violate_factors": [
         "accuracy_outside_relative_tolerance",
@@ -3361,10 +3530,17 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "SF",
       "gloss": {
-        "admitted_reasons": [],
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
         "bound": {},
         "codified": false,
-        "contexts": [],
+        "contexts": [
+          "internal-prototype",
+          "spike"
+        ],
         "holdings": [],
         "no_waiver_classes": [],
         "priorities": [],
@@ -3372,9 +3548,9 @@
       },
       "id": "FL-SF-009",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T3",
       "title": "Release records cite the frontier safety framework version in force",
       "violate_factors": [
         "capability_evaluation_skipped_for_this_checkpoint",
@@ -3488,7 +3664,7 @@
       },
       "id": "FL-CS-004",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Personal information from users known to be under thirteen, or from child-directed services, is excluded from training and fine-tuning corpora unless verifiable parental consent covering that use is recorded",
@@ -3593,10 +3769,17 @@
       "canon_version": "frontierllm-constitution-corpus-canon-000001",
       "family": "CB",
       "gloss": {
-        "admitted_reasons": [],
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
         "bound": {},
         "codified": false,
-        "contexts": [],
+        "contexts": [
+          "internal-prototype",
+          "spike"
+        ],
         "holdings": [],
         "no_waiver_classes": [],
         "priorities": [],
@@ -3604,9 +3787,9 @@
       },
       "id": "FL-CB-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T3",
       "title": "The evaluation harness carries sandbagging and evaluation-awareness detection, and every uplift result declares the elicitation effort behind it",
       "violate_factors": [
         "eval_awareness_probe_results_excluded_from_report",
@@ -3662,7 +3845,7 @@
       },
       "id": "FL-WX-002",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Access to unreleased weights is bound to a current personnel-vetting record and is revoked automatically on role change or vetting expiry",
@@ -3691,7 +3874,7 @@
       },
       "id": "FL-WX-003",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An export-classification determination is recorded before model weights or training technology are transferred outside the declared boundary or released to a foreign national",
@@ -3807,7 +3990,7 @@
       },
       "id": "FL-TR-003",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "The frontier transparency report is published at or before deployment, and the anonymous internal safety-concern channel is preserved with its anti-retaliation notice",
@@ -3894,7 +4077,7 @@
       },
       "id": "FL-UH-002",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Political-persuasion and election-influence policy checks run for every tenant, and the election-integrity classifier stays in the release gate through an electoral cycle",
@@ -4311,7 +4494,11 @@
     "office:compliance": {
       "id": "office:compliance",
       "may_issue_for": [
+        "CS",
+        "GV",
+        "SF",
         "TR",
+        "UH",
         "incident-hotfix"
       ],
       "reporting_line": "governance"
@@ -4319,33 +4506,33 @@
     "office:legal-counsel": {
       "id": "office:legal-counsel",
       "may_issue_for": [
-        "CS",
-        "GV",
-        "LS",
-        "MB",
+        "IP",
         "PI",
         "PV",
-        "SF",
-        "TD",
-        "TR",
-        "UH",
-        "WX"
+        "TD"
       ],
       "reporting_line": "governance"
     },
     "office:safety-lead": {
       "id": "office:safety-lead",
       "may_issue_for": [
-        "AG",
         "BS",
         "CB",
         "CS",
         "EV",
         "FG",
-        "GV",
-        "IN",
         "SF",
-        "UH",
+        "UH"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:security": {
+      "id": "office:security",
+      "may_issue_for": [
+        "AG",
+        "LS",
+        "MB",
+        "SC",
         "WX"
       ],
       "reporting_line": "governance"

@@ -23,7 +23,7 @@ pytestmark = pytest.mark.skipif(not os.path.exists(CANON), reason="canon.json no
 @pytest.fixture(scope="module")
 def suite(tmp_path_factory):
     out = str(tmp_path_factory.mktemp("ec_conformance"))
-    return conf.Suite("vetpoc", 11, "pressure_sensitive", 45, cal.DAYS, "A", None, out)
+    return conf.Suite("vetpoc", 11, "laundering", 45, cal.DAYS, "A", None, out)
 
 
 @pytest.fixture(scope="module")
@@ -53,7 +53,7 @@ def test_cli_reads_existing_results_and_writes_report(suite, results, tmp_path):
     and reproduces the in-process answer; the report lands next to them."""
     out = str(tmp_path / "aux")
     proc = run([os.path.join(ROOT, "simulation", "ec", "run_ec_conformance.py"), "--pack", "vetpoc", "--seed", "11",
-                "--archetype", "pressure_sensitive", "--results", suite.out, "--out", out])
+                "--archetype", "laundering", "--results", suite.out, "--out", out])
     assert proc.returncode == 0, proc.stdout[-2000:] + proc.stderr[-2000:]
     assert result_line(proc).startswith("RESULT: 12/12")
     rep = json.load(open(os.path.join(suite.out, "ec_conformance.json")))

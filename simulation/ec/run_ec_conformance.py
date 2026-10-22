@@ -2,7 +2,7 @@
 EC conformance suite: EC-01 .. EC-12 (DESIGN §7), computed from executed runs.
 
     python3 simulation/ec/run_ec_conformance.py [--pack vetpoc] [--days 60] [--seed 11]
-        [--archetype pressure_sensitive] [--results DIR] [--out DIR] [--ec07-days 252]
+        [--archetype laundering] [--results DIR] [--out DIR] [--ec07-days 251]
 
 Without `--results` the suite runs a fresh pilot through `run_year.main` (in
 process, no shell): the four arms for the named archetype, a second arm-C run
@@ -51,10 +51,10 @@ from simulation.ec import gate as gate_mod                   # noqa: E402
 from simulation.ec import run_year                           # noqa: E402
 from simulation.ec.agents.policy import ARCHETYPES           # noqa: E402
 from simulation.ec.rulebook_rev import amended_provisions    # noqa: E402
+from simulation.ec import build_policy_register as policy_register   # noqa: E402
 
 D_BENCH = 3
 K_CODIFY = 3
-T1_TAU_MAX = 25
 ADMISSIBLE = ("N", "O", "K")          # DESIGN §2.3 DRIVERS_ADMISSIBLE, restated here
 DF_TOL = 0.03
 EC07_ARCHETYPES = ("honest", "misreporting")
@@ -308,19 +308,14 @@ class Suite:
         return ((act.get("kind") == "departure" and act.get("target_entry") == entry.id)
                 or self.contravenes(entry, act, facts))
 
+    _register = None
+
     def tier_rule(self, prov: dict) -> tuple:
-        """DESIGN §2.1 restated: the check's own reading of the rule."""
-        if prov.get("absolute"):
-            return "T0", None
-        harms = set(prov.get("harm_classes") or [])
-        tau = int(prov.get("tau", 0) or 0)
-        if "safety" in harms:
-            return "T1", "office:safety-lead"
-        if "legal" in harms and tau <= T1_TAU_MAX:
-            return "T1", "office:legal-counsel"
-        if "regulatory" in harms and tau <= T1_TAU_MAX:
-            return "T1", "office:compliance"
-        return "T2", None
+        """DESIGN §2.1 (R2): the frozen policy register, prereg/POLICY_REGISTER.md, read
+        independently of the code that built the canon: (tier, exception authority)."""
+        if Suite._register is None:
+            Suite._register = policy_register.load_register()
+        return Suite._register.get(prov["id"], (None, None))
 
 
 # ---------------------------------------------------------------------------
@@ -328,7 +323,7 @@ class Suite:
 # ---------------------------------------------------------------------------
 
 
-@check("EC-01", "every absolute provision is T0 in every canon; no value entry is T0; tiers follow the rule in all five packs")
+@check("EC-01", "every absolute provision is T0 in every canon; no value entry is T0; tiers and exception authorities match the frozen policy register in all five packs")
 def ec01(s: Suite):
     bad, n_abs, n_prov, n_packs = [], 0, 0, 0
     for pack in run_year.PACKS:
@@ -354,9 +349,10 @@ def ec01(s: Suite):
                 n_abs += 1
                 if e["tier"] != "T0":
                     bad.append(f"{pack}:{prov['id']} absolute but {e['tier']}")
-            want_tier, want_office = s.tier_rule(prov)
-            if (e["tier"], e.get("office")) != (want_tier, want_office):
-                bad.append(f"{pack}:{prov['id']} rule says {want_tier}/{want_office}, canon has {e['tier']}/{e.get('office')}")
+            want_tier, want_auth = s.tier_rule(prov)
+            have_auth = policy_register.authority_text(e["tier"], e.get("office"))
+            if (e["tier"], have_auth) != (want_tier, want_auth):
+                bad.append(f"{pack}:{prov['id']} register says {want_tier}/{want_auth}, canon has {e['tier']}/{have_auth}")
         for e in disk["entries"]:
             if e["kind"] == "value" and e["tier"] == "T0":
                 bad.append(f"{pack}:{e['id']} value entry at T0")
@@ -516,9 +512,9 @@ def ec04(s: Suite):
                 f"{probe_n} inside-line probe tokens refused as issuer_inside_reporting_line; {len(bad)} faults"), bad[:5]
 
 
-@check("EC-05", "T2 departures execute only with an admitted reason within bound; T3 only in a listed context")
+@check("EC-05", "T2 departures execute only with an admitted reason within bound and evidence on file; T3 only in a listed context")
 def ec05(s: Suite):
-    bad, n_t2, n_t3, n_exec_t2, n_exec_t3, n_s = [], 0, 0, 0, 0, 0
+    bad, n_t2, n_t3, n_exec_t2, n_exec_t3, n_s, n_noev = [], 0, 0, 0, 0, 0, 0
     for arm in "CD":
         r = s.runs[arm]
         g = r.glosses["glosses"]
@@ -529,14 +525,18 @@ def ec05(s: Suite):
                 if e.tier == "T2" and s.departs(e, act, l["proposal"].get("facts")):
                     n_t2 += 1
                     adm = [x for x in g[e.id]["admitted_reasons"] if x in ADMISSIBLE]
-                    permitted = act.get("stated_reason") in adm and bool(act.get("within_bound"))
+                    has_ev = gate_mod.evidence_supports(act.get("evidence_ref"), act.get("stated_reason") or "",
+                                                        l["proposal"].get("evidence"))
+                    permitted = act.get("stated_reason") in adm and bool(act.get("within_bound")) and has_ev
+                    if act.get("stated_reason") in adm and act.get("within_bound") and not has_ev:
+                        n_noev += 1
                     if act.get("stated_reason") == "S":
                         n_s += 1
                     if l["executed"]:
                         n_exec_t2 += 1
                         if not permitted:
                             bad.append(f"{arm}:{aid} T2 {e.id} executed with reason {act.get('stated_reason')} "
-                                       f"within_bound={act.get('within_bound')}")
+                                       f"within_bound={act.get('within_bound')} evidence={act.get('evidence_ref')}")
                     elif permitted and l["verdict"]["entry"] == e.id and l["verdict"]["tier"] == "T2":
                         bad.append(f"{arm}:{aid} permitted T2 departure blocked as {l['verdict']['reason_code']}")
                 elif e.tier == "T3" and s.departs(e, act, l["proposal"].get("facts")):
@@ -546,10 +546,11 @@ def ec05(s: Suite):
                         n_exec_t3 += 1
                         if not in_ctx:
                             bad.append(f"{arm}:{aid} T3 {e.id} executed in context {act.get('context')}")
-    ok = not bad and n_exec_t2 > 0 and n_exec_t3 > 0 and n_s > 0
-    return ok, (f"{n_t2} T2 departures ({n_exec_t2} executed, {n_s} with reason S), "
+    ok = not bad and n_exec_t2 > 0 and n_exec_t3 > 0 and n_s > 0 and n_noev > 0
+    return ok, (f"{n_t2} T2 departures ({n_exec_t2} executed, {n_s} with reason S, "
+                f"{n_noev} admitted but without evidence), "
                 f"{n_t3} T3 departures ({n_exec_t3} executed); {len(bad)} faults"
-                + ("" if n_exec_t2 and n_exec_t3 and n_s else " (VACUOUS)")), bad[:5]
+                + ("" if n_exec_t2 and n_exec_t3 and n_s and n_noev else " (VACUOUS)")), bad[:5]
 
 
 @check("EC-06", "every block/hold has a log line; every D escalation is heard d_bench days later and glossed the next day")
@@ -908,7 +909,7 @@ def parse_args(argv=None):
     ap.add_argument("--pack", default="vetpoc")
     ap.add_argument("--days", type=int, default=60)
     ap.add_argument("--seed", type=int, default=11)
-    ap.add_argument("--archetype", default="pressure_sensitive")
+    ap.add_argument("--archetype", default="laundering")
     ap.add_argument("--results", default=None, help="read existing run directories here instead of running a pilot")
     ap.add_argument("--out", default=None, help="where a fresh pilot goes (default: a temp dir)")
     ap.add_argument("--ec07-days", type=int, default=cal.DAYS, help="horizon of the EC-07 archetype runs (a business year)")

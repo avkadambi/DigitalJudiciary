@@ -190,7 +190,7 @@
       },
       "id": "VP-CS-007",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Schedule III\u2013V refills do not exceed five within six months",
@@ -219,7 +219,7 @@
       },
       "id": "VP-CS-008",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Controlled-substance inventory reconciles to the millilitre with an immutable audit entry on discrepancy",
@@ -248,7 +248,7 @@
       },
       "id": "VP-CS-009",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "PDMP submissions conform to the state's ASAP field layout, including the veterinary species code",
@@ -277,7 +277,7 @@
       },
       "id": "VP-CS-010",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A dispensing event names an authenticated prescriber, never an inferred one",
@@ -306,7 +306,7 @@
       },
       "id": "VP-CS-011",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Diversion alerts are triaged within one business day",
@@ -335,7 +335,7 @@
       },
       "id": "VP-CS-012",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "DEA registration is verified as current at the time of issue",
@@ -596,9 +596,9 @@
       },
       "id": "VP-PO-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:safety-lead",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "A diagnostic result is irreversibly bound to the correct patient identity",
       "violate_factors": [
         "diagnostic_result_attached_to_wrong_patient_id",
@@ -933,14 +933,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "PD",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -950,9 +944,9 @@
       },
       "id": "VP-PD-003",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Owner personal data is encrypted at rest and redacted in logs",
       "violate_factors": [
         "consent_currency_not_checked_before_use",
@@ -968,14 +962,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "PD",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -985,9 +973,9 @@
       },
       "id": "VP-PD-004",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Consent currency is checked before any secondary use",
       "violate_factors": [
         "consent_currency_not_checked_before_use",
@@ -1003,14 +991,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "PD",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1020,9 +1002,9 @@
       },
       "id": "VP-PD-005",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Data subject export completes within the statutory window",
       "violate_factors": [
         "consent_currency_not_checked_before_use",
@@ -1038,14 +1020,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "PD",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1055,9 +1031,9 @@
       },
       "id": "VP-PD-006",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Cross-border transfer of owner data has a recorded lawful basis",
       "violate_factors": [
         "consent_withdrawal_requires_phone_call_only",
@@ -1108,14 +1084,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "PD",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1125,9 +1095,9 @@
       },
       "id": "VP-PD-008",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Owner records follow the jurisdiction's retention schedule",
       "violate_factors": [
         "consent_currency_not_checked_before_use",
@@ -1207,14 +1177,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RB",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1224,9 +1188,9 @@
       },
       "id": "VP-RB-002",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Object ownership is checked server-side before any read",
       "violate_factors": [
         "authorization_decision_made_in_frontend_only",
@@ -1242,14 +1206,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RB",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1259,9 +1217,9 @@
       },
       "id": "VP-RB-003",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Every new endpoint carries an explicit role check covered by test",
       "violate_factors": [
         "authorization_decision_made_in_frontend_only",
@@ -1277,14 +1235,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RB",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1294,9 +1246,9 @@
       },
       "id": "VP-RB-004",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "The role-permission matrix is exercised by permutation tests",
       "violate_factors": [
         "authorization_decision_made_in_frontend_only",
@@ -1312,14 +1264,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RB",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1329,9 +1275,9 @@
       },
       "id": "VP-RB-005",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Break-glass access is time-boxed, logged and reviewed",
       "violate_factors": [
         "break_glass_access_never_expires",
@@ -1347,14 +1293,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RB",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1364,9 +1304,9 @@
       },
       "id": "VP-RB-006",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Clinical write rights are withheld from non-clinical roles",
       "violate_factors": [
         "authorization_decision_made_in_frontend_only",
@@ -1382,14 +1322,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RB",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1399,9 +1333,9 @@
       },
       "id": "VP-RB-007",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Service accounts are scoped to a single practice",
       "violate_factors": [
         "authorization_decision_made_in_frontend_only",
@@ -1417,14 +1351,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RB",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1434,9 +1362,9 @@
       },
       "id": "VP-RB-008",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Privilege changes revalidate the active session",
       "violate_factors": [
         "authorization_decision_made_in_frontend_only",
@@ -1836,7 +1764,7 @@
       },
       "id": "VP-AI-003",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Agent-authored code executes only inside a sandboxed runner",
@@ -1865,7 +1793,7 @@
       },
       "id": "VP-AI-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Agent code calls only allowlisted external hosts",
@@ -1894,7 +1822,7 @@
       },
       "id": "VP-AI-005",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Changed functions authored by an agent stay below cyclomatic complexity ten",
@@ -1923,7 +1851,7 @@
       },
       "id": "VP-AI-006",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every imported package is verified to exist before merge",
@@ -1952,7 +1880,7 @@
       },
       "id": "VP-AI-007",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Agent instructions derived from untrusted text are treated as tainted input",
@@ -1981,7 +1909,7 @@
       },
       "id": "VP-AI-008",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An agent may not disable or weaken a failing compliance test",
@@ -2314,8 +2242,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "HA",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2325,9 +2259,9 @@
       },
       "id": "VP-HA-001",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Concurrent clinical note writes never silently discard a clinician's text",
       "violate_factors": [
         "deploy_freeze_window_overridden_without_approval",
@@ -2343,8 +2277,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "HA",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2354,9 +2294,9 @@
       },
       "id": "VP-HA-002",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Inventory decrements are serialised against the stock row",
       "violate_factors": [
         "clinical_note_last_write_wins_silently",
@@ -2407,8 +2347,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "HA",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2418,9 +2364,9 @@
       },
       "id": "VP-HA-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Migrations are reversible or ship with proven backups",
       "violate_factors": [
         "deploy_freeze_window_overridden_without_approval",
@@ -2436,8 +2382,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "HA",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2447,9 +2399,9 @@
       },
       "id": "VP-HA-005",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Retries are bounded and circuit-broken against external labs",
       "violate_factors": [
         "clinical_note_last_write_wins_silently",
@@ -2465,8 +2417,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "HA",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2476,9 +2434,9 @@
       },
       "id": "VP-HA-006",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Load tests cover the emergency-hospital concurrency profile",
       "violate_factors": [
         "clinical_note_last_write_wins_silently",
@@ -2534,7 +2492,7 @@
       },
       "id": "VP-RR-002",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A medical record amendment preserves the original entry",
@@ -2552,8 +2510,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RR",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2563,9 +2527,9 @@
       },
       "id": "VP-RR-003",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Decision rationale is written at resolution time, not summarised afterwards",
       "violate_factors": [
         "audit_row_updated_in_place",
@@ -2581,8 +2545,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RR",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2592,9 +2562,9 @@
       },
       "id": "VP-RR-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Audit exports carry the standing declaration in force",
       "violate_factors": [
         "audit_logging_disabled_for_performance",
@@ -2610,8 +2580,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RR",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2621,9 +2597,9 @@
       },
       "id": "VP-RR-005",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Audit exports carry the realised adverse-contest rate as two counts",
       "violate_factors": [
         "audit_logging_disabled_for_performance",
@@ -2650,7 +2626,7 @@
       },
       "id": "VP-RR-006",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Retention periods are configured per jurisdiction and never reset by an edit",
@@ -2668,8 +2644,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "RR",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2679,9 +2661,9 @@
       },
       "id": "VP-RR-007",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Record timestamps come from a trusted monotonic source",
       "violate_factors": [
         "audit_logging_disabled_for_performance",
@@ -2900,8 +2882,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2911,9 +2899,9 @@
       },
       "id": "VP-GV-003",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "The constitution declares whether any party holds contest standing adverse to grants",
       "violate_factors": [
         "appeal_path_removed_by_configuration",
@@ -2929,8 +2917,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2940,9 +2934,9 @@
       },
       "id": "VP-GV-004",
       "kind": "provision",
-      "office": "office:compliance",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Constitutional parameters change only by legislative enactment",
       "violate_factors": [
         "appeal_path_removed_by_configuration",
@@ -2958,8 +2952,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2969,9 +2969,9 @@
       },
       "id": "VP-GV-005",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Reporter output never reaches the adjudication input path",
       "violate_factors": [
         "appeal_path_removed_by_configuration",
@@ -2987,8 +2987,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2998,9 +3004,9 @@
       },
       "id": "VP-GV-006",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "The audit register is disjoint from the precedent store and is never read by resolve",
       "violate_factors": [
         "audit_finding_read_during_retrieval",
@@ -3016,8 +3022,14 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3027,9 +3039,9 @@
       },
       "id": "VP-GV-007",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Every arrival that is not charged leaves exactly one docket entry",
       "violate_factors": [
         "appeal_path_removed_by_configuration",
@@ -3085,7 +3097,7 @@
       },
       "id": "VP-BN-002",
       "kind": "provision",
-      "office": "office:compliance",
+      "office": "office:legal-counsel",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Breach-detection telemetry on owner-data stores stays wired to the on-call path and every detection alert carries a reference to the incident runbook",
@@ -3230,7 +3242,7 @@
       },
       "id": "VP-DR-004",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Diversion analytics over dispensing and inventory events run for every practice and route their findings to the medical director; they are never disabled, sampled or pointed at a null sink for a named tenant",
@@ -3277,14 +3289,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "CC",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3294,9 +3300,9 @@
       },
       "id": "VP-CC-002",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Wellness-plan and subscription enrolment discloses the automatic-renewal terms before the charge, takes affirmative consent, sends a renewal reminder, and offers cancellation through the same channel and in no more steps than enrolment",
       "violate_factors": [
         "auto_renewal_enrolled_by_prechecked_box",
@@ -3312,14 +3318,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "CC",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3329,9 +3329,9 @@
       },
       "id": "VP-CC-003",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Before any record, invoice or notice that the law requires in writing is delivered electronically in place of paper, the client's informed E-SIGN consent is captured with the required disclosures and can be withdrawn",
       "violate_factors": [
         "electronic_records_delivered_without_esign_consent",
@@ -3347,14 +3347,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "CC",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3364,9 +3358,9 @@
       },
       "id": "VP-CC-004",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Where the governing state so requires, the client is offered a written prescription in place of in-house dispensing and the offer is never hidden, fee-gated or conditioned on a purchase",
       "violate_factors": [
         "minor_account_created_without_guardian_consent",
@@ -3382,14 +3376,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "CC",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3399,9 +3387,9 @@
       },
       "id": "VP-CC-005",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "A client's request for a copy or transfer of the patient's medical record is fulfilled within the state board's deadline and is not conditioned on payment of an outstanding balance",
       "violate_factors": [
         "minor_account_created_without_guardian_consent",
@@ -3417,14 +3405,8 @@
       "canon_version": "vetpoc-constitution-corpus-canon-000001",
       "family": "CC",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3434,9 +3416,9 @@
       },
       "id": "VP-CC-006",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "A client account whose holder is under eighteen is created only with a parent or guardian's recorded consent and cannot enter a payment plan, wellness subscription or records-release authorisation on its own",
       "violate_factors": [
         "marketing_texts_scheduled_outside_permitted_hours",
@@ -3921,8 +3903,9 @@
     "office:compliance": {
       "id": "office:compliance",
       "may_issue_for": [
-        "BN",
-        "GV",
+        "CS",
+        "DR",
+        "RR",
         "incident-hotfix"
       ],
       "reporting_line": "governance"
@@ -3931,23 +3914,27 @@
       "id": "office:legal-counsel",
       "may_issue_for": [
         "BN",
-        "GV"
+        "CC",
+        "PD"
       ],
       "reporting_line": "governance"
     },
     "office:safety-lead": {
       "id": "office:safety-lead",
       "may_issue_for": [
-        "AI",
         "AW",
-        "CS",
-        "DR",
-        "HA",
         "PH",
         "PO",
         "PS",
-        "RR",
         "VC"
+      ],
+      "reporting_line": "governance"
+    },
+    "office:security": {
+      "id": "office:security",
+      "may_issue_for": [
+        "AI",
+        "RB"
       ],
       "reporting_line": "governance"
     }

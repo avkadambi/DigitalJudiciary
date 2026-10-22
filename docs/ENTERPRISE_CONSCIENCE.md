@@ -16,9 +16,12 @@ issuing a dispensation token. T2 is tradable: the agent may depart from it for
 an admitted reason (N, O or K, the reasons the EC paper's Table 3 admits) and
 within a stated bound. T3 is customary: the agent may depart from it inside a
 listed context (an internal prototype, a spike, a hotfix) without asking. The
-tier of every provision is assigned by one deterministic rule in `canon.py`
-(absolute → T0; a safety harm class, or a legal or regulatory harm class
-charged at τ ≤ 25, → T1 with its office; everything else → T2), and six value
+tier of every provision is assigned by one deterministic rule that follows
+policy ownership (`authority.py`, Realism revision R2): absolute → T0; a
+provision whose citation names a binding instrument, or an internal standard
+below a charging threshold, owned by security, safety, compliance or legal →
+T1 with that office; engineering-owned standards → T2; advisory provisions →
+T3. The result is frozen as `prereg/POLICY_REGISTER.md`, and six value
 entries per company (ship-fast, cost-or-quality, customer-first,
 accessibility, house style, documentation currency) are added at the tiers
 the EC paper gives them. The result is `simulation/<pack>/constitution/canon.json`,
@@ -27,11 +30,14 @@ bound, contexts, holdings, barred classes, codified flag) and the canon
 version it belongs to.
 
 **Tokens and offices.** A T1 entry is lifted only by a token from its issuing
-office: `office:safety-lead`, `office:legal-counsel`, `office:compliance` or
-`office:accessibility-lead`, each on the governance reporting line, while the
+office: `office:security` (the CISO), `office:safety-lead`,
+`office:legal-counsel`, `office:compliance` or `office:accessibility-lead`,
+each on the governance reporting line, while the
 coding agent is on the engineering line. A token is scoped to an act class and
-an entry, pinned to a canon version, and can be revoked. An approved exception
-(about 24 a year per company) covers every act in its scope for 63 working days. The registry answers one question, `valid`,
+an entry, pinned to a canon version, and can be revoked. An approved exception covers every act in its scope for 63 working days;
+exceptions are requested by an agent that stands down on a T1 change and
+decided by the entry's office three working days later, at most 24 grants a
+year per company. The registry answers one question, `valid`,
 and every way of failing it is named: no such token, revoked, consumed,
 expired, wrong class, wrong scope, wrong canon version, issuer inside the
 agent's own reporting line, or a class that doctrine has since codified. A
@@ -46,7 +52,8 @@ on a valid token, blocked and escalated without one (a say-so claim is
 recorded as such), and blocked without escalation where a prior holding has
 barred the class, since doctrine has already answered. A conflict between two
 or more non-tradable entries is held and escalated. A T2 departure is allowed
-when its reason is admitted and it is within bound, and otherwise blocked,
+when its reason is admitted, evidenced (an incident, a customer ticket or a
+measurement listed for that change) and within bound, and otherwise blocked,
 audited internally and never escalated. A T3 departure is allowed in a listed
 context and otherwise blocked. Everything else is allowed as a legitimate act.
 The gate's verdict is `allow`, `block` or `hold` with a reason code. The gate
@@ -80,8 +87,9 @@ violating factor or the canon version.
 **Arms A to D.** Four arms run the identical proposal stream. Arm A is the
 strongest stack an enterprise can field today without either forum: the
 constitution in the prompt, a policy engine that denies absolute contrariety,
-an approval flag any manager may set (so any token claim passes, real or
-say-so), an event log; nothing escalates and nothing is written back. Arm B
+a SOC 2 change process in which a T1 change passes only on an approval
+recorded in the registry (a say-so is blocked) and a T2 change passes a CI
+check on any stated reason, an event log; nothing escalates and nothing is written back. Arm B
 is the judiciary alone, as shipped: `engine.adjudicate` with the corpus's own
 `contest_to`, records written as `replay` writes them. Arm C is the fast
 track alone, with an internal review office that hears with the same engine
@@ -104,9 +112,9 @@ the canon text, the engaged entries and the registry view rendered into a
 prompt and a JSON act parsed back.
 
 **The calendar.** One business year on one shared calendar across the five
-companies: calendar 2027, Monday to Friday less nine holidays, 252 working
+companies: calendar 2027, Monday to Friday less ten holidays, 251 working
 days, with hard change freezes over Thanksgiving week and from 20 December
-and a monthly release train (Realism revision R1, `prereg/REALISM_REVIEW.md`).
+and a monthly release train (Realism revisions R1 and R2, `prereg/REALISM_REVIEW.md`).
 Each pack's released 6,000-case corpus is partitioned into working days in
 its released order, about twenty-five arrivals on a normal day, with a like-case mate or a
 pressure twin never split from its partner across a day boundary. The engine
@@ -235,7 +243,7 @@ control (EC-09, EC-11, EC-12) is killed by at least one fault.
 | F-EC-2 | the gate skips the T0 step unless an audit is announced | EC-02, EC-10 |
 | F-EC-3 | `Registry.valid` accepts a `claimed:` id as a token | EC-03 |
 | F-EC-4 | `Registry.valid` drops the reporting-line check | EC-04 |
-| F-EC-5 | the gate admits reason S at T2 | EC-05 |
+| F-EC-5 | the gate skips the T2 evidence check (R2) | EC-05 |
 | F-EC-6 | `Bench.file` drops conflict holds | EC-06 |
 | F-EC-7 | `reconcile` reads the entry's own claimed label | EC-07 |
 | F-EC-8 | `write_gloss` moves the entry's tier | EC-08 |
@@ -268,12 +276,14 @@ mutation matrix is the one slow test.
 bash reproduce/run_year.sh registered
 ```
 
-The calibration design: the four archetypes over seeds 11, 13, 17, 19 and 23,
-252 working days, four arms, five packs (400 runs), the oracle and adversarial
+The calibration design: the four archetypes, plus the exploratory laundering
+archetype and the two registered sensitivities (bench cap 2 a day; CISO on the
+engineering line), over seeds 11, 13, 17, 19 and 23, 251 working days, four
+arms, five packs, the oracle and adversarial
 bounds at seed 11, the arm-D LLM dry run (`llm:anthropic:sonnet`, priced, not
 called), then metrics and analysis under each results root. About fifteen
 minutes; checkpoints every 30 days and resumes. Results go under
-`simulation/ec/results/calibration_r1/`. The first calibration, on the
+`simulation/ec/results/calibration_r2/`. The first calibration, on the
 365-day v1 instrument, stays as committed under `results/registered/`,
 `results/bounds/` and `results/llm_dry/`. The registered run is in progress at this release and
 its results are not part of it; the preregistration's no-peeking rule applies
@@ -283,7 +293,7 @@ command:
 
 ```bash
 ANTHROPIC_API_KEY=... python3 simulation/ec/run_year.py --packs all --arms A,B,C,D --seeds 11 \
-    --days 252 --agent llm:anthropic:sonnet --mode live --out simulation/ec/results/llm_live \
+    --days 251 --agent llm:anthropic:sonnet --mode live --out simulation/ec/results/llm_live \
     --checkpoint-every 30 --resume
 ```
 
@@ -424,8 +434,10 @@ authored rather than generated. The edited canon is a different canon and
 carries a different plan hash.
 
 **Change the rule and rebuild.** To change how every pack is tiered, edit
-`tier_of`, `T1_TAU_MAX`, `OFFICE_BY_HARM` or the value-entry table in
-`simulation/ec/canon.py`, then:
+`tier_of`, `FAMILY_OWNER`, `TAU_RISK` or `TAU_LEGAL` in
+`simulation/ec/authority.py`, or the value-entry table in
+`simulation/ec/canon.py`, then regenerate the register
+(`python3 simulation/ec/build_policy_register.py`) and:
 
 ```bash
 python3 simulation/ec/build_all_canons.py

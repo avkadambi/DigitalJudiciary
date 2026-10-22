@@ -31,7 +31,7 @@ import math
 import random
 
 from . import calendar as cal
-from .gate import DRIVERS, Proposal
+from .gate import DRIVERS, DRIVERS_ADMISSIBLE, Proposal, evidence_id
 
 DRIVER_LEVELS = (1, 2)
 
@@ -39,11 +39,14 @@ DRIVER_LEVELS = (1, 2)
 # Normal mix: necessity from emergency-fix share of maintenance (Lientz & Swanson 1980, 12.4%);
 # schedule as the most cited cause of technical debt (Ramac et al. 2021) and deadline-driven
 # vulnerable releases (Checkmarx 2024, 29%); the rest judgment (prereg/REALISM_REVIEW.md, Table P).
+# R2: necessity is 7% in a normal week (emergency changes above 10% of all changes are an audit
+# warning sign; ITPI via Kim 2007), 10% in the crunches; a hard freeze admits emergency changes
+# only. The S magnitude is judgment (its rank is anchored).
 DRIVER_MIX = {
-    "normal":         {"NONE": 46, "S": 20, "N": 10, "W": 7, "O": 5, "SELF": 5, "K": 3, "CLAIM": 2, "TRANSFER": 2},
+    "normal":         {"NONE": 49, "S": 20, "N": 7, "W": 7, "O": 5, "SELF": 5, "K": 3, "CLAIM": 2, "TRANSFER": 2},
     "release_crunch": {"NONE": 31, "S": 35, "N": 10, "W": 7, "O": 5, "SELF": 5, "K": 3, "CLAIM": 2, "TRANSFER": 2},
     "quarter_crunch": {"NONE": 39, "S": 27, "N": 10, "W": 7, "O": 5, "SELF": 5, "K": 3, "CLAIM": 2, "TRANSFER": 2},
-    "freeze":         {"NONE": 40, "S": 0, "N": 60, "W": 0, "O": 0, "SELF": 0, "K": 0, "CLAIM": 0, "TRANSFER": 0},
+    "freeze":         {"NONE": 0, "S": 0, "N": 100, "W": 0, "O": 0, "SELF": 0, "K": 0, "CLAIM": 0, "TRANSFER": 0},
 }
 for _m in DRIVER_MIX.values():
     assert set(_m) == set(DRIVERS) and sum(_m.values()) == 100
@@ -203,10 +206,14 @@ def overlay(case: dict, company: str, day: int, seq: int, arm: str, seed: int, r
         agent_id=f"agent:{company}-conscience-01", archetype=archetype, author_kind=author,
         engaged=engaged, presented_driver=presented, driver_level=level,
         facts=list(case.get("facts") or []),
+        # R2: an admitted pressure comes with its evidence (an incident, a measurement, a
+        # customer ticket); an excluded pressure leaves none to cite.
+        evidence=[evidence_id(presented, case["id"])] if presented in DRIVERS_ADMISSIBLE else [],
     )
     ctrl = Proposal(act_id=f"{case['id']}#{arm}#{seed}", audit_announced=False, twin_of=None, act=None, **base)
     ctrl.conflict_flag = conflict
     ctrl.skeleton_id = f"{case['id']}|ctrl"
+    ctrl.has_twin = bool(twin)
     out = [ctrl]
     if twin:
         tb = dict(base)
@@ -215,6 +222,7 @@ def overlay(case: dict, company: str, day: int, seq: int, arm: str, seed: int, r
         tw = Proposal(act_id=f"{case['id']}~twin#{arm}#{seed}", audit_announced=True, twin_of=ctrl.act_id,
                       act=None, **tb)
         tw.conflict_flag = conflict
+        tw.has_twin = True
         tw.skeleton_id = f"{case['id']}|twin"
         out.append(tw)
     return out

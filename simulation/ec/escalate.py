@@ -81,9 +81,15 @@ class Bench:
     """The slow track's queue. `file` on the day of the verdict, `due` on each
     later day, `hear` each due escalation."""
 
-    def __init__(self, internal: bool = False, d_bench: int = D_BENCH):
+    def __init__(self, internal: bool = False, d_bench: int = D_BENCH, cap_per_day: int = 0,
+                 lapse_days: int = 20):
         self.internal = internal
         self.d_bench = d_bench
+        # R2 registered sensitivity: at most `cap_per_day` hearings a working day (0 = unlimited),
+        # first filed first heard; an escalation unheard `lapse_days` after its hearing day lapses.
+        self.cap_per_day = int(cap_per_day or 0)
+        self.lapse_days = int(lapse_days)
+        self.lapsed: list[dict] = []
         self.queue: list[Escalation] = []
         self.heard: list[dict] = []
         self.log: list[dict] = []
@@ -93,9 +99,23 @@ class Bench:
 
     def due(self, day: int) -> list:
         """Escalations whose hearing day has come, removed from the queue in
-        filing order."""
-        out = [e for e in self.queue if e.hear_day <= day]
-        self.queue = [e for e in self.queue if e.hear_day > day]
+        filing order. With a daily cap, the rest wait; one unheard `lapse_days`
+        after its hearing day lapses (logged in `lapsed`, never heard)."""
+        ready = [e for e in self.queue if e.hear_day <= day]
+        waiting = [e for e in self.queue if e.hear_day > day]
+        if not self.cap_per_day:
+            self.queue = waiting
+            return ready
+        keep, out = [], []
+        for e in ready:
+            if day - e.hear_day > self.lapse_days:
+                self.lapsed.append({"act_id": e.act_id, "case_id": e.case_id, "hear_day": e.hear_day,
+                                    "lapsed_day": day, "entry": e.entry})
+            elif len(out) < self.cap_per_day:
+                out.append(e)
+            else:
+                keep.append(e)
+        self.queue = keep + waiting
         return out
 
     def hear(self, esc: Escalation, case_dict: dict, store: list, provisions: dict, theta, engine_module) -> dict:
@@ -121,12 +141,15 @@ class Bench:
         return {"holding": trace["decision"], "record": rec, "trace": trace}
 
     def to_dict(self) -> dict:
-        return {"internal": self.internal, "d_bench": self.d_bench,
+        return {"internal": self.internal, "d_bench": self.d_bench, "cap_per_day": self.cap_per_day,
+                "lapse_days": self.lapse_days, "lapsed": list(self.lapsed),
                 "queue": [e.to_dict() for e in self.queue], "heard": list(self.heard), "log": list(self.log)}
 
     @staticmethod
     def from_dict(d: dict) -> "Bench":
-        b = Bench(internal=bool(d.get("internal", False)), d_bench=int(d.get("d_bench", D_BENCH)))
+        b = Bench(internal=bool(d.get("internal", False)), d_bench=int(d.get("d_bench", D_BENCH)),
+                  cap_per_day=int(d.get("cap_per_day", 0) or 0), lapse_days=int(d.get("lapse_days", 20)))
+        b.lapsed = list(d.get("lapsed") or [])
         b.queue = [Escalation.from_dict(e) for e in d.get("queue") or []]
         b.heard = list(d.get("heard") or [])
         b.log = list(d.get("log") or [])

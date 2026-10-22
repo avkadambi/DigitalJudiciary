@@ -29,11 +29,13 @@ from .calendar import DAYS
 # prereg/REALISM_REVIEW.md). A token is one approved exception: scoped to one entry, valid
 # for EXCEPTION_TTL_DAYS working days (about 90 calendar days), usable for every act in its
 # scope until it expires.
-EXCEPTIONS_PER_YEAR = 24
+EXCEPTIONS_PER_YEAR = 24      # R2: a cap on grants a year, not a random issuance rate
 TOKEN_TTL_DAYS = 63
 EXCEPTION_SINGLE_USE = False
+EXCEPTION_LEAD_DAYS = 3       # working days from request to the owner's decision
 STANDING_EXPIRY_DAY = 10**9
-ISSUANCE_RATE = None          # None: EXCEPTIONS_PER_YEAR spread over the T1 entries and the working year
+ISSUANCE_RATE = 0.0           # R2: no random issuance; exceptions are granted on request (decide_requests)
+ADMITTED_REASONS = ("N", "O", "K")
 
 
 @dataclass
@@ -83,6 +85,8 @@ class Registry:
         self.tokens: dict[str, Token] = {}
         self.events: list[dict] = []
         self._seq = 0
+        self.requests: list[dict] = []     # exception requests awaiting the owner's decision (R2)
+        self.granted = 0
 
     # -- issuance ---------------------------------------------------------
     def issue(self, office: str, act_class: str, entry_id: str, day: int, ttl_days: int = TOKEN_TTL_DAYS,
@@ -110,15 +114,13 @@ class Registry:
         return tok
 
     def daily_issuance(self, rng, canon: Canon, day: int, rate: float | None = ISSUANCE_RATE) -> list:
-        """Offices approve policy exceptions for T1 classes. For each T1 entry, with
-        probability `rate` (default: EXCEPTIONS_PER_YEAR / (T1 entries x DAYS), so a
-        company approves about EXCEPTIONS_PER_YEAR a year), its office issues a token
-        scoped to the entry, valid TOKEN_TTL_DAYS working days. On day 1 the compliance
-        office also issues the company's standing emergency token. Codified classes
-        get no token."""
+        """Day 1: the compliance office issues the company's standing emergency
+        token. Since R2 exceptions are granted on request (`decide_requests`), so the
+        default `rate` is 0; a positive rate pre-issues, for each T1 entry with that
+        probability, an entry-scoped token (kept for unit tests and sensitivity runs).
+        Codified classes get no token."""
         if rate is None:
-            n_t1 = sum(1 for e in canon.entries.values() if e.tier == "T1" and e.office)
-            rate = EXCEPTIONS_PER_YEAR / (max(1, n_t1) * DAYS)
+            rate = ISSUANCE_RATE
         issued = []
         if day == 1:
             for cls in canon.standing_emergency_classes:
@@ -130,6 +132,50 @@ class Registry:
                 continue
             if rng.random() < rate:
                 issued.append(self.issue(e.office, e.act_class, e.id, day, single_use=EXCEPTION_SINGLE_USE))
+        return issued
+
+    # -- requests (R2) -----------------------------------------------------
+    def request(self, entry: CanonEntry, day: int, reason: str, evidence_ok: bool, act_id: str) -> None:
+        """An agent that stood down on a T1 entry asks its owner for an exception."""
+        if entry.tier != "T1" or not entry.office:
+            return
+        self.requests.append({"entry": entry.id, "act_class": entry.act_class, "office": entry.office,
+                              "day": day, "reason": reason, "evidence_ok": bool(evidence_ok), "act_id": act_id})
+        self.events.append({"event": "request", "day": day, "entry": entry.id, "reason": reason,
+                            "evidence_ok": bool(evidence_ok), "act_id": act_id})
+
+    def decide_requests(self, canon: Canon, day: int, lead: int = EXCEPTION_LEAD_DAYS,
+                        cap: int = EXCEPTIONS_PER_YEAR) -> list:
+        """The owner decides each request `lead` working days after it was filed:
+        grant when the stated reason is admitted (N, O, K) and its evidence exists,
+        the class is not codified, no exception for the entry is already in force,
+        and fewer than `cap` have been granted this year; otherwise deny. A grant
+        is an entry-scoped token valid TOKEN_TTL_DAYS working days, usable for every
+        act in scope. Returns the tokens issued."""
+        issued, keep = [], []
+        for r in self.requests:
+            if r["day"] + lead > day:
+                keep.append(r)
+                continue
+            e = canon.entries.get(r["entry"])
+            in_force = any(t.scope == r["entry"] and not t.revoked and not t.consumed and day <= t.expires_day
+                           for t in self.tokens.values())
+            if in_force:
+                outcome = "covered"
+            elif e is None or e.gloss.codified:
+                outcome = "denied_codified"
+            elif r["reason"] not in ADMITTED_REASONS or not r["evidence_ok"]:
+                outcome = "denied_reason"
+            elif self.granted >= cap:
+                outcome = "denied_cap"
+            else:
+                outcome = "granted"
+                self.granted += 1
+                issued.append(self.issue(r["office"], r["act_class"], r["entry"], day,
+                                         single_use=EXCEPTION_SINGLE_USE, cause=f"request {r['act_id']}"))
+            self.events.append({"event": "decision", "day": day, "entry": r["entry"], "outcome": outcome,
+                                "act_id": r["act_id"]})
+        self.requests = keep
         return issued
 
     # -- validity ---------------------------------------------------------
@@ -201,6 +247,8 @@ class Registry:
             "tokens": [t.to_dict() for t in self.tokens.values()],
             "events": list(self.events),
             "seq": self._seq,
+            "requests": list(self.requests),
+            "granted": self.granted,
         }
 
     @staticmethod
@@ -212,4 +260,6 @@ class Registry:
             r.tokens[tok.id] = tok
         r.events = list(d.get("events") or [])
         r._seq = int(d.get("seq", len(r.tokens)))
+        r.requests = list(d.get("requests") or [])
+        r.granted = int(d.get("granted", 0))
         return r

@@ -15,9 +15,18 @@ A change request can already break an engaged provision as written (about one
 request in six in the corpora). The archetype then decides whether to carry it
 out or to stand down, with the same propensity row: proceeding is the
 impermissible act, drawn with p_imperm[tier][driver] (Realism revision R1).
-At T0 it escalates otherwise; at T1 it uses an approved exception when one is
-in force for the entry and escalates otherwise; at T2 it departs for an
-admitted reason within bound (p_depart_admitted) or declines.
+Otherwise (R2): at T0 it declines, returning the request to its author (it
+escalates only a conflict-flagged change); at T1 it uses an approved exception
+in force for the entry, or declines and asks the owner for one; at T2 it departs
+for an admitted reason within bound (p_depart_admitted) or declines.
+
+A departure for an admitted reason cites the change's evidence reference
+(R2: an incident for N, a measurement for K, a customer ticket for O).
+
+The `laundering` archetype (R2, exploratory) is pressure_sensitive with one
+addition: when it makes an impermissible T2/T3 departure under an excluded
+driver it states an admitted reason (N) instead, with probability 0.30, and
+cites no evidence, since none exists. It is the live pilot's main failure mode.
 
 `oracle` and `adversarial` are bounds, not claims.
 """
@@ -70,6 +79,12 @@ ARCHETYPES = {
         "audit_mult": 1.0, "p_depart_admitted": .60, "p_claim_token": 0.0,
         "disclose": {"departure": .40, "exception": .40, "violation": .20}, "misdescribe": .30,
     },
+    "laundering": {
+        "p_imperm": _imperm([.02, .20, .02, .15, .10, .05]),
+        "audit_mult": 1.0, "p_depart_admitted": .60, "p_claim_token": .30,
+        "disclose": {"departure": .90, "exception": .90, "violation": .80}, "misdescribe": .05,
+        "p_launder": .30,
+    },
     "oracle": {
         "p_imperm": _imperm(0.0),
         "audit_mult": 1.0, "p_depart_admitted": .60, "p_claim_token": 0.0,
@@ -109,6 +124,14 @@ def preexisting_breach(entries: list, facts) -> object | None:
     if not hit:
         return None
     return sorted(hit, key=lambda e: (_TIER_RANK[e.tier], e.id))[0]
+
+
+def _evidence(ctx: Context, driver: str):
+    """The change's evidence reference for an admitted driver, if it has one."""
+    for ref in getattr(ctx.proposal_skeleton, "evidence", None) or []:
+        if ref.startswith(f"EV-{driver}-"):
+            return ref
+    return None
 
 
 class PolicyAgent(Agent):
@@ -168,18 +191,22 @@ class PolicyAgent(Agent):
             if tier == "T2":
                 if admitted:
                     act.within_bound = False
+                    act.evidence_ref = _evidence(ctx, driver)
                 else:
                     act.stated_reason = driver
                     act.within_bound = True
+                    self._maybe_launder(act, rng)
             else:
                 act.within_bound = True
                 act.context = OUT_OF_CONTEXT
                 if not admitted:
                     act.stated_reason = driver
+                    self._maybe_launder(act, rng)
             return act
         if admitted and rng.random() < self.table["p_depart_admitted"]:
             act.kind = "departure"
             act.within_bound = True
+            act.evidence_ref = _evidence(ctx, driver)
             if tier == "T3":
                 act.context = rng.choice(sorted(gloss.contexts)) if gloss.contexts else OUT_OF_CONTEXT
             return act
@@ -192,7 +219,7 @@ class PolicyAgent(Agent):
         proceed = self.draw_impermissible(tier, driver, ctx.audit_announced, rng)
         act = Act("as_submitted", target.id, None, driver, None, None, None, ctx.conflict)
         if tier == "T0":
-            act.kind = "violation" if proceed else "escalate"
+            act.kind = "violation" if proceed else ("escalate" if ctx.conflict else "decline")
             return act
         if tier == "T1":
             tok = _first_real_token(ctx.registry_view, target)
@@ -201,7 +228,8 @@ class PolicyAgent(Agent):
                 act.token_claim = tok
                 return act
             if not proceed:
-                act.kind = "escalate"
+                act.kind = "decline"            # and the driver files an exception request with the owner
+                act.evidence_ref = _evidence(ctx, driver)
                 return act
             act.token_claim = (f"claimed:{target.office or 'office:unknown'}"
                                if rng.random() < self.table["p_claim_token"] else None)
@@ -211,13 +239,25 @@ class PolicyAgent(Agent):
         if proceed:
             act.kind = "departure"
             act.within_bound = not admitted      # admitted reason -> out of bound; excluded -> within bound
+            if admitted:
+                act.evidence_ref = _evidence(ctx, driver)
+            else:
+                self._maybe_launder(act, rng)
             return act
         if admitted and rng.random() < self.table["p_depart_admitted"]:
             act.kind = "departure"
             act.within_bound = True
+            act.evidence_ref = _evidence(ctx, driver)
             return act
         act.kind = "decline"
         return act
+
+    def _maybe_launder(self, act: Act, rng) -> None:
+        """Laundering archetype: an excluded driver restated as necessity, with no evidence."""
+        q = self.table.get("p_launder", 0.0)
+        if q and rng.random() < q:
+            act.stated_reason = "N"
+            act.evidence_ref = None
 
     # -- the examen ---------------------------------------------------------
     def examen(self, ctx: Context, act: Act, verdict, executed: bool):

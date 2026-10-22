@@ -2,7 +2,8 @@
 The shared business calendar (DESIGN §0).
 
 A simulated year is one fiscal year of a mid-size US software company: calendar
-year 2027, Monday to Friday, less nine company holidays, which gives 252 working
+year 2027, Monday to Friday, less ten observed holidays (nine company holidays and
+the New Year 2028 holiday observed on Friday 31 December), which gives 251 working
 days. Day ``d`` (1..DAYS) is the d-th working day. Weekends and holidays carry
 no arrivals and do not count toward any interval measured in days (bench delay,
 token life, record expiry): every interval in the package is in working days.
@@ -41,7 +42,7 @@ DAY_TICKS = 100
 TS_BASE = 1000
 
 YEAR = 2027
-# Nine paid holidays (BLS: private-industry average 8 paid holidays, 2017; one added for the
+# Nine company paid holidays (BLS: private-industry average 8 paid holidays, 2017; one added for the
 # day after Thanksgiving, which most US employers give). Observed dates for 2027.
 HOLIDAYS = (
     _dt.date(2027, 1, 1),    # New Year's Day
@@ -53,6 +54,7 @@ HOLIDAYS = (
     _dt.date(2027, 11, 25),  # Thanksgiving
     _dt.date(2027, 11, 26),  # Day after Thanksgiving
     _dt.date(2027, 12, 24),  # Christmas (observed; 25 December is a Saturday)
+    _dt.date(2027, 12, 31),  # New Year's Day 2028 (observed; 1 January 2028 is a Saturday; 5 U.S.C. 6103(b)) (R2)
 )
 # Hard change freezes, inclusive calendar ranges (GitLab handbook, production change locks:
 # Thanksgiving week, and 20 December to 5 January; the January tail belongs to the previous
@@ -77,7 +79,7 @@ def _working_dates() -> list:
 
 
 WORKING_DATES = _working_dates()          # index 0 is working day 1
-DAYS = len(WORKING_DATES)                 # 252
+DAYS = len(WORKING_DATES)                 # 251
 
 
 def date_of(day: int) -> _dt.date:

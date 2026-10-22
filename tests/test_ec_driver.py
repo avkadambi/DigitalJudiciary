@@ -71,11 +71,11 @@ def test_business_calendar():
     """Realism revision R1: 2027, Monday-Friday less nine holidays; three hard freezes;
     a monthly release train with crunches; every interval in working days."""
     import datetime as dt
-    assert cal.DAYS == 252 == len(cal.WORKING_DATES)
+    assert cal.DAYS == 251 == len(cal.WORKING_DATES)
     assert all(d.weekday() < 5 and d not in cal.HOLIDAYS and d.year == 2027 for d in cal.WORKING_DATES)
-    assert cal.date_of(1) == dt.date(2027, 1, 4) and cal.date_of(cal.DAYS) == dt.date(2027, 12, 31)
+    assert cal.date_of(1) == dt.date(2027, 1, 4) and cal.date_of(cal.DAYS) == dt.date(2027, 12, 30)
     assert [cal.date_of(d) for d in sorted(cal.FREEZE_DAYS)][:2] == [dt.date(2027, 11, 24), dt.date(2027, 11, 29)]
-    assert len(cal.FREEZE_DAYS) == 11 and len(cal.RELEASE_DAYS) == 12 and cal.season(1) == "normal"
+    assert len(cal.FREEZE_DAYS) == 10 and len(cal.RELEASE_DAYS) == 12 and cal.season(1) == "normal"
     assert cal.date_of(cal.RELEASE_DAYS[-1]) == dt.date(2027, 12, 17)
     assert all(cal.season(d) != "freeze" for d in cal.RELEASE_DAYS)
     seasons = {cal.season(d) for d in range(1, cal.DAYS + 1)}
@@ -89,7 +89,7 @@ def test_driver_mix():
     from simulation.ec.gate import DRIVERS
     for season, mix in streammod.DRIVER_MIX.items():
         assert set(mix) == set(DRIVERS) and sum(mix.values()) == 100
-    assert streammod.DRIVER_MIX["normal"]["NONE"] == 46 and streammod.DRIVER_MIX["normal"]["S"] == 20
+    assert streammod.DRIVER_MIX["normal"]["NONE"] == 49 and streammod.DRIVER_MIX["normal"]["S"] == 20 and streammod.DRIVER_MIX["normal"]["N"] == 7
     assert streammod.DRIVER_MIX["release_crunch"]["S"] > streammod.DRIVER_MIX["quarter_crunch"]["S"] > 20
     day = next(d for d in range(1, cal.DAYS + 1) if cal.season(d) == "normal")
     rng = random.Random(5)
@@ -99,7 +99,7 @@ def test_driver_mix():
     for d, pct in streammod.DRIVER_MIX["normal"].items():
         assert abs(got[d] / n - pct / 100) < 0.01, d
     fr = next(iter(cal.FREEZE_DAYS))
-    assert {streammod.draw_driver(rng, fr) for _ in range(2000)} == {"N", "NONE"}
+    assert {streammod.draw_driver(rng, fr) for _ in range(2000)} == {"N"}
     assert cal.REGISTERED_SEEDS == [11, 13, 17, 19, 23]
     assert cal.CONFIRMATORY_SEEDS == [59, 61, 67, 71, 73]
     assert not set(cal.CONFIRMATORY_SEEDS) & set(range(11, 54))
@@ -114,7 +114,7 @@ def test_partition_invariants(corpus):
     cases = corpus["cases"]
     pairs = streammod.like_pairs_of(corpus)
     days = streammod.partition_days(cases, pairs, random.Random("11|vetpoc|partition"))
-    assert len(days) == cal.DAYS == 252
+    assert len(days) == cal.DAYS == 251
     assert all(len(d) >= 0 for d in days)
     flat = [c["id"] for d in days for c in d]
     assert len(flat) == len(cases) == 6000

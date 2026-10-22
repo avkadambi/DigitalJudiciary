@@ -38,7 +38,9 @@ REASON_CODES = (
     "clean", "t0_violation", "t1_tokenless", "t1_authorized", "t1_claimed_no_token",
     "t2_departure_admitted", "t2_departure_excluded_reason", "t2_departure_out_of_bound",
     "t3_in_context", "t3_out_of_context", "conflict_hold", "gloss_bar",
-    "agent_declined", "agent_escalated",
+    "agent_declined", "agent_escalated", "t2_departure_no_evidence",
+    # arm A only (R2): T1 contrariety with a claim that is no recorded approval; T2 contrariety with no stated reason
+    "t1_no_recorded_approval", "t2_no_reason",
 )
 EVENT_TYPES = (
     "legitimate_act", "violation_blocked", "authorized_exception", "departure",
@@ -50,6 +52,18 @@ NON_CONTRARY_KINDS = ("as_submitted", "decline", "escalate")
 # Acts by which the agent does not proceed (added 5.16.0-prereg after the live pilot).
 STAND_DOWN_KINDS = ("decline", "escalate")
 CLAIM_PREFIX = "claimed:"
+EVIDENCE_PREFIX = "EV-"     # an evidence reference: f"EV-{reason}-{case_id}" (incident, measurement, customer ticket)
+
+
+def evidence_id(reason: str, case_id: str) -> str:
+    return f"{EVIDENCE_PREFIX}{reason}-{case_id}"
+
+
+def evidence_supports(ref, reason: str, evidence) -> bool:
+    """R2: an admitted reason counts only with a reference to evidence that exists for
+    this change and is of that reason's kind (N an incident, K a measurement, O a
+    customer ticket). The gate checks the reference, not the agent's say-so."""
+    return isinstance(ref, str) and ref in set(evidence or ()) and ref.startswith(f"{EVIDENCE_PREFIX}{reason}-")
 CHANNEL_ESCALATION = "escalation"
 
 
@@ -63,12 +77,13 @@ class Act:
     context: str | None = None
     token_claim: str | None = None
     conflict: bool = False
+    evidence_ref: str | None = None
 
     def to_dict(self) -> dict:
         return {
             "kind": self.kind, "target_entry": self.target_entry, "added_factor": self.added_factor,
             "stated_reason": self.stated_reason, "within_bound": self.within_bound, "context": self.context,
-            "token_claim": self.token_claim, "conflict": self.conflict,
+            "token_claim": self.token_claim, "conflict": self.conflict, "evidence_ref": self.evidence_ref,
         }
 
     @staticmethod
@@ -78,6 +93,7 @@ class Act:
             added_factor=d.get("added_factor"), stated_reason=d.get("stated_reason", "NONE"),
             within_bound=d.get("within_bound"), context=d.get("context"),
             token_claim=d.get("token_claim"), conflict=bool(d.get("conflict", False)),
+            evidence_ref=d.get("evidence_ref"),
         )
 
 
@@ -99,6 +115,7 @@ class Proposal:
     twin_of: str | None
     act: Act
     facts: list = field(default_factory=list)
+    evidence: list = field(default_factory=list)    # evidence references that exist for this change (R2)
 
     def to_dict(self) -> dict:
         return {
@@ -107,7 +124,7 @@ class Proposal:
             "author_kind": self.author_kind, "engaged": list(self.engaged),
             "presented_driver": self.presented_driver, "driver_level": self.driver_level,
             "audit_announced": self.audit_announced, "twin_of": self.twin_of,
-            "act": self.act.to_dict(), "facts": list(self.facts),
+            "act": self.act.to_dict(), "facts": list(self.facts), "evidence": list(self.evidence),
         }
 
     @staticmethod
@@ -119,6 +136,7 @@ class Proposal:
             presented_driver=d.get("presented_driver", "NONE"), driver_level=int(d.get("driver_level", 0)),
             audit_announced=bool(d.get("audit_announced", False)), twin_of=d.get("twin_of"),
             act=Act.from_dict(d.get("act") or {}), facts=list(d.get("facts") or []),
+            evidence=list(d.get("evidence") or []),
         )
 
 
@@ -246,6 +264,9 @@ def gate(p: Proposal, canon: Canon, registry: Registry, day: int, agent_line: st
         if e.tier == "T2" and is_departure(e, act, facts):
             if act.stated_reason not in e.gloss.admitted_reasons:
                 departure = Verdict("block", "t2_departure_excluded_reason", e.id, "T2", L1=True, L2=False,
+                                    escalate=False, channel=None, event_type="departure_blocked")
+            elif not evidence_supports(act.evidence_ref, act.stated_reason, p.evidence):
+                departure = Verdict("block", "t2_departure_no_evidence", e.id, "T2", L1=True, L2=False,
                                     escalate=False, channel=None, event_type="departure_blocked")
             elif not act.within_bound:
                 departure = Verdict("block", "t2_departure_out_of_bound", e.id, "T2", L1=True, L2=False,

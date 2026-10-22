@@ -335,7 +335,7 @@
       },
       "id": "MF-201",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Customer information is encrypted in transit and at rest; a change that weakens or removes encryption on a customer-data path requires the CISO's written finding of an effective alternative control.",
@@ -364,7 +364,7 @@
       },
       "id": "MF-202",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Multi-factor authentication protects every individual's access to every information system; any exception requires a written, CISO-approved compensating control reviewed at least annually.",
@@ -393,7 +393,7 @@
       },
       "id": "MF-203",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "No change disables or delays the telemetry that feeds regulatory incident reporting.",
@@ -422,7 +422,7 @@
       },
       "id": "MF-204",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "No ICT third party enters a critical-or-important function path without a register-of-information entry, a documented exit strategy, and disclosure of subcontracting.",
@@ -451,7 +451,7 @@
       },
       "id": "MF-205",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A change to a critical-or-important function is resilience tested before release; designated functions additionally carry threat-led penetration testing every three years.",
@@ -480,7 +480,7 @@
       },
       "id": "MF-206",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "No credential, key, or token appears in source, configuration, or CI logs; secrets live in the vault.",
@@ -509,7 +509,7 @@
       },
       "id": "MF-207",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every script on a payment page is authorized, inventoried, and integrity-checked, and a tamper-detection mechanism watches the page.",
@@ -527,14 +527,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "CQ",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -544,9 +538,9 @@
       },
       "id": "MF-208",
       "kind": "provision",
-      "office": null,
+      "office": "office:compliance",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "No production change to a cardholder or ledger system without documented approval, a tested rollback, and separation between author and approver.",
       "violate_factors": [
         "change_control_bypassed_by_direct_push",
@@ -562,8 +556,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "RE",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -573,9 +573,9 @@
       },
       "id": "MF-209",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Deploys are blocked on a greater-than-10% p95 latency regression, or any availability regression, on the payment-authorization path.",
       "violate_factors": [
         "circuit_breaker_absent_on_downstream_dependency",
@@ -620,14 +620,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "SP",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -637,9 +631,9 @@
       },
       "id": "MF-211",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "No third-party code enters a cardholder-data or personal-data path without a completed vendor security review.",
       "violate_factors": [
         "copyleft_dependency_in_proprietary_distribution",
@@ -701,7 +695,7 @@
       },
       "id": "MF-301",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "No model reaches a credit, fraud, or AML decision in production before independent validation covering conceptual soundness, outcomes analysis, and ongoing monitoring.",
@@ -730,7 +724,7 @@
       },
       "id": "MF-302",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every model in a decision path carries an inventory entry and current documentation: purpose, training data, known limits, and a named owner.",
@@ -759,7 +753,7 @@
       },
       "id": "MF-303",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A customer interacting with an AI system is told so, and synthetic content the firm generates is machine-markable.",
@@ -777,8 +771,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "AI",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -788,9 +788,9 @@
       },
       "id": "MF-304",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Creditworthiness and credit-scoring systems are Annex III high-risk: risk management, data governance, logging, human oversight, and accuracy obligations must be in place before the applicable date.",
       "violate_factors": [
         "decision_logging_insufficient_to_reconstruct",
@@ -817,7 +817,7 @@
       },
       "id": "MF-305",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A decisioning model is tested for disparate impact across protected classes before deployment and monitored afterwards.",
@@ -846,7 +846,7 @@
       },
       "id": "MF-306",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An AI-facing surface does not deceive a customer, impersonate a human, manufacture confidence it does not have, or steer a customer against their own interest.",
@@ -875,7 +875,7 @@
       },
       "id": "MF-307",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every agent-authored change carries a provenance attestation \u2014 agent identity, model version, and a link to the originating human requirement \u2014 and every agent action in production runs under an explicit value and rate bound.",
@@ -933,7 +933,7 @@
       },
       "id": "MF-401",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "No dark pattern, no material omission, and no fee or term a reasonable consumer would not expect from the disclosure given.",
@@ -962,7 +962,7 @@
       },
       "id": "MF-402",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Data furnished to consumer reporting agencies is accurate, disputes are investigated within the statutory window, and adverse action notices name both the reasons and the agency.",
@@ -991,7 +991,7 @@
       },
       "id": "MF-403",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Cost-of-credit disclosures are accurate, timely, and in the required form before the consumer becomes bound.",
@@ -1038,8 +1038,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "CP",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1049,9 +1055,9 @@
       },
       "id": "MF-405",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Consumer-permissioned data access is built to a documented interface with revocable authorization, whatever shape the rule finally takes.",
       "violate_factors": [
         "billing_dispute_clock_extendable_by_configuration",
@@ -1078,7 +1084,7 @@
       },
       "id": "MF-406",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Consumer complaints are logged, routed, and closed within the stated window, and no change removes a complaint path without an equivalent replacement.",
@@ -1484,7 +1490,7 @@
       },
       "id": "MF-520",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Screening lists are refreshed from the authoritative publication within the declared interval, and the interval is a constitutional parameter rather than a service setting",
@@ -1513,7 +1519,7 @@
       },
       "id": "MF-521",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A change to a fuzzy-matching threshold, transliteration table, or name-normalisation rule is validated against a labelled set and recorded before release",
@@ -1542,7 +1548,7 @@
       },
       "id": "MF-522",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A transaction-monitoring rule is retired only on a documented tuning study showing the coverage it carried is carried elsewhere",
@@ -1571,7 +1577,7 @@
       },
       "id": "MF-523",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Beneficial-ownership information is collected and verified before a legal-entity account is funded",
@@ -1600,7 +1606,7 @@
       },
       "id": "MF-524",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Originator and beneficiary information accompanies a qualifying funds transfer for its whole journey",
@@ -1629,7 +1635,7 @@
       },
       "id": "MF-525",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An alert backlog is aged, reported, and escalated; no change may suppress the ageing metric",
@@ -1658,7 +1664,7 @@
       },
       "id": "MF-526",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A change to the cardholder-data environment scope is documented and the environment reassessed before release",
@@ -1687,7 +1693,7 @@
       },
       "id": "MF-527",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every script on a payment page carries a recorded justification for its presence, not only an integrity check",
@@ -1716,7 +1722,7 @@
       },
       "id": "MF-528",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Segmentation between the cardholder-data environment and the corporate network is tested on any change that touches the boundary",
@@ -1745,7 +1751,7 @@
       },
       "id": "MF-529",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Key-generation, loading and destruction ceremonies are dual-controlled and logged",
@@ -1774,7 +1780,7 @@
       },
       "id": "MF-530",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Deprecated cryptographic primitives \u2014 MD5, SHA-1, DES, 3DES, RC4 \u2014 are refused on any new or changed path",
@@ -1803,7 +1809,7 @@
       },
       "id": "MF-531",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every ingress and egress path enforces TLS 1.2 or above with forward secrecy",
@@ -1832,7 +1838,7 @@
       },
       "id": "MF-532",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Key rotation intervals are declared per key class and enforced by the platform, not by convention",
@@ -1861,7 +1867,7 @@
       },
       "id": "MF-533",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A credential known to have leaked is revoked before the change that removes it merges",
@@ -1879,14 +1885,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "SP",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1896,9 +1896,9 @@
       },
       "id": "MF-534",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "A signed software bill of materials in SPDX or CycloneDX form is produced for every build",
       "violate_factors": [
         "build_not_reproducible_across_runners",
@@ -1914,14 +1914,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "SP",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1931,9 +1925,9 @@
       },
       "id": "MF-535",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Build provenance meets SLSA Build Level 3: hermetic, ephemeral runners and a signed attestation naming the source and the steps",
       "violate_factors": [
         "build_not_reproducible_across_runners",
@@ -1949,14 +1943,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "SP",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -1966,9 +1954,9 @@
       },
       "id": "MF-536",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Every package declared in a manifest resolves in an approved registry before the build advances; a name that resolves nowhere fails the build",
       "violate_factors": [
         "build_not_reproducible_across_runners",
@@ -1984,14 +1972,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "SP",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2001,9 +1983,9 @@
       },
       "id": "MF-537",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Private package names are explicitly scoped, and the artifact repository never resolves a public package where a private name of the same shape exists",
       "violate_factors": [
         "copyleft_dependency_in_proprietary_distribution",
@@ -2019,14 +2001,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "SP",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2036,9 +2012,9 @@
       },
       "id": "MF-538",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "No copyleft or otherwise viral licence enters the proprietary distribution",
       "violate_factors": [
         "build_not_reproducible_across_runners",
@@ -2054,14 +2030,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "SP",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2071,9 +2041,9 @@
       },
       "id": "MF-539",
       "kind": "provision",
-      "office": null,
+      "office": "office:security",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "A dependency carrying a CVE above the declared CVSS threshold blocks the merge unless an explicit, time-bound risk-acceptance waiver is attached",
       "violate_factors": [
         "build_not_reproducible_across_runners",
@@ -2124,14 +2094,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "CQ",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2141,9 +2105,9 @@
       },
       "id": "MF-541",
       "kind": "provision",
-      "office": null,
+      "office": "office:compliance",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "A tested rollback exists and has been exercised for every production change on a regulated surface",
       "violate_factors": [
         "change_self_approved_by_its_author",
@@ -2159,14 +2123,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "CQ",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2176,9 +2134,9 @@
       },
       "id": "MF-542",
       "kind": "provision",
-      "office": null,
+      "office": "office:compliance",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "An emergency change is retro-approved within the stated window, and the window is a constitutional parameter",
       "violate_factors": [
         "change_control_bypassed_by_direct_push",
@@ -2229,8 +2187,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "LG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2240,9 +2204,9 @@
       },
       "id": "MF-544",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Every mutable payment endpoint requires an idempotency key, and a repeated submission returns the original result rather than executing again",
       "violate_factors": [
         "concurrent_debit_permits_double_spend",
@@ -2258,8 +2222,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "LG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2269,9 +2239,9 @@
       },
       "id": "MF-545",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A transaction rolls back completely under injected mid-transaction failure, and the isolation level under which it does so is declared and tested",
       "violate_factors": [
         "concurrent_debit_permits_double_spend",
@@ -2287,8 +2257,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "LG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2298,9 +2274,9 @@
       },
       "id": "MF-546",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Concurrent debits against one account are serialised so that no interleaving permits a double spend",
       "violate_factors": [
         "duplicate_submission_executes_twice",
@@ -2327,7 +2303,7 @@
       },
       "id": "MF-547",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Reconciliation breaks are aged, reported and escalated; no change may suppress a break or reset its age",
@@ -2345,8 +2321,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "LG",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2356,9 +2338,9 @@
       },
       "id": "MF-548",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "An event-sourced history is immutable under replay: the same event stream reproduces the same balances",
       "violate_factors": [
         "concurrent_debit_permits_double_spend",
@@ -2479,14 +2461,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "PR",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -2496,9 +2472,9 @@
       },
       "id": "MF-552",
       "kind": "provision",
-      "office": null,
+      "office": "office:compliance",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Interest and annual-percentage-rate computations carry a documented day-count convention and match the declared method",
       "violate_factors": [
         "binary_floating_point_used_in_money_path",
@@ -2560,7 +2536,7 @@
       },
       "id": "MF-554",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A circuit breaker opens on downstream failure so that the caller fails fast rather than hanging, and every outbound call declares a timeout",
@@ -2589,7 +2565,7 @@
       },
       "id": "MF-555",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Failover on the payment-authorization path is exercised before release, not asserted",
@@ -2618,7 +2594,7 @@
       },
       "id": "MF-556",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A critical-or-important function declares a recovery time and recovery point objective, and a change may not silently widen either",
@@ -2647,7 +2623,7 @@
       },
       "id": "MF-557",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Concentration risk in an ICT provider is recorded before the provider enters a further critical path",
@@ -2792,7 +2768,7 @@
       },
       "id": "MF-562",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Outcome parity across protected classes is measured and documented before deployment and monitored afterwards; a parity exception is time-boxed and carries a named owner",
@@ -2821,7 +2797,7 @@
       },
       "id": "MF-563",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Ongoing monitoring thresholds are declared before deployment and are not removed after it",
@@ -2850,7 +2826,7 @@
       },
       "id": "MF-564",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A champion model is replaced only on a recorded comparison against the challenger on the same population",
@@ -2879,7 +2855,7 @@
       },
       "id": "MF-565",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An override of a model decision is logged with the reason and the identity of the person who made it",
@@ -2908,7 +2884,7 @@
       },
       "id": "MF-566",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An adverse action notice is issued within the statutory window and names both the principal reasons and the agency consulted",
@@ -2937,7 +2913,7 @@
       },
       "id": "MF-567",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Every AI system carries an inventory entry recording its intended purpose and its risk classification",
@@ -2966,7 +2942,7 @@
       },
       "id": "MF-568",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Human oversight is operable and tested rather than nominal: the reviewer can see the basis of a decision and can stop it",
@@ -2995,7 +2971,7 @@
       },
       "id": "MF-569",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Synthetic content the firm generates is machine-markable at the point of generation, not tagged afterwards",
@@ -3024,7 +3000,7 @@
       },
       "id": "MF-570",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Prompt, retrieval and output logging retains enough to reconstruct a customer-affecting decision for the retention period",
@@ -3053,7 +3029,7 @@
       },
       "id": "MF-571",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:security",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An agent-authored change to security policy, RBAC, or a decisioning path requires multiparty human review",
@@ -3082,7 +3058,7 @@
       },
       "id": "MF-572",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An agent's mandate scope is declared before execution and is narrower than the credentials it runs under",
@@ -3111,7 +3087,7 @@
       },
       "id": "MF-573",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A fee or term is stated where a consumer will see it before the binding moment, not only in a linked schedule",
@@ -3140,7 +3116,7 @@
       },
       "id": "MF-574",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Cancellation of a recurring product is at least as easy as sign-up and available on the same surface",
@@ -3169,7 +3145,7 @@
       },
       "id": "MF-575",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A complaint is logged, routed and closed within the stated window, and the window is a constitutional parameter",
@@ -3198,7 +3174,7 @@
       },
       "id": "MF-576",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A privileged action is attributable to a named individual; no privileged path runs under a shared account",
@@ -3227,7 +3203,7 @@
       },
       "id": "MF-577",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Evidence export for an examiner is reproducible from the audit store without manual assembly",
@@ -3256,7 +3232,7 @@
       },
       "id": "MF-578",
       "kind": "provision",
-      "office": "office:safety-lead",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Log clocks are synchronised to a trusted source, and a change may not widen the permitted drift",
@@ -3274,8 +3250,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3285,9 +3267,9 @@
       },
       "id": "MF-590",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A risk acceptance carries an expiry and a referral, and lapses on time whether or not the referral has been answered",
       "violate_factors": [
         "acceptance_recorded_without_expiry_or_referral",
@@ -3303,8 +3285,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3314,9 +3302,9 @@
       },
       "id": "MF-591",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A renewal of a lapsed acceptance is visible on the record and never silent",
       "violate_factors": [
         "audit_register_read_by_resolve",
@@ -3332,8 +3320,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3343,9 +3337,9 @@
       },
       "id": "MF-592",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Ordinary and absolute status is stated on the face of the rule, not inferred from severity",
       "violate_factors": [
         "acceptance_recorded_without_expiry_or_referral",
@@ -3361,8 +3355,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3372,9 +3372,9 @@
       },
       "id": "MF-593",
       "kind": "provision",
-      "office": "office:compliance",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "A change to a gate threshold is routed to the amendment channel, never applied in place",
       "violate_factors": [
         "acceptance_recorded_without_expiry_or_referral",
@@ -3390,8 +3390,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3401,9 +3407,9 @@
       },
       "id": "MF-594",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "The constitution declares whether any party holds contest standing adverse to grants",
       "violate_factors": [
         "audit_register_read_by_resolve",
@@ -3419,8 +3425,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3430,9 +3442,9 @@
       },
       "id": "MF-595",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Reporter output never reaches the adjudication input path, and the audit register is never read by resolve",
       "violate_factors": [
         "acceptance_recorded_without_expiry_or_referral",
@@ -3448,8 +3460,14 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "GV",
       "gloss": {
-        "admitted_reasons": [],
-        "bound": {},
+        "admitted_reasons": [
+          "N",
+          "O",
+          "K"
+        ],
+        "bound": {
+          "max_departure_units": 1
+        },
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3459,9 +3477,9 @@
       },
       "id": "MF-596",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": null,
       "role": "coding-agent",
-      "tier": "T1",
+      "tier": "T2",
       "title": "Every arrival that is not charged leaves exactly one docket entry",
       "violate_factors": [
         "acceptance_recorded_without_expiry_or_referral",
@@ -3517,7 +3535,7 @@
       },
       "id": "MF-602",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "A credit transfer in euro is checked against the payee's name before the payer confirms it, the match result is shown to the payer, and no batch, bulk or retry path skips the check",
@@ -3604,7 +3622,7 @@
       },
       "id": "MF-605",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "The identity-theft prevention programme's red-flag rules run on every covered account and application, each detection has a documented response, and no channel is exempted by configuration",
@@ -3720,7 +3738,7 @@
       },
       "id": "MF-609",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "An account for an applicant the record shows to be under eighteen is opened only with a verified adult custodian, and personal information is not collected online from a child under thirteen without verifiable parental consent",
@@ -3738,14 +3756,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "CN",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3755,9 +3767,9 @@
       },
       "id": "MF-610",
       "kind": "provision",
-      "office": null,
+      "office": "office:compliance",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Before a disclosure the law requires in writing is delivered electronically instead of on paper, the consumer's informed consent is captured with the hardware and software statement, and the consent stays withdrawable",
       "violate_factors": [
         "automated_message_sent_without_recorded_prior_consent",
@@ -3773,14 +3785,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "CN",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3792,7 +3798,7 @@
       "kind": "provision",
       "office": null,
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T0",
       "title": "No autodialed call, prerecorded or artificial-voice message, or automated text reaches a wireless number without recorded prior express consent for that purpose, written where the purpose is marketing, and revocation is honoured on every channel",
       "violate_factors": [
         "automated_message_sent_without_recorded_prior_consent",
@@ -3808,14 +3814,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "CN",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3825,9 +3825,9 @@
       },
       "id": "MF-612",
       "kind": "provision",
-      "office": null,
+      "office": "office:compliance",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "A privacy notice is delivered before nonpublic personal information is shared outside the exceptions, the opt-out reaches every disclosure path, and reliance on the annual-notice exception is checked against its conditions",
       "violate_factors": [
         "cease_communication_request_ignored_by_the_dialer",
@@ -3843,14 +3843,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "CN",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -3860,9 +3854,9 @@
       },
       "id": "MF-613",
       "kind": "provision",
-      "office": null,
+      "office": "office:compliance",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "Debt-collection contact frequency stays inside the presumptive seven-calls-in-seven-days limit and the seven-day post-conversation limit, a cease request stops the channel, and validation information precedes collection activity",
       "violate_factors": [
         "cease_communication_request_ignored_by_the_dialer",
@@ -3889,7 +3883,7 @@
       },
       "id": "MF-614",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Deposit account fees, the annual percentage yield and its computation method are disclosed before the account is opened, and a change in terms that reduces the yield or adds a fee is noticed before it takes effect",
@@ -3976,7 +3970,7 @@
       },
       "id": "MF-617",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Dormancy periods, owner due-diligence notices and remittance deadlines are read from the governing state's unclaimed-property table, and no internal system event resets an account's dormancy clock",
@@ -4063,7 +4057,7 @@
       },
       "id": "MF-620",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "The path by which suspected financial exploitation of an older or vulnerable customer is escalated, held where state law permits, and reported stays reachable from the servicing case and is never downgraded to a passive report",
@@ -4081,14 +4075,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "DA",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -4098,9 +4086,9 @@
       },
       "id": "MF-621",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "A data-subject access request is answered within one month and a portability request produces a structured, commonly used, machine-readable export; an extension is notified with its reasons rather than taken silently",
       "violate_factors": [
         "access_request_left_unanswered_past_the_statutory_month",
@@ -4151,14 +4139,8 @@
       "canon_version": "meridian-corpus-canon-000001",
       "family": "DA",
       "gloss": {
-        "admitted_reasons": [
-          "N",
-          "O",
-          "K"
-        ],
-        "bound": {
-          "max_departure_units": 1
-        },
+        "admitted_reasons": [],
+        "bound": {},
         "codified": false,
         "contexts": [],
         "holdings": [],
@@ -4168,9 +4150,9 @@
       },
       "id": "MF-623",
       "kind": "provision",
-      "office": null,
+      "office": "office:legal-counsel",
       "role": "coding-agent",
-      "tier": "T2",
+      "tier": "T1",
       "title": "An opt-out preference signal is detected and treated as a valid request to stop sale and sharing without any further prompt, and is linked to the known customer record where one exists",
       "violate_factors": [
         "dispute_status_conveyed_by_colour_alone",
@@ -4255,7 +4237,7 @@
       },
       "id": "MF-626",
       "kind": "provision",
-      "office": "office:legal-counsel",
+      "office": "office:compliance",
       "role": "coding-agent",
       "tier": "T1",
       "title": "Information requests from the financial-intelligence unit are matched across every account system and retained, and politically exposed person screening and enhanced due diligence run before a relationship opens and again on the declared refresh cycle",
@@ -4440,9 +4422,22 @@
     "office:compliance": {
       "id": "office:compliance",
       "may_issue_for": [
+        "AG",
+        "AI",
+        "CN",
+        "CP",
+        "CQ",
+        "EV",
+        "FC",
+        "FL",
+        "FP",
         "FR",
-        "GV",
+        "LG",
+        "MP",
+        "PR",
         "PS",
+        "RE",
+        "VA",
         "incident-hotfix"
       ],
       "reporting_line": "governance"
@@ -4450,29 +4445,23 @@
     "office:legal-counsel": {
       "id": "office:legal-counsel",
       "may_issue_for": [
-        "CP",
-        "DP",
-        "FC",
-        "FP",
-        "FR",
-        "GV",
-        "LG",
-        "MP",
-        "PD",
-        "PS",
-        "SS",
-        "VA"
+        "DA",
+        "DP"
       ],
       "reporting_line": "governance"
     },
     "office:safety-lead": {
       "id": "office:safety-lead",
+      "may_issue_for": [],
+      "reporting_line": "governance"
+    },
+    "office:security": {
+      "id": "office:security",
       "may_issue_for": [
         "AG",
-        "AI",
-        "EV",
-        "FL",
-        "RE"
+        "PD",
+        "SP",
+        "SS"
       ],
       "reporting_line": "governance"
     }
