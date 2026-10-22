@@ -1,13 +1,13 @@
 # Plan hash
 
-**Plan hash (sha256):** `413a786097af84e73963f8cb03dd04d6a0ddd4be292a4abdeb4a604446a99f46`
+**Plan hash (sha256):** `5118699e061d06f8388a42b50bfb30c43fab0d9be5242bc7d6bc57263aea4acb`
 
 | | |
 |---|---|
-| Computed | 2026-10-22 03:16 UTC |
+| Computed | 2026-10-22 03:21 UTC |
 | Package VERSION | 5.16.0 |
-| Git branch | ec-fast-track |
-| Git commit at computation | f1acd7261ec657837e3afa78061aff156752e5a5 (informational; not a hash input) |
+| Git branch | HEAD |
+| Git commit at computation | a9bd0882973675405f643d09c92d2cc2d49d41b4 (informational; not a hash input) |
 | Files | 35 |
 
 Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted lines `<path>  <digest>\n`. The line of `prereg/PREREG_EC_SIM_v1.md` beginning `| OSF registration DOI |` is removed before that file is digested. `prereg/PLAN_HASH.md` and `prereg/plan_hash.txt` are outputs and not inputs. Recompute with `python3 prereg/make_plan_hash.py --check`.
@@ -17,10 +17,10 @@ Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted
 | File | sha256 |
 |---|---|
 | `prereg/ANALYSIS_PLAN.md` | `bcbcefb842b09db2bdd6e0a551246ae57dffc62d394010f533d90d357a1270ec` |
-| `prereg/DATA_DICTIONARY.md` | `cf7bbd9f6a70e7ca34326d6a2075a001be12406b63bb9027c062df0d87a3e43b` |
+| `prereg/DATA_DICTIONARY.md` | `7fcc421f30536c216fd6f35c29fbc370e0b3181f3d9eafb5cda5d38770f0709f` |
 | `prereg/ESTIMAND_MAP.md` | `07875215ca675459123ba3a246a0b4586fddf9fc1385e0b9fdb2ac8105c68978` |
-| `prereg/OSF_UPLOAD_CHECKLIST.md` | `de992062ecd8aab208264c1009ca0864a0f509ff68a9eee8c12cf3152187c968` |
-| `prereg/PREREG_EC_SIM_v1.md` | `87abc5399efeb7c8591e17f8d7cde9b6412883e925c8603a8616857b326d1090` |
+| `prereg/OSF_UPLOAD_CHECKLIST.md` | `0fb2e43cfda1380342af3547b301e3a16ecaebb0a5abd596d063ad48279190ec` |
+| `prereg/PREREG_EC_SIM_v1.md` | `af7df98d3449f818042a32f5c8cb00226c3c59d443fb15fb61abd864a63d952c` |
 | `prereg/make_plan_hash.py` | `44a5c1bad33a1c6a20d4c1c9e4bdf82ca797d9a0e731bdff3a630501c4003b2f` |
 
 ## Canons
@@ -37,14 +37,14 @@ Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted
 
 | File | sha256 |
 |---|---|
-| `simulation/ec/DESIGN.md` | `6ce4f3e18095edd398e7198b3b19639967de617c6f85b3d0b336eb15502da2d9` |
+| `simulation/ec/DESIGN.md` | `7ef6519cc9953d9aa5803d89196dca888e1de782299bf70c53e015f583ede4fd` |
 | `simulation/ec/__init__.py` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 | `simulation/ec/agents/__init__.py` | `b03e02b5f73e25ef26940edf70e6e5413ecec2119afd199b94d3c8a3e8d4af04` |
-| `simulation/ec/agents/llm.py` | `9a6d413e728f22577677d0d8d233b047bffb0d931d755de40e61567ee4a9cf85` |
+| `simulation/ec/agents/llm.py` | `fd183cbbadb106f21fba64047d336eb5c3495e94a9faa6f80e5976cde7c6a3da` |
 | `simulation/ec/agents/policy.py` | `dc07377b5240f81a69f07be2a62eee53707d95f959dd4d7cff0858ee35f9a6a4` |
 | `simulation/ec/analyze.py` | `35437414ea22154b8bd857735339cfe497c08891d0e9a943353a8e2be3512d10` |
 | `simulation/ec/build_all_canons.py` | `214a8849fb5a15a91df0890cd6fb5f7cce82352565cd27ec92f5a6d42242ed77` |
-| `simulation/ec/calendar.py` | `4d2008f3cb5ee6d80a33b73b3927b3c1122cc69a752d5181dd16ec310541fdd3` |
+| `simulation/ec/calendar.py` | `d67f8ed92eb3553ab913440892a6cd293961b266db7eefd840510ea70f3f8a0d` |
 | `simulation/ec/canon.py` | `6ea25de5ecf1a55fa32736b96f19df29c7c9e38a7ce6da83a395ed2866268af3` |
 | `simulation/ec/doctrine.py` | `91c9715c2012a6e325a49b93910ff32f88b0eef4bf5d7c0cb124541f64662b0e` |
 | `simulation/ec/escalate.py` | `f732f092fc5da077fa2bd072fd77a649420cf91647c9b72dfb343fbf0715b1b0` |
@@ -64,8 +64,8 @@ Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted
 |---|---|
 | `tests/test_ec_conformance.py` | `095aa63bd1ca6cb870e195f5c6bb0bbd3ca2475bf9fe72ee16cdeedb8325974f` |
 | `tests/test_ec_core.py` | `7dc083077ae9bdefad7d78b8d62e7e6ac7ca5ce6e794e61547baaa6656c2f8d5` |
-| `tests/test_ec_driver.py` | `11c50a5406fc8607fa728782b9b90cafc74dbc2761deddf66fa8a0c2879dbc41` |
-| `tests/test_ec_llm_live.py` | `3b04caf6ea29287479d7e1148df95b46e531b4cceefa13c8dfe8a8738a9401af` |
+| `tests/test_ec_driver.py` | `79d0dd63c068853efb9ffa7e5740de11b15853ba713df758a927c7b1fd04f2e3` |
+| `tests/test_ec_llm_live.py` | `1659a970d252ce3348987f205e2eec030e1c352d638376118c7d92540d2ae810` |
 
 ## Amendments
 

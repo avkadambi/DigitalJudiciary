@@ -32,7 +32,7 @@ Shared value sets:
 |---|---|---|
 | `pack` | string | PACK |
 | `arm` | string | ARM |
-| `seed` | int | registered 11, 13, 17, 19, 23 |
+| `seed` | int | calibration 11, 13, 17, 19, 23; confirmatory 59, 61, 67, 71, 73; LLM slice 11 |
 | `day` | int | 1..365 working day |
 | `seq` | int | 0..99, position within the day (a twin is its control's seq + 1) |
 | `ts` | int | 1000 + day × 100 + seq; the engine timestamp |

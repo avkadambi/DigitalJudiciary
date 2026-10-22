@@ -4,8 +4,11 @@ EC year report: one Markdown file and a set of figures over every results root.
 
     python3 reproduce/ec_report.py [--no-figures] [--boot 2000]
 
-Reads every root under simulation/ec/results/{registered,bounds,llm_dry} that
-carries a metrics.csv. A root whose runs are complete (every expected
+Reads every root under simulation/ec/results/{registered,bounds,llm_dry,confirmatory}
+that carries a metrics.csv. `registered/<archetype>` is the calibration run
+(seeds 11-23, executed 2026-10-20 and disclosed in the registration);
+`confirmatory/<archetype>` and `confirmatory/bounds/<archetype>` are the
+registered policy design on seeds 59-73, and `registered/llm` the live LLM slice. A root whose runs are complete (every expected
 <pack>/<arm>/seed-<n>/manifest.json present, no checkpoint.json left) but has no
 metrics.csv gets metrics.py and analyze.py run on it first. An incomplete root is
 skipped with a note. Nothing under simulation/ec/, prereg/ or tests/ is touched.
@@ -57,6 +60,11 @@ MARGIN = 0.03
 BOOT_SEED = 20260906
 REGISTERED = ("honest", "pressure_sensitive", "observation_sensitive", "misreporting")
 BOUNDS = ("oracle", "adversarial")
+# Report labels per group. "registered" is the directory the calibration run
+# was written to before the registration was corrected; it keeps its path.
+GROUP_LABEL = {"registered": "calibration", "bounds": "calibration bounds", "llm_dry": "LLM dry",
+               "confirmatory": "confirmatory", "confirmatory_bounds": "confirmatory bounds", "llm_live": "LLM live",
+               "llm_pilot": "LLM pilot"}
 MEASURED, IDENTITY, DERIVED, PROJECTED = "⟦measured⟧", "⟦identity⟧", "⟦derived⟧", "⟦PROJECTED⟧"
 HUMAN_DESK_PER_1000 = 42000.0   # prereg/PREREG_EC_SIM_v1.md, Other: benchmark/human.py, ⟦PROJECTED⟧
 
@@ -221,15 +229,37 @@ def discover_roots():
     for arch in BOUNDS:
         out.append(("bounds", arch, os.path.join(RESULTS, "bounds", arch)))
     out.append(("llm_dry", "llm_dry", os.path.join(RESULTS, "llm_dry")))
+    for arch in REGISTERED:
+        out.append(("confirmatory", arch, os.path.join(RESULTS, "confirmatory", arch)))
+    for arch in BOUNDS:
+        out.append(("confirmatory_bounds", arch, os.path.join(RESULTS, "confirmatory", "bounds", arch)))
+    llm = os.path.join(RESULTS, "registered", "llm")
+    if os.path.isdir(llm):
+        out.append(("llm_live", "llm", llm))
     # any extra archetype directories
-    for grp in ("registered", "bounds"):
-        d = os.path.join(RESULTS, grp)
+    for grp, d in (("registered", os.path.join(RESULTS, "registered")), ("bounds", os.path.join(RESULTS, "bounds")),
+                   ("confirmatory", os.path.join(RESULTS, "confirmatory")),
+                   ("confirmatory_bounds", os.path.join(RESULTS, "confirmatory", "bounds"))):
         if os.path.isdir(d):
             for name in sorted(os.listdir(d)):
                 p = os.path.join(d, name)
+                if (grp, name) in (("registered", "llm"), ("confirmatory", "bounds")):
+                    continue
+                if grp == "registered" and name.startswith("llm"):   # live pilots, e.g. llm_pilot10
+                    out.append(("llm_pilot", name, p))
+                    continue
                 if os.path.isdir(p) and (grp, name, p) not in out:
                     out.append((grp, name, p))
     return out
+
+
+def label(R):
+    return f"{GROUP_LABEL.get(R['group'], R['group'])}: {R['name']}"
+
+
+def by_name(loaded, groups):
+    """name -> root within the given groups; archetype names repeat across groups."""
+    return {R["name"]: R for R in loaded if R["group"] in groups}
 
 
 # ---------------------------------------------------------------------------
@@ -622,7 +652,7 @@ def figures(loaded, log):
         "legend.frameon": False, "figure.facecolor": "#fcfcfb", "axes.facecolor": "#fcfcfb", "savefig.dpi": 160,
     })
     made = []
-    by = {R["name"]: R for R in loaded}
+    by = by_name(loaded, ("registered", "bounds", "llm_dry"))
     reg = [R for R in loaded if R["group"] == "registered"]
     bounds = [R for R in loaded if R["group"] == "bounds"]
 
@@ -811,6 +841,8 @@ def header(loaded):
     L.append(f"| plan hash | `{plan_hash}` (prereg/plan_hash.txt) |")
     L.append(f"| canon versions | {', '.join(f'`{c}`' for c in canon) if canon else 'none loaded'} |")
     L.append(f"| seeds | {', '.join(str(s) for s in seeds) if seeds else 'none'} |")
+    L.append("| groups | calibration: `registered/`, seeds 11, 13, 17, 19, 23, executed 2026-10-20 and disclosed in the "
+             "registration; confirmatory: `confirmatory/`, seeds 59, 61, 67, 71, 73; LLM live: `registered/llm/` |")
     L.append(f"| days | {', '.join(str(d) for d in days) if days else 'none'} |")
     L.append(f"| generated | {_dt.datetime.now(_dt.timezone.utc).strftime('%Y-%m-%d %H:%M UTC')} by `reproduce/ec_report.py` |")
     L.append("")
@@ -824,16 +856,16 @@ def header(loaded):
 
 
 def build_report(loaded, log, made):
-    by = {R["name"]: R for R in loaded}
+    by = by_name(loaded, ("registered", "bounds", "llm_dry"))
     L = [header(loaded)]
 
     # roots table
     L.append("## Results roots")
     L.append("")
-    L.append("| root | archetype | runs (done / expected) | status | provenance |")
-    L.append("|---|---|---|---|---|")
+    L.append("| root | group | archetype | runs (done / expected) | status | provenance |")
+    L.append("|---|---|---|---|---|---|")
     for R in loaded:
-        L.append(f"| `{rel(R['root'])}` | {R['archetype']} | {R['done']} / {R['expected']} | "
+        L.append(f"| `{rel(R['root'])}` | {GROUP_LABEL.get(R['group'], R['group'])} | {R['archetype']} | {R['done']} / {R['expected']} | "
                  f"{'complete' if R['complete'] else 'partial'} | {', '.join(R['provenance'])} |")
     if log:
         L.append("")
@@ -855,46 +887,55 @@ def build_report(loaded, log, made):
              "this registry and these archetype tables.")
     L.append("")
 
-    # per archetype
-    L.append("## Registered archetypes")
-    L.append("")
-    reg = [R for R in loaded if R["group"] == "registered"]
-    if not reg:
-        L.append("No registered root with metrics.csv.")
+    # per archetype: the confirmatory design (seeds 59-73) and the live LLM slice
+    # are the registered test; the calibration run is reported after them.
+    for grp, title, empty in (
+            ("confirmatory", "Confirmatory archetypes (seeds 59, 61, 67, 71, 73)", "No confirmatory root with metrics.csv yet."),
+            ("llm_live", "LLM live slice", None),
+            ("registered", "Calibration archetypes (seeds 11, 13, 17, 19, 23; executed 2026-10-20, disclosed in the registration)",
+             "No calibration root with metrics.csv.")):
+        reg = [R for R in loaded if R["group"] == grp]
+        grp_by = by_name(loaded, (grp,))
+        if not reg and empty is None:
+            continue
+        L.append(f"## {title}")
         L.append("")
-    for R in reg:
-        arms = [a for a in ARMS if any(r["arm"] == a for r in R["rows"])]
-        L.append(f"### {R['name']}" + ("" if R["complete"] else " (partial root)"))
-        L.append("")
-        L.append(f"{len(R['rows'])} runs: packs {', '.join(sorted({r['pack'] for r in R['rows']}))}; arms {', '.join(arms)}; "
-                 f"seeds {', '.join(str(s) for s in sorted({r['seed'] for r in R['rows']}))}. Cells are the mean over packs and seeds "
-                 f"with [min, max] across seeds (each seed's mean over packs). Per-pack tables are in the appendix. "
-                 f"The ⟦identity⟧ column is the archetype table evaluated over the run's own line mix, mean over runs.")
-        L.append("")
-        L.append(metrics_table(R["rows"], arms))
-        L.append("")
-        L.append(f"#### Confirmatory results ({R['name']})")
-        L.append("")
-        L.append("| hypothesis | comparison | numbers | result | supported when |")
-        L.append("|---|---|---|---|---|")
-        for h, comp, num, res, when in confirmatory(R, by):
-            L.append(f"| {h} | {comp} | {num} | **{res}** | {when} |")
-        L.append("")
-        if R["analysis"]:
-            an = R["analysis"]
-            L.append(f"Exploratory, from `analysis.json` (TOST margin ±{an['margin']}, {an['bootstrap_reps']} bootstrap reps, "
-                     f"{len(an['units'])} (pack, seed) units): ")
+        if not reg:
+            L.append(empty)
             L.append("")
-            L.append("| metric | arm pair | n | mean diff (second − first) | 90% CI (TOST) or 95% (bootstrap) | equivalent |")
-            L.append("|---|---|---|---|---|---|")
-            for m, d in an.get("tost", {}).items():
-                for pair, t in d.items():
-                    ci = f"[{fnum(t['ci90'][0])}, {fnum(t['ci90'][1])}]" if t.get("ci90") else "NA"
-                    L.append(f"| {m} (TOST) | {pair} | {t['n']} | {fnum(t['mean'])} | {ci} | {fnum(t['equivalent'])} |")
-            for m, d in an.get("bootstrap", {}).items():
-                for pair, b in d.items():
-                    L.append(f"| {m} (bootstrap) | {pair} | {b['n']} | {fnum(b['mean'])} | [{fnum(b['lo'])}, {fnum(b['hi'])}] | |")
+        for R in reg:
+            arms = [a for a in ARMS if any(r["arm"] == a for r in R["rows"])]
+            L.append(f"### {label(R)}" + ("" if R["complete"] else " (partial root)"))
             L.append("")
+            L.append(f"{len(R['rows'])} runs: packs {', '.join(sorted({r['pack'] for r in R['rows']}))}; arms {', '.join(arms)}; "
+                     f"seeds {', '.join(str(s) for s in sorted({r['seed'] for r in R['rows']}))}. Cells are the mean over packs and seeds "
+                     f"with [min, max] across seeds (each seed's mean over packs). Per-pack tables are in the appendix. "
+                     f"The ⟦identity⟧ column is the archetype table evaluated over the run's own line mix, mean over runs.")
+            L.append("")
+            L.append(metrics_table(R["rows"], arms))
+            L.append("")
+            L.append(f"#### {'Confirmatory' if grp == 'confirmatory' else 'Hypothesis'} results ({label(R)})")
+            L.append("")
+            L.append("| hypothesis | comparison | numbers | result | supported when |")
+            L.append("|---|---|---|---|---|")
+            for h, comp, num, res, when in confirmatory(R, grp_by):
+                L.append(f"| {h} | {comp} | {num} | **{res}** | {when} |")
+            L.append("")
+            if R["analysis"]:
+                an = R["analysis"]
+                L.append(f"Exploratory, from `analysis.json` (TOST margin ±{an['margin']}, {an['bootstrap_reps']} bootstrap reps, "
+                         f"{len(an['units'])} (pack, seed) units): ")
+                L.append("")
+                L.append("| metric | arm pair | n | mean diff (second − first) | 90% CI (TOST) or 95% (bootstrap) | equivalent |")
+                L.append("|---|---|---|---|---|---|")
+                for m, d in an.get("tost", {}).items():
+                    for pair, t in d.items():
+                        ci = f"[{fnum(t['ci90'][0])}, {fnum(t['ci90'][1])}]" if t.get("ci90") else "NA"
+                        L.append(f"| {m} (TOST) | {pair} | {t['n']} | {fnum(t['mean'])} | {ci} | {fnum(t['equivalent'])} |")
+                for m, d in an.get("bootstrap", {}).items():
+                    for pair, b in d.items():
+                        L.append(f"| {m} (bootstrap) | {pair} | {b['n']} | {fnum(b['mean'])} | [{fnum(b['lo'])}, {fnum(b['hi'])}] | |")
+                L.append("")
 
     # cross-archetype summary
     L.append("## Cross-archetype summary")
@@ -906,7 +947,7 @@ def build_report(loaded, log, made):
         L.append("| archetype | " + " | ".join(ARMS) + " |")
         L.append("|---|" + "---|" * len(ARMS))
         for R in allR:
-            L.append(f"| {R['name']} | " + " | ".join(summary_cell(R["rows"], "e7_blind_spot", a) for a in ARMS) + " |")
+            L.append(f"| {label(R)} | " + " | ".join(summary_cell(R["rows"], "e7_blind_spot", a) for a in ARMS) + " |")
         L.append("")
         L.append("Arm D: E8 doctrine return, E6 recall, bench activity and tokens (mean over runs):")
         L.append("")
@@ -914,7 +955,7 @@ def build_report(loaded, log, made):
         L.append("|---|---|---|---|---|---|---|---|---|---|---|---|---|---|")
         for R in allR:
             rw = R["rows"]
-            L.append(f"| {R['name']} | {summary_cell(rw, 'e8_esc_per30_before', 'D')} | {summary_cell(rw, 'e8_esc_per30_after', 'D')} | "
+            L.append(f"| {label(R)} | {summary_cell(rw, 'e8_esc_per30_before', 'D')} | {summary_cell(rw, 'e8_esc_per30_after', 'D')} | "
                      f"{summary_cell(rw, 'e8_return', 'D')} | {summary_cell(rw, 'e6_recall', 'D')} | {summary_cell(rw, 'e6_recall', 'A')} | "
                      f"{summary_cell(rw, 'escalations_filed', 'D', True)} | {summary_cell(rw, 'escalations_heard', 'D', True)} | "
                      f"{summary_cell(rw, 'glosses', 'D', True)} | {summary_cell(rw, 'codifications', 'D', True)} | "
@@ -926,7 +967,7 @@ def build_report(loaded, log, made):
         L.append("| archetype | " + " | ".join(ARMS) + " | ⟦identity⟧ |")
         L.append("|---|" + "---|" * (len(ARMS) + 1))
         for R in allR:
-            L.append(f"| {R['name']} | " + " | ".join(summary_cell(R["rows"], "e6_recall", a) for a in ARMS)
+            L.append(f"| {label(R)} | " + " | ".join(summary_cell(R["rows"], "e6_recall", a) for a in ARMS)
                      + f" | {fnum(_mean([r.get('id_e6_recall') for r in R['rows']]))} |")
         L.append("")
         L.append("Escalations filed / heard by arm × archetype (mean over runs):")
@@ -934,18 +975,18 @@ def build_report(loaded, log, made):
         L.append("| archetype | " + " | ".join(ARMS) + " |")
         L.append("|---|" + "---|" * len(ARMS))
         for R in allR:
-            L.append(f"| {R['name']} | " + " | ".join(f"{summary_cell(R['rows'], 'escalations_filed', a, True)} / "
+            L.append(f"| {label(R)} | " + " | ".join(f"{summary_cell(R['rows'], 'escalations_filed', a, True)} / "
                                                     f"{summary_cell(R['rows'], 'escalations_heard', a, True)}" for a in ARMS) + " |")
         L.append("")
 
     # bounds and LLM dry
     L.append("## Bounds and LLM dry run")
     L.append("")
-    bnd = [R for R in loaded if R["group"] == "bounds"]
+    bnd = [R for R in loaded if R["group"] in ("confirmatory_bounds", "bounds")]
     if bnd:
         for R in bnd:
             arms = [a for a in ARMS if any(r["arm"] == a for r in R["rows"])]
-            L.append(f"### bound: {R['name']}" + ("" if R["complete"] else " (partial root)"))
+            L.append(f"### {label(R)}" + ("" if R["complete"] else " (partial root)"))
             L.append("")
             L.append(f"{len(R['rows'])} runs, seed(s) {', '.join(str(s) for s in sorted({r['seed'] for r in R['rows']}))}. "
                      f"A bound is a limit of the archetype table, not a claim: the oracle never proposes an impermissible act and "

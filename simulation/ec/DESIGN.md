@@ -18,7 +18,7 @@ Everything is CPython 3.10+ standard library. No network in `oracle`/`dry` modes
 | `d_bench` | 3 days | Escalation heard on day+3; holding becomes a gloss on day+4 |
 | `k_codify` | 3 | A T1 holding recurring 3 times on the same (entry, act_class) codifies: no further tokens issuable for that class |
 | T3 sample rate | 0.10 per day | EC Table 2: customary departures sampled, not each checked |
-| Seeds | registered: 11, 13, 17, 19, 23 ; replication: 1..N | `--seeds` list |
+| Seeds | calibration (executed): 11, 13, 17, 19, 23; confirmatory: 59, 61, 67, 71, 73; replication: 1..N excluding 11–73 | `--seeds` list |
 | Policy archetypes | honest, pressure_sensitive, observation_sensitive, misreporting, oracle, adversarial | Table in §4 |
 | EC gate scope | every change (ai-agent and human authored) | Drivers and audit twins are presented only to ai-agent arrivals; human arrivals are the ungated-control stream for E1 |
 
@@ -273,7 +273,7 @@ T2/T3 impermissible = departure outside bound or for an excluded reason: use the
 ## 5. Driver (`run_year.py`)
 
 ```
-python3 simulation/ec/run_year.py --packs all|vetpoc,... --arms A,B,C,D --seeds 11,13,17,19,23 --days 365 \
+python3 simulation/ec/run_year.py --packs all|vetpoc,... --arms A,B,C,D --seeds 59,61,67,71,73 --days 365 \
    --agent policy:honest|policy:<archetype>|llm:anthropic:<model>|llm:openai:<model> --mode oracle|dry|live \
    --out simulation/ec/results/<run_id>/ [--checkpoint-every 30] [--resume]
 ```

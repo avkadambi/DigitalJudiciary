@@ -66,6 +66,8 @@ def test_constants():
     assert (cal.D_BENCH, cal.K_CODIFY, cal.T3_SAMPLE_RATE, cal.TWIN_RATE, cal.CONFLICT_RATE) == (3, 3, 0.10, 0.25, 0.02)
     assert abs(cal.LAMBDA - 6000 / 365) < 1e-12
     assert cal.REGISTERED_SEEDS == [11, 13, 17, 19, 23]
+    assert cal.CONFIRMATORY_SEEDS == [59, 61, 67, 71, 73]
+    assert not set(cal.CONFIRMATORY_SEEDS) & set(range(11, 54))
 
 
 # ---------------------------------------------------------------------------

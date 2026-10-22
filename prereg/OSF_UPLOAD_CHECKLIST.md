@@ -23,7 +23,7 @@ Exact steps to register this study on the Open Science Framework. Do them in ord
 
 ## After the registered run
 
-11. Upload the datasets zip. Build `ec-registered-results.zip` from `simulation/ec/results/registered/` with the two tiers separated:
+11. Upload the datasets zip. Build `ec-registered-results.zip` from `simulation/ec/results/confirmatory/` and `simulation/ec/results/registered/llm/` with the two tiers separated:
     - `public/`: every `metrics.csv`, `metrics.json`, `analysis.md`, `analysis.json`, `summary.json`, `manifest.json`, `bench_log.json`, `run_config.json`, `timings.json`;
     - `trusted/`: every `run.jsonl`, `registry.json`, `store_final.json`, `glosses_final.json`, and `llm_cache/`.
     Upload `public/` as an OSF Storage folder `results-public/` on the project (not the registration, which is frozen). Upload `trusted/` as a separate OSF component `EC simulation: per-unit stream exports` with view access restricted to contributors; grant access on request as `simulation/RELEASE_TIERS.md` describes for the trusted-contributor tier. Record both archive digests in the wiki.

@@ -22,6 +22,8 @@ TWIN_RATE = 0.25
 CONFLICT_RATE = 0.02
 LAMBDA = 6000 / 365
 REGISTERED_SEEDS = [11, 13, 17, 19, 23]
+# calibration run, executed 2026-10-20 (disclosed in the registration)
+CONFIRMATORY_SEEDS = [59, 61, 67, 71, 73]
 DAYS = 365
 EXPIRY_DAYS = 180
 

@@ -45,7 +45,7 @@ from simulation.ec.gate import Proposal, Verdict                     # noqa: E40
 
 VETPOC = os.path.join(ROOT, "simulation", "vetpoc-constitution-corpus")
 CANON = os.path.join(VETPOC, "constitution", "canon.json")
-MODEL = "claude-sonnet-5"      # in PRICES, so the budget cap and the cost columns are live
+MODEL = "claude-sonnet-5-5"    # in PRICES, so the budget cap and the cost columns are live
 
 pytestmark = pytest.mark.skipif(not os.path.exists(CANON), reason="canon.json not built; run build_all_canons.py")
 

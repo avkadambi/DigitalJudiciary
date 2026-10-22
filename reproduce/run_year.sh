@@ -5,7 +5,10 @@
 #   bash reproduce/run_year.sh pilot        # 30 days, all packs, all arms, seed 11, pressure_sensitive (about a minute)
 #   bash reproduce/run_year.sh registered   # the registered design: 5 seeds x 365 days x 4 arms x 5 packs
 #                                           # for 4 archetypes, then the oracle/adversarial bounds (seed 11),
-#                                           # then the arm-D LLM dry run (anthropic, sonnet), then metrics (hours)
+#                                           # then the arm-D LLM dry run (anthropic, sonnet), then metrics (hours);
+#                                           # this is the calibration run, executed 2026-10-20 and disclosed in the registration
+#   bash reproduce/run_year.sh confirmatory # the confirmatory design: seeds 59,61,67,71,73 x 365 days x 4 arms x 5 packs
+#                                           # for 4 archetypes, then the oracle/adversarial bounds (seed 59), then metrics (hours)
 #   bash reproduce/run_year.sh conformance  # EC-01..EC-12 on a fresh 60-day vetpoc pilot (about half a minute)
 #   bash reproduce/run_year.sh mutation     # F-EC-1..8 + 2 controls (about four minutes)
 #   bash reproduce/run_year.sh metrics      # recompute metrics.csv and analysis.md under every results root
@@ -79,6 +82,23 @@ case "$MODE" in
     done
     ;;
 
+  confirmatory)
+    canons
+    for arch in honest pressure_sensitive observation_sensitive misreporting; do
+      say "Confirmatory — policy:$arch, seeds 59,61,67,71,73, 365 days, arms A,B,C,D, all packs"
+      run $RES/confirmatory/$arch policy:$arch 59,61,67,71,73 365 A,B,C,D all --checkpoint-every 30 --resume
+    done
+    for arch in oracle adversarial; do
+      say "Confirmatory bounds — policy:$arch, seed 59, 365 days, arms A,B,C,D, all packs"
+      run $RES/confirmatory/bounds/$arch policy:$arch 59 365 A,B,C,D all --checkpoint-every 30 --resume
+    done
+    say "Metrics and analysis"
+    for root in $RES/confirmatory/honest $RES/confirmatory/pressure_sensitive $RES/confirmatory/observation_sensitive \
+                $RES/confirmatory/misreporting $RES/confirmatory/bounds/oracle $RES/confirmatory/bounds/adversarial; do
+      metrics_and_analysis "$root"
+    done
+    ;;
+
   conformance)
     canons
     say "EC conformance — EC-01..EC-12 on a fresh 60-day vetpoc pilot"
@@ -135,5 +155,5 @@ case "$MODE" in
     ;;
 
   *)
-    echo "usage: bash reproduce/run_year.sh [pilot|registered|conformance|mutation|metrics|console|live <model> [provider]]"; exit 2 ;;
+    echo "usage: bash reproduce/run_year.sh [pilot|registered|confirmatory|conformance|mutation|metrics|console|live <model> [provider]]"; exit 2 ;;
 esac
