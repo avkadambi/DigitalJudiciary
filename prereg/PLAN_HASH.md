@@ -1,13 +1,13 @@
 # Plan hash
 
-**Plan hash (sha256):** `5756fd88894c7f6b2edca0f824e9ce9b3b056354ff332f9103ed32d06fbe4254`
+**Plan hash (sha256):** `cd9f7cdbc768c4ae7d81507d7d9f71b2854f2beb2ddb18b198fa77ad839f8480`
 
 | | |
 |---|---|
-| Computed | 2026-10-21 20:14 UTC |
+| Computed | 2026-10-22 02:11 UTC |
 | Package VERSION | 5.16.0 |
 | Git branch | ec-fast-track |
-| Git commit at computation | b9beef1ac8375c9ef32c0a9cdb8759a1ae021fa6 (informational; not a hash input) |
+| Git commit at computation | 8bfbb2d4d58982438cf585013b2080d7fd8da3b5 (informational; not a hash input) |
 | Files | 35 |
 
 Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted lines `<path>  <digest>\n`. The line of `prereg/PREREG_EC_SIM_v1.md` beginning `| OSF registration DOI |` is removed before that file is digested. `prereg/PLAN_HASH.md` and `prereg/plan_hash.txt` are outputs and not inputs. Recompute with `python3 prereg/make_plan_hash.py --check`.
@@ -40,7 +40,7 @@ Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted
 | `simulation/ec/DESIGN.md` | `6ce4f3e18095edd398e7198b3b19639967de617c6f85b3d0b336eb15502da2d9` |
 | `simulation/ec/__init__.py` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 | `simulation/ec/agents/__init__.py` | `b03e02b5f73e25ef26940edf70e6e5413ecec2119afd199b94d3c8a3e8d4af04` |
-| `simulation/ec/agents/llm.py` | `82d6613ec7ce61fd43634a6a19986bf4ab1987f465f55e1c803f05b620974b0f` |
+| `simulation/ec/agents/llm.py` | `9a6d413e728f22577677d0d8d233b047bffb0d931d755de40e61567ee4a9cf85` |
 | `simulation/ec/agents/policy.py` | `dc07377b5240f81a69f07be2a62eee53707d95f959dd4d7cff0858ee35f9a6a4` |
 | `simulation/ec/analyze.py` | `35437414ea22154b8bd857735339cfe497c08891d0e9a943353a8e2be3512d10` |
 | `simulation/ec/build_all_canons.py` | `214a8849fb5a15a91df0890cd6fb5f7cce82352565cd27ec92f5a6d42242ed77` |

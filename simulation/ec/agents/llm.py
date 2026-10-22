@@ -48,6 +48,8 @@ PRICES = {
     "claude-opus-5": (5.00, 25.00),
     "claude-sonnet-5": (2.00, 10.00),
     "claude-haiku-4-5": (1.00, 5.00),
+    # xAI list price, docs.x.ai/docs/models, 21 Oct 2026 (< 200k prompt tokens; cached input 0.20)
+    "grok-4.20-0309-non-reasoning": (1.25, 2.50),
 }
 ALIASES = {"opus": "claude-opus-5", "sonnet": "claude-sonnet-5", "haiku": "claude-haiku-4-5"}
 CHARS_PER_TOKEN = 4.0
