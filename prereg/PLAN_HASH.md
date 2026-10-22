@@ -1,13 +1,13 @@
 # Plan hash
 
-**Plan hash (sha256):** `cd9f7cdbc768c4ae7d81507d7d9f71b2854f2beb2ddb18b198fa77ad839f8480`
+**Plan hash (sha256):** `413a786097af84e73963f8cb03dd04d6a0ddd4be292a4abdeb4a604446a99f46`
 
 | | |
 |---|---|
-| Computed | 2026-10-22 02:11 UTC |
+| Computed | 2026-10-22 03:16 UTC |
 | Package VERSION | 5.16.0 |
 | Git branch | ec-fast-track |
-| Git commit at computation | 8bfbb2d4d58982438cf585013b2080d7fd8da3b5 (informational; not a hash input) |
+| Git commit at computation | f1acd7261ec657837e3afa78061aff156752e5a5 (informational; not a hash input) |
 | Files | 35 |
 
 Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted lines `<path>  <digest>\n`. The line of `prereg/PREREG_EC_SIM_v1.md` beginning `| OSF registration DOI |` is removed before that file is digested. `prereg/PLAN_HASH.md` and `prereg/plan_hash.txt` are outputs and not inputs. Recompute with `python3 prereg/make_plan_hash.py --check`.
@@ -20,7 +20,7 @@ Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted
 | `prereg/DATA_DICTIONARY.md` | `cf7bbd9f6a70e7ca34326d6a2075a001be12406b63bb9027c062df0d87a3e43b` |
 | `prereg/ESTIMAND_MAP.md` | `07875215ca675459123ba3a246a0b4586fddf9fc1385e0b9fdb2ac8105c68978` |
 | `prereg/OSF_UPLOAD_CHECKLIST.md` | `de992062ecd8aab208264c1009ca0864a0f509ff68a9eee8c12cf3152187c968` |
-| `prereg/PREREG_EC_SIM_v1.md` | `0e8046d42485ee913a4a848aa133a32cd0bc229536d6b6afce0c4bdcf01e729f` |
+| `prereg/PREREG_EC_SIM_v1.md` | `87abc5399efeb7c8591e17f8d7cde9b6412883e925c8603a8616857b326d1090` |
 | `prereg/make_plan_hash.py` | `44a5c1bad33a1c6a20d4c1c9e4bdf82ca797d9a0e731bdff3a630501c4003b2f` |
 
 ## Canons
