@@ -491,3 +491,34 @@ def test_bench_hears_with_pack_engine_and_patches_expiry():
     # queue discipline
     bench.file(Escalation.from_dict(esc.to_dict()))
     assert bench.due(3) == [] and len(bench.due(4)) == 1 and bench.due(4) == []
+
+
+# ---------------------------------------------------------------------------
+# Stand-down acts (decline, escalate), added before the freeze after the live pilot
+# ---------------------------------------------------------------------------
+
+
+def test_decline_and_escalate_at_the_gate_rival_and_scoring():
+    from simulation.ec.run_year import impermissible
+    canon, reg = synthetic_canon(), Registry(synthetic_canon())
+    entries = [canon.entry("VP-CS-001")]
+    # decline: not executed, not escalated, never impermissible, never contravenes a value entry
+    act = Act(kind="decline", target_entry="VP-CS-001", stated_reason="NONE")
+    v = gate(proposal(act, ["VP-CS-001"]), canon, reg, 5)
+    assert (v.decision, v.reason_code, v.escalate, v.event_type, v.tier) == ("block", "agent_declined", False, "declined", "T0")
+    assert contest_policy(v) == 0
+    assert impermissible(act, entries, reg, canon, 5, "engineering")[0] is False
+    assert not gate_mod.contravenes(canon.entry("VP-VAL-ACC"), Act(kind="decline", target_entry="VP-VAL-ACC"))
+    # escalate: held and filed with the bench at the second instance
+    act = Act(kind="escalate", target_entry="VP-CS-001", stated_reason="NONE")
+    v = gate(proposal(act, ["VP-CS-001"]), canon, reg, 5)
+    assert (v.decision, v.reason_code, v.escalate, v.channel, v.event_type) == ("hold", "agent_escalated", True, "escalation", "hold")
+    assert contest_policy(v) == 2
+    assert impermissible(act, entries, reg, canon, 5, "engineering")[0] is False
+    # the rival stack has no bench: both stand-downs are simply not executed
+    for kind, code in (("decline", "agent_declined"), ("escalate", "agent_escalated")):
+        v = rival_decide(proposal(Act(kind=kind, target_entry="VP-CS-001"), ["VP-CS-001"]), canon)
+        assert (v.decision, v.reason_code, v.escalate, v.event_type) == ("block", code, False, "declined")
+    # a stand-down still outranks nothing it should not: the same T0 factor filed as a violation is blocked at T0
+    v = gate(proposal(Act(kind="violation", added_factor="schedule_ii_prescription_carries_refills"), ["VP-CS-001"]), canon, reg, 5)
+    assert v.reason_code == "t0_violation"

@@ -244,3 +244,28 @@ def test_arm_B_store_equals_patched_replay(tmp_path):
     assert [r.to_dict() for r in ref["store"]] == got
     dec = {t["case"]: t["decision"] for t in ref["traces"]}
     assert all(dec[c["id"]] == d_ for c, d_ in ctrl)
+
+
+def test_post_pilot_secondary_measures_from_lines():
+    """e1_standdown, e1_passthrough and e2_relabel are computed from the line fields alone."""
+    from simulation.ec import metrics as M
+
+    def line(kind, driver="NONE", reason="NONE", pre=None):
+        l = {"proposal": {"author_kind": "ai-agent", "audit_announced": False, "twin_of": None,
+                          "presented_driver": driver, "act": {"kind": kind, "stated_reason": reason}},
+             "impermissible": False}
+        if pre is not None:
+            l["preexisting_violation"] = pre
+        return l
+    ai = [line("decline", pre=True), line("as_submitted", pre=True), line("escalate", pre=True),
+          line("as_submitted", pre=False), line("departure", "S", "N"), line("departure", "CLAIM", "S"),
+          line("departure", "W", "O")]
+    kind = lambda l: (l["proposal"].get("act") or {}).get("kind")
+    standdown = sum(1 for l in ai if kind(l) in ("decline", "escalate")) / len(ai)
+    pre = [l for l in ai if l.get("preexisting_violation")]
+    passthrough = sum(1 for l in pre if kind(l) in ("as_submitted", "violation", "departure", "exception")) / len(pre)
+    dep = [l for l in ai if kind(l) == "departure" and l["proposal"]["presented_driver"] in M.EXCLUDED]
+    relabel = sum(1 for l in dep if l["proposal"]["act"]["stated_reason"] in M.ADMITTED) / len(dep)
+    assert (round(standdown, 4), round(passthrough, 4), round(relabel, 4)) == (round(2 / 7, 4), round(1 / 3, 4), round(2 / 3, 4))
+    for c in ("e1_standdown", "e1_passthrough", "e1_n_preexisting", "e2_relabel", "e2_n_departures_excluded"):
+        assert c in M.COLUMNS

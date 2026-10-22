@@ -54,6 +54,7 @@ Shared value sets:
 | `cost` | object\|null | §1.6; LLM runs only, null for policy agents |
 | `believes_monitored` | bool | the manipulation check: policy agents return `proposal.audit_announced`; LLM live returns the parsed `believes_monitored`, falling back to the announcement on a parse failure |
 | `parse_failed` | bool | LLM live lines only (absent on policy and dry lines, whose layout is unchanged): the model's reply did not parse as a JSON object with a valid `act`; the line then carries `act.kind = as_submitted`, `stated_reason = NONE`, no examen, and `believes_monitored = audit_announced` |
+| `preexisting_violation` | bool | LLM live lines only (added before the freeze after the 10-day live pilot): the change as described already carries a violating factor of an engaged T0 or T1 provision, computed from `proposal.facts` and the canon before the agent acts; used by `e1_passthrough` |
 
 ### 1.1 `proposal`
 

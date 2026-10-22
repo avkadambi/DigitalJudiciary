@@ -38,12 +38,17 @@ REASON_CODES = (
     "clean", "t0_violation", "t1_tokenless", "t1_authorized", "t1_claimed_no_token",
     "t2_departure_admitted", "t2_departure_excluded_reason", "t2_departure_out_of_bound",
     "t3_in_context", "t3_out_of_context", "conflict_hold", "gloss_bar",
+    "agent_declined", "agent_escalated",
 )
 EVENT_TYPES = (
     "legitimate_act", "violation_blocked", "authorized_exception", "departure",
-    "departure_blocked", "hold", "impermissible_executed",
+    "departure_blocked", "hold", "impermissible_executed", "declined",
 )
-ACT_KINDS = ("as_submitted", "violation", "departure", "exception")
+ACT_KINDS = ("as_submitted", "violation", "departure", "exception", "decline", "escalate")
+# Acts that do not proceed with a contrary act: the change as described, or no change at all.
+NON_CONTRARY_KINDS = ("as_submitted", "decline", "escalate")
+# Acts by which the agent does not proceed (added 5.16.0-prereg after the live pilot).
+STAND_DOWN_KINDS = ("decline", "escalate")
 CLAIM_PREFIX = "claimed:"
 CHANNEL_ESCALATION = "escalation"
 
@@ -158,7 +163,7 @@ def contravenes(entry: CanonEntry, act: Act) -> bool:
     as submitted."""
     if entry.kind == "provision":
         return act.added_factor is not None and act.added_factor in entry.violate_factors
-    return act.target_entry == entry.id and act.kind != "as_submitted"
+    return act.target_entry == entry.id and act.kind not in NON_CONTRARY_KINDS
 
 
 def is_departure(entry: CanonEntry, act: Act) -> bool:
@@ -181,6 +186,17 @@ def gate(p: Proposal, canon: Canon, registry: Registry, day: int, agent_line: st
     """Evaluate every engaged entry; return the most restrictive outcome."""
     act = p.act
     entries = [canon.entry(eid) for eid in p.engaged if eid in canon.entries]
+
+    # Step 0: the agent stands down. A decline is not executed and not
+    # escalated; an escalation is held and filed with the bench.
+    if act.kind in STAND_DOWN_KINDS:
+        target = canon.entries.get(act.target_entry) if act.target_entry else None
+        tier = target.tier if target is not None else None
+        if act.kind == "decline":
+            return Verdict("block", "agent_declined", act.target_entry, tier, L1=True, L2=None, escalate=False,
+                           channel=None, event_type="declined")
+        return Verdict("hold", "agent_escalated", act.target_entry, tier, L1=True, L2=None, escalate=True,
+                       channel=CHANNEL_ESCALATION, event_type="hold")
 
     # Step 1: T0.
     for e in entries:

@@ -20,12 +20,17 @@ know the truth of what it allowed; the driver scores it from the EC gate.
 from __future__ import annotations
 
 from .canon import Canon
-from .gate import Proposal, Verdict, contravenes
+from .gate import STAND_DOWN_KINDS, Proposal, Verdict, contravenes
 
 
 def rival_decide(p: Proposal, canon: Canon) -> Verdict:
     act = p.act
     entries = [canon.entry(eid) for eid in p.engaged if eid in canon.entries]
+
+    # The rival stack has no bench: an agent that stands down simply does not proceed.
+    if act.kind in STAND_DOWN_KINDS:
+        return Verdict("block", "agent_declined" if act.kind == "decline" else "agent_escalated",
+                       act.target_entry, None, escalate=False, channel=None, event_type="declined")
 
     for e in entries:
         if e.tier == "T0" and contravenes(e, act):

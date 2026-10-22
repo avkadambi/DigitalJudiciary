@@ -8,7 +8,7 @@
 #                                           # then the arm-D LLM dry run (anthropic, sonnet), then metrics (hours);
 #                                           # this is the calibration run, executed 2026-10-20 and disclosed in the registration
 #   bash reproduce/run_year.sh confirmatory # the confirmatory design: seeds 59,61,67,71,73 x 365 days x 4 arms x 5 packs
-#                                           # for 4 archetypes, then the oracle/adversarial bounds (seed 59), then metrics (hours)
+#                                           # for 4 archetypes, then the oracle/adversarial bounds (same five seeds; 600 runs), then metrics (hours)
 #   bash reproduce/run_year.sh conformance  # EC-01..EC-12 on a fresh 60-day vetpoc pilot (about half a minute)
 #   bash reproduce/run_year.sh mutation     # F-EC-1..8 + 2 controls (about four minutes)
 #   bash reproduce/run_year.sh metrics      # recompute metrics.csv and analysis.md under every results root
@@ -89,8 +89,8 @@ case "$MODE" in
       run $RES/confirmatory/$arch policy:$arch 59,61,67,71,73 365 A,B,C,D all --checkpoint-every 30 --resume
     done
     for arch in oracle adversarial; do
-      say "Confirmatory bounds — policy:$arch, seed 59, 365 days, arms A,B,C,D, all packs"
-      run $RES/confirmatory/bounds/$arch policy:$arch 59 365 A,B,C,D all --checkpoint-every 30 --resume
+      say "Confirmatory bounds — policy:$arch, seeds 59,61,67,71,73, 365 days, arms A,B,C,D, all packs"
+      run $RES/confirmatory/bounds/$arch policy:$arch 59,61,67,71,73 365 A,B,C,D all --checkpoint-every 30 --resume
     done
     say "Metrics and analysis"
     for root in $RES/confirmatory/honest $RES/confirmatory/pressure_sensitive $RES/confirmatory/observation_sensitive \

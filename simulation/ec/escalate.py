@@ -58,7 +58,7 @@ def contest_policy(v: Verdict) -> int:
     """How far up a verdict is contested: a floor violation or a tokenless T1
     contrariety to the second instance; a conflict hold to the third; the rest
     not at all."""
-    if v.reason_code in ("t0_violation", "t1_tokenless", "t1_claimed_no_token"):
+    if v.reason_code in ("t0_violation", "t1_tokenless", "t1_claimed_no_token", "agent_escalated"):
         return 2
     if v.reason_code == "conflict_hold":
         return 3

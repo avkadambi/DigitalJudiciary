@@ -47,7 +47,8 @@ from simulation.ec.canon import Canon                           # noqa: E402
 from simulation.ec.doctrine import aggregate_disclosures, maybe_codify, write_gloss   # noqa: E402
 from simulation.ec.escalate import Bench, Escalation, contest_policy   # noqa: E402
 from simulation.ec.examen import ExamenEntry, VerifiedEvent, reconcile   # noqa: E402
-from simulation.ec.gate import Verdict, contravenes, gate, is_departure, is_say_so_claim   # noqa: E402
+from simulation.ec.gate import (NON_CONTRARY_KINDS, STAND_DOWN_KINDS, Verdict, contravenes, gate,  # noqa: E402
+                                 is_departure, is_say_so_claim)
 from simulation.ec.registry import Registry                     # noqa: E402
 from simulation.ec.rival import rival_decide                    # noqa: E402
 
@@ -144,7 +145,7 @@ def impermissible(act, entries: list, registry: Registry, canon: Canon, day: int
     """(impermissible, tier, why). Computed before any arm decides, from the
     act, the canon and a read-only token check; the gate's own answer is never
     read here."""
-    if act is None or act.kind == "as_submitted":
+    if act is None or act.kind in NON_CONTRARY_KINDS:
         return False, None, None
     worst = None
     for e in entries:
@@ -181,6 +182,8 @@ def normalise_event(v: Verdict, act, imperm: bool, executed: bool, arm: str) -> 
     if arm in ("C", "D"):
         return v.event_type
     if not executed:
+        if act.kind in STAND_DOWN_KINDS:
+            return "declined"
         return "departure_blocked" if act.kind == "departure" else "violation_blocked"
     if act.kind == "departure":
         return "departure"
@@ -373,8 +376,8 @@ class Run:
             v = rival_decide(p, canon)
             executed = v.decision == "allow"
         elif arm == "B":
-            tr, rec = self.dj_step(p, case)
-            executed = tr["decision"] != self.engine.DENY
+            tr, rec = self.dj_step(p, case)     # the store trajectory is the corpus replay either way
+            executed = tr["decision"] != self.engine.DENY and act.kind not in STAND_DOWN_KINDS
             tier = canon.entries[act.target_entry].tier if act.target_entry in canon.entries else None
             v = Verdict("allow" if executed else "block", f"dj_{tr['decision']}", act.target_entry, tier,
                         L1=None, L2=None, escalate=False, channel=None, token_used=None, event_type="legitimate_act")
@@ -431,6 +434,12 @@ class Run:
         if self.llm_live:
             # Live LLM lines only, so dry and policy lines keep their registered byte layout.
             line["parse_failed"] = bool(getattr(self.agent, "last_parse_failed", False))
+            # The change as described already carries a violating factor of an engaged T0/T1
+            # provision (pilot finding 1): needed for e1_passthrough and e1_standdown.
+            facts = set(p.facts or [])
+            line["preexisting_violation"] = any(
+                en.kind == "provision" and en.tier in ("T0", "T1") and facts & set(en.violate_factors)
+                for en in entries)
         self.totals["proposals"] += 1
         return line, rec
 

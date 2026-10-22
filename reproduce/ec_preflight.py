@@ -12,7 +12,7 @@ Runs, in order, and stops on the first failure with a plain message:
   3. price      the PRICES entry in simulation/ec/agents/llm.py (warn when missing: live mode refuses it)
   4. plan       the registered run plan (5 packs x arms A,B,C,D x seed 11 x 365 days) with the cost
                 projected from the dry run's token counts and the cache-sharing note
-  5. smoke      a --days live run of vetpoc arm D into --out: calls, parse failures, mean tokens from
+  5. smoke      a --days live run of vetpoc arm D, seed 97 (--smoke-seed), into --out: calls, parse failures, mean tokens from
                 the provider's usage, spend, believes_monitored rate, three sample replies
   6. schema     every run.jsonl line of the smoke against the DATA_DICTIONARY run.jsonl section
   7. metrics    metrics.py on the smoke: the row, provenance ⟦measured⟧, E5 present
@@ -48,6 +48,7 @@ DRY_ROOT = os.path.join(ROOT, "simulation", "ec", "results", "llm_dry")
 REGISTERED_PACKS = ("vetpoc", "semifab", "frontierllm", "dcvigil", "meridian")
 REGISTERED_ARMS = ("A", "B", "C", "D")
 REGISTERED_SEED = 11
+SMOKE_SEED = 97      # outside every registered seed set (calibration 11-23, EC-07 11-53, confirmatory 59-73, LLM slice 11)
 PROVIDERS = {"anthropic": ("ANTHROPIC_API_KEY", "ANTHROPIC_BASE_URL", llmmod.ANTHROPIC_BASE_URL),
              "openai": ("OPENAI_API_KEY", "OPENAI_BASE_URL", llmmod.OPENAI_BASE_URL),
              "openai_compatible": ("OPENAI_API_KEY", "OPENAI_BASE_URL", llmmod.OPENAI_BASE_URL)}
@@ -84,6 +85,7 @@ LINE_SCHEMA = {
     "dj": ((dict, None), None), "escalation": ((dict, None), None), "t3_sampled": ((bool,), None),
     "cost": ((dict, None), None), "believes_monitored": ((bool,), None),
     "parse_failed": ((bool,), None),           # LLM live lines only
+    "preexisting_violation": ((bool,), None),  # LLM live lines only (added after the live pilot)
 }
 PROPOSAL_SCHEMA = {
     "act_id": ((str,), None), "case_id": ((str,), None), "company": ((str,), None), "day": ((int,), None),
@@ -149,6 +151,7 @@ def check_line(line: dict, live_llm: bool) -> list:
     schema = dict(LINE_SCHEMA)
     if not live_llm:
         schema.pop("parse_failed")
+        schema.pop("preexisting_violation", None)
     aid = (line.get("proposal") or {}).get("act_id", "?")
     _check_obj(line, schema, f"line {aid}", errors)
     if isinstance(line.get("proposal"), dict):
@@ -289,17 +292,18 @@ def step_plan(model: str, prof: dict) -> None:
                 "written (day 4 at the earliest). Run the arms in one invocation and one --out so the cache is shared.")
 
 
-def step_smoke(provider: str, model: str, days: int, out: str, budget: float, rate_limit: float) -> dict:
+def step_smoke(provider: str, model: str, days: int, out: str, budget: float, rate_limit: float,
+               seed: int = SMOKE_SEED) -> dict:
     spec = f"llm:{'openai' if provider != 'anthropic' else 'anthropic'}:{model}"
-    argv = ["--packs", "vetpoc", "--arms", "D", "--seeds", str(REGISTERED_SEED), "--days", str(days),
+    argv = ["--packs", "vetpoc", "--arms", "D", "--seeds", str(seed), "--days", str(days),
             "--agent", spec, "--mode", "live", "--out", out, "--quiet", "--budget-usd", str(budget)]
     if rate_limit:
         argv += ["--rate-limit", str(rate_limit)]
     t0 = time.time()
     rc = run_year.main(argv)
     if rc != 0:
-        raise Fail(f"run_year exited {rc} on the smoke (budget {budget} USD reached, or see {out}/vetpoc/D/seed-11/llm_errors.jsonl)")
-    d = os.path.join(out, "vetpoc", "D", f"seed-{REGISTERED_SEED}")
+        raise Fail(f"run_year exited {rc} on the smoke (budget {budget} USD reached, or see {out}/vetpoc/D/seed-{seed}/llm_errors.jsonl)")
+    d = os.path.join(out, "vetpoc", "D", f"seed-{seed}")
     lines = [json.loads(l) for l in open(os.path.join(d, "run.jsonl")) if l.strip()]
     summ = json.load(open(os.path.join(d, "summary.json")))
     u = summ["agent_state"]["usage"]
@@ -385,6 +389,8 @@ def main(argv=None) -> int:
     ap.add_argument("--out", default=None, help="smoke directory (default: a fresh temp dir)")
     ap.add_argument("--smoke-budget", type=float, default=5.0)
     ap.add_argument("--rate-limit", type=float, default=0.0)
+    ap.add_argument("--smoke-seed", type=int, default=SMOKE_SEED,
+                    help="seed of the smoke run (default 97: never the registered LLM seed 11)")
     a = ap.parse_args(argv)
 
     key_var, base_var, base_default = PROVIDERS[a.provider]
@@ -423,7 +429,7 @@ def main(argv=None) -> int:
         if key:
             out = a.out or tempfile.mkdtemp(prefix="ec_preflight_")
             os.makedirs(out, exist_ok=True)
-            sm = step_smoke(a.provider, model, a.days, out, a.smoke_budget, a.rate_limit)
+            sm = step_smoke(a.provider, model, a.days, out, a.smoke_budget, a.rate_limit, a.smoke_seed)
             step_schema(sm["lines"])
             step_metrics(out)
             if sm["lines"] and sm["mean_in"] == sm["mean_in"]:
