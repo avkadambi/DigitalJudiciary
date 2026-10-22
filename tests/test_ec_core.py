@@ -28,7 +28,7 @@ from simulation.ec.doctrine import assert_gloss_invariants, maybe_codify, write_
 from simulation.ec.escalate import Bench, Escalation, contest_policy  # noqa: E402
 from simulation.ec.examen import ExamenEntry, VerifiedEvent, reconcile  # noqa: E402
 from simulation.ec.gate import Act, Proposal, Verdict, gate  # noqa: E402
-from simulation.ec.registry import Registry  # noqa: E402
+from simulation.ec.registry import TOKEN_TTL_DAYS, Registry  # noqa: E402
 from simulation.ec.rival import rival_decide  # noqa: E402
 
 
@@ -87,7 +87,13 @@ def test_tier_rule_every_absolute_is_T0(pack):
     assert os.path.exists(path), "run simulation/ec/build_all_canons.py"
     canon = Canon.load(path)
     rulebook = json.load(open(os.path.join(pack_dir, "constitution", "rulebook.json")))
-    provs = rulebook["provisions"]
+    from simulation.ec.rulebook_rev import DEMOTED_TO_ORDINARY, amended_provisions
+    raw = {p["id"]: p for p in rulebook["provisions"]}
+    provs = amended_provisions(rulebook["provisions"])
+    for pid in DEMOTED_TO_ORDINARY:
+        if pid in raw:
+            # the released rulebook is untouched; the simulated company's revision demotes it
+            assert raw[pid]["absolute"] is True and canon.entry(pid).tier == "T1", pid
     assert canon.version == f"{pack}-canon-000001"
     for prov in provs:
         e = canon.entry(prov["id"])
@@ -139,14 +145,15 @@ def test_registry_validity_matrix():
 
     t = reg.issue("office:safety-lead", "SEC", "VP-SEC-001", day)
     assert reg.valid(t.id, sec, "engineering", day, VERSION) == (True, "ok")
-    assert reg.valid(t.id, sec, "engineering", day + 14, VERSION) == (True, "ok")
-    assert reg.valid(t.id, sec, "engineering", day + 15, VERSION) == (False, "expired")
+    assert reg.valid(t.id, sec, "engineering", day + TOKEN_TTL_DAYS, VERSION) == (True, "ok")
+    assert reg.valid(t.id, sec, "engineering", day + TOKEN_TTL_DAYS + 1, VERSION) == (False, "expired")
     assert reg.valid(t.id, acc, "engineering", day, VERSION) == (False, "wrong_class")
     assert reg.valid(t.id, sec, "engineering", day, "synthetic-canon-000002") == (False, "wrong_canon_version")
     assert reg.valid(t.id, sec, "governance", day, VERSION) == (False, "issuer_inside_reporting_line")
 
-    reg.consume(t.id, day, "a#1")
-    assert reg.valid(t.id, sec, "engineering", day, VERSION) == (False, "consumed")
+    t1 = reg.issue("office:safety-lead", "SEC", "VP-SEC-001", day, single_use=True)
+    reg.consume(t1.id, day, "a#1")
+    assert reg.valid(t1.id, sec, "engineering", day, VERSION) == (False, "consumed")
 
     t2 = reg.issue("office:safety-lead", "SEC", "VP-SEC-001", day)
     reg.revoke(t2.id, day)
@@ -175,7 +182,7 @@ def test_registry_validity_matrix():
     assert reg.valid(t6.id, sec, "engineering", day, VERSION) == (True, "ok")
 
     kinds = [ev["event"] for ev in reg.events]
-    assert kinds.count("issue") == 6 and kinds.count("consume") == 2 and kinds.count("revoke") == 1
+    assert kinds.count("issue") == 7 and kinds.count("consume") == 2 and kinds.count("revoke") == 1
     assert Registry.from_dict(reg.to_dict()).to_dict() == reg.to_dict()
 
 
@@ -189,7 +196,15 @@ def test_daily_issuance_and_standing_token():
     assert standing[0].office == "office:compliance" and standing[0].act_class == "incident-hotfix"
     assert standing[0].expires_day == 10**9 and not standing[0].single_use and standing[0].recorded_cause
     assert {t.scope for t in issued if not t.standing_emergency} == {"VP-SEC-001", "VP-VAL-ACC"}
-    assert all(t.expires_day == 15 for t in issued if not t.standing_emergency)
+    assert all(t.expires_day == 1 + TOKEN_TTL_DAYS and not t.single_use for t in issued if not t.standing_emergency)
+    # the default rate approves about EXCEPTIONS_PER_YEAR exceptions a year
+    from simulation.ec import calendar as cal
+    from simulation.ec.registry import EXCEPTIONS_PER_YEAR
+    r2 = Registry(canon)
+    canon.entry("VP-SEC-001").gloss.codified = False
+    n = sum(len([t for t in r2.daily_issuance(random.Random(f"x{d}"), canon, d) if not t.standing_emergency])
+            for d in range(1, 40 * cal.DAYS + 1))
+    assert abs(n / 40 - EXCEPTIONS_PER_YEAR) < 0.2 * EXCEPTIONS_PER_YEAR, n / 40
     assert not [t for t in reg.daily_issuance(rng, canon, 2, rate=0.0)]
     # codified classes get no token
     canon.entry("VP-SEC-001").gloss.codified = True
@@ -480,7 +495,7 @@ def test_bench_hears_with_pack_engine_and_patches_expiry():
     assert out["trace"]["escalated_to"] == "J2"
     if out["record"] is not None:
         assert store[-1] is out["record"]
-        assert out["record"].expiry is None or out["record"].expiry == out["record"].ts + 180 * 100
+        assert out["record"].expiry is None or out["record"].expiry == out["record"].ts + cal.EXPIRY_DAYS * cal.DAY_TICKS
     assert bench.heard[-1]["holding"] == out["holding"]
     # the internal office writes nothing
     internal = Bench(internal=True)

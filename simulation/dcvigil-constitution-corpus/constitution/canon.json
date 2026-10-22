@@ -974,9 +974,9 @@
       },
       "id": "DV-341",
       "kind": "provision",
-      "office": null,
+      "office": "office:safety-lead",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "Remediation halts after its declared action threshold, and no change removes or raises the kill switch without amendment",
       "violate_factors": [
         "action_irreversible_and_unreviewed",
@@ -1003,9 +1003,9 @@
       },
       "id": "DV-342",
       "kind": "provision",
-      "office": null,
+      "office": "office:safety-lead",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "The monitoring control plane is never a target of automated remediation",
       "violate_factors": [
         "action_irreversible_and_unreviewed",

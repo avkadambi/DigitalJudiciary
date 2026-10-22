@@ -21,9 +21,7 @@ from dataclasses import dataclass
 
 from .gate import Proposal, Verdict
 
-D_BENCH = 3
-DAY_TICKS = 100
-RECORD_EXPIRY_DAYS = 180
+from .calendar import D_BENCH, DAY_TICKS, EXPIRY_DAYS as RECORD_EXPIRY_DAYS  # working days
 
 
 @dataclass
@@ -74,7 +72,7 @@ def escalation_from(p: Proposal, v: Verdict, day: int, d_bench: int = D_BENCH) -
 
 def patch_expiry(rec) -> None:
     """The one engine-semantic overlay: the engine writes `ts + 180`; a day is
-    DAY_TICKS ticks, so an acceptance lasts 180 days."""
+    DAY_TICKS ticks, so an acceptance lasts RECORD_EXPIRY_DAYS working days."""
     if rec.expiry is not None:
         rec.expiry = rec.ts + RECORD_EXPIRY_DAYS * DAY_TICKS
 

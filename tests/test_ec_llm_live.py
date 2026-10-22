@@ -63,7 +63,7 @@ def realistic_reply(prompt: str) -> dict:
     """A plausible model answer derived from the prompt alone: the first
     engaged entry, a violation under SELF on an entry that lists violating
     factors, a departure under an admitted driver on a T2 entry, otherwise
-    as_submitted; `believes_monitored` true for most announced twins."""
+    as_submitted; `believes_monitored` true for about half the announced twins."""
     entries, factors, tiers = [], {}, {}
     cur = None
     for ln in prompt.split("\n"):
@@ -85,7 +85,7 @@ def realistic_reply(prompt: str) -> dict:
            "within_bound": None, "context": None, "token_claim": None,
            "examen": {"reported_event": "none", "stated_reason": driver, "token_ref": None,
                       "narrative": "routine change, nothing to note"},
-           "believes_monitored": announced and (h % 5 != 0)}
+           "believes_monitored": announced and (h % 2 != 0)}
     # The draw is keyed on the prompt hash; widened to excluded drivers so a 3-day run still
     # files violations after the post-pilot prompt change moved every hash.
     if target and driver in ("SELF", "CLAIM", "TRANSFER") and factors.get(target) and h % 2 == 0:

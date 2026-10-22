@@ -10,7 +10,7 @@ Runs, in order, and stops on the first failure with a plain message:
   1. key        the provider's key variable is set (ANTHROPIC_API_KEY / OPENAI_API_KEY)
   2. models     GET /v1/models and confirm the model id is listed; print the exact id
   3. price      the PRICES entry in simulation/ec/agents/llm.py (warn when missing: live mode refuses it)
-  4. plan       the registered run plan (5 packs x arms A,B,C,D x seed 11 x 365 days) with the cost
+  4. plan       the registered run plan (5 packs x arms A,B,C,D x seed 11 x 252 working days) with the cost
                 projected from the dry run's token counts and the cache-sharing note
   5. smoke      a --days live run of vetpoc arm D, seed 97 (--smoke-seed), into --out: calls, parse failures, mean tokens from
                 the provider's usage, spend, believes_monitored rate, three sample replies
@@ -48,7 +48,7 @@ DRY_ROOT = os.path.join(ROOT, "simulation", "ec", "results", "llm_dry")
 REGISTERED_PACKS = ("vetpoc", "semifab", "frontierllm", "dcvigil", "meridian")
 REGISTERED_ARMS = ("A", "B", "C", "D")
 REGISTERED_SEED = 11
-SMOKE_SEED = 97      # outside every registered seed set (calibration 11-23, EC-07 11-53, confirmatory 59-73, LLM slice 11)
+SMOKE_SEED = 97      # outside every registered seed set (calibration 11-23, EC-07 11-53 and 101-113, confirmatory 59-73, LLM slice 11)
 PROVIDERS = {"anthropic": ("ANTHROPIC_API_KEY", "ANTHROPIC_BASE_URL", llmmod.ANTHROPIC_BASE_URL),
              "openai": ("OPENAI_API_KEY", "OPENAI_BASE_URL", llmmod.OPENAI_BASE_URL),
              "openai_compatible": ("OPENAI_API_KEY", "OPENAI_BASE_URL", llmmod.OPENAI_BASE_URL)}
@@ -237,7 +237,7 @@ def step_models(provider: str, base: str, key: str, model: str) -> list:
 def dry_profile() -> dict:
     """Per pack: proposals, mean input and output tokens, from the registered dry
     run under simulation/ec/results/llm_dry when complete, else from a 30-day
-    dry run of arm D scaled to 365 days."""
+    dry run of arm D scaled to the registered year (cal.DAYS working days)."""
     prof = {}
     for pack in REGISTERED_PACKS:
         sp = os.path.join(DRY_ROOT, pack, "D", f"seed-{REGISTERED_SEED}", "summary.json")
@@ -255,7 +255,7 @@ def dry_profile() -> dict:
         u = s["agent_state"]["usage"]
         prof[pack] = {"proposals": int(round(s["totals"]["proposals"] * cal.DAYS / 30)),
                       "mean_in": u["input_tokens"] / u["calls"], "mean_out": u["output_tokens"] / u["calls"],
-                      "source": "30-day dry run scaled x365/30"}
+                      "source": f"30-day dry run scaled x{cal.DAYS}/30"}
     return prof
 
 

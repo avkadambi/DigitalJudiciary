@@ -308,7 +308,8 @@ def build_canon(pack_dir: str) -> Canon:
     pack = os.path.basename(os.path.normpath(pack_dir))
     with open(os.path.join(pack_dir, "constitution", "rulebook.json")) as fh:
         rulebook = json.load(fh)
-    provisions = rulebook["provisions"]
+    from .rulebook_rev import amended_provisions
+    provisions = amended_provisions(rulebook["provisions"])
     if not provisions:
         raise ValueError(f"{pack}: rulebook carries no provisions")
     prefix = id_prefix(provisions[0]["id"])

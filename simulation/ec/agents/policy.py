@@ -11,6 +11,14 @@ T2/T3 impermissible departures use the same per-driver row scaled by 2 and
 capped at .6. The excluded drivers EC Table 3 names but the table does not
 column (SELF, CLAIM, TRANSFER) read the S column.
 
+A change request can already break an engaged provision as written (about one
+request in six in the corpora). The archetype then decides whether to carry it
+out or to stand down, with the same propensity row: proceeding is the
+impermissible act, drawn with p_imperm[tier][driver] (Realism revision R1).
+At T0 it escalates otherwise; at T1 it uses an approved exception when one is
+in force for the entry and escalates otherwise; at T2 it departs for an
+admitted reason within bound (p_depart_admitted) or declines.
+
 `oracle` and `adversarial` are bounds, not claims.
 """
 
@@ -91,6 +99,18 @@ def _first_real_token(view: list, entry) -> str | None:
     return cands[0].id if cands else None
 
 
+_TIER_RANK = {"T0": 0, "T1": 1, "T2": 2, "T3": 3}
+
+
+def preexisting_breach(entries: list, facts) -> object | None:
+    """The most restrictive engaged provision the request already breaks, or None."""
+    fs = set(facts or ())
+    hit = [e for e in entries if e.kind == "provision" and e.tier in ("T0", "T1", "T2") and fs & set(e.violate_factors)]
+    if not hit:
+        return None
+    return sorted(hit, key=lambda e: (_TIER_RANK[e.tier], e.id))[0]
+
+
 class PolicyAgent(Agent):
     """An archetype from the table. Draws come from `ctx.rng` only."""
 
@@ -111,6 +131,9 @@ class PolicyAgent(Agent):
         entries = list(ctx.engaged_entries)
         if not entries:
             return Act("as_submitted", None, None, driver, None, None, None, ctx.conflict)
+        breach = preexisting_breach(entries, getattr(sk, "facts", None))
+        if breach is not None:
+            return self._answer_breach(ctx, breach, driver, rng)
         target = rng.choice(entries)
         tier = target.tier
         imperm = self.draw_impermissible(tier, driver, ctx.audit_announced, rng)
@@ -160,6 +183,40 @@ class PolicyAgent(Agent):
             if tier == "T3":
                 act.context = rng.choice(sorted(gloss.contexts)) if gloss.contexts else OUT_OF_CONTEXT
             return act
+        return act
+
+    def _answer_breach(self, ctx: Context, target, driver: str, rng) -> Act:
+        """The request already breaks `target`. Proceed (the impermissible act,
+        drawn from the archetype row) or stand down."""
+        tier = target.tier
+        proceed = self.draw_impermissible(tier, driver, ctx.audit_announced, rng)
+        act = Act("as_submitted", target.id, None, driver, None, None, None, ctx.conflict)
+        if tier == "T0":
+            act.kind = "violation" if proceed else "escalate"
+            return act
+        if tier == "T1":
+            tok = _first_real_token(ctx.registry_view, target)
+            act.kind = "exception"
+            if tok is not None:
+                act.token_claim = tok
+                return act
+            if not proceed:
+                act.kind = "escalate"
+                return act
+            act.token_claim = (f"claimed:{target.office or 'office:unknown'}"
+                               if rng.random() < self.table["p_claim_token"] else None)
+            return act
+        # T2: a tradable provision the request departs from.
+        admitted = driver in set(target.gloss.admitted_reasons) and driver in DRIVERS_ADMISSIBLE
+        if proceed:
+            act.kind = "departure"
+            act.within_bound = not admitted      # admitted reason -> out of bound; excluded -> within bound
+            return act
+        if admitted and rng.random() < self.table["p_depart_admitted"]:
+            act.kind = "departure"
+            act.within_bound = True
+            return act
+        act.kind = "decline"
         return act
 
     # -- the examen ---------------------------------------------------------

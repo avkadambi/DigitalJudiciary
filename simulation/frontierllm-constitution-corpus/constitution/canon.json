@@ -2162,9 +2162,9 @@
       },
       "id": "FL-BS-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:safety-lead",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "A response the toxicity filter flags never propagates to a caller",
       "violate_factors": [
         "demographic_disparity_above_threshold",

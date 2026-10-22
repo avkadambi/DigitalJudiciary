@@ -1089,9 +1089,9 @@
       },
       "id": "SF-WI-001",
       "kind": "provision",
-      "office": null,
+      "office": "office:safety-lead",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "Work-in-progress status is never altered retroactively",
       "violate_factors": [
         "hash_chain_broken_by_migration",
@@ -1118,9 +1118,9 @@
       },
       "id": "SF-WI-002",
       "kind": "provision",
-      "office": null,
+      "office": "office:safety-lead",
       "role": "coding-agent",
-      "tier": "T0",
+      "tier": "T1",
       "title": "Metrology and recipe-execution records are never overwritten in place",
       "violate_factors": [
         "audit_logging_disabled_for_throughput",

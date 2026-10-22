@@ -62,7 +62,9 @@ REGISTERED = ("honest", "pressure_sensitive", "observation_sensitive", "misrepor
 BOUNDS = ("oracle", "adversarial")
 # Report labels per group. "registered" is the directory the calibration run
 # was written to before the registration was corrected; it keeps its path.
-GROUP_LABEL = {"registered": "calibration", "bounds": "calibration bounds", "llm_dry": "LLM dry",
+GROUP_LABEL = {"registered": "calibration v1", "bounds": "calibration v1 bounds", "llm_dry": "LLM dry v1",
+               "calibration_r1": "calibration R1", "calibration_r1_bounds": "calibration R1 bounds",
+               "calibration_r1_llm_dry": "LLM dry R1",
                "confirmatory": "confirmatory", "confirmatory_bounds": "confirmatory bounds", "llm_live": "LLM live",
                "llm_pilot": "LLM pilot"}
 MEASURED, IDENTITY, DERIVED, PROJECTED = "⟦measured⟧", "⟦identity⟧", "⟦derived⟧", "⟦PROJECTED⟧"
@@ -185,8 +187,23 @@ def expected_runs(root):
 
 
 def root_status(root):
-    """(complete, done, expected, note)."""
+    """(complete, done, expected, note). A root run as one invocation per company
+    (`<root>/<pack>/run_config.json`, the registered LLM split) is read per company."""
     exp = expected_runs(root)
+    subs = sorted(d for d in PACKS_ALL if os.path.exists(os.path.join(root, d, "run_config.json")))
+    if exp is None and subs:
+        done = total = 0
+        pending = False
+        for d in subs:
+            runs, _cfg = expected_runs(os.path.join(root, d))
+            sub = os.path.join(root, d)
+            done += sum(1 for p, a, s in runs if os.path.exists(os.path.join(sub, p, a, f"seed-{s}", "manifest.json")))
+            pending = pending or any(os.path.exists(os.path.join(sub, p, a, f"seed-{s}", "checkpoint.json"))
+                                     for p, a, s in runs)
+            total += len(runs)
+        missing = [p for p in PACKS_ALL if p not in subs]
+        note = ("checkpoint present" if pending else "") + (f"; companies not started: {', '.join(missing)}" if missing else "")
+        return (done == total and not pending and not missing, done, total + 4 * len(missing), note.strip("; "))
     if exp is None:
         found = sum(1 for base, _d, files in os.walk(root) if "manifest.json" in files)
         return (found > 0, found, found, "no run_config.json; expected set unknown")
@@ -224,6 +241,12 @@ def rel(path):
 
 def discover_roots():
     out = []
+    r1 = os.path.join(RESULTS, "calibration_r1")
+    for arch in REGISTERED:
+        out.append(("calibration_r1", arch, os.path.join(r1, arch)))
+    for arch in BOUNDS:
+        out.append(("calibration_r1_bounds", arch, os.path.join(r1, "bounds", arch)))
+    out.append(("calibration_r1_llm_dry", "llm_dry", os.path.join(r1, "llm_dry")))
     for arch in REGISTERED:
         out.append(("registered", arch, os.path.join(RESULTS, "registered", arch)))
     for arch in BOUNDS:
@@ -255,6 +278,14 @@ def discover_roots():
 
 def label(R):
     return f"{GROUP_LABEL.get(R['group'], R['group'])}: {R['name']}"
+
+
+def cal_groups(loaded) -> tuple:
+    """The calibration groups figures and identity checks read: the R1 instrument's
+    calibration when it has been run, else the first (v1) calibration."""
+    if any(R["group"] == "calibration_r1" for R in loaded):
+        return ("calibration_r1", "calibration_r1_bounds", "calibration_r1_llm_dry")
+    return ("registered", "bounds", "llm_dry")
 
 
 def by_name(loaded, groups):
@@ -652,9 +683,10 @@ def figures(loaded, log):
         "legend.frameon": False, "figure.facecolor": "#fcfcfb", "axes.facecolor": "#fcfcfb", "savefig.dpi": 160,
     })
     made = []
-    by = by_name(loaded, ("registered", "bounds", "llm_dry"))
-    reg = [R for R in loaded if R["group"] == "registered"]
-    bounds = [R for R in loaded if R["group"] == "bounds"]
+    G = cal_groups(loaded)
+    by = by_name(loaded, G)
+    reg = [R for R in loaded if R["group"] == G[0]]
+    bounds = [R for R in loaded if R["group"] == G[1]]
 
     def save(fig, name, caption):
         p = os.path.join(FIGDIR, name)
@@ -664,7 +696,7 @@ def figures(loaded, log):
         made.append((name, caption))
 
     # (a) E7 blind spot by arm, grouped by archetype
-    groups = reg + bounds + [R for R in loaded if R["group"] == "llm_dry"]
+    groups = reg + bounds + [R for R in loaded if R["group"] == G[2]]
     if groups:
         fig, ax = plt.subplots(figsize=(7.2, 3.4))
         w = 0.19
@@ -856,7 +888,7 @@ def header(loaded):
 
 
 def build_report(loaded, log, made):
-    by = by_name(loaded, ("registered", "bounds", "llm_dry"))
+    by = by_name(loaded, cal_groups(loaded))
     L = [header(loaded)]
 
     # roots table
@@ -892,7 +924,9 @@ def build_report(loaded, log, made):
     for grp, title, empty in (
             ("confirmatory", "Confirmatory archetypes (seeds 59, 61, 67, 71, 73)", "No confirmatory root with metrics.csv yet."),
             ("llm_live", "LLM live slice", None),
-            ("registered", "Calibration archetypes (seeds 11, 13, 17, 19, 23; executed 2026-10-20, disclosed in the registration)",
+            ("calibration_r1", "Calibration archetypes on the R1 instrument (seeds 11, 13, 17, 19, 23; 252 working days; "
+             "run before the registration and disclosed in it)", None),
+            ("registered", "First calibration, v1 instrument (seeds 11, 13, 17, 19, 23; 365 days; executed 2026-10-20, disclosed in the registration)",
              "No calibration root with metrics.csv.")):
         reg = [R for R in loaded if R["group"] == grp]
         grp_by = by_name(loaded, (grp,))
@@ -982,7 +1016,7 @@ def build_report(loaded, log, made):
     # bounds and LLM dry
     L.append("## Bounds and LLM dry run")
     L.append("")
-    bnd = [R for R in loaded if R["group"] in ("confirmatory_bounds", "bounds")]
+    bnd = [R for R in loaded if R["group"] in ("confirmatory_bounds", "calibration_r1_bounds", "bounds")]
     if bnd:
         for R in bnd:
             arms = [a for a in ARMS if any(r["arm"] == a for r in R["rows"])]

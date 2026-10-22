@@ -21,9 +21,19 @@ from dataclasses import dataclass
 
 from .canon import Canon, CanonEntry, Office  # noqa: F401  (Office re-exported)
 
-TOKEN_TTL_DAYS = 14
+from .calendar import DAYS
+
+# Approved policy exceptions (Realism revision R1). A mid-size company grants tens of policy
+# exceptions a year, each time-bound and approved by the policy owner (GitLab handbook,
+# security and technology policy exceptions; counts and durations are judgment,
+# prereg/REALISM_REVIEW.md). A token is one approved exception: scoped to one entry, valid
+# for EXCEPTION_TTL_DAYS working days (about 90 calendar days), usable for every act in its
+# scope until it expires.
+EXCEPTIONS_PER_YEAR = 24
+TOKEN_TTL_DAYS = 63
+EXCEPTION_SINGLE_USE = False
 STANDING_EXPIRY_DAY = 10**9
-ISSUANCE_RATE = 0.15
+ISSUANCE_RATE = None          # None: EXCEPTIONS_PER_YEAR spread over the T1 entries and the working year
 
 
 @dataclass
@@ -99,11 +109,16 @@ class Registry:
                             "act_class": act_class, "scope": tok.scope, "expires_day": tok.expires_day})
         return tok
 
-    def daily_issuance(self, rng, canon: Canon, day: int, rate: float = ISSUANCE_RATE) -> list:
-        """Offices pre-issue tokens for T1 classes. For each T1 entry, with
-        probability `rate`, its office issues a 14-day single-use token scoped
-        to the entry. On day 1 the compliance office also issues the company's
-        standing emergency token. Codified classes get no token."""
+    def daily_issuance(self, rng, canon: Canon, day: int, rate: float | None = ISSUANCE_RATE) -> list:
+        """Offices approve policy exceptions for T1 classes. For each T1 entry, with
+        probability `rate` (default: EXCEPTIONS_PER_YEAR / (T1 entries x DAYS), so a
+        company approves about EXCEPTIONS_PER_YEAR a year), its office issues a token
+        scoped to the entry, valid TOKEN_TTL_DAYS working days. On day 1 the compliance
+        office also issues the company's standing emergency token. Codified classes
+        get no token."""
+        if rate is None:
+            n_t1 = sum(1 for e in canon.entries.values() if e.tier == "T1" and e.office)
+            rate = EXCEPTIONS_PER_YEAR / (max(1, n_t1) * DAYS)
         issued = []
         if day == 1:
             for cls in canon.standing_emergency_classes:
@@ -114,7 +129,7 @@ class Registry:
             if e.tier != "T1" or not e.office or e.gloss.codified:
                 continue
             if rng.random() < rate:
-                issued.append(self.issue(e.office, e.act_class, e.id, day))
+                issued.append(self.issue(e.office, e.act_class, e.id, day, single_use=EXCEPTION_SINGLE_USE))
         return issued
 
     # -- validity ---------------------------------------------------------

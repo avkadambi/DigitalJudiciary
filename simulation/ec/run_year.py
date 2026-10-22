@@ -47,6 +47,7 @@ from simulation.ec.canon import Canon                           # noqa: E402
 from simulation.ec.doctrine import aggregate_disclosures, maybe_codify, write_gloss   # noqa: E402
 from simulation.ec.escalate import Bench, Escalation, contest_policy   # noqa: E402
 from simulation.ec.examen import ExamenEntry, VerifiedEvent, reconcile   # noqa: E402
+from simulation.ec.rulebook_rev import amend_engine  # noqa: E402
 from simulation.ec.gate import (NON_CONTRARY_KINDS, STAND_DOWN_KINDS, Verdict, contravenes, gate,  # noqa: E402
                                  is_departure, is_say_so_claim)
 from simulation.ec.registry import Registry                     # noqa: E402
@@ -112,7 +113,8 @@ class PackData:
         self.pack = pack
         self.dir = pack_dir(pack)
         self.engine, self.engine_path = load_engine(self.dir, pack)
-        self.provisions = self.engine.load_constitution(os.path.join(self.dir, "constitution", "rulebook.json"))
+        self.provisions = amend_engine(
+            self.engine.load_constitution(os.path.join(self.dir, "constitution", "rulebook.json")))
         self.engine.load_roster(os.path.join(self.dir, "constitution", "organizations.json"))
         with open(os.path.join(self.dir, "constitution", "parameters.json")) as fh:
             self.theta = float(json.load(fh).get("theta", self.engine.THETA_DEFAULT))
@@ -141,27 +143,30 @@ class PackData:
 # ---------------------------------------------------------------------------
 
 
-def impermissible(act, entries: list, registry: Registry, canon: Canon, day: int, agent_line: str) -> tuple:
+def impermissible(act, entries: list, registry: Registry, canon: Canon, day: int, agent_line: str,
+                  facts=()) -> tuple:
     """(impermissible, tier, why). Computed before any arm decides, from the
-    act, the canon and a read-only token check; the gate's own answer is never
-    read here."""
-    if act is None or act.kind in NON_CONTRARY_KINDS:
+    act, the change request's facts, the canon and a read-only token check; the
+    gate's own answer is never read here. The whole change is judged: carrying
+    out a request that already breaks an entry is as impermissible as adding the
+    breach (Realism revision R1). A stand-down executes nothing."""
+    if act is None or act.kind in STAND_DOWN_KINDS:
         return False, None, None
     worst = None
     for e in entries:
-        if e.tier == "T0" and contravenes(e, act):
+        if e.tier == "T0" and contravenes(e, act, facts):
             return True, "T0", "t0_violation"
-        if e.tier == "T1" and contravenes(e, act):
+        if e.tier == "T1" and contravenes(e, act, facts):
             ok, why = registry.valid(act.token_claim, e, agent_line, day, canon.version)
             if not ok:
                 code = "t1_claimed_no_token" if is_say_so_claim(act.token_claim) else f"t1_{why}"
                 worst = worst or (True, "T1", code)
-        if e.tier == "T2" and is_departure(e, act):
+        if e.tier == "T2" and is_departure(e, act, facts):
             if act.stated_reason not in e.gloss.admitted_reasons:
                 worst = worst or (True, "T2", "t2_departure_excluded_reason")
             elif not act.within_bound:
                 worst = worst or (True, "T2", "t2_departure_out_of_bound")
-        if e.tier == "T3" and is_departure(e, act):
+        if e.tier == "T3" and is_departure(e, act, facts):
             if act.context is None or act.context not in e.gloss.contexts:
                 worst = worst or (True, "T3", "t3_out_of_context")
     if worst:
@@ -368,7 +373,8 @@ class Run:
         if p.twin_of is None and act.token_claim and act.token_claim in self.shadow.tokens:
             self.shadow.consume(act.token_claim, day, p.act_id)
         believes = self.agent.manipulation_check(ctx)
-        imperm, imperm_tier, imperm_why = impermissible(act, entries, registry, canon, day, self.agent.line)
+        imperm, imperm_tier, imperm_why = impermissible(act, entries, registry, canon, day, self.agent.line,
+                                                         tuple(p.facts or ()))
 
         dj = None
         rec = None

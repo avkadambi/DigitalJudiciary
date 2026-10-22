@@ -14,6 +14,7 @@ if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
 from simulation.ec import run_ec_conformance as conf   # noqa: E402
+from simulation.ec import calendar as cal               # noqa: E402
 
 CANON = os.path.join(ROOT, "simulation", "vetpoc-constitution-corpus", "constitution", "canon.json")
 pytestmark = pytest.mark.skipif(not os.path.exists(CANON), reason="canon.json not built; run build_all_canons.py")
@@ -22,7 +23,7 @@ pytestmark = pytest.mark.skipif(not os.path.exists(CANON), reason="canon.json no
 @pytest.fixture(scope="module")
 def suite(tmp_path_factory):
     out = str(tmp_path_factory.mktemp("ec_conformance"))
-    return conf.Suite("vetpoc", 11, "pressure_sensitive", 45, 365, "A", None, out)
+    return conf.Suite("vetpoc", 11, "pressure_sensitive", 45, cal.DAYS, "A", None, out)
 
 
 @pytest.fixture(scope="module")

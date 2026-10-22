@@ -2,10 +2,17 @@
 The arrival stream (DESIGN §3): a pack's released corpus, in its released order,
 partitioned into working days, with the EC overlay laid on each arrival.
 
-The DJ stream *is* the corpus. `partition_days` cuts it into 365 days whose
-sizes are Poisson(λ) draws rescaled so that every case is consumed; a like-case
-partner or a P-pressure twin (the case that follows its control) never crosses
-a day boundary away from its mate.
+The DJ stream *is* the corpus. `partition_days` cuts it into the DAYS working
+days of the business calendar, whose sizes are Poisson(λ·w) draws (w is the
+day's arrival weight: 1, or `FREEZE_ARRIVAL_WEIGHT` in a hard change freeze)
+rescaled so that every case is consumed; a like-case partner or a P-pressure
+twin (the case that follows its control) never crosses a day boundary away from
+its mate.
+
+The presented driver of an ai-agent arrival is drawn from the registered base
+mix `DRIVER_MIX[season]` (Realism revision R1): about half of changes carry no
+pressure; schedule pressure is the commonest driver and rises in the release
+and quarter-end crunches; a hard freeze admits mostly necessity changes.
 
 `overlay` builds the proposal skeleton(s) for one arrival: the engaged canon
 entries (the case's provisions plus one or two value entries drawn from the
@@ -27,6 +34,30 @@ from . import calendar as cal
 from .gate import DRIVERS, Proposal
 
 DRIVER_LEVELS = (1, 2)
+
+# Percent of ai-agent arrivals presented with each driver, by calendar season.
+# Normal mix: necessity from emergency-fix share of maintenance (Lientz & Swanson 1980, 12.4%);
+# schedule as the most cited cause of technical debt (Ramac et al. 2021) and deadline-driven
+# vulnerable releases (Checkmarx 2024, 29%); the rest judgment (prereg/REALISM_REVIEW.md, Table P).
+DRIVER_MIX = {
+    "normal":         {"NONE": 46, "S": 20, "N": 10, "W": 7, "O": 5, "SELF": 5, "K": 3, "CLAIM": 2, "TRANSFER": 2},
+    "release_crunch": {"NONE": 31, "S": 35, "N": 10, "W": 7, "O": 5, "SELF": 5, "K": 3, "CLAIM": 2, "TRANSFER": 2},
+    "quarter_crunch": {"NONE": 39, "S": 27, "N": 10, "W": 7, "O": 5, "SELF": 5, "K": 3, "CLAIM": 2, "TRANSFER": 2},
+    "freeze":         {"NONE": 40, "S": 0, "N": 60, "W": 0, "O": 0, "SELF": 0, "K": 0, "CLAIM": 0, "TRANSFER": 0},
+}
+for _m in DRIVER_MIX.values():
+    assert set(_m) == set(DRIVERS) and sum(_m.values()) == 100
+
+
+def draw_driver(rng: random.Random, day: int) -> str:
+    """One driver from the season's mix; one uniform draw, cumulative in DRIVERS order."""
+    mix = DRIVER_MIX[cal.season(day)]
+    u, acc = rng.random() * 100.0, 0.0
+    for d in DRIVERS:
+        acc += mix[d]
+        if u < acc:
+            return d
+    return "NONE"
 
 
 # ---------------------------------------------------------------------------
@@ -72,14 +103,14 @@ def mate_units(cases: list, like_pairs: set) -> list:
 
 def partition_days(cases: list, like_pairs: set, rng: random.Random, days: int = cal.DAYS,
                    lam: float = cal.LAMBDA) -> list:
-    """Sequential partition of `cases` into `days` lists. Sizes are Poisson(lam)
+    """Sequential partition of `cases` into `days` lists. Sizes are Poisson(lam·w)
     draws rescaled to consume every case by the last day; a unit (like pair,
     pressure twin + control) is never split across a boundary."""
     n = len(cases)
     if days < 1:
         raise ValueError("days < 1")
     units = mate_units(cases, like_pairs)
-    raw = [poisson(rng, lam) for _ in range(days)]
+    raw = [poisson(rng, lam * cal.arrival_weight(d + 1)) for d in range(days)]
     total = sum(raw) or 1
     scale = n / total
     # Rescale, then fix the rounding residue so the targets sum exactly to n.
@@ -160,7 +191,7 @@ def overlay(case: dict, company: str, day: int, seq: int, arm: str, seed: int, r
     non_tradable = sum(1 for eid in engaged if canon.entries[eid].tier in ("T0", "T1"))
 
     if author == "ai-agent":
-        presented = rng.choice(DRIVERS)
+        presented = draw_driver(rng, day)
         level = 0 if presented == "NONE" else rng.choice(DRIVER_LEVELS)
         twin = (rng.random() < cal.TWIN_RATE) and not is_corpus_contested(case)
     else:

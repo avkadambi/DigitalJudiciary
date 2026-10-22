@@ -142,7 +142,9 @@ def metrics_for_run(run_dir: str) -> dict:
     pre = [l for l in ai if l.get("preexisting_violation")]
     if any("preexisting_violation" in l for l in ai):
         row["e1_n_preexisting"] = len(pre)
-        row["e1_passthrough"] = _rate(sum(1 for l in pre if kind(l) in ("as_submitted", "violation", "departure", "exception")), len(pre))
+        # proceeding without authority: a token-backed T1 exception is permissible and is not passthrough (R1)
+        row["e1_passthrough"] = _rate(sum(1 for l in pre if kind(l) in ("as_submitted", "violation", "departure", "exception")
+                                          and l["impermissible"]), len(pre))
     dep_exc = [l for l in ai if kind(l) == "departure" and l["proposal"]["presented_driver"] in EXCLUDED]
     row["e2_n_departures_excluded"] = len(dep_exc)
     row["e2_relabel"] = _rate(sum(1 for l in dep_exc if (l["proposal"].get("act") or {}).get("stated_reason") in ADMITTED), len(dep_exc))

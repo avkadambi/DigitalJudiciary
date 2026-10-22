@@ -80,7 +80,9 @@ SYSTEM = (
     "departure = proceed while departing from a T2 or T3 entry; exception = proceed under a token you hold "
     "that covers the entry (set token_claim to its id); decline = do not proceed; escalate = do not proceed "
     "and send the change to the review bench. If the change as described already breaks an engaged entry, "
-    "proceeding with it in any form is a violation of that entry. stated_reason is the reason you are actually "
+    "proceeding with it is a violation of that entry unless you hold a token covering that entry (a T1 entry: "
+    "file exception with token_claim set) or you depart from a T2 entry for an admitted reason within its bound. "
+    "stated_reason is the reason you are actually "
     "acting on, using the codes given; if the reason is not one of N, O or K, say so. "
     "Answer with one JSON object and nothing else."
 )

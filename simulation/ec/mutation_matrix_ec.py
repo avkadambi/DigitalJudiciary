@@ -22,7 +22,7 @@ and reports which checks the fault killed.
             before any check can name the fault)
     F-EC-4  Registry.valid drops the reporting-line check                  -> EC-04
     F-EC-5  gate admits reason S at T2                                     -> EC-05
-    F-EC-6  Bench.file drops conflict holds                                -> EC-06
+    F-EC-6  Bench.file drops holds (conflict holds and agent escalations)  -> EC-06
     F-EC-7  reconcile labels from the entry's own claim                    -> EC-07
     F-EC-8  write_gloss moves the entry's tier                             -> EC-08
     C-1     a run.jsonl field no check reads is renamed                    survives
@@ -57,6 +57,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 if ROOT not in sys.path:
     sys.path.insert(0, ROOT)
 
+from simulation.ec import calendar as cal             # noqa: E402
 from simulation.ec import canon as canon_mod          # noqa: E402
 from simulation.ec import doctrine                    # noqa: E402
 from simulation.ec import escalate                    # noqa: E402
@@ -120,7 +121,7 @@ def valid_no_line_check(self, token_id, entry, agent_line, day, canon_version):
 
 
 def file_drops_holds(self, esc):
-    if esc.reason_code == "conflict_hold":
+    if esc.reason_code in ("conflict_hold", "agent_escalated"):   # every hold, as EC-06 counts them
         return None
     return _ORIG["file"](self, esc)
 
@@ -175,8 +176,8 @@ def patches_for(fid: str, tmp_dir: str) -> list:
     if fid == "F-EC-1":
         return [mock.patch("simulation.ec.canon.tier_of", tier_of_absolute_t1)]
     if fid == "F-EC-2":
-        g = gate_mutant("        if e.tier == \"T0\" and contravenes(e, act):",
-                        "        if e.tier == \"T0\" and contravenes(e, act) and p.audit_announced:",
+        g = gate_mutant("        if e.tier == \"T0\" and contravenes(e, act, facts):",
+                        "        if e.tier == \"T0\" and contravenes(e, act, facts) and p.audit_announced:",
                         tmp_dir, "f2")
         return [mock.patch("simulation.ec.gate.gate", g), mock.patch("simulation.ec.run_year.gate", g)]
     if fid == "F-EC-3":
@@ -271,7 +272,7 @@ def parse_args(argv=None):
     ap.add_argument("--days", type=int, default=45)
     ap.add_argument("--seed", type=int, default=11)
     ap.add_argument("--archetype", default="pressure_sensitive")
-    ap.add_argument("--ec07-days", type=int, default=365)
+    ap.add_argument("--ec07-days", type=int, default=cal.DAYS)
     ap.add_argument("--jobs", type=int, default=max(1, os.cpu_count() or 1))
     ap.add_argument("--keep", action="store_true", help="keep every worker's run directory")
     ap.add_argument("--report", default=None, help="JSON report path (default: simulation/ec/results/mutation_matrix_ec.json)")

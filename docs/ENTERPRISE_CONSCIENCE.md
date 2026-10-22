@@ -30,8 +30,8 @@ version it belongs to.
 office: `office:safety-lead`, `office:legal-counsel`, `office:compliance` or
 `office:accessibility-lead`, each on the governance reporting line, while the
 coding agent is on the engineering line. A token is scoped to an act class and
-an entry, pinned to a canon version, single-use by default, expires after
-fourteen days and can be revoked. The registry answers one question, `valid`,
+an entry, pinned to a canon version, and can be revoked. An approved exception
+(about 24 a year per company) covers every act in its scope for 63 working days. The registry answers one question, `valid`,
 and every way of failing it is named: no such token, revoked, consumed,
 expired, wrong class, wrong scope, wrong canon version, issuer inside the
 agent's own reporting line, or a class that doctrine has since codified. A
@@ -103,9 +103,12 @@ agent would do. The LLM agent puts a model behind the same interface, with
 the canon text, the engaged entries and the registry view rendered into a
 prompt and a JSON act parsed back.
 
-**The calendar.** 365 working days on one shared calendar across the five
-companies. Each pack's released 6,000-case corpus is partitioned into days in
-its released order, about sixteen arrivals a day, with a like-case mate or a
+**The calendar.** One business year on one shared calendar across the five
+companies: calendar 2027, Monday to Friday less nine holidays, 252 working
+days, with hard change freezes over Thanksgiving week and from 20 December
+and a monthly release train (Realism revision R1, `prereg/REALISM_REVIEW.md`).
+Each pack's released 6,000-case corpus is partitioned into working days in
+its released order, about twenty-five arrivals on a normal day, with a like-case mate or a
 pressure twin never split from its partner across a day boundary. The engine
 timestamp is `ts = 1000 + day × 100 + seq`, so engine ordering and
 displacement keep working within a day and every seed record (ts 1–200) sits
@@ -265,13 +268,14 @@ mutation matrix is the one slow test.
 bash reproduce/run_year.sh registered
 ```
 
-The registered design: the four archetypes over seeds 11, 13, 17, 19 and 23,
-365 days, four arms, five packs (400 runs), the oracle and adversarial bounds
-at seed 11, the arm-D LLM dry run (`llm:anthropic:sonnet`, priced, not
-called), then metrics and analysis under each results root. Hours;
-checkpoints every 30 days and resumes. Results go under
-`simulation/ec/results/registered/<archetype>/`, `results/bounds/<archetype>/`
-and `results/llm_dry/`. The registered run is in progress at this release and
+The calibration design: the four archetypes over seeds 11, 13, 17, 19 and 23,
+252 working days, four arms, five packs (400 runs), the oracle and adversarial
+bounds at seed 11, the arm-D LLM dry run (`llm:anthropic:sonnet`, priced, not
+called), then metrics and analysis under each results root. About fifteen
+minutes; checkpoints every 30 days and resumes. Results go under
+`simulation/ec/results/calibration_r1/`. The first calibration, on the
+365-day v1 instrument, stays as committed under `results/registered/`,
+`results/bounds/` and `results/llm_dry/`. The registered run is in progress at this release and
 its results are not part of it; the preregistration's no-peeking rule applies
 (`metrics.py` and `analyze.py` are not run on a registered root until every
 run there has written `manifest.json`). A live LLM slice is a separate
@@ -279,7 +283,7 @@ command:
 
 ```bash
 ANTHROPIC_API_KEY=... python3 simulation/ec/run_year.py --packs all --arms A,B,C,D --seeds 11 \
-    --days 365 --agent llm:anthropic:sonnet --mode live --out simulation/ec/results/llm_live \
+    --days 252 --agent llm:anthropic:sonnet --mode live --out simulation/ec/results/llm_live \
     --checkpoint-every 30 --resume
 ```
 
@@ -326,7 +330,7 @@ hold the token registry, the canon with its glosses, and the bench docket.
 Ledger rows link to the explorer by case id. `--all` writes every run and
 an `index.html` at the results root (pack × arm × seed × archetype). Each
 page is one file with no script or font fetched, about 0.4 MB (year) and
-0.7 MB (explorer) for a 365-day run; the 400 registered runs take about
+0.7 MB (explorer) for a year's run; the 400 registered runs take about
 three minutes and 430 MB.
 
 ## Read the outputs

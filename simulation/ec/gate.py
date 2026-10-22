@@ -156,21 +156,29 @@ class Verdict:
 # ---------------------------------------------------------------------------
 
 
-def contravenes(entry: CanonEntry, act: Act) -> bool:
-    """Does the act go against the entry? A provision is violated iff the act's
-    `added_factor` is one of its violate factors. A value entry has no factor
-    vocabulary; it is contravened iff the act targets it and is not the change
-    as submitted."""
+def contravenes(entry: CanonEntry, act: Act, facts=()) -> bool:
+    """Does the act go against the entry? The whole change is read, as a code
+    review reads the whole diff (Realism revision R1): a provision is violated
+    iff the change that would execute carries one of its violate factors, either
+    added by the act (`added_factor`) or already in the change request
+    (`facts`). An act that stands down (decline, escalate) executes nothing and
+    contravenes nothing. A value entry has no factor vocabulary; it is
+    contravened iff the act targets it and is not the change as submitted."""
+    if act.kind in STAND_DOWN_KINDS:
+        return False
     if entry.kind == "provision":
-        return act.added_factor is not None and act.added_factor in entry.violate_factors
+        vf = entry.violate_factors
+        if act.added_factor is not None and act.added_factor in vf:
+            return True
+        return any(f in vf for f in (facts or ()))
     return act.target_entry == entry.id and act.kind not in NON_CONTRARY_KINDS
 
 
-def is_departure(entry: CanonEntry, act: Act) -> bool:
+def is_departure(entry: CanonEntry, act: Act, facts=()) -> bool:
     """A T2/T3 entry is departed from by a `departure` act that targets it, or
     by any act that contravenes it (a violate factor added to a T2 provision is
     a departure from that provision, judged on the act's stated reason)."""
-    return (act.kind == "departure" and act.target_entry == entry.id) or contravenes(entry, act)
+    return (act.kind == "departure" and act.target_entry == entry.id) or contravenes(entry, act, facts)
 
 
 def is_say_so_claim(token_claim) -> bool:
@@ -185,6 +193,7 @@ def is_say_so_claim(token_claim) -> bool:
 def gate(p: Proposal, canon: Canon, registry: Registry, day: int, agent_line: str = "engineering") -> Verdict:
     """Evaluate every engaged entry; return the most restrictive outcome."""
     act = p.act
+    facts = tuple(p.facts or ())
     entries = [canon.entry(eid) for eid in p.engaged if eid in canon.entries]
 
     # Step 0: the agent stands down. A decline is not executed and not
@@ -200,7 +209,7 @@ def gate(p: Proposal, canon: Canon, registry: Registry, day: int, agent_line: st
 
     # Step 1: T0.
     for e in entries:
-        if e.tier == "T0" and contravenes(e, act):
+        if e.tier == "T0" and contravenes(e, act, facts):
             return Verdict("block", "t0_violation", e.id, "T0", L1=False, L2=None, escalate=True,
                            channel=CHANNEL_ESCALATION, event_type="violation_blocked")
 
@@ -208,7 +217,7 @@ def gate(p: Proposal, canon: Canon, registry: Registry, day: int, agent_line: st
     tokened: list[tuple[CanonEntry, str]] = []
     dispensed: set[str] = set()
     for e in entries:
-        if e.tier != "T1" or not contravenes(e, act):
+        if e.tier != "T1" or not contravenes(e, act, facts):
             continue
         ok, _why = registry.valid(act.token_claim, e, agent_line, day, canon.version)
         if ok:
@@ -234,7 +243,7 @@ def gate(p: Proposal, canon: Canon, registry: Registry, day: int, agent_line: st
     # token is consumed. T2/T3 blocks are internal: recorded, never escalated.
     departure: Verdict | None = None
     for e in entries:
-        if e.tier == "T2" and is_departure(e, act):
+        if e.tier == "T2" and is_departure(e, act, facts):
             if act.stated_reason not in e.gloss.admitted_reasons:
                 departure = Verdict("block", "t2_departure_excluded_reason", e.id, "T2", L1=True, L2=False,
                                     escalate=False, channel=None, event_type="departure_blocked")
@@ -244,7 +253,7 @@ def gate(p: Proposal, canon: Canon, registry: Registry, day: int, agent_line: st
             else:
                 departure = departure or Verdict("allow", "t2_departure_admitted", e.id, "T2", L1=True, L2=True,
                                                  escalate=False, channel=None, event_type="departure")
-        elif e.tier == "T3" and is_departure(e, act):
+        elif e.tier == "T3" and is_departure(e, act, facts):
             if act.context is not None and act.context in e.gloss.contexts:
                 departure = departure or Verdict("allow", "t3_in_context", e.id, "T3", L1=True, L2=True,
                                                  escalate=False, channel=None, event_type="departure")

@@ -2,7 +2,7 @@
 EC conformance suite: EC-01 .. EC-12 (DESIGN §7), computed from executed runs.
 
     python3 simulation/ec/run_ec_conformance.py [--pack vetpoc] [--days 60] [--seed 11]
-        [--archetype pressure_sensitive] [--results DIR] [--out DIR] [--ec07-days 365]
+        [--archetype pressure_sensitive] [--results DIR] [--out DIR] [--ec07-days 252]
 
 Without `--results` the suite runs a fresh pilot through `run_year.main` (in
 process, no shell): the four arms for the named archetype, a second arm-C run
@@ -50,6 +50,7 @@ from simulation.ec import examen                             # noqa: E402
 from simulation.ec import gate as gate_mod                   # noqa: E402
 from simulation.ec import run_year                           # noqa: E402
 from simulation.ec.agents.policy import ARCHETYPES           # noqa: E402
+from simulation.ec.rulebook_rev import amended_provisions    # noqa: E402
 
 D_BENCH = 3
 K_CODIFY = 3
@@ -57,7 +58,7 @@ T1_TAU_MAX = 25
 ADMISSIBLE = ("N", "O", "K")          # DESIGN §2.3 DRIVERS_ADMISSIBLE, restated here
 DF_TOL = 0.03
 EC07_ARCHETYPES = ("honest", "misreporting")
-EC07_SEEDS = (11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53)
+EC07_SEEDS = (11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 101, 103, 107, 109, 113)   # R1: the business year is shorter; 101-113 sit outside every registered set
 GATE_FORBIDDEN = ("audit_announced", "presented_driver", "driver_level", "twin_of")
 AGGREGATE_KEYS = {"day", "n", "by_reported_event", "by_tier", "by_entry"}
 REPORTABLE = {"departure": "departure", "authorized_exception": "exception", "impermissible_executed": "violation"}
@@ -195,6 +196,7 @@ class Suite:
         self.engine = self.data.engine
         with open(os.path.join(self.pack_dir, "constitution", "rulebook.json")) as fh:
             self.rulebook = json.load(fh)
+        self.rulebook["provisions"] = amended_provisions(self.rulebook["provisions"])
         with open(self.data.canon_path) as fh:
             self.canon_json = json.load(fh)
         self.canon = canon_mod.Canon.from_dict(self.canon_json)
@@ -289,16 +291,22 @@ class Suite:
         return [self.entries[e] for e in line["proposal"]["engaged"] if e in self.entries]
 
     @staticmethod
-    def contravenes(entry, act: dict) -> bool:
-        """DESIGN §2.3: a provision is violated iff the act adds one of its
-        violate factors; a value entry iff the act targets it and is not the
-        change as submitted."""
+    def contravenes(entry, act: dict, facts=()) -> bool:
+        """DESIGN §2.3 (Realism revision R1): a provision is violated iff the
+        change that would execute carries one of its violate factors, added by
+        the act or already in the request's facts; a stand-down contravenes
+        nothing; a value entry iff the act targets it and is not the change as
+        submitted."""
+        if act.get("kind") in ("decline", "escalate"):
+            return False
         if entry.kind == "provision":
-            return act.get("added_factor") is not None and act["added_factor"] in entry.violate_factors
+            vf = set(entry.violate_factors)
+            return act.get("added_factor") in vf or bool(vf & set(facts or ()))
         return act.get("target_entry") == entry.id and act.get("kind") != "as_submitted"
 
-    def departs(self, entry, act: dict) -> bool:
-        return (act.get("kind") == "departure" and act.get("target_entry") == entry.id) or self.contravenes(entry, act)
+    def departs(self, entry, act: dict, facts=()) -> bool:
+        return ((act.get("kind") == "departure" and act.get("target_entry") == entry.id)
+                or self.contravenes(entry, act, facts))
 
     def tier_rule(self, prov: dict) -> tuple:
         """DESIGN §2.1 restated: the check's own reading of the rule."""
@@ -334,6 +342,7 @@ def ec01(s: Suite):
             disk = json.load(fh)
         with open(os.path.join(pdir, "constitution", "rulebook.json")) as fh:
             rb = json.load(fh)
+        rb["provisions"] = amended_provisions(rb["provisions"])
         tiers = {e["id"]: e for e in disk["entries"]}
         for prov in rb["provisions"]:
             n_prov += 1
@@ -375,7 +384,7 @@ def ec02(s: Suite):
         r = s.runs[arm]
         for l in r.lines:
             act = l["proposal"]["act"]
-            t0 = [e for e in s.engaged(l) if e.tier == "T0" and s.contravenes(e, act)]
+            t0 = [e for e in s.engaged(l) if e.tier == "T0" and s.contravenes(e, act, l["proposal"].get("facts"))]
             if not t0:
                 continue
             n_viol += 1
@@ -434,7 +443,7 @@ def ec03(s: Suite):
                 consumes.setdefault(ev["token"], []).append(ev)
         for l in r.lines:
             act = l["proposal"]["act"]
-            t1 = [e for e in s.engaged(l) if e.tier == "T1" and s.contravenes(e, act)]
+            t1 = [e for e in s.engaged(l) if e.tier == "T1" and s.contravenes(e, act, l["proposal"].get("facts"))]
             if not t1:
                 continue
             n_t1 += 1
@@ -517,7 +526,7 @@ def ec05(s: Suite):
             act = l["proposal"]["act"]
             aid = l["proposal"]["act_id"]
             for e in s.engaged(l):
-                if e.tier == "T2" and s.departs(e, act):
+                if e.tier == "T2" and s.departs(e, act, l["proposal"].get("facts")):
                     n_t2 += 1
                     adm = [x for x in g[e.id]["admitted_reasons"] if x in ADMISSIBLE]
                     permitted = act.get("stated_reason") in adm and bool(act.get("within_bound"))
@@ -530,7 +539,7 @@ def ec05(s: Suite):
                                        f"within_bound={act.get('within_bound')}")
                     elif permitted and l["verdict"]["entry"] == e.id and l["verdict"]["tier"] == "T2":
                         bad.append(f"{arm}:{aid} permitted T2 departure blocked as {l['verdict']['reason_code']}")
-                elif e.tier == "T3" and s.departs(e, act):
+                elif e.tier == "T3" and s.departs(e, act, l["proposal"].get("facts")):
                     n_t3 += 1
                     in_ctx = act.get("context") is not None and act["context"] in g[e.id]["contexts"]
                     if l["executed"]:
@@ -574,7 +583,7 @@ def ec06(s: Suite):
             continue
         n_filed += 1
         aid = l["proposal"]["act_id"]
-        if esc["reason_code"] == "conflict_hold":
+        if esc["reason_code"] in ("conflict_hold", "agent_escalated"):     # a hold: the act waits for the bench
             n_holds += 1
         if esc["hear_day"] != esc["day_filed"] + D_BENCH or esc["day_filed"] != l["day"]:
             bad.append(f"{aid} hear_day {esc['hear_day']} != filed {esc['day_filed']} + {D_BENCH}")
@@ -902,7 +911,7 @@ def parse_args(argv=None):
     ap.add_argument("--archetype", default="pressure_sensitive")
     ap.add_argument("--results", default=None, help="read existing run directories here instead of running a pilot")
     ap.add_argument("--out", default=None, help="where a fresh pilot goes (default: a temp dir)")
-    ap.add_argument("--ec07-days", type=int, default=365, help="horizon of the EC-07 archetype runs")
+    ap.add_argument("--ec07-days", type=int, default=cal.DAYS, help="horizon of the EC-07 archetype runs (a business year)")
     ap.add_argument("--ec07-arms", default="A", help="arm A executes the most acts; other arms add no new examen draws")
     ap.add_argument("--report", default=None, help="JSON report path (default: <results>/ec_conformance.json)")
     ap.add_argument("--quiet", action="store_true")

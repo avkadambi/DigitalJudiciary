@@ -56,7 +56,7 @@ def test_patch_expiry():
         expiry = ts + 180
     r = R()
     cal.patch_expiry(r)
-    assert r.expiry == r.ts + 180 * cal.DAY_TICKS
+    assert r.expiry == r.ts + cal.EXPIRY_DAYS * cal.DAY_TICKS and cal.EXPIRY_DAYS == 124
     r.expiry = None
     cal.patch_expiry(r)
     assert r.expiry is None
@@ -64,7 +64,42 @@ def test_patch_expiry():
 
 def test_constants():
     assert (cal.D_BENCH, cal.K_CODIFY, cal.T3_SAMPLE_RATE, cal.TWIN_RATE, cal.CONFLICT_RATE) == (3, 3, 0.10, 0.25, 0.02)
-    assert abs(cal.LAMBDA - 6000 / 365) < 1e-12
+    assert abs(cal.LAMBDA * sum(cal.arrival_weight(d) for d in range(1, cal.DAYS + 1)) - 6000) < 1e-9
+
+
+def test_business_calendar():
+    """Realism revision R1: 2027, Monday-Friday less nine holidays; three hard freezes;
+    a monthly release train with crunches; every interval in working days."""
+    import datetime as dt
+    assert cal.DAYS == 252 == len(cal.WORKING_DATES)
+    assert all(d.weekday() < 5 and d not in cal.HOLIDAYS and d.year == 2027 for d in cal.WORKING_DATES)
+    assert cal.date_of(1) == dt.date(2027, 1, 4) and cal.date_of(cal.DAYS) == dt.date(2027, 12, 31)
+    assert [cal.date_of(d) for d in sorted(cal.FREEZE_DAYS)][:2] == [dt.date(2027, 11, 24), dt.date(2027, 11, 29)]
+    assert len(cal.FREEZE_DAYS) == 11 and len(cal.RELEASE_DAYS) == 12 and cal.season(1) == "normal"
+    assert cal.date_of(cal.RELEASE_DAYS[-1]) == dt.date(2027, 12, 17)
+    assert all(cal.season(d) != "freeze" for d in cal.RELEASE_DAYS)
+    seasons = {cal.season(d) for d in range(1, cal.DAYS + 1)}
+    assert seasons == {"normal", "release_crunch", "quarter_crunch", "freeze"}
+    assert all(cal.arrival_weight(d) == (0.15 if d in cal.FREEZE_DAYS else 1.0) for d in range(1, cal.DAYS + 1))
+
+
+def test_driver_mix():
+    """The registered driver mix: about half NONE in a normal week; schedule pressure
+    rises in the crunches; a freeze admits necessity and no-pressure changes only."""
+    from simulation.ec.gate import DRIVERS
+    for season, mix in streammod.DRIVER_MIX.items():
+        assert set(mix) == set(DRIVERS) and sum(mix.values()) == 100
+    assert streammod.DRIVER_MIX["normal"]["NONE"] == 46 and streammod.DRIVER_MIX["normal"]["S"] == 20
+    assert streammod.DRIVER_MIX["release_crunch"]["S"] > streammod.DRIVER_MIX["quarter_crunch"]["S"] > 20
+    day = next(d for d in range(1, cal.DAYS + 1) if cal.season(d) == "normal")
+    rng = random.Random(5)
+    n = 40000
+    from collections import Counter
+    got = Counter(streammod.draw_driver(rng, day) for _ in range(n))
+    for d, pct in streammod.DRIVER_MIX["normal"].items():
+        assert abs(got[d] / n - pct / 100) < 0.01, d
+    fr = next(iter(cal.FREEZE_DAYS))
+    assert {streammod.draw_driver(rng, fr) for _ in range(2000)} == {"N", "NONE"}
     assert cal.REGISTERED_SEEDS == [11, 13, 17, 19, 23]
     assert cal.CONFIRMATORY_SEEDS == [59, 61, 67, 71, 73]
     assert not set(cal.CONFIRMATORY_SEEDS) & set(range(11, 54))
@@ -79,7 +114,7 @@ def test_partition_invariants(corpus):
     cases = corpus["cases"]
     pairs = streammod.like_pairs_of(corpus)
     days = streammod.partition_days(cases, pairs, random.Random("11|vetpoc|partition"))
-    assert len(days) == 365
+    assert len(days) == cal.DAYS == 252
     assert all(len(d) >= 0 for d in days)
     flat = [c["id"] for d in days for c in d]
     assert len(flat) == len(cases) == 6000
@@ -95,7 +130,10 @@ def test_partition_invariants(corpus):
         if ctrl:
             assert day_of[ctrl] == day_of[c["id"]], f"pressure twin {c['id']} split from {ctrl}"
     sizes = [len(d) for d in days]
-    assert 10 < sum(sizes) / len(sizes) < 20
+    assert 20 < sum(sizes) / len(sizes) < 28
+    frz = [sizes[d - 1] for d in cal.FREEZE_DAYS]
+    norm = [sizes[d - 1] for d in range(1, cal.DAYS + 1) if d not in cal.FREEZE_DAYS]
+    assert sum(frz) / len(frz) < 0.4 * sum(norm) / len(norm), "a hard freeze carries emergency arrivals only"
     # Deterministic.
     again = streammod.partition_days(cases, pairs, random.Random("11|vetpoc|partition"))
     assert [len(d) for d in again] == sizes

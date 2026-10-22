@@ -3,11 +3,12 @@
 # five companies under four arms. No network, no API key, no pip install.
 #
 #   bash reproduce/run_year.sh pilot        # 30 days, all packs, all arms, seed 11, pressure_sensitive (about a minute)
-#   bash reproduce/run_year.sh registered   # the registered design: 5 seeds x 365 days x 4 arms x 5 packs
-#                                           # for 4 archetypes, then the oracle/adversarial bounds (seed 11),
-#                                           # then the arm-D LLM dry run (anthropic, sonnet), then metrics (hours);
-#                                           # this is the calibration run, executed 2026-10-20 and disclosed in the registration
-#   bash reproduce/run_year.sh confirmatory # the confirmatory design: seeds 59,61,67,71,73 x 365 days x 4 arms x 5 packs
+#   bash reproduce/run_year.sh registered   # the calibration design on the R1 instrument: seeds 11,13,17,19,23 x 252 working
+#                                           # days x 4 arms x 5 packs for 4 archetypes, the oracle/adversarial bounds (seed 11)
+#                                           # and the arm-D LLM dry run, into results/calibration_r1/ (minutes). The first
+#                                           # calibration (365-day v1 instrument, 2026-10-20) stays as committed under
+#                                           # results/registered/ and results/bounds/; both are disclosed in the registration
+#   bash reproduce/run_year.sh confirmatory # the confirmatory design: seeds 59,61,67,71,73 x 252 days x 4 arms x 5 packs
 #                                           # for 4 archetypes, then the oracle/adversarial bounds (same five seeds; 600 runs), then metrics (hours)
 #   bash reproduce/run_year.sh conformance  # EC-01..EC-12 on a fresh 60-day vetpoc pilot (about half a minute)
 #   bash reproduce/run_year.sh mutation     # F-EC-1..8 + 2 controls (about four minutes)
@@ -15,7 +16,7 @@
 #   bash reproduce/run_year.sh console      # the EC console: ec_simulation.html + ec_explorer.html per run, index.html per root
 #   bash reproduce/run_year.sh live <model> [provider]
 #                                           # the registered LLM live slice (needs ANTHROPIC_API_KEY or OPENAI_API_KEY):
-#                                           # preflight, then arms A,B,C,D x seed 11 x 365 days x all packs with
+#                                           # preflight (seed 97), then arms A,B,C,D x seed 11 x 252 days x all packs with
 #                                           # --checkpoint-every 10 --resume --budget-usd 1000, then metrics, analysis,
 #                                           # report and console. Re-run the same command to resume after a stop.
 #
@@ -66,18 +67,19 @@ case "$MODE" in
   registered)
     canons
     for arch in honest pressure_sensitive observation_sensitive misreporting; do
-      say "Registered — policy:$arch, seeds 11,13,17,19,23, 365 days, arms A,B,C,D, all packs"
-      run $RES/registered/$arch policy:$arch 11,13,17,19,23 365 A,B,C,D all --checkpoint-every 30 --resume
+      say "Calibration (R1) — policy:$arch, seeds 11,13,17,19,23, 252 days, arms A,B,C,D, all packs"
+      run $RES/calibration_r1/$arch policy:$arch 11,13,17,19,23 252 A,B,C,D all --checkpoint-every 30 --resume
     done
     for arch in oracle adversarial; do
-      say "Bounds — policy:$arch, seed 11, 365 days, arms A,B,C,D, all packs"
-      run $RES/bounds/$arch policy:$arch 11 365 A,B,C,D all --checkpoint-every 30 --resume
+      say "Calibration bounds (R1) — policy:$arch, seed 11, 252 days, arms A,B,C,D, all packs"
+      run $RES/calibration_r1/bounds/$arch policy:$arch 11 252 A,B,C,D all --checkpoint-every 30 --resume
     done
-    say "LLM dry run — llm:anthropic:sonnet, arm D, seed 11, 365 days, all packs (priced, not called)"
-    run $RES/llm_dry llm:anthropic:sonnet 11 365 D all --mode dry --checkpoint-every 30 --resume
+    say "LLM dry run (R1) — llm:anthropic:sonnet, arm D, seed 11, 252 days, all packs (priced, not called)"
+    run $RES/calibration_r1/llm_dry llm:anthropic:sonnet 11 252 D all --mode dry --checkpoint-every 30 --resume
     say "Metrics and analysis"
-    for root in $RES/registered/honest $RES/registered/pressure_sensitive $RES/registered/observation_sensitive \
-                $RES/registered/misreporting $RES/bounds/oracle $RES/bounds/adversarial $RES/llm_dry; do
+    for root in $RES/calibration_r1/honest $RES/calibration_r1/pressure_sensitive $RES/calibration_r1/observation_sensitive \
+                $RES/calibration_r1/misreporting $RES/calibration_r1/bounds/oracle $RES/calibration_r1/bounds/adversarial \
+                $RES/calibration_r1/llm_dry; do
       metrics_and_analysis "$root"
     done
     ;;
@@ -85,12 +87,12 @@ case "$MODE" in
   confirmatory)
     canons
     for arch in honest pressure_sensitive observation_sensitive misreporting; do
-      say "Confirmatory — policy:$arch, seeds 59,61,67,71,73, 365 days, arms A,B,C,D, all packs"
-      run $RES/confirmatory/$arch policy:$arch 59,61,67,71,73 365 A,B,C,D all --checkpoint-every 30 --resume
+      say "Confirmatory — policy:$arch, seeds 59,61,67,71,73, 252 days, arms A,B,C,D, all packs"
+      run $RES/confirmatory/$arch policy:$arch 59,61,67,71,73 252 A,B,C,D all --checkpoint-every 30 --resume
     done
     for arch in oracle adversarial; do
-      say "Confirmatory bounds — policy:$arch, seeds 59,61,67,71,73, 365 days, arms A,B,C,D, all packs"
-      run $RES/confirmatory/bounds/$arch policy:$arch 59,61,67,71,73 365 A,B,C,D all --checkpoint-every 30 --resume
+      say "Confirmatory bounds — policy:$arch, seeds 59,61,67,71,73, 252 days, arms A,B,C,D, all packs"
+      run $RES/confirmatory/bounds/$arch policy:$arch 59,61,67,71,73 252 A,B,C,D all --checkpoint-every 30 --resume
     done
     say "Metrics and analysis"
     for root in $RES/confirmatory/honest $RES/confirmatory/pressure_sensitive $RES/confirmatory/observation_sensitive \
@@ -115,7 +117,7 @@ case "$MODE" in
   metrics)
     say "Metrics and analysis under every results root"
     found=0
-    for root in $RES/pilot30 $RES/registered/* $RES/bounds/* $RES/llm_dry; do
+    for root in $RES/pilot30 $RES/calibration_r1/* $RES/calibration_r1/bounds/* $RES/registered/* $RES/bounds/* $RES/llm_dry; do
       [ -d "$root" ] || continue
       ls "$root"/*/*/seed-*/run.jsonl >/dev/null 2>&1 || continue
       found=1
@@ -128,7 +130,7 @@ case "$MODE" in
   console)
     say "EC console — pages under every results root that holds runs"
     found=0
-    for root in $RES/pilot30 $RES/registered $RES/bounds $RES/llm_dry; do
+    for root in $RES/pilot30 $RES/calibration_r1 $RES/registered $RES/bounds $RES/llm_dry; do
       [ -d "$root" ] || continue
       ls "$root"/*/*/seed-*/run.jsonl "$root"/*/*/*/seed-*/run.jsonl >/dev/null 2>&1 || continue
       found=1
@@ -141,10 +143,10 @@ case "$MODE" in
     canons
     MODEL="${2:-}"; PROVIDER="${3:-anthropic}"
     [ -n "$MODEL" ] || { echo "usage: bash reproduce/run_year.sh live <model id> [anthropic|openai]"; exit 2; }
-    say "Preflight — $PROVIDER $MODEL (model list, prices, plan, 1-day smoke, schema, metrics)"
-    python3 reproduce/ec_preflight.py --provider "$PROVIDER" --model "$MODEL" --days 1
-    say "LLM live slice — llm:$PROVIDER:$MODEL, seed 11, 365 days, arms A,B,C,D, all packs, budget 1000 USD"
-    run $RES/registered/llm "llm:$PROVIDER:$MODEL" 11 365 A,B,C,D all --mode live \
+    say "Preflight — $PROVIDER $MODEL (model list, prices, plan, 3-day smoke on seed 97, schema, metrics)"
+    python3 reproduce/ec_preflight.py --provider "$PROVIDER" --model "$MODEL" --days 3
+    say "LLM live slice — llm:$PROVIDER:$MODEL, seed 11, 252 days, arms A,B,C,D, all packs, budget 1000 USD"
+    run $RES/registered/llm "llm:$PROVIDER:$MODEL" 11 252 A,B,C,D all --mode live \
         --checkpoint-every 10 --resume --budget-usd 1000
     say "Metrics and analysis"
     metrics_and_analysis $RES/registered/llm

@@ -1,14 +1,14 @@
 # Plan hash
 
-**Plan hash (sha256):** `68bc9b2b4db5ab654341cccb30c63229378dc1c7984eb7ce932042f17f9c3f9c`
+**Plan hash (sha256):** `214e0424b2a2b7a4f0cb3763daddc61da35e68db824801281f9ab6988e177d7c`
 
 | | |
 |---|---|
-| Computed | 2026-10-22 03:52 UTC |
+| Computed | 2026-10-22 15:09 UTC |
 | Package VERSION | 5.16.0 |
-| Git branch | work |
-| Git commit at computation | ebf776c4a0a0e11e3ee032456a292f4e9e6fef88 (informational; not a hash input) |
-| Files | 35 |
+| Git branch | realism |
+| Git commit at computation | a177dd039f29debcd22e2a5bf0a42d49ae5fbefa (informational; not a hash input) |
+| Files | 37 |
 
 Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted lines `<path>  <digest>\n`. The line of `prereg/PREREG_EC_SIM_v1.md` beginning `| OSF registration DOI |` is removed before that file is digested. `prereg/PLAN_HASH.md` and `prereg/plan_hash.txt` are outputs and not inputs. Recompute with `python3 prereg/make_plan_hash.py --check`.
 
@@ -16,56 +16,58 @@ Procedure: sha256 of every file below; the plan hash is the sha256 of the sorted
 
 | File | sha256 |
 |---|---|
-| `prereg/ANALYSIS_PLAN.md` | `a6bdf61ad607da1844dc93ef66b392e42dae77788e147538eddbb43c55084f78` |
-| `prereg/DATA_DICTIONARY.md` | `1f3df19b735cb98b70feeb1045c1d4794fff44e9171f7d4c871fb851e11f8819` |
+| `prereg/ANALYSIS_PLAN.md` | `76d1a4feafdc44aef7044a9e8d9f8a504ad0dbadcc444442f4c0d8bd9cd83069` |
+| `prereg/DATA_DICTIONARY.md` | `151c7b34bbf2c0c725cc1b91a10952a06db3265c73892504a1b1e61536ce27d7` |
 | `prereg/ESTIMAND_MAP.md` | `07875215ca675459123ba3a246a0b4586fddf9fc1385e0b9fdb2ac8105c68978` |
-| `prereg/OSF_UPLOAD_CHECKLIST.md` | `0fb2e43cfda1380342af3547b301e3a16ecaebb0a5abd596d063ad48279190ec` |
-| `prereg/PREREG_EC_SIM_v1.md` | `99280eb93f00ebae1212c2fc369067de40d86c4ea924cdaacde282023d957636` |
+| `prereg/OSF_UPLOAD_CHECKLIST.md` | `25d49e6e176a14bf254346b7fb590ea5fa8147470cc61975a478996c03d198a6` |
+| `prereg/PREREG_EC_SIM_v1.md` | `389e2ca40862f1f79cd59c4fd053d2c66d26ed676552a4be622e67f065b9c836` |
+| `prereg/REALISM_REVIEW.md` | `39cdec4f93c9f3d95b0a71ddc808cfa1434f599caa4bdd5cebe42804efa48cff` |
 | `prereg/make_plan_hash.py` | `44a5c1bad33a1c6a20d4c1c9e4bdf82ca797d9a0e731bdff3a630501c4003b2f` |
 
 ## Canons
 
 | File | sha256 |
 |---|---|
-| `simulation/dcvigil-constitution-corpus/constitution/canon.json` | `5dd9676c6c8065e3cf1cec8cfb2601517bdfde13221f4c24513ec45b3c138bdb` |
-| `simulation/frontierllm-constitution-corpus/constitution/canon.json` | `ed324358170c35f9441a8d346f70d1055b43e3781460bb797ed6c672700b42f1` |
+| `simulation/dcvigil-constitution-corpus/constitution/canon.json` | `ced4b5637e08c661d4c712983a81f653a857cdf85c06763af66b4b1ad37802ab` |
+| `simulation/frontierllm-constitution-corpus/constitution/canon.json` | `7bb8e3274d0a845a35b484270244162b2b349ed765450f67caa55fc5b8d4e25b` |
 | `simulation/meridian-corpus/constitution/canon.json` | `ab9d5132fda2162548a0b8341d6263060a1621a68ecae04a1d17b012d9baaff1` |
-| `simulation/semifab-constitution-corpus/constitution/canon.json` | `7db8c57b5d08e5b9181f8cade7df960fa41fe80013b6e9d957264d5c73205989` |
+| `simulation/semifab-constitution-corpus/constitution/canon.json` | `2c135a47e3a3a61c985bdb81ec3ba7647a4bf56153ef2500b5aa895d382097fc` |
 | `simulation/vetpoc-constitution-corpus/constitution/canon.json` | `70c11fe859ee214009cbd4c7232439e4c5337bad6a647a61638e1f95cd26541f` |
 
 ## simulation/ec package
 
 | File | sha256 |
 |---|---|
-| `simulation/ec/DESIGN.md` | `7ef6519cc9953d9aa5803d89196dca888e1de782299bf70c53e015f583ede4fd` |
+| `simulation/ec/DESIGN.md` | `6c3e591a8ca1a6216188d4e54a4040f48885b71f7cd8a50fbfe86f30710ce179` |
 | `simulation/ec/__init__.py` | `e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855` |
 | `simulation/ec/agents/__init__.py` | `b03e02b5f73e25ef26940edf70e6e5413ecec2119afd199b94d3c8a3e8d4af04` |
-| `simulation/ec/agents/llm.py` | `20e28285aa7f652348502012bd99435b41ed60839c1e915abf9acf1adb903095` |
-| `simulation/ec/agents/policy.py` | `dc07377b5240f81a69f07be2a62eee53707d95f959dd4d7cff0858ee35f9a6a4` |
+| `simulation/ec/agents/llm.py` | `1d6136228c8ef11dd0fef3ce1a7c38043f1e738ee9b36ff62b3716486139f20a` |
+| `simulation/ec/agents/policy.py` | `c3a75fddb0b22db35153efb0764990fffd540912aa720fd86340949dd9ee484c` |
 | `simulation/ec/analyze.py` | `35437414ea22154b8bd857735339cfe497c08891d0e9a943353a8e2be3512d10` |
 | `simulation/ec/build_all_canons.py` | `214a8849fb5a15a91df0890cd6fb5f7cce82352565cd27ec92f5a6d42242ed77` |
-| `simulation/ec/calendar.py` | `d67f8ed92eb3553ab913440892a6cd293961b266db7eefd840510ea70f3f8a0d` |
-| `simulation/ec/canon.py` | `6ea25de5ecf1a55fa32736b96f19df29c7c9e38a7ce6da83a395ed2866268af3` |
+| `simulation/ec/calendar.py` | `a8285839e0d6fd4d7fc1d4018e39f910756406798853c8197e516ae843dcae55` |
+| `simulation/ec/canon.py` | `382c123f021882225b97318fa9cd7a3336648cd248ad55f21fe793f4fe1a5083` |
 | `simulation/ec/doctrine.py` | `91c9715c2012a6e325a49b93910ff32f88b0eef4bf5d7c0cb124541f64662b0e` |
-| `simulation/ec/escalate.py` | `c94286cdecfe5e7baf15aaa7da1310e88d0fafcb62ea85c95f7a913f830bd4e7` |
+| `simulation/ec/escalate.py` | `24ebc1a0947cfcc43d569ed83e30ceda81d1364fb046ad6527167cf9692bdc18` |
 | `simulation/ec/examen.py` | `d0669f6c8db1495d66e838513acc7b24fc1774433e523d87c4b9adb6ba56b730` |
-| `simulation/ec/gate.py` | `f9bf3b9660afc622bb0cfe7dd9deefd339bcc9b13898029fc8fc22869b317581` |
-| `simulation/ec/metrics.py` | `12ac0d2cc07d6254cc0de0131189bb6c7606777c169f58745272798f16b6bace` |
-| `simulation/ec/mutation_matrix_ec.py` | `a7b77d737fbd6c359b4559a61e94d7ef99fa4d6fc6a61a06374be79888629f3c` |
-| `simulation/ec/registry.py` | `a2b395007b1c2a2a335b74f3406e537efe68d0c00d56ba4abdc6cf9ef6f0d880` |
-| `simulation/ec/rival.py` | `75307b0366cd2a318a71412c51255c07b52cf26d21615e1ba6fc3da40e200472` |
-| `simulation/ec/run_ec_conformance.py` | `02701fb6d363a874718b9932a5636036830f42b57ea708995ae6bf5359c4b72c` |
-| `simulation/ec/run_year.py` | `5d1690fb121184b9c08578fa702f7d72d01fca17d68cd44731de331f845876b6` |
-| `simulation/ec/stream.py` | `24e462e612872548dd0f14f8c0011bfa2c3be98b4fa5af01bdbe98ae17607a5f` |
+| `simulation/ec/gate.py` | `550b8b45ac3bb301cd2121be19c42983e602c3712b706fd96c58cf6f5e0690a0` |
+| `simulation/ec/metrics.py` | `c0f17d7f957f932864535f7131e86469eb769397f41ae112563dc9f42fbc3b8e` |
+| `simulation/ec/mutation_matrix_ec.py` | `88cae170c7a2b04ba5a224565d09a3288b8adc432fb2ec06b0ca56658b71e15d` |
+| `simulation/ec/registry.py` | `4a7b471c911baec5d8160d12eb76fdf45f5d40faaa9ba42a66ee37a11e163da7` |
+| `simulation/ec/rival.py` | `d9347c44f47e402a15db3d793ec537c51aca288040d4963fa45d93ffa2bdff68` |
+| `simulation/ec/rulebook_rev.py` | `f42f06eaeddfd0d89262f6c8397f65b11c44b978dde3d4bcd2a2d8f895053a8f` |
+| `simulation/ec/run_ec_conformance.py` | `7e4832e06e014b3eb8734c895fa010b269af629389937c1a429accd9eec5a19f` |
+| `simulation/ec/run_year.py` | `90a058eee4d2eedb2e6c7f9dac7af4ac88c57fe654a6259292f0d94be92efec4` |
+| `simulation/ec/stream.py` | `c286e5e9339e889ceb8c4dde4a2a06f8bfb9fee2e6ad324547ca3cc89d86a0b1` |
 
 ## EC tests
 
 | File | sha256 |
 |---|---|
-| `tests/test_ec_conformance.py` | `095aa63bd1ca6cb870e195f5c6bb0bbd3ca2475bf9fe72ee16cdeedb8325974f` |
-| `tests/test_ec_core.py` | `ea7272896d6e8886a3855cf0867cf66198c7eb92b0d07a2039e5d16101a58980` |
-| `tests/test_ec_driver.py` | `32a4d730ddba7c0440e291327d175ad6711ebadee9f7b56e9ed6c5e4dc477329` |
-| `tests/test_ec_llm_live.py` | `a2bae95a589231372a243ba3add366e594843e3df670917817fb00b627298a59` |
+| `tests/test_ec_conformance.py` | `84ed589b3e5b52f1c3d5826c0df4a8b98c4c4eb365a4b01c930cbe59a0dcfc47` |
+| `tests/test_ec_core.py` | `39dabc41607069f05e6c94db155bd9edaf810df4c8ebe1d70d0a93462a9b2ed1` |
+| `tests/test_ec_driver.py` | `0ccdfe4ceb7c39bb7bb5d8671448200edff30eb1d7ee2f6813b89570e3dd0163` |
+| `tests/test_ec_llm_live.py` | `c496346a6b837a287977d4e88d9784e0c1f5c8c97d6753da584badf440e4fa91` |
 
 ## Amendments
 
