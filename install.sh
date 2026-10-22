@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
-# Digital Judiciary — installer.
+# Digital Judiciary — installer (Digital Judiciary and the Enterprise
+# Conscience fast track in simulation/ec/, which share one set of prerequisites).
 #
 #   ./install.sh              check prerequisites, offer to install, set up
 #   ./install.sh --check      report only, change nothing
@@ -127,6 +128,7 @@ pkg_cmd() {  # pkg_cmd <brew-name> <apt-name> <dnf-name> <pacman-name>
 # =========================================================================
 say ""
 say "${B}Digital Judiciary — installer${N}"
+say "${D}Digital Judiciary (DJ) and the Enterprise Conscience fast track (EC)${N}"
 say "${D}$ROOT${N}"
 say ""
 detect_pm
@@ -254,6 +256,8 @@ else
   warn "ANTHROPIC_API_KEY not set"
   note "the demo runs fully without it on the deterministic oracle;"
   note "set it for DJ_JUDGE_MODE=llm or the scenario generator"
+  note "EC oracle and dry modes need no key; EC live mode needs it"
+  note "(or OPENAI_API_KEY with --provider openai)"
 fi
 
 # =========================================================================
@@ -269,7 +273,7 @@ if [ "$CHECK_ONLY" -eq 1 ]; then
 fi
 
 # --- 5. verify the install by running the suites -------------------------
-say "${B}Verifying${N}"
+say "${B}Verifying — Digital Judiciary${N}"
 say "${D}The three conformance suites are the install test: they compute every${N}"
 say "${D}claim from executed traces, so a green run means this copy works.${N}"
 say ""
@@ -286,6 +290,38 @@ for suite in run_conformance run_interface_conformance run_extension_conformance
     *) bad "$suite did not complete: $OUT" ;;
   esac
 done
+
+# --- 5b. verify the Enterprise Conscience fast track ---------------------
+# The canons are committed; --check rebuilds each from its rulebook and
+# fails if any differs. The pilot is reproduce/run_year.sh pilot (30 days,
+# all packs, arms A-D, seed 11) run with $PY into a scratch directory, so an
+# existing simulation/ec/results/pilot30 is left alone.
+say ""
+say "${B}Verifying — Enterprise Conscience${N}"
+OUT="$($PY simulation/ec/build_all_canons.py --check 2>&1 | tail -1)"
+case "$OUT" in
+  "RESULT: 5/5 canons built") ok "$(printf '%-32s %s' "canons" "5/5 match their rulebooks")" ;;
+  *) bad "canon check failed: $OUT"
+     note "run $PY simulation/ec/build_all_canons.py --check to see which pack" ;;
+esac
+EC_OUT="$TMPD/ec_pilot"
+if $PY simulation/ec/run_year.py --packs all --arms A,B,C,D --seeds 11 --days 30 \
+       --agent policy:pressure_sensitive --out "$EC_OUT" --quiet >"$TMPD/ec_pilot.log" 2>&1 \
+   && $PY simulation/ec/metrics.py "$EC_OUT" >>"$TMPD/ec_pilot.log" 2>&1; then
+  OUT="$($PY - "$EC_OUT" <<'EOF' 2>&1
+import json, sys
+t = json.load(open(sys.argv[1] + "/timings.json"))
+print(f"{len(t['runs'])} runs, {sum(r['proposals'] for r in t['runs'])} proposals")
+EOF
+)"
+  case "$OUT" in
+    "20 runs, "*) ok "$(printf '%-32s %s' "pilot (30 days, 4 arms)" "$OUT")" ;;
+    *) bad "EC pilot finished with an unexpected run count: $OUT" ;;
+  esac
+else
+  bad "EC pilot did not complete:"
+  tail -5 "$TMPD/ec_pilot.log" | sed 's/^/        /'
+fi
 rm -rf "$TMPD"
 [ "$FAILED" -gt 0 ] && { say ""; say "${R}Verification failed.${N}"; exit 1; }
 
@@ -311,4 +347,7 @@ say "  then open http://localhost:8080/review"
 say ""
 say "${D}  --company _all boots all four companies as separate tenants${N}"
 say "${D}  DJ_SIMULATOR=1 adds the live scenario generator (needs an API key)${N}"
+say ""
+say "  Enterprise Conscience: bash reproduce/run_year.sh pilot"
+say "${D}  see docs/ENTERPRISE_CONSCIENCE.md for the registered, conformance and live modes${N}"
 say ""
