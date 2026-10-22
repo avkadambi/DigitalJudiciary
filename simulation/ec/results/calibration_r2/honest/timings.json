@@ -1,0 +1,907 @@
+{
+ "elapsed_s": 39.77961206436157,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.23679685592651367,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.23352408409118652,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.23255491256713867,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.23125600814819336,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.24369025230407715,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.47422003746032715,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.45676231384277344,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.4548370838165283,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.46045589447021484,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.4662470817565918,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.2998049259185791,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.31907010078430176,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.32068681716918945,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.3347172737121582,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.29684996604919434,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.41536903381347656,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.41509127616882324,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.4185347557067871,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.4073340892791748,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4215071201324463,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/honest/vetpoc/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.23140907287597656,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.230881929397583,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.23334288597106934,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.23132705688476562,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.23233723640441895,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.46217799186706543,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.4868583679199219,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.4792640209197998,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.5357890129089355,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.4858250617980957,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.291823148727417,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.30258703231811523,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.3018801212310791,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.2935657501220703,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.3063681125640869,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.44207191467285156,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.45247483253479004,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.4361443519592285,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.41351985931396484,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4083731174468994,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/honest/semifab/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.23975706100463867,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.2389068603515625,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.23868584632873535,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.23720979690551758,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.2371230125427246,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.463547945022583,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.46712589263916016,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.47001194953918457,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.46300220489501953,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.4631459712982178,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.29480481147766113,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.3073561191558838,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.2942628860473633,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.2887871265411377,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.2927689552307129,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.43003296852111816,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.4119138717651367,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.408581018447876,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.4085099697113037,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4068140983581543,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/honest/frontierllm/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.24603867530822754,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.22985100746154785,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.2299509048461914,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.22893381118774414,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.23185372352600098,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.46044111251831055,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.46065306663513184,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.45357584953308105,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.4544661045074463,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.4570648670196533,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.275709867477417,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.2783522605895996,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.27385377883911133,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.27532005310058594,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.2785758972167969,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.40953612327575684,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.4094879627227783,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.42654895782470703,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.4050159454345703,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4111521244049072,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/dcvigil/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.23896026611328125,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.24018287658691406,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.23780083656311035,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.2846808433532715,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.2603766918182373,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.5221729278564453,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.47797393798828125,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.6427450180053711,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.5143430233001709,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.49750709533691406,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.3503890037536621,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.3037421703338623,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.29166293144226074,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.2994108200073242,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.31187891960144043,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.44597792625427246,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.43894124031066895,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.4367527961730957,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.46533703804016113,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.5016739368438721,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/honest/meridian/D/seed-23",
+   "spend_usd": 0.0
+  }
+ ],
+ "spend_usd": 0.0,
+ "budget_stop": null
+}

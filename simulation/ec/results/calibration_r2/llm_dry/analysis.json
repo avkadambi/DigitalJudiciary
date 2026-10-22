@@ -1,0 +1,53 @@
+{
+ "margin": 0.03,
+ "bootstrap_reps": 2000,
+ "arms": [
+  "D"
+ ],
+ "units": [
+  [
+   "dcvigil",
+   11
+  ],
+  [
+   "frontierllm",
+   11
+  ],
+  [
+   "meridian",
+   11
+  ],
+  [
+   "semifab",
+   11
+  ],
+  [
+   "vetpoc",
+   11
+  ]
+ ],
+ "provenance": [
+  "⟦PROJECTED⟧"
+ ],
+ "arm_means": {
+  "D": {
+   "e2_ps": 0.002625534,
+   "e3_og": 0.0,
+   "e1_imperm": 0.030703920000000003,
+   "e6_recall": 0.954591,
+   "e7_blind_spot": 0.0,
+   "e8_return": -2.04189328,
+   "n_runs": 5
+  }
+ },
+ "tost": {
+  "e2_ps": {},
+  "e3_og": {}
+ },
+ "bootstrap": {
+  "e1_imperm": {},
+  "e6_recall": {},
+  "e7_blind_spot": {},
+  "e8_return": {}
+ }
+}

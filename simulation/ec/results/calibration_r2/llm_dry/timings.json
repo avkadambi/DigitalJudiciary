@@ -1,0 +1,52 @@
+{
+ "elapsed_s": 3.0959341526031494,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.45834898948669434,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/llm_dry/vetpoc/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.4592137336730957,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/llm_dry/semifab/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.47164392471313477,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/llm_dry/frontierllm/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.5206761360168457,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/llm_dry/dcvigil/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.5110781192779541,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/llm_dry/meridian/D/seed-11",
+   "spend_usd": 0.0
+  }
+ ],
+ "spend_usd": 0.0,
+ "budget_stop": null
+}

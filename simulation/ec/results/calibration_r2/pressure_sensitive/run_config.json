@@ -1,0 +1,17 @@
+{
+ "packs": "all",
+ "arms": "A,B,C,D",
+ "seeds": "11,13,17,19,23",
+ "days": 251,
+ "agent": "policy:pressure_sensitive",
+ "mode": "oracle",
+ "out": "simulation/ec/results/calibration_r2/pressure_sensitive",
+ "checkpoint_every": 30,
+ "resume": true,
+ "progress_every": 30,
+ "quiet": true,
+ "budget_usd": 0.0,
+ "rate_limit": 0.0,
+ "bench_cap": 0,
+ "ciso_line": "governance"
+}

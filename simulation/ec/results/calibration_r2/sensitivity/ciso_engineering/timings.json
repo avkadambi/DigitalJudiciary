@@ -1,0 +1,907 @@
+{
+ "elapsed_s": 40.977580070495605,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.23661518096923828,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.23990797996520996,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.23473000526428223,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.2346036434173584,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.2360219955444336,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.4611358642578125,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.46411967277526855,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.4599311351776123,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.4625248908996582,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.463939905166626,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.30953478813171387,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.3053419589996338,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.2973768711090088,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.2993781566619873,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.29971814155578613,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.4084968566894531,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.4237980842590332,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.4078519344329834,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.40769004821777344,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4222109317779541,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/vetpoc/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.23268485069274902,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.23754286766052246,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.22968387603759766,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.22990179061889648,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.23187994956970215,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.4624969959259033,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.4700353145599365,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.46323204040527344,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.45912885665893555,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.46587204933166504,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.29979491233825684,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.28984498977661133,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.29065871238708496,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.28574109077453613,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.3056299686431885,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.4071159362792969,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.40914011001586914,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.4103820323944092,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.40387606620788574,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.41630005836486816,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/semifab/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.2399158477783203,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.24205303192138672,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.24045372009277344,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.23904705047607422,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.24330997467041016,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.4666590690612793,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.468951940536499,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.4663381576538086,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.46459174156188965,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.47722411155700684,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.30260205268859863,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.30644702911376953,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.29884815216064453,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.3007969856262207,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.3024020195007324,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.4323279857635498,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.49290966987609863,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.4684600830078125,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.43151402473449707,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.42609596252441406,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/frontierllm/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.23905301094055176,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.2318100929260254,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.23384976387023926,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.23398876190185547,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.2416219711303711,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.46645212173461914,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.4672739505767822,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.4740297794342041,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.47387123107910156,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.5148940086364746,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.32324790954589844,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.29816699028015137,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.2949512004852295,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.2890799045562744,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.28846001625061035,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.419935941696167,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.42809009552001953,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.41063904762268066,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.4086132049560547,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4104630947113037,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/dcvigil/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.24462890625,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.24093914031982422,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.24402594566345215,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.24219322204589844,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.24142098426818848,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.46308088302612305,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.4614419937133789,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.5082449913024902,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.46521711349487305,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.47194480895996094,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.3062882423400879,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.3511769771575928,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.33991003036499023,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.31204795837402344,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.3012518882751465,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.43111085891723633,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.42159104347229004,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.42011499404907227,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.41971921920776367,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.42383575439453125,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/sensitivity/ciso_engineering/meridian/D/seed-23",
+   "spend_usd": 0.0
+  }
+ ],
+ "spend_usd": 0.0,
+ "budget_stop": null
+}

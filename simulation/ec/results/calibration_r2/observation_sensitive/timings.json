@@ -1,0 +1,907 @@
+{
+ "elapsed_s": 41.36640787124634,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.23868894577026367,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.2337801456451416,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.2365560531616211,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.23272299766540527,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.2322838306427002,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.46506690979003906,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.4618549346923828,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.4917778968811035,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.5837550163269043,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.5170989036560059,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.3706328868865967,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.33237385749816895,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.30344200134277344,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.30311131477355957,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.3067789077758789,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.4142448902130127,
+   "proposals": 6696,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.43387603759765625,
+   "proposals": 6713,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.41857314109802246,
+   "proposals": 6669,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.41722917556762695,
+   "proposals": 6694,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.42963314056396484,
+   "proposals": 6662,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/vetpoc/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.2326977252960205,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.23582792282104492,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.23084092140197754,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.23001480102539062,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.23630380630493164,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.4785439968109131,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.4724159240722656,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.4695620536804199,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.4838838577270508,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.5129308700561523,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.2920360565185547,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.31516599655151367,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.3449389934539795,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.3319718837738037,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.3218567371368408,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.47068119049072266,
+   "proposals": 6705,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.47600507736206055,
+   "proposals": 6714,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.45047998428344727,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.4561119079589844,
+   "proposals": 6644,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4793252944946289,
+   "proposals": 6745,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/semifab/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.27626705169677734,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.27810096740722656,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.26850008964538574,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.26638197898864746,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.27715492248535156,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.5267548561096191,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.5591080188751221,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.5494000911712646,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.537102222442627,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.498140811920166,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.3085932731628418,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.30554819107055664,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.30896496772766113,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.321307897567749,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.31005024909973145,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.43041110038757324,
+   "proposals": 6687,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.44049501419067383,
+   "proposals": 6675,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.4345519542694092,
+   "proposals": 6689,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.4210212230682373,
+   "proposals": 6637,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4258730411529541,
+   "proposals": 6679,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/frontierllm/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.24962401390075684,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.2373039722442627,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.2324810028076172,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.23473191261291504,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.23456287384033203,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.47549009323120117,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.48171496391296387,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.48717212677001953,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.4718039035797119,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.4673287868499756,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.28819775581359863,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.28957104682922363,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.2869267463684082,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.2863278388977051,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.2883269786834717,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.4204087257385254,
+   "proposals": 6709,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.428570032119751,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.4181051254272461,
+   "proposals": 6622,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.4126100540161133,
+   "proposals": 6650,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.42145705223083496,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/dcvigil/D/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 0.24193120002746582,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/A/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 13,
+   "elapsed_s": 0.23879003524780273,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/A/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 17,
+   "elapsed_s": 0.23846006393432617,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/A/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 19,
+   "elapsed_s": 0.25728583335876465,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/A/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 23,
+   "elapsed_s": 0.24430012702941895,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/A/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.4793398380279541,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 13,
+   "elapsed_s": 0.47127223014831543,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/B/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 17,
+   "elapsed_s": 0.4649200439453125,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/B/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 19,
+   "elapsed_s": 0.45989513397216797,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/B/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 23,
+   "elapsed_s": 0.46398210525512695,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/B/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.30709385871887207,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 13,
+   "elapsed_s": 0.30747008323669434,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/C/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 17,
+   "elapsed_s": 0.30645298957824707,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/C/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 19,
+   "elapsed_s": 0.30655622482299805,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/C/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 23,
+   "elapsed_s": 0.32019686698913574,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/C/seed-23",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 0.43184423446655273,
+   "proposals": 6702,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/D/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 13,
+   "elapsed_s": 0.4254908561706543,
+   "proposals": 6688,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/D/seed-13",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 17,
+   "elapsed_s": 0.42615699768066406,
+   "proposals": 6700,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/D/seed-17",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 19,
+   "elapsed_s": 0.4230539798736572,
+   "proposals": 6710,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/D/seed-19",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 23,
+   "elapsed_s": 0.4403550624847412,
+   "proposals": 6677,
+   "out": "simulation/ec/results/calibration_r2/observation_sensitive/meridian/D/seed-23",
+   "spend_usd": 0.0
+  }
+ ],
+ "spend_usd": 0.0,
+ "budget_stop": null
+}

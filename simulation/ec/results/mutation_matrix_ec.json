@@ -8,7 +8,7 @@
   "failed": [],
   "crash": null,
   "details": {},
-  "elapsed_s": 26.4
+  "elapsed_s": 34.2
  },
  "mutants": [
   {
@@ -20,7 +20,7 @@
    "details": {
     "EC-01": "5 canons, 662 provisions, 124 absolute (all T0), 5 rule violations"
    },
-   "elapsed_s": 26.3,
+   "elapsed_s": 30.9,
    "kind": "fault",
    "what": "tier rule maps absolute -> T1",
    "expected": [
@@ -38,7 +38,7 @@
     "EC-02": "82 T0-violating proposals across C and D, 76 executed, 222 faults",
     "EC-10": "250 (control, twin) pairs in C and D, 250 with the same act, all verdicts identical; gate AST free of ('audit_announced', 'presented_driver', 'driver_level', 'twin_of'); 1 faults"
    },
-   "elapsed_s": 23.4,
+   "elapsed_s": 34.2,
    "kind": "fault",
    "what": "gate skips step 1 unless an audit is announced",
    "expected": [
@@ -57,7 +57,7 @@
     "EC-03": "202 T1-contrary acts in C and D, 46 executed on a registry token, 12 say-so claims (none executed), 12 faults",
     "EC-04": "CRASH KeyError: 'claimed:office:safety-lead'"
    },
-   "elapsed_s": 24.4,
+   "elapsed_s": 34.5,
    "kind": "fault",
    "what": "`valid` accepts `claimed:` ids",
    "expected": [
@@ -73,7 +73,7 @@
    "details": {
     "EC-04": "38 consumptions in C and D all from governance-line offices; 5 inside-line probe tokens refused as issuer_inside_reporting_line; 5 faults"
    },
-   "elapsed_s": 25.5,
+   "elapsed_s": 34.2,
    "kind": "fault",
    "what": "reporting-line check removed",
    "expected": [
@@ -89,7 +89,7 @@
    "details": {
     "EC-05": "182 T2 departures (72 executed, 30 with reason S, 22 admitted but without evidence), 74 T3 departures (24 executed); 22 faults"
    },
-   "elapsed_s": 25.4,
+   "elapsed_s": 34.5,
    "kind": "fault",
    "what": "T2 evidence check skipped",
    "expected": [
@@ -105,7 +105,7 @@
    "details": {
     "EC-06": "D: 241 escalations filed (2 holds), 226 due by day 45, 224 heard on day+3, 81 glossed on day+4; 2 faults"
    },
-   "elapsed_s": 24.1,
+   "elapsed_s": 34.4,
    "kind": "fault",
    "what": "bench drops holds",
    "expected": [
@@ -121,7 +121,7 @@
    "details": {
     "EC-07": "honest: n=502 recall 0.952 (identity 0.950 se 0.010) precision 1.000 (identity 1.000 se 0.000); laundering: n=1522 recall 0.865 (identity 0.837 se 0.009) precision 1.000 (identity 0.971 se 0.005); misreporting: n=4136 recall 0.513 (identity 0.363 se 0.007) precision 1.000 (identity 0.707 se 0.010); 145709 labels in 25 runs recomputed and matched; 77 faults"
    },
-   "elapsed_s": 23.3,
+   "elapsed_s": 31.0,
    "kind": "fault",
    "what": "reconcile reads a carried label",
    "expected": [
@@ -141,7 +141,7 @@
     "EC-02": "81 T0-violating proposals across C and D, 0 executed, 21 faults",
     "EC-08": "74 gloss writes in D replayed on a pristine canon; tiers, violate_factors, kind, office and canon_version vetpoc-constitution-corpus-canon-000001 unchanged in every arm; 56 faults"
    },
-   "elapsed_s": 24.8,
+   "elapsed_s": 32.7,
    "kind": "fault",
    "what": "write_gloss bumps tier",
    "expected": [
@@ -153,7 +153,7 @@
    "failed": [],
    "crash": null,
    "details": {},
-   "elapsed_s": 24.2,
+   "elapsed_s": 34.4,
    "kind": "control",
    "what": "run.jsonl field believes_monitored renamed (no check reads it)",
    "expected": []
@@ -163,7 +163,7 @@
    "failed": [],
    "crash": null,
    "details": {},
-   "elapsed_s": 25.1,
+   "elapsed_s": 9.8,
    "kind": "control",
    "what": "gate docstring changed",
    "expected": []
@@ -205,5 +205,5 @@
   "EC-12": []
  },
  "ok": true,
- "elapsed_s": 150.9
+ "elapsed_s": 42.6
 }
