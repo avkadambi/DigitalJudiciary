@@ -1,0 +1,43 @@
+{
+ "agent": "llm:openai:grok-4.20-0309-non-reasoning",
+ "archetype": "llm:openai_compatible:grok-4.20-0309-non-reasoning",
+ "arm": "D",
+ "canon_version": "semifab-constitution-corpus-canon-000001",
+ "code_sha256": {
+  "__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "agents/__init__.py": "b03e02b5f73e25ef26940edf70e6e5413ecec2119afd199b94d3c8a3e8d4af04",
+  "agents/llm.py": "9a6d413e728f22577677d0d8d233b047bffb0d931d755de40e61567ee4a9cf85",
+  "agents/policy.py": "dc07377b5240f81a69f07be2a62eee53707d95f959dd4d7cff0858ee35f9a6a4",
+  "analyze.py": "35437414ea22154b8bd857735339cfe497c08891d0e9a943353a8e2be3512d10",
+  "build_all_canons.py": "214a8849fb5a15a91df0890cd6fb5f7cce82352565cd27ec92f5a6d42242ed77",
+  "calendar.py": "4d2008f3cb5ee6d80a33b73b3927b3c1122cc69a752d5181dd16ec310541fdd3",
+  "canon.py": "6ea25de5ecf1a55fa32736b96f19df29c7c9e38a7ce6da83a395ed2866268af3",
+  "doctrine.py": "91c9715c2012a6e325a49b93910ff32f88b0eef4bf5d7c0cb124541f64662b0e",
+  "escalate.py": "f732f092fc5da077fa2bd072fd77a649420cf91647c9b72dfb343fbf0715b1b0",
+  "examen.py": "d0669f6c8db1495d66e838513acc7b24fc1774433e523d87c4b9adb6ba56b730",
+  "gate.py": "c77cb62920eeb9374dd8c070dd7b8f84584b1e2399de0117d2067a4986c44e2d",
+  "metrics.py": "8c4eea2c03c564ca056bc0400db6acf3f1e0236511a6a7780bb18db11e848ff6",
+  "mutation_matrix_ec.py": "a7b77d737fbd6c359b4559a61e94d7ef99fa4d6fc6a61a06374be79888629f3c",
+  "registry.py": "a2b395007b1c2a2a335b74f3406e537efe68d0c00d56ba4abdc6cf9ef6f0d880",
+  "rival.py": "6ecc43bcba6f64f0460344bd12645d1dff30a95f5d3c78ffe1c66fbddc610fdb",
+  "run_ec_conformance.py": "02701fb6d363a874718b9932a5636036830f42b57ea708995ae6bf5359c4b72c",
+  "run_year.py": "900c179f28e25e1f789e230e81bdc4bc25569d579f89c9948210eee8a83a5576",
+  "stream.py": "24e462e612872548dd0f14f8c0011bfa2c3be98b4fa5af01bdbe98ae17607a5f"
+ },
+ "constants": {
+  "CONFLICT_RATE": 0.02,
+  "DAY_TICKS": 100,
+  "D_BENCH": 3,
+  "K_CODIFY": 3,
+  "LAMBDA": 16.438356164383563,
+  "T3_SAMPLE_RATE": 0.1,
+  "TWIN_RATE": 0.25
+ },
+ "days": 10,
+ "engine_path": "simulation/semifab-constitution-corpus/harness/engine.py",
+ "engine_sha256": "7dc66b1336b2211b3d573a52edeb234b8ec85f604cb71142c7eac013142ffb7c",
+ "mode": "live",
+ "pack": "semifab",
+ "run_jsonl_sha256": "951fc424ab7f0e708bee200e2d3a2a560c94fe1e1e7a076eac07b87b5aa27780",
+ "seed": 11
+}

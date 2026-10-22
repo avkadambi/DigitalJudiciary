@@ -1,0 +1,187 @@
+{
+ "elapsed_s": 3535.7083179950714,
+ "runs": [
+  {
+   "pack": "vetpoc",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 650.2595021724701,
+   "proposals": 214,
+   "out": "simulation/ec/results/registered/llm_pilot10/vetpoc/A/seed-11",
+   "spend_usd": 0.36433424999999997
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.06929254531860352,
+   "proposals": 214,
+   "out": "simulation/ec/results/registered/llm_pilot10/vetpoc/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.06089973449707031,
+   "proposals": 214,
+   "out": "simulation/ec/results/registered/llm_pilot10/vetpoc/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "vetpoc",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 32.731653690338135,
+   "proposals": 214,
+   "out": "simulation/ec/results/registered/llm_pilot10/vetpoc/D/seed-11",
+   "spend_usd": 0.02868975
+  },
+  {
+   "pack": "semifab",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 382.1968834400177,
+   "proposals": 190,
+   "out": "simulation/ec/results/registered/llm_pilot10/semifab/A/seed-11",
+   "spend_usd": 0.36256425
+  },
+  {
+   "pack": "semifab",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.07037472724914551,
+   "proposals": 190,
+   "out": "simulation/ec/results/registered/llm_pilot10/semifab/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.05737709999084473,
+   "proposals": 190,
+   "out": "simulation/ec/results/registered/llm_pilot10/semifab/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "semifab",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 586.267965555191,
+   "proposals": 190,
+   "out": "simulation/ec/results/registered/llm_pilot10/semifab/D/seed-11",
+   "spend_usd": 0.0288475
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 385.6487910747528,
+   "proposals": 200,
+   "out": "simulation/ec/results/registered/llm_pilot10/frontierllm/A/seed-11",
+   "spend_usd": 0.38820999999999983
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.06618428230285645,
+   "proposals": 200,
+   "out": "simulation/ec/results/registered/llm_pilot10/frontierllm/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.06460142135620117,
+   "proposals": 200,
+   "out": "simulation/ec/results/registered/llm_pilot10/frontierllm/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "frontierllm",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 19.508448839187622,
+   "proposals": 200,
+   "out": "simulation/ec/results/registered/llm_pilot10/frontierllm/D/seed-11",
+   "spend_usd": 0.019861
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 528.015594959259,
+   "proposals": 206,
+   "out": "simulation/ec/results/registered/llm_pilot10/dcvigil/A/seed-11",
+   "spend_usd": 0.36041649999999986
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.07354998588562012,
+   "proposals": 206,
+   "out": "simulation/ec/results/registered/llm_pilot10/dcvigil/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.10000872611999512,
+   "proposals": 206,
+   "out": "simulation/ec/results/registered/llm_pilot10/dcvigil/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "dcvigil",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 127.94097805023193,
+   "proposals": 206,
+   "out": "simulation/ec/results/registered/llm_pilot10/dcvigil/D/seed-11",
+   "spend_usd": 0.11659775000000001
+  },
+  {
+   "pack": "meridian",
+   "arm": "A",
+   "seed": 11,
+   "elapsed_s": 799.7394771575928,
+   "proposals": 182,
+   "out": "simulation/ec/results/registered/llm_pilot10/meridian/A/seed-11",
+   "spend_usd": 0.33823824999999996
+  },
+  {
+   "pack": "meridian",
+   "arm": "B",
+   "seed": 11,
+   "elapsed_s": 0.07170462608337402,
+   "proposals": 182,
+   "out": "simulation/ec/results/registered/llm_pilot10/meridian/B/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "C",
+   "seed": 11,
+   "elapsed_s": 0.06279826164245605,
+   "proposals": 182,
+   "out": "simulation/ec/results/registered/llm_pilot10/meridian/C/seed-11",
+   "spend_usd": 0.0
+  },
+  {
+   "pack": "meridian",
+   "arm": "D",
+   "seed": 11,
+   "elapsed_s": 21.181451082229614,
+   "proposals": 182,
+   "out": "simulation/ec/results/registered/llm_pilot10/meridian/D/seed-11",
+   "spend_usd": 0.021322749999999998
+  }
+ ],
+ "spend_usd": 2.0290819999999994,
+ "budget_stop": null
+}

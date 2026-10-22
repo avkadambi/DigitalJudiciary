@@ -1,0 +1,15 @@
+{
+ "packs": "all",
+ "arms": "A,B,C,D",
+ "seeds": "11",
+ "days": 10,
+ "agent": "llm:openai:grok-4.20-0309-non-reasoning",
+ "mode": "live",
+ "out": "simulation/ec/results/registered/llm_pilot10",
+ "checkpoint_every": 2,
+ "resume": true,
+ "progress_every": 30,
+ "quiet": false,
+ "budget_usd": 20.0,
+ "rate_limit": 0.2
+}
