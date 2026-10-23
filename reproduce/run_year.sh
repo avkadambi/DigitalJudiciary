@@ -11,10 +11,14 @@
 #                                           # results/registered/ and results/bounds/; both are disclosed in the registration
 #   bash reproduce/run_year.sh confirmatory # the confirmatory design: seeds 59,61,67,71,73 x 251 days x 4 arms x 5 packs
 #                                           # for 4 archetypes (plus laundering and the two sensitivities, exploratory), then the oracle/adversarial bounds (same five seeds; 600 runs), then metrics (hours)
-#   bash reproduce/run_year.sh conformance  # EC-01..EC-12 on a fresh 60-day vetpoc pilot (about half a minute)
-#   bash reproduce/run_year.sh mutation     # F-EC-1..8 + 2 controls (about four minutes)
+#   bash reproduce/run_year.sh conformance  # EC-01..EC-23 on a fresh 60-day vetpoc pilot (about half a minute)
+#   bash reproduce/run_year.sh mutation     # F-EC-1..19 + 2 controls (about four minutes)
 #   bash reproduce/run_year.sh metrics      # recompute metrics.csv and analysis.md under every results root
 #   bash reproduce/run_year.sh console      # the EC console: ec_simulation.html + ec_explorer.html per run, index.html per root
+#   bash reproduce/run_year.sh e2e <roles-config> [l4-mode]
+#                                           # the LLM governance seats end to end, dry (no keys): a seed-97 shadow+binding
+#                                           # pair of arms C,D on all packs, metrics with the governance columns, the
+#                                           # dollar projection and the R2 digest check (GOVERNANCE_README.md)
 #   bash reproduce/run_year.sh live <model> [provider]
 #                                           # the registered LLM live slice (needs ANTHROPIC_API_KEY or OPENAI_API_KEY):
 #                                           # preflight (seed 97), then arms A,B,C,D x seed 11 x 251 days x all packs with
@@ -165,6 +169,24 @@ case "$MODE" in
     python3 reproduce/ec_console.py --all $RES/registered/llm --quiet
     ;;
 
+  e2e)
+    canons
+    ROLES="${2:-}"; L4="${3:-llm-proxy}"
+    [ -n "$ROLES" ] || { echo "usage: bash reproduce/run_year.sh e2e <roles-config> [llm-proxy|rule|queue|interactive]"; exit 2; }
+    OUT="${E2E_OUT:-$RES/gov_e2e}"
+    say "Governance end to end (dry, no keys) — all packs, arms C,D, seed 97, 30 days, shadow+binding pair, L4 $L4"
+    run "$OUT" llm:anthropic:claude-sonnet-5-5 97 30 C,D all --mode dry --pair --l4 "$L4" \
+        --roles-config "$ROLES" --dry-error-rate 0.1
+    say "Metrics (with the governance columns) and monthly routing"
+    python3 $EC/metrics.py "$OUT" | tail -1
+    say "Projection (estimate)"
+    python3 $EC/run_year.py --packs all --arms C,D --seeds 97 --days 30 --mode dry --project \
+        --agent llm:anthropic:claude-sonnet-5-5 --governance llm --l4 "$L4" --dry-error-rate 0.1 \
+        --roles-config "$ROLES" --out "$OUT/projection" --quiet
+    say "R2 digests (defaults byte-identical)"
+    python3 $EC/tools/check_r2_digests.py | tail -1
+    ;;
+
   *)
-    echo "usage: bash reproduce/run_year.sh [pilot|registered|confirmatory|conformance|mutation|metrics|console|live <model> [provider]]"; exit 2 ;;
+    echo "usage: bash reproduce/run_year.sh [pilot|registered|confirmatory|conformance|mutation|metrics|console|live <model> [provider]|e2e <roles-config> [l4-mode]]"; exit 2 ;;
 esac
