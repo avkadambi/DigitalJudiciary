@@ -399,3 +399,7 @@ EC-01–EC-12 and F-EC-1–8 run unchanged. EC-13–EC-23 run on a dry shadow-an
 | EC-23 | on the split fixture `oracle_engine` permits, `oracle_canon` denies, and `acc_dj_holding` scores against `oracle_canon` | F-EC-19 the scorer uses `oracle_engine` |
 
 `RESULT: 23/23`; `RESULT: 19/19 faults killed, 2/2 controls survived`.
+
+## 10. Benchmark arms
+
+The old-school baseline benchmark — arms `H0`, `HL`, `HEC`, `HDJ`, `HECDJ` (arm A's rules, a literature-calibrated human reviewer or an LLM reviewer, random audits, with EC and/or DJ added on top), visibility classes, rulebook harm weights, the corner-case overlay, the change ledger, the scorecard, the break-even sweep and the B-01–B-12 checks — is specified in [`BENCHMARK.md`](BENCHMARK.md). With no benchmark flag, arms A–D are unchanged.

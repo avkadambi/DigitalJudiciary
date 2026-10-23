@@ -19,6 +19,13 @@
 #                                           # the LLM governance seats end to end, dry (no keys): a seed-97 shadow+binding
 #                                           # pair of arms C,D on all packs, metrics with the governance columns, the
 #                                           # dollar projection and the R2 digest check (GOVERNANCE_README.md)
+#   bash reproduce/run_year.sh benchmark-smoke
+#                                           # the old-school baseline benchmark, plumbing only: vetpoc, seed 97, 60 days,
+#                                           # arms A,C,D,H0,HEC,HDJ,HECDJ, deterministic governance, corner overlay 0.08,
+#                                           # scorecard, ledger summary, break-even, B-01..B-12 and the smoke assertions
+#                                           # (BENCHMARK.md); to /tmp/bench_smoke (BENCH_SMOKE_OUT)
+#   bash reproduce/run_year.sh benchmark --i-have-a-registration <url>
+#                                           # the benchmark on seeds 211-233; refuses to start without a registration
 #   bash reproduce/run_year.sh live <model> [provider]
 #                                           # the registered LLM live slice (needs ANTHROPIC_API_KEY or OPENAI_API_KEY):
 #                                           # preflight (seed 97), then arms A,B,C,D x seed 11 x 251 days x all packs with
@@ -187,6 +194,48 @@ case "$MODE" in
     python3 $EC/tools/check_r2_digests.py | tail -1
     ;;
 
+  benchmark-smoke)
+    canons
+    OUT="${BENCH_SMOKE_OUT:-/tmp/bench_smoke}"
+    rm -rf "$OUT"; mkdir -p "$OUT"
+    say "Benchmark smoke (plumbing, not a result) — vetpoc, seed 97, 60 days, arms A,C,D,H0,HEC,HDJ,HECDJ, deterministic, corner overlay 0.08, flat-Edmundson"
+    run "$OUT/runs" policy:pressure_sensitive 97 60 A,C,D,H0,HEC,HDJ,HECDJ vetpoc --corner-overlay 0.08
+    say "Scorecard, ledger summary, break-even, analysis"
+    python3 $EC/scorecard.py "$OUT/runs" --out "$OUT" | tail -1
+    python3 $EC/breakeven.py "$OUT/runs" | tail -1
+    python3 $EC/analyze_benchmark.py "$OUT/runs" --out "$OUT" | tail -1
+    say "Benchmark conformance on the same fixture"
+    python3 $EC/run_benchmark_conformance.py --out "$OUT/conformance" --quiet
+    if [ "${BENCH_SMOKE_LLM:-0}" = "1" ]; then
+      # Live model calls: only after the owner approved the dry projection (playbook Part I §11).
+      say "LLM smoke — HL and HEC at --governance llm, 10 days, budget 3 USD"
+      run "$OUT/llm" policy:pressure_sensitive 97 10 HL,HEC vetpoc --corner-overlay 0.08 --mode live \
+          --governance llm --roles-config "${ROLES:-$EC/config/llm_roles.example.json}" --budget-usd 3
+    else
+      echo "(LLM smoke skipped: set BENCH_SMOKE_LLM=1 after the projection is approved)"
+    fi
+    say "Smoke assertions"
+    python3 $EC/benchmark_smoke.py "$OUT"
+    ;;
+
+  benchmark)
+    shift
+    REG=""
+    while [ $# -gt 0 ]; do
+      case "$1" in --i-have-a-registration) REG="${2:-}"; shift 2 ;; *) shift ;; esac
+    done
+    [ -n "$REG" ] || { echo "run_year.sh benchmark runs the benchmark seeds (211, 223, 227, 229, 233) and needs a registration: --i-have-a-registration <url>"; exit 2; }
+    canons
+    say "Benchmark (registration $REG) — five companies, arms A,C,D,H0,HEC,HDJ,HECDJ, seeds 211,223,227,229,233, 251 days"
+    for arch in honest pressure_sensitive observation_sensitive misreporting; do
+      run $RES/benchmark/$arch policy:$arch 211,223,227,229,233 251 A,C,D,H0,HEC,HDJ,HECDJ all --corner-overlay 0.08 \
+          --checkpoint-every 30 --resume
+      python3 $EC/scorecard.py $RES/benchmark/$arch | tail -1
+      python3 $EC/breakeven.py $RES/benchmark/$arch | tail -1
+      python3 $EC/analyze_benchmark.py $RES/benchmark/$arch | tail -1
+    done
+    ;;
+
   *)
-    echo "usage: bash reproduce/run_year.sh [pilot|registered|confirmatory|conformance|mutation|metrics|console|live <model> [provider]|e2e <roles-config> [l4-mode]]"; exit 2 ;;
+    echo "usage: bash reproduce/run_year.sh [pilot|registered|confirmatory|conformance|mutation|metrics|console|live <model> [provider]|e2e <roles-config> [l4-mode]|benchmark-smoke|benchmark --i-have-a-registration <url>]"; exit 2 ;;
 esac
