@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import io
 import random
+from unittest import mock
 import os
 import shutil
 import sys
@@ -780,3 +781,37 @@ def test_ec_columns_on_scripted_lines():
     c = metrics_gov.ec_columns(L)
     assert c["acc_ec_d7"] == 0.5 and c["ec_false_allow_T0T1"] == 1 / 3 and c["ec_false_block"] == 1.0
     assert c["ec_esc_precision"] == 1.0 and c["ec_esc_recall"] == 2 / 3 and c["ec_twin_invariance"] == 1.0
+
+
+# ---------------------------------------------------------------------------
+# --dj-judge distinguish and --arm-b-dj llm (commit 12)
+# ---------------------------------------------------------------------------
+
+
+@needs_canon
+def test_distinguish_wraps_admit_and_restores_it_even_on_error(vetpoc):
+    fx = json.load(open(FIXTURE))
+    eng = vetpoc.engine
+    orig = eng.admit
+    store = [eng.Record.from_dict(r) for r in fx["store"]]
+    case = eng.case_from_dict(fx["case"])
+    want = eng.adjudicate(case, list(store), vetpoc.provisions, vetpoc.theta)
+    log = []
+    sh = bench_llm.Distinguisher("shadow", {1: _FakeClient()}, gov.DryFlip(11, "vetpoc", 1.0), 11, "vetpoc")
+    got = sh.adjudicate(eng, case, list(store), vetpoc.provisions, vetpoc.theta, 1, log)
+    assert eng.admit is orig and got["decision"] == want["decision"] and log and log[0]["dry_flipped"]
+    llm = bench_llm.Distinguisher("llm", {1: _FakeClient()}, gov.DryFlip(11, "vetpoc", 1.0), 11, "vetpoc")
+    flipped = llm.adjudicate(eng, case, list(store), vetpoc.provisions, vetpoc.theta, 1, [])
+    assert eng.admit is orig and flipped.get("controlling") != want.get("controlling"), "the model's admission binds"
+    with pytest.raises(RuntimeError):
+        with mock.patch.object(eng, "adjudicate", side_effect=RuntimeError("boom")):
+            llm.adjudicate(eng, case, list(store), vetpoc.provisions, vetpoc.theta, 1, [])
+    assert eng.admit is orig, "restored in finally"
+
+
+def test_suffix_names_distinguish_and_arm_b_runs():
+    ap = run_year.argparse.ArgumentParser()
+    gov.add_args(ap)
+    base = ["--roles-config", ROLES_EXAMPLE]
+    assert gov.Settings(ap.parse_args(base + ["--dj", "llm", "--dj-judge", "distinguish"])).suffix() == "+gov-llm+distinguish"
+    assert gov.Settings(ap.parse_args(base + ["--arm-b-dj", "llm"])).suffix() == "+gov-llm+armb-llm"

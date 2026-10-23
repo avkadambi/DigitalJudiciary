@@ -279,8 +279,18 @@ class Run:
                                   wait=self.gov.human_wait, human_cap=self.gov.l4_human_cap,
                                   proxy_client=self.roles.client("l4_proxy"), shadow_proxy=self.gov.l4_shadow_proxy,
                                   flip=self.flip, style=self.gov.prompt_style)
-            self.ladder = self.make_ladder()
+            if self.gov.dj_judge == "distinguish":
+                from simulation.ec.bench_llm import Distinguisher, DistinguishHearer
+                self.ladder = DistinguishHearer(Distinguisher(
+                    self.gov.mode("dj"), {1: self.roles.client("dj_l1"), 3: self.roles.client("dj_l3")}, self.flip,
+                    seed, self.pack))
+            else:
+                self.ladder = self.make_ladder()
             self.bench.hearer = self.ladder
+        self.arm_b_dj = None                   # arm B's DJ with the distinguishing question put to a model
+        if self.governed and arm == "B" and self.gov.arm_b_dj == "llm":
+            from simulation.ec.bench_llm import Distinguisher
+            self.arm_b_dj = Distinguisher("llm", {1: self.roles.client("dj_l1")}, self.flip, seed, self.pack)
         self.doctrine = None
         if self.governed and self.gov.mode("doctrine") != "deterministic" and arm == "D":
             from simulation.ec.doctrine_llm import Doctrine
@@ -393,6 +403,8 @@ class Run:
             seat = getattr(self, name, None)
             if seat is not None and hasattr(seat, "state"):
                 st[name] = seat.state()
+        if self.arm_b_dj is not None:
+            st["arm_b_dj"] = self.arm_b_dj.to_dict()
         return st
 
     def gov_restore(self, st: dict) -> None:
@@ -403,6 +415,8 @@ class Run:
             seat = getattr(self, name, None)
             if seat is not None and hasattr(seat, "restore"):
                 seat.restore(st.get(name) or {})
+        if self.arm_b_dj is not None:
+            self.arm_b_dj.restore(st.get("arm_b_dj") or {})
 
     # -- arm B: the DJ alone ---------------------------------------------------
     def case_dict_for(self, p, case: dict) -> dict:
@@ -425,7 +439,11 @@ class Run:
         consolidation_seen = self.consolidation_seen
         c = self.case_dict_for(p, case)
         case = c if isinstance(c, engine.Case) else engine.case_from_dict(c)
-        tr = engine.adjudicate(case, store, provisions, theta)
+        if self.arm_b_dj is not None:
+            self._dj_llm_log = []
+            tr = self.arm_b_dj.adjudicate(engine, case, store, provisions, theta, 1, self._dj_llm_log)
+        else:
+            tr = engine.adjudicate(case, store, provisions, theta)
 
         # Definition 7 clause (ii): the representative of a consolidation class.
         if (
@@ -537,6 +555,8 @@ class Run:
             dj = {"route": tr.get("route"), "decision": tr.get("decision"), "controlling": tr.get("controlling"),
                   "admitted": bool(tr.get("admitted")), "admission_ground": tr.get("admission_ground"),
                   "escalated_to": tr.get("escalated_to"), "record": rec.id if rec is not None else None}
+            if self.arm_b_dj is not None:
+                dj["distinguish_llm"] = list(self._dj_llm_log)
         else:
             if self.conscience is not None:
                 narrative = None
@@ -711,6 +731,8 @@ class Run:
                 "entry": esc.entry, "tier": esc.tier, "reason_code": esc.reason_code, "contest_to": esc.contest_to,
                 "holding": res["holding"], "route": res["trace"].get("route"),
                 "record": res["record"].id if res["record"] is not None else None, "internal": self.bench.internal})
+            if "distinguish" in res:
+                self.bench_log["hearings"][-1]["distinguish"] = res["distinguish"]
             if "ladder" in res:
                 self.bench_log["hearings"][-1].update(
                     {k: res[k] for k in ("origin", "ladder", "prosecutor", "escalation_reason", "oracle_engine",

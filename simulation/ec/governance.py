@@ -142,6 +142,10 @@ class Settings:
         s = f"+gov-{tag}"
         if self.prompt_style != "canon":
             s += f"+{self.prompt_style}"
+        if self.dj_judge == "distinguish" and self.modes["dj"] != "deterministic":
+            s += "+distinguish"
+        if self.arm_b_dj == "llm":
+            s += "+armb-llm"
         return s
 
     def to_dict(self) -> dict:

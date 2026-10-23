@@ -434,3 +434,113 @@ class LadderHearer:
     def restore(self, d: dict) -> None:
         self.failures.update(d.get("failures") or {})
         self.calls = int(d.get("calls", 0))
+
+
+# ---------------------------------------------------------------------------
+# --dj-judge distinguish and --arm-b-dj llm (§5.5)
+# ---------------------------------------------------------------------------
+
+DISTINGUISH_SCHEMA = {"distinguished": "true|false", "grounds": "<one sentence>"}
+# app/judges.py's question, verbatim in substance: the paper's one model-facing position.
+DISTINGUISH_QUESTION = (
+    "A stored precedent's holding rested on the following premise (facts that were material to its holding):\n"
+    "  premise: {premise}\n"
+    "The present case has these facts:\n"
+    "  facts: {facts}\n"
+    "Question (answer exactly this): does the precedent's holding rest on something the present case lacks? "
+    "If yes, the precedent is distinguished and must not control.")
+
+
+class Distinguisher:
+    """The model answers the distinguishing question inside the engine's own
+    procedure. `engine.admit` is wrapped at call time and restored in `finally`
+    (EC-17); `engine.py` is never edited. Only the premise rungs are asked
+    (distinguished / tolerant / a fortiori); prior text, an unproven premise
+    and an unaddressed adverse fact stay mechanical. Shadow returns the
+    engine's own admission (the model is logged); llm returns the model's.
+    Parse failure: not distinguished (the candidate stays in the pool), flagged."""
+
+    def __init__(self, mode: str, clients: dict, flip, seed: int, pack: str):
+        self.mode, self.clients, self.flip, self.seed, self.pack = mode, clients, flip, seed, pack
+        self.calls = self.failures = 0
+
+    def _ask(self, client, record, case, engine_says: bool, key: str) -> dict:
+        self.calls += 1
+        system = ("You are the distinguishing gate of the organisation's court of precedent.\n\n"
+                  + gov.schema_text(DISTINGUISH_SCHEMA))
+        user = DISTINGUISH_QUESTION.format(premise=", ".join(record.premise),
+                                           facts=", ".join(sorted(set(case.facts) - set(case.unrecorded))))
+        if client.mode != "live":
+            client.account_dry(system, user, 60)
+            val, f = engine_says, False
+            if self.flip is not None and self.flip.flip(key):
+                val, f = not engine_says, True
+            return {"distinguished": val, "dry_flipped": f}
+        parsed, meta = client.call_json(system, user, validate=lambda o: None if isinstance(o.get("distinguished"), bool)
+                                        else "distinguished must be true or false")
+        if parsed is None:
+            self.failures += 1
+            return {"distinguished": False, "degraded": True}
+        return {"distinguished": parsed["distinguished"], "grounds": str(parsed.get("grounds") or "")[:300],
+                "repaired": meta["repaired"]}
+
+    def adjudicate(self, engine, case, store, provisions, theta, level: int, log: list) -> dict:
+        orig = engine.admit
+        client = self.clients.get(level) or self.clients[1]
+        asked = {engine.DISTINGUISHED, engine.TOLERANT, engine.A_FORTIORI}
+
+        def admit(record, c, *rest, **kw):
+            a = orig(record, c, *rest, **kw)
+            if a.status not in asked:
+                return a
+            engine_says = a.status == engine.DISTINGUISHED
+            key = f"distinguish|L{level}|{c.id}|{record.id}"
+            dec = self._ask(client, record, c, engine_says, key)
+            log.append({"record": record.id, "case": c.id, "level": level, "engine": a.status,
+                        "distinguished": dec["distinguished"], **{k: v for k, v in dec.items() if k != "distinguished"}})
+            if self.mode == "shadow" or dec["distinguished"] == engine_says:
+                return a
+            if dec["distinguished"]:
+                return engine.Admission(record.id, engine.DISTINGUISHED, a.comparisons, a.distinguishing or (),
+                                        adverse=getattr(a, "adverse", ()) or ())
+            return engine.Admission(record.id, engine.TOLERANT, a.comparisons)
+        engine.admit = admit
+        try:
+            return engine.adjudicate(case, store, provisions, theta)
+        finally:
+            engine.admit = orig
+
+    def to_dict(self) -> dict:
+        return {"calls": self.calls, "failures": self.failures}
+
+    def restore(self, d: dict) -> None:
+        self.calls = int(d.get("calls", 0))
+        self.failures = int(d.get("failures", 0))
+
+
+class DistinguishHearer:
+    """`--dj-judge distinguish`: the engine hears the case (today's hearing) with
+    the distinguishing question put to the level's model."""
+    kind = "distinguish"
+
+    def __init__(self, distinguisher: Distinguisher):
+        self.d = distinguisher
+
+    def hear(self, bench, esc, case_dict: dict, store: list, provisions: dict, theta, engine) -> dict:
+        dd = dict(case_dict)
+        dd["contest_to"] = esc.contest_to
+        case = engine.case_from_dict(dd)
+        log: list = []
+        trace = self.d.adjudicate(engine, case, store, provisions, theta, 3 if esc.contest_to >= 3 else 1, log)
+        rec = None
+        if not bench.internal and trace.get("admitted"):
+            rec = engine._record_from(case, trace, provisions)
+            patch_expiry(rec)
+            store.append(rec)
+        return {"holding": trace["decision"], "record": rec, "trace": trace, "distinguish": log}
+
+    def to_dict(self) -> dict:
+        return {"kind": self.kind, **self.d.to_dict()}
+
+    def restore(self, d: dict) -> None:
+        self.d.restore(d)
