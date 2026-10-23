@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "honesty_rule": "The human reviewer's rates are inputs. A single simulation run can only show what follows if reviewers behave as the cited studies measured. The break-even sweep shows how far reviewer behaviour would have to move before the conclusion flips.",
+  "review": {
+    "catch": {"value": 0.333, "source": "Edmundson et al. 2013, ESSoS: 30 reviewers, 7 known vulnerabilities, mean 2.33 found; 2.33 / 7"},
+    "false_flag_ratio": {"value": 1.70, "source": "Edmundson et al. 2013: mean 6.29 reported, 2.33 correct; (6.29 - 2.33) / 2.33 (derived)"},
+    "false_reject": {"value": "derived", "source": "derived per run: 1.70 x catch x p_imperm / (1 - p_imperm), p_imperm the arm's share of impermissible changes reaching review"},
+    "coverage": {"value": 1.0, "source": "SOC 2 CC8.1 practice (prereg/REALISM_REVIEW.md section 1)"},
+    "minutes": {"value": 15, "source": "assumption"},
+    "delay_days": {"value": 0.5, "source": "assumption"},
+    "rework_minutes": {"value": 15, "source": "assumption: rework after a false reject"}
+  },
+  "profiles": {
+    "flat-edmundson": {"source": "primary model: sourced or directly derived values only", "changes": {}},
+    "braz-unprompted": {"source": "Braz et al. 2022, ICSE: unprompted reviewers found 3% and 21% of two injected flaws; mean 0.12", "changes": {"catch": 0.12}},
+    "braz-prompted": {"source": "Braz et al. 2022: a security focus raised detection about eight-fold; min(1, 0.12 x 8). Upper sensitivity only", "changes": {"catch": 0.96}},
+    "visibility": {"source": "assumption: what a reviewer can only see by consulting records, precedent, a second rule or the evidence is caught less often", "changes": {"catch_by_class": {"V": 0.333, "P": 0.25, "E": 0.15, "C": 0.15, "R": 0.10, "D": 0.10}}},
+    "crunch": {"source": "assumption: lighter review under schedule pressure", "changes": {"season_mult": {"release_crunch": 0.75, "quarter_crunch": 0.75, "freeze": 0.5}}},
+    "no-false-flags": {"source": "the most favourable human: no wasted blocks", "changes": {"false_flag_ratio": 0.0}}
+  },
+  "audit": {
+    "sample_per_quarter": {"value": 25, "source": "assumption, in the range typically sampled for a change-management control", "sensitivity": [0, 60, "all"]},
+    "detect": {"value": 0.80, "source": "assumption", "sensitivity": [0.333, 1.0]}
+  },
+  "appeal": {
+    "p": {"value": 0.30, "source": "assumption", "sensitivity": [0.1, 0.5]}
+  },
+  "harm": {
+    "rulebook": {"source": "assumption on an order-of-magnitude scale: absolute 100; binding citation with a legal, regulatory or safety harm 20; internal standard with such a harm 5; else 1; VAL-ACC 20",
+                 "absolute": 100, "binding_lrs": 20, "internal_lrs": 5, "other": 1, "VAL-ACC": 20},
+    "tier": {"source": "sensitivity: EC's own tiers", "T0": 100, "T1": 20, "T2": 5, "T3": 1},
+    "flat": {"source": "sensitivity: every violation 1"},
+    "steep": {"source": "sensitivity: absolute 1,000, else as rulebook", "absolute": 1000}
+  },
+  "cost": {
+    "reviewer_hour": {"value": 100, "source": "assumption"},
+    "delay_day": {"value": 50, "source": "assumption"},
+    "harm_unit": {"value": 1000, "source": "assumption"}
+  },
+  "corners": {
+    "rate": {"value": 0.08, "source": "assumption: benchmark default; 0 means off"},
+    "weights": {"value": {"r_expired": 0.12, "r_scope": 0.10, "r_inside_line": 0.08, "r_revoked": 0.05,
+                          "e_mismatch": 0.12, "e_missing": 0.08, "c_conflict": 0.05,
+                          "s_valid_exception": 0.15, "s_evidenced_departure": 0.15, "s_emergency": 0.10},
+                "source": "assumption"}
+  },
+  "sweep": {
+    "catch": {"value": [0.0, 1.0, 0.05], "source": "break-even grid"},
+    "false_flag_ratio": {"value": [0.0, 3.0, 0.25], "source": "break-even grid"}
+  },
+  "sources": [
+    "Edmundson, A., Holtkamp, B., Rivera, E., Finifter, M., Mettler, A., Wagner, D. (2013). An empirical study on the effectiveness of security code review. ESSoS 2013.",
+    "Braz, L., Aeberhard, C., Calikli, G., Bacchelli, A. (2022). Less is more: supporting developers in vulnerability detection during code review. ICSE 2022. arXiv 2202.04586."
+  ]
+}
