@@ -49,7 +49,7 @@ from simulation.ec.escalate import Bench, Escalation, contest_policy   # noqa: E
 from simulation.ec.examen import ExamenEntry, VerifiedEvent, reconcile   # noqa: E402
 from simulation.ec.rulebook_rev import amend_engine  # noqa: E402
 from simulation.ec.gate import (NON_CONTRARY_KINDS, STAND_DOWN_KINDS, Act, Verdict, contravenes,  # noqa: E402
-                                 evidence_supports, gate,
+                                 evidence_supports, gate, gate_oracle,
                                  is_departure, is_say_so_claim)
 from simulation.ec.registry import Registry                     # noqa: E402
 from simulation.ec.rival import rival_decide                    # noqa: E402
@@ -187,6 +187,11 @@ def impermissible(act, entries: list, registry: Registry, canon: Canon, day: int
     return False, tier, None
 
 
+def four_way_of(v: Verdict) -> str:
+    from simulation.ec.gate import four_way
+    return four_way(v)
+
+
 def normalise_event(v: Verdict, act, imperm: bool, executed: bool, arm: str) -> str:
     """The verified event type the examen is reconciled against. In arms C and
     D the gate names it; in A and B the driver does, from the truth and what
@@ -258,6 +263,14 @@ class Run:
                                       rate_limit_s=float(getattr(args, "rate_limit", 0.0) or 0.0),
                                       anthropic_prices=PRICES, roles=self.gov.roles_needed())
             self.flip = gov.DryFlip(seed, self.pack, self.gov.dry_error_rate)
+        self.filing_meta: dict = {}            # act_id -> the filing as the bench answer keys need it (governed)
+        self.conscience = None
+        if self.governed and self.gov.mode("ec") != "deterministic" and arm in ("C", "D"):
+            from simulation.ec.conscience_llm import Conscience
+            ec_spec = (self.roles.cfg.get("roles") or {}).get("ec") or {}
+            self.conscience = Conscience(self.gov.mode("ec"), self.gov.prompt_style, self.roles.client("ec"),
+                                         self.flip, input_mode=ec_spec.get("input", "rendered"),
+                                         samples=self.gov.samples)
         self.partition = streammod.partition_days(
             data.cases, data.like_pairs, random.Random(f"{seed}|{self.pack}|partition"), days=cal.DAYS, lam=cal.LAMBDA)
         # state
@@ -325,7 +338,7 @@ class Run:
     # -- governance state ------------------------------------------------------
     def gov_state(self) -> dict:
         """Every seat's state and the usage by role (checkpoint)."""
-        st = {"roles": self.roles.state()}
+        st = {"roles": self.roles.state(), "filing_meta": self.filing_meta}
         for name in ("conscience", "offices", "auditor", "doctrine", "l4"):
             seat = getattr(self, name, None)
             if seat is not None and hasattr(seat, "state"):
@@ -334,6 +347,7 @@ class Run:
 
     def gov_restore(self, st: dict) -> None:
         self.roles.restore(st.get("roles") or {})
+        self.filing_meta = dict(st.get("filing_meta") or {})
         for name in ("conscience", "offices", "auditor", "doctrine", "l4"):
             seat = getattr(self, name, None)
             if seat is not None and hasattr(seat, "restore"):
@@ -444,6 +458,8 @@ class Run:
 
         dj = None
         rec = None
+        ecf = None          # the conscience's line fields (governed C/D)
+        per = None          # the gate's per-entry answers (governed; the bench's oracle_canon)
         if arm == "A":
             v = rival_decide(p, canon, registry)
             executed = v.decision == "allow"
@@ -457,7 +473,18 @@ class Run:
                   "admitted": bool(tr.get("admitted")), "admission_ground": tr.get("admission_ground"),
                   "escalated_to": tr.get("escalated_to"), "record": rec.id if rec is not None else None}
         else:
-            v = gate(p, canon, registry, day, self.agent.line)
+            if self.conscience is not None:
+                narrative = None
+                parsed = getattr(self.agent, "_last_parsed", None) if not human else None
+                if isinstance(parsed, dict) and isinstance(parsed.get("examen"), dict):
+                    narrative = str(parsed["examen"].get("narrative") or "") or None
+                v, ecf = self.conscience.decide(p, canon, registry, day, self.agent.line, narrative,
+                                                (case.get("scenario") or {}).get("change"))
+                per = ecf["oracle_verdict"]["per_entry"]
+            else:
+                if self.governed:
+                    per = gate_oracle(p, canon, registry, day, self.agent.line)[2]   # pure: for the bench keys
+                v = gate(p, canon, registry, day, self.agent.line)
             executed = v.decision == "allow"
         if arm in ("A", "B") and executed and act.token_claim and act.token_claim in registry.tokens:
             tok = registry.tokens[act.token_claim]
@@ -477,6 +504,9 @@ class Run:
         if p.twin_of is None and arm in ("C", "D"):
             if v.escalate:
                 contest_to = contest_policy(v)
+                if self.conscience is not None and self.conscience.mode == "llm" and (ecf or {}).get("ec_llm"):
+                    from simulation.ec.conscience_llm import contest_to_for
+                    contest_to = contest_to_for(ecf["ec_llm"]["decision"])
                 if arm == "D" and contested:
                     contest_to = max(contest_to, int(case.get("contest_to", 0)))
                 esc = Escalation(act_id=p.act_id, case_id=p.case_id, company=p.company, day_filed=day,
@@ -490,6 +520,16 @@ class Run:
                 self.bench.file(esc)
                 self.filed_cases[p.act_id] = self.case_dict_for(p, case)
                 self.bench_log["filings"].append(esc.to_dict())
+                if self.governed:
+                    # R1: the canon and registry state of the filing day, for the bench's oracle_canon,
+                    # and the conscience's ruling on the act, for routing trigger i.
+                    ec_dec = ((ecf or {}).get("ec_llm") or {}).get("decision") if self.conscience is not None else None
+                    self.filing_meta[p.act_id] = {
+                        "origin": "corpus_contest" if esc.reason_code == "corpus_contest" else "ec_filing",
+                        "per_entry": per if esc.reason_code != "corpus_contest" else None,
+                        "conflict": bool(act.conflict), "contest_to": esc.contest_to,
+                        "conscience_decision": ec_dec or four_way_of(v),
+                        "conscience_tier": v.tier, "token_claim": act.token_claim}
 
         line = {
             "pack": self.pack, "arm": arm, "seed": self.seed, "day": day, "seq": p.seq, "ts": p.ts,
@@ -507,6 +547,8 @@ class Run:
         rf = set(p.facts or [])
         rb = [en.tier for en in entries if en.kind == "provision" and rf & set(en.violate_factors)]
         line["request_breach_tier"] = min(rb, key=lambda t: "T0T1T2T3".index(t)) if rb else None
+        if self.governed and arm in ("C", "D") and ecf is not None:
+            line.update(ecf)
         if self.llm_live:
             # Live LLM lines only, so dry and policy lines keep their registered byte layout.
             line["parse_failed"] = bool(getattr(self.agent, "last_parse_failed", False))

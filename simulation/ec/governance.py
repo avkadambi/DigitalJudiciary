@@ -137,8 +137,8 @@ class Settings:
         """The run-directory suffix: empty for a deterministic run."""
         if not self.governed:
             return ""
-        modes = set(m for m in self.modes.values())
-        tag = self.preset if len(modes) == 1 else "mixed"
+        modes = set(m for m in self.modes.values() if m != "deterministic") or {"llm"}
+        tag = modes.pop() if len(modes) == 1 else "mixed"
         s = f"+gov-{tag}"
         if self.prompt_style != "canon":
             s += f"+{self.prompt_style}"

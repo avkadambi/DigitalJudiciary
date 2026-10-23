@@ -270,3 +270,93 @@ def test_live_startup_names_missing_keys_never_values(monkeypatch, tmp_path):
     msg = str(ei.value)
     assert "ANTHROPIC_API_KEY" in msg and "NOVITA_API_KEY" in msg and "secret-value-123" not in msg
     assert "DEEPINFRA_API_KEY" not in msg
+
+
+# ---------------------------------------------------------------------------
+# The LLM conscience (commit 5)
+# ---------------------------------------------------------------------------
+
+from simulation.ec import conscience_llm as cl                       # noqa: E402
+
+
+class _FakeClient:
+    """A conscience client: dry (accounts tokens only) or live with a fixed reply."""
+
+    def __init__(self, mode="dry", reply=None):
+        self.mode, self.reply, self.last_cost, self.dry_calls, self.prompts = mode, reply, {}, 0, []
+
+    def account_dry(self, system, user, out_tokens):
+        self.dry_calls += 1
+        self.prompts.append(system + "\n" + user)
+
+    def call_json(self, system, user, validate=None):
+        self.prompts.append(system + "\n" + user)
+        if self.reply is None or (validate and validate(self.reply)):
+            return None, {"repaired": True}
+        return dict(self.reply), {"repaired": False}
+
+
+def _token_case(vetpoc, agent="agent:x"):
+    canon = vetpoc.fresh_canon()
+    e = next(x for x in canon.entries.values() if x.tier == "T1" and x.kind == "provision" and x.office)
+    reg = Registry(canon)
+    tok = reg.issue(e.office, e.act_class, e.id, 1, single_use=True)
+    act = Act("exception", e.id, e.violate_factors[0], "N", None, None, tok.id, False)
+    p = Proposal("A-1", "C-1", "vetpoc", 2, 2000, 0, agent, "llm", "ai-agent", [e.id], "NONE", 0, False, None,
+                 act, facts=[])
+    return canon, reg, tok, p
+
+
+@needs_canon
+def test_conscience_shadow_binds_the_answer_key(vetpoc):
+    canon, reg, tok, p = _token_case(vetpoc)
+    c = cl.Conscience("shadow", "canon", _FakeClient(), gov.DryFlip(11, "vetpoc", 1.0))
+    v, fields = c.decide(p, canon, reg, 2, "agent:x")
+    assert four_way(v) == "allow" and reg.tokens[tok.id].consumed, "shadow: the gate's verdict and consumption"
+    assert fields["ec_llm"]["dry_flipped"] and fields["ec_llm"]["decision"] != "allow", "the flip is only logged"
+    assert fields["oracle_verdict"]["four_way"] == "allow" and fields["ec_mode"] == "shadow"
+
+
+@needs_canon
+def test_conscience_llm_binds_the_model_and_consumes_only_what_it_used(vetpoc):
+    canon, reg, tok, p = _token_case(vetpoc)
+    reply = {"entries": [], "conflict": False, "decision": "block", "entry": None, "tier": None,
+             "reason_code": "x", "token_used": None, "reasons": "no", "confidence": 80}
+    c = cl.Conscience("llm", "canon", _FakeClient("live", reply), None)
+    v, fields = c.decide(p, canon, reg, 2, "agent:x")
+    assert v.decision == "block" and not v.escalate and not reg.tokens[tok.id].consumed
+    assert fields["oracle_verdict"]["four_way"] == "allow" and fields["ec_llm"]["decision"] == "block"
+    assert cl.contest_to_for("hold") == 3 and cl.contest_to_for("escalate") == 2
+
+
+@needs_canon
+def test_conscience_parse_failure_escalates(vetpoc):
+    canon, reg, tok, p = _token_case(vetpoc)
+    c = cl.Conscience("llm", "canon", _FakeClient("live", {"decision": "maybe"}), None)
+    v, fields = c.decide(p, canon, reg, 2, "agent:x")
+    assert four_way(v) == "escalate" and fields["ec_llm"]["parse_failed"] and c.failures == 1
+    assert not reg.tokens[tok.id].consumed
+
+
+@needs_canon
+def test_conscience_prompt_has_no_answer_key_and_ignores_the_proposer(vetpoc):
+    prompts = []
+    for agent in ("agent:x", "human:ops"):
+        canon, reg, tok, p = _token_case(vetpoc, agent)
+        client = _FakeClient()
+        cl.Conscience("shadow", "canon", client, None).decide(p, canon, reg, 2, "agent:x")
+        prompts.append(client.prompts[0])
+    assert prompts[0] == prompts[1], "EC-14: the same act gets a byte-identical prompt"
+    for word in ("impermissible", "oracle", "four_way", "presented_driver"):
+        assert word not in prompts[0]
+    assert not gov.canon_leaks(prompts[0])
+
+
+def test_run_dir_suffix_names_the_governed_mode():
+    ap = run_year.argparse.ArgumentParser()
+    gov.add_args(ap)
+    base = ["--roles-config", ROLES_EXAMPLE]
+    assert gov.Settings(ap.parse_args(base)).suffix() == ""
+    assert gov.Settings(ap.parse_args(base + ["--ec", "shadow"])).suffix() == "+gov-shadow"
+    assert gov.Settings(ap.parse_args(base + ["--ec", "llm"])).suffix() == "+gov-llm"
+    assert gov.Settings(ap.parse_args(base + ["--ec", "llm", "--office", "shadow"])).suffix() == "+gov-mixed"
