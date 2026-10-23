@@ -519,3 +519,20 @@ def test_hl_live_run_writes_no_key_anywhere(vp, mock_env, tmp_path):
             assert b"test-key" not in f.read_bytes(), f
     m = json.load(open(out / "vetpoc" / "HL" / "seed-97" / "manifest.json"))["benchmark"]["review"]
     assert m["profile"] == "llm" and m["calls"] > 0
+
+
+# Conformance B-01..B-12 and the mutation matrix ------------------------------
+
+@needs_canon
+def test_benchmark_conformance_twelve_of_twelve(tmp_path):
+    from simulation.ec import run_benchmark_conformance as bc
+    res = bc.run_checks(bc.Fixture(60, 97, str(tmp_path)), quiet=True)
+    failed = [(c["id"], c["detail"], c["sample"]) for c in res["checks"] if not c["pass"]]
+    assert res["total"] == 12 and not failed, failed
+
+
+@pytest.mark.slow
+def test_benchmark_mutation_matrix():
+    from conftest import result_line, run
+    proc = run([os.path.join(ROOT, "simulation", "ec", "mutation_matrix_benchmark.py")], timeout=1200)
+    assert result_line(proc).startswith("RESULT: 12/12 faults killed, 2/2 controls survived"), proc.stdout[-3000:]
