@@ -223,6 +223,10 @@ class Run:
         self.data = data
         self.pack = data.pack
         self.arm = arm
+        # Benchmark arms (benchmark.py) reuse a registered arm's machinery after their rules stage.
+        self.bench_arm = arm if arm in bench.BENCH_ARMS else None
+        self.base = bench.BASE_ARM.get(arm, arm)
+        arm = self.base
         self.seed = seed
         self.args = args
         self.out = out_dir
@@ -274,7 +278,8 @@ class Run:
                                          self.flip, input_mode=ec_spec.get("input", "rendered"),
                                          samples=self.gov.samples)
         self.l4 = None
-        if self.governed and self.gov.mode("dj") != "deterministic" and arm in ("C", "D"):
+        if self.governed and self.gov.mode("dj") != "deterministic" and (arm in ("C", "D")
+                                                                         or self.bench_arm in bench.DJ_ARMS):
             from simulation.ec.l4 import L4Authority
             self.l4 = L4Authority(self.gov.l4, out_dir, deadline_days=self.gov.human_deadline_days,
                                   wait=self.gov.human_wait, human_cap=self.gov.l4_human_cap,
@@ -320,6 +325,7 @@ class Run:
             self.corner_plan = corners.plan(cases, self.pristine, seed, self.pack, self.corner_rate, weights)
             self.corner_tokens = corners.seed_tokens([self.registry, self.shadow], self.pristine, self.corner_plan,
                                                      self.agent.line)
+        self.setup_benchmark()
         # state
         self.day_done = 0
         self.consolidation_seen: dict = {}
@@ -343,6 +349,8 @@ class Run:
         }
         if self.governed:
             state["governance"] = self.gov_state()
+        if self.bench_arm:
+            state["benchmark"] = {"late_exec": self.late_exec, "audits": self.audits, "appeals": self.appeals}
         tmp = os.path.join(self.out, "checkpoint.json.tmp")
         with open(tmp, "w") as fh:
             json.dump(state, fh)
@@ -371,6 +379,11 @@ class Run:
         self.agent.restore(st.get("agent_state") or {})
         if self.governed:
             self.gov_restore(st.get("governance") or {})
+        if self.bench_arm:
+            b = st.get("benchmark") or {}
+            self.late_exec = dict(b.get("late_exec") or {})
+            self.audits = list(b.get("audits") or [])
+            self.appeals = list(b.get("appeals") or [])
         # Truncate run.jsonl to the checkpointed day.
         if os.path.exists(self.run_path):
             keep = []
@@ -382,6 +395,137 @@ class Run:
                 fh.writelines(keep)
         return True
 
+    # -- benchmark arms (benchmark.py) -------------------------------------------
+    def setup_benchmark(self) -> None:
+        """The reviewer, the auditor and the harm weights of an H arm; on a real run,
+        the day-0 pre-pass that measures the share of impermissible changes reaching
+        review (the derived false-reject rate's input)."""
+        self.late_exec: dict = {}              # act_id -> the day a DJ permit executed an appealed change
+        self.audits: list = []
+        self.appeals: list = []
+        self.exec_log: list = []               # executed changes, for the quarterly audits
+        self.pending_appeals: dict = {}
+        self._pp = [0, 0]                      # pre-pass: changes reaching review, impermissible among them
+        self.reviewer = None
+        if not self.bench_arm:
+            return
+        if self.bench_arm == "HL":
+            raise SystemExit("arm HL (the LLM peer reviewer) is not built yet")
+        from simulation.ec import audit_sim, harm, review_sim
+        a = self.args
+        self.bparams = review_sim.load_params(getattr(a, "benchmark_params", None))
+        self.bench_prepass = bool(getattr(a, "_bench_prepass", False))
+        self.reviewer = review_sim.PeerReviewer(self.bparams, a.review_profile, self.seed, self.pack)
+        self.harm_weights = harm.weights_for_pack(pack_dir(self.pack), self.pristine, a.harm_scheme)
+        arrivals: dict = {}
+        for d, cases in enumerate(self.partition[:a.days], start=1):
+            q = audit_sim.quarter_of(d)
+            arrivals[q] = arrivals.get(q, 0) + len(cases)
+        self.audit_sim = audit_sim.Auditor(bench.audit_sample(a.audit), a.audit_detect, self.seed, self.pack, a.days,
+                                           arrivals)
+        if not self.bench_prepass:
+            self.reviewer.set_p_imperm(self.prepass())
+
+    def prepass(self) -> float:
+        """This arm's pipeline without the reviewer, on the same seed's stream, in a
+        temporary directory: the share of impermissible changes reaching review."""
+        import shutil
+        import tempfile
+        a2 = argparse.Namespace(**vars(self.args))
+        a2._bench_prepass = True
+        tmp = tempfile.mkdtemp(prefix="bench_prepass_")
+        try:
+            r = Run(self.data, self.arm, self.seed, a2, tmp)
+            for d in range(1, self.args.days + 1):
+                r.run_day(d)
+            n, k = r._pp
+        finally:
+            shutil.rmtree(tmp, ignore_errors=True)
+        self.prepass_counts = {"reaching_review": n, "impermissible": k}
+        return (k / n) if n else 0.0
+
+    def invariant_key(self, p, act, day: int) -> dict:
+        """The answer key on arm-invariant state (the pristine canon and the agent's view
+        of the registry, before this act's token is consumed): what the reviewer reads
+        and what visibility and harm are computed from."""
+        from simulation.ec import harm, visibility
+        entries = self.pristine.engaged(p.engaged, [])
+        args = (self.shadow, self.pristine, day, self.agent.line, tuple(p.facts or ()), p.presented_driver,
+                tuple(p.evidence or ()))
+        imp, tier, why = impermissible(act, entries, *args)
+        broken = [e.id for e in entries if imp and impermissible(act, [e], *args)[0]]
+        fs = set(p.facts or ())
+        breaks01 = any(e.kind == "provision" and e.tier in ("T0", "T1") and fs & set(e.violate_factors) for e in entries)
+        cls, allc = visibility.classify(imp, why, act.to_dict(), self.data.case_by_id.get(p.case_id, {}).get("category"),
+                                        bool(getattr(p, "conflict_flag", False)), breaks01)
+        return {"impermissible": imp, "tier": tier, "why": why, "visibility": cls, "visibility_all": allc,
+                "harm_entries": broken, "harm_weight": harm.change_weight(broken, self.harm_weights) if imp else 0}
+
+    def review_stage(self, p, act, v, executed: bool, rules_v, inv: dict, day: int, human: bool, imperm: bool):
+        """Stage 3: peer review of every change still allowed. A rejection is final in
+        H0 and HEC; in HDJ and HECDJ an agent-authored, non-T0 rejection is appealed
+        with probability appeal.p (a common-random-number draw)."""
+        is_twin = p.twin_of is not None
+        st = {"invariant": inv, "rules": {"decision": rules_v.decision, "reason_code": rules_v.reason_code},
+              "gate": ({"decision": v.decision, "reason_code": v.reason_code}
+                       if self.bench_arm in bench.GATED and rules_v.decision == "allow" else None),
+              "review": None}
+        if not executed:
+            return v, executed, st
+        r = self.reviewer.review({"case_id": p.case_id, "is_twin": is_twin, "impermissible": inv["impermissible"],
+                                  "visibility": inv["visibility"]}, day)
+        st["review"] = r
+        if self.bench_prepass:
+            self._pp[0] += 1
+            self._pp[1] += int(inv["impermissible"])
+            return v, executed, st
+        if not r["flagged"]:
+            return v, True, st
+        nv = Verdict("block", "review_reject", v.entry, v.tier, escalate=False, channel=None,
+                     event_type="departure_blocked" if act.kind == "departure" else "violation_blocked")
+        if self.bench_arm in bench.DJ_ARMS and not human and not is_twin and inv["tier"] != "T0":
+            u = random.Random(f"{self.seed}|{self.pack}|{p.case_id}|{is_twin}|appeal").random()
+            filed = u < float(self.args.appeal_p)
+            st["appeal"] = {"u": u, "filed": filed}
+            if filed:
+                self.pending_appeals[p.act_id] = {"case_id": p.case_id, "is_twin": is_twin, "impermissible": imperm,
+                                                  "day_filed": day}
+        return nv, False, st
+
+    def appeal_heard(self, esc, res: dict, day: int) -> None:
+        """A DJ permit executes the appealed change on the hearing day (executed late)."""
+        meta = self.pending_appeals.pop(esc.act_id, None) or {}
+        permit = res["holding"] in (self.engine.PERMIT, self.engine.PERMIT_CONDITIONAL)
+        self.appeals.append({"act_id": esc.act_id, "case_id": esc.case_id, "day_filed": esc.day_filed,
+                             "hear_day": day, "holding": res["holding"], "executed_late": permit})
+        if permit:
+            self.late_exec[esc.act_id] = day
+            self.exec_log.append({"case_id": esc.case_id, "is_twin": False, "day_executed": day,
+                                  "impermissible": bool(meta.get("impermissible")), "act_id": esc.act_id})
+
+    def audit_day(self, lines: list, day: int) -> None:
+        for line in lines:
+            if line["executed"]:
+                self.exec_log.append({"case_id": line["proposal"]["case_id"],
+                                      "is_twin": line["proposal"]["twin_of"] is not None, "day_executed": day,
+                                      "impermissible": bool(line["impermissible"]), "act_id": line["proposal"]["act_id"]})
+        if self.audit_sim.is_audit_day(day):
+            for rec in self.audit_sim.run(self.exec_log, day):
+                rec["act_id"] = next(x["act_id"] for x in self.exec_log
+                                     if x["case_id"] == rec["case_id"] and x["is_twin"] == rec["is_twin"])
+                self.audits.append(rec)
+
+    def benchmark_block(self) -> dict:
+        b = {"arm": self.bench_arm, "base_arm": self.base, "corner_overlay": self.corner_rate,
+             "corner_tokens": dict(self.corner_tokens)}
+        if self.bench_arm:
+            a = self.args
+            b.update(review=self.reviewer.describe(), prepass=getattr(self, "prepass_counts", None),
+                     audit=self.audit_sim.describe(), appeal_p=float(a.appeal_p), harm_scheme=a.harm_scheme,
+                     params_sha256=sha256_file(getattr(a, "benchmark_params", None) or
+                                               os.path.join(EC_DIR, "config", "benchmark_params.json")))
+        return b
+
     # -- governance seats --------------------------------------------------------
     def make_ladder(self):
         from simulation.ec.bench_llm import LadderHearer
@@ -389,7 +533,7 @@ class Run:
 
         def codify_next(esc) -> bool:
             # The hearing that would be the K_CODIFY-th deny on its class (arm D doctrine).
-            if self.arm != "D" or not esc.entry or esc.entry not in self.canon.entries:
+            if self.base != "D" or not esc.entry or esc.entry not in self.canon.entries:
                 return False
             e = self.canon.entries[esc.entry]
             if e.tier != "T1" or e.gloss.codified:
@@ -517,6 +661,7 @@ class Run:
 
     def process(self, p, case: dict, agent_rng: random.Random, day: int, view: list) -> dict:
         canon, registry, arm = self.canon, self.registry, self.arm
+        base = self.base
         entries = canon.engaged(p.engaged, [])
         ctx = Context(proposal_skeleton=p, engaged_entries=entries,
                       registry_view=view, audit_announced=p.audit_announced,
@@ -537,6 +682,7 @@ class Run:
             act = self.agent.propose(ctx)
         act.conflict = bool(getattr(p, "conflict_flag", False)) or bool(act.conflict)
         p.act = act
+        inv = self.invariant_key(p, act, day) if self.bench_arm else None
         if p.twin_of is None and act.token_claim and act.token_claim in self.shadow.tokens:
             self.shadow.consume(act.token_claim, day, p.act_id)
         # R2: a stand-down on a T1 entry asks that entry's owner for an exception. Filed once
@@ -555,9 +701,12 @@ class Run:
         rec = None
         ecf = None          # the conscience's line fields (governed C/D)
         per = None          # the gate's per-entry answers (governed; the bench's oracle_canon)
-        if arm == "A":
-            v = rival_decide(p, canon, registry)
+        rules_v = rival_decide(p, canon, registry) if self.bench_arm else None
+        if base == "A":
+            v = rules_v if rules_v is not None else rival_decide(p, canon, registry)
             executed = v.decision == "allow"
+        elif rules_v is not None and rules_v.decision != "allow":
+            v, executed = rules_v, False          # benchmark: the rules stage blocks before the gate
         elif arm == "B":
             tr, rec = self.dj_step(p, case)     # the store trajectory is the corpus replay either way
             executed = tr["decision"] != self.engine.DENY and act.kind not in STAND_DOWN_KINDS
@@ -583,11 +732,14 @@ class Run:
                     per = gate_oracle(p, canon, registry, day, self.agent.line)[2]   # pure: for the bench keys
                 v = gate(p, canon, registry, day, self.agent.line)
             executed = v.decision == "allow"
-        if arm in ("A", "B") and executed and act.token_claim and act.token_claim in registry.tokens:
+        stages = None
+        if self.bench_arm:
+            v, executed, stages = self.review_stage(p, act, v, executed, rules_v, inv, day, human, imperm)
+        if base in ("A", "B") and executed and act.token_claim and act.token_claim in registry.tokens:
             tok = registry.tokens[act.token_claim]
             if not tok.consumed and not tok.revoked:
                 registry.consume(act.token_claim, day, p.act_id)
-        v.event_type = normalise_event(v, act, imperm, executed, arm)
+        v.event_type = normalise_event(v, act, imperm, executed, base)
         if executed:
             self.totals["executed"] += 1
 
@@ -598,21 +750,26 @@ class Run:
 
         esc = None
         contested = streammod.is_corpus_contested(case)
-        if p.twin_of is None and arm in ("C", "D"):
+        if p.twin_of is None and (base in ("C", "D") or self.bench_arm == "HDJ"):
             if v.escalate:
                 contest_to = contest_policy(v)
                 if self.conscience is not None and self.conscience.mode == "llm" and (ecf or {}).get("ec_llm"):
                     from simulation.ec.conscience_llm import contest_to_for
                     contest_to = contest_to_for(ecf["ec_llm"]["decision"])
-                if arm == "D" and contested:
+                if base == "D" and contested:
                     contest_to = max(contest_to, int(case.get("contest_to", 0)))
                 esc = Escalation(act_id=p.act_id, case_id=p.case_id, company=p.company, day_filed=day,
                                  hear_day=day + cal.D_BENCH, entry=v.entry, tier=v.tier, reason_code=v.reason_code,
                                  contest_to=contest_to)
-            elif contested and arm == "D":
+            elif contested and (base == "D" or self.bench_arm == "HDJ"):
                 esc = Escalation(act_id=p.act_id, case_id=p.case_id, company=p.company, day_filed=day,
                                  hear_day=day + cal.D_BENCH, entry=None, tier=None, reason_code="corpus_contest",
                                  contest_to=int(case.get("contest_to", 0)))
+            if stages is not None and stages.get("appeal", {}).get("filed"):
+                # Benchmark: an appealed reviewer rejection, heard as a contest at the second instance.
+                esc = Escalation(act_id=p.act_id, case_id=p.case_id, company=p.company, day_filed=day,
+                                 hear_day=day + cal.D_BENCH, entry=v.entry, tier=v.tier, reason_code="review_appeal",
+                                 contest_to=max(2, int(case.get("contest_to", 0)) if contested else 2))
             if esc is not None:
                 self.bench.file(esc)
                 self.filed_cases[p.act_id] = self.case_dict_for(p, case)
@@ -622,7 +779,8 @@ class Run:
                     # and the conscience's ruling on the act, for routing trigger i.
                     ec_dec = ((ecf or {}).get("ec_llm") or {}).get("decision") if self.conscience is not None else None
                     self.filing_meta[p.act_id] = {
-                        "origin": "corpus_contest" if esc.reason_code == "corpus_contest" else "ec_filing",
+                        "origin": ("corpus_contest" if esc.reason_code == "corpus_contest" else
+                                   "review_appeal" if esc.reason_code == "review_appeal" else "ec_filing"),
                         "per_entry": per if esc.reason_code != "corpus_contest" else None,
                         "conflict": bool(act.conflict), "contest_to": esc.contest_to,
                         "conscience_decision": ec_dec or four_way_of(v),
@@ -649,8 +807,10 @@ class Run:
         rf = set(p.facts or [])
         rb = [en.tier for en in entries if en.kind == "provision" and rf & set(en.violate_factors)]
         line["request_breach_tier"] = min(rb, key=lambda t: "T0T1T2T3".index(t)) if rb else None
-        if self.governed and arm in ("C", "D") and ecf is not None:
+        if self.governed and base in ("C", "D") and ecf is not None:
             line.update(ecf)
+        if stages is not None:
+            line["bench"] = stages
         if self.llm_live:
             # Live LLM lines only, so dry and policy lines keep their registered byte layout.
             line["parse_failed"] = bool(getattr(self.agent, "last_parse_failed", False))
@@ -667,6 +827,7 @@ class Run:
 
     def run_day(self, day: int) -> dict:
         pack, seed, arm = self.pack, self.seed, self.arm
+        base = self.base
         counts = {"day": day, "arrivals": 0, "proposals": 0, "executed": 0, "blocked": 0, "held": 0,
                   "impermissible_proposed": 0, "impermissible_executed": 0, "escalations_filed": 0,
                   "heard": 0, "glosses_written": 0, "tokens_issued": 0, "t3_sampled": 0, "twins": 0,
@@ -764,7 +925,9 @@ class Run:
                            if res["trace"].get(k)}
                 self.bench_log.setdefault("referrals", []).append(
                     self.doctrine.answer_referral(esc.case_id, grounds, day))
-            if arm == "D" and esc.entry and esc.entry in self.canon.entries:
+            if self.bench_arm and esc.reason_code == "review_appeal":
+                self.appeal_heard(esc, res, day)
+            if base == "D" and esc.entry and esc.entry in self.canon.entries:
                 e = self.canon.entries[esc.entry]
                 self.pending_glosses.append({"day": day + 1, "entry": esc.entry, "holding": {
                     "case": esc.case_id, "holding": res["holding"], "act_class": e.act_class,
@@ -818,8 +981,10 @@ class Run:
             counts["oracle_df_recall"], counts["oracle_df_precision"] = rep.recall, rep.precision
             if self.auditor.mode == "llm":
                 counts["df_recall"], counts["df_precision"], counts["df_labels"] = df_from_labels(got, events)
-        if arm in ("C", "D"):
+        if base in ("C", "D"):
             self.bench_log["aggregates"].append(aggregate_disclosures(entries, day))
+        if self.bench_arm:
+            self.audit_day(lines, day)
 
         if self.governed:
             # §3.5: the end-of-day state (store, glosses, registry) and the day's agent prompts.
@@ -853,6 +1018,8 @@ class Run:
             json.dump({"records": [r.to_dict() for r in self.store]}, fh, indent=1)
         bl = dict(self.bench_log)
         bl["bench"] = self.bench.to_dict()
+        if self.bench_arm:
+            bl["benchmark"] = {"appeals": self.appeals, "late_exec": self.late_exec, "audits": self.audits}
         with open(os.path.join(o, "bench_log.json"), "w") as fh:
             json.dump(bl, fh, indent=1)
         tot = {k: sum((d.get(k) or 0) for d in self.summary_days) for k in
@@ -889,6 +1056,8 @@ class Run:
                 "roles_config_sha256": sha256_file(rc) if rc and os.path.exists(rc) else None,
                 "usage_by_role": self.roles.usage_by_role(),
             }
+        if self.bench_arm or self.corner_rate > 0:
+            manifest["benchmark"] = self.benchmark_block()
         with open(os.path.join(o, "manifest.json"), "w") as fh:
             json.dump(manifest, fh, indent=1, sort_keys=True)
 
