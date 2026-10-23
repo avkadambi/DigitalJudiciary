@@ -754,7 +754,15 @@ def parse_args(argv=None):
     return a
 
 
+def check_python(version=None) -> None:
+    """Governance build (H2): new code targets Python 3.9; refuse anything older."""
+    v = tuple(version if version is not None else sys.version_info)[:2]
+    if v < (3, 9):
+        raise SystemExit(f"Python 3.9 or later is required (found {v[0]}.{v[1]})")
+
+
 def main(argv=None) -> int:
+    check_python()
     a = parse_args(argv)
     packs = list(PACKS) if a.packs == "all" else [p.strip() for p in a.packs.split(",") if p.strip()]
     arms = [x.strip() for x in a.arms.split(",") if x.strip()]
