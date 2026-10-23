@@ -1104,7 +1104,24 @@ def ec16(s: Suite):
 def ec17(s: Suite):
     import subprocess
     g = _gov(s)
-    bad, n = [], 0
+    bad, n, via = [], 0, set()
+    # A release package has no git history: there the reference is the engine digests the
+    # release's simulation/MANIFEST.json records (equal to the freeze branch's files).
+    released = set()
+    try:
+        with open(os.path.join(ROOT, "simulation", "MANIFEST.json")) as fh:
+            man = json.load(fh)
+        stack = [man]
+        while stack:
+            o = stack.pop()
+            if isinstance(o, dict):
+                if isinstance(o.get("harness/engine.py"), str):
+                    released.add(o["harness/engine.py"])
+                stack.extend(o.values())
+            elif isinstance(o, list):
+                stack.extend(o)
+    except (OSError, ValueError):
+        pass
     for pack in run_year.PACKS if hasattr(run_year, "PACKS") else (s.pack,):
         path = os.path.relpath(os.path.join(run_year.pack_dir(pack), "harness", "engine.py"), ROOT)
         ref_src = None
@@ -1113,20 +1130,28 @@ def ec17(s: Suite):
             if r.returncode == 0:
                 ref_src = r.stdout
                 break
-        if ref_src is None:
-            bad.append(f"{path}: freeze branch not available")
-            continue
-        n += 1
         with open(os.path.join(ROOT, path), "rb") as fh:
-            if fh.read() != ref_src:
+            data = fh.read()
+        if ref_src is not None:
+            via.add("the freeze branch")
+            n += 1
+            if data != ref_src:
                 bad.append(f"{path} differs from the freeze branch")
+        elif released:
+            via.add("the release MANIFEST.json digests")
+            n += 1
+            if hashlib.sha256(data).hexdigest() not in released:
+                bad.append(f"{path} matches no engine digest in simulation/MANIFEST.json")
+        else:
+            bad.append(f"{path}: neither the freeze branch nor simulation/MANIFEST.json is available")
     # The engine module the governed runs used (run_year loads it fresh, under ec_engine_<pack>).
     for eng in (sys.modules.get(f"ec_engine_{s.pack.replace('-', '_')}", s.engine),):
         admit = getattr(eng, "admit")
         if getattr(admit, "__module__", None) != eng.__name__ or not admit.__code__.co_filename.endswith("engine.py"):
             bad.append(f"{eng.__name__}.admit is not the engine's own ({admit!r})")
     _ = g
-    return not bad and n > 0, f"{n} engine.py files byte-identical to the freeze branch; admit restored; {len(bad)} faults", bad[:5]
+    return not bad and n > 0, (f"{n} engine.py files byte-identical to {' / '.join(sorted(via)) or 'nothing'}; "
+                               f"admit restored; {len(bad)} faults"), bad[:5]
 
 
 @check("EC-18", "A6 finality at every level including L4: no level permits while an absolute finding stands")
