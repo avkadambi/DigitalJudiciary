@@ -648,3 +648,65 @@ def test_doctrine_fail_safes(vetpoc):
     done, lw = d.maybe_codify(canon, e.id, 3, 7)
     assert lw["oracle_codify"] and not done and lw["lawmaker"]["fail_safe"] == "no_codification"
     assert not canon.entries[e.id].gloss.codified
+
+
+# ---------------------------------------------------------------------------
+# L4 (R5) and human review (commit 9)
+# ---------------------------------------------------------------------------
+
+from simulation.ec import l4 as l4mod                                # noqa: E402
+from simulation.ec.tools import human_review                         # noqa: E402
+
+
+def _item(i, a6=False):
+    return {"case_file": "THE CASE", "ladder": {"L1": {"holding": "deny"}}, "prosecutor": None, "conscience": "escalate",
+            "a6_found": a6, "origin": "risk_owner_contest", "act_id": f"A-{i}", "case_id": f"C-{i}",
+            "oracle_canon": "permit_conditional"}
+
+
+def test_r5_llm_proxy_is_labelled_and_never_human(tmp_path):
+    a = l4mod.L4Authority("llm-proxy", str(tmp_path), proxy_client=_FakeClient())
+    d = a.decide(_item(1))
+    assert d["decided_by"] == "llm-proxy" and d["l4_mode"] == "llm-proxy" and d["holding"] == "permit_conditional"
+    assert a.decide(_item(2, a6=True))["holding"] == "deny", "A6 binds the proxy"
+
+
+def test_r5_queue_cap_hands_over_to_proxy_and_shadow_proxy_agreement(tmp_path):
+    a = l4mod.L4Authority("queue", str(tmp_path), human_cap=2, proxy_client=_FakeClient(), shadow_proxy=True)
+    for i in (1, 2):
+        a._enqueue(f"A-{i}", _item(i))
+        human_review.decide(str(tmp_path), f"A-{i}", "permit_conditional" if i == 1 else "deny")
+    d1, d2, d3 = a.decide(_item(1)), a.decide(_item(2)), a.decide(_item(3))
+    assert d1["decided_by"] == d2["decided_by"] == "human" and "shadow_proxy" in d1
+    assert d3["decided_by"] == "llm-proxy" and d3["over_human_cap"]
+    assert a.agreement == [["permit_conditional", "permit_conditional"], ["deny", "permit_conditional"]]
+    assert l4mod.cohen_kappa([["deny", "deny"], ["permit", "permit"]]) == 1.0
+    assert abs(l4mod.cohen_kappa(a.agreement) - 0.0) < 1e-9
+
+
+def test_r5_lapse_and_wait(tmp_path):
+    a = l4mod.L4Authority("queue", str(tmp_path), proxy_client=_FakeClient())
+    d = a.decide(_item(1))
+    assert d["decided_by"] == "lapse" and d["holding"] == "deny" and a.counts["lapsed"] == 1
+    w = l4mod.L4Authority("queue", str(tmp_path / "w"), wait=True, proxy_client=_FakeClient())
+    os.makedirs(tmp_path / "w")
+    with pytest.raises(l4mod.HumanWaitNeeded):
+        w.decide(_item(2))
+    assert human_review.queue(str(tmp_path / "w"))[0]["item"] == "A-2" and w.counts["items"] == 0
+
+
+def test_r5_proxy_parse_failure_lapses_to_deny(tmp_path):
+    a = l4mod.L4Authority("llm-proxy", str(tmp_path), proxy_client=_FakeClient("live", {"holding": "x"}))
+    d = a.decide(_item(1))
+    assert d["holding"] == "deny" and d["lapsed"] and a.counts["proxy_failures"] == 1
+
+
+def test_human_review_refuses_a_permit_affirming_a6(tmp_path):
+    a = l4mod.L4Authority("queue", str(tmp_path), proxy_client=_FakeClient())
+    a._enqueue("A-9", _item(9, a6=True))
+    with pytest.raises(ValueError):
+        human_review.decide(str(tmp_path), "A-9", "permit")
+    d = human_review.decide(str(tmp_path), "A-9", "permit", overturn=True)
+    assert d["absolute_finding_overturned"]
+    with pytest.raises(ValueError):
+        human_review.decide(str(tmp_path), "A-9", "deny")

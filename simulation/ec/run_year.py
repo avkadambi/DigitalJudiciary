@@ -272,7 +272,13 @@ class Run:
             self.conscience = Conscience(self.gov.mode("ec"), self.gov.prompt_style, self.roles.client("ec"),
                                          self.flip, input_mode=ec_spec.get("input", "rendered"),
                                          samples=self.gov.samples)
+        self.l4 = None
         if self.governed and self.gov.mode("dj") != "deterministic" and arm in ("C", "D"):
+            from simulation.ec.l4 import L4Authority
+            self.l4 = L4Authority(self.gov.l4, out_dir, deadline_days=self.gov.human_deadline_days,
+                                  wait=self.gov.human_wait, human_cap=self.gov.l4_human_cap,
+                                  proxy_client=self.roles.client("l4_proxy"), shadow_proxy=self.gov.l4_shadow_proxy,
+                                  flip=self.flip, style=self.gov.prompt_style)
             self.ladder = self.make_ladder()
             self.bench.hearer = self.ladder
         self.doctrine = None
@@ -391,7 +397,8 @@ class Run:
 
     def gov_restore(self, st: dict) -> None:
         self.roles.restore(st.get("roles") or {})
-        self.filing_meta = dict(st.get("filing_meta") or {})
+        self.filing_meta.clear()                 # in place: the ladder holds this dict
+        self.filing_meta.update(st.get("filing_meta") or {})
         for name in ("conscience", "offices", "auditor", "doctrine", "l4"):
             seat = getattr(self, name, None)
             if seat is not None and hasattr(seat, "restore"):
@@ -839,6 +846,9 @@ class BudgetExceeded(RuntimeError):
     """`--budget-usd` reached; the run was checkpointed at the end of a day."""
 
 
+from simulation.ec.l4 import HumanWaitNeeded           # noqa: E402
+
+
 class HumanWait(RuntimeError):
     """L4 queue mode with --human-wait: an item is due; the run was checkpointed (exit 4)."""
 
@@ -896,7 +906,13 @@ def run_one(data: PackData, arm: str, seed: int, args, quiet: bool = False, spen
         print(f"[{data.pack} {arm} seed {seed}] days {start}..{args.days}"
               + (" (resumed)" if resumed else ""), flush=True)
     for day in range(start, args.days + 1):
-        r.run_day(day)
+        if r.l4 is not None and r.l4.wait:
+            r.checkpoint()                  # a day interrupted for a person resumes from its start
+        try:
+            r.run_day(day)
+        except HumanWaitNeeded as e:
+            raise HumanWait(f"[{data.pack} {arm} seed {seed}] day {day}: {e}; checkpointed. Decide it with "
+                            f"simulation/ec/tools/human_review.py, then rerun with --resume.")
         if args.checkpoint_every and day % args.checkpoint_every == 0 and day < args.days:
             r.checkpoint()
         if not quiet and args.progress_every and day % args.progress_every == 0:

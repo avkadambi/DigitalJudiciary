@@ -359,7 +359,7 @@ class LadderHearer:
             item = {"case_file": user, "ladder": {k: v for k, v in ladder.items()}, "prosecutor": prosecutor,
                     "conscience": filing.get("conscience_decision"), "a6_found": a6_level is not None,
                     "origin": to_l4[0], "act_id": esc.act_id, "case_id": esc.case_id, "deciding": deciding,
-                    "contest_to": esc.contest_to}
+                    "contest_to": esc.contest_to, "oracle_canon": canon_h}
             l4 = self._l4(item)
             level = 4
             hold = l4["holding"]
