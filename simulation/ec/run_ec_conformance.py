@@ -790,12 +790,16 @@ def ec10(s: Suite):
             n_same += 1
             if c["verdict"] != l["verdict"] or c["executed"] != l["executed"]:
                 bad.append(f"{arm}: {tw} {c['verdict']['reason_code']} vs twin {l['verdict']['reason_code']}")
-    try:
-        src = inspect.getsource(gate_mod.gate)
-    except (OSError, TypeError) as e:
-        src = None
-        bad.append(f"gate source not inspectable: {e}")
-    if src is not None:
+    # The gate and its pure answer key (governance build: gate_oracle and its helpers) alike.
+    for fname in ("gate", "gate_oracle", "_verdict", "entry_answers"):
+        fn = getattr(gate_mod, fname, None)
+        if fn is None:
+            continue
+        try:
+            src = inspect.getsource(fn)
+        except (OSError, TypeError) as e:
+            bad.append(f"{fname} source not inspectable: {e}")
+            continue
         tree = ast.parse(src.lstrip() if src[0].isspace() else src)
         names = set()
         for node in ast.walk(tree):
@@ -807,7 +811,7 @@ def ec10(s: Suite):
                 names.add(node.value)
         hit = sorted(names & set(GATE_FORBIDDEN))
         if hit:
-            bad.append(f"gate names {hit}")
+            bad.append(f"{fname} names {hit}")
     ok = not bad and n_same > 0
     return ok, (f"{n_pairs} (control, twin) pairs in C and D, {n_same} with the same act, all verdicts identical; "
                 f"gate AST free of {GATE_FORBIDDEN}; {len(bad)} faults" + ("" if n_same else " (VACUOUS)")), bad[:5]

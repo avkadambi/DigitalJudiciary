@@ -77,10 +77,11 @@ ALL_CHECKS = [cid for cid, _, _ in conf.CHECKS]
 # ---------------------------------------------------------------------------
 
 
-def gate_mutant(anchor: str, replacement: str, tmp_dir: str, tag: str):
-    """The gate function recompiled from its own source with one edit, from a
-    temp file so the live function's source is inspectable."""
-    src = inspect.getsource(gate_mod.gate)
+def gate_mutant(anchor: str, replacement: str, tmp_dir: str, tag: str, fname: str = "_verdict"):
+    """A gate function recompiled from its own source with one edit, from a
+    temp file so the live function's source is inspectable. The gate's rules
+    live in `_verdict` (shared by `gate` and its pure answer key `gate_oracle`)."""
+    src = inspect.getsource(getattr(gate_mod, fname))
     if src.count(anchor) != 1:
         raise RuntimeError(f"{tag}: anchor occurs {src.count(anchor)} times, expected 1")
     path = os.path.join(tmp_dir, f"gate_{tag}.py")
@@ -89,7 +90,7 @@ def gate_mutant(anchor: str, replacement: str, tmp_dir: str, tag: str):
     ns = dict(gate_mod.__dict__)
     with open(path) as fh:
         exec(compile(fh.read(), path, "exec"), ns)
-    return ns["gate"]
+    return ns[fname]
 
 
 def tier_of_absolute_t1(prov: dict):
@@ -179,7 +180,7 @@ def patches_for(fid: str, tmp_dir: str) -> list:
         g = gate_mutant("        if e.tier == \"T0\" and contravenes(e, act, facts):",
                         "        if e.tier == \"T0\" and contravenes(e, act, facts) and p.audit_announced:",
                         tmp_dir, "f2")
-        return [mock.patch("simulation.ec.gate.gate", g), mock.patch("simulation.ec.run_year.gate", g)]
+        return [mock.patch("simulation.ec.gate._verdict", g)]
     if fid == "F-EC-3":
         return [mock.patch.object(registry_mod.Registry, "valid", valid_accepts_claims),
                 mock.patch.object(registry_mod.Registry, "consume", consume_tolerant)]
@@ -191,7 +192,7 @@ def patches_for(fid: str, tmp_dir: str) -> list:
         g = gate_mutant("            elif not evidence_supports(act.evidence_ref, act.stated_reason, p.evidence):",
                         "            elif False:",
                         tmp_dir, "f5")
-        return [mock.patch("simulation.ec.gate.gate", g), mock.patch("simulation.ec.run_year.gate", g)]
+        return [mock.patch("simulation.ec.gate._verdict", g)]
     if fid == "F-EC-6":
         return [mock.patch.object(escalate.Bench, "file", file_drops_holds)]
     if fid == "F-EC-7":
@@ -257,6 +258,7 @@ def run_one(job: tuple) -> dict:
         assert doctrine.write_gloss is _ORIG["write_gloss"] and run_year.write_gloss is _ORIG["write_gloss"]
         assert run_year.Run.process is _ORIG["process"]
         assert run_year.gate is gate_mod.gate and gate_mod.gate.__code__.co_filename.endswith("gate.py")
+        assert gate_mod._verdict.__code__.co_filename.endswith("gate.py")
         assert examen.reconcile is run_year.reconcile
         if not cfg["keep"]:
             shutil.rmtree(out, ignore_errors=True)

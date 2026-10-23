@@ -25,30 +25,45 @@ HOLDING_FIELDS = ("day", "case", "holding", "act_class", "outcome")
 FIXED_FIELDS = ("tier", "violate_factors", "kind", "office")
 
 
+def gloss_oracle(entry, holding: dict, day: int) -> dict:
+    """The clerk's answer key (governance build DC-D1), read-only: the holding
+    as it is appended to the gloss, and whether it bars its class."""
+    h = {k: holding.get(k) for k in HOLDING_FIELDS}
+    h["day"] = day
+    if h["act_class"] is None:
+        h["act_class"] = entry.act_class
+    if h["outcome"] is None:
+        h["outcome"] = h["holding"]
+    bars = entry.tier == "T1" and h["holding"] == "deny" and h["act_class"] not in entry.gloss.no_waiver_classes
+    return {"holding": h, "bars_class": bool(bars)}
+
+
 def write_gloss(canon: Canon, entry_id: str, holding: dict, day: int) -> None:
     """Append a holding to the entry's gloss. On a deny of a T1 class, bar the
     class from dispensation. Bumps `gloss.version`."""
     e = canon.entry(entry_id)
-    h = {k: holding.get(k) for k in HOLDING_FIELDS}
-    h["day"] = day
-    if h["act_class"] is None:
-        h["act_class"] = e.act_class
-    if h["outcome"] is None:
-        h["outcome"] = h["holding"]
+    g = gloss_oracle(e, holding, day)
+    h = g["holding"]
     e.gloss.holdings.append(h)
-    if e.tier == "T1" and h["holding"] == "deny" and h["act_class"] not in e.gloss.no_waiver_classes:
+    if g["bars_class"]:
         e.gloss.no_waiver_classes.append(h["act_class"])
     e.gloss.version += 1
+
+
+def codify_oracle(entry, k: int = K_CODIFY) -> bool:
+    """The lawmaker's answer key (governance build LW-D1), read-only: a T1 entry
+    whose own act class has been denied `k` times and is not yet codified."""
+    if entry.tier != "T1" or entry.gloss.codified:
+        return False
+    denies = sum(1 for h in entry.gloss.holdings if h.get("holding") == "deny" and h.get("act_class") == entry.act_class)
+    return denies >= k
 
 
 def maybe_codify(canon: Canon, entry_id: str, k: int = K_CODIFY) -> bool:
     """Codify a T1 entry whose own act class has been denied `k` times. Returns
     True only when this call codified it."""
     e = canon.entry(entry_id)
-    if e.tier != "T1" or e.gloss.codified:
-        return False
-    denies = sum(1 for h in e.gloss.holdings if h.get("holding") == "deny" and h.get("act_class") == e.act_class)
-    if denies < k:
+    if not codify_oracle(e, k):
         return False
     e.gloss.codified = True
     e.gloss.version += 1

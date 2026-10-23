@@ -1,0 +1,88 @@
+{
+ "case": {
+  "author": {
+   "id": "agent:vetpoc-conscience-01",
+   "kind": "ai-agent"
+  },
+  "category": "B-plain-deny",
+  "consolidation_signature": null,
+  "contest_to": 2,
+  "control_plane": false,
+  "engine": {
+   "premise": [
+    "epcs_two_factor_completed_by_credentialed_dvm",
+    "prescription_lacks_legitimate_medical_purpose"
+   ]
+  },
+  "facts": [
+   "epcs_two_factor_completed_by_credentialed_dvm",
+   "prescription_lacks_legitimate_medical_purpose",
+   "schedule_ii_written_prescription_no_refills"
+  ],
+  "id": "VP-SPLIT-00001",
+  "rules": [
+   "VP-CS-007"
+  ],
+  "ts": 20100
+ },
+ "filing": {
+  "conflict": false,
+  "contest_to": 2,
+  "entry": "VP-CS-007",
+  "origin": "ec_filing",
+  "per_entry": [
+   {
+    "contravened": true,
+    "departure": null,
+    "gloss_bar": false,
+    "id": "VP-CS-007",
+    "say_so": false,
+    "t2_admitted": null,
+    "t2_evidence": null,
+    "t2_in_bound": null,
+    "t3_in_context": null,
+    "tier": "T1",
+    "token_fail": "no_such_token",
+    "token_valid": false
+   }
+  ],
+  "reason_code": "t1_tokenless",
+  "tier": "T1"
+ },
+ "note": "A T1 contravention without a valid token, which the engine permits by precedent: oracle_engine permits, oracle_canon denies (EC-23).",
+ "pack": "vetpoc",
+ "store": [
+  {
+   "admission_ground": "clause_i",
+   "auth_class": "judges",
+   "auth_id": "judge:J2",
+   "case": "VP-SPLIT-PRIOR",
+   "cites": [],
+   "depth": 2,
+   "expiry": null,
+   "facts": [
+    "epcs_two_factor_completed_by_credentialed_dvm",
+    "prescription_lacks_legitimate_medical_purpose",
+    "schedule_ii_written_prescription_no_refills"
+   ],
+   "id": "REC-VP-SPLIT-PRIOR",
+   "interp": "permit",
+   "outcome": "permit",
+   "premise": [
+    "epcs_two_factor_completed_by_credentialed_dvm",
+    "prescription_lacks_legitimate_medical_purpose"
+   ],
+   "prov": "VP-CS-007",
+   "rationale": "Hand-built split fixture: an earlier panel permitted this pattern.",
+   "referral": null,
+   "rules": [
+    "VP-CS-007"
+   ],
+   "scope": {
+    "domain": "CS",
+    "width": 3
+   },
+   "ts": 15000
+  }
+ ]
+}

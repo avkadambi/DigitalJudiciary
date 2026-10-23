@@ -157,19 +157,8 @@ class Registry:
             if r["day"] + lead > day:
                 keep.append(r)
                 continue
-            e = canon.entries.get(r["entry"])
-            in_force = any(t.scope == r["entry"] and not t.revoked and not t.consumed and day <= t.expires_day
-                           for t in self.tokens.values())
-            if in_force:
-                outcome = "covered"
-            elif e is None or e.gloss.codified:
-                outcome = "denied_codified"
-            elif r["reason"] not in ADMITTED_REASONS or not r["evidence_ok"]:
-                outcome = "denied_reason"
-            elif self.granted >= cap:
-                outcome = "denied_cap"
-            else:
-                outcome = "granted"
+            outcome = self.decide_request_oracle(r, canon, day, cap)
+            if outcome == "granted":
                 self.granted += 1
                 issued.append(self.issue(r["office"], r["act_class"], r["entry"], day,
                                          single_use=EXCEPTION_SINGLE_USE, cause=f"request {r['act_id']}"))
@@ -177,6 +166,22 @@ class Registry:
                                 "act_id": r["act_id"]})
         self.requests = keep
         return issued
+
+    def decide_request_oracle(self, r: dict, canon: Canon, day: int, cap: int = EXCEPTIONS_PER_YEAR) -> str:
+        """The owner's answer key on one due request, read-only (governance build
+        OF-D1): covered | denied_codified | denied_reason | denied_cap | granted."""
+        e = canon.entries.get(r["entry"])
+        in_force = any(t.scope == r["entry"] and not t.revoked and not t.consumed and day <= t.expires_day
+                       for t in self.tokens.values())
+        if in_force:
+            return "covered"
+        if e is None or e.gloss.codified:
+            return "denied_codified"
+        if r["reason"] not in ADMITTED_REASONS or not r["evidence_ok"]:
+            return "denied_reason"
+        if self.granted >= cap:
+            return "denied_cap"
+        return "granted"
 
     # -- validity ---------------------------------------------------------
     def valid(self, token_id, entry: CanonEntry, agent_line: str, day: int, canon_version: str) -> tuple:
