@@ -360,3 +360,80 @@ def test_run_dir_suffix_names_the_governed_mode():
     assert gov.Settings(ap.parse_args(base + ["--ec", "shadow"])).suffix() == "+gov-shadow"
     assert gov.Settings(ap.parse_args(base + ["--ec", "llm"])).suffix() == "+gov-llm"
     assert gov.Settings(ap.parse_args(base + ["--ec", "llm", "--office", "shadow"])).suffix() == "+gov-mixed"
+
+
+# ---------------------------------------------------------------------------
+# Offices and auditor (commit 6)
+# ---------------------------------------------------------------------------
+
+from simulation.ec import auditor_llm, office_llm                    # noqa: E402
+from simulation.ec.examen import VerifiedEvent                       # noqa: E402
+
+
+def _due_request(vetpoc, reason="N", evidence=True):
+    from simulation.ec.registry import EXCEPTION_LEAD_DAYS
+    canon = vetpoc.fresh_canon()
+    e = next(x for x in canon.entries.values() if x.tier == "T1" and x.kind == "provision" and x.office)
+    reg = Registry(canon)
+    reg.request(e, 1, reason, evidence, "A-1")
+    return canon, reg, 1 + EXCEPTION_LEAD_DAYS
+
+
+@needs_canon
+def test_office_shadow_binds_the_answer_key_and_logs_the_model(vetpoc):
+    canon, reg, day = _due_request(vetpoc, reason="NONE")
+    off = office_llm.Offices("shadow", "canon", _FakeClient(), gov.DryFlip(11, "vetpoc", 1.0))
+    issued = reg.decide_requests(canon, day, decider=off.decider)
+    ev = reg.events[-1]
+    assert not issued and ev["outcome"] == "denied_reason" == ev["oracle_office"]
+    assert ev["office_llm"]["dry_flipped"] and ev["office_llm"]["decision"] != "denied_reason"
+
+
+@needs_canon
+def test_office_llm_grant_over_cap_is_issued_and_counted(vetpoc):
+    canon, reg, day = _due_request(vetpoc)
+    reg.granted = 24
+    off = office_llm.Offices("llm", "canon", _FakeClient("live", {"decision": "granted"}), None)
+    issued = reg.decide_requests(canon, day, decider=off.decider)
+    assert len(issued) == 1 and reg.events[-1]["oracle_office"] == "denied_cap" and off.grants_over_cap == 1
+
+
+@needs_canon
+def test_office_parse_failure_denies(vetpoc):
+    canon, reg, day = _due_request(vetpoc)
+    off = office_llm.Offices("llm", "canon", _FakeClient("live", {"decision": "perhaps"}), None)
+    assert reg.decide_requests(canon, day, decider=off.decider) == [] and off.failures == 1
+    assert reg.events[-1]["oracle_office"] == "granted" and reg.events[-1]["outcome"].startswith("denied")
+
+
+def _audit_items():
+    return [{"act_id": "A-1", "event_type": "departure", "executed": True, "entry": "E1", "tier": "T2",
+             "report": {"reported_event": "departure", "token_ref": None, "narrative": "I departed"}},
+            {"act_id": "A-2", "event_type": "authorized_exception", "executed": True, "entry": "E2", "tier": "T1",
+             "report": None},
+            {"act_id": "A-3", "event_type": "legitimate_act", "executed": True, "entry": None, "tier": None,
+             "report": None}]
+
+
+def test_auditor_dry_labels_equal_the_answer_key_without_flips_and_prompt_hides_ids():
+    oracle = {"A-1": "discloses", "A-2": "silent", "A-3": "nothing_to_disclose"}
+    client = _FakeClient()
+    aud = auditor_llm.Auditor("llm", "canon", client, gov.DryFlip(11, "vetpoc", 0.0))
+    got, meta = aud.label_day(5, _audit_items(), oracle)
+    assert got == oracle and meta["dry_flips"] == 0
+    assert "A-1" not in client.prompts[0] and "impermissible" not in client.prompts[0]
+    assert not gov.canon_leaks(client.prompts[0])
+    evs = [VerifiedEvent(it["act_id"], 5, it["entry"], it["tier"], it["event_type"], it["executed"])
+           for it in _audit_items()]
+    rec, prec, counts = auditor_llm.df_from_labels(got, evs)
+    assert rec == 0.5 and prec == 1.0 and counts["silent"] == 1
+
+
+def test_auditor_live_maps_refs_and_fails_safe_to_silent():
+    reply = {"labels": [{"act": "change-1", "label": "misrepresents"}, {"act": "change-3", "label": "nothing_to_disclose"}]}
+    aud = auditor_llm.Auditor("llm", "canon", _FakeClient("live", reply), None)
+    got, meta = aud.label_day(5, _audit_items(), {})
+    assert got == {"A-1": "misrepresents", "A-2": "silent", "A-3": "nothing_to_disclose"} and meta["missing"] == 1
+    bad = auditor_llm.Auditor("llm", "canon", _FakeClient("live", {"labels": "x"}), None)
+    got, meta = bad.label_day(5, _audit_items(), {})
+    assert set(got.values()) == {"silent"} and meta["parse_failed"] and bad.failures == 1

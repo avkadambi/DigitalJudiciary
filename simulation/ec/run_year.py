@@ -271,6 +271,16 @@ class Run:
             self.conscience = Conscience(self.gov.mode("ec"), self.gov.prompt_style, self.roles.client("ec"),
                                          self.flip, input_mode=ec_spec.get("input", "rendered"),
                                          samples=self.gov.samples)
+        self.offices = None
+        if self.governed and self.gov.mode("office") != "deterministic":
+            from simulation.ec.office_llm import Offices
+            self.offices = Offices(self.gov.mode("office"), self.gov.prompt_style, self.roles.client("office"),
+                                   self.flip)
+        self.auditor = None
+        if self.governed and self.gov.mode("auditor") != "deterministic" and arm in ("C", "D"):
+            from simulation.ec.auditor_llm import Auditor
+            self.auditor = Auditor(self.gov.mode("auditor"), self.gov.prompt_style, self.roles.client("auditor"),
+                                   self.flip)
         self.partition = streammod.partition_days(
             data.cases, data.like_pairs, random.Random(f"{seed}|{self.pack}|partition"), days=cal.DAYS, lam=cal.LAMBDA)
         # state
@@ -578,7 +588,8 @@ class Run:
         self.shadow.daily_issuance(random.Random(f"{seed}|{pack}|{day}|registry"), self.pristine, day)
         issued = self.registry.daily_issuance(random.Random(f"{seed}|{pack}|{day}|registry"), self.pristine, day)
         n_ev = len(self.shadow.events)
-        for st in self.shadow.decide_requests(self.pristine, day):
+        decider = self.offices.decider if self.offices is not None else None
+        for st in self.shadow.decide_requests(self.pristine, day, decider=decider):
             tok = self.registry.issue(st.office, st.act_class, st.scope, day, single_use=st.single_use,
                                       cause=st.recorded_cause)
             if tok.id != st.id:
@@ -657,7 +668,12 @@ class Run:
             if v["reason_code"] == "t3_in_context" and line["executed"] and t3_rng.random() < cal.T3_SAMPLE_RATE:
                 line["t3_sampled"] = True
                 counts["t3_sampled"] += 1
-                self.bench_log["t3_samples"].append({"day": day, "act_id": line["proposal"]["act_id"], "entry": v["entry"]})
+                sample = {"day": day, "act_id": line["proposal"]["act_id"], "entry": v["entry"]}
+                if self.auditor is not None and v["entry"] in self.canon.entries:
+                    sample.update(self.auditor.audit_t3(self.canon.entries[v["entry"]], line["proposal"]["act"],
+                                                        not line["impermissible"], line["proposal"]["act_id"]))
+                    line["auditor_t3"] = sample["auditor_t3"]
+                self.bench_log["t3_samples"].append(sample)
             counts["proposals"] += 1
             counts["executed"] += int(line["executed"])
             counts["blocked"] += int(v["decision"] == "block")
@@ -674,6 +690,24 @@ class Run:
         rep = reconcile(entries, events)
         counts["df_recall"], counts["df_precision"] = rep.recall, rep.precision
         counts["df_labels"] = rep.label_counts
+        if self.auditor is not None:
+            # AU-D1: the auditor labels the day; the answer key is reconcile's label_for.
+            from simulation.ec.auditor_llm import df_from_labels
+            by_act = {}
+            for en in entries:
+                by_act.setdefault(en.act_id, en)
+            items = [{"act_id": ev.act_id, "event_type": ev.event_type, "executed": ev.executed, "entry": ev.entry,
+                      "tier": ev.tier, "report": by_act[ev.act_id].to_dict() if ev.act_id in by_act else None}
+                     for ev in events]
+            got, meta = self.auditor.label_day(day, items, rep.labels)
+            for line in lines:
+                aid = line["proposal"]["act_id"]
+                line["oracle_label"] = rep.labels.get(aid)
+                line["auditor_label"] = got.get(aid)
+            counts["auditor"] = meta
+            counts["oracle_df_recall"], counts["oracle_df_precision"] = rep.recall, rep.precision
+            if self.auditor.mode == "llm":
+                counts["df_recall"], counts["df_precision"], counts["df_labels"] = df_from_labels(got, events)
         if arm in ("C", "D"):
             self.bench_log["aggregates"].append(aggregate_disclosures(entries, day))
 

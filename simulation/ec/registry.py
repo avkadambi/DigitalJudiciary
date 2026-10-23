@@ -145,25 +145,31 @@ class Registry:
                             "evidence_ok": bool(evidence_ok), "act_id": act_id})
 
     def decide_requests(self, canon: Canon, day: int, lead: int = EXCEPTION_LEAD_DAYS,
-                        cap: int = EXCEPTIONS_PER_YEAR) -> list:
+                        cap: int = EXCEPTIONS_PER_YEAR, decider=None) -> list:
         """The owner decides each request `lead` working days after it was filed:
         grant when the stated reason is admitted (N, O, K) and its evidence exists,
         the class is not codified, no exception for the entry is already in force,
         and fewer than `cap` have been granted this year; otherwise deny. A grant
         is an entry-scoped token valid TOKEN_TTL_DAYS working days, usable for every
-        act in scope. Returns the tokens issued."""
+        act in scope. Returns the tokens issued.
+
+        `decider(r, oracle, registry, canon, day) -> (outcome, log fields)` is the
+        governance build's office seat; without it the answer key decides."""
         issued, keep = [], []
         for r in self.requests:
             if r["day"] + lead > day:
                 keep.append(r)
                 continue
             outcome = self.decide_request_oracle(r, canon, day, cap)
+            extra = {}
+            if decider is not None:
+                outcome, extra = decider(r, outcome, self, canon, day)
             if outcome == "granted":
                 self.granted += 1
                 issued.append(self.issue(r["office"], r["act_class"], r["entry"], day,
                                          single_use=EXCEPTION_SINGLE_USE, cause=f"request {r['act_id']}"))
-            self.events.append({"event": "decision", "day": day, "entry": r["entry"], "outcome": outcome,
-                                "act_id": r["act_id"]})
+            self.events.append(dict({"event": "decision", "day": day, "entry": r["entry"], "outcome": outcome,
+                                     "act_id": r["act_id"]}, **extra))
         self.requests = keep
         return issued
 
