@@ -119,8 +119,8 @@ def score_lines(L: list, params: dict, man: dict, bl: dict, registry: dict | Non
         row[f"hearings_L{i}"] = lv[i]
     row["office_decisions"] = sum(1 for e in (registry or {}).get("events") or [] if e.get("event") == "decision")
     g = (man.get("governance") or {}).get("usage_by_role") or {}
-    spend = sum(float(u.get("cost_usd", 0.0)) for u in g.values()) + sum(float((x or {}).get("cost_usd", 0.0))
-                                                                          for x in [])
+    rv_usage = (((man.get("benchmark") or {}).get("review") or {}).get("usage") or {})
+    spend = sum(float(u.get("cost_usd", 0.0)) for u in g.values()) + float(rv_usage.get("cost_usd", 0.0) or 0.0)
     row["spend_per_1000"] = k * spend
     c = params["cost"]
     held_days = sum(max(0.0, (x["lead_time_days"] or 0.0)) for x in L if x["executed"])

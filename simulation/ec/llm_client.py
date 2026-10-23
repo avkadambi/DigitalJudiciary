@@ -461,7 +461,8 @@ class Panel:
                 "seats": [dict(c.describe(), seed=s) for c, s in zip(self.seats, self.seeds)]}
 
 
-ROLES = ("agent", "ec", "office", "auditor", "dj_l1", "dj_l2", "dj_l3", "prosecutor", "clerk", "lawmaker", "l4_proxy")
+ROLES = ("agent", "ec", "office", "auditor", "dj_l1", "dj_l2", "dj_l3", "prosecutor", "clerk", "lawmaker", "l4_proxy",
+         "reviewer")       # reviewer: the benchmark's LLM peer reviewer (arm HL; review_llm.make_client)
 STANCES = ("textualist", "purposive", "risk_weighted")
 
 

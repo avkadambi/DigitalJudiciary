@@ -407,10 +407,9 @@ class Run:
         self.pending_appeals: dict = {}
         self._pp = [0, 0]                      # pre-pass: changes reaching review, impermissible among them
         self.reviewer = None
+        self.llm_reviewer = None
         if not self.bench_arm:
             return
-        if self.bench_arm == "HL":
-            raise SystemExit("arm HL (the LLM peer reviewer) is not built yet")
         from simulation.ec import audit_sim, harm, review_sim
         a = self.args
         self.bparams = review_sim.load_params(getattr(a, "benchmark_params", None))
@@ -423,7 +422,16 @@ class Run:
             arrivals[q] = arrivals.get(q, 0) + len(cases)
         self.audit_sim = audit_sim.Auditor(bench.audit_sample(a.audit), a.audit_detect, self.seed, self.pack, a.days,
                                            arrivals)
-        if not self.bench_prepass:
+        if self.bench_arm == "HL":
+            # The LLM peer reviewer replaces the human; its error rates are observed, not derived.
+            from simulation.ec import review_llm
+            client = review_llm.make_client(a, a.out)
+            if client.mode == "live" and not os.environ.get(client.api_key_env):
+                raise SystemExit(f"arm HL needs {client.api_key_env} set in the environment")
+            self.llm_reviewer = review_llm.LLMReviewer(
+                client, review_llm.dry_flip(self.seed, self.pack, float(getattr(a, "dry_error_rate", 0.0) or 0.0)),
+                self.seed, self.pack)
+        elif not self.bench_prepass:
             self.reviewer.set_p_imperm(self.prepass())
 
     def prepass(self) -> float:
@@ -472,8 +480,11 @@ class Run:
               "review": None}
         if not executed:
             return v, executed, st
-        r = self.reviewer.review({"case_id": p.case_id, "is_twin": is_twin, "impermissible": inv["impermissible"],
-                                  "visibility": inv["visibility"]}, day)
+        if self.llm_reviewer is not None:
+            r = self.llm_reviewer.review(p, act, self.pristine.engaged(p.engaged, []), inv["impermissible"], day)
+        else:
+            r = self.reviewer.review({"case_id": p.case_id, "is_twin": is_twin, "impermissible": inv["impermissible"],
+                                      "visibility": inv["visibility"]}, day)
         st["review"] = r
         if self.bench_prepass:
             self._pp[0] += 1
@@ -520,7 +531,7 @@ class Run:
              "corner_tokens": dict(self.corner_tokens)}
         if self.bench_arm:
             a = self.args
-            b.update(review=self.reviewer.describe(), prepass=getattr(self, "prepass_counts", None),
+            b.update(review=(self.llm_reviewer or self.reviewer).describe(), prepass=getattr(self, "prepass_counts", None),
                      audit=self.audit_sim.describe(), appeal_p=float(a.appeal_p), harm_scheme=a.harm_scheme,
                      params_sha256=sha256_file(getattr(a, "benchmark_params", None) or
                                                os.path.join(EC_DIR, "config", "benchmark_params.json")))
@@ -1004,6 +1015,8 @@ class Run:
         spend = float(u.get("spend_usd", 0.0) or 0.0)
         if self.roles is not None:
             spend += self.roles.spend_usd()          # EC-20: the budget covers every role
+        if getattr(self, "llm_reviewer", None) is not None:
+            spend += float(self.llm_reviewer.client.usage.get("spend_usd", 0.0) or 0.0)
         return spend
 
     def finish(self, elapsed: float) -> None:

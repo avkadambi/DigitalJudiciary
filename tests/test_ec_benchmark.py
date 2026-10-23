@@ -444,3 +444,78 @@ def test_b10_breakeven_rescoring_reproduces_the_run(bench_runs):
     assert zero["review_false_rejects"] == 0 and zero["hwl_per_1000"] >= own["hwl_per_1000"]
     rows, summary = breakeven.sweep(bench_runs, params)
     assert len(rows) == 21 * 13 and summary and "breakeven_catch_vs_HEC" in summary[0]
+
+
+# 11. The LLM peer reviewer (mock server) -------------------------------------
+
+from test_ec_llm_live import MockProvider                            # noqa: E402
+
+from simulation.ec import review_llm                                  # noqa: E402
+
+
+@pytest.fixture(scope="module")
+def provider():
+    m = MockProvider()
+    yield m
+    m.close()
+
+
+@pytest.fixture
+def mock_env(provider, monkeypatch):
+    monkeypatch.setenv("ANTHROPIC_API_KEY", "test-key")
+    monkeypatch.setenv("ANTHROPIC_BASE_URL", provider.base)
+    monkeypatch.setenv("NO_PROXY", "127.0.0.1,localhost")
+    monkeypatch.setenv("no_proxy", "127.0.0.1,localhost")
+    provider.script.clear()
+    provider.requests.clear()
+    return provider
+
+
+def _reviewer_case(vp):
+    from simulation.ec.gate import Act, Proposal
+    canon = vp.fresh_canon()
+    e = next(x for x in canon.entries.values() if x.tier == "T1" and x.kind == "provision" and x.office)
+    act = Act("exception", e.id, e.violate_factors[0], "N", None, None, "TOK-000042", False, "EV-N-C-1")
+    p = Proposal("C-1#HL#97", "C-1", "vetpoc", 2, 2000, 0, "agent:x", "llm", "ai-agent", [e.id], "NONE", 0, False,
+                 None, act, facts=["fact_a"])
+    return canon, e, p, act
+
+
+@needs_canon
+def test_llm_reviewer_prompt_parse_failure_and_cache_namespace(vp, mock_env, tmp_path):
+    from simulation.ec.llm_client import RoleClient
+    canon, e, p, act = _reviewer_case(vp)
+    e.gloss.holdings.append({"day": 1, "holding": "deny", "act_class": e.act_class, "case": "X"})
+    system, user = review_llm.build_prompt(p, act, [e])
+    for bad in ("registry", "Doctrine", "court ruled", "impermissible", "oracle", "TOK-000042 is", "expires",
+                "consumed", "revoked", "gloss"):
+        assert bad not in user, bad
+    assert "cites approval TOK-000042" in user and "necessity" in user
+    client = RoleClient("review", kind="anthropic", model="sonnet", mode="live", cache_dir=str(tmp_path / "llm_cache" / "review"))
+    rv = review_llm.LLMReviewer(client)
+    mock_env.script.extend([("text", '{"decision": "request_changes", "reasons": "no approval on file"}')])
+    r = rv.review(p, act, [e], True, 2)
+    assert r["flagged"] and r["true_flag"] and r["llm"]["decision"] == "request_changes"
+    mock_env.script.extend([("text", "looks fine to me"), ("text", "still not json")])
+    act2 = act.__class__(**dict(act.__dict__, stated_reason="O"))
+    r2 = rv.review(p, act2, [e], False, 2)
+    assert not r2["flagged"] and r2["llm"]["degraded"] and rv.degraded == 1, "a parse failure approves"
+    files = [f for f in (tmp_path / "llm_cache" / "review").rglob("*.json")]
+    assert files, "cached under the review namespace"
+    assert client.cache_path(system, user).startswith(str(tmp_path / "llm_cache" / "review"))
+
+
+@needs_canon
+def test_hl_live_run_writes_no_key_anywhere(vp, mock_env, tmp_path):
+    from simulation.ec import run_year
+    out = tmp_path / "hl"
+    rc = run_year.main(["--packs", "vetpoc", "--arms", "HL", "--seeds", "97", "--days", "2", "--agent",
+                        "policy:pressure_sensitive", "--mode", "live", "--out", str(out), "--quiet",
+                        "--reviewer", "llm:anthropic:sonnet"])
+    assert rc == 0
+    assert any(r["path"].endswith("/messages") for r in mock_env.requests), "the reviewer called the provider"
+    for f in out.rglob("*"):
+        if f.is_file():
+            assert b"test-key" not in f.read_bytes(), f
+    m = json.load(open(out / "vetpoc" / "HL" / "seed-97" / "manifest.json"))["benchmark"]["review"]
+    assert m["profile"] == "llm" and m["calls"] > 0
