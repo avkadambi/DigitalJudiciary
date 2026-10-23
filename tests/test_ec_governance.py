@@ -592,3 +592,59 @@ def test_case_file_has_no_answer_key_route_or_act_id(vetpoc):
     pr = [c for c in roles.calls if "prosecutor" in c["system"]]
     assert all("charging_threshold" in c["user"] for c in pr)
     assert all("charging_threshold" not in c["user"] for c in roles.calls if c not in pr)
+
+
+# ---------------------------------------------------------------------------
+# Doctrine (commit 8)
+# ---------------------------------------------------------------------------
+
+from simulation.ec import doctrine_llm                               # noqa: E402
+from simulation.ec.doctrine import assert_gloss_invariants, write_gloss   # noqa: E402
+
+
+def _t1(canon):
+    return next(x for x in canon.entries.values() if x.tier == "T1" and x.kind == "provision" and x.office)
+
+
+@needs_canon
+def test_ec19_apply_gloss_never_changes_fixed_fields(vetpoc):
+    canon = vetpoc.fresh_canon()
+    e = _t1(canon)
+    before = canon.to_dict()
+    out = doctrine_llm.apply_gloss(canon, e.id, {"holding": "deny", "act_class": e.act_class, "bars_class": True,
+                                                 "tier": "T3", "office": "nobody", "violate_factors": [],
+                                                 "kind": "x", "canon_version": "v9"}, 5)
+    assert out["refused_fields"] == ["canon_version", "kind", "office", "tier", "violate_factors"]
+    assert assert_gloss_invariants(before, canon.to_dict()) == []
+    assert e.act_class in e.gloss.no_waiver_classes and e.gloss.holdings[-1]["holding"] == "deny"
+
+
+@needs_canon
+def test_doctrine_shadow_writes_the_answer_key_and_llm_counts_contamination(vetpoc):
+    a, b = vetpoc.fresh_canon(), vetpoc.fresh_canon()
+    e = _t1(a)
+    h = {"case": "C-1", "holding": "deny", "act_class": e.act_class, "outcome": "deny", "act_id": "A-1"}
+    write_gloss(a, e.id, h, 4)
+    d = doctrine_llm.Doctrine("shadow", "canon", _FakeClient(), _FakeClient(), gov.DryFlip(11, "vetpoc", 1.0))
+    f = d.write(b, e.id, h, 4)
+    assert a.to_dict() == b.to_dict() and f["binding"] == "oracle" and f["clerk"]["dry_flipped"]
+    c = vetpoc.fresh_canon()
+    dl = doctrine_llm.Doctrine("llm", "canon", _FakeClient(), _FakeClient(), gov.DryFlip(11, "vetpoc", 1.0))
+    f = dl.write(c, e.id, h, 4)
+    assert f["contaminated"] and dl.contaminated == 1 and c.entries[e.id].gloss.holdings[-1]["holding"] == "permit"
+
+
+@needs_canon
+def test_doctrine_fail_safes(vetpoc):
+    canon = vetpoc.fresh_canon()
+    e = _t1(canon)
+    h = {"case": "C-1", "holding": "deny", "act_class": e.act_class}
+    d = doctrine_llm.Doctrine("llm", "canon", _FakeClient("live", {"holding": "??"}),
+                              _FakeClient("live", {"codify": "maybe"}), None)
+    f = d.write(canon, e.id, h, 4)
+    assert f["clerk"]["degraded"] and not f["contaminated"], "the mechanical gloss, flagged"
+    for day in (5, 6):
+        d.write(canon, e.id, h, day)
+    done, lw = d.maybe_codify(canon, e.id, 3, 7)
+    assert lw["oracle_codify"] and not done and lw["lawmaker"]["fail_safe"] == "no_codification"
+    assert not canon.entries[e.id].gloss.codified

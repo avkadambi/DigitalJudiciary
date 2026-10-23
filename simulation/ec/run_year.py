@@ -275,6 +275,11 @@ class Run:
         if self.governed and self.gov.mode("dj") != "deterministic" and arm in ("C", "D"):
             self.ladder = self.make_ladder()
             self.bench.hearer = self.ladder
+        self.doctrine = None
+        if self.governed and self.gov.mode("doctrine") != "deterministic" and arm == "D":
+            from simulation.ec.doctrine_llm import Doctrine
+            self.doctrine = Doctrine(self.gov.mode("doctrine"), self.gov.prompt_style, self.roles.client("clerk"),
+                                     self.roles.client("lawmaker"), self.flip)
         self.offices = None
         if self.governed and self.gov.mode("office") != "deterministic":
             from simulation.ec.office_llm import Offices
@@ -452,7 +457,17 @@ class Run:
         n = 0
         keep = []
         for g in self.pending_glosses:
-            if g["day"] <= day:
+            if g["day"] <= day and self.doctrine is not None:
+                # DC-D1 / LW-D1 by the clerk and the lawmaker (governed arm D).
+                fields = self.doctrine.write(self.canon, g["entry"], g["holding"], day)
+                n += 1
+                self.bench_log["glosses"].append({"day": day, "entry": g["entry"], **g["holding"], "doctrine": fields})
+                done, lw = self.doctrine.maybe_codify(self.canon, g["entry"], cal.K_CODIFY, day)
+                if lw is not None:
+                    self.bench_log.setdefault("lawmaker", []).append(lw)
+                if done:
+                    self.bench_log["codifications"].append({"day": day, "entry": g["entry"]})
+            elif g["day"] <= day:
                 write_gloss(self.canon, g["entry"], g["holding"], day)
                 n += 1
                 self.bench_log["glosses"].append({"day": day, "entry": g["entry"], **g["holding"]})
@@ -689,6 +704,12 @@ class Run:
                                          "oracle_canon", "oracle_disagree", "oracle_basis", "oracle_a6",
                                          "oracle_controlling", "oracle_premise", "final_level", "a6_level", "l4",
                                          "pool_capped", "refer_up_l1", "ladder_holding")})
+            if self.doctrine is not None and (res["trace"].get("referral_emitted") or res.get("refer_up_l1")):
+                # LW-D2: the lawmaker answers the court's referrals (logged only).
+                grounds = {k: res["trace"].get(k) for k in ("unresolved_factors", "draft_amendment", "record_withheld")
+                           if res["trace"].get(k)}
+                self.bench_log.setdefault("referrals", []).append(
+                    self.doctrine.answer_referral(esc.case_id, grounds, day))
             if arm == "D" and esc.entry and esc.entry in self.canon.entries:
                 e = self.canon.entries[esc.entry]
                 self.pending_glosses.append({"day": day + 1, "entry": esc.entry, "holding": {
