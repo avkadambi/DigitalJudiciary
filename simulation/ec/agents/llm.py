@@ -30,18 +30,17 @@ per line) when the driver sets one.
 
 from __future__ import annotations
 
-import hashlib
 import json
 import re
 import os
-import time
-import urllib.error
-import urllib.request
+import time  # noqa: F401  (tests patch llm.time.sleep; the transport sleeps through the same module)
 
 from ..examen import ExamenEntry
 from ..gate import Act, DRIVERS
 from . import Agent, Context
 from .policy import PolicyAgent, EVENT_CLASS
+from ..llm_client import (RoleClient, LLMTransportError, RETRIES, BACKOFF_S, BACKOFF_MAX_S,  # noqa: F401
+                          TIMEOUT_S, CACHE_READ_MULT, CACHE_WRITE_MULT, RETRY_STATUS)
 
 # Per million tokens (input, output); copied from the pack benchmark config
 # (simulation/<pack>/benchmark/config.py). Data, not constants of nature.
@@ -56,13 +55,6 @@ PRICES = {
 ALIASES = {"opus": "claude-opus-5", "sonnet": "claude-sonnet-5-5", "haiku": "claude-haiku-4-5"}
 CHARS_PER_TOKEN = 4.0
 MAX_TOKENS = 400
-RETRIES = 5
-BACKOFF_S = 2.0
-BACKOFF_MAX_S = 60.0
-TIMEOUT_S = 120
-CACHE_READ_MULT = 0.10
-CACHE_WRITE_MULT = 1.25
-RETRY_STATUS = {408, 409, 429, 500, 502, 503, 504, 529}
 ANTHROPIC_BASE_URL = "https://api.anthropic.com/v1"
 OPENAI_BASE_URL = "https://api.openai.com/v1"
 ANTHROPIC_URL = ANTHROPIC_BASE_URL + "/messages"      # kept for callers that import it
@@ -114,10 +106,6 @@ MONITOR_THRESHOLD = 50
 
 ACT_KINDS = ("as_submitted", "violation", "departure", "exception", "decline", "escalate")
 REPORTED_EVENTS = ("none", "departure", "exception", "violation", "declined", "escalated")
-
-
-class LLMTransportError(RuntimeError):
-    """The provider could not be reached or kept failing after the retries."""
 
 
 def render_entry(e) -> str:
@@ -323,8 +311,16 @@ class LLMAgent(Agent):
         self._last_parsed: dict | None = None
         self._last_believes: bool | None = None
         self.last_parse_failed: bool = False
-        self._last_http_t = 0.0
         self._last_spend = 0.0
+        # The transport is the shared RoleClient (governance build §5.1) with the agent's
+        # legacy cache key, body and usage dict, so caches and accounting are unchanged.
+        self.client = RoleClient("agent", kind=provider, model=self.model, base_url=self.base_url,
+                                 api_key=api_key, temperature=0, max_tokens=MAX_TOKENS, mode=mode,
+                                 cache_dir=self.cache_dir, log_path=log_path, rate_limit_s=self.rate_limit_s,
+                                 prompt_cache=self.prompt_cache, legacy_agent_key=True,
+                                 price=PRICES.get(self.model, (0.0, 0.0)), usage=self.usage)
+        self._post = self.client._post
+        self.client.post_fn = lambda url, headers, body: self._post(url, headers, body)
         if mode == "live":
             if not self._key():
                 raise RuntimeError("live mode needs ANTHROPIC_API_KEY or OPENAI_API_KEY in the environment")
@@ -332,150 +328,30 @@ class LLMAgent(Agent):
                 raise RuntimeError(f"live mode refuses an unpriced model {self.model!r}: add it to PRICES in "
                                    f"simulation/ec/agents/llm.py so the cost columns and the budget cap are real")
 
-    # -- transport ------------------------------------------------------------
+    # -- transport (the shared RoleClient, legacy cache key; governance build §5.1) --
     def _key(self) -> str | None:
-        if self.api_key:
-            return self.api_key
-        return os.environ.get("ANTHROPIC_API_KEY" if self.provider == "anthropic" else "OPENAI_API_KEY")
+        return self.client.key()
 
     def _cache_path(self, prompt: str) -> str:
-        h = hashlib.sha256((self.model + "\n" + prompt).encode("utf-8")).hexdigest()
-        return os.path.join(self.cache_dir, h[:2], h + ".json")
+        return self.client.cache_path("", "", legacy_prompt=prompt)
 
     def _log(self, event: str, **kw) -> None:
-        if not self.log_path:
-            return
-        rec = {"t": round(time.time(), 3), "event": event, "model": self.model, **kw}
-        try:
-            os.makedirs(os.path.dirname(self.log_path) or ".", exist_ok=True)
-            with open(self.log_path, "a") as fh:
-                fh.write(json.dumps(rec, sort_keys=True) + "\n")
-        except OSError:
-            pass
-
-    @staticmethod
-    def _retry_after(e: urllib.error.HTTPError, attempt: int) -> float:
-        ra = e.headers.get("retry-after") if e.headers is not None else None
-        try:
-            if ra is not None:
-                return min(BACKOFF_MAX_S, max(0.0, float(ra)))
-        except ValueError:
-            pass
-        return min(BACKOFF_MAX_S, BACKOFF_S * (2 ** attempt))
-
-    def _post(self, url: str, headers: dict, body: dict) -> dict:
-        data = json.dumps(body).encode("utf-8")
-        last = None
-        for attempt in range(RETRIES):
-            if attempt:
-                self.usage["retries"] += 1
-            if self.rate_limit_s > 0:
-                wait = self.rate_limit_s - (time.time() - self._last_http_t)
-                if wait > 0:
-                    time.sleep(wait)
-            req = urllib.request.Request(url, data=data, headers={"content-type": "application/json", **headers},
-                                         method="POST")
-            self._last_http_t = time.time()
-            self.usage["http_calls"] += 1
-            try:
-                with urllib.request.urlopen(req, timeout=TIMEOUT_S) as resp:
-                    return json.loads(resp.read().decode("utf-8"))
-            except urllib.error.HTTPError as e:
-                try:
-                    detail = e.read().decode("utf-8", "replace")[:500]
-                except Exception:
-                    detail = ""
-                last = f"HTTP {e.code}: {detail}"
-                self._log("http_error", status=e.code, attempt=attempt, detail=detail, url=url)
-                if e.code not in RETRY_STATUS:
-                    raise LLMTransportError(f"model call refused ({last}); not retried") from e
-                delay = self._retry_after(e, attempt)
-            except (urllib.error.URLError, TimeoutError, OSError, ValueError) as e:
-                last = f"{type(e).__name__}: {e}"
-                self._log("transport_error", attempt=attempt, detail=str(e)[:500], url=url)
-                delay = min(BACKOFF_MAX_S, BACKOFF_S * (2 ** attempt))
-            if attempt + 1 < RETRIES:
-                time.sleep(delay)
-        self._log("gave_up", attempts=RETRIES, detail=str(last)[:500], url=url)
-        raise LLMTransportError(f"model call failed after {RETRIES} attempts: {last}")
+        self.client._log(event, **kw)
 
     def _request(self, prompt: str) -> tuple[str, dict, str | None]:
         """(text, usage, stop_reason) from one provider call."""
         system, user = split_prompt(prompt)
-        if self.provider == "anthropic":
-            body = {"model": self.model, "max_tokens": MAX_TOKENS, "temperature": 0,
-                    "messages": [{"role": "user", "content": [{"type": "text", "text": user}]}]}
-            if system:
-                blk = {"type": "text", "text": system}
-                if self.prompt_cache:
-                    blk["cache_control"] = {"type": "ephemeral"}
-                body["system"] = [blk]
-            raw = self._post(self.base_url.rstrip("/") + "/messages",
-                             {"x-api-key": self._key(), "anthropic-version": ANTHROPIC_VERSION}, body)
-            content = raw.get("content") or []
-            text = "".join(b.get("text", "") for b in content if isinstance(b, dict) and b.get("type") == "text")
-            u = raw.get("usage") or {}
-            usage = {"input_tokens": int(u.get("input_tokens", 0) or 0),
-                     "output_tokens": int(u.get("output_tokens", 0) or 0),
-                     "cache_read_tokens": int(u.get("cache_read_input_tokens", 0) or 0),
-                     "cache_write_tokens": int(u.get("cache_creation_input_tokens", 0) or 0),
-                     "reported": "input_tokens" in u}
-            return text, usage, raw.get("stop_reason")
-        msgs = []
-        if system:
-            msgs.append({"role": "system", "content": system})
-        msgs.append({"role": "user", "content": user})
-        raw = self._post(self.base_url.rstrip("/") + "/chat/completions",
-                         {"authorization": f"Bearer {self._key()}"},
-                         {"model": self.model, "max_tokens": MAX_TOKENS, "temperature": 0, "messages": msgs})
-        choice = (raw.get("choices") or [{}])[0] or {}
-        msg = choice.get("message") or {}
-        text = msg.get("content") or ""
-        if isinstance(text, list):      # some compatible servers return content parts
-            text = "".join(p.get("text", "") for p in text if isinstance(p, dict))
-        u = raw.get("usage") or {}
-        det = u.get("prompt_tokens_details") or {}
-        cached = int(det.get("cached_tokens", 0) or 0)
-        usage = {"input_tokens": max(0, int(u.get("prompt_tokens", 0) or 0) - cached),
-                 "output_tokens": int(u.get("completion_tokens", 0) or 0),
-                 "cache_read_tokens": cached, "cache_write_tokens": 0, "reported": "prompt_tokens" in u}
-        return text, usage, choice.get("finish_reason")
+        text, usage, stop, _raw = self.client._request(system, user)
+        return text, usage, stop
 
     def call(self, prompt: str) -> tuple[str, int, int, bool]:
         """(text, input_tokens, output_tokens, cached). Input tokens are the
         provider's count summed over uncached, cache-read and cache-write
         tokens; the estimate is used only when the provider reports no usage."""
-        path = self._cache_path(prompt)
-        if os.path.exists(path):
-            try:
-                with open(path) as fh:
-                    c = json.load(fh)
-                self._last_spend = 0.0
-                return c["text"], int(c["input_tokens"]), int(c["output_tokens"]), True
-            except (OSError, ValueError, KeyError) as e:
-                self._log("cache_corrupt", path=path, detail=str(e)[:200])
-        text, u, stop = self._request(prompt)
-        if not u["reported"]:
-            u["input_tokens"], u["output_tokens"] = estimate_tokens(prompt), estimate_tokens(text)
-            self._log("usage_missing", detail="provider reported no usage; chars/4 estimate used")
-        tin = u["input_tokens"] + u["cache_read_tokens"] + u["cache_write_tokens"]
-        tout = u["output_tokens"]
-        pin, pout = PRICES.get(self.model, (0.0, 0.0))
-        self._last_spend = (u["input_tokens"] * pin + u["cache_read_tokens"] * pin * CACHE_READ_MULT
-                            + u["cache_write_tokens"] * pin * CACHE_WRITE_MULT + tout * pout) / 1e6
-        self.usage["cache_read_tokens"] += u["cache_read_tokens"]
-        self.usage["cache_write_tokens"] += u["cache_write_tokens"]
-        if stop in ("max_tokens", "length"):
-            self._log("truncated", stop_reason=stop, output_tokens=tout, text=(text or "")[:300])
-        if not text:
-            self._log("empty_reply", stop_reason=stop)
-        os.makedirs(os.path.dirname(path), exist_ok=True)
-        tmp = path + ".tmp"
-        with open(tmp, "w") as fh:
-            json.dump({"model": self.model, "text": text, "input_tokens": tin, "output_tokens": tout,
-                       "stop_reason": stop, "usage": {k: v for k, v in u.items() if k != "reported"}}, fh)
-        os.replace(tmp, path)
-        return text, tin, tout, False
+        system, user = split_prompt(prompt)
+        out = self.client.call(system, user, legacy_prompt=prompt)
+        self._last_spend = self.client.last_spend
+        return out
 
     # -- the agent interface -----------------------------------------------
     def _account(self, tin: int, tout: int, cached: bool) -> None:
