@@ -369,3 +369,78 @@ def test_b12_seed_guard():
             run_year.main(["--packs", "vetpoc", "--arms", "H0", "--seeds", str(s), "--days", "1", "--out", "/nonexistent"])
     assert not benchmark.forbidden_seed(97) and not any(benchmark.forbidden_seed(s) for s in benchmark.BENCHMARK_SEEDS)
     benchmark.check_seeds(["A"], [11])        # registered arms are not guarded
+
+
+# 10. Ledger, scorecard and break-even ----------------------------------------
+
+from simulation.ec import breakeven, ledger, scorecard               # noqa: E402
+
+
+def _five_change_run(tmp_path):
+    """Five changes in H0 on day 1 of a 10-day run, by hand:
+       c1 impermissible (R), rules allow, review misses        -> executed, leaks, weight 20
+       c2 impermissible (V), rules block                       -> found by rules
+       c3 permissible (N), review false-rejects                -> false block, wasted 15 + 15 rework
+       c4 permissible (S), approved                            -> executed
+       c5 impermissible (P), review catches                    -> found by review
+    The audit on day 10 finds c1 (exposure 9)."""
+    d = tmp_path / "vetpoc" / "H0" / "seed-97"
+    d.mkdir(parents=True)
+
+    def line(cid, imperm, vis, rules, review, executed, why=None):
+        rv = None if review is None else {"reviewed": True, "flagged": review, "true_flag": review and imperm,
+                                          "false_flag": review and not imperm, "minutes": 15.0, "delay_days": 0.5,
+                                          "profile": "flat-edmundson", "u": 0.5}
+        return {"proposal": {"act_id": f"{cid}#H0#97", "case_id": cid, "twin_of": None, "author_kind": "ai-agent",
+                             "engaged": ["E"], "act": {"kind": "as_submitted"}},
+                "day": 1, "impermissible": imperm, "impermissible_why": why, "impermissible_tier": "T1" if imperm else None,
+                "verdict": {"decision": "allow" if executed else "block", "entry": "E"}, "executed": executed,
+                "category": "A-routine", "conflict_flag": False,
+                "bench": {"invariant": {"impermissible": imperm, "visibility": vis, "visibility_all": [vis],
+                                        "harm_entries": ["E"] if imperm else [], "tier": "T1"},
+                          "rules": {"decision": rules}, "gate": None, "review": rv}}
+    L = [line("c1", True, "R", "allow", False, True, "t1_expired"),
+         line("c2", True, "V", "block", None, False, "t0_violation"),
+         line("c3", False, "N", "allow", True, False),
+         line("c4", False, "S", "allow", False, True),
+         line("c5", True, "P", "allow", True, False, "t3_out_of_context")]
+    (d / "run.jsonl").write_text("".join(json.dumps(x) + "\n" for x in L))
+    (d / "manifest.json").write_text(json.dumps({"pack": "vetpoc", "arm": "H0", "seed": 97, "days": 10,
+                                                 "benchmark": {"review": {"minutes": 15, "delay_days": 0.5}}}))
+    (d / "bench_log.json").write_text(json.dumps({"hearings": [], "benchmark": {
+        "audits": [{"act_id": "c1#H0#97", "case_id": "c1", "is_twin": False, "found": True, "exposure_days": 9,
+                    "audit_day": 10}], "appeals": [], "late_exec": {}}}))
+    return str(d)
+
+
+def test_ledger_and_scorecard_on_a_hand_built_fixture(tmp_path):
+    d = _five_change_run(tmp_path)
+    w = {s: {"E": {"rulebook": 20, "tier": 20, "flat": 1, "steep": 20}[s]} for s in harm.SCHEMES}
+    L = ledger.build(d, None, w)
+    by = {x["case_id"]: x for x in L}
+    assert [by[c]["found_by"] for c in ("c1", "c2", "c5")] == ["audit", "rules", "review"]
+    assert by["c1"]["exposure_days"] == 9 and by["c1"]["harm_weight"] == 20
+    assert by["c3"]["wasted_minutes"] == 30 and by["c1"]["wasted_minutes"] == 15
+    s = scorecard.score_lines(L, _params(), {}, {"benchmark": {"appeals": []}})
+    assert s["hwl_per_1000"] == 1000 / 5 * 20 and s["hwl_flat_per_1000"] == 200
+    assert s["false_block_rate"] == 0.5 and s["false_block_rate_S"] == 0.0
+    assert (s["review_false_rejects"], s["review_misses"]) == (1, 1)
+    assert s["review_hours_total"] == 1.0 and abs(s["wasted_reviewer_hours"] - 0.75) < 1e-12
+    assert s["leak_R_per_1000"] == 200 and s["audit_found_share"] == 1.0
+    assert s["cost_harm"] == 20 * 1000 and s["cost_reviewer"] == 100.0
+
+
+@needs_canon
+def test_b10_breakeven_rescoring_reproduces_the_run(bench_runs):
+    params = _params()
+    d = os.path.join(bench_runs, "vetpoc", "H0", "seed-97")
+    cache = {}
+    own, _ = scorecard.scorecard(d, params, cache)
+    m = json.load(open(os.path.join(d, "manifest.json")))["benchmark"]["review"]
+    again = breakeven.rescore(d, params, m["catch"], m["false_flag_ratio"], cache)
+    for k, v in again.items():
+        assert own[k] == v, k
+    zero = breakeven.rescore(d, params, 0.0, 0.0, cache)
+    assert zero["review_false_rejects"] == 0 and zero["hwl_per_1000"] >= own["hwl_per_1000"]
+    rows, summary = breakeven.sweep(bench_runs, params)
+    assert len(rows) == 21 * 13 and summary and "breakeven_catch_vs_HEC" in summary[0]

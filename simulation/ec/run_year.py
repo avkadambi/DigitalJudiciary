@@ -1060,6 +1060,11 @@ class Run:
             manifest["benchmark"] = self.benchmark_block()
         with open(os.path.join(o, "manifest.json"), "w") as fh:
             json.dump(manifest, fh, indent=1, sort_keys=True)
+        if self.bench_arm and not getattr(self, "bench_prepass", False):
+            # The change ledger (trusted tier), from the files just written.
+            from simulation.ec import ledger, scorecard
+            w = scorecard.weights_by_scheme(self.pack, self.pristine)
+            ledger.write(o, ledger.build(o, self.pristine, w))
 
 
 class BudgetExceeded(RuntimeError):
