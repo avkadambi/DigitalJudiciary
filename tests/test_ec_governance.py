@@ -5,6 +5,7 @@ except the local mock server."""
 from __future__ import annotations
 
 import io
+import random
 import os
 import shutil
 import sys
@@ -437,3 +438,157 @@ def test_auditor_live_maps_refs_and_fails_safe_to_silent():
     bad = auditor_llm.Auditor("llm", "canon", _FakeClient("live", {"labels": "x"}), None)
     got, meta = bad.label_day(5, _audit_items(), {})
     assert set(got.values()) == {"silent"} and meta["parse_failed"] and bad.failures == 1
+
+
+# ---------------------------------------------------------------------------
+# The ladder: routing (R2), panel (R3), A6 (commit 7)
+# ---------------------------------------------------------------------------
+
+from simulation.ec import bench_llm                                  # noqa: E402
+from simulation.ec import projection                                 # noqa: E402
+from simulation.ec.escalate import Bench, Escalation                 # noqa: E402
+
+
+class _Judge:
+    """A live judge returning a scripted opinion; records each call."""
+
+    def __init__(self, reply, stance=None, calls=None):
+        self.mode, self.reply, self.stance, self.last_cost = "live", reply, stance, {}
+        self.calls = calls if calls is not None else []
+
+    def call_json(self, system, user, validate=None, **kw):
+        self.calls.append({"who": id(self), "system": system, "user": user, **kw})
+        r = dict(self.reply)
+        if validate and validate(r):
+            return None, {"repaired": True, "error": validate(r)}
+        return r, {"repaired": False}
+
+
+def _op(holding, absolute=False, controlling=None, confidence=95, premise=None):
+    return {"engaged": True, "absolute": {"violated": absolute, "silent_floor": False, "provision": None},
+            "control_plane": False, "relevant": [], "admissions": {}, "controlling": controlling,
+            "ordering_keys": [], "holding": holding, "premise": premise or [], "write_precedent": False,
+            "premise_established": True, "refer_up": False, "confidence": confidence, "reasons": "x"}
+
+
+class _Roles:
+    def __init__(self, l1, panel_ops, l3=None, charge=True, calls=None):
+        self.calls = calls if calls is not None else []
+        self.c = {"dj_l1": _Judge(l1, calls=self.calls), "dj_l3": _Judge(l3 or l1, calls=self.calls),
+                  "prosecutor": _Judge({"charge": charge}, calls=self.calls)}
+        self.panel = llm_client.Panel([_Judge(o, stance=s, calls=self.calls)
+                                       for o, s in zip(panel_ops, llm_client.STANCES)])
+
+    def client(self, role):
+        return self.c[role]
+
+
+def _hear(vetpoc, roles, filing, audit=0.0, mode="llm"):
+    fx = json.load(open(FIXTURE))
+    store = [vetpoc.engine.Record.from_dict(r) for r in fx["store"]]
+    h = bench_llm.LadderHearer(mode, "canon", roles, None, 11, "vetpoc", {"A-1": filing}, l2_audit_rate=audit)
+    esc = Escalation("A-1", fx["case"]["id"], "vetpoc", 1, 4, filing.get("entry"), filing.get("conscience_tier"),
+                     filing.get("reason_code", "t1_tokenless"), filing.get("contest_to", 2))
+    return h.hear(Bench(internal=True, hearer=h), esc, fx["case"], store, vetpoc.provisions, vetpoc.theta,
+                  vetpoc.engine), roles
+
+
+def _filing(**kw):
+    fx = json.load(open(FIXTURE))
+    f = dict(fx["filing"], conscience_decision="escalate", conscience_tier="T1")
+    f.update(kw)
+    return f
+
+
+@needs_canon
+def test_r2_no_controlling_precedent_alone_does_not_escalate(vetpoc):
+    res, _ = _hear(vetpoc, _Roles(_op("deny"), [_op("permit")] * 3), _filing())
+    assert res["final_level"] == 1 and res["escalation_reason"] == [] and "L2" not in res["ladder"]
+
+
+@needs_canon
+def test_r2_triggers_i_ii_iv_are_logged(vetpoc):
+    res, _ = _hear(vetpoc, _Roles(_op("permit"), [_op("deny")] * 3), _filing())
+    assert "i_disagree_ec" in res["escalation_reason"] and res["final_level"] >= 2
+    res, _ = _hear(vetpoc, _Roles(_op("deny", confidence=40), [_op("deny")] * 3), _filing())
+    assert res["escalation_reason"] == ["ii_low_conf_t1t2"] and res["final_level"] == 2
+    res, _ = _hear(vetpoc, _Roles(_op("deny"), [_op("deny")] * 3), _filing(), audit=1.0)
+    assert res["escalation_reason"] == ["iv_audit"]
+    a = random.Random("11|vetpoc|VP-SPLIT-00001|l2audit").random()
+    assert a == random.Random("11|vetpoc|VP-SPLIT-00001|l2audit").random(), "the audit draw is per (seed, pack, case)"
+
+
+@needs_canon
+def test_r2_untiered_corpus_contest_stays_at_l1_and_iii_appeal(vetpoc):
+    corpus = _filing(origin="corpus_contest", per_entry=None, conscience_decision="block", conscience_tier=None,
+                     contest_to=0, reason_code="corpus_contest", entry=None)
+    res, _ = _hear(vetpoc, _Roles(_op("deny"), [_op("permit")] * 3), corpus)
+    assert res["final_level"] == 1 and res["escalation_reason"] == []
+    res, _ = _hear(vetpoc, _Roles(_op("deny"), [_op("deny")] * 3), dict(corpus, contest_to=2))
+    assert res["escalation_reason"] == ["iii_appeal"]
+
+
+@needs_canon
+def test_r3_mixed_panel_calls_three_clients_with_their_stances(vetpoc):
+    roles = _Roles(_op("permit"), [_op("deny"), _op("deny"), _op("permit")])
+    res, _ = _hear(vetpoc, roles, _filing())
+    l2 = res["ladder"]["L2"]
+    assert l2["votes"] == ["deny", "deny", "permit"] and l2["majority"] == "deny" and not l2["unanimous"]
+    panel_calls = [c for c in roles.calls if "YOUR JUDICIAL STANCE" in c["system"]]
+    assert len({c["who"] for c in panel_calls}) == 3
+    assert len({c["system"] for c in panel_calls}) == 3, "the stance preambles differ"
+    assert res["final_level"] == 3, "a split panel goes to L3"
+
+
+def test_r3_fallback_panel_temperature_and_seeds():
+    cfg = llm_client.load_roles_config(ROLES_EXAMPLE)
+    reg = llm_client.RoleRegistry(cfg, mode="dry", cache_dir=None, roles=["dj_l2"])
+    p = reg.use_fallback_panel(cache_dir=None)
+    descs = [c.describe() for c in p.seats]
+    assert p.fallback and [d["temperature"] for d in descs] == [0.7] * 3
+    assert [p.seat(i)[1] for i in range(3)] == [11, 12, 13] and [d["stance"] for d in descs] == list(llm_client.STANCES)
+    shas = gov.prompt_digests()
+    assert "stances.md" in shas
+
+
+def test_r3_fleiss_kappa_on_a_scripted_panel():
+    # Fleiss (1971) style check: perfect agreement -> 1; a hand-computed mixed case.
+    assert projection.fleiss_kappa([["deny"] * 3, ["permit"] * 3]) == 1.0
+    k = projection.fleiss_kappa([["deny", "deny", "permit"], ["permit", "permit", "permit"], ["deny", "deny", "deny"]])
+    # P_i = (1/3, 1, 1), P_bar = 7/9; p = (5/9, 4/9), P_e = 41/81; kappa = (7/9 - 41/81) / (40/81) = 0.55
+    assert abs(k - 0.55) < 1e-9
+
+
+@needs_canon
+def test_ec18_a6_at_l1_is_final_and_limits_the_panel(vetpoc):
+    t0 = _filing(conscience_tier="T0")
+    roles = _Roles(_op("deny", absolute=True), [_op("permit")] * 3)
+    res, _ = _hear(vetpoc, roles, t0)
+    assert res["final_level"] == 1 and res["a6_level"] == 1 and res["ladder_holding"] == "deny"
+    assert not [c for c in roles.calls if "YOUR JUDICIAL STANCE" in c["system"]], "no panel after A6 at L1"
+    # A finding that disagrees with the conscience's tier goes to L2, which decides the finding.
+    res, _ = _hear(vetpoc, _Roles(_op("deny", absolute=True), [_op("deny", absolute=True)] * 3), _filing())
+    assert "a6_finding_disagrees" in res["escalation_reason"] and res["a6_level"] == 2 and res["ladder_holding"] == "deny"
+
+
+@needs_canon
+def test_opinion_checks_a6_premise_and_degraded_l1_goes_up(vetpoc):
+    fx = json.load(open(FIXTURE))
+    case = vetpoc.engine.case_from_dict(fx["case"])
+    assert "A6" in bench_llm.validate_opinion(_op("permit", absolute=True), case, {})
+    assert "premise" in bench_llm.validate_opinion(_op("deny", premise=["not_a_fact"]), case, {})
+    assert "A8" in bench_llm.validate_opinion(_op("deny", controlling="R"), case, {"R": "permit"})
+    res, _ = _hear(vetpoc, _Roles(_op("maybe"), [_op("deny")] * 3), _filing())
+    assert res["escalation_reason"][0] == "degraded" and res["final_level"] >= 2
+
+
+@needs_canon
+def test_case_file_has_no_answer_key_route_or_act_id(vetpoc):
+    roles = _Roles(_op("permit"), [_op("deny")] * 3)
+    _hear(vetpoc, roles, _filing())
+    for c in roles.calls:
+        for bad in ("A-1", "route", "bound_by_precedent", "admitted", "oracle", "narrative", "impermissible"):
+            assert bad not in c["user"], bad
+    pr = [c for c in roles.calls if "prosecutor" in c["system"]]
+    assert all("charging_threshold" in c["user"] for c in pr)
+    assert all("charging_threshold" not in c["user"] for c in roles.calls if c not in pr)

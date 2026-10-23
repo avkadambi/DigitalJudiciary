@@ -243,6 +243,7 @@ class Run:
         self.store = data.fresh_store()
         self.bench = Bench(internal=(arm == "C"), d_bench=cal.D_BENCH,
                            cap_per_day=int(getattr(args, "bench_cap", 0) or 0))
+        self.ladder = None                     # the judges' ladder (governed --dj), built below
         self.agent = make_agent(args.agent, self.pack, mode=args.mode,
                                 cache_dir=os.path.join(args.out, "llm_cache"),
                                 log_path=os.path.join(out_dir, "llm_errors.jsonl"),
@@ -271,6 +272,9 @@ class Run:
             self.conscience = Conscience(self.gov.mode("ec"), self.gov.prompt_style, self.roles.client("ec"),
                                          self.flip, input_mode=ec_spec.get("input", "rendered"),
                                          samples=self.gov.samples)
+        if self.governed and self.gov.mode("dj") != "deterministic" and arm in ("C", "D"):
+            self.ladder = self.make_ladder()
+            self.bench.hearer = self.ladder
         self.offices = None
         if self.governed and self.gov.mode("office") != "deterministic":
             from simulation.ec.office_llm import Offices
@@ -324,7 +328,7 @@ class Run:
         self.shadow = Registry.from_dict(st["shadow"])
         self.canon = Canon.from_dict(st["canon"])
         self.store = [self.engine.Record.from_dict(r) for r in st["store"]]
-        self.bench = Bench.from_dict(st["bench"])
+        self.bench = Bench.from_dict(st["bench"], hearer=self.ladder)
         self.consolidation_seen = dict(st["consolidation_seen"])
         self.pending_glosses = list(st["pending_glosses"])
         self.filed_cases = dict(st["filed_cases"])
@@ -344,6 +348,31 @@ class Run:
             with open(self.run_path, "w") as fh:
                 fh.writelines(keep)
         return True
+
+    # -- governance seats --------------------------------------------------------
+    def make_ladder(self):
+        from simulation.ec.bench_llm import LadderHearer
+        routing = (self.roles.cfg.get("routing") or {})
+
+        def codify_next(esc) -> bool:
+            # The hearing that would be the K_CODIFY-th deny on its class (arm D doctrine).
+            if self.arm != "D" or not esc.entry or esc.entry not in self.canon.entries:
+                return False
+            e = self.canon.entries[esc.entry]
+            if e.tier != "T1" or e.gloss.codified:
+                return False
+            denies = sum(1 for h in e.gloss.holdings if h.get("holding") == "deny" and h.get("act_class") == e.act_class)
+            return denies == cal.K_CODIFY - 1
+
+        return LadderHearer(self.gov.mode("dj"), self.gov.prompt_style, self.roles, self.flip, self.seed, self.pack,
+                            self.filing_meta,
+                            entry_fn=lambda eid: self.canon.entries.get(eid) if eid else None,
+                            aggregates_fn=lambda: self.bench_log["aggregates"][-1] if self.bench_log["aggregates"] else None,
+                            codify_next_fn=codify_next, l4=getattr(self, "l4", None),
+                            l2_confidence=self.gov.l2_confidence, l2_audit_rate=self.gov.l2_audit_rate,
+                            human_sample=self.gov.human_sample,
+                            l3_confidence_min=int(routing.get("l3_confidence_min", 60)),
+                            pool_max=int(routing.get("candidate_pool_max", 40)))
 
     # -- governance state ------------------------------------------------------
     def gov_state(self) -> dict:
@@ -539,7 +568,7 @@ class Run:
                         "per_entry": per if esc.reason_code != "corpus_contest" else None,
                         "conflict": bool(act.conflict), "contest_to": esc.contest_to,
                         "conscience_decision": ec_dec or four_way_of(v),
-                        "conscience_tier": v.tier, "token_claim": act.token_claim}
+                        "conscience_tier": v.tier, "token_claim": act.token_claim, "added_factor": act.added_factor}
 
         line = {
             "pack": self.pack, "arm": arm, "seed": self.seed, "day": day, "seq": p.seq, "ts": p.ts,
@@ -654,6 +683,12 @@ class Run:
                 "entry": esc.entry, "tier": esc.tier, "reason_code": esc.reason_code, "contest_to": esc.contest_to,
                 "holding": res["holding"], "route": res["trace"].get("route"),
                 "record": res["record"].id if res["record"] is not None else None, "internal": self.bench.internal})
+            if "ladder" in res:
+                self.bench_log["hearings"][-1].update(
+                    {k: res[k] for k in ("origin", "ladder", "prosecutor", "escalation_reason", "oracle_engine",
+                                         "oracle_canon", "oracle_disagree", "oracle_basis", "oracle_a6",
+                                         "oracle_controlling", "oracle_premise", "final_level", "a6_level", "l4",
+                                         "pool_capped", "refer_up_l1", "ladder_holding")})
             if arm == "D" and esc.entry and esc.entry in self.canon.entries:
                 e = self.canon.entries[esc.entry]
                 self.pending_glosses.append({"day": day + 1, "entry": esc.entry, "holding": {
