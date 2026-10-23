@@ -108,3 +108,71 @@ def test_harm_weights_for_vetpoc_read_the_rulebook_not_the_tier():
             if provs[eid].get("absolute"):
                 assert w[eid] == 100
     assert w.get("VP-VAL-ACC") == 20 and w.get("VP-VAL-STYLE") == 1
+
+
+# 2-3. The reviewer and the derived false-reject -----------------------------
+
+from simulation.ec import audit_sim, review_sim                       # noqa: E402
+
+
+def _rates(rv, n=20000, imperm=True, cls=None, day=20):
+    flags = sum(rv.review({"case_id": f"C-{i}", "is_twin": False, "impermissible": imperm, "visibility": cls},
+                          day)["flagged"] for i in range(n))
+    return flags / n
+
+
+def test_reviewer_profiles_match_their_parameters():
+    p = _params()
+    normal_day = next(d for d in range(1, 200) if review_sim.cal.season(d) == "normal")
+    freeze_day = min(review_sim.cal.FREEZE_DAYS)
+    for prof, want in (("flat-edmundson", 0.333), ("braz-unprompted", 0.12), ("braz-prompted", 0.96)):
+        rv = review_sim.PeerReviewer(p, prof, 211, "vetpoc")
+        assert abs(_rates(rv, day=normal_day) - want) <= 0.01, prof
+    vis = review_sim.PeerReviewer(p, "visibility", 211, "vetpoc")
+    for cls, want in (("V", 0.333), ("P", 0.25), ("E", 0.15), ("R", 0.10)):
+        assert abs(_rates(vis, cls=cls, day=normal_day) - want) <= 0.01, cls
+    cr = review_sim.PeerReviewer(p, "crunch", 211, "vetpoc")
+    assert abs(_rates(cr, day=freeze_day) - 0.333 * 0.5) <= 0.01
+    rv = review_sim.PeerReviewer(p, "flat-edmundson", 211, "vetpoc")
+    rv.set_p_imperm(0.10)
+    assert abs(rv.false_reject - 1.70 * 0.333 * 0.10 / 0.90) < 1e-12
+    assert abs(_rates(rv, imperm=False, day=normal_day) - rv.false_reject) <= 0.01
+    nf = review_sim.PeerReviewer(p, "no-false-flags", 211, "vetpoc")
+    nf.set_p_imperm(0.10)
+    assert nf.false_reject == 0.0 and _rates(nf, imperm=False) == 0.0
+
+
+def test_reviewer_common_random_numbers():
+    p = _params()
+    a = review_sim.PeerReviewer(p, "flat-edmundson", 211, "vetpoc")
+    b = review_sim.PeerReviewer(p, "flat-edmundson", 211, "vetpoc")
+    s = {"case_id": "VP-X-1", "is_twin": False, "impermissible": True, "visibility": "V"}
+    assert a.review(s, 5)["u"] == b.review(dict(s), 40)["u"], "keyed on (seed, pack, case, twin), not the day or arm"
+    assert a.review(s, 5)["u"] != a.review(dict(s, is_twin=True), 5)["u"]
+    with pytest.raises(ValueError):
+        review_sim.PeerReviewer(p, "nobody", 1, "x")
+
+
+# 7. Audits ------------------------------------------------------------------
+
+def test_audit_schedule_selection_all_mode_detection_and_exposure():
+    ends = audit_sim.quarter_end_days()
+    assert sorted(ends) == [1, 2, 3, 4] and ends[4] == review_sim.cal.DAYS
+    assert all(audit_sim.quarter_of(d) == q for q, d in ends.items())
+    arr = {1: 1000, 2: 1000, 3: 1000, 4: 1000}
+    a = audit_sim.Auditor(25, 0.8, 211, "vetpoc", review_sim.cal.DAYS, arr)
+    b = audit_sim.Auditor(25, 0.8, 211, "vetpoc", review_sim.cal.DAYS, arr)
+    sel = [a.selected(f"C-{i}", False, 1) for i in range(20000)]
+    assert sel == [b.selected(f"C-{i}", False, 1) for i in range(20000)], "selection is arm-invariant"
+    assert abs(sum(sel) / 20000 - 0.025) < 0.004
+    det = [a.detected(f"C-{i}", False) for i in range(20000)]
+    assert abs(sum(det) / 20000 - 0.8) < 0.01
+    allm = audit_sim.Auditor("all", 1.0, 211, "vetpoc", review_sim.cal.DAYS, arr)
+    ex = [{"case_id": "C-1", "is_twin": False, "day_executed": 10, "impermissible": True},
+          {"case_id": "C-2", "is_twin": False, "day_executed": 70, "impermissible": True},
+          {"case_id": "C-3", "is_twin": False, "day_executed": 12, "impermissible": False}]
+    out = allm.run(ex, ends[1])
+    assert [o["case_id"] for o in out] == ["C-1", "C-3"], "only changes executed this quarter"
+    assert out[0]["found"] and out[0]["exposure_days"] == ends[1] - 10 and not out[1]["found"]
+    none = audit_sim.Auditor(0, 1.0, 211, "vetpoc", review_sim.cal.DAYS, arr)
+    assert none.run(ex, ends[1]) == []
