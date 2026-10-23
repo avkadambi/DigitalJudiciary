@@ -1,0 +1,38 @@
+{
+  "version": 3,
+  "providers": {
+    "anthropic": {"kind": "anthropic", "base_url": "https://api.anthropic.com/v1", "api_key_env": "ANTHROPIC_API_KEY"},
+    "deepinfra": {"kind": "openai_compatible", "base_url": "https://api.deepinfra.com/v1/openai", "api_key_env": "DEEPINFRA_API_KEY",
+                  "reasoning_billed_separately": false},
+    "novita":    {"kind": "openai_compatible", "base_url": "https://api.novita.ai/v3/openai", "api_key_env": "NOVITA_API_KEY"},
+    "xai":       {"kind": "openai_compatible", "base_url": "https://api.x.ai/v1", "api_key_env": "XAI_API_KEY"},
+    "openai":    {"kind": "openai_compatible", "base_url": "https://api.openai.com/v1", "api_key_env": "OPENAI_API_KEY"}
+  },
+  "roles": {
+    "agent":      {"provider": "anthropic", "model": "claude-sonnet-5-5", "temperature": 0, "max_tokens": 400},
+    "ec":         {"provider": "deepinfra", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "temperature": 0, "max_tokens": 1200, "input": "rendered"},
+    "office":     {"provider": "deepinfra", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "temperature": 0, "max_tokens": 500},
+    "auditor":    {"provider": "deepinfra", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "temperature": 0, "max_tokens": 1500},
+    "dj_l1":      {"provider": "deepinfra", "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo", "temperature": 0, "max_tokens": 2000},
+    "dj_l2": {"panel": [
+                 {"provider": "anthropic", "model": "claude-sonnet-5-5", "temperature": 0, "max_tokens": 2500, "stance": "textualist"},
+                 {"provider": "deepinfra", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "temperature": 0, "max_tokens": 2500, "stance": "purposive"},
+                 {"provider": "novita", "model": "moonshotai/kimi-k2-0905", "temperature": 0, "max_tokens": 2500, "stance": "risk_weighted"}],
+              "fallback": {"provider": "anthropic", "model": "claude-sonnet-5-5", "temperature": 0.7, "seeds": [11, 12, 13]}},
+    "dj_l3":      {"provider": "anthropic", "model": "claude-opus-5", "max_tokens": 20000, "reasoning": {"anthropic_thinking_budget": 10000}},
+    "prosecutor": {"provider": "deepinfra", "model": "meta-llama/Llama-3.3-70B-Instruct-Turbo", "temperature": 0, "max_tokens": 400},
+    "clerk":      {"provider": "deepinfra", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "temperature": 0, "max_tokens": 600},
+    "lawmaker":   {"provider": "anthropic", "model": "claude-sonnet-5-5", "temperature": 0, "max_tokens": 800},
+    "l4_proxy":   {"provider": "anthropic", "model": "claude-opus-5", "temperature": 0, "max_tokens": 4000}
+  },
+  "prices": {
+    "meta-llama/Llama-3.3-70B-Instruct-Turbo": {"input": 0.10, "output": 0.32, "source": "DeepInfra list price, checked 22 Oct 2026; fp8"},
+    "Qwen/Qwen3-235B-A22B-Instruct-2507":      {"input": 0.09, "output": 0.55, "source": "DeepInfra list price, checked 22 Oct 2026"},
+    "moonshotai/kimi-k2-0905":                 {"input": 0.60, "output": 2.50, "source": "Novita list price, checked 22 Oct 2026"}
+  },
+  "notes": [
+    "Moonshot's own API fixes Kimi's temperature at 0.6; a temperature-0 Kimi seat must use another host (Novita here).",
+    "Bedrock retires Llama 3.3 70B on 30 Mar 2027; DeepInfra is used here. Pin the model id and record the provider's quantisation (Turbo is fp8)."
+  ],
+  "routing": {"l3_confidence_min": 60, "candidate_pool_max": 40}
+}

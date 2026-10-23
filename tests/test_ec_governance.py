@@ -178,3 +178,95 @@ def test_decide_request_oracle_matches_decide_requests(vetpoc):
     got = reg.decide_requests(canon, 1 + EXCEPTION_LEAD_DAYS)
     assert want == "granted" and len(got) == 1
     assert reg.events[-1]["outcome"] == "granted"
+
+
+# ---------------------------------------------------------------------------
+# Config, keys, flags, prompts (commit 4; R4 prompt styles; H5)
+# ---------------------------------------------------------------------------
+
+from simulation.ec import governance as gov                          # noqa: E402
+from simulation.ec import llm_client                                  # noqa: E402
+
+ROLES_EXAMPLE = os.path.join(ROOT, "simulation", "ec", "config", "llm_roles.example.json")
+PROMPT_SEATS = ("conscience", "office", "auditor", "judge", "prosecutor", "clerk", "lawmaker", "l4_proxy")
+
+
+def test_r4_both_prompt_styles_exist_for_every_seat_and_canon_is_clean():
+    for seat in PROMPT_SEATS:
+        for style in gov.PROMPT_STYLES:
+            assert gov.load_prompt(seat, style), (seat, style)
+        assert gov.canon_leaks(gov.load_prompt(seat, "canon")) == [], seat
+    assert set(gov.load_stances()) == set(llm_client.STANCES)
+    assert len(set(gov.load_stances().values())) == 3, "the stance preambles differ"
+
+
+def test_r4_ec22_catches_a_seeded_leak():
+    canon = gov.load_prompt("conscience", "canon")
+    assert gov.canon_leaks(canon + "\nThen call registry.valid(token).") != []
+    assert gov.canon_leaks(gov.load_prompt("conscience", "procedural")) != []
+
+
+def test_roles_config_literal_key_is_fatal(tmp_path):
+    cfg = json.load(open(ROLES_EXAMPLE))
+    cfg["providers"]["anthropic"]["api_key"] = "sk-not-a-real-key"
+    p = tmp_path / "roles.json"
+    p.write_text(json.dumps(cfg))
+    with pytest.raises(llm_client.ConfigError, match="literal api_key"):
+        llm_client.load_roles_config(str(p))
+
+
+def test_roles_config_prices_need_a_source(tmp_path):
+    cfg = json.load(open(ROLES_EXAMPLE))
+    cfg["prices"]["meta-llama/Llama-3.3-70B-Instruct-Turbo"].pop("source")
+    p = tmp_path / "roles.json"
+    p.write_text(json.dumps(cfg))
+    with pytest.raises(llm_client.ConfigError, match="source"):
+        llm_client.load_roles_config(str(p))
+
+
+def test_keys_file_refused_inside_repo_or_world_readable(tmp_path, monkeypatch):
+    inside = os.path.join(ROOT, "simulation", "ec", "config", "_test_keys.env")
+    try:
+        with open(inside, "w") as fh:
+            fh.write("X_TEST_KEY=1\n")
+        os.chmod(inside, 0o600)
+        with pytest.raises(llm_client.ConfigError, match="outside the repository"):
+            llm_client.load_keys_file(inside, ROOT)
+    finally:
+        os.remove(inside)
+    f = tmp_path / "keys.env"
+    f.write_text("X_TEST_KEY=abc\n")
+    os.chmod(f, 0o644)
+    with pytest.raises(llm_client.ConfigError, match="private"):
+        llm_client.load_keys_file(str(f), ROOT)
+    os.chmod(f, 0o600)
+    monkeypatch.delenv("X_TEST_KEY", raising=False)
+    assert llm_client.load_keys_file(str(f), ROOT) == ["X_TEST_KEY"]
+    assert os.environ["X_TEST_KEY"] == "abc"
+
+
+def test_default_flags_keep_run_config_and_dir_layout():
+    a = run_year.parse_args(["--packs", "vetpoc", "--arms", "C", "--seeds", "11", "--days", "3"])
+    cfg = run_year.run_config_of(a)
+    assert not set(cfg) & set(gov.NEW_FLAG_DEFAULTS), "a deterministic run records no governance flag"
+    assert run_year.run_dir_for(a, "vetpoc", "C", 11).endswith(os.path.join("vetpoc", "C", "seed-11"))
+    b = run_year.parse_args(["--governance", "shadow", "--roles-config", ROLES_EXAMPLE, "--keys-file", "/x/y"])
+    cfg = run_year.run_config_of(b)
+    assert cfg["governance"] == "shadow" and cfg["keys_file"] == "<set>" and "roles_config_sha256" in cfg
+    assert run_year.run_dir_for(b, "vetpoc", "D", 11).endswith("seed-11+gov-shadow")
+    c = run_year.parse_args(["--governance", "llm", "--prompt-style", "procedural", "--roles-config", ROLES_EXAMPLE])
+    assert run_year.run_dir_for(c, "vetpoc", "D", 11).endswith("seed-11+gov-llm+procedural")
+
+
+def test_live_startup_names_missing_keys_never_values(monkeypatch, tmp_path):
+    for k in ("ANTHROPIC_API_KEY", "DEEPINFRA_API_KEY", "NOVITA_API_KEY"):
+        monkeypatch.delenv(k, raising=False)
+    monkeypatch.setenv("DEEPINFRA_API_KEY", "secret-value-123")
+    a = run_year.parse_args(["--governance", "llm", "--roles-config", ROLES_EXAMPLE, "--mode", "live",
+                             "--agent", "llm:anthropic:sonnet", "--out", str(tmp_path)])
+    a.requested_mode = "live"
+    with pytest.raises(SystemExit) as ei:
+        run_year.prepare_governance(a)
+    msg = str(ei.value)
+    assert "ANTHROPIC_API_KEY" in msg and "NOVITA_API_KEY" in msg and "secret-value-123" not in msg
+    assert "DEEPINFRA_API_KEY" not in msg

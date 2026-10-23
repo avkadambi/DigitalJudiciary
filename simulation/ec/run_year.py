@@ -53,6 +53,7 @@ from simulation.ec.gate import (NON_CONTRARY_KINDS, STAND_DOWN_KINDS, Act, Verdi
                                  is_departure, is_say_so_claim)
 from simulation.ec.registry import Registry                     # noqa: E402
 from simulation.ec.rival import rival_decide                    # noqa: E402
+from simulation.ec import governance as gov                     # noqa: E402
 
 PACKS = {
     "vetpoc": "vetpoc-constitution-corpus",
@@ -243,6 +244,20 @@ class Run:
                                 rate_limit_s=float(getattr(args, "rate_limit", 0.0) or 0.0))
         self.archetype = self.agent.archetype
         self.llm_live = args.agent.startswith("llm:") and args.mode == "live"
+        # Governance seats (governance build v3). Deterministic: today's code, nothing added.
+        self.gov = gov.Settings(args) if hasattr(args, "governance") else None
+        self.governed = bool(self.gov and self.gov.governed)
+        self.roles = None
+        self.flip = None
+        if self.governed:
+            from simulation.ec.llm_client import RoleRegistry, load_roles_config
+            from simulation.ec.agents.llm import PRICES
+            self.roles = RoleRegistry(load_roles_config(args.roles_config), mode=self.gov.seat_mode,
+                                      cache_dir=os.path.join(args.out, "llm_cache"),
+                                      log_path=os.path.join(out_dir, "llm_errors.jsonl"),
+                                      rate_limit_s=float(getattr(args, "rate_limit", 0.0) or 0.0),
+                                      anthropic_prices=PRICES, roles=self.gov.roles_needed())
+            self.flip = gov.DryFlip(seed, self.pack, self.gov.dry_error_rate)
         self.partition = streammod.partition_days(
             data.cases, data.like_pairs, random.Random(f"{seed}|{self.pack}|partition"), days=cal.DAYS, lam=cal.LAMBDA)
         # state
@@ -266,6 +281,8 @@ class Run:
             "filed_cases": self.filed_cases, "summary_days": self.summary_days, "bench_log": self.bench_log,
             "totals": self.totals, "agent_state": self.agent.state(),
         }
+        if self.governed:
+            state["governance"] = self.gov_state()
         tmp = os.path.join(self.out, "checkpoint.json.tmp")
         with open(tmp, "w") as fh:
             json.dump(state, fh)
@@ -292,6 +309,8 @@ class Run:
         self.bench_log = st["bench_log"]
         self.totals = st["totals"]
         self.agent.restore(st.get("agent_state") or {})
+        if self.governed:
+            self.gov_restore(st.get("governance") or {})
         # Truncate run.jsonl to the checkpointed day.
         if os.path.exists(self.run_path):
             keep = []
@@ -302,6 +321,23 @@ class Run:
             with open(self.run_path, "w") as fh:
                 fh.writelines(keep)
         return True
+
+    # -- governance state ------------------------------------------------------
+    def gov_state(self) -> dict:
+        """Every seat's state and the usage by role (checkpoint)."""
+        st = {"roles": self.roles.state()}
+        for name in ("conscience", "offices", "auditor", "doctrine", "l4"):
+            seat = getattr(self, name, None)
+            if seat is not None and hasattr(seat, "state"):
+                st[name] = seat.state()
+        return st
+
+    def gov_restore(self, st: dict) -> None:
+        self.roles.restore(st.get("roles") or {})
+        for name in ("conscience", "offices", "auditor", "doctrine", "l4"):
+            seat = getattr(self, name, None)
+            if seat is not None and hasattr(seat, "restore"):
+                seat.restore(st.get(name) or {})
 
     # -- arm B: the DJ alone ---------------------------------------------------
     def case_dict_for(self, p, case: dict) -> dict:
@@ -610,7 +646,10 @@ class Run:
     def spend_usd(self) -> float:
         """Money sent to the provider in this run (disk-cache hits cost nothing)."""
         u = (self.agent.state() or {}).get("usage") or {}
-        return float(u.get("spend_usd", 0.0) or 0.0)
+        spend = float(u.get("spend_usd", 0.0) or 0.0)
+        if self.roles is not None:
+            spend += self.roles.spend_usd()          # EC-20: the budget covers every role
+        return spend
 
     def finish(self, elapsed: float) -> None:
         o = self.out
@@ -652,12 +691,32 @@ class Run:
                           "BENCH_CAP": int(getattr(self.args, "bench_cap", 0) or 0),
                           "CISO_LINE": getattr(self.args, "ciso_line", "governance")},
         }
+        if self.governed:
+            rc = self.args.roles_config
+            manifest["governance"] = {
+                "settings": self.gov.to_dict(), "seats": self.roles.describe(),
+                "prompt_style": self.gov.prompt_style, "prompt_sha256": gov.prompt_digests(),
+                "roles_config_sha256": sha256_file(rc) if rc and os.path.exists(rc) else None,
+                "usage_by_role": self.roles.usage_by_role(),
+            }
         with open(os.path.join(o, "manifest.json"), "w") as fh:
             json.dump(manifest, fh, indent=1, sort_keys=True)
 
 
 class BudgetExceeded(RuntimeError):
     """`--budget-usd` reached; the run was checkpointed at the end of a day."""
+
+
+class HumanWait(RuntimeError):
+    """L4 queue mode with --human-wait: an item is due; the run was checkpointed (exit 4)."""
+
+
+def pair_divergence_for(variants: list, pack: str, arm: str, seed: int) -> None:
+    """Write the divergence block into the binding run's summary.json (§3.5)."""
+    from simulation.ec.tools import pair_divergence
+    shadow_dir = run_dir_for(variants[0], pack, arm, seed)
+    llm_dir = run_dir_for(variants[1], pack, arm, seed)
+    pair_divergence.write_into_summary(shadow_dir, llm_dir)
 
 
 def run_complete(out_dir: str, days: int) -> bool:
@@ -672,8 +731,14 @@ def run_complete(out_dir: str, days: int) -> bool:
         return False
 
 
+def run_dir_for(args, pack: str, arm: str, seed: int) -> str:
+    """`<out>/<pack>/<arm>/seed-<seed>[+gov-…]`: a governed run gets its own directory."""
+    suffix = gov.Settings(args).suffix() if hasattr(args, "governance") else ""
+    return os.path.join(args.out, pack, arm, f"seed-{seed}{suffix}")
+
+
 def run_one(data: PackData, arm: str, seed: int, args, quiet: bool = False, spent_before: float = 0.0) -> dict:
-    out_dir = os.path.join(args.out, data.pack, arm, f"seed-{seed}")
+    out_dir = run_dir_for(args, data.pack, arm, seed)
     if args.resume and run_complete(out_dir, args.days):
         if not quiet:
             print(f"[{data.pack} {arm} seed {seed}] complete, skipped (--resume)", flush=True)
@@ -748,6 +813,7 @@ def parse_args(argv=None):
                     help="registered sensitivity (R2): hearings per working day, 0 = unlimited (primary)")
     ap.add_argument("--ciso-line", choices=("governance", "engineering"), default="governance",
                     help="registered sensitivity (R2): reporting line of office:security")
+    gov.add_args(ap)
     a = ap.parse_args(argv)
     if a.days < 1 or a.days > cal.DAYS:
         raise SystemExit(f"--days must be 1..{cal.DAYS}")
@@ -761,6 +827,59 @@ def check_python(version=None) -> None:
         raise SystemExit(f"Python 3.9 or later is required (found {v[0]}.{v[1]})")
 
 
+def run_config_of(a) -> dict:
+    """`run_config.json`: every pre-governance flag as before; a governance flag
+    only when it differs from its default (a deterministic run's config is
+    byte-identical). The keys file is recorded as `<set>`, never its path or
+    contents; the roles config by path and sha256."""
+    out = {}
+    for k, v in vars(a).items():
+        if k == "requested_mode":
+            continue
+        if k in gov.NEW_FLAG_DEFAULTS and v == gov.NEW_FLAG_DEFAULTS[k]:
+            continue
+        if k == "keys_file":
+            v = "<set>"
+        if k == "roles_config" and v:
+            out["roles_config_sha256"] = sha256_file(v) if os.path.exists(v) else None
+            av = os.path.abspath(v)
+            v = os.path.relpath(av, ROOT) if av.startswith(ROOT + os.sep) else os.path.basename(av)
+        out[k] = v
+    return out
+
+
+def prepare_governance(a) -> None:
+    """Validate the governance flags before day 1: roles config present and
+    safe, keys loaded from the keys file (names only), every needed key set in
+    live mode. Raises SystemExit with the variable's name, never its value."""
+    st = gov.Settings(a)
+    if a.keys_file:
+        from simulation.ec.llm_client import load_keys_file, ConfigError
+        try:
+            load_keys_file(a.keys_file, ROOT)
+        except (ConfigError, OSError) as e:
+            raise SystemExit(f"--keys-file refused: {e}")
+    if not st.governed:
+        return
+    if not a.roles_config:
+        raise SystemExit("--roles-config is required when any seat is llm or shadow")
+    from simulation.ec.llm_client import load_roles_config, ConfigError, RoleRegistry
+    from simulation.ec.agents.llm import PRICES
+    try:
+        cfg = load_roles_config(a.roles_config)
+        reg = RoleRegistry(cfg, mode=st.seat_mode, cache_dir=os.path.join(a.out, "llm_cache"),
+                           anthropic_prices=PRICES, roles=st.roles_needed())
+    except (ConfigError, OSError, ValueError) as e:
+        raise SystemExit(f"roles config refused: {e}")
+    missing_roles = [r for r in st.roles_needed() if r not in reg.clients]
+    if missing_roles:
+        raise SystemExit(f"roles config has no entry for {missing_roles}")
+    if st.seat_mode == "live":
+        missing = reg.missing_keys()
+        if missing:
+            raise SystemExit("live governance needs these environment variables set: " + ", ".join(missing))
+
+
 def main(argv=None) -> int:
     check_python()
     a = parse_args(argv)
@@ -770,30 +889,56 @@ def main(argv=None) -> int:
         if x not in ARMS:
             raise SystemExit(f"unknown arm {x!r}; known {ARMS}")
     seeds = [int(s) for s in a.seeds.split(",") if s.strip()]
+    a.requested_mode = a.mode
     if a.agent.startswith("llm:") and a.mode == "oracle":
         a.mode = "dry"
     if a.agent.startswith("policy:") and a.mode != "oracle":
         a.mode = "oracle"
+    if a.project and a.requested_mode == "live":
+        raise SystemExit("--project runs dry; drop --mode live")
+    prepare_governance(a)
     os.makedirs(a.out, exist_ok=True)
     with open(os.path.join(a.out, "run_config.json"), "w") as fh:
-        json.dump({k: v for k, v in vars(a).items()}, fh, indent=1)
+        json.dump(run_config_of(a), fh, indent=1)
     t0 = time.time()
     timings = []
     spent = 0.0
     stopped = None
+    variants = [a]
+    if a.pair:
+        variants = []
+        for preset in ("shadow", "llm"):
+            v = argparse.Namespace(**vars(a))
+            v.governance = preset
+            for seat in gov.SEATS:
+                setattr(v, seat, None)
+            variants.append(v)
     try:
         for pack in packs:
             data = PackData(pack)
             for arm in arms:
                 for seed in seeds:
-                    t = run_one(data, arm, seed, a, quiet=a.quiet, spent_before=spent)
-                    spent += float(t.get("spend_usd", 0.0) or 0.0)
-                    timings.append(t)
+                    for v in variants:
+                        t = run_one(data, arm, seed, v, quiet=a.quiet, spent_before=spent)
+                        spent += float(t.get("spend_usd", 0.0) or 0.0)
+                        timings.append(t)
+                    if a.pair:
+                        pair_divergence_for(variants, data.pack, arm, seed)
     except BudgetExceeded as e:
         stopped = str(e)
+    except HumanWait as e:
+        with open(os.path.join(a.out, "timings.json"), "w") as fh:
+            json.dump({"elapsed_s": time.time() - t0, "runs": timings, "spend_usd": spent, "human_wait": str(e)},
+                      fh, indent=1)
+        print(str(e), file=sys.stderr, flush=True)
+        return 4
     with open(os.path.join(a.out, "timings.json"), "w") as fh:
         json.dump({"elapsed_s": time.time() - t0, "runs": timings, "spend_usd": spent, "budget_stop": stopped},
                   fh, indent=1)
+    if a.project:
+        from simulation.ec import projection
+        print(projection.report(a.out, a), flush=True)
+        return 0
     if stopped:
         print(stopped, file=sys.stderr, flush=True)
         return 3
