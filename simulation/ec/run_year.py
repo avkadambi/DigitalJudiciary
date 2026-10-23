@@ -500,6 +500,10 @@ class Run:
             # agent does not act on it. The gate (and every other arm) still judges it.
             act = Act("as_submitted", None, None, "NONE", None, None, None, False)
         else:
+            if self.governed:
+                # §3.5: the agent's prompts, hashed per day, for the pair's divergence day.
+                from simulation.ec.agents.llm import build_prompt as agent_prompt
+                self._agent_prompt_sha.update(agent_prompt(ctx).encode("utf-8"))
             act = self.agent.propose(ctx)
         act.conflict = bool(getattr(p, "conflict_flag", False)) or bool(act.conflict)
         p.act = act
@@ -631,6 +635,8 @@ class Run:
                   "heard": 0, "glosses_written": 0, "tokens_issued": 0, "t3_sampled": 0, "twins": 0,
                   "df_recall": None, "df_precision": None, "cost_usd": 0.0}
         counts["glosses_written"] = self.apply_due_glosses(day)
+        if self.governed:
+            self._agent_prompt_sha = hashlib.sha256()
         # Both registries issue from the pristine canon, so token ids agree in every
         # arm. Day 1: the standing emergency token. Every day (R2): the owners decide
         # the exception requests filed EXCEPTION_LEAD_DAYS ago (in the arm-invariant
@@ -774,6 +780,10 @@ class Run:
         if arm in ("C", "D"):
             self.bench_log["aggregates"].append(aggregate_disclosures(entries, day))
 
+        if self.governed:
+            # §3.5: the end-of-day state (store, glosses, registry) and the day's agent prompts.
+            counts["state_hash"] = dict(gov.state_hashes(self.store, self.canon, self.registry),
+                                        agent_prompts=self._agent_prompt_sha.hexdigest())
         with open(self.run_path, "a") as fh:
             for line in lines:
                 fh.write(json.dumps(line, sort_keys=True) + "\n")

@@ -710,3 +710,36 @@ def test_human_review_refuses_a_permit_affirming_a6(tmp_path):
     assert d["absolute_finding_overturned"]
     with pytest.raises(ValueError):
         human_review.decide(str(tmp_path), "A-9", "deny")
+
+
+# ---------------------------------------------------------------------------
+# Pairs and divergence (R6, commit 10)
+# ---------------------------------------------------------------------------
+
+from simulation.ec.tools import pair_divergence                      # noqa: E402
+
+
+def _summ(hashes, totals):
+    return {"by_day": [{"day": i + 1, "state_hash": h} for i, h in enumerate(hashes)], "totals": totals}
+
+
+def test_r6_divergence_day_on_a_scripted_divergence():
+    same = {"store": "s", "glosses": "g", "registry": "r", "agent_prompts": "a"}
+    sh = _summ([same] * 4, {"executed": 10, "blocked": 2})
+    bi = _summ([same, dict(same, registry="R"), dict(same, registry="R", store="S"), dict(same, registry="R", store="S")],
+               {"executed": 7, "blocked": 5})
+    d = pair_divergence.divergence(sh, bi)
+    assert (d["day_registry"], d["day_store"], d["day_glosses"], d["day_agent_prompts"], d["day_first"]) == (2, 3, None, None, 2)
+    assert d["prop"] == {"blocked": 3.0, "executed": -3.0}, "prop = binding - shadow"
+
+
+@needs_canon
+def test_r6_pair_writes_both_runs_and_the_divergence_block(tmp_path):
+    rc = run_year.main(["--packs", "vetpoc", "--arms", "D", "--seeds", "11", "--days", "6", "--out", str(tmp_path),
+                        "--quiet", "--pair", "--roles-config", ROLES_EXAMPLE, "--dry-error-rate", "0.2"])
+    assert rc == 0
+    base = tmp_path / "vetpoc" / "D"
+    assert sorted(os.listdir(base)) == ["seed-11+gov-llm", "seed-11+gov-shadow"]
+    s = json.load(open(base / "seed-11+gov-llm" / "summary.json"))
+    assert s["divergence"]["days_compared"] == 6 and s["divergence"]["hashes_present"]
+    assert "divergence" not in json.load(open(base / "seed-11+gov-shadow" / "summary.json"))
