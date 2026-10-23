@@ -743,3 +743,40 @@ def test_r6_pair_writes_both_runs_and_the_divergence_block(tmp_path):
     s = json.load(open(base / "seed-11+gov-llm" / "summary.json"))
     assert s["divergence"]["days_compared"] == 6 and s["divergence"]["hashes_present"]
     assert "divergence" not in json.load(open(base / "seed-11+gov-shadow" / "summary.json"))
+
+
+# ---------------------------------------------------------------------------
+# Metrics (commit 11)
+# ---------------------------------------------------------------------------
+
+from simulation.ec import metrics, metrics_gov                       # noqa: E402
+
+
+def test_metrics_deterministic_root_keeps_todays_columns():
+    assert metrics.columns_for([{"pack": "vetpoc"}]) is metrics.COLUMNS
+    cols = metrics.columns_for([{"governance": "shadow"}])
+    assert cols[:len(metrics.COLUMNS)] == metrics.COLUMNS and "acc_dj_holding" in cols and "prop_e1_imperm" in cols
+
+
+def test_metrics_prop_is_binding_minus_shadow_and_bench_scored_on_oracle_canon():
+    rows = [{"e1_imperm": 0.30, "executed": 90}, {"e1_imperm": 0.25, "executed": 100}]
+    dirs = ["r/vetpoc/D/seed-11+gov-llm", "r/vetpoc/D/seed-11+gov-shadow"]
+    metrics_gov.add_pair_props(rows, dirs)
+    assert abs(rows[0]["prop_e1_imperm"] - 0.05) < 1e-12 and rows[0]["prop_executed"] == -10.0
+    assert "prop_e1_imperm" not in rows[1]
+    h = [{"ladder": {}, "ladder_holding": "deny", "oracle_canon": "deny", "oracle_engine": "permit"}]
+    assert metrics_gov.dj_holding_accuracy(h) == 1.0
+    assert metrics_gov.dj_holding_accuracy(h, metrics_gov.DJ_KEY_ENGINE) == 0.0, "swapping the keys changes the score"
+
+
+def test_ec_columns_on_scripted_lines():
+    def line(aid, dec, oracle, twin=None, tier="T1"):
+        return {"proposal": {"act_id": aid, "twin_of": twin, "act": {"kind": "x"}, "engaged": ["E"]},
+                "ec_llm": {"decision": dec, "entries": [], "conflict": False},
+                "oracle_verdict": {"four_way": oracle, "tier": tier, "per_entry": [], "reason_code": "x"},
+                "verdict": {"reason_code": "x"}}
+    L = [line("A", "allow", "escalate"), line("B", "block", "allow"), line("C", "escalate", "escalate"),
+         line("C~t", "escalate", "escalate", twin="C")]
+    c = metrics_gov.ec_columns(L)
+    assert c["acc_ec_d7"] == 0.5 and c["ec_false_allow_T0T1"] == 1 / 3 and c["ec_false_block"] == 1.0
+    assert c["ec_esc_precision"] == 1.0 and c["ec_esc_recall"] == 2 / 3 and c["ec_twin_invariance"] == 1.0

@@ -52,7 +52,7 @@ NEW_FLAG_DEFAULTS = {
 
 # EC-22: what a canon-style prompt may never contain (procedure or code).
 CANON_LEAK_PATTERNS = (
-    r"[a-z_]+\.[a-z_]+\(", r"registry", r"four_way", r"gate_oracle", r"bench_oracle", r"decide_request_oracle",
+    r"[a-z_]+\.[a-z_]+\(", r"\bregistry\b", r"four_way", r"gate_oracle", r"bench_oracle", r"decide_request_oracle",
     r"label_for", r"gloss_oracle", r"codify_oracle", r"contravenes", r"is_departure", r"evidence_supports",
 )
 _LEAK_RE = [re.compile(p) for p in CANON_LEAK_PATTERNS]

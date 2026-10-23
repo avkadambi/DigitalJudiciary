@@ -200,6 +200,8 @@ class LadderHearer:
             client.account_dry(system, user, gov.DRY_OUT_TOKENS[role])
             op = copy.deepcopy(oracle)
             op["dry_flipped"] = False
+            # Dry confidence model: uniform 55..100 per opinion (seeded), 55 when flipped.
+            op["confidence"] = int(55 + 45 * random.Random(f"{self.seed}|{self.pack}|{key}|conf").random())
             if self.flip is not None and self.flip.flip(key):
                 op["holding"] = self.flip.choice(key, [h for h in HOLDINGS if h != oracle["holding"]])
                 op["controlling"] = None          # a flipped judge distinguishes the precedent
@@ -281,7 +283,7 @@ class LadderHearer:
         if l1["degraded"]:
             reasons.append("degraded")
             go_l2 = True
-        elif l1_abs and (corpus or l1_abs == ec_t0):
+        elif self._a6_final(l1_abs, ec_t0, corpus):
             a6_level = 1                          # A6 at L1 is final
         else:
             if l1_abs != ec_t0 and not corpus:
@@ -289,8 +291,7 @@ class LadderHearer:
             dec = filing.get("conscience_decision")
             if dec is not None and permitted(l1["holding"]) != conscience_permits(dec):
                 reasons.append("i_disagree_ec")
-            if (l1.get("confidence") is not None and l1["confidence"] < self.l2_confidence and not corpus
-                    and filing.get("conscience_tier") in ("T1", "T2") and not l1.get("controlling")):
+            if self._trigger_ii(l1, filing, corpus):
                 reasons.append("ii_low_conf_t1t2")
             if self._appeal(filing, l1["holding"], 1, corpus):
                 reasons.append("iii_appeal")
@@ -398,6 +399,16 @@ class LadderHearer:
                 "oracle_controlling": eng.get("controlling"), "oracle_premise": eng["premise"],
                 "final_level": level, "a6_level": a6_level, "l4": l4, "pool_capped": capped,
                 "refer_up_l1": bool(l1.get("refer_up")), "ladder_holding": deciding.get("holding")}
+
+    @staticmethod
+    def _a6_final(l1_abs: bool, ec_t0: bool, corpus: bool) -> bool:
+        """A6 at L1 is final unless the finding disagrees with the conscience's tier."""
+        return bool(l1_abs and (corpus or l1_abs == ec_t0))
+
+    def _trigger_ii(self, l1: dict, filing: dict, corpus: bool) -> bool:
+        """ii: low confidence, on an EC filing on a T1/T2 entry, with no controlling precedent."""
+        return (l1.get("confidence") is not None and l1["confidence"] < self.l2_confidence and not corpus
+                and filing.get("conscience_tier") in ("T1", "T2") and not l1.get("controlling"))
 
     def _appeal(self, filing: dict, holding, level: int, corpus: bool) -> bool:
         """iii: the agent appeals a T1 deny when it held a token that was expired or out of

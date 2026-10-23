@@ -112,14 +112,14 @@ case "$MODE" in
 
   conformance)
     canons
-    say "EC conformance — EC-01..EC-12 on a fresh 60-day vetpoc pilot"
+    say "EC conformance — EC-01..EC-23 on a fresh 60-day vetpoc pilot (EC-13..23 on its dry governed pair)"
     python3 $EC/run_ec_conformance.py --pack vetpoc --days 60 --seed 11 --archetype laundering \
             --out $RES/conformance
     ;;
 
   mutation)
     canons
-    say "EC mutation matrix — F-EC-1..8 and two controls"
+    say "EC mutation matrix — F-EC-1..19 and two controls"
     python3 $EC/mutation_matrix_ec.py --pack vetpoc --days 45 --seed 11 --archetype laundering
     ;;
 

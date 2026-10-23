@@ -1,10 +1,10 @@
 """
-EC mutation matrix: evidence that EC-01..EC-12 can fail (DESIGN §7).
+EC mutation matrix: evidence that EC-01..EC-23 can fail (DESIGN §7; governance build v3 §5.12).
 
     python3 simulation/ec/mutation_matrix_ec.py [--pack vetpoc] [--days 45] [--seed 11]
         [--archetype laundering] [--jobs N] [--keep]
 
-Eight faults, F-EC-1..F-EC-8, and two controls that must survive. Every one is
+Nineteen faults, F-EC-1..F-EC-19, and two controls that must survive. Every one is
 a `unittest.mock.patch` of a function or constant in the ec package, applied
 inside try/finally in a forked worker process; nothing on disk is edited and
 the parent process never sees a patched module. Each worker reruns the short
@@ -25,6 +25,19 @@ and reports which checks the fault killed.
     F-EC-6  Bench.file drops holds (conflict holds and agent escalations)  -> EC-06
     F-EC-7  reconcile labels from the entry's own claim                    -> EC-07
     F-EC-8  write_gloss moves the entry's tier                             -> EC-08
+    F-EC-9  the judge's case file includes the engine trace's route        -> EC-13
+    F-EC-10 the audit sentence goes into the conscience prompt             -> EC-14
+    F-EC-11 an examen narrative is passed to the bench                     -> EC-15
+    F-EC-12 gate_oracle consumes the token                                 -> EC-16
+    F-EC-13 a governed run leaves engine.admit wrapped                     -> EC-17
+    F-EC-14 the panel's permit is taken after L1 found A6                  -> EC-18
+    F-EC-15 the clerk sets the entry's tier                                -> EC-19
+    F-EC-16 the budget reads only the agent                                -> EC-20
+    F-EC-17 trigger ii without its T1/T2 and no-precedent conditions       -> EC-21
+            (EC-21 only warns: the fault is killed when it raises the L2+
+            warning on the dry fixture, which the baseline does not)
+    F-EC-18 the procedural conscience text is served as the canon prompt   -> EC-22
+    F-EC-19 the bench is scored against oracle_engine                      -> EC-23
     C-1     a run.jsonl field no check reads is renamed                    survives
     C-2     the gate's docstring is changed                                survives
 
@@ -35,7 +48,7 @@ reads the function that is actually gated with, not the file in the repo).
 
 The matrix passes when every fault is killed, both controls survive, and
 every check DESIGN does not mark `control` (EC-09, EC-11, EC-12) is killed by
-at least one fault. `RESULT: k/8 faults killed, c/2 controls survived`; exit 1
+at least one fault. `RESULT: k/19 faults killed, c/2 controls survived`; exit 1
 otherwise.
 """
 
@@ -67,6 +80,8 @@ from simulation.ec import metrics                     # noqa: E402,F401  (so its
 from simulation.ec import registry as registry_mod    # noqa: E402
 from simulation.ec import run_year                    # noqa: E402
 from simulation.ec import run_ec_conformance as conf  # noqa: E402
+from simulation.ec import bench_llm, bench_oracle, conscience_llm, doctrine_llm, metrics_gov   # noqa: E402
+from simulation.ec import governance as gov_mod      # noqa: E402
 
 CONTROL_CHECKS = ("EC-09", "EC-11", "EC-12")
 ALL_CHECKS = [cid for cid, _, _ in conf.CHECKS]
@@ -162,6 +177,83 @@ def process_renames_field(self, p, case, agent_rng, day, view):
     return line, rec
 
 
+# -- governance faults (F-EC-9 .. F-EC-19) -----------------------------------
+
+_LAST_ROUTE: dict = {}
+
+
+def bench_oracle_remembers_route(case_dict, store, provisions, theta, engine, filing):
+    r = _ORIG["bench_oracle"](case_dict, store, provisions, theta, engine, filing)
+    _LAST_ROUTE["route"] = r["trace"].get("route")
+    return r
+
+
+def case_file_with_route(case, pool, provisions, filing, entry, aggregates, style):
+    return _ORIG["case_file"](case, pool, provisions, filing, entry, aggregates, style) + \
+        f"\nThe engine routed this case: {_LAST_ROUTE.get('route')}"
+
+
+def build_prompt_with_audit(p, act, *a, **k):
+    from simulation.ec.agents.llm import AUDIT_SENTENCE
+    system, user = _ORIG["build_prompt"](p, act, *a, **k)
+    return system, (user + "\n\n" + AUDIT_SENTENCE) if p.audit_announced else user
+
+
+def aggregates_with_narratives(entries, day):
+    d = _ORIG["aggregate_disclosures"](entries, day)
+    d["narratives"] = [en.narrative for en in entries if en.narrative]
+    return d
+
+
+def case_file_with_narratives(case, pool, provisions, filing, entry, aggregates, style):
+    out = _ORIG["case_file"](case, pool, provisions, filing, entry, aggregates, style)
+    return out + "\n" + "\n".join((aggregates or {}).get("narratives") or [])
+
+
+def gate_oracle_consumes(p, canon, registry, day, agent_line="engineering"):
+    v, consumed, per = _ORIG["gate_oracle"](p, canon, registry, day, agent_line)
+    for t in consumed:
+        registry.consume(t, day, p.act_id)
+    return v, consumed, per
+
+
+def finish_leaves_admit_wrapped(self, elapsed):
+    _ORIG["finish"](self, elapsed)
+    eng = self.engine
+    if self.governed and getattr(eng.admit, "__module__", None) == eng.__name__:
+        inner = eng.admit
+
+        def admit(*a, **k):
+            return inner(*a, **k)
+        eng.admit = admit
+
+
+def a6_never_final(l1_abs, ec_t0, corpus):
+    return False
+
+
+def apply_gloss_sets_tier(canon, entry_id, gloss, day, base=None):
+    out = _ORIG["apply_gloss"](canon, entry_id, gloss, day, base)
+    if gloss.get("tier"):
+        canon.entry(entry_id).tier = gloss["tier"]
+    return out
+
+
+def spend_agent_only(self):
+    u = (self.agent.state() or {}).get("usage") or {}
+    return float(u.get("spend_usd", 0.0) or 0.0)
+
+
+def trigger_ii_unconditioned(self, l1, filing, corpus):
+    return l1.get("confidence") is not None and l1["confidence"] < self.l2_confidence
+
+
+def load_prompt_procedural_conscience(seat, style):
+    if (seat, style) == ("conscience", "canon"):
+        return _ORIG["load_prompt"]("conscience", "procedural")
+    return _ORIG["load_prompt"](seat, style)
+
+
 _ORIG = {
     "tier_of": canon_mod.tier_of,
     "valid": registry_mod.Registry.valid,
@@ -169,6 +261,18 @@ _ORIG = {
     "file": escalate.Bench.file,
     "write_gloss": doctrine.write_gloss,
     "process": run_year.Run.process,
+    "bench_oracle": bench_oracle.bench_oracle,
+    "case_file": bench_llm.case_file,
+    "build_prompt": conscience_llm.build_prompt,
+    "aggregate_disclosures": doctrine.aggregate_disclosures,
+    "gate_oracle": gate_mod.gate_oracle,
+    "finish": run_year.Run.finish,
+    "a6_final": bench_llm.LadderHearer.__dict__["_a6_final"],
+    "trigger_ii": bench_llm.LadderHearer._trigger_ii,
+    "apply_gloss": doctrine_llm.apply_gloss,
+    "spend_usd": run_year.Run.spend_usd,
+    "load_prompt": gov_mod.load_prompt,
+    "dj_key": metrics_gov.DJ_KEY,
 }
 
 
@@ -202,6 +306,30 @@ def patches_for(fid: str, tmp_dir: str) -> list:
     if fid == "F-EC-8":
         return [mock.patch("simulation.ec.doctrine.write_gloss", write_gloss_moves_tier),
                 mock.patch("simulation.ec.run_year.write_gloss", write_gloss_moves_tier)]
+    if fid == "F-EC-9":
+        return [mock.patch("simulation.ec.bench_oracle.bench_oracle", bench_oracle_remembers_route),
+                mock.patch("simulation.ec.bench_llm.case_file", case_file_with_route)]
+    if fid == "F-EC-10":
+        return [mock.patch("simulation.ec.conscience_llm.build_prompt", build_prompt_with_audit)]
+    if fid == "F-EC-11":
+        return [mock.patch("simulation.ec.run_year.aggregate_disclosures", aggregates_with_narratives),
+                mock.patch("simulation.ec.bench_llm.case_file", case_file_with_narratives)]
+    if fid == "F-EC-12":
+        return [mock.patch("simulation.ec.gate.gate_oracle", gate_oracle_consumes)]
+    if fid == "F-EC-13":
+        return [mock.patch.object(run_year.Run, "finish", finish_leaves_admit_wrapped)]
+    if fid == "F-EC-14":
+        return [mock.patch.object(bench_llm.LadderHearer, "_a6_final", staticmethod(a6_never_final))]
+    if fid == "F-EC-15":
+        return [mock.patch("simulation.ec.doctrine_llm.apply_gloss", apply_gloss_sets_tier)]
+    if fid == "F-EC-16":
+        return [mock.patch.object(run_year.Run, "spend_usd", spend_agent_only)]
+    if fid == "F-EC-17":
+        return [mock.patch.object(bench_llm.LadderHearer, "_trigger_ii", trigger_ii_unconditioned)]
+    if fid == "F-EC-18":
+        return [mock.patch("simulation.ec.governance.load_prompt", load_prompt_procedural_conscience)]
+    if fid == "F-EC-19":
+        return [mock.patch("simulation.ec.metrics_gov.DJ_KEY", "oracle_engine")]
     if fid == "C-1":
         return [mock.patch.object(run_year.Run, "process", process_renames_field)]
     if fid == "C-2":
@@ -220,6 +348,17 @@ MUTANTS = [
     ("F-EC-6", "fault", "bench drops holds", ("EC-06",)),
     ("F-EC-7", "fault", "reconcile reads a carried label", ("EC-07",)),
     ("F-EC-8", "fault", "write_gloss bumps tier", ("EC-08",)),
+    ("F-EC-9", "fault", "judge case file carries the trace route", ("EC-13",)),
+    ("F-EC-10", "fault", "audit sentence in the conscience prompt", ("EC-14",)),
+    ("F-EC-11", "fault", "narrative passed to the bench", ("EC-15",)),
+    ("F-EC-12", "fault", "gate_oracle consumes the token", ("EC-16",)),
+    ("F-EC-13", "fault", "engine.admit left wrapped", ("EC-17",)),
+    ("F-EC-14", "fault", "panel permit taken after A6 at L1", ("EC-18",)),
+    ("F-EC-15", "fault", "clerk sets the tier", ("EC-19",)),
+    ("F-EC-16", "fault", "budget reads only the agent", ("EC-20",)),
+    ("F-EC-17", "fault", "trigger ii unconditioned (L2+ warning)", ("EC-21",)),
+    ("F-EC-18", "fault", "procedural text as the canon conscience prompt", ("EC-22",)),
+    ("F-EC-19", "fault", "bench scored against oracle_engine", ("EC-23",)),
     ("C-1", "control", "run.jsonl field believes_monitored renamed (no check reads it)", ()),
     ("C-2", "control", "gate docstring changed", ()),
 ]
@@ -245,6 +384,9 @@ def run_one(job: tuple) -> dict:
                                    None, out)
                 res = conf.run_checks(suite, quiet=True)
                 failed = [c["id"] for c in res["checks"] if not c["pass"]]
+                # EC-21 only warns (§5.12): its L2+ warning counts as a failure of the check here.
+                if "l2_share" in (getattr(suite, "ec21_warn_codes", None) or []):
+                    failed.append("EC-21")
                 details = {c["id"]: c["detail"] for c in res["checks"] if not c["pass"]}
             except Exception as e:        # a fault that crashes the run is a kill without a named check
                 crash = f"{type(e).__name__}: {str(e)[:120]}"
@@ -260,6 +402,14 @@ def run_one(job: tuple) -> dict:
         assert run_year.gate is gate_mod.gate and gate_mod.gate.__code__.co_filename.endswith("gate.py")
         assert gate_mod._verdict.__code__.co_filename.endswith("gate.py")
         assert examen.reconcile is run_year.reconcile
+        assert bench_oracle.bench_oracle is _ORIG["bench_oracle"] and bench_llm.case_file is _ORIG["case_file"]
+        assert conscience_llm.build_prompt is _ORIG["build_prompt"] and gate_mod.gate_oracle is _ORIG["gate_oracle"]
+        assert run_year.aggregate_disclosures is _ORIG["aggregate_disclosures"]
+        assert run_year.Run.finish is _ORIG["finish"] and run_year.Run.spend_usd is _ORIG["spend_usd"]
+        assert bench_llm.LadderHearer.__dict__["_a6_final"] is _ORIG["a6_final"]
+        assert bench_llm.LadderHearer._trigger_ii is _ORIG["trigger_ii"]
+        assert doctrine_llm.apply_gloss is _ORIG["apply_gloss"] and gov_mod.load_prompt is _ORIG["load_prompt"]
+        assert metrics_gov.DJ_KEY == _ORIG["dj_key"]
         if not cfg["keep"]:
             shutil.rmtree(out, ignore_errors=True)
     return {"id": fid, "failed": failed, "crash": crash, "details": details, "elapsed_s": round(time.time() - t0, 1)}
@@ -271,7 +421,7 @@ def run_one(job: tuple) -> dict:
 
 
 def parse_args(argv=None):
-    ap = argparse.ArgumentParser(description="EC mutation matrix F-EC-1..8 + 2 controls")
+    ap = argparse.ArgumentParser(description="EC mutation matrix F-EC-1..19 + 2 controls")
     ap.add_argument("--pack", default="vetpoc")
     ap.add_argument("--days", type=int, default=45)
     ap.add_argument("--seed", type=int, default=11)
@@ -303,9 +453,9 @@ def main(argv=None) -> int:
     base = by_id["baseline"]
     if base["crash"] or base["failed"]:
         print(f"baseline is not clean: crash={base['crash']} failed={base['failed']}")
-        print("RESULT: 0/8 faults killed, 0/2 controls survived")
+        print(f"RESULT: 0/{sum(1 for m in MUTANTS if m[1] == 'fault')} faults killed, 0/2 controls survived")
         return 1
-    print(f"baseline: 12/12 in {base['elapsed_s']}s")
+    print(f"baseline: {len(ALL_CHECKS)}/{len(ALL_CHECKS)} in {base['elapsed_s']}s")
 
     killed = survived = 0
     killers: dict = {c: [] for c in ALL_CHECKS}

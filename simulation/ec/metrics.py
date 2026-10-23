@@ -278,6 +278,11 @@ def metrics_for_run(run_dir: str) -> dict:
     row["tokens_expired"] = tot.get("tokens_expired")
     row["t3_samples"] = len(bench.get("t3_samples", []))
     row["cost_usd"] = tot.get("cost_usd", 0.0)
+    if man.get("governance"):
+        from simulation.ec import metrics_gov
+        row.update(metrics_gov.columns(run_dir, man, summ, bench, lines))
+        _MONTHLY_SRC.append(({"pack": man["pack"], "arm": man["arm"], "seed": man["seed"],
+                              "run": os.path.basename(run_dir)}, bench))
     return row
 
 
@@ -290,26 +295,60 @@ def find_runs(root: str) -> list:
 
 
 def compute(root: str) -> list:
-    rows = [metrics_for_run(d) for d in find_runs(root)]
-    rows.sort(key=lambda r: (r["pack"], r["arm"], int(r["seed"]), str(r["archetype"])))
+    dirs = find_runs(root)
+    rows = [metrics_for_run(d) for d in dirs]
+    if any(r.get("governance") for r in rows):
+        from simulation.ec import metrics_gov
+        metrics_gov.add_pair_props(rows, dirs)
+        for r, d in zip(rows, dirs):
+            r["run"] = os.path.basename(d)
+    rows.sort(key=lambda r: (r["pack"], r["arm"], int(r["seed"]), str(r["archetype"]), str(r.get("run") or "")))
     return rows
+
+
+def columns_for(rows: list) -> list:
+    """Today's columns; a root with governed runs adds the governance columns (§5.11)."""
+    if not any(r.get("governance") for r in rows):
+        return COLUMNS
+    from simulation.ec import metrics_gov
+    return COLUMNS + ["run"] + metrics_gov.GOV_COLUMNS
 
 
 def write(rows: list, out_dir: str) -> tuple:
     os.makedirs(out_dir, exist_ok=True)
     csv_path = os.path.join(out_dir, "metrics.csv")
     json_path = os.path.join(out_dir, "metrics.json")
+    cols = columns_for(rows)
     with open(csv_path, "w", newline="") as fh:
-        w = csv.DictWriter(fh, fieldnames=COLUMNS)
+        w = csv.DictWriter(fh, fieldnames=cols)
         w.writeheader()
         for r in rows:
             w.writerow({k: ("NA" if r.get(k) is None else (f"{r[k]:.6g}" if isinstance(r[k], float) else r[k]))
-                        for k in COLUMNS})
+                        for k in cols})
+    if cols is not COLUMNS:
+        write_monthly(out_dir)
     with open(json_path, "w") as fh:
-        json.dump({"columns": COLUMNS, "rows": rows,
+        json.dump({"columns": cols, "rows": rows,
                    "provenance_note": "policy/oracle runs ⟦measured⟧ against ⟦identity⟧ archetype truths; "
                                       "llm dry ⟦PROJECTED⟧; llm live ⟦measured⟧"}, fh, indent=1, ensure_ascii=False)
     return csv_path, json_path
+
+
+_MONTHLY_SRC: list = []
+
+
+def write_monthly(out_dir: str) -> str:
+    """monthly.csv: routing shares per governed run and month."""
+    from simulation.ec import metrics_gov
+    rows = metrics_gov.monthly(_MONTHLY_SRC)
+    path = os.path.join(out_dir, "monthly.csv")
+    cols = ["pack", "arm", "seed", "run", "month", "hearings", "share_L1_final", "share_L2", "share_L3", "share_L4"]
+    with open(path, "w", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=cols)
+        w.writeheader()
+        for r in rows:
+            w.writerow({k: (f"{r[k]:.6g}" if isinstance(r[k], float) else r[k]) for k in cols})
+    return path
 
 
 def table(rows: list, cols: list | None = None) -> str:
