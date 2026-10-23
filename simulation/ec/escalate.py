@@ -77,14 +77,40 @@ def patch_expiry(rec) -> None:
         rec.expiry = rec.ts + RECORD_EXPIRY_DAYS * DAY_TICKS
 
 
+class EngineHearer:
+    """Today's hearing, moved verbatim (governance build §5.8): the pack's
+    engine on the case as contested; an external bench writes the record on an
+    admitted trace."""
+
+    kind = "engine"
+
+    def hear(self, bench: "Bench", esc: Escalation, case_dict: dict, store: list, provisions: dict, theta,
+             engine_module) -> dict:
+        d = dict(case_dict)
+        d["contest_to"] = esc.contest_to
+        case = engine_module.case_from_dict(d)
+        trace = engine_module.adjudicate(case, store, provisions, theta)
+        rec = None
+        if not bench.internal and trace.get("admitted"):
+            rec = engine_module._record_from(case, trace, provisions)
+            patch_expiry(rec)
+            store.append(rec)
+        return {"holding": trace["decision"], "record": rec, "trace": trace}
+
+    def to_dict(self) -> dict:
+        return {"kind": self.kind}
+
+
 class Bench:
     """The slow track's queue. `file` on the day of the verdict, `due` on each
-    later day, `hear` each due escalation."""
+    later day, `hear` each due escalation. Who hears is the `hearer`: the
+    engine (today, the default) or the judges' ladder (governance build)."""
 
     def __init__(self, internal: bool = False, d_bench: int = D_BENCH, cap_per_day: int = 0,
-                 lapse_days: int = 20):
+                 lapse_days: int = 20, hearer=None):
         self.internal = internal
         self.d_bench = d_bench
+        self.hearer = hearer if hearer is not None else EngineHearer()
         # R2 registered sensitivity: at most `cap_per_day` hearings a working day (0 = unlimited),
         # first filed first heard; an escalation unheard `lapse_days` after its hearing day lapses.
         self.cap_per_day = int(cap_per_day or 0)
@@ -119,36 +145,37 @@ class Bench:
         return out
 
     def hear(self, esc: Escalation, case_dict: dict, store: list, provisions: dict, theta, engine_module) -> dict:
-        """Run the pack's engine on the case as contested. Returns
-        {"holding", "record", "trace"}; the record is appended to `store` only
-        by an external bench on an admitted trace."""
-        d = dict(case_dict)
-        d["contest_to"] = esc.contest_to
-        case = engine_module.case_from_dict(d)
-        trace = engine_module.adjudicate(case, store, provisions, theta)
-        rec = None
-        if not self.internal and trace.get("admitted"):
-            rec = engine_module._record_from(case, trace, provisions)
-            patch_expiry(rec)
-            store.append(rec)
+        """Hear one escalation through the hearer. Returns {"holding", "record",
+        "trace"} (plus the ladder's fields when the ladder heard it); the record
+        is appended to `store` only by an external bench on an admitted trace."""
+        res = self.hearer.hear(self, esc, case_dict, store, provisions, theta, engine_module)
+        trace, rec = res["trace"], res["record"]
         entry = {"act_id": esc.act_id, "case_id": esc.case_id, "company": esc.company, "day": esc.hear_day,
                  "entry": esc.entry, "tier": esc.tier, "reason_code": esc.reason_code,
-                 "contest_to": esc.contest_to, "holding": trace["decision"], "route": trace.get("route"),
+                 "contest_to": esc.contest_to, "holding": res["holding"], "route": trace.get("route"),
                  "record": rec.id if rec is not None else None, "internal": self.internal}
         self.heard.append(entry)
         if self.internal:
             self.log.append(entry)
-        return {"holding": trace["decision"], "record": rec, "trace": trace}
+        return res
 
     def to_dict(self) -> dict:
-        return {"internal": self.internal, "d_bench": self.d_bench, "cap_per_day": self.cap_per_day,
-                "lapse_days": self.lapse_days, "lapsed": list(self.lapsed),
-                "queue": [e.to_dict() for e in self.queue], "heard": list(self.heard), "log": list(self.log)}
+        d = {"internal": self.internal, "d_bench": self.d_bench, "cap_per_day": self.cap_per_day,
+             "lapse_days": self.lapse_days, "lapsed": list(self.lapsed),
+             "queue": [e.to_dict() for e in self.queue], "heard": list(self.heard), "log": list(self.log)}
+        if self.hearer.kind != "engine":        # the engine hearer keeps today's layout byte for byte
+            d["hearer"] = self.hearer.to_dict()
+        return d
 
     @staticmethod
-    def from_dict(d: dict) -> "Bench":
+    def from_dict(d: dict, hearer=None) -> "Bench":
+        """`hearer` is rebuilt by the caller (it holds clients); its state, if any,
+        is restored from `d["hearer"]`."""
         b = Bench(internal=bool(d.get("internal", False)), d_bench=int(d.get("d_bench", D_BENCH)),
-                  cap_per_day=int(d.get("cap_per_day", 0) or 0), lapse_days=int(d.get("lapse_days", 20)))
+                  cap_per_day=int(d.get("cap_per_day", 0) or 0), lapse_days=int(d.get("lapse_days", 20)),
+                  hearer=hearer)
+        if hearer is not None and hasattr(hearer, "restore"):
+            hearer.restore(d.get("hearer") or {})
         b.lapsed = list(d.get("lapsed") or [])
         b.queue = [Escalation.from_dict(e) for e in d.get("queue") or []]
         b.heard = list(d.get("heard") or [])
