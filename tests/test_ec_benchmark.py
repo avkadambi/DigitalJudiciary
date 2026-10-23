@@ -176,3 +176,94 @@ def test_audit_schedule_selection_all_mode_detection_and_exposure():
     assert out[0]["found"] and out[0]["exposure_days"] == ends[1] - 10 and not out[1]["found"]
     none = audit_sim.Auditor(0, 1.0, 211, "vetpoc", review_sim.cal.DAYS, arr)
     assert none.run(ex, ends[1]) == []
+
+
+# 6. Corners -----------------------------------------------------------------
+
+import random as _random                                              # noqa: E402
+
+from simulation.ec import corners                                     # noqa: E402
+from simulation.ec import stream as streammod                         # noqa: E402
+
+needs_canon = pytest.mark.skipif(not os.path.exists(os.path.join(VETPOC, "constitution", "canon.json")),
+                                 reason="canon not built")
+
+
+@pytest.fixture(scope="module")
+def vp():
+    from simulation.ec import run_year
+    return run_year.PackData("vetpoc")
+
+
+def _plan(vp, days=120, rate=1.0):
+    canon = vp.fresh_canon()
+    part = streammod.partition_days(vp.cases, vp.like_pairs, _random.Random("97|vetpoc|partition"),
+                                    days=streammod.cal.DAYS, lam=streammod.cal.LAMBDA)
+    cases = [c for d in part[:days] for c in d]
+    return canon, {c["id"]: c for c in cases}, corners.plan(cases, canon, 97, "vetpoc", rate,
+                                                            _params()["corners"]["weights"]["value"])
+
+
+@needs_canon
+def test_corners_inject_the_request_and_seeded_tokens_pass_or_fail_as_intended(vp):
+    from simulation.ec.registry import Registry
+    canon, by_id, plan = _plan(vp)
+    assert set(s["type"] for s in plan.values()) == set(corners.CORNER_TYPES), "every type can occur"
+    reg, shadow = Registry(canon), Registry(canon)
+    ids = corners.seed_tokens([reg, shadow], canon, plan, "engineering")
+    assert ids and all(reg.tokens[t].to_dict() == shadow.tokens[t].to_dict() for t in ids.values())
+    seen = set()
+    for cid, s in plan.items():
+        case = by_id[cid]
+        sk = streammod.overlay(case, "vetpoc", 5, 0, "A", 97, _random.Random(1), canon, "x", corner=s)[0]
+        assert sk.corner == s["type"] and sk.act is None, "the request changes, never the act"
+        if s["type"] == "c_conflict":
+            assert sk.conflict_flag and s["second_entry"] in sk.engaged
+            continue
+        assert s["factor"] in sk.facts
+        if "token" in s:
+            e = canon.entries[s["entry"]]
+            ok, why = reg.valid(s["token"], e, "engineering", 5, canon.version)
+            assert ok == corners.intended_valid(s["type"]), (s["type"], why)
+            want = {"r_expired": "expired", "r_scope": "wrong_scope", "r_inside_line": "issuer_inside_reporting_line",
+                    "r_revoked": "revoked"}.get(s["type"], "ok")
+            assert why == want, (s["type"], why)
+            assert sk.request_token_claim == s["token"]
+        if s["type"] in ("e_mismatch", "e_missing", "s_evidenced_departure"):
+            from simulation.ec.gate import evidence_supports
+            assert evidence_supports(sk.request_evidence, sk.request_reason, sk.evidence) == \
+                (s["type"] == "s_evidenced_departure")
+        seen.add(s["type"])
+    assert len(seen) == len(corners.CORNER_TYPES) - 1
+
+
+@needs_canon
+def test_corner_draw_is_arm_invariant_and_off_means_off(vp):
+    canon, by_id, plan = _plan(vp, days=60, rate=0.08)
+    _c2, _b2, plan2 = _plan(vp, days=60, rate=0.08)
+    assert plan == plan2
+    _c3, _b3, off = _plan(vp, days=60, rate=0.0)
+    assert off == {}
+    case = next(iter(by_id.values()))
+    a = streammod.overlay(case, "vetpoc", 5, 0, "A", 97, _random.Random(3), canon, "x")
+    b = streammod.overlay(case, "vetpoc", 5, 0, "A", 97, _random.Random(3), canon, "x", corner=None)
+    assert [vars(p) for p in a] == [vars(p) for p in b]
+
+
+@needs_canon
+def test_policy_agent_carries_the_request_claim_and_llm_prompt_shows_it(vp):
+    from simulation.ec.agents import Context
+    from simulation.ec.agents.llm import build_prompt
+    from simulation.ec.agents.policy import PolicyAgent
+    from simulation.ec.registry import Registry
+    canon, by_id, plan = _plan(vp)
+    corners.seed_tokens([Registry(canon)], canon, plan, "engineering")
+    cid, s = next((c, x) for c, x in sorted(plan.items()) if x["type"] == "s_valid_exception")
+    sk = streammod.overlay(by_id[cid], "vetpoc", 5, 0, "A", 97, _random.Random(1), canon, "x", corner=s)[0]
+    entries = canon.engaged(sk.engaged, [])
+    ctx = Context(proposal_skeleton=sk, engaged_entries=entries, registry_view=[], audit_announced=False,
+                  presented_driver=sk.presented_driver, driver_level=sk.driver_level, rng=_random.Random(5), day=5,
+                  conflict=False, extra={})
+    act = PolicyAgent("agent:x", "pressure_sensitive").propose(ctx)
+    assert act.kind == "exception" and act.token_claim == s["token"]
+    assert f"cites approval {s['token']}" in build_prompt(ctx)

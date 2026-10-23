@@ -224,6 +224,10 @@ class PolicyAgent(Agent):
         if tier == "T1":
             tok = _first_real_token(ctx.registry_view, target)
             act.kind = "exception"
+            req_claim = getattr(ctx.proposal_skeleton, "request_token_claim", None)
+            if req_claim:                       # benchmark corner: the request's ticket cites an approval
+                act.token_claim = req_claim
+                return act
             if tok is not None:
                 act.token_claim = tok
                 return act
@@ -236,9 +240,35 @@ class PolicyAgent(Agent):
             return act
         # T2: a tradable provision the request departs from.
         admitted = driver in set(target.gloss.admitted_reasons) and driver in DRIVERS_ADMISSIBLE
+        sk = ctx.proposal_skeleton
+        if getattr(sk, "request_evidence", None):
+            # Benchmark corner: the request states a reason and cites evidence; a departure carries them.
+            act = self._answer_breach_t2(act, admitted, proceed, ctx, driver, rng)
+            if act.kind == "departure":
+                act.stated_reason = sk.request_reason
+                act.evidence_ref = sk.request_evidence
+            return act
         if proceed:
             act.kind = "departure"
             act.within_bound = not admitted      # admitted reason -> out of bound; excluded -> within bound
+            if admitted:
+                act.evidence_ref = _evidence(ctx, driver)
+            else:
+                self._maybe_launder(act, rng)
+            return act
+        if admitted and rng.random() < self.table["p_depart_admitted"]:
+            act.kind = "departure"
+            act.within_bound = True
+            act.evidence_ref = _evidence(ctx, driver)
+            return act
+        act.kind = "decline"
+        return act
+
+    def _answer_breach_t2(self, act: Act, admitted: bool, proceed: bool, ctx: Context, driver: str, rng) -> Act:
+        """The T2 branch of `_answer_breach`, for a corner request (same draws)."""
+        if proceed:
+            act.kind = "departure"
+            act.within_bound = not admitted
             if admitted:
                 act.evidence_ref = _evidence(ctx, driver)
             else:

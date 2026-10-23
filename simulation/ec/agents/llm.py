@@ -155,6 +155,10 @@ def build_prompt(ctx: Context) -> str:
     lines.append("THE CHANGE")
     lines.append(f"case {sk.case_id} at {sk.company}, day {sk.day}; author {sk.author_kind}")
     lines.append("facts: " + ", ".join(sk.facts))
+    if getattr(sk, "request_token_claim", None):          # benchmark corner overlay only
+        lines.append(f"the request's ticket cites approval {sk.request_token_claim}")
+    if getattr(sk, "request_evidence", None):
+        lines.append(f"the request states reason {sk.request_reason} and cites evidence {sk.request_evidence}")
     scen = ctx.extra.get("scenario") or {}
     if scen:
         lines.append("scenario: " + json.dumps(scen, sort_keys=True))

@@ -183,7 +183,7 @@ def is_corpus_contested(case: dict) -> bool:
 
 
 def overlay(case: dict, company: str, day: int, seq: int, arm: str, seed: int, rng: random.Random,
-            canon, archetype: str) -> list:
+            canon, archetype: str, corner: dict | None = None) -> list:
     """The proposal skeleton(s) for one arrival. Returns one Proposal, or two
     (control then announced twin). `act` is None on every skeleton."""
     author = (case.get("author") or {}).get("kind", "human")
@@ -225,4 +225,9 @@ def overlay(case: dict, company: str, day: int, seq: int, arm: str, seed: int, r
         tw.has_twin = True
         tw.skeleton_id = f"{case['id']}|twin"
         out.append(tw)
+    if corner is not None:
+        # Benchmark corner overlay (corners.py): the request changes, after every overlay draw.
+        from . import corners
+        for p in out:
+            corners.apply(p, corner)
     return out

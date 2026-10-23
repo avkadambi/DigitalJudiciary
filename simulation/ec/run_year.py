@@ -54,6 +54,7 @@ from simulation.ec.gate import (NON_CONTRARY_KINDS, STAND_DOWN_KINDS, Act, Verdi
 from simulation.ec.registry import Registry                     # noqa: E402
 from simulation.ec.rival import rival_decide                    # noqa: E402
 from simulation.ec import governance as gov                     # noqa: E402
+from simulation.ec import benchmark as bench           # noqa: E402
 
 PACKS = {
     "vetpoc": "vetpoc-constitution-corpus",
@@ -308,6 +309,17 @@ class Run:
                                    self.flip)
         self.partition = streammod.partition_days(
             data.cases, data.like_pairs, random.Random(f"{seed}|{self.pack}|partition"), days=cal.DAYS, lam=cal.LAMBDA)
+        # Benchmark corner overlay (off by default): the plan and its seeded tokens, day 0.
+        self.corner_plan: dict = {}
+        self.corner_tokens: dict = {}
+        self.corner_rate = float(getattr(args, "corner_overlay", 0.0) or 0.0)
+        if self.corner_rate > 0:
+            from simulation.ec import corners, review_sim
+            weights = review_sim.load_params(getattr(args, "benchmark_params", None))["corners"]["weights"]["value"]
+            cases = [c for d in self.partition[:args.days] for c in d]
+            self.corner_plan = corners.plan(cases, self.pristine, seed, self.pack, self.corner_rate, weights)
+            self.corner_tokens = corners.seed_tokens([self.registry, self.shadow], self.pristine, self.corner_plan,
+                                                     self.agent.line)
         # state
         self.day_done = 0
         self.consolidation_seen: dict = {}
@@ -628,6 +640,11 @@ class Run:
             "dj": dj, "escalation": esc.to_dict() if esc is not None else None,
             "t3_sampled": False, "cost": cost, "believes_monitored": believes,
         }
+        if getattr(p, "corner", None):
+            line["corner"] = p.corner
+            line["corner_entry"] = getattr(p, "corner_entry", None)
+            line["request_token_claim"] = getattr(p, "request_token_claim", None)
+            line["request_evidence"] = getattr(p, "request_evidence", None)
         # R2: the most restrictive engaged provision the change request breaks as written (every line).
         rf = set(p.facts or [])
         rb = [en.tier for en in entries if en.kind == "provision" and rf & set(en.violate_factors)]
@@ -686,7 +703,9 @@ class Run:
         counts["arrivals"] = len(arrivals)
         lines, seq = [], 0
         for case in arrivals:
-            skeletons = streammod.overlay(case, pack, day, seq, arm, seed, overlay_rng, self.canon, self.archetype)
+            corner = self.corner_plan.get(case["id"]) if self.corner_plan else None
+            skeletons = streammod.overlay(case, pack, day, seq, arm, seed, overlay_rng, self.canon, self.archetype,
+                                          corner=corner)
             seq += len(skeletons)
             agent_rng = random.Random(f"{seed}|{pack}|{case['id']}")
             view = self.shadow.live(day)      # the twin sees the control's view: same case, same store
@@ -994,6 +1013,7 @@ def parse_args(argv=None):
     ap.add_argument("--ciso-line", choices=("governance", "engineering"), default="governance",
                     help="registered sensitivity (R2): reporting line of office:security")
     gov.add_args(ap)
+    bench.add_args(ap)
     a = ap.parse_args(argv)
     if a.days < 1 or a.days > cal.DAYS:
         raise SystemExit(f"--days must be 1..{cal.DAYS}")
@@ -1017,6 +1037,8 @@ def run_config_of(a) -> dict:
         if k == "requested_mode":
             continue
         if k in gov.NEW_FLAG_DEFAULTS and v == gov.NEW_FLAG_DEFAULTS[k]:
+            continue
+        if k in bench.NEW_FLAG_DEFAULTS and v == bench.NEW_FLAG_DEFAULTS[k]:
             continue
         if k == "keys_file":
             v = "<set>"
@@ -1066,9 +1088,10 @@ def main(argv=None) -> int:
     packs = list(PACKS) if a.packs == "all" else [p.strip() for p in a.packs.split(",") if p.strip()]
     arms = [x.strip() for x in a.arms.split(",") if x.strip()]
     for x in arms:
-        if x not in ARMS:
-            raise SystemExit(f"unknown arm {x!r}; known {ARMS}")
+        if x not in ARMS and x not in bench.BENCH_ARMS:
+            raise SystemExit(f"unknown arm {x!r}; known {ARMS + bench.BENCH_ARMS}")
     seeds = [int(s) for s in a.seeds.split(",") if s.strip()]
+    bench.check_seeds(arms, seeds)
     a.requested_mode = a.mode
     if a.agent.startswith("llm:") and a.mode == "oracle":
         a.mode = "dry"
